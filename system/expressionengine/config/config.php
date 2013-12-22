@@ -1,5 +1,10 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+$base_url .= "://".$_SERVER['HTTP_HOST'];
+$admin_url  = $base_url . '/admin.php';
+
+
 /*
 |--------------------------------------------------------------------------
 | ExpressionEngine Config Items
@@ -23,7 +28,45 @@ $config['site_label'] = 'Chicama';
 $config['cookie_prefix'] = '';
 
 
-// END EE config items
+//------------------------------STUFF ADDED--------------------------
+
+$config['site_url'] = $base_url;
+$config['server_path'] = FCPATH;
+$config['site_index'] = '';
+$config['cookie_prefix'] = '';
+$config['theme_folder_url'] = $config['site_url']."/themes/";
+$config['theme_folder_path'] = $config['server_path']."/themes/";
+$config['save_tmpl_files'] = "y";
+$config['tmpl_file_basepath'] = $config['server_path']."/templates/";
+$config['avatar_url'] = $base_url."/uploads/system/avatars/";
+$config['avatar_path'] = $config['server_path']."/uploads/system/avatars/";
+$config['photo_url'] = $base_url."/uploads/system/member_photos/";
+$config['photo_path'] = $config['server_path']."/uploads/system/member_photos/";
+$config['sig_img_url'] = $base_url."/uploads/system/signature_attachments/";
+$config['sig_img_path'] = $config['server_path']."/uploads/system/signature_attachments/";
+$config['prv_msg_upload_path'] = $config['server_path']."/uploads/system/pm_attachments/";
+
+/* CodeIgniter Configuration
+-------------------------------------------------------------------*/
+$config['base_url'] = $config['site_url'];
+$config['uri_protocol'] = 'AUTO';
+$config['language'] = 'english';
+$config['charset'] = 'UTF-8';
+$config['subclass_prefix'] = 'EE_';
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
+$config['enable_query_strings'] = FALSE;
+$config['directory_trigger'] = 'D';
+$config['controller_trigger'] = 'C';
+$config['function_trigger'] = 'M';
+$config['log_threshold'] = 0;
+$config['log_path'] = '';
+$config['log_date_format'] = 'Y-m-d H:i:s';
+$config['time_reference'] = 'local';
+
+
+//------------------------------END-STUFF ADDED--------------------------
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +79,7 @@ $config['cookie_prefix'] = '';
 |	http://example.com/
 |
 */
-$config['base_url']	= '';
+//$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------
@@ -48,7 +91,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------
@@ -66,7 +109,7 @@ $config['index_page'] = 'index.php';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
-$config['uri_protocol']	= 'AUTO';
+//$config['uri_protocol']	= 'AUTO';
 
 /*
 |--------------------------------------------------------------------------
@@ -91,7 +134,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+//$config['language']	= 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -102,7 +145,7 @@ $config['language']	= 'english';
 | that require a character set to be provided.
 |
 */
-$config['charset'] = 'UTF-8';
+//$config['charset'] = 'UTF-8';
 
 /*
 |--------------------------------------------------------------------------
@@ -128,7 +171,7 @@ $config['enable_hooks'] = FALSE;
 | http://codeigniter.com/user_guide/general/creating_libraries.html
 |
 */
-$config['subclass_prefix'] = 'EE_';
+//$config['subclass_prefix'] = 'EE_';
 
 
 /*
@@ -148,7 +191,7 @@ $config['subclass_prefix'] = 'EE_';
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
+//$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
 
 
 /*
@@ -173,10 +216,10 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
 | use segment based URLs.
 |
 */
-$config['enable_query_strings'] = FALSE;
-$config['directory_trigger'] = 'D';
-$config['controller_trigger'] = 'C';
-$config['function_trigger'] = 'M';
+//$config['enable_query_strings'] = FALSE;
+//$config['directory_trigger'] = 'D';
+//$config['controller_trigger'] = 'C';
+//$config['function_trigger'] = 'M';
 
 /*
 |--------------------------------------------------------------------------
@@ -196,7 +239,7 @@ $config['function_trigger'] = 'M';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+//$config['log_threshold'] = 0;
 
 /*
 |--------------------------------------------------------------------------
@@ -207,7 +250,7 @@ $config['log_threshold'] = 0;
 | system/logs/ folder.  Use a full server path with trailing slash.
 |
 */
-$config['log_path'] = '';
+//$config['log_path'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -218,7 +261,7 @@ $config['log_path'] = '';
 | codes to set your own date formatting
 |
 */
-$config['log_date_format'] = 'Y-m-d H:i:s';
+//$config['log_date_format'] = 'Y-m-d H:i:s';
 
 /*
 |--------------------------------------------------------------------------
@@ -295,7 +338,7 @@ $config['compress_output'] = FALSE;
 | regarding date handling.
 |
 */
-$config['time_reference'] = 'local';
+//$config['time_reference'] = 'local';
 
 
 /*
