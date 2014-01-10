@@ -355,6 +355,14 @@ figure {
   #content h4, #content h6 {
     border-bottom: 1px solid #2c2625; }
 
+#myModal {
+  padding: 0;
+  border: none;
+  box-shadow: none; }
+  #myModal .vimeo {
+    padding-top: 0;
+    padding-bottom: 56.25%; }
+
 @media only screen and (min-width: 40.063em) {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
