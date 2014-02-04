@@ -391,6 +391,11 @@ figure {
 	@include cover;
 }
 
+#the_stories_cover{
+	background: url("../img/the_stories_cover.jpg");
+	@include cover;
+}
+
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item{
 	margin-bottom: 1em !important;
 }
@@ -423,6 +428,13 @@ figure {
 }
 
 
+.the_stories_user{
+	img{
+		width: 100%;
+	}
+}
+
+
 
 
 @media only screen and (min-width: 40.063em) {
@@ -435,7 +447,7 @@ figure {
     	font-size: 7.75rem; 
 	}
 
-  	#the_wave_cover, #the_crew_cover, #beyond_surfing_cover, #surfing_around_cover, #the_hotel_cover, #the_rooms_cover{
+  	#the_wave_cover, #the_crew_cover, #beyond_surfing_cover, #surfing_around_cover, #the_hotel_cover, #the_rooms_cover, #the_stories_cover{
 		h1{
 			font-size: 5.75rem;
 		}
