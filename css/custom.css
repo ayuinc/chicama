@@ -263,96 +263,38 @@ figure {
     -o-transition: 0.4s;
     transition: 0.4s; }
 
-#the_wave_cover {
-  background: url("../img/the_wave_cover.jpg");
+.cover {
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
   background-position: center center; }
-  #the_wave_cover h1 {
+  .cover h1 {
     color: #FFFFFF;
     font-size: 2.75rem;
     line-height: 1;
     padding-top: 5em;
     font-weight: 100; }
+
+#the_wave_cover {
+  background: url("../img/the_wave_cover.jpg"); }
 
 #the_crew_cover {
-  background: url("../img/the_crew_cover.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: center center; }
-  #the_crew_cover h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem;
-    line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+  background: url("../img/the_crew_cover.jpg"); }
 
 #beyond_surfing_cover {
-  background: url("../img/beyond_surfing_cover.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: center center; }
-  #beyond_surfing_cover h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem;
-    line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+  background: url("../img/beyond_surfing_cover.jpg"); }
 
 #the_hotel_cover {
-  background: url("../img/the_hotel_cover.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: center center; }
-  #the_hotel_cover h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem;
-    line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+  background: url("../img/the_hotel_cover.jpg"); }
 
 #surfing_around_cover {
-  background: url("../img/surfing_around_cover.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: center center; }
-  #surfing_around_cover h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem;
-    line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+  background: url("../img/surfing_around_cover.jpg"); }
 
 #the_rooms_cover {
-  background: url("../img/the_rooms_cover.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: center center; }
-  #the_rooms_cover h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem;
-    line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+  background: url("../img/the_rooms_cover.jpg"); }
 
 #the_stories_cover {
-  background: url("../img/the_stories_cover.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: relative;
-  background-position: center center; }
-  #the_stories_cover h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem;
-    line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+  background: url("../img/the_stories_cover.jpg"); }
 
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item {
   margin-bottom: 1em !important; }
