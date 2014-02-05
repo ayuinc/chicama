@@ -329,7 +329,7 @@ figure {
     line-height: 1;
     font-size: 7.75rem; }
 
-  #the_wave_cover h1, #the_crew_cover h1, #beyond_surfing_cover h1, #surfing_around_cover h1, #the_hotel_cover h1, #the_rooms_cover h1, #the_stories_cover h1 {
+  .cover h1 {
     font-size: 5.75rem; }
 
   h2 {
