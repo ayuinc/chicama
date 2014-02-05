@@ -1,0 +1,73 @@
+{embed="includes/header"}
+{exp:channel:entries channel="secciones" limit="1"}
+    <section class="cover" style="background: url('{imagen_de_fondo}');">
+        <div class="row">
+            <div class="large-12 columns">
+                <a href="the_rooms.html" id="book_button" class="button small radius"><span>BOOK A ROOM</span></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-9 large-centered columns">
+                <h1>{titulo}</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="row">
+            <div class="large-9 large-centered columns">
+                <div class="large-7 columns">
+                    {contenido}
+                </div>
+                <div class="large-offset-1 large-4 columns">
+                    <ul class="other_categories">
+                        <li>
+                            <a href="the_crew.html">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <h5>THE <span class="bold">CREW</span></h5>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="text-right">
+                                            <img src="img/the_crew_icon_nav.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="the_stories.html">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <h5>THE <span class="bold">STORIES</span></h5>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="text-right">
+                                            <img src="img/the_stories_icon_nav.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="beyond_surfing.html">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <h5>BEYOND <span class="bold">SURFING</span></h5>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <div class="text-right">
+                                            <img src="img/beyond_surfing_icon_nav.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+{/exp:channel:entries}
+{embed="includes/promo"}
+{embed="includes/footer"}
