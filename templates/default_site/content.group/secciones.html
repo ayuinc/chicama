@@ -15,10 +15,19 @@
 					form:id="book_a_room" 
 				}
 					
-					{freeform:field:first_name}
-					{freeform:field:last_name}
-					{freeform:field:address}
+					{freeform:label:first_name}
+					{freeform:field:first_name
+						attr:placeholder="ENTER YOUR NAME"
+					}
+					{freeform:label:last_name} 
+					{freeform:field:last_name
+						attr:placeholder="ENTER YOUR NAME"
+					}
+					{freeform:field:address
+						attr:placeholder="ENTER YOUR ADDRESS"
+					}
 					
+					{freeform:submit} 
 				{/exp:freeform:form}
 			</div>
         </div>
