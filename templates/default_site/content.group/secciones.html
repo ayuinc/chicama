@@ -6,7 +6,22 @@
                 <a href="the_rooms.html" id="book_button" class="button small radius"><span>BOOK A ROOM</span></a>
             </div>
         </div>
+        {if last_segment="book-a-room"}
         <div class="row">
+			<div class="large-6 columns">
+				{exp:freeform:composer
+					form_id="3"
+					return="content/index" 
+				}
+					
+					{freeform:field:first_name}
+					{freeform:field:last_name}
+					{freeform:field:address}
+					
+				{/exp:freeform:composer}
+			</div>
+        </div>
+		<div class="row">
             <div class="large-9 large-centered columns">
                 {seccion_titulo_ingles}
             </div>
