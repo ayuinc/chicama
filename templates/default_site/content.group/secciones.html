@@ -15,19 +15,27 @@
 					form:id="book_a_room" 
 				}
 					
-					{freeform:label:first_name}
 					{freeform:field:first_name
 						attr:placeholder="ENTER YOUR NAME"
 					}
-					{freeform:label:last_name} 
 					{freeform:field:last_name
 						attr:placeholder="ENTER YOUR NAME"
+					}
+					{freeform:field:phone
+						attr:placeholder="ENTER YOUR TELEPHONE NUMBER"
 					}
 					{freeform:field:address
 						attr:placeholder="ENTER YOUR ADDRESS"
 					}
-					
-					{freeform:submit} 
+					{freeform:field:country
+						attr:placeholder="ENTER YOUR COUNTRY"
+					}
+					{freeform:field:persons_number}
+					{freeform:field:room_type}
+					{freeform:field:reservation_type}
+					{freeform:submit
+						attr:class="button"
+					} 
 				{/exp:freeform:form}
 			</div>
         </div>
