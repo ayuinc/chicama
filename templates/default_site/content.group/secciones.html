@@ -8,21 +8,21 @@
         </div>
         {if last_segment == "book-a-room"}
         <div class="row">
-			{exp:freeform:form
-				form_id="3"
-				return="content/index" 
-				form:id="book_a_room" 
-			}
-            <div class="large-6 columns">
+			<div class="large-6 columns">
+				{exp:freeform:form
+					form_id="3"
+					return="content/index" 
+					form:id="book_a_room" 
+				}
 					
 					{freeform:field:first_name
 						attr:placeholder="ENTER YOUR NAME"
 					}
 					{freeform:field:last_name
-						attr:placeholder="ENTER YOUR LAST NAME"
+						attr:placeholder="ENTER YOUR NAME"
 					}
 					{freeform:field:phone
-						attr:placeholder="ENTER YOUR PHONE NUMBER"
+						attr:placeholder="ENTER YOUR TELEPHONE NUMBER"
 					}
 					{freeform:field:address
 						attr:placeholder="ENTER YOUR ADDRESS"
@@ -30,17 +30,26 @@
 					{freeform:field:country
 						attr:placeholder="ENTER YOUR COUNTRY"
 					}
-            </div>
-            <div class="large-6 columns">
 					{freeform:field:persons_number}
 					{freeform:field:room_type}
 					{freeform:field:reservation_type}
+					
+					{freeform:label:check_in_day}
+					{freeform:field:check_in_day}
+					
+					{freeform:label:check_in_month}
+					{freeform:field:check_in_month}
+					
+					{freeform:label:check_in_month}
+					{freeform:field:check_in_month}
+					
+					{freeform:field:user_message}
+
 					{freeform:submit
 						attr:class="button"
 					} 
-                       
-            </div>
-			{/exp:freeform:form}
+				{/exp:freeform:form}
+			</div>
         </div>
         {/if}
 		<div class="row">
