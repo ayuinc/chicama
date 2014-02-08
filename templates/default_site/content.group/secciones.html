@@ -109,16 +109,52 @@
                     
                     {if last_segment == "beyond-surfing"}
                     	<div class="row">
-                    		{exp:channel:entries channel="beyond_surfing" dynamic="no" orderby="date" sort="asc"}
+                    		{exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"}
                     		<div class="beyond_surfing_item row">
                     			<div class="large-6 columns">
-                    				{beyond_surfing_image}
+                    				{item_image}
                     					<img src="{image:url:small}" alt="">
-                    				{/beyond_surfing_image}
+                    				{/item_image}
                     			</div>
                     			<div class="large-6 columns">
                     				<h4>{title}</h4>
-                    				<p>{beyond_descripcion}</p>
+                    				<p>{item_descripcion}</p>
+                    			</div>
+                    		</div>
+                    		{/exp:channel:entries}
+                    	</div>
+                    {/if}
+                    
+                    {if last_segment == "surfing-around"}
+                    	<div class="row">
+                    		{exp:channel:entries channel="items" category="3" dynamic="no" orderby="date" sort="asc"}
+                    		<div class="beyond_surfing_item row">
+                    			<div class="large-6 columns">
+                    				{item_image}
+                    					<img src="{image:url:small}" alt="">
+                    				{/item_image}
+                    			</div>
+                    			<div class="large-6 columns">
+                    				<h4>{title}</h4>
+                    				<p>{item_descripcion}</p>
+                    			</div>
+                    		</div>
+                    		{/exp:channel:entries}
+                    	</div>
+                    {/if}
+                    
+                    {if last_segment == "the-hotel"}
+                    	<div class="row">
+                    		{exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
+                    		<div class="beyond_surfing_item row">
+                    			<div class="large-6 columns">
+                    				{item_image}
+                    					<img src="{image:url:small}" alt="">
+                    				{/item_image}
+                    			</div>
+                    			<div class="large-6 columns">
+                    				<h4>{title}</h4>
+                    				<p>{item_descripcion}</p>
                     			</div>
                     		</div>
                     		{/exp:channel:entries}
