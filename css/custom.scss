@@ -38,9 +38,9 @@ html, body {
 	content: "\e600";
 }
 
-button:hover, button:focus, .button:hover, .button:focus {
-	background-color: transparent;
-}
+// button:hover, button:focus, .button:hover, .button:focus {
+// 	background-color: transparent;
+// }
 
 input[type="text"], input[type="url"], textarea {
 	margin: 0;
@@ -424,6 +424,19 @@ figure {
 	}
 }
 
+
+/* BOOK A ROOM */
+
+#book_a_room{
+	.send{
+		text-transform: uppercase;
+		border-radius: 4px;
+	}
+}
+
+
+
+/* END BOOK A ROOM */
 
 
 

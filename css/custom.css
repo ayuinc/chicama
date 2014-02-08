@@ -26,9 +26,6 @@ html, body {
 .icon-play:before {
   content: "\e600"; }
 
-button:hover, button:focus, .button:hover, .button:focus {
-  background-color: transparent; }
-
 input[type="text"], input[type="url"], textarea {
   margin: 0;
   border-radius: 3px;
@@ -321,6 +318,12 @@ figure {
 .the_stories_user img {
   width: 100%; }
 
+/* BOOK A ROOM */
+#book_a_room .send {
+  text-transform: uppercase;
+  border-radius: 4px; }
+
+/* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }

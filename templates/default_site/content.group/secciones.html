@@ -19,10 +19,10 @@
 						attr:placeholder="ENTER YOUR NAME"
 					}
 					{freeform:field:last_name
-						attr:placeholder="ENTER YOUR NAME"
+						attr:placeholder="ENTER YOUR LAST NAME"
 					}
 					{freeform:field:phone
-						attr:placeholder="ENTER YOUR TELEPHONE NUMBER"
+						attr:placeholder="ENTER YOUR PHONE NUMBER"
 					}
 					{freeform:field:address
 						attr:placeholder="ENTER YOUR ADDRESS"
@@ -32,23 +32,30 @@
 					}
             </div>
             <div class="large-6 columns">
+
 					{freeform:field:persons_number}
 					{freeform:field:room_type}
 					{freeform:field:reservation_type}
-					
-					{freeform:label:check_in_day}
-					{freeform:field:check_in_day}
-					
-					{freeform:label:check_in_month}
-					{freeform:field:check_in_month}
-					
-					{freeform:label:check_in_year}
-					{freeform:field:check_in_year}
-					
+
+                <div class="row">
+                    <div class="large-3 columns">
+    					{freeform:label:check_in_day}
+    					{freeform:field:check_in_day}
+                    </div>
+                    <div class="large-6 columns">
+    					{freeform:label:check_in_month}
+    					{freeform:field:check_in_month}
+                    </div>
+                    <div class="large-3 columns">
+    					{freeform:label:check_in_year}
+    					{freeform:field:check_in_year}
+                    </div>
+                </div>
+                    
 					{freeform:field:user_message}
 
 					{freeform:submit
-						attr:class="button"
+						attr:class="send button"
 					} 
                 
             </div>
