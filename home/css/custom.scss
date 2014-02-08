@@ -2,6 +2,20 @@ $primary-color: #2C2625;
 $padding: 2.5em 0;
 $border-bottom: 1px solid #2C2625;
 
+@mixin cover{
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: center center;
+	h1{
+		color: #FFFFFF;
+		font-size: 2.75rem;
+		line-height: 1;
+		padding-top: 5em;
+		font-weight: 100;
+	}
+}
+
 html, body {
   	height: 100%;
   	font-family: "proxima-nova",sans-serif;
@@ -360,30 +374,37 @@ figure {
 
 #the_wave_cover{
 	background: url("../img/the_wave_cover.jpg");
+	@include cover;
 }
 	
 #the_crew_cover{
 	background: url("../img/the_crew_cover.jpg");
+	@include cover;
 }
 
 #beyond_surfing_cover{
 	background: url("../img/beyond_surfing_cover.jpg");
+	@include cover;
 }
 
 #the_hotel_cover{
 	background: url("../img/the_hotel_cover.jpg");
+	@include cover;
 }
 
 #surfing_around_cover{
 	background: url("../img/surfing_around_cover.jpg");
+	@include cover;
 }
 
 #the_rooms_cover{
 	background: url("../img/the_rooms_cover.jpg");
+	@include cover;
 }
 
 #the_stories_cover{
 	background: url("../img/the_stories_cover.jpg");
+	@include cover;
 }
 
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item{
@@ -432,9 +453,12 @@ figure {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
-  	#cover h1 {
-  		line-height: 1;
-    	font-size: 7.75rem; 
+  	#the_wave_cover, #the_crew_cover, #beyond_surfing_cover, #surfing_around_cover, #the_hotel_cover, #the_rooms_cover, #the_stories_cover{
+
+  		h1 {
+  			line-height: 1;
+    		font-size: 7.75rem; 
+		}
 	}
 
   	.cover{

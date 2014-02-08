@@ -276,25 +276,95 @@ figure {
     font-weight: 100; }
 
 #the_wave_cover {
-  background: url("../img/the_wave_cover.jpg"); }
+  background: url("../img/the_wave_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #the_wave_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 #the_crew_cover {
-  background: url("../img/the_crew_cover.jpg"); }
+  background: url("../img/the_crew_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #the_crew_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 #beyond_surfing_cover {
-  background: url("../img/beyond_surfing_cover.jpg"); }
+  background: url("../img/beyond_surfing_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #beyond_surfing_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 #the_hotel_cover {
-  background: url("../img/the_hotel_cover.jpg"); }
+  background: url("../img/the_hotel_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #the_hotel_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 #surfing_around_cover {
-  background: url("../img/surfing_around_cover.jpg"); }
+  background: url("../img/surfing_around_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #surfing_around_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 #the_rooms_cover {
-  background: url("../img/the_rooms_cover.jpg"); }
+  background: url("../img/the_rooms_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #the_rooms_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 #the_stories_cover {
-  background: url("../img/the_stories_cover.jpg"); }
+  background: url("../img/the_stories_cover.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center center; }
+  #the_stories_cover h1 {
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    line-height: 1;
+    padding-top: 5em;
+    font-weight: 100; }
 
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item {
   margin-bottom: 1em !important; }
@@ -325,7 +395,7 @@ figure {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
-  #cover h1 {
+  #the_wave_cover h1, #the_crew_cover h1, #beyond_surfing_cover h1, #surfing_around_cover h1, #the_hotel_cover h1, #the_rooms_cover h1, #the_stories_cover h1 {
     line-height: 1;
     font-size: 7.75rem; }
 
