@@ -1,11 +1,16 @@
 {embed="includes/header"}
 {exp:channel:entries channel="secciones" limit="1"}
     <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center;">
+        {if last_segment != "book-a-room"}
+
         <div class="row">
             <div class="large-12 columns">
                 <a href="book-a-room" id="book_button" class="button small radius"><span>BOOK A ROOM</span></a>
             </div>
         </div>
+
+        {/if}
+
         {if last_segment == "book-a-room"}
         <div class="row">
 			{exp:freeform:form
