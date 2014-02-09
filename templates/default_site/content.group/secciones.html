@@ -13,7 +13,7 @@
 				return="content/index" 
 				form:id="book_a_room" 
 			}
-            <div class="large-6 columns">
+            <div class="large-9 large-centered columns">
 					
 					{freeform:field:first_name
 						attr:placeholder="ENTER YOUR NAME"
@@ -30,8 +30,6 @@
 					{freeform:field:country
 						attr:placeholder="ENTER YOUR COUNTRY"
 					}
-            </div>
-            <div class="large-6 columns">
 
 					{freeform:field:persons_number}
 					{freeform:field:room_type}
@@ -108,7 +106,6 @@
 					{freeform:submit
 						attr:class="send button"
 					} 
-                
             </div>
 
             {/exp:freeform:form}
