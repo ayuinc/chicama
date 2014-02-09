@@ -298,7 +298,7 @@ figure {
   margin-bottom: 1em !important; }
 
 .title {
-  position: absolute;
+  position: absolute !important;
   bottom: 5px; }
 
 #content {
