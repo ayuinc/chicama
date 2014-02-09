@@ -26,6 +26,9 @@ html, body {
 .icon-play:before {
   content: "\e600"; }
 
+.play:hover, .play:focus, .play:hover, .play:focus {
+  background-color: transparent; }
+
 input[type="text"], input[type="url"], textarea {
   margin: 0;
   border-radius: 3px;
