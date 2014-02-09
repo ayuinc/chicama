@@ -321,7 +321,11 @@ figure {
 /* BOOK A ROOM */
 #book_a_room .send {
   text-transform: uppercase;
-  border-radius: 4px; }
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.8); }
+#book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
+  font-weight: 300;
+  margin-bottom: 2em; }
 
 #form_box {
   background-color: #FFFFFF;
