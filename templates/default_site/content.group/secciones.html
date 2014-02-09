@@ -30,10 +30,18 @@
 					{freeform:field:country
 						attr:placeholder="ENTER YOUR COUNTRY"
 					}
+                <div class="row">
+                    <div class="large-4 columns">
+                        {freeform:field:persons_number}
+                    </div>
+                    <div class="large-4 columns">
+                        {freeform:field:room_type}
+                    </div>
+                    <div class="large-4 columns">
+                        {freeform:field:reservation_type}
+                    </div>
 
-					{freeform:field:persons_number}
-					{freeform:field:room_type}
-					{freeform:field:reservation_type}
+                </div>
 				<div class="row">
 					<div class="large-6 columns">
 						{freeform:label:check_in_date}
