@@ -269,8 +269,9 @@ figure {
     color: #FFFFFF;
     font-size: 2.75rem;
     line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+    font-weight: 100;
+    position: absolute;
+    bottom: 5px; }
 
 #the_wave_cover {
   background: url("../img/the_wave_cover.jpg"); }
