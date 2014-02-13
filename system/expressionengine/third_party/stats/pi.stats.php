@@ -134,7 +134,10 @@ class Stats
 
         return "HOLA";
     }
-    
+
+    public function test() {
+        return "test";
+    }
 }
 /* End of file pi.stats.php */
 /* Location: ./system/expressionengine/third_party/stats/pi.stats.php */
