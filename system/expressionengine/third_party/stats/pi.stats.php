@@ -108,37 +108,36 @@ class Stats
             echo "Option 8";
         }
 
-        // return '<div class="weather row text-center">
-        //             <div class="large-4 columns">
-        //                 <div class="weather_icon"> 
-        //                     <img src="http://64.207.145.174/img/surf_height_icon.png" alt="">
-        //                 </div>
-        //                 <div class="weather_title">
-        //                     <span>SURF HEIGHT</span>
-        //                 </div>
-        //                 <span>' . $data["swell"]["absMinBreakingHeight"] . ' - ' . $data["swell"]["absMaxBreakingHeight"]; . '</span>
-        //             </div>
+        return '<div class="weather row text-center">
+                    <div class="large-4 columns">
+                        <div class="weather_icon"> 
+                            <img src="http://64.207.145.174/img/surf_height_icon.png" alt="">
+                        </div>
+                        <div class="weather_title">
+                            <span>SURF HEIGHT</span>
+                        </div>
+                        <span>' . $data["swell"]["absMinBreakingHeight"] . ' - ' . $data["swell"]["absMaxBreakingHeight"] . '</span>
+                    </div>
                                 
-        //             <div class="large-4 columns">
-        //                 <div class="weather_icon"> 
-        //                     <img src="http://64.207.145.174/img/wind_icon.png" alt="">
-        //                 </div>
-        //                 <div class="weather_title">
-        //                     <span>' . $data["wind"]["speed"] . '</span>
-        //                 </div>
-        //                 <span>10</span>
-        //             </div>
-        //             <div class="large-4 columns">
-        //                 <div class="weather_icon"> 
-        //                     <img src="http://64.207.145.174/img/current_tide_icon.png" alt="">
-        //                 </div>
-        //                 <div class="weather_title">
-        //                     <span>CURRENT TIDE</span>
-        //                 </div>
-        //                 <span>' . $data["condition"]["temperature"] . '</span>
-        //             </div>
-        //         </div>';
-        return "hola";
+                    <div class="large-4 columns">
+                        <div class="weather_icon"> 
+                            <img src="http://64.207.145.174/img/wind_icon.png" alt="">
+                        </div>
+                        <div class="weather_title">
+                            <span>' . $data["wind"]["speed"] . '</span>
+                        </div>
+                        <span>10</span>
+                    </div>
+                    <div class="large-4 columns">
+                        <div class="weather_icon"> 
+                            <img src="http://64.207.145.174/img/current_tide_icon.png" alt="">
+                        </div>
+                        <div class="weather_title">
+                            <span>CURRENT TIDE</span>
+                        </div>
+                        <span>' . $data["condition"]["temperature"] . '</span>
+                    </div>
+                </div>';
     }
     
 }
