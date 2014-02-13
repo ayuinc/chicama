@@ -34,6 +34,7 @@ class Stats
          * @return  string
          */
     public function __construct(){
+        $this->EE =& get_instance();
     }
 
     // --------------------------------------------------------------------
@@ -100,7 +101,7 @@ class Stats
             $data = $data[7];
         }
 
-        $result = '<div class="weather row text-center">
+        $text = '<div class="weather row text-center">
                     <div class="large-4 columns">
                         <div class="weather_icon"> 
                             <img src="http://64.207.145.174/img/surf_height_icon.png" alt="">
@@ -131,7 +132,7 @@ class Stats
                     </div>
                 </div>';
 
-        return $result;
+        return "HOLA";
     }
     
 }
