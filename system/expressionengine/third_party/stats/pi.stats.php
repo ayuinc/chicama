@@ -62,7 +62,7 @@ class Stats
     }
     // END
 
-    public function get_data(){
+    public function weather(){
         $url = "http://magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416";
         //  Initiate curl
         $ch = curl_init($url);
@@ -84,28 +84,20 @@ class Stats
 
         if ($hour >= 0 && $hour < 3) {
             $data = $data[0];
-            echo "Option 0";
         } else if ($hour >= 3 && $hour < 6 ) {
             $data = $data[1];
-            echo "Option 1";
         } else if ($hour >= 6 && $hour < 9 ) {
             $data = $data[2];
-            echo "Option 2";
         } else if ($hour >= 9 && $hour < 12 ) { 
             $data = $data[3];
-            echo "Option 3";
         } else if ($hour >= 12 && $hour < 15 ) { 
             $data = $data[4];
-            echo "Option 5";
         } else if ($hour >= 15 && $hour < 18 ) { 
             $data = $data[5];
-            echo "Option 6";
         } else if ($hour >= 18 && $hour < 21 ) { 
             $data = $data[6];
-            echo "Option 7";
         } else {
             $data = $data[7];
-            echo "Option 8";
         }
 
         return '<div class="weather row text-center">
