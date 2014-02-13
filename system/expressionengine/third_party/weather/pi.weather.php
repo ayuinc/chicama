@@ -116,9 +116,9 @@ class Weather
                             <img src="http://64.207.145.174/img/wind_icon.png" alt="">
                         </div>
                         <div class="weather_title">
-                            <span>' . $data["wind"]["speed"] . '</span>
+                            <span>CURRENT WIND</span>
                         </div>
-                        <span>10</span>
+                        <span>' . $data["wind"]["speed"] . '</span>
                     </div>
                     <div class="large-4 columns">
                         <div class="weather_icon"> 
