@@ -62,7 +62,7 @@ class Stats
     }
     // END
 
-    public function read(){
+    public function get_data(){
         $url = "http://magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416";
         //  Initiate curl
         $ch = curl_init($url);
@@ -142,4 +142,4 @@ class Stats
     
 }
 /* End of file pi.stats.php */
-/* Location: ./system/expressionengine/third_party/rating/pi.stats.php */
+/* Location: ./system/expressionengine/third_party/stats/pi.stats.php */
