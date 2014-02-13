@@ -100,6 +100,24 @@ class Weather
             $data = $data[7];
         }
 
+        if($data["condition"]["unit"] == "f") {
+            $data["condition"]["temperature"] = $data["condition"]["temperature"] * 1.8 + 32;
+            $data["condition"]["temperature"] = round($data["condition"]["temperature"], 2);
+        }
+
+        if($data["swell"]["unit"] == "ft") {
+            $data["swell"]["absMinBreakingHeight"] = $data["swell"]["absMinBreakingHeight"] * 0.3048;
+            $data["swell"]["absMaxBreakingHeight"] = $data["swell"]["absMaxBreakingHeight"] * 0.3048;
+
+            $data["swell"]["absMinBreakingHeight"] = round($data["swell"]["absMinBreakingHeight"], 2);
+            $data["swell"]["absMaxBreakingHeight"] = round($data["swell"]["absMaxBreakingHeight"], 2);
+        }
+
+        if($data["wind"]["unit"] == "mph") {
+            $data["wind"]["speed"] = $data["wind"]["speed"] * 1.609344;
+            $data["wind"]["speed"] = round($data["wind"]["speed"], 2);
+        }
+
         $text = '<div class="weather row text-center">
                     <div class="large-4 columns">
                         <div class="weather_icon"> 
