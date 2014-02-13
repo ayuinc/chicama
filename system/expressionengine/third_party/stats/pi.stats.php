@@ -11,7 +11,7 @@
  */
 
 $plugin_info = array(
-    'pi_name'         => 'Surf_Data',
+    'pi_name'         => 'Stats',
     'pi_version'      => '1.0',
     'pi_author'       => 'Ricardo Díaz',
     'pi_author_url'   => 'http://www.ayuinc.com/',
