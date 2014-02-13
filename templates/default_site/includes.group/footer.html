@@ -8,24 +8,26 @@
             </div>
             <div class="large-6 columns">
                 <ul class="inline-list right">
-                    <li><a href="the_hotel.html">THE <span class="bolder">HOTEL</span></a></li>
-                    <li><a href="surfing_around.html"><span class="bolder">SURFING</span> AROUND</a></li>
-                    <li><a href="ways_to_get_here.html">WAYS TO <span class="bolder">GET HERE</span></a></li>
+                    <li><a href="/content/secciones/the-hotel">THE <span class="bolder">HOTEL</span></a></li>
+                    <li><a href="/content/secciones/surfing-around"><span class="bolder">SURFING</span> AROUND</a></li>
+                    <li><a href="/content/secciones/ways-to-get-here">WAYS TO <span class="bolder">GET HERE</span></a></li>
                 </ul>
             </div>
         </div>
     </section>
 
     <script src="{site_url}/js/jquery.js"></script>
+    <script src="{site_url}/js/expanding.js"></script>    
     <script src="{site_url}/js/foundation.min.js"></script>
+    <script src="{site_url}/js/jquery-ui-1.10.4.custom.min.js"></script>
     <script>
         $(document).foundation();
     </script>
     <script>
-    $(document).ready(function(){
-
-
-    });        
+    	$(function() {
+	    	$("#check_in_date").datepicker();
+	    	$("#check_out_date").datepicker();
+    	});
     </script>
     </body>
 </html>

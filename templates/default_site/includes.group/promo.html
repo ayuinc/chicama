@@ -11,12 +11,16 @@
                                 </h3>
                             </div>
                             <div class="large-5 columns">
-                                <form action="index.html">
-                                    <input type="email" placeholder="Enter your e-mail">
-                                    <button type="submit">
-                                        <img src="{site_url}/img/send.png" alt="">
-                                    </button>
-                                </form>
+                            	{exp:freeform:form
+									form_id="4"
+									return="content/index" 
+								}
+									{freeform:field:email
+										attr:placeholder = "Enter your e-mail."}
+									<button type="submit">
+										<img src="{site_url}/img/send.png" alt="">
+									</button>
+                                {/exp:freeform:form}
                             </div>
                         </div>
                     </div>

@@ -26,7 +26,7 @@ html, body {
 .icon-play:before {
   content: "\e600"; }
 
-button:hover, button:focus, .button:hover, .button:focus {
+.play:hover, .play:focus, .play:hover, .play:focus {
   background-color: transparent; }
 
 input[type="text"], input[type="url"], textarea {
@@ -82,8 +82,7 @@ h1, h2, h3, h4, h5 {
   clear: none;
   margin-top: 25px; }
   #book_button:hover {
-    background: none;
-    border: 3px solid #fff; }
+    background: black; }
 
 #cover {
   min-height: 100%;
@@ -267,13 +266,15 @@ figure {
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
-  background-position: center center; }
+  background-position: center center;
+  min-height: 715px; }
   .cover h1 {
     color: #FFFFFF;
     font-size: 2.75rem;
     line-height: 1;
-    padding-top: 5em;
-    font-weight: 100; }
+    font-weight: 100;
+    position: absolute;
+    bottom: 5px; }
 
 #the_wave_cover {
   background: url("../img/the_wave_cover.jpg"); }
@@ -299,6 +300,10 @@ figure {
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item {
   margin-bottom: 1em !important; }
 
+.title {
+  position: absolute !important;
+  bottom: 5px; }
+
 #content {
   padding: 2.5em 0; }
   #content .other_categories {
@@ -321,6 +326,26 @@ figure {
 .the_stories_user img {
   width: 100%; }
 
+/* BOOK A ROOM */
+#book_a_room .send {
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0; }
+#book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
+  font-weight: 300;
+  margin-bottom: 2em; }
+
+#form_box {
+  background-color: #FFFFFF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 45px;
+  margin-top: 4em;
+  margin-bottom: 8em; }
+
+/* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }

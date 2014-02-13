@@ -1,13 +1,159 @@
 {embed="includes/header"}
 {exp:channel:entries channel="secciones" limit="1"}
     <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center;">
+        {if last_segment != "book-a-room"}
+
         <div class="row">
             <div class="large-12 columns">
-                <a href="the_rooms.html" id="book_button" class="button small radius"><span>BOOK A ROOM</span></a>
+                <a href="book-a-room" id="book_button" class="button small radius"><span>BOOK A ROOM</span></a>
             </div>
         </div>
+
+        {/if}
+
+        {if last_segment == "book-a-room"}
         <div class="row">
+			{exp:freeform:form
+				form_id="3"
+				return="content/index" 
+				form:id="book_a_room" 
+			}
             <div class="large-9 large-centered columns">
+
+            <div id="form_box">
+                
+            
+					
+                <div class="row">
+                    <div class="large-4 columns">                    
+    					{freeform:field:first_name
+    						attr:placeholder="ENTER YOUR NAME"
+    					}
+                    </div>
+                    <div class="large-4 columns">
+    					{freeform:field:last_name
+    						attr:placeholder="ENTER YOUR LAST NAME"
+    					}
+                    </div>
+                    <div class="large-4 columns">
+    					{freeform:field:phone
+    						attr:placeholder="ENTER YOUR PHONE NUMBER"
+    					}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-8 columns">
+    					{freeform:field:address
+    						attr:placeholder="ENTER YOUR ADDRESS"
+    					}
+                    </div>
+                    <div class="large-4 columns">    
+    					{freeform:field:country
+    						attr:placeholder="ENTER YOUR COUNTRY"
+    					}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-4 columns">
+                        {freeform:field:email
+                            attr:placeholder="ENTER YOUR E-MAIL"
+                        }
+                    </div>
+                    <div class="large-4 columns">
+                        {freeform:field:persons_number}
+                    </div>
+                    <div class="large-4 columns">
+                        {freeform:field:room_type}
+                    </div>
+
+                </div>
+				<div class="row">
+                    <div class="large-4 columns">
+                        {freeform:field:reservation_type}
+                    </div>
+					<div class="large-4 columns">
+						<!-- {freeform:label:check_in_date} -->
+						<div class="row collapse">
+							<div class="small-12 columns">
+								{freeform:field:check_in_date attr:id="check_in_date" attr:placeholder="Check-in Date"}
+							</div>
+							<!--
+<div class="small-3 columns">
+								<span class="postfix" id="check_in_datex">Date</span>
+							</div>
+-->
+						</div>
+					</div>
+					<div class="large-4 columns">
+						<!-- {freeform:label:check_out_date} -->
+						<div class="row collapse">
+							<div class="small-12 columns">
+								{freeform:field:check_out_date attr:id="check_out_date" attr:placeholder="Check-out Date"}
+							</div>
+							<!--
+<div class="small-3 columns">
+								<span class="postfix" id="check_out_datex">Date</span>
+							</div>
+-->
+						</div>
+					</div>
+				</div>
+
+                <!--
+<div class="row">
+                    <div class="large-3 columns">
+    					{freeform:label:check_in_day}
+    					{freeform:field:check_in_day}
+                    </div>
+                    <div class="large-6 columns">
+    					{freeform:label:check_in_month}
+    					{freeform:field:check_in_month}
+                    </div>
+                    <div class="large-3 columns">
+    					{freeform:label:check_in_year}
+    					{freeform:field:check_in_year}
+                    </div>
+                </div>
+-->
+
+
+<!--
+                <div class="row">
+                    <div class="large-3 columns">
+                        {freeform:label:check_out_day}
+                        {freeform:field:check_out_day}
+                    </div>
+                    <div class="large-6 columns">
+                        {freeform:label:check_out_month}
+                        {freeform:field:check_out_month}
+                    </div>
+                    <div class="large-3 columns">
+                        {freeform:label:check_out_year}
+                        {freeform:field:check_out_year}
+                    </div>
+                </div>
+-->
+                    
+                    {freeform:label:user_message}
+					{freeform:field:user_message
+                        attr:placeholder="WRITE HERE ANY COMMENT" attr:class="expanding"
+                    }
+
+					{freeform:submit
+						attr:class="send button"
+					} 
+
+            </div>
+
+            </div>
+
+            {/exp:freeform:form}
+        </div>
+        {/if}
+		<div class="row">
+            <div class="title large-9 large-centered columns">
                 {seccion_titulo_ingles}
             </div>
         </div>
@@ -17,12 +163,128 @@
         <div class="row">
             <div class="large-9 large-centered columns">
                 <div class="large-7 columns">
-                    {seccion_contenido_ingles}
+                    <p>{seccion_contenido_ingles}</p>
+{/exp:channel:entries}
+                    {if last_segment == "the-crew"}
+                    	<div class="row">
+                    		{exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
+                    		<div class="large-4 columns">
+                    			{crew_image}
+                    				<img src="{image:url:small}" alt="">
+                    			{/crew_image}
+                    			<h6>{title}</h6>
+                    		</div>
+                    		{/exp:channel:entries}
+                    	</div>
+                    {/if}
+                    
+                    {if last_segment == "beyond-surfing"}
+                    	<div class="row">
+                    		{exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"}
+                    		<div class="beyond_surfing_item row">
+                    			<div class="large-6 columns">
+                    				{item_image}
+                    					<img src="{image:url:small}" alt="">
+                    				{/item_image}
+                    			</div>
+                    			<div class="large-6 columns">
+                    				<h4>{title}</h4>
+                    				<p>{item_descripcion}</p>
+                    			</div>
+                    		</div>
+                    		{/exp:channel:entries}
+                    	</div>
+                    {/if}
+                    
+                    {if last_segment == "surfing-around"}
+                    	<div class="row">
+                    		{exp:channel:entries channel="items" category="3" dynamic="no" orderby="date" sort="asc"}
+                    		<div class="beyond_surfing_item row">
+                    			<div class="large-6 columns">
+                    				{item_image}
+                    					<img src="{image:url:small}" alt="">
+                    				{/item_image}
+                    			</div>
+                    			<div class="large-6 columns">
+                    				<h4>{title}</h4>
+                    				<p>{item_descripcion}</p>
+                    			</div>
+                    		</div>
+                    		{/exp:channel:entries}
+                    	</div>
+                    {/if}
+                    
+                    {if last_segment == "the-hotel"}
+                    	<div class="row">
+                    		{exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
+                    		<div class="beyond_surfing_item row">
+                    			<div class="large-6 columns">
+                    				{item_image}
+                    					<img src="{image:url:small}" alt="">
+                    				{/item_image}
+                    			</div>
+                    			<div class="large-6 columns">
+                    				<h4>{title}</h4>
+                    				<p>{item_descripcion}</p>
+                    			</div>
+                    		</div>
+                    		{/exp:channel:entries}
+                    	</div>
+                    {/if}
+                    
+                    {if last_segment == "the-stories"}
+					<div class="row">
+						<div class="large-3 columns">
+							<div class="the_stories_user">
+								<img src="{site_url}/img/the_stories_user1.jpg" alt="">
+							</div>
+						</div>
+						<div class="large-9 columns">
+							<h6>Jan Michelle Pascal</h6>
+							<span>Montreal, Canada</span>
+							<p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
+							<div class="text-right">
+                
+								<img src="{site_url}/img/trip_advisor.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-3 columns">
+							<div class="the_stories_user">
+								<img src="{site_url}/img/the_stories_user2.jpg" alt="">
+							</div>
+						</div>
+						<div class="large-9 columns">
+							<h6>Jan Michelle Pascal</h6>
+							<span>Montreal, Canada</span>
+							<p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
+							<div class="text-right">
+								<img src="{site_url}/img/trip_advisor.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-3 columns">
+							<div class="the_stories_user">
+								<img src="{site_url}/img/the_stories_user3.jpg" alt="">
+							</div>
+						</div>
+						<div class="large-9 columns">
+							<h6>Jan Michelle Pascal</h6>
+							<span>Montreal, Canada</span>
+							<p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
+							<div class="text-right">
+								<img src="{site_url}/img/trip_advisor.png" alt="">
+							</div>
+						</div>
+					</div>
+                    {/if}
                 </div>
                 <div class="large-offset-1 large-4 columns">
                     <ul class="other_categories">
                         <li>
-                            <a href="the_crew.html">
+                            <a href="the-crew">
                                 <div class="row">
                                     <div class="large-8 columns">
                                         <h5>THE <span class="bold">CREW</span></h5>
@@ -36,7 +298,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="the_stories.html">
+                            <a href="the-stories">
                                 <div class="row">
                                     <div class="large-8 columns">
                                         <h5>THE <span class="bold">STORIES</span></h5>
@@ -50,7 +312,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="beyond_surfing.html">
+                            <a href="beyond-surfing">
                                 <div class="row">
                                     <div class="large-8 columns">
                                         <h5>BEYOND <span class="bold">SURFING</span></h5>
@@ -68,6 +330,5 @@
             </div>
         </div>
     </section>
-{/exp:channel:entries}
 {embed="includes/promo"}
 {embed="includes/footer"}

@@ -23,8 +23,6 @@ html, body {
 	font-weight: 400;
 }
 
-
-
 @font-face {
 	font-family: 'cplay';
 	src:url('../fonts/cplay.eot');
@@ -360,11 +358,24 @@ figure {
 	}
 }
 
+.cover{
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+	background-position: center center;
+	h1{
+		color: #FFFFFF;
+		font-size: 2.75rem;
+		line-height: 1;
+		padding-top: 5em;
+		font-weight: 100;
+	}
+}
+
 #the_wave_cover{
 	background: url("../img/the_wave_cover.jpg");
 	@include cover;
 }
-
 	
 #the_crew_cover{
 	background: url("../img/the_crew_cover.jpg");
@@ -418,12 +429,12 @@ figure {
 
 
 #myModal{
-	padding: 0;
+	padding: 1.8em;
 	border: none;
 	box-shadow: none;
 	.vimeo{
 		padding-top: 0;
-		padding-bottom: 56.25%;
+		margin-bottom: 0;
 	}
 }
 
@@ -442,12 +453,15 @@ figure {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
-  	#cover h1 {
-  		line-height: 1;
-    	font-size: 7.75rem; 
+  	#the_wave_cover, #the_crew_cover, #beyond_surfing_cover, #surfing_around_cover, #the_hotel_cover, #the_rooms_cover, #the_stories_cover{
+
+  		h1 {
+  			line-height: 1;
+    		font-size: 7.75rem; 
+		}
 	}
 
-  	#the_wave_cover, #the_crew_cover, #beyond_surfing_cover, #surfing_around_cover, #the_hotel_cover, #the_rooms_cover, #the_stories_cover{
+  	.cover{
 		h1{
 			font-size: 5.75rem;
 		}
