@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5 {
 /* line 97, custom.scss */
 #book_button {
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
   color: #fff;
   font-weight: 600;
   line-height: 18px;
@@ -351,7 +351,7 @@ figure figcaption {
   bottom: 0;
   right: 0;
   color: #ed4e6e;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -396,14 +396,22 @@ figure:hover .icono img {
 }
 
 /* line 380, custom.scss */
+.cover_container {
+  background: #F3F3ED;
+  height: 100%;
+}
+
+/* line 385, custom.scss */
 .cover {
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
   background-position: center center;
+  border-bottom-left-radius: 45% 4%;
+  border-bottom-right-radius: 45% 4%;
   min-height: 715px;
 }
-/* line 386, custom.scss */
+/* line 393, custom.scss */
 .cover h1 {
   color: #FFFFFF;
   font-size: 2.75rem;
@@ -413,103 +421,103 @@ figure:hover .icono img {
   bottom: 5px;
 }
 
-/* line 396, custom.scss */
+/* line 403, custom.scss */
 #the_wave_cover {
   background: url("../img/the_wave_cover.jpg");
 }
 
-/* line 400, custom.scss */
+/* line 407, custom.scss */
 #the_crew_cover {
   background: url("../img/the_crew_cover.jpg");
 }
 
-/* line 404, custom.scss */
+/* line 411, custom.scss */
 #beyond_surfing_cover {
   background: url("../img/beyond_surfing_cover.jpg");
 }
 
-/* line 408, custom.scss */
+/* line 415, custom.scss */
 #the_hotel_cover {
   background: url("../img/the_hotel_cover.jpg");
 }
 
-/* line 412, custom.scss */
+/* line 419, custom.scss */
 #surfing_around_cover {
   background: url("../img/surfing_around_cover.jpg");
 }
 
-/* line 416, custom.scss */
+/* line 423, custom.scss */
 #the_rooms_cover {
   background: url("../img/the_rooms_cover.jpg");
 }
 
-/* line 420, custom.scss */
+/* line 427, custom.scss */
 #the_stories_cover {
   background: url("../img/the_stories_cover.jpg");
 }
 
-/* line 424, custom.scss */
+/* line 431, custom.scss */
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item {
   margin-bottom: 1em !important;
 }
 
-/* line 429, custom.scss */
+/* line 436, custom.scss */
 .title {
   position: absolute !important;
   bottom: 5px;
 }
 
-/* line 434, custom.scss */
+/* line 441, custom.scss */
 #content {
   padding: 2.5em 0;
 }
-/* line 436, custom.scss */
+/* line 443, custom.scss */
 #content .other_categories {
   list-style: none;
   margin: 0;
 }
-/* line 439, custom.scss */
+/* line 446, custom.scss */
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
 }
-/* line 444, custom.scss */
+/* line 451, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
 
-/* line 450, custom.scss */
+/* line 457, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 454, custom.scss */
+/* line 461, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 462, custom.scss */
+/* line 469, custom.scss */
 .the_stories_user img {
   width: 100%;
 }
 
 /* BOOK A ROOM */
-/* line 471, custom.scss */
+/* line 478, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
   margin: 0;
 }
-/* line 477, custom.scss */
+/* line 484, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 483, custom.scss */
+/* line 490, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -522,33 +530,33 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
-  /* line 500, custom.scss */
+  /* line 507, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 503, custom.scss */
+  /* line 510, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 509, custom.scss */
+  /* line 516, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 514, custom.scss */
+  /* line 521, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 518, custom.scss */
+  /* line 525, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 522, custom.scss */
+  /* line 529, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
