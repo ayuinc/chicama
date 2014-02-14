@@ -24,10 +24,18 @@
         $(document).foundation();
     </script>
     <script>
-    	$(function() {
-	    	$("#check_in_date").datepicker();
-	    	$("#check_out_date").datepicker();
-    	});
+    $(document).ready(function(){
+
+        $(".play").click(function(){
+          $("#youtube")[0].src += "&autoplay=1";
+          $(this).unbind("click");//or some other way to make sure that this only happens once
+        });
+
+    });
+	$(function() {
+    	$("#check_in_date").datepicker();
+    	$("#check_out_date").datepicker();
+	});
     </script>
     </body>
 </html>
