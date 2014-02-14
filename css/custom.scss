@@ -377,11 +377,18 @@ figure {
 	}
 }
 
+.cover_container{
+	background: #F3F3ED;
+	height: 100%;
+}
+
 .cover{
 	-webkit-background-size: cover;
 	background-size: cover;
 	position: relative;
 	background-position: center center;
+	border-bottom-left-radius: 45% 4%;
+	border-bottom-right-radius: 45% 4%;
 	min-height: 715px;
 	h1{
 		color: #FFFFFF;
@@ -445,7 +452,6 @@ figure {
 		border-bottom: $border-bottom;
 	}
 }
-
 
 #myModal{
 	padding: 1.8em;
