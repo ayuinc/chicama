@@ -443,6 +443,17 @@ figure {
 
 #content{
 	padding: 2.5em 0;
+	position: relative;
+	.gray_curve{
+		height: 10%;
+		width: 100%;
+		background: #F3F3ED;
+		border-bottom-left-radius: 80% 80%;
+		border-bottom-right-radius: 80% 80%;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+	}
 	.other_categories{
 		list-style: none;
 		margin: 0;
