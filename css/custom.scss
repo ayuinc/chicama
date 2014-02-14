@@ -445,11 +445,11 @@ figure {
 	padding: 2.5em 0;
 	position: relative;
 	.gray_curve{
-		height: 10%;
+		height: 20px;
 		width: 100%;
 		background: #F3F3ED;
-		border-bottom-left-radius: 80% 80%;
-		border-bottom-right-radius: 80% 80%;
+		border-bottom-left-radius: 40% 100%;
+		border-bottom-right-radius: 40% 100%;
 		position: absolute;
 		z-index: 2;
 		top: 0;
