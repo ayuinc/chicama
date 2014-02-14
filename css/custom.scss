@@ -385,6 +385,9 @@ figure {
 .cover{
 	-webkit-background-size: cover;
 	background-size: cover;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 	position: relative;
 	background-position: center center;
 	border-bottom-left-radius: 45% 4%;
