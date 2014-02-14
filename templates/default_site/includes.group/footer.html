@@ -27,8 +27,10 @@
     $(document).ready(function(){
 
         $(".play").click(function(){
+
           $("#youtube")[0].src += "&autoplay=1";
-          $(this).unbind("click");//or some other way to make sure that this only happens once
+          $(this).unbind("click");
+
         });
 
     });
