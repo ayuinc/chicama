@@ -1,160 +1,163 @@
 {embed="includes/header"}
 {exp:channel:entries channel="secciones" limit="1"}
-    <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center;">
-        {if last_segment != "book-a-room"}
+    <div class="cover_container">
+        <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center;">
+            <div class="gray_curve"></div>
+            {if last_segment != "book-a-room"}
 
-        <div class="row">
-            <div class="large-12 columns">
-                <a href="book-a-room" id="book_button" class="button small radius"><span>RESERVA HOY</span></a>
+            <div class="row">
+                <div class="large-12 columns">
+                    <a href="book-a-room" id="book_button" class="button small radius"><span>RESERVA HOY</span></a>
+                </div>
             </div>
-        </div>
 
-        {/if}
+            {/if}
 
-        {if last_segment == "book-a-room"}
-        <div class="row">
-            {exp:freeform:form
-                form_id="3"
-                return="content/index" 
-                form:id="book_a_room" 
-            }
-            <div class="large-9 large-centered columns">
+            {if last_segment == "book-a-room"}
+            <div class="row">
+                {exp:freeform:form
+                    form_id="3"
+                    return="content/index" 
+                    form:id="book_a_room" 
+                }
+                <div class="large-9 large-centered columns">
 
-            <div id="form_box">
-                <div class="row">
-                    <div class="large-4 columns">                    
-                        {freeform:field:first_name
-                            attr:placeholder="ENTER YOUR NAME"
-                        }
-                    </div>
-                    <div class="large-4 columns">
-                        {freeform:field:last_name
-                            attr:placeholder="ENTER YOUR LAST NAME"
-                        }
-                    </div>
-                    <div class="large-4 columns">
-                        {freeform:field:phone
-                            attr:placeholder="ENTER YOUR PHONE NUMBER"
-                        }
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="large-8 columns">
-                        {freeform:field:address
-                            attr:placeholder="ENTER YOUR ADDRESS"
-                        }
-                    </div>
-                    <div class="large-4 columns">    
-                        {freeform:field:country
-                            attr:placeholder="ENTER YOUR COUNTRY"
-                        }
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="large-4 columns">
-                        {freeform:field:email
-                            attr:placeholder="ENTER YOUR E-MAIL"
-                        }
-                    </div>
-                    <div class="large-4 columns">
-                        {freeform:field:persons_number}
-                    </div>
-                    <div class="large-4 columns">
-                        {freeform:field:room_type}
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="large-4 columns">
-                        {freeform:field:reservation_type}
-                    </div>
-                    <div class="large-4 columns">
-                        <!-- {freeform:label:check_in_date} -->
-                        <div class="row collapse">
-                            <div class="small-12 columns">
-                                {freeform:field:check_in_date attr:id="check_in_date" attr:placeholder="Check-in Date"}
-                            </div>
-                            <!--
-<div class="small-3 columns">
-                                <span class="postfix" id="check_in_datex">Date</span>
-                            </div>
--->
+                <div id="form_box">
+                    <div class="row">
+                        <div class="large-4 columns">                    
+                            {freeform:field:first_name
+                                attr:placeholder="ENTER YOUR NAME"
+                            }
+                        </div>
+                        <div class="large-4 columns">
+                            {freeform:field:last_name
+                                attr:placeholder="ENTER YOUR LAST NAME"
+                            }
+                        </div>
+                        <div class="large-4 columns">
+                            {freeform:field:phone
+                                attr:placeholder="ENTER YOUR PHONE NUMBER"
+                            }
                         </div>
                     </div>
-                    <div class="large-4 columns">
-                        <!-- {freeform:label:check_out_date} -->
-                        <div class="row collapse">
-                            <div class="small-12 columns">
-                                {freeform:field:check_out_date attr:id="check_out_date" attr:placeholder="Check-out Date"}
-                            </div>
-                            <!--
-<div class="small-3 columns">
-                                <span class="postfix" id="check_out_datex">Date</span>
-                            </div>
--->
+
+                    <div class="row">
+                        <div class="large-8 columns">
+                            {freeform:field:address
+                                attr:placeholder="ENTER YOUR ADDRESS"
+                            }
+                        </div>
+                        <div class="large-4 columns">    
+                            {freeform:field:country
+                                attr:placeholder="ENTER YOUR COUNTRY"
+                            }
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="large-4 columns">
+                            {freeform:field:email
+                                attr:placeholder="ENTER YOUR E-MAIL"
+                            }
+                        </div>
+                        <div class="large-4 columns">
+                            {freeform:field:persons_number}
+                        </div>
+                        <div class="large-4 columns">
+                            {freeform:field:room_type}
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            {freeform:field:reservation_type}
+                        </div>
+                        <div class="large-4 columns">
+                            <!-- {freeform:label:check_in_date} -->
+                            <div class="row collapse">
+                                <div class="small-12 columns">
+                                    {freeform:field:check_in_date attr:id="check_in_date" attr:placeholder="Check-in Date"}
+                                </div>
+                                <!--
+    <div class="small-3 columns">
+                                    <span class="postfix" id="check_in_datex">Date</span>
+                                </div>
+    -->
+                            </div>
+                        </div>
+                        <div class="large-4 columns">
+                            <!-- {freeform:label:check_out_date} -->
+                            <div class="row collapse">
+                                <div class="small-12 columns">
+                                    {freeform:field:check_out_date attr:id="check_out_date" attr:placeholder="Check-out Date"}
+                                </div>
+                                <!--
+    <div class="small-3 columns">
+                                    <span class="postfix" id="check_out_datex">Date</span>
+                                </div>
+    -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+    <div class="row">
+                        <div class="large-3 columns">
+                            {freeform:label:check_in_day}
+                            {freeform:field:check_in_day}
+                        </div>
+                        <div class="large-6 columns">
+                            {freeform:label:check_in_month}
+                            {freeform:field:check_in_month}
+                        </div>
+                        <div class="large-3 columns">
+                            {freeform:label:check_in_year}
+                            {freeform:field:check_in_year}
+                        </div>
+                    </div>
+    -->
+
+
+    <!--
+                    <div class="row">
+                        <div class="large-3 columns">
+                            {freeform:label:check_out_day}
+                            {freeform:field:check_out_day}
+                        </div>
+                        <div class="large-6 columns">
+                            {freeform:label:check_out_month}
+                            {freeform:field:check_out_month}
+                        </div>
+                        <div class="large-3 columns">
+                            {freeform:label:check_out_year}
+                            {freeform:field:check_out_year}
+                        </div>
+                    </div>
+    -->
+                        
+                        {freeform:label:user_message}
+                        {freeform:field:user_message
+                            attr:placeholder="WRITE HERE ANY COMMENT" attr:class="expanding"
+                        }
+
+                        {freeform:submit
+                            attr:class="send button"
+                        } 
+
                 </div>
 
-                <!--
-<div class="row">
-                    <div class="large-3 columns">
-                        {freeform:label:check_in_day}
-                        {freeform:field:check_in_day}
-                    </div>
-                    <div class="large-6 columns">
-                        {freeform:label:check_in_month}
-                        {freeform:field:check_in_month}
-                    </div>
-                    <div class="large-3 columns">
-                        {freeform:label:check_in_year}
-                        {freeform:field:check_in_year}
-                    </div>
                 </div>
--->
 
-
-<!--
-                <div class="row">
-                    <div class="large-3 columns">
-                        {freeform:label:check_out_day}
-                        {freeform:field:check_out_day}
-                    </div>
-                    <div class="large-6 columns">
-                        {freeform:label:check_out_month}
-                        {freeform:field:check_out_month}
-                    </div>
-                    <div class="large-3 columns">
-                        {freeform:label:check_out_year}
-                        {freeform:field:check_out_year}
-                    </div>
+                {/exp:freeform:form}
+            </div>
+            {/if}
+            <div class="row">
+                <div class="title large-9 large-centered columns">
+                    {seccion_titulo_espanol}
                 </div>
--->
-                    
-                    {freeform:label:user_message}
-                    {freeform:field:user_message
-                        attr:placeholder="WRITE HERE ANY COMMENT" attr:class="expanding"
-                    }
-
-                    {freeform:submit
-                        attr:class="send button"
-                    } 
-
             </div>
-
-            </div>
-
-            {/exp:freeform:form}
-        </div>
-        {/if}
-        <div class="row">
-            <div class="title large-9 large-centered columns">
-                {seccion_titulo_espanol}
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section id="content">
         <div class="row">
