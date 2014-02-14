@@ -218,10 +218,20 @@ h1,h2,h3,h4,h5{
 #views{
 	background-color: #FFFFFF;
 	padding: $padding;
+	position: relative;
 	h3{
 		border-bottom: $border-bottom;
 		margin-bottom: 0;
 	}
+	.white_curve{
+		height: 5%;
+		background: #CCC;
+		border-bottom-left-radius: 50% 100%;
+		border-bottom-right-radius: 50% 100%;
+		position: absolute;
+	}
+
+
 }
 
 
