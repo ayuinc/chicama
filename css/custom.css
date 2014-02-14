@@ -227,6 +227,7 @@ h1, h2, h3, h4, h5 {
 #views {
   background-color: #FFFFFF;
   padding: 2.5em 0;
+  position: relative;
 }
 /* line 222, custom.scss */
 #views h3 {
@@ -235,8 +236,11 @@ h1, h2, h3, h4, h5 {
 }
 /* line 226, custom.scss */
 #views .white_curve {
-  height: 5%;
+  height: 15px;
   background: #CCC;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  position: absolute;
 }
 
 /* line 238, custom.scss */
