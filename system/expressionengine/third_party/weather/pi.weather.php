@@ -145,7 +145,7 @@ class Weather
                             <img src="http://64.207.145.174/img/current_tide_icon.png" alt="">
                         </div>
                         <div class="weather_title">
-                            <span>CURRENT TIDE</span>
+                            <span>TEMPERATURE</span>
                         </div>
                         <span>' . $data["condition"]["temperature"] . '</span>
                         <span>' . $data["condition"]["unit"] . '</span>
