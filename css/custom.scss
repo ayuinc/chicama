@@ -171,7 +171,7 @@ h1,h2,h3,h4,h5{
 		}
 		span{
 			color: #FFFFFF;
-			font-size: 3.2rem;
+			font-size: 1.2rem;
 
 			font-weight: 100;
 		}
@@ -217,11 +217,23 @@ h1,h2,h3,h4,h5{
 
 #views{
 	background-color: #FFFFFF;
-	padding: $padding;
+	padding: 1.5em 0 2.5em;
+	position: relative;
 	h3{
 		border-bottom: $border-bottom;
 		margin-bottom: 0;
 	}
+	.white_curve{
+		height: 10%;
+		width: 100%;
+		background: #FFFFFF;
+		border-bottom-left-radius: 80% 80%;
+		border-bottom-right-radius: 80% 80%;
+		position: absolute;
+		z-index: 1;
+	}
+
+
 }
 
 
