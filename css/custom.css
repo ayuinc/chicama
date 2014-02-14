@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5 {
 /* line 97, custom.scss */
 #book_button {
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   font-weight: 600;
   line-height: 18px;
@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5 {
 /* line 172, custom.scss */
 #cover .weather span {
   color: #FFFFFF;
-  font-size: 1.2rem;
+  font-size: 3.2rem;
   font-weight: 100;
 }
 
@@ -321,7 +321,7 @@ figure figcaption {
   bottom: 0;
   right: 0;
   color: #ed4e6e;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -470,7 +470,7 @@ figure:hover .icono img {
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
 /* line 452, custom.scss */
