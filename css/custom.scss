@@ -223,6 +223,17 @@ h1,h2,h3,h4,h5{
 		border-bottom: $border-bottom;
 		margin-bottom: 0;
 	}
+	
+	.gray_curve{
+		height: 10%;
+		width: 100%;
+		background: #F3F3ED;
+		border-bottom-left-radius: 80% 80%;
+		border-bottom-right-radius: 80% 80%;
+		position: absolute;
+		z-index: 1;
+	}
+
 	.white_curve{
 		height: 10%;
 		width: 100%;
