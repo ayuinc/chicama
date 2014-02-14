@@ -217,7 +217,7 @@ h1,h2,h3,h4,h5{
 
 #views{
 	background-color: #FFFFFF;
-	padding: $padding;
+	padding: 1.5em 0 2.5em;
 	position: relative;
 	h3{
 		border-bottom: $border-bottom;
@@ -226,10 +226,11 @@ h1,h2,h3,h4,h5{
 	.white_curve{
 		height: 10%;
 		width: 100%;
-		background: #CCC;
-		border-bottom-left-radius: 50% 100%;
-		border-bottom-right-radius: 50% 100%;
+		background: #FFFFFF;
+		border-bottom-left-radius: 80% 80%;
+		border-bottom-right-radius: 80% 80%;
 		position: absolute;
+		z-index: 1;
 	}
 
 
