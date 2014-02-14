@@ -115,7 +115,11 @@ h1,h2,h3,h4,h5{
 	}
 }
 
-#cover {
+#cover_container{
+	background: #F3F3ED;
+}
+
+#cover{
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -124,6 +128,8 @@ h1,h2,h3,h4,h5{
 	background-size: cover;
 	position: relative;
 	background-position: center center;
+	border-bottom-left-radius: 45% 4%;
+	border-bottom-right-radius: 45% 4%;
 	.row{
 		padding-top: 1.5em;
 		.headline{
