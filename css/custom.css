@@ -184,7 +184,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 100;
 }
 /* line 179, custom.scss */
-#cover .weather_fixed {
+#cover #weather_fixed {
   position: absolute;
   bottom: 40px;
 }
