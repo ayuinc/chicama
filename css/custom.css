@@ -242,9 +242,10 @@ h1, h2, h3, h4, h5 {
   border-bottom-left-radius: 80% 80%;
   border-bottom-right-radius: 80% 80%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  top: 0;
 }
-/* line 237, custom.scss */
+/* line 238, custom.scss */
 #views .white_curve {
   height: 10%;
   width: 100%;
@@ -255,24 +256,24 @@ h1, h2, h3, h4, h5 {
   z-index: 1;
 }
 
-/* line 251, custom.scss */
+/* line 252, custom.scss */
 #promo {
   background-color: #F3F3ED;
   padding: 2.5em 0;
   color: #2C2625;
 }
-/* line 255, custom.scss */
+/* line 256, custom.scss */
 #promo h3 {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
   padding: 0 0 0 0.2em;
 }
-/* line 261, custom.scss */
+/* line 262, custom.scss */
 #promo form {
   margin: 8px 0 0 0;
 }
-/* line 264, custom.scss */
+/* line 265, custom.scss */
 #promo input {
   display: inline-block;
   width: 85%;
@@ -283,14 +284,14 @@ h1, h2, h3, h4, h5 {
   border: 1px solid #E2E4DA;
   margin: 0;
 }
-/* line 273, custom.scss */
+/* line 274, custom.scss */
 #promo input:focus {
   outline: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 281, custom.scss */
+/* line 282, custom.scss */
 #promo button {
   margin: 0 0 0 0.5em;
   padding: 0;
@@ -301,37 +302,37 @@ h1, h2, h3, h4, h5 {
   outline: none;
 }
 
-/* line 293, custom.scss */
+/* line 294, custom.scss */
 #footer {
   background-color: #2C2625;
   padding: 1.25em 0 1.25em 0;
 }
-/* line 296, custom.scss */
+/* line 297, custom.scss */
 #footer p, #footer ul li a {
   color: #A29F8A;
   display: inline-block;
 }
-/* line 300, custom.scss */
+/* line 301, custom.scss */
 #footer img {
   padding-right: 1em;
 }
-/* line 303, custom.scss */
+/* line 304, custom.scss */
 #footer ul {
   margin-top: 0.7em;
 }
 
-/* line 309, custom.scss */
+/* line 310, custom.scss */
 figure {
   margin: 0;
   position: relative;
 }
-/* line 312, custom.scss */
+/* line 313, custom.scss */
 figure img {
   max-width: 100%;
   display: block;
   position: relative;
 }
-/* line 317, custom.scss */
+/* line 318, custom.scss */
 figure figcaption {
   position: absolute;
   height: 100%;
@@ -353,23 +354,23 @@ figure figcaption {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 338, custom.scss */
+/* line 339, custom.scss */
 figure:hover figcaption {
   opacity: 1;
 }
-/* line 341, custom.scss */
+/* line 342, custom.scss */
 figure:hover .icono img {
   -webkit-transform: scale(1);
 }
 
-/* line 348, custom.scss */
+/* line 349, custom.scss */
 .icono {
   width: 100%;
   height: 100%;
   position: absolute;
   clear: both;
 }
-/* line 353, custom.scss */
+/* line 354, custom.scss */
 .icono img {
   overflow: auto;
   margin: auto;
@@ -386,7 +387,7 @@ figure:hover .icono img {
   transition: 0.4s;
 }
 
-/* line 372, custom.scss */
+/* line 373, custom.scss */
 .cover {
   -webkit-background-size: cover;
   background-size: cover;
@@ -394,7 +395,7 @@ figure:hover .icono img {
   background-position: center center;
   min-height: 715px;
 }
-/* line 378, custom.scss */
+/* line 379, custom.scss */
 .cover h1 {
   color: #FFFFFF;
   font-size: 2.75rem;
@@ -404,103 +405,103 @@ figure:hover .icono img {
   bottom: 5px;
 }
 
-/* line 388, custom.scss */
+/* line 389, custom.scss */
 #the_wave_cover {
   background: url("../img/the_wave_cover.jpg");
 }
 
-/* line 392, custom.scss */
+/* line 393, custom.scss */
 #the_crew_cover {
   background: url("../img/the_crew_cover.jpg");
 }
 
-/* line 396, custom.scss */
+/* line 397, custom.scss */
 #beyond_surfing_cover {
   background: url("../img/beyond_surfing_cover.jpg");
 }
 
-/* line 400, custom.scss */
+/* line 401, custom.scss */
 #the_hotel_cover {
   background: url("../img/the_hotel_cover.jpg");
 }
 
-/* line 404, custom.scss */
+/* line 405, custom.scss */
 #surfing_around_cover {
   background: url("../img/surfing_around_cover.jpg");
 }
 
-/* line 408, custom.scss */
+/* line 409, custom.scss */
 #the_rooms_cover {
   background: url("../img/the_rooms_cover.jpg");
 }
 
-/* line 412, custom.scss */
+/* line 413, custom.scss */
 #the_stories_cover {
   background: url("../img/the_stories_cover.jpg");
 }
 
-/* line 416, custom.scss */
+/* line 417, custom.scss */
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item {
   margin-bottom: 1em !important;
 }
 
-/* line 421, custom.scss */
+/* line 422, custom.scss */
 .title {
   position: absolute !important;
   bottom: 5px;
 }
 
-/* line 426, custom.scss */
+/* line 427, custom.scss */
 #content {
   padding: 2.5em 0;
 }
-/* line 428, custom.scss */
+/* line 429, custom.scss */
 #content .other_categories {
   list-style: none;
   margin: 0;
 }
-/* line 431, custom.scss */
+/* line 432, custom.scss */
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
 }
-/* line 436, custom.scss */
+/* line 437, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
 
-/* line 442, custom.scss */
+/* line 443, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 446, custom.scss */
+/* line 447, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 454, custom.scss */
+/* line 455, custom.scss */
 .the_stories_user img {
   width: 100%;
 }
 
 /* BOOK A ROOM */
-/* line 463, custom.scss */
+/* line 464, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 469, custom.scss */
+/* line 470, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 475, custom.scss */
+/* line 476, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -513,33 +514,33 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
-  /* line 492, custom.scss */
+  /* line 493, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 495, custom.scss */
+  /* line 496, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 501, custom.scss */
+  /* line 502, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 506, custom.scss */
+  /* line 507, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 510, custom.scss */
+  /* line 511, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 514, custom.scss */
+  /* line 515, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
