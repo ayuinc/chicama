@@ -38,6 +38,12 @@
     	$("#check_in_date").datepicker();
     	$("#check_out_date").datepicker();
 	});
+
+    var divs = $('h1');
+    $(window).on('scroll', function() {
+     var st = $(this).scrollTop();
+     divs.css({ 'opacity' : (1 - st/700) });
+    });
     </script>
     </body>
 </html>
