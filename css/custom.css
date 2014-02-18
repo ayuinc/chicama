@@ -529,49 +529,50 @@ figure:hover .icono img {
 #content .other_categories {
   list-style: none;
   margin-top: 2em;
+  margin-left: 0;
 }
-/* line 493, custom.scss */
+/* line 494, custom.scss */
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
 }
-/* line 498, custom.scss */
+/* line 499, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
 
-/* line 503, custom.scss */
+/* line 504, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 507, custom.scss */
+/* line 508, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 515, custom.scss */
+/* line 516, custom.scss */
 .the_stories_user img {
   width: 100%;
 }
 
 /* BOOK A ROOM */
-/* line 524, custom.scss */
+/* line 525, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 530, custom.scss */
+/* line 531, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 536, custom.scss */
+/* line 537, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -584,33 +585,33 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
-  /* line 553, custom.scss */
+  /* line 554, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 556, custom.scss */
+  /* line 557, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 562, custom.scss */
+  /* line 563, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 567, custom.scss */
+  /* line 568, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 571, custom.scss */
+  /* line 572, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 575, custom.scss */
+  /* line 576, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
