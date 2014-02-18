@@ -405,6 +405,15 @@ figure {
 
 #testimonio{
 	background-color: #2C2625;
+	position: absolute;
+	top: -100px;
+	z-index: 2;
+	.testimonio_text{
+		padding-left: 0;
+	}
+	img{
+		width: 100%;
+	}
 	h6,span,p{
 		color: #FFFFFF;
 	}
@@ -416,6 +425,11 @@ figure {
 		font-size: 0.8rem;
 		font-weight: 100;
 		color: #e3e3e3;
+	}
+	p{
+		font-size: 0.8rem;
+		margin: 0;
+		font-weight: 300;
 	}
 }
 
