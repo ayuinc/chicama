@@ -44,6 +44,14 @@
      var st = $(this).scrollTop();
      divs.css({ 'opacity' : (1 - st/700) });
     });
+
+    (function() {
+        $(window).scroll(function() {
+            var oVal;
+            oVal = $(window).scrollTop() / 360;
+            return $("#blur").css("opacity", oVal);
+        });
+    }).call(this);
     </script>
     </body>
 </html>
