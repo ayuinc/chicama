@@ -380,6 +380,15 @@ figure {
 .cover_container{
 	background: #F3F3ED;
 	height: 75%;
+	position: relative;
+	h1 {
+		color: #FFFFFF;
+		font-size: 2.75rem;
+		line-height: 1;
+		font-weight: 100;
+		position: absolute;
+		bottom: 5px;
+	}
 }
 
 .cover{
@@ -393,14 +402,6 @@ figure {
 	border-bottom-left-radius: 45% 4%;
 	border-bottom-right-radius: 45% 4%;
 	min-height: 715px;
-	h1{
-		color: #FFFFFF;
-		font-size: 2.75rem;
-		line-height: 1;
-		font-weight: 100;
-		position: absolute;
-		bottom: 5px;
-	}
 }
 
 #testimonio{
