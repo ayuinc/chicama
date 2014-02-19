@@ -389,6 +389,19 @@ figure {
 		position: absolute;
 		bottom: 5px;
 	}
+
+	.row{
+		padding-top: 1.5em;
+		.headline{
+			padding-top: 2.5em;
+		}	
+	}
+
+	#blur {
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+	}
 }
 
 .cover{
@@ -402,6 +415,10 @@ figure {
 	border-bottom-left-radius: 45% 4%;
 	border-bottom-right-radius: 45% 4%;
 	min-height: 715px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 #testimonio{

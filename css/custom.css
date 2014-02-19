@@ -301,6 +301,14 @@ figure {
     font-weight: 100;
     position: absolute;
     bottom: 5px; }
+  .cover_container .row {
+    padding-top: 1.5em; }
+    .cover_container .row .headline {
+      padding-top: 2.5em; }
+  .cover_container #blur {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0); }
 
 .cover {
   -webkit-background-size: cover;
@@ -312,7 +320,11 @@ figure {
   background-position: center center;
   border-bottom-left-radius: 45% 4%;
   border-bottom-right-radius: 45% 4%;
-  min-height: 715px; }
+  min-height: 715px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 #testimonio {
   background-color: #2C2625;
