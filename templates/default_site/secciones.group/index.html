@@ -1,9 +1,10 @@
 {embed="includes/header"}
 {exp:channel:entries channel="secciones" limit="1"}
     <div class="cover_container">
-        <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%">
+        <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 99;">
         </section>
-        <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%"></section>
+        <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 90;"></section>
+
         {if last_segment != "book-a-room"}
 
         <div class="row">
@@ -347,3 +348,13 @@
     </section>
 {embed="includes/promo_es"}
 {embed="includes/footer"}
+<script>
+  (function() {
+    $(window).scroll(function() {
+      var oVal;
+      oVal = $(window).scrollTop() / 240;
+      return $("#blur").css("opacity", oVal);
+    });
+
+  }).call(this);
+</script>
