@@ -278,12 +278,13 @@ h1,h2,h3,h4,h5{
 		box-shadow: none;
 		border: 1px solid #E2E4DA;
 		margin: 0;
+		font-weight: 300;
 		&:focus{
 		outline: none;
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
-
+		font-weight: 400;
 		}
 	}
 	button{
