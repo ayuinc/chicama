@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5 {
 /* line 97, custom.scss */
 #book_button {
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
   color: #fff;
   font-weight: 600;
   line-height: 18px;
@@ -353,7 +353,7 @@ figure figcaption {
   bottom: 0;
   right: 0;
   color: #ed4e6e;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   text-align: center;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -530,19 +530,23 @@ figure:hover .icono img {
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item {
   margin-bottom: 1em !important;
 }
+/* line 494, custom.scss */
+.beyond_surfing_item img, .the_hotel_item img, .surfing_around_item img {
+  width: 100%;
+}
 
-/* line 497, custom.scss */
+/* line 500, custom.scss */
 .title {
   position: absolute !important;
   bottom: 5px;
 }
 
-/* line 502, custom.scss */
+/* line 505, custom.scss */
 #content {
   padding: 2.5em 0;
   position: relative;
 }
-/* line 505, custom.scss */
+/* line 508, custom.scss */
 #content .gray_curve {
   height: 20px;
   width: 100%;
@@ -553,54 +557,54 @@ figure:hover .icono img {
   z-index: 2;
   top: 0;
 }
-/* line 515, custom.scss */
+/* line 518, custom.scss */
 #content .other_categories {
   list-style: none;
   margin-top: 2em;
   margin-left: 0;
 }
-/* line 519, custom.scss */
+/* line 522, custom.scss */
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
 }
-/* line 524, custom.scss */
+/* line 527, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
 
-/* line 529, custom.scss */
+/* line 532, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 533, custom.scss */
+/* line 536, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 541, custom.scss */
+/* line 544, custom.scss */
 .the_stories_user img {
   width: 100%;
 }
 
 /* BOOK A ROOM */
-/* line 550, custom.scss */
+/* line 553, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0);
   margin: 0;
 }
-/* line 556, custom.scss */
+/* line 559, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 562, custom.scss */
+/* line 565, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -613,33 +617,33 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
-  /* line 579, custom.scss */
+  /* line 582, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 582, custom.scss */
+  /* line 585, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 588, custom.scss */
+  /* line 591, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 593, custom.scss */
+  /* line 596, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 597, custom.scss */
+  /* line 600, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 601, custom.scss */
+  /* line 604, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
