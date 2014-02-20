@@ -383,11 +383,14 @@ figure {
 	position: relative;
 	h1 {
 		color: #FFFFFF;
-		font-size: 2.75rem;
+		font-size: 4.75rem;
 		line-height: 1;
 		font-weight: 100;
 		position: absolute;
 		bottom: 5px;
+		span{
+			font-weight: 400;
+		}
 	}
 
 	.row{
