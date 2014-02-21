@@ -406,7 +406,7 @@ figure:hover .icono img {
 /* line 385, custom.scss */
 .cover_container h1 {
   color: #FFFFFF;
-  font-size: 4.75rem;
+  font-size: 3.75rem;
   line-height: 1;
   font-weight: 100;
   position: absolute;
@@ -557,7 +557,7 @@ figure:hover .icono img {
 /* line 515, custom.scss */
 #content .other_categories {
   list-style: none;
-  margin-top: 2em;
+  margin-top: 45px;
   margin-left: 0;
 }
 /* line 519, custom.scss */
