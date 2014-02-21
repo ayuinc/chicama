@@ -138,7 +138,7 @@ class Weather
                             <span>CURRENT WIND</span>
                         </div>
                         <span>' . $data["wind"]["speed"] . '</span>
-                        <span>' . $data["wind"]["unit"] . '</span>
+                        <span>' . ucfirst($data["wind"]["unit"]) . '</span>
                     </div>
                     <div class="large-4 columns">
                         <div class="weather_icon"> 
@@ -148,7 +148,7 @@ class Weather
                             <span>TEMPERATURE</span>
                         </div>
                         <span>' . $data["condition"]["temperature"] . '</span>
-                        <span>' . $data["condition"]["unit"] . '</span>
+                        <span>' . '°' . ucfirst($data["condition"]["unit"]) . '</span>
                     </div>
                 </div>';
 
