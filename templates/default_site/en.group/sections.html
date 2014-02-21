@@ -167,6 +167,10 @@
                 <div class="large-7 columns">
                     <p>{seccion_contenido_ingles}</p>
 {/exp:channel:entries}
+                    {if last_segment == "ways-to-get-here"}
+                    <div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div>
+                    {/if}
+
                     {if last_segment == "the-crew"}
                         <div class="row">
                             {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
@@ -348,3 +352,7 @@
     </section>
 {embed="includes/promo"}
 {embed="includes/footer"}
+<script>
+    var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+    .setView([40, -74.50], 9);
+</script>
