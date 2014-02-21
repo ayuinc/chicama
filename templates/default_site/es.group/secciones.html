@@ -159,14 +159,17 @@
             </div>
         </div>
     </div>
-{/exp:channel:entries}
+
     {if last_segment != "book-a-room"}
     <section id="content">
         <div class="gray_curve"></div>
         <div class="row">
             <div class="large-10 large-centered columns">
                 <div class="large-7 columns">
-                    <p>{seccion_contenido_espanol}</p>
+                    <div class="row">
+                        <p>{seccion_contenido_espanol}</p>
+                    </div>
+{/exp:channel:entries}
                     {if last_segment == "the-crew"}
                         <div class="row">
                             {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
