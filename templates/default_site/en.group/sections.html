@@ -4,7 +4,7 @@
         <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
         </section>
         <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
-
+{/exp:channel:entries}
         {if last_segment != "book-a-room"}
 
         <div class="row">
@@ -126,7 +126,9 @@
         {/if}
         <div class="row">
             <div class="title large-12 columns">
-                {seccion_titulo_ingles}
+                {exp:channel:entries channel="secciones" limit="1"}
+                    {seccion_titulo_ingles}
+                {/exp:channel:entries}
             </div>
         </div>
     </div>
@@ -138,9 +140,11 @@
             <div class="large-12 columns">
                 <div class="large-7 columns">
                     <div class="row">
-                        <p>{seccion_contenido_ingles}</p>
+                        {exp:channel:entries channel="secciones" limit="1"}
+                            <p>{seccion_contenido_ingles}</p>
+                        {/exp:channel:entries}
                     </div>
-{/exp:channel:entries}
+
                     {if last_segment == "ways-to-get-here"}
                     <div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div>
                     {/if}
