@@ -27,6 +27,7 @@
     <script src="{site_url}/js/expanding.js"></script>    
     <script src="{site_url}/js/foundation.min.js"></script>
     <script src="{site_url}/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="{site_url}/js/readmore.js"></script>
     <script>
         $(document).foundation();
     </script>
@@ -38,6 +39,11 @@
           $("#youtube")[0].src += "&autoplay=1";
           $(this).unbind("click");
 
+        });
+
+        $('.beyond_surfing_item p').readmore({
+          speed: 75,
+          maxHeight: 20
         });
 
     });
