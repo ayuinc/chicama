@@ -131,6 +131,7 @@
         </div>
     </div>
 
+    {if last_segment != "book-a-room"}
     <section id="content">
         <div class="gray_curve"></div>
         <div class="row">
@@ -139,7 +140,6 @@
                     <div class="row">
                         <p>{seccion_contenido_ingles}</p>
                     </div>
-{/exp:channel:entries}
                     {if last_segment == "ways-to-get-here"}
                     <div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div>
                     {/if}
@@ -326,6 +326,8 @@
             </div>
         </div>
     </section>
+    {/if}
+{/exp:channel:entries}
 {embed="includes/promo"}
 {embed="includes/footer"}
 <script>
