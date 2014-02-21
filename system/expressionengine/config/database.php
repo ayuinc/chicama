@@ -4,8 +4,8 @@ $active_group = 'expressionengine';
 $active_record = TRUE;
 
 $db['expressionengine']['hostname'] = 'localhost';
-$db['expressionengine']['username'] = 'root';
-$db['expressionengine']['password'] = 'root';
+$db['expressionengine']['username'] = 'chicama';
+$db['expressionengine']['password'] = 'xK03ws';
 $db['expressionengine']['database'] = 'chicama';
 $db['expressionengine']['dbdriver'] = 'mysql';
 $db['expressionengine']['pconnect'] = FALSE;
