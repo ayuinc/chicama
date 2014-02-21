@@ -8,12 +8,11 @@
             </div>
             <div class="large-6 columns">
                 <ul class="inline-list right">
-                    {if segment_1=="en"}
+                    {if segment_1=="es"}
                     <li><a href="/en/sections/the-hotel">THE <span class="bolder">HOTEL</span></a></li>
                     <li><a href="/en/sections/surfing-around"><span class="bolder">SURFING</span> AROUND</a></li>
                     <li><a href="/en/sections/ways-to-get-here">WAYS TO <span class="bolder">GET HERE</span></a></li>
-                    {/if}
-                    {if segment_1=="es"}
+                    {if:else}
                     <li><a href="/es/secciones/the-hotel">EL <span class="bolder">HOTEL</span></a></li>
                     <li><a href="/es/secciones/surfing-around"><span class="bolder">SURF</span> ALREDEDOR</a></li>
                     <li><a href="/es/secciones/ways-to-get-here">¿CÓMO <span class="bolder">LLEGAR</span>?</a></li>
