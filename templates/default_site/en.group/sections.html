@@ -1,6 +1,6 @@
 {embed="includes/header"}
 {exp:channel:entries channel="secciones" limit="1"}
-    <div class="cover_container">
+    <div class="{if last_segment == "book-a-room"}book_container{/if} cover_container">
         <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
         </section>
         <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
@@ -100,51 +100,22 @@
 -->
                         </div>
                     </div>
-                </div>
-
-                <!--
-<div class="row">
-                    <div class="large-3 columns">
-                        {freeform:label:check_in_day}
-                        {freeform:field:check_in_day}
-                    </div>
-                    <div class="large-6 columns">
-                        {freeform:label:check_in_month}
-                        {freeform:field:check_in_month}
-                    </div>
-                    <div class="large-3 columns">
-                        {freeform:label:check_in_year}
-                        {freeform:field:check_in_year}
-                    </div>
-                </div>
--->
-
-
-<!--
+                </div>                    
                 <div class="row">
-                    <div class="large-3 columns">
-                        {freeform:label:check_out_day}
-                        {freeform:field:check_out_day}
-                    </div>
-                    <div class="large-6 columns">
-                        {freeform:label:check_out_month}
-                        {freeform:field:check_out_month}
-                    </div>
-                    <div class="large-3 columns">
-                        {freeform:label:check_out_year}
-                        {freeform:field:check_out_year}
-                    </div>
-                </div>
--->
-                    
-                    {freeform:label:user_message}
+                    <div class="large-12 columns">
+                        
                     {freeform:field:user_message
                         attr:placeholder="WRITE HERE ANY COMMENT" attr:class="expanding"
                     }
-
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
                     {freeform:submit
                         attr:class="send button"
                     } 
+                    </div>
+                </div>
 
             </div>
 
@@ -178,7 +149,10 @@
                                 {crew_image}
                                     <img src="{image:url:small}" alt="">
                                 {/crew_image}
+                            </div>
+                            <div class="large-8 columns">
                                 <h6>{title}</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, repudiandae!</p>
                             </div>
                             {/exp:channel:entries}
                         </div>
