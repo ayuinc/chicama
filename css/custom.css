@@ -643,40 +643,41 @@ figure:hover .icono img {
 /* line 601, custom.scss */
 #map-container {
   height: 67%;
+  max-width: 100%;
 }
-/* line 603, custom.scss */
+/* line 604, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 610, custom.scss */
+  /* line 611, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 613, custom.scss */
+  /* line 614, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 619, custom.scss */
+  /* line 620, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 624, custom.scss */
+  /* line 625, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 628, custom.scss */
+  /* line 629, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 632, custom.scss */
+  /* line 633, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
