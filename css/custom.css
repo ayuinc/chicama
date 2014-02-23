@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5 {
   -webkit-border-radius: 4px;
   line-height: 100%;
   clear: none;
-  margin-top: 25px;
+  margin-top: 0;
 }
 /* line 111, custom.scss */
 #book_button:hover {
@@ -136,11 +136,11 @@ h1, h2, h3, h4, h5 {
 }
 /* line 134, custom.scss */
 #cover .row {
-  padding-top: 1.5em;
+  padding-top: 3em;
 }
-/* line 136, custom.scss */
-#cover .row .headline {
-  padding-top: 2.5em;
+/* line 137, custom.scss */
+#cover .headline {
+  padding-top: 3em;
 }
 /* line 140, custom.scss */
 #cover h1, #cover h2, #cover h3, #cover h4, #cover h5, #cover p {
