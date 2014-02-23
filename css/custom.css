@@ -585,39 +585,43 @@ figure:hover .icono img {
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
+/* line 541, custom.scss */
+#content h4 {
+  font-weight: 400;
+}
 
-/* line 543, custom.scss */
+/* line 546, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 547, custom.scss */
+/* line 550, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 555, custom.scss */
+/* line 558, custom.scss */
 .the_stories_user img {
   width: 100%;
 }
 
 /* BOOK A ROOM */
-/* line 564, custom.scss */
+/* line 567, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 570, custom.scss */
+/* line 573, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 576, custom.scss */
+/* line 579, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -630,33 +634,33 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 @media only screen and (min-width: 40.063em) {
-  /* line 593, custom.scss */
+  /* line 596, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 596, custom.scss */
+  /* line 599, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 602, custom.scss */
+  /* line 605, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 607, custom.scss */
+  /* line 610, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 611, custom.scss */
+  /* line 614, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 615, custom.scss */
+  /* line 618, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
