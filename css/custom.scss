@@ -124,6 +124,8 @@ h1,h2,h3,h4,h5{
 	height: 100%;
 }
 
+
+
 #cover{
 	min-height: 100%;
 	height: auto !important;
@@ -135,7 +137,7 @@ h1,h2,h3,h4,h5{
 	background-position: center center;
 	border-bottom-left-radius: 45% 4%;
 	border-bottom-right-radius: 45% 4%;
-	.row{
+	.row:first-child{
 		padding-top: 3em;
 	}
 	.headline{
@@ -406,6 +408,9 @@ figure {
 		span{
 			font-weight: 400;
 		}
+	}
+	.row:first-child{
+		padding-top: 3em;
 	}
 
 	#blur {
