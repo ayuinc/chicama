@@ -148,6 +148,10 @@ h1,h2,h3,h4,h5{
 		float: right;
 		a{
 			color: #FFFFFF;
+			opacity: 0.9;
+			&:hover{
+				opacity: 1;
+			}
 		}
 	}
 
