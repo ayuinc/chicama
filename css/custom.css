@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5 {
   border-bottom-right-radius: 45% 4%;
 }
 /* line 140, custom.scss */
-#cover .row:first-child {
+#cover .row {
   padding-top: 3em;
 }
 /* line 143, custom.scss */
@@ -433,7 +433,7 @@ figure:hover .icono img {
   font-weight: 400;
 }
 /* line 412, custom.scss */
-.cover_container .row:first-child {
+.cover_container .row {
   padding-top: 3em;
 }
 /* line 416, custom.scss */
