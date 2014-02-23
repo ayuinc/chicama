@@ -1,5 +1,5 @@
 $primary-color: #2C2625;
-$padding: 2.5em 0;
+$padding: 1.25em 0;
 $border-bottom: 1px solid #2C2625;
 
 html, body {
@@ -323,12 +323,14 @@ h1,h2,h3,h4,h5{
 	p, ul li a{
 		color: #A29F8A;
 		display: inline-block;
+		margin: 0;
 	}
 	img{
 		padding-right: 1em;
 	}
 	ul{
 		margin-top: 0.7em;
+		margin-bottom: 0;
 	}
 }
 
