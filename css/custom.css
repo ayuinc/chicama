@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5 {
 
 #promo {
   background-color: #F3F3ED;
-  padding: 2.5em 0;
+  padding: 1.25em 0;
   color: #2C2625; }
   #promo h3 {
     display: inline-block;
@@ -246,11 +246,13 @@ h1, h2, h3, h4, h5 {
   padding: 1.25em 0 1.25em 0; }
   #footer p, #footer ul li a {
     color: #A29F8A;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
   #footer img {
     padding-right: 1em; }
   #footer ul {
-    margin-top: 0.7em; }
+    margin-top: 0.7em;
+    margin-bottom: 0; }
 
 figure {
   margin: 0;
@@ -312,9 +314,7 @@ figure {
     color: #FFFFFF;
     font-size: 3.75rem;
     line-height: 1;
-    font-weight: 100;
-    position: absolute;
-    bottom: 5px; }
+    font-weight: 100; }
     .cover_container h1 span {
       font-weight: 400; }
   .cover_container .row {
@@ -405,7 +405,8 @@ figure {
     width: 100%; }
 
 .title {
-  position: absolute !important;
+  position: absolute;
+  width: 100%;
   bottom: 5px; }
 
 #content {

@@ -1,5 +1,5 @@
 $primary-color: #2C2625;
-$padding: 2.5em 0;
+$padding: 1.25em 0;
 $border-bottom: 1px solid #2C2625;
 
 html, body {
@@ -323,12 +323,14 @@ h1,h2,h3,h4,h5{
 	p, ul li a{
 		color: #A29F8A;
 		display: inline-block;
+		margin: 0;
 	}
 	img{
 		padding-right: 1em;
 	}
 	ul{
 		margin-top: 0.7em;
+		margin-bottom: 0;
 	}
 }
 
@@ -405,8 +407,6 @@ figure {
 		font-size: 3.75rem;
 		line-height: 1;
 		font-weight: 100;
-		position: absolute;
-		bottom: 5px;
 		span{
 			font-weight: 400;
 		}
@@ -525,9 +525,9 @@ figure {
 	}
 }
 
-
 .title{
-	position: absolute !important;
+	position: absolute;
+	width: 100%;
 	bottom: 5px;
 }
 
