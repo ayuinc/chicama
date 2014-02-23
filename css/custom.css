@@ -554,9 +554,10 @@ figure:hover .icono img {
   width: 100%;
 }
 
-/* line 518, custom.scss */
+/* line 517, custom.scss */
 .title {
-  position: absolute !important;
+  position: absolute;
+  width: 100%;
   bottom: 5px;
 }
 
