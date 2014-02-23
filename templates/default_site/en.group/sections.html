@@ -3,8 +3,8 @@
 <div class="row" id="map-container">
     <div class="large-12"><div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div></div>
 </div>
-    
 {if:else}
+
     <div class="{if last_segment == "book-a-room"}book_container{/if} cover_container">
         {exp:channel:entries channel="secciones" limit="1"}
         <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
@@ -340,6 +340,14 @@
 {embed="includes/promo"}
 {embed="includes/footer"}
 <script>
-    var map = L.mapbox.map('map', 'rdiazy.hb2ddndk')
+    var map = L.mapbox.map('map', 'rdiazy.hb2ddndk', {zoomControl: false})
     .setView([-7.70, -79.44], 5);
+
+    // disable drag and zoom handlers
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    // disable tap handler, if present.
+    if (map.tap) map.tap.disable();
 </script>
