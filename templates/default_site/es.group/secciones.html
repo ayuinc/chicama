@@ -1,10 +1,16 @@
 {embed="includes/header"}
-{exp:channel:entries channel="secciones" limit="1"}
+{if last_segment == "ways-to-get-here"}
+<div class="row" id="map-container">
+    <div class="large-12"><div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div></div>
+</div>
+{if:else}
+
     <div class="{if last_segment == "book-a-room"}book_container{/if} cover_container">
+        {exp:channel:entries channel="secciones" limit="1"}
         <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
         </section>
         <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
-{/exp:channel:entries}
+        {/exp:channel:entries}
         {if last_segment != "book-a-room"}
 
         <div class="row">
@@ -355,5 +361,10 @@
         </div>
     </section>
     {/if}
+{/if}
 {embed="includes/promo_es"}
 {embed="includes/footer"}
+<script>
+    var map = L.mapbox.map('map', 'rdiazy.hb2ddndk')
+    .setView([-7.70, -79.44], 14);
+</script>

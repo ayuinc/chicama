@@ -112,6 +112,8 @@ h1,h2,h3,h4,h5{
 	line-height: 100%;
 	clear: none;
 	margin-top: 0;
+	position: fixed;
+	z-index: 5;
 	&:hover{
 		// background: none;
 		// border: 3px solid #fff;
@@ -594,7 +596,14 @@ figure {
 
 /* END BOOK A ROOM */
 
+/* map */
 
+#map-container {
+	height: 67%;
+	.large-12 {
+		height: 100%;
+	}
+}
 
 @media only screen and (min-width: 40.063em) {
 
