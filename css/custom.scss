@@ -415,6 +415,17 @@ figure {
 		padding-top: 3em;
 	}
 
+	.inline-list{
+		float: right;
+		a{
+			color: #FFFFFF;
+			opacity: 0.9;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+
 	#blur {
 		opacity: 0;
 		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
