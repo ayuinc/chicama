@@ -582,7 +582,14 @@ figure {
 
 /* END BOOK A ROOM */
 
+/* map */
 
+#map-container {
+	height: 67%;
+	.large-12 {
+		height: 100%;
+	}
+}
 
 @media only screen and (min-width: 40.063em) {
 
