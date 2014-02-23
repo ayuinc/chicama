@@ -535,11 +535,11 @@ figure:hover .icono img {
 }
 
 /* line 499, custom.scss */
-.beyond_surfing_item, .the_hotel_item, .surfing_around_item {
+.beyond_surfing_item, .the_hotel_item, .surfing_around_item, .the_crew_item {
   margin-bottom: 1em !important;
 }
 /* line 501, custom.scss */
-.beyond_surfing_item img, .the_hotel_item img, .surfing_around_item img {
+.beyond_surfing_item img, .the_hotel_item img, .surfing_around_item img, .the_crew_item img {
   width: 100%;
 }
 
