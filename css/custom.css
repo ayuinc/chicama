@@ -43,6 +43,9 @@ form {
 .row {
   max-width: 78.5rem; }
 
+p {
+  font-size: 1.1rem; }
+
 .line {
   height: 1px;
   border: 0;
@@ -312,6 +315,8 @@ figure {
     bottom: 5px; }
     .cover_container h1 span {
       font-weight: 400; }
+  .cover_container .row {
+    padding-top: 3em; }
   .cover_container #blur {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -415,6 +420,8 @@ figure {
       padding: 0.5em 0; }
   #content h4, #content h6 {
     border-bottom: 1px solid #2c2625; }
+  #content h4 {
+    font-weight: 400; }
 
 #myModal {
   padding: 1.8em;

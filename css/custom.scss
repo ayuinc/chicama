@@ -60,6 +60,10 @@ form{
 	max-width: 78.5rem;
 }
 
+p{
+	font-size: 1.1rem;
+}
+
 
 
 .line {
@@ -119,6 +123,8 @@ h1,h2,h3,h4,h5{
 	background: #F3F3ED;
 	height: 100%;
 }
+
+
 
 #cover{
 	min-height: 100%;
@@ -403,6 +409,9 @@ figure {
 			font-weight: 400;
 		}
 	}
+	.row{
+		padding-top: 3em;
+	}
 
 	#blur {
 		opacity: 0;
@@ -533,6 +542,9 @@ figure {
 	}
 	h4, h6{
 		border-bottom: $border-bottom;
+	}
+	h4{
+		font-weight: 400;
 	}
 }
 
