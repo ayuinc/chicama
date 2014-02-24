@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5 {
   border-bottom-right-radius: 45% 4%;
 }
 /* line 142, custom.scss */
-#cover .row {
+#cover #book {
   padding-top: 3em;
 }
 /* line 145, custom.scss */
