@@ -434,6 +434,10 @@ figure:hover .icono img {
 .cover_container h1 span {
   font-weight: 400;
 }
+/* line 414, custom.scss */
+.cover_container #book {
+  padding-top: 3em;
+}
 /* line 418, custom.scss */
 .cover_container .inline-list {
   float: right;
