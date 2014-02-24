@@ -571,19 +571,24 @@ figure:hover .icono img {
   width: 100%;
 }
 
-/* line 532, custom.scss */
+/* line 533, custom.scss */
+.the_stories_item span {
+  color: #808080;
+}
+
+/* line 538, custom.scss */
 .title {
   position: absolute;
   width: 100%;
   bottom: 5px;
 }
 
-/* line 538, custom.scss */
+/* line 544, custom.scss */
 #content {
   padding: 2.5em 0;
   position: relative;
 }
-/* line 541, custom.scss */
+/* line 547, custom.scss */
 #content .gray_curve {
   height: 20px;
   width: 100%;
@@ -594,59 +599,59 @@ figure:hover .icono img {
   z-index: 2;
   top: 0;
 }
-/* line 551, custom.scss */
+/* line 557, custom.scss */
 #content .other_categories {
   list-style: none;
   margin-top: 60px;
   margin-left: 0;
 }
-/* line 555, custom.scss */
+/* line 561, custom.scss */
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
 }
-/* line 560, custom.scss */
+/* line 566, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
-/* line 563, custom.scss */
+/* line 569, custom.scss */
 #content h4 {
   font-weight: 400;
 }
 
-/* line 568, custom.scss */
+/* line 574, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 572, custom.scss */
+/* line 578, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 580, custom.scss */
+/* line 586, custom.scss */
 .the_stories_user img {
   width: 100%;
   border: 10px solid #F3F3ED;
 }
 
 /* BOOK A ROOM */
-/* line 590, custom.scss */
+/* line 596, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 596, custom.scss */
+/* line 602, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 602, custom.scss */
+/* line 608, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -659,44 +664,44 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 /* map */
-/* line 617, custom.scss */
+/* line 623, custom.scss */
 #map-container {
   height: 67%;
   max-width: 100%;
 }
-/* line 620, custom.scss */
+/* line 626, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 627, custom.scss */
+  /* line 633, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 630, custom.scss */
+  /* line 636, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 636, custom.scss */
+  /* line 642, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 641, custom.scss */
+  /* line 647, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 645, custom.scss */
+  /* line 651, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 649, custom.scss */
+  /* line 655, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
