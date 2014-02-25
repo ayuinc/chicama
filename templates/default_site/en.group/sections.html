@@ -32,13 +32,13 @@
         {/if}
 
         {if last_segment == "book-a-room"}
+        <div id="form_box">
         <div class="row">
             {exp:freeform:form
                 form_id="3"
                 return="en/index" 
                 form:id="book_a_room" 
             }
-            <div id="form_box">
             <div class="large-4 columns">
                 <p>Para realizar su reserva, por favor llene el formulario que aparece a continuación y presione el botón Enviar. Todas las reservas están sujetas a verificación.</p>
                 <p>Nota: Este formato es sólo una solicitud de reserva y el envío no garantiza la disponibilidad. Nuestro departamento de ventas se comunicará con usted en un plazo no mayor a 24 horas para confirmar la reserva.</p>
@@ -139,10 +139,10 @@
 
 
             </div>
-            </div> 
 
             {/exp:freeform:form}
         </div>
+            </div> 
         {/if}
         <div class="title">        
             <div class="row">
