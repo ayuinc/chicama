@@ -324,8 +324,11 @@ h1,h2,h3,h4,h5{
 	padding: 1.25em 0 1.25em 0;
 	p, ul li a{
 		color: #A29F8A;
-		display: inline-block !important;
+		display: inline-block;
 		margin: 0;
+	}
+	p{
+		font-size: 1rem;
 	}
 	img{
 		padding-right: 1em;
