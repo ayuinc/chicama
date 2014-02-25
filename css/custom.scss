@@ -585,7 +585,6 @@ figure {
 		li{
 			border-bottom: $border-bottom;
 			padding: 0.5em 0;
-			margin-bottom: 1rem;
 		}
 	}
 	h4, h6{
@@ -597,6 +596,9 @@ figure {
 	ul{
 		font-weight: 300;
 		margin-left: 3rem;
+		li{
+			margin-bottom: 1rem;
+		}
 	}
 }
 

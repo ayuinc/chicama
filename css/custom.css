@@ -641,55 +641,58 @@ figure:hover .icono img {
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
-  margin-bottom: 1rem;
 }
-/* line 591, custom.scss */
+/* line 590, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
-/* line 594, custom.scss */
+/* line 593, custom.scss */
 #content h4 {
   font-weight: 400;
 }
-/* line 597, custom.scss */
+/* line 596, custom.scss */
 #content ul {
   font-weight: 300;
   margin-left: 3rem;
 }
+/* line 599, custom.scss */
+#content ul li {
+  margin-bottom: 1rem;
+}
 
-/* line 603, custom.scss */
+/* line 605, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 607, custom.scss */
+/* line 609, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 615, custom.scss */
+/* line 617, custom.scss */
 .the_stories_user img {
   width: 100%;
   border: 10px solid #F3F3ED;
 }
 
 /* BOOK A ROOM */
-/* line 625, custom.scss */
+/* line 627, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 631, custom.scss */
+/* line 633, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 637, custom.scss */
+/* line 639, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -702,44 +705,44 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 /* map */
-/* line 652, custom.scss */
+/* line 654, custom.scss */
 #map-container {
   height: 67%;
   max-width: 100%;
 }
-/* line 655, custom.scss */
+/* line 657, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 662, custom.scss */
+  /* line 664, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 665, custom.scss */
+  /* line 667, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 671, custom.scss */
+  /* line 673, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 676, custom.scss */
+  /* line 678, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 680, custom.scss */
+  /* line 682, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 684, custom.scss */
+  /* line 686, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
