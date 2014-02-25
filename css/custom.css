@@ -650,40 +650,45 @@ figure:hover .icono img {
 #content h4 {
   font-weight: 400;
 }
+/* line 596, custom.scss */
+#content ul {
+  font-weight: 300;
+  margin-left: 3rem;
+}
 
-/* line 598, custom.scss */
+/* line 602, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 602, custom.scss */
+/* line 606, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 610, custom.scss */
+/* line 614, custom.scss */
 .the_stories_user img {
   width: 100%;
   border: 10px solid #F3F3ED;
 }
 
 /* BOOK A ROOM */
-/* line 620, custom.scss */
+/* line 624, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 626, custom.scss */
+/* line 630, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 632, custom.scss */
+/* line 636, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -696,44 +701,44 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 /* map */
-/* line 647, custom.scss */
+/* line 651, custom.scss */
 #map-container {
   height: 67%;
   max-width: 100%;
 }
-/* line 650, custom.scss */
+/* line 654, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 657, custom.scss */
+  /* line 661, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 660, custom.scss */
+  /* line 664, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 666, custom.scss */
+  /* line 670, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 671, custom.scss */
+  /* line 675, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 675, custom.scss */
+  /* line 679, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 679, custom.scss */
+  /* line 683, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
