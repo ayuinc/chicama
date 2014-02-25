@@ -641,54 +641,55 @@ figure:hover .icono img {
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
+  margin-bottom: 1rem;
 }
-/* line 590, custom.scss */
+/* line 591, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
-/* line 593, custom.scss */
+/* line 594, custom.scss */
 #content h4 {
   font-weight: 400;
 }
-/* line 596, custom.scss */
+/* line 597, custom.scss */
 #content ul {
   font-weight: 300;
   margin-left: 3rem;
 }
 
-/* line 602, custom.scss */
+/* line 603, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 606, custom.scss */
+/* line 607, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 614, custom.scss */
+/* line 615, custom.scss */
 .the_stories_user img {
   width: 100%;
   border: 10px solid #F3F3ED;
 }
 
 /* BOOK A ROOM */
-/* line 624, custom.scss */
+/* line 625, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 630, custom.scss */
+/* line 631, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 636, custom.scss */
+/* line 637, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -701,44 +702,44 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 /* map */
-/* line 651, custom.scss */
+/* line 652, custom.scss */
 #map-container {
   height: 67%;
   max-width: 100%;
 }
-/* line 654, custom.scss */
+/* line 655, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 661, custom.scss */
+  /* line 662, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 664, custom.scss */
+  /* line 665, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 670, custom.scss */
+  /* line 671, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 675, custom.scss */
+  /* line 676, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 679, custom.scss */
+  /* line 680, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 683, custom.scss */
+  /* line 684, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
