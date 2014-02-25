@@ -463,6 +463,7 @@ figure {
 	position: absolute;
 	top: -100px;
 	z-index: 100;
+	width: 92.5%;
 	#tripadvisor_white{
 		width: auto;
 		right: 5px;
@@ -653,7 +654,7 @@ figure {
 /* map */
 
 #map-container {
-	height: 67%;
+	height: 87%;
 	max-width: 100%;
 	.large-12 {
 		height: 100%;
