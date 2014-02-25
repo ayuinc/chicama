@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5 {
 /* line 325, custom.scss */
 #footer p, #footer ul li a {
   color: #A29F8A;
-  display: inline-block;
+  display: inline-block !important;
   margin: 0;
 }
 /* line 330, custom.scss */
