@@ -490,15 +490,30 @@ figure:hover .icono img {
 /* line 462, custom.scss */
 .bg_cover_subscription {
   background: url("../img/the_hotel_cover.jpg") no-repeat;
-  min-height: 100%;
+  min-height: 90%;
   height: auto !important;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
   position: relative;
+  display: table;
+  width: 100%;
+}
+/* line 472, custom.scss */
+.bg_cover_subscription .content_center {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 475, custom.scss */
+.bg_cover_subscription .content_center h1, .bg_cover_subscription .content_center h3 {
+  color: #FFFFFF;
+}
+/* line 478, custom.scss */
+.bg_cover_subscription .content_center a {
+  font-weight: 500;
 }
 
-/* line 473, custom.scss */
+/* line 485, custom.scss */
 #testimonio {
   background-color: #2C2625;
   margin-right: 0.9375rem;
@@ -508,45 +523,45 @@ figure:hover .icono img {
   z-index: 100;
   width: 92.5%;
 }
-/* line 481, custom.scss */
+/* line 493, custom.scss */
 #testimonio #tripadvisor_white {
   width: auto;
   right: 5px;
   bottom: 0;
   position: absolute;
 }
-/* line 487, custom.scss */
+/* line 499, custom.scss */
 #testimonio .testimonio_text {
   padding: 0.2rem 0.9375rem 0.2rem 0;
   padding-top: 10px;
 }
-/* line 490, custom.scss */
+/* line 502, custom.scss */
 #testimonio .testimonio_text img {
   width: auto;
 }
-/* line 494, custom.scss */
+/* line 506, custom.scss */
 #testimonio img {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 5px;
 }
-/* line 500, custom.scss */
+/* line 512, custom.scss */
 #testimonio h6, #testimonio span, #testimonio p {
   color: #FFFFFF;
 }
-/* line 503, custom.scss */
+/* line 515, custom.scss */
 #testimonio h6 {
   border: none;
   margin: 0;
 }
-/* line 507, custom.scss */
+/* line 519, custom.scss */
 #testimonio span {
   font-size: 0.8rem;
   font-weight: 100;
   color: #e3e3e3;
 }
-/* line 512, custom.scss */
+/* line 524, custom.scss */
 #testimonio p {
   font-size: 0.8rem;
   line-height: 1.2;
@@ -556,87 +571,87 @@ figure:hover .icono img {
   font-style: italic;
 }
 
-/* line 523, custom.scss */
+/* line 535, custom.scss */
 #the_wave_cover {
   background: url("../img/the_wave_cover.jpg");
 }
 
-/* line 527, custom.scss */
+/* line 539, custom.scss */
 #the_crew_cover {
   background: url("../img/the_crew_cover.jpg");
 }
 
-/* line 531, custom.scss */
+/* line 543, custom.scss */
 #beyond_surfing_cover {
   background: url("../img/beyond_surfing_cover.jpg");
 }
 
-/* line 535, custom.scss */
+/* line 547, custom.scss */
 #the_hotel_cover {
   background: url("../img/the_hotel_cover.jpg");
 }
 
-/* line 539, custom.scss */
+/* line 551, custom.scss */
 #surfing_around_cover {
   background: url("../img/surfing_around_cover.jpg");
 }
 
-/* line 543, custom.scss */
+/* line 555, custom.scss */
 #the_rooms_cover {
   background: url("../img/the_rooms_cover.jpg");
 }
 
-/* line 547, custom.scss */
+/* line 559, custom.scss */
 #the_stories_cover {
   background: url("../img/the_stories_cover.jpg");
 }
 
-/* line 551, custom.scss */
+/* line 563, custom.scss */
 .beyond_surfing_item, .the_hotel_item, .surfing_around_item, .the_crew_item {
   margin-bottom: 1em !important;
 }
-/* line 553, custom.scss */
+/* line 565, custom.scss */
 .beyond_surfing_item img, .the_hotel_item img, .surfing_around_item img, .the_crew_item img {
   width: 100%;
 }
 
-/* line 558, custom.scss */
+/* line 570, custom.scss */
 .the_stories_item {
   margin-bottom: 2em !important;
 }
-/* line 560, custom.scss */
+/* line 572, custom.scss */
 .the_stories_item img {
   width: auto;
 }
-/* line 563, custom.scss */
+/* line 575, custom.scss */
 .the_stories_item span {
   color: #808080;
 }
-/* line 566, custom.scss */
+/* line 578, custom.scss */
 .the_stories_item p {
   margin: 0.5rem 0;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #2c2625;
 }
-/* line 571, custom.scss */
+/* line 583, custom.scss */
 .the_stories_item h4 {
   border: none !important;
   margin: 0;
 }
 
-/* line 577, custom.scss */
+/* line 589, custom.scss */
 .title {
   position: absolute;
   width: 100%;
   bottom: 5px;
 }
 
-/* line 583, custom.scss */
+/* line 595, custom.scss */
 #content {
   padding: 2.5em 0;
   position: relative;
 }
-/* line 586, custom.scss */
+/* line 598, custom.scss */
 #content .gray_curve {
   height: 20px;
   width: 100%;
@@ -647,69 +662,69 @@ figure:hover .icono img {
   z-index: 2;
   top: 0;
 }
-/* line 596, custom.scss */
+/* line 608, custom.scss */
 #content .other_categories {
   list-style: none;
   margin-top: 60px;
   margin-left: 0;
 }
-/* line 600, custom.scss */
+/* line 612, custom.scss */
 #content .other_categories li {
   border-bottom: 1px solid #2c2625;
   padding: 0.5em 0;
   margin-bottom: 0;
 }
-/* line 606, custom.scss */
+/* line 618, custom.scss */
 #content h4, #content h6 {
   border-bottom: 1px solid #2c2625;
 }
-/* line 609, custom.scss */
+/* line 621, custom.scss */
 #content h4 {
   font-weight: 400;
 }
-/* line 612, custom.scss */
+/* line 624, custom.scss */
 #content ul {
   font-weight: 300;
   margin-left: 3rem;
 }
-/* line 615, custom.scss */
+/* line 627, custom.scss */
 #content ul li {
   margin-bottom: 1rem;
 }
 
-/* line 621, custom.scss */
+/* line 633, custom.scss */
 #myModal {
   padding: 1.8em;
   border: none;
   box-shadow: none;
 }
-/* line 625, custom.scss */
+/* line 637, custom.scss */
 #myModal .vimeo {
   padding-top: 0;
   margin-bottom: 0;
 }
 
-/* line 633, custom.scss */
+/* line 645, custom.scss */
 .the_stories_user img {
   width: 100%;
   border: 10px solid #F3F3ED;
 }
 
 /* BOOK A ROOM */
-/* line 643, custom.scss */
+/* line 655, custom.scss */
 #book_a_room .send {
   text-transform: uppercase;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-/* line 649, custom.scss */
+/* line 661, custom.scss */
 #book_a_room input[type="text"], #book_a_room input[type="url"], #book_a_room textarea {
   font-weight: 300;
   margin-bottom: 2em;
 }
 
-/* line 655, custom.scss */
+/* line 667, custom.scss */
 #form_box {
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -722,44 +737,44 @@ figure:hover .icono img {
 
 /* END BOOK A ROOM */
 /* map */
-/* line 670, custom.scss */
+/* line 682, custom.scss */
 #map-container {
   height: 87%;
   max-width: 100%;
 }
-/* line 673, custom.scss */
+/* line 685, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 680, custom.scss */
+  /* line 692, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 683, custom.scss */
+  /* line 695, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 689, custom.scss */
+  /* line 701, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 694, custom.scss */
+  /* line 706, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 698, custom.scss */
+  /* line 710, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 702, custom.scss */
+  /* line 714, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }

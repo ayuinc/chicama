@@ -461,12 +461,24 @@ figure {
 
 .bg_cover_subscription{
 	background: url("../img/the_hotel_cover.jpg") no-repeat;
-	min-height: 100%;
+	min-height: 90%;
 	height: auto !important;
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center center;
 	position: relative;
+	display: table;
+	width: 100%;
+	.content_center{
+		display: table-cell;
+		vertical-align: middle;
+		h1, h3{
+			color: #FFFFFF;
+		}
+		a{
+			font-weight: 500;
+		}
+	}
 }
 
 
