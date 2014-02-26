@@ -459,6 +459,17 @@ figure {
 	left: 0;
 }
 
+.bg_cover_subscription{
+	background: url("../img/the_hotel_cover.jpg") no-repeat;
+	min-height: 100%;
+	height: auto !important;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+
+
 #testimonio{
 	background-color: #2C2625;
 	margin-right: 0.9375rem;
