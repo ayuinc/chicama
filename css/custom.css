@@ -820,16 +820,21 @@ figure:hover .icono img {
   }
 
   /* line 762, custom.scss */
+  #promo form {
+    text-align: left;
+  }
+
+  /* line 767, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 766, custom.scss */
+  /* line 771, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 770, custom.scss */
+  /* line 775, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
