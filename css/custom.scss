@@ -734,3 +734,13 @@ figure {
 
 }
 
+@media only screen and (max-width: 40em) { 
+
+	#footer{
+		text-align: center;
+		p{
+			display: none;
+		}
+	}
+
+}
