@@ -504,7 +504,7 @@ figure:hover .icono img {
   vertical-align: middle;
 }
 /* line 475, custom.scss */
-.bg_cover_subscription .content_center h1, .bg_cover_subscription .content_center h4 {
+.bg_cover_subscription .content_center h1, .bg_cover_subscription .content_center h2, .bg_cover_subscription .content_center h3, .bg_cover_subscription .content_center h4 {
   color: #FFFFFF;
 }
 /* line 478, custom.scss */
