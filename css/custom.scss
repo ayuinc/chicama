@@ -158,6 +158,7 @@ h1,h2,h3,h4,h5{
 		a{
 			color: #FFFFFF;
 			opacity: 0.9;
+			font-weight: 100;
 			&:hover{
 				opacity: 1;
 			}
@@ -184,8 +185,8 @@ h1,h2,h3,h4,h5{
 			}
 		}
 		.weather_title{
-			border-top: 1px solid #FFFFFF;
-			border-bottom: 1px solid #FFFFFF;
+			// border-top: 1px solid #FFFFFF;
+			// border-bottom: 1px solid #FFFFFF;
 			margin-top: 0.2em;
 			margin-bottom: 0.2em;
 			padding: 0.2em 0;		
@@ -199,8 +200,7 @@ h1,h2,h3,h4,h5{
 		span{
 			color: #FFFFFF;
 			font-size: 1.2rem;
-
-			font-weight: 100;
+			font-weight: 300;
 		}
 	}
 
@@ -328,7 +328,7 @@ h1,h2,h3,h4,h5{
 		margin: 0;
 	}
 	p{
-		font-size: 1rem;
+		font-size: 0.9rem;
 	}
 	img{
 		padding-right: 1em;
