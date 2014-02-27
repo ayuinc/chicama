@@ -119,7 +119,7 @@ class Weather
         // }
 
         $text = '<div class="weather row text-center">
-                    <div class="large-4 columns">
+                    <div class="small-4 medium-4 large-4 columns">
                         <div class="weather_icon"> 
                             <img src="http://64.207.145.174/img/surf_height_icon.png" alt="">
                         </div>
@@ -130,7 +130,7 @@ class Weather
                         <span>' . $data["swell"]["unit"] . '</span>
                     </div>
                                 
-                    <div class="large-4 columns">
+                    <div class="small-4 medium-4 large-4 columns">
                         <div class="weather_icon"> 
                             <img src="http://64.207.145.174/img/wind_icon.png" alt="">
                         </div>
@@ -140,7 +140,7 @@ class Weather
                         <span>' . $data["wind"]["speed"] . '</span>
                         <span>' . ucfirst($data["wind"]["unit"]) . '</span>
                     </div>
-                    <div class="large-4 columns">
+                    <div class="small-4 medium-4 large-4 columns">
                         <div class="weather_icon"> 
                             <img src="http://64.207.145.174/img/current_tide_icon.png" alt="">
                         </div>
