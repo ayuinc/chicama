@@ -246,7 +246,7 @@ h1,h2,h3,h4,h5{
 	position: relative;
 	h3{
 		border-bottom: $border-bottom;
-		margin-bottom: 0;
+		margin-bottom: 1.875rem;
 	}
 	
 	.gray_curve{
@@ -767,6 +767,13 @@ figure {
 			width: 40%;
 		}
 	}
+
+	#views{
+		h3{
+			margin-bottom: 0;
+		}
+	}
+
 	.gray_curve{
 		display: block;
 	}
