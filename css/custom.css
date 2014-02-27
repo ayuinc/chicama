@@ -767,45 +767,51 @@ figure:hover .icono img {
   height: 100%;
 }
 
+@media only screen and (max-width: 40em) {
+  /* line 710, custom.scss */
+  #footer {
+    text-align: center;
+  }
+  /* line 712, custom.scss */
+  #footer p {
+    display: none;
+  }
+}
 @media only screen and (min-width: 40.063em) {
-  /* line 709, custom.scss */
+  /* line 721, custom.scss */
+  #footer p {
+    display: none;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 730, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 712, custom.scss */
+  /* line 733, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 718, custom.scss */
+  /* line 739, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 723, custom.scss */
+  /* line 744, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 727, custom.scss */
+  /* line 748, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 731, custom.scss */
+  /* line 752, custom.scss */
   h4 {
     font-size: 1.4375rem;
-  }
-}
-@media only screen and (max-width: 40em) {
-  /* line 739, custom.scss */
-  #footer {
-    text-align: center;
-  }
-  /* line 741, custom.scss */
-  #footer p {
-    display: none;
   }
 }
