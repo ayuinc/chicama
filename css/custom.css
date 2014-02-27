@@ -810,17 +810,22 @@ figure:hover .icono img {
     font-size: 5.75rem;
   }
 
-  /* line 752, custom.scss */
+  /* line 753, custom.scss */
+  #footer p {
+    display: inline-block;
+  }
+
+  /* line 759, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 756, custom.scss */
+  /* line 763, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 760, custom.scss */
+  /* line 767, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
