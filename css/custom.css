@@ -829,22 +829,32 @@ figure:hover .icono img {
     width: 40%;
   }
 
-  /* line 770, custom.scss */
+  /* line 768, custom.scss */
+  .gray_curve {
+    display: block;
+  }
+
+  /* line 772, custom.scss */
+  .white_curve {
+    display: block;
+  }
+
+  /* line 777, custom.scss */
   #promo form {
     text-align: left;
   }
 
-  /* line 775, custom.scss */
+  /* line 782, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 779, custom.scss */
+  /* line 786, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 783, custom.scss */
+  /* line 790, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
