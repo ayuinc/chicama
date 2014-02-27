@@ -744,56 +744,57 @@ figure:hover .icono img {
   margin-bottom: 1.5rem;
   margin-top: 0;
   font-weight: 400;
+  line-height: 1.2;
 }
-/* line 685, custom.scss */
+/* line 686, custom.scss */
 #form_box p {
   font-size: 1rem;
 }
-/* line 688, custom.scss */
+/* line 689, custom.scss */
 #form_box .send {
   float: right;
 }
 
 /* END BOOK A ROOM */
 /* map */
-/* line 698, custom.scss */
+/* line 699, custom.scss */
 #map-container {
   height: 87%;
   max-width: 100%;
 }
-/* line 701, custom.scss */
+/* line 702, custom.scss */
 #map-container .large-12 {
   height: 100%;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 708, custom.scss */
+  /* line 709, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 711, custom.scss */
+  /* line 712, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 717, custom.scss */
+  /* line 718, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 722, custom.scss */
+  /* line 723, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 726, custom.scss */
+  /* line 727, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 730, custom.scss */
+  /* line 731, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
