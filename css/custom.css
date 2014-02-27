@@ -792,49 +792,59 @@ figure:hover .icono img {
   #promo {
     text-align: center;
   }
+
+  /* line 734, custom.scss */
+  .gray_curve {
+    display: none;
+  }
+
+  /* line 738, custom.scss */
+  .white_curve {
+    display: none;
+  }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 738, custom.scss */
+  /* line 746, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 741, custom.scss */
+  /* line 749, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 747, custom.scss */
+  /* line 755, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 753, custom.scss */
+  /* line 761, custom.scss */
   #footer p {
     display: inline-block;
   }
-  /* line 756, custom.scss */
+  /* line 764, custom.scss */
   #footer img {
     width: 40%;
   }
 
-  /* line 762, custom.scss */
+  /* line 770, custom.scss */
   #promo form {
     text-align: left;
   }
 
-  /* line 767, custom.scss */
+  /* line 775, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 771, custom.scss */
+  /* line 779, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 775, custom.scss */
+  /* line 783, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
