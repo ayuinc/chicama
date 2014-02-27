@@ -138,8 +138,6 @@ h1,h2,h3,h4,h5{
 	background-size: cover;
 	position: relative;
 	background-position: center center;
-	border-bottom-left-radius: 45% 4%;
-	border-bottom-right-radius: 45% 4%;
 	#book{
 		padding-top: 3em;
 	}
@@ -755,6 +753,10 @@ figure {
 		h1{
 			font-size: 5.75rem;
 		}
+	}
+	#cover{
+		border-bottom-left-radius: 45% 4%;
+		border-bottom-right-radius: 45% 4%;
 	}
 
 	#footer{
