@@ -188,21 +188,25 @@
         <div class="row">
             <div class="large-12 columns">
                 <div class="large-7 columns">
-                    {exp:channel:entries channel="secciones" limit="1"}
-                        <p>{seccion_contenido_espanol}</p>
-                    {/exp:channel:entries}
+                    <div class="row">
+                        {exp:channel:entries channel="secciones" limit="1"}
+                            <p>{seccion_contenido_espanol}</p>
+                        {/exp:channel:entries}
+                    </div>
 
                     {if last_segment == "the-crew"}
                         <div class="row">
                             {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
-                            <div class="large-5 columns">
-                                {crew_image}
-                                    <img src="{image:url:small}" alt="">
-                                {/crew_image}
-                            </div>
-                            <div class="large-7 columns">
-                                <h4>{title}</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, repudiandae!</p>
+                            <div class="the_crew_item row">
+                                <div class="large-5 columns">
+                                    {crew_image}
+                                        <img src="{image:url:small}" alt="">
+                                    {/crew_image}
+                                </div>
+                                <div class="large-7 columns">
+                                    <h4>{title}</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, repudiandae!</p>
+                                </div>
                             </div>
                             {/exp:channel:entries}
                         </div>
