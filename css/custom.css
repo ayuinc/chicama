@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5 {
 /* line 247, custom.scss */
 #views h3 {
   border-bottom: 1px solid #2c2625;
-  margin-bottom: 0;
+  margin-bottom: 1.875rem;
 }
 /* line 252, custom.scss */
 #views .gray_curve {
@@ -833,32 +833,37 @@ figure:hover .icono img {
     width: 40%;
   }
 
-  /* line 770, custom.scss */
+  /* line 772, custom.scss */
+  #views h3 {
+    margin-bottom: 0;
+  }
+
+  /* line 777, custom.scss */
   .gray_curve {
     display: block;
   }
 
-  /* line 774, custom.scss */
+  /* line 781, custom.scss */
   .white_curve {
     display: block;
   }
 
-  /* line 779, custom.scss */
+  /* line 786, custom.scss */
   #promo form {
     text-align: left;
   }
 
-  /* line 784, custom.scss */
+  /* line 791, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 788, custom.scss */
+  /* line 795, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 792, custom.scss */
+  /* line 799, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
