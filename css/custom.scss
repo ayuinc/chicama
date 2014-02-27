@@ -425,6 +425,7 @@ figure {
 		a{
 			color: #FFFFFF;
 			opacity: 0.9;
+			font-weight: 100;
 			&:hover{
 				opacity: 1;
 			}
@@ -592,7 +593,7 @@ figure {
 .title{
 	position: absolute;
 	width: 100%;
-	bottom: 5px;
+	bottom: 25px;
 }
 
 #content{
