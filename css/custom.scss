@@ -138,8 +138,6 @@ h1,h2,h3,h4,h5{
 	background-size: cover;
 	position: relative;
 	background-position: center center;
-	border-bottom-left-radius: 45% 4%;
-	border-bottom-right-radius: 45% 4%;
 	#book{
 		padding-top: 3em;
 	}
@@ -248,7 +246,7 @@ h1,h2,h3,h4,h5{
 	position: relative;
 	h3{
 		border-bottom: $border-bottom;
-		margin-bottom: 0;
+		margin-bottom: 1.875rem;
 	}
 	
 	.gray_curve{
@@ -425,6 +423,7 @@ figure {
 		a{
 			color: #FFFFFF;
 			opacity: 0.9;
+			font-weight: 100;
 			&:hover{
 				opacity: 1;
 			}
@@ -495,7 +494,7 @@ figure {
 	width: 92.5%;
 	#tripadvisor_white{
 		width: auto;
-		right: 5px;
+		right: 10px;
 		bottom: 0;
 		position: absolute;
 	}
@@ -510,7 +509,7 @@ figure {
 		width: 100%;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		padding-left: 5px;
+		padding-left: 10px;
 	}
 	h6,span,p{
 		color: #FFFFFF;
@@ -592,7 +591,7 @@ figure {
 .title{
 	position: absolute;
 	width: 100%;
-	bottom: 5px;
+	bottom: 25px;
 }
 
 #content{
@@ -680,6 +679,7 @@ figure {
 		margin-bottom: 1.5rem;
 		margin-top: 0;
 		font-weight: 400;
+		line-height: 1.2;
 	}
 	p{
 		font-size: 1rem;
@@ -702,7 +702,44 @@ figure {
 	}
 }
 
-@media only screen and (min-width: 40.063em) {
+
+@media only screen and (max-width: 40em) { 
+
+	#footer{
+		text-align: center;
+		p{
+			display: none;
+		}
+	}
+
+	#promo{
+		text-align: center;
+	}
+
+}
+@media only screen and (min-width: 40.063em) { 
+
+	#footer{
+		p{
+			display: none;
+		}
+	}
+
+	#promo{
+		text-align: center;
+	}
+
+	.gray_curve{
+		display: none;
+	}
+
+	.white_curve{
+		display: none;
+	}
+
+}
+
+@media only screen and (min-width: 64.063em) {
 
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
@@ -715,6 +752,39 @@ figure {
   	.cover{
 		h1{
 			font-size: 5.75rem;
+		}
+	}
+	#cover{
+		border-bottom-left-radius: 45% 4%;
+		border-bottom-right-radius: 45% 4%;
+	}
+
+	#footer{
+		p{
+			display: inline-block;
+		}
+		img{
+			width: 40%;
+		}
+	}
+
+	#views{
+		h3{
+			margin-bottom: 0;
+		}
+	}
+
+	.gray_curve{
+		display: block;
+	}
+
+	.white_curve{
+		display: block;
+	}
+
+	#promo{
+		form{
+			text-align: left;
 		}
 	}
 
@@ -731,4 +801,3 @@ figure {
     } 
 
 }
-
