@@ -414,7 +414,7 @@
 {embed="includes/promo_es"}
 {embed="includes/footer"}
 <script>
-    $("#testimonio-description").text($(this).text().substring(0,120) + "...");
+    $("#testimonio-description>p").text($(this).text().substring(0,120) + "...");
 </script>
 <script>
     var map = L.mapbox.map('map', 'rdiazy.hb2ddndk', {zoomControl: false})
