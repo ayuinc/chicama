@@ -577,11 +577,13 @@ figure {
 	span{
 		color: #808080;
 	}
-	p:nth-child(2){
-		margin: 0.5rem 0;
-		padding-bottom: 0.5rem;
-		border-bottom: 1px solid #2c2625;
-		font-size: 1rem;
+	.tripadvisor_description{
+		p:nth-child(2){
+			margin: 0.5rem 0;
+			padding-bottom: 0.5rem;
+			border-bottom: 1px solid #2c2625;
+			font-size: 1rem;
+		}
 	}
 	h4{
 		border: none !important;
