@@ -336,7 +336,7 @@
                             <div class="testimonio_text large-7 columns">
                                 <h6>{title}</h6>
                                 <span>{stories_country}</span>
-                                {stories_description}
+<!--                                 {stories_description} -->
                                 <a href="{stories_url}" target="_blank">ver más &raquo;</a>
                                 <div class="text-right">                
                                 </div>
@@ -410,7 +410,7 @@
 {embed="includes/promo"}
 {embed="includes/footer"}
 <script>
-    $(".testimonio_text>p").text($(".testimonio_text>p").text().substring(0,120) + "...");
+    $(".testimonio_text>p").text($(".testimonio_text>p").text().substring(0,140) + "...");
 </script>
 <script>
     var map = L.mapbox.map('map', 'rdiazy.hb2ddndk', {zoomControl: false})
