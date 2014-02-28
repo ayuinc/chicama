@@ -507,6 +507,10 @@ figure {
 		a{
 			display: block;
 			margin-top: 1rem;
+			color: #f7f7f7;
+			&:hover{
+				color: #f7f7f7;
+			}
 		}
 	}
 	img{
