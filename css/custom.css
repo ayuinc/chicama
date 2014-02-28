@@ -789,91 +789,101 @@ figure:hover .icono img {
   .white_curve {
     display: none;
   }
+
+  /* line 729, custom.scss */
+  .headline h1 {
+    font-size: 4rem;
+  }
 }
 @media only screen and (min-width: 40.063em) {
-  /* line 731, custom.scss */
+  /* line 738, custom.scss */
   #footer p {
     display: none;
   }
 
-  /* line 736, custom.scss */
+  /* line 743, custom.scss */
   #promo {
     text-align: center;
   }
 
-  /* line 740, custom.scss */
+  /* line 747, custom.scss */
   .gray_curve {
     display: none;
   }
 
-  /* line 744, custom.scss */
+  /* line 751, custom.scss */
   .white_curve {
     display: none;
   }
+
+  /* line 756, custom.scss */
+  .headline h1 {
+    font-size: 4.5rem;
+  }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 752, custom.scss */
+  /* line 765, custom.scss */
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 
-  /* line 755, custom.scss */
+  /* line 768, custom.scss */
   #cover h1 {
     line-height: 1;
     font-size: 7.75rem;
   }
 
-  /* line 761, custom.scss */
+  /* line 774, custom.scss */
   .cover h1 {
     font-size: 5.75rem;
   }
 
-  /* line 765, custom.scss */
+  /* line 778, custom.scss */
   #cover {
     border-bottom-left-radius: 45% 4%;
     border-bottom-right-radius: 45% 4%;
   }
 
-  /* line 771, custom.scss */
+  /* line 784, custom.scss */
   #footer p {
     display: inline-block;
   }
-  /* line 774, custom.scss */
+  /* line 787, custom.scss */
   #footer img {
     width: 40%;
   }
 
-  /* line 780, custom.scss */
+  /* line 793, custom.scss */
   #views h3 {
     margin-bottom: 0;
   }
 
-  /* line 785, custom.scss */
+  /* line 798, custom.scss */
   .gray_curve {
     display: block;
   }
 
-  /* line 789, custom.scss */
+  /* line 802, custom.scss */
   .white_curve {
     display: block;
   }
 
-  /* line 794, custom.scss */
+  /* line 807, custom.scss */
   #promo form {
     text-align: left;
   }
 
-  /* line 799, custom.scss */
+  /* line 812, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 803, custom.scss */
+  /* line 816, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 807, custom.scss */
+  /* line 820, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }

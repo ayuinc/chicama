@@ -724,6 +724,13 @@ figure {
 		display: none;
 	}
 
+
+	.headline{
+		h1{
+			font-size: 4rem;
+		}
+	}
+
 }
 @media only screen and (min-width: 40.063em) { 
 
@@ -743,6 +750,12 @@ figure {
 
 	.white_curve{
 		display: none;
+	}
+
+	.headline{
+		h1{
+			font-size: 4.5rem;
+		}
 	}
 
 }
