@@ -254,6 +254,25 @@
                     {/if}
                     
                     {if last_segment == "the-stories"}
+                    {exp:channel:entries channel="stories" category="2" dynamic="no" orderby="date" sort="asc"}
+                    <div class="the_stories_item row">
+                        <div class="large-3 columns">
+                            <div class="the_stories_user">
+                                <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
+                            </div>
+                        </div>
+                        <div class="large-9 columns">
+                            <h4>{title}</h4>
+                            <span>{stories_country}</span>
+                            <p>{stories_description}</p>
+                            <div class="text-right">                
+                                <img src="{site_url}/img/tripadvisor_brown_{stories_assessment}.png" alt="TripAdvisor">
+                            </div>
+                        </div>
+                    </div>
+                    {/exp:channel:entries}
+
+
                     <div class="the_stories_item row">
                         <div class="large-3 columns">
                             <div class="the_stories_user">
