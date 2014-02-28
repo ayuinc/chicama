@@ -322,21 +322,23 @@
                 </div>
                 <div class="large-offset-1 large-4 columns">
 
+                    {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
                     <div id="testimonio">
                         <div class="row">
                             <div class="large-5 columns">
-                                <img src="{site_url}/img/the_stories_user1.jpg" alt="">
+                                <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
                             </div>
                             <div class="testimonio_text large-7 columns">
-                                <h6>Rene Peña</h6>
-                                <span>Palo Alto, California</span>
-                                <p>“Lorem ipsum ad his scripta blan partiendo.”</p>
+                                <h6>{title}</h6>
+                                <span>{stories_country}</span>
+                                <p id="testimonio-description">{stories_description}</p>
                                 <div class="text-right">                
                                 </div>
                             </div>
                         </div>
-                        <img id="tripadvisor_white" src="http://64.207.145.174/img/tripadvisor_white_5.png">
+                        <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
                     </div>
+                    {/exp:channel:entries}
 
                     <ul class="other_categories">
                         <li>
@@ -401,6 +403,9 @@
 {/if}
 {embed="includes/promo"}
 {embed="includes/footer"}
+<script>
+    $("#testimonio-description").text($(this).text().substring(0,120) + "...");
+</script>
 <script>
     var map = L.mapbox.map('map', 'rdiazy.hb2ddndk', {zoomControl: false})
     .setView([-7.70, -79.44], 5);
