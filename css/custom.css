@@ -630,7 +630,7 @@ figure:hover .icono img {
   color: #808080;
 }
 /* line 580, custom.scss */
-.the_stories_item p {
+.the_stories_item .tripadvisor_item {
   margin: 0.5rem 0;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #2c2625;
