@@ -766,7 +766,7 @@ figure:hover .icono img {
 /* map */
 /* line 706, custom.scss */
 #map-container {
-  height: 70%;
+  height: 85%;
   max-width: 100%;
 }
 /* line 709, custom.scss */
@@ -775,7 +775,7 @@ figure:hover .icono img {
 }
 /* line 711, custom.scss */
 #map-container .large-12 #map {
-  height: 70%;
+  height: 85%;
 }
 
 @media only screen and (max-width: 40em) {
@@ -914,7 +914,7 @@ figure:hover .icono img {
 
   /* line 844, custom.scss */
   #map-container {
-    height: 70%;
+    height: 85%;
     max-width: 100%;
   }
   /* line 847, custom.scss */
