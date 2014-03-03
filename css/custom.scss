@@ -449,8 +449,6 @@ figure {
 	height: 100%;
 	position: relative;
 	background-position: center center;
-	border-bottom-left-radius: 45% 4%;
-	border-bottom-right-radius: 45% 4%;
 	min-height: 715px;
 	width: 100%;
 	position: absolute;
@@ -787,6 +785,11 @@ figure {
 		}
 	}
 	#cover{
+		border-bottom-left-radius: 45% 4%;
+		border-bottom-right-radius: 45% 4%;
+	}
+
+	.cover{
 		border-bottom-left-radius: 45% 4%;
 		border-bottom-right-radius: 45% 4%;
 	}
