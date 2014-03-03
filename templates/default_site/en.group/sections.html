@@ -188,24 +188,27 @@
 
                     {if last_segment == "the-crew"}
                         <div class="row">
-                            {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
-                            <div class="the_crew_item row">
-                                <div class="large-5 columns">
-                                    {crew_image}
-                                        <img src="{image:url:small}" alt="">
-                                    {/crew_image}
+                            <div class="large-12 columns">
+                                {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
+                                <div class="the_crew_item row">
+                                    <div class="large-5 columns">
+                                        {crew_image}
+                                            <img src="{image:url:small}" alt="">
+                                        {/crew_image}
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <h4>{title}</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, repudiandae!</p>
+                                    </div>
                                 </div>
-                                <div class="large-7 columns">
-                                    <h4>{title}</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, repudiandae!</p>
-                                </div>
+                                {/exp:channel:entries}
                             </div>
-                            {/exp:channel:entries}
                         </div>
                     {/if}
                     
                     {if last_segment == "beyond-surfing"}
                         <div class="row">
+                            <div class="large-12 columns">     
                             {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"}
                             <div class="beyond_surfing_item row">
                                 <div class="large-6 columns">
@@ -219,42 +222,47 @@
                                 </div>
                             </div>
                             {/exp:channel:entries}
+                            </div>
                         </div>
                     {/if}
                     
                     {if last_segment == "surfing-around"}
                         <div class="row">
-                            {exp:channel:entries channel="items" category="3" dynamic="no" orderby="date" sort="asc"}
-                            <div class="beyond_surfing_item row">
-                                <div class="large-6 columns">
-                                    {item_image}
-                                        <img src="{image:url:small}" alt="">
-                                    {/item_image}
+                            <div class="large-12 columns"> 
+                                {exp:channel:entries channel="items" category="3" dynamic="no" orderby="date" sort="asc"}
+                                <div class="beyond_surfing_item row">
+                                    <div class="large-6 columns">
+                                        {item_image}
+                                            <img src="{image:url:small}" alt="">
+                                        {/item_image}
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <h4>{title}</h4>
+                                        <p>{item_descripcion}</p>
+                                    </div>
                                 </div>
-                                <div class="large-6 columns">
-                                    <h4>{title}</h4>
-                                    <p>{item_descripcion}</p>
-                                </div>
+                                {/exp:channel:entries}
                             </div>
-                            {/exp:channel:entries}
                         </div>
                     {/if}
                     
                     {if last_segment == "the-hotel"}
                         <div class="row">
-                            {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
-                            <div class="beyond_surfing_item row">
-                                <div class="large-6 columns">
-                                    {item_image}
-                                        <img src="{image:url:small}" alt="">
-                                    {/item_image}
+                            <div class="large-12 columns"> 
+                                {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
+                                <div class="beyond_surfing_item row">
+                                    <div class="large-6 columns">
+                                        {item_image}
+                                            <img src="{image:url:small}" alt="">
+                                        {/item_image}
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <h4>{title}</h4>
+                                        <p>{item_descripcion}</p>
+                                    </div>
                                 </div>
-                                <div class="large-6 columns">
-                                    <h4>{title}</h4>
-                                    <p>{item_descripcion}</p>
-                                </div>
+                                {/exp:channel:entries}
                             </div>
-                            {/exp:channel:entries}
                         </div>
                     {/if}
                     
