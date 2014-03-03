@@ -774,7 +774,7 @@ figure:hover .icono img {
   height: 100%;
 }
 /* line 711, custom.scss */
-#map-container .large-12 .map {
+#map-container .large-12 #map {
   height: 70%;
 }
 
@@ -922,7 +922,7 @@ figure:hover .icono img {
     height: 100%;
   }
   /* line 849, custom.scss */
-  #map-container .large-12 .map {
+  #map-container .large-12 #map {
     height: auto;
   }
 }
