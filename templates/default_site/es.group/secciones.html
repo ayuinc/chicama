@@ -175,7 +175,7 @@
         <div class="gray_curve"></div>
         <div class="row">
             <div class="large-12 columns">
-                <div class="large-7 columns">
+                <div class="medium-7 large-7 columns">
                     <div class="row">
                         {exp:channel:entries channel="secciones" limit="1"}
                             <p>{seccion_contenido_espanol}</p>
@@ -324,9 +324,9 @@
                     </div> -->
                     {/if}
                 </div>
-                <div class="large-offset-1 large-4 columns">
+                <div class="medium-offset-1 medium-4 large-offset-1 large-4 columns">
                     {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
-                    <div id="testimonio" class="hide-for-small">
+                    <div id="testimonio" class="show-for-large-up">
                         <div class="row">
                             <div class="large-5 columns">
                                 <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
