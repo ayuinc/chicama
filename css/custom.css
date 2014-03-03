@@ -676,7 +676,7 @@ figure:hover .icono img {
 /* line 619, custom.scss */
 #content .other_categories {
   list-style: none;
-  margin-top: 60px;
+  margin-top: 10px;
   margin-left: 0;
 }
 /* line 623, custom.scss */
@@ -873,32 +873,37 @@ figure:hover .icono img {
     margin-bottom: 0;
   }
 
-  /* line 812, custom.scss */
+  /* line 811, custom.scss */
+  .other_categories {
+    margin-top: 60px;
+  }
+
+  /* line 815, custom.scss */
   .gray_curve {
     display: block;
   }
 
-  /* line 816, custom.scss */
+  /* line 819, custom.scss */
   .white_curve {
     display: block;
   }
 
-  /* line 821, custom.scss */
+  /* line 824, custom.scss */
   #promo form {
     text-align: left;
   }
 
-  /* line 826, custom.scss */
+  /* line 829, custom.scss */
   h2 {
     font-size: 2.3125rem;
   }
 
-  /* line 830, custom.scss */
+  /* line 833, custom.scss */
   h3 {
     font-size: 1.7875rem;
   }
 
-  /* line 834, custom.scss */
+  /* line 837, custom.scss */
   h4 {
     font-size: 1.4375rem;
   }
