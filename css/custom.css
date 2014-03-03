@@ -875,7 +875,7 @@ figure:hover .icono img {
 
   /* line 811, custom.scss */
   .other_categories {
-    margin-top: 60px;
+    margin-top: 60px !important;
   }
 
   /* line 815, custom.scss */
