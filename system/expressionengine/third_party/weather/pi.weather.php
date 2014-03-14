@@ -63,7 +63,7 @@ class Weather
     // END
 
     public function data(){
-        $url = "http://magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu";
+        $url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu";
         //  Initiate curl
         $ch = curl_init($url);
         // Disable SSL verification
@@ -142,7 +142,7 @@ class Weather
                     </div>
                     <div class="small-4 medium-4 large-4 columns">
                         <div class="weather_icon"> 
-                            <img src="http://64.207.145.174/img/current_tide_icon.png" alt="">
+                            <img src="{site_url}/img/current_tide_icon.png" alt="">
                         </div>
                         <div class="weather_title">
                             <span>TEMPERATURE</span>
