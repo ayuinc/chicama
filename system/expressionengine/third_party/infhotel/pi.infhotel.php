@@ -79,7 +79,7 @@ class Infhotel
         // Will dump a beauty json :3
         $data = json_decode($result, true);
 
-        return $data;
+        return var_dump($data);
     }
 
 }
