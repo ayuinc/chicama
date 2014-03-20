@@ -147,35 +147,6 @@ class Infhotel
         return $form;
     }
 
-    public function pais(){
-        $form = '<select name="pais" id="pais" > <option value="PAÍS" selected>PAÍS</option>';
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetPais';
-        //  Initiate curl
-        $ch = curl_init($url);
-        // Disable SSL verification
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
-        curl_setopt($ch, CURLOPT_URL,$url);
-        // Execute
-        $result=curl_exec($ch);
-
-        // Will dump a beauty json :3
-        $data = json_decode($result, true);
-
-        foreach($data as $row){
-            $codigo_pais = $row["TCodigoPais"];
-            $nombre_pais = $row["TDescripcionPais"];
-            //$nacionalidad = $rom["TDescripcionNacionalidad"]; -> Dato NO utilizado.
-            $form .= '<option value='.$codigo_pais.'>'.$nombre_pais.'</option>';
-        }
-        $form = $form.'</select>';
-        
-        return $form;
-    }
-
     public function tipodehabitacion(){
         $form = '<select name="tipo_de_habitacion" id="tipo_de_habitacion" > <option value="TIPO DE HABITACIÓN" selected>TIPO DE HABITACIÓN</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
