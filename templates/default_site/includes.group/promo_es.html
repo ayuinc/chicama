@@ -4,24 +4,30 @@
                 <div class="row">
                     <div class="large-12 large-centered columns">
                         <div class="row">
-                            <div class="large-7 columns">
+                            <div class="large-5 columns">
                                 <img src="{site_url}/img/promo_icon_es.png" alt="">
                                 <h3>
                                     NO PIERDAS LAS <span class="bolder">EMOCIONES</span>
                                 </h3>
                             </div>
-                            <div class="large-5 columns">
-                            	{exp:freeform:form
-										form_id="4"
-                                    return="es/gracias" 
-								}
-									{freeform:field:email
-										attr:placeholder = "Ingrese su e-mail."}
+                            
+                            	{exp:freeform:form form_id="5" return="es/gracias"}
+                            <div class="large-3 columns">	
+									{freeform:field:email attr:placeholder = "Ingrese su e-mail."}
+							</div>
+							<div class="large-2 columns">		
+									{freeform:field:country}
+							</div>
+							<div class="large-1 columns">		
+									{freeform:field:corres_tabla}
+							</div>
+							<div class="large-1 columns">		
 									<button type="submit">
 										<img src="{site_url}/img/send.png" alt="">
 									</button>
+							</div>		
                                 {/exp:freeform:form}
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
