@@ -20,5 +20,39 @@
         <script type="text/javascript" src="//use.typekit.net/lsr8drn.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+        
+        {if segment_1=='en'}
+	    <meta name="description" content="Where history blends with the ocean." />
+	    {if:else}
+	    <meta name="description" content="Donde la historia se mezcla con el mar." />
+	    {/if}
+	    
+	    <meta name="keywords" content="turismo, chicama, ola, wave, longest wave, turist, turims, peru" />
+	    <meta name="author" content="Chicama Boutique Hotel & Spa" />
+	    <meta name="copyright" content="Chicama Boutique Hotel & Spa" />
+	    <meta name="application-name" content="Chicama Boutique Hotel & Spa" />
+	    <!-- for Facebook -->
+	    
+	    {if embed:titulo}
+	    <meta property="og:title" content="{embed:titulo}" />
+		{if:else}
+		<meta property="og:title" content="Chicama Boutique Hotel & Spa" />
+		{/if}
+		
+		<meta property="og:type" content="other" />
+		{if embed:imagen}
+		<meta property="og:image" content="{embed:imagen}" />
+		{if:else}
+		<meta property="og:image" content="http://www.chicamasurf.com/img/full_bg.jpg" />
+		{/if}
+		<meta property="og:url" content="{current_url}" />
+        {if segment_1=='en'}
+	    <meta property="og:description" content="Where history blends with the ocean" />
+	    {if:else}
+	    <meta property="og:description" content="Donde la historia se mezcla con el mar." />
+	    {/if}		
+		
+		        
+        
     </head>
     <body>

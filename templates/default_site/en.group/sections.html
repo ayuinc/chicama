@@ -1,4 +1,9 @@
-{embed="includes/header"}
+{exp:channel:entries channel="secciones" limit="1"}
+{imagen_de_fondo limit="1"}
+{embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
+{/imagen_de_fondo}
+{/exp:channel:entries}
+
 {if last_segment == "ways-to-get-here"}
 <div class="row" id="map-container">
     <div class="large-12"><div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div></div>
@@ -361,6 +366,7 @@
                         <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
                     </div>
                     {/exp:channel:entries}
+                    
 
                     <ul class="other_categories">
                         <li>
@@ -417,6 +423,28 @@
                             </a>
                         </li>
                     </ul>
+                    
+                    <div class="row">
+                    	<div class="small-12 medium-12 large-12 large-centered columns">
+                    		<div class="row redes-sociales">
+		                        <div class="small-12 medium-12 large-12 columns">
+		                        	<h5>SHARE <span class="bold">WITH FRIENDS</span></h5>
+		                        </div>                    
+		                    	<div class="small-12 medium-12 large-12 columns">
+		                    		<!-- AddThis Button BEGIN -->
+									<div class="addthis_toolbox addthis_default_style ">
+									<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+									<a class="addthis_counter addthis_pill_style"></a>
+									</div>
+									<!-- AddThis Button END -->
+									<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+									<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=hermanmarin"></script>
+		                    	</div>
+                    		</div>
+                    	</div>
+                    </div>
+                    
+                    
                 </div>
 
                 </div>
