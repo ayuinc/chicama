@@ -226,6 +226,43 @@ class Infhotel
         return $html;
     }
 
+    public function tarifadehabitacionesdisponibles(){
+        $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
+        $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
+        $form = '<select name="tipo_de_habitacion" id="tipo_de_habitacion" > <option value="TIPO DE HABITACIÓN" selected>TIPO DE HABITACIÓN</option>';
+        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
+        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTarifaHabitacionesDisponibles/'.$fecha_checkin.'/'.$fecha_checkout;
+        //  Initiate curl
+        $ch = curl_init($url);
+        // Disable SSL verification
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // Will return the response, if false it print the response
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // Set the url
+        curl_setopt($ch, CURLOPT_URL,$url);
+        // Execute
+        $result=curl_exec($ch);
+
+        // Will dump a beauty json :3
+        $data = json_decode($result, true);
+
+        foreach($data as $row){
+            //$n_cant_pax = $row["NCantPax"];
+            $precio_base = $row["NPrecioBase"];
+            //$codigo_compania = $row["TCodigoCompania"];
+            $codigo_habitacion = $row["TCodigoHabitacion"];
+            //$codigo_tarifa = $row["TCodigoTarifa"];
+            $tipo_de_habitacion = $row["TDescripcionCompletaProducto"];
+            //$descripcion_tarifa = $row["TDescripcionTarifa"];
+            //$razon_social_compania = $row["TRazonSocialCompania"];
+            
+            $form .= '<option value='.$codigo_habitacion.'>'.$tipo_de_habitacion.' - '.$precio_base.'</option>';
+        }
+        $form = $form.'</select>';
+        
+        return $form;
+    }
+
 }
 /* End of file pi.infhotel.php */
 /* Location: ./system/expressionengine/third_party/infhotel/pi.infhotel.php */
