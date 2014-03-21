@@ -214,10 +214,10 @@ class Infhotel
             $tipo_de_habitacion = $row["TDescripcionCompletaProducto"];
 
             $html .= '<div>
-                <p>Fecha'.$fecha.'</p>
-                <p>Tipo :<span>4</span>'.$tipo_de_habitacion.': <span>5</span></p>
-                <p>Cantidad de habitaciones disponibles :<span>4</span>'.$disponible.': <span>5</span></p>
-                <p>Precio : <span>6</span>'.$precio_base.'<span>7</span></p>
+                <p>Fecha :'.$fecha.'</p>
+                <p>Tipo :'.$tipo_de_habitacion.':</p>
+                <p>Cantidad de habitaciones disponibles :'.$disponible.':</p>
+                <p>Precio : '.$precio_base.'</p>
                 </div>';
         }
 
