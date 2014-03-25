@@ -263,6 +263,85 @@ class Infhotel
         return $form;
     }
 
+    public function insertarreservar(){
+        /*$nombre = ee()->TMPL->fetch_param('nombre');
+        $apellido = ee()->TMPL->fetch_param('apellido');
+        $dni = ee()->TMPL->fetch_param('dni');
+        $tipo_dni = ee()->TMPL->fetch_param('tipo_dni');
+        $tarjeta = ee()->TMPL->fetch_param('tarjeta');
+        $tipo_tarjeta = ee()->TMPL->fetch_param('tipo_tarjeta');
+        $precio = ee()->TMPL->fetch_param('preio');
+        $cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
+        $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
+        $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
+        $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
+        $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
+        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
+        $data = array(  "FLlegada" => "\/Date(1396328400000-0500)\/",
+                        "FSalida" => "\/Date(1396674000000-0500)\/", 
+                        "HLlegada" => "\/Date(-62135578800000-0500)\/",
+                        "HSalida" => "\/Date(-62135578800000-0500)\/",
+                        "Habitaciones" => array(
+                                            array("CantHab" => "1",
+                                                "FLlegadaReserva" => "\/Date(1396328400000-0500)\/",
+                                                "FSalidaReserva" => "\/Date(1396674000000-0500)\/",
+                                                "NPrecio" => "120",  
+                                                "TCodigoHabitacion" => "110001",      
+                                            ),
+                                            array("CantHab" => "1",
+                                                "FLlegadaReserva" => "\/Date(1396328400000-0500)\/",
+                                                "FSalidaReserva" => "\/Date(1396674000000-0500)\/",
+                                                "NPrecio" => "150",  
+                                                "TCodigoHabitacion" => "110003",      
+                                            ),
+                                        ),
+                        "NPasajero" => "2",
+                        "Pasajeros" => array(
+                                            array("FLlegadaReserva" => "\/Date(-62135578800000-0500)\/",
+                                                "FSalidaReserva" => "\/Date(-62135578800000-0500)\/",
+                                                "TDocumento" => "12345678",
+                                                "TMaterno" => "pasajero01",  
+                                                "TNacionalidad" => "069",      
+                                                "TNombre" => "pasajero01",
+                                                "TPaterno" => "pasajero01",  
+                                                "TTarjeta" => "1234567890",
+                                                "TTipoDocumento" => "02",
+                                                "TTipoTarjeta" => "04" 
+                                            ),
+                                            array("FLlegadaReserva" => "\/Date(-62135578800000-0500)\/",
+                                                "FSalidaReserva" => "\/Date(-62135578800000-0500)\/",
+                                                "TDocumento" => "12345678",
+                                                "TMaterno" => "pasajero02",  
+                                                "TNacionalidad" => "069",      
+                                                "TNombre" => "pasajero02",
+                                                "TPaterno" => "pasajero02",  
+                                                "TTarjeta" => "1234567890",
+                                                "TTipoDocumento" => "02",
+                                                "TTipoTarjeta" => "02"    
+                                            )
+                    );
+
+        $data_string = json_encode($data, true);
+        /*
+        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
+        //  Initiate curl
+        $ch = curl_init($url);
+        // Disable SSL verification
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
+        //curl_setopt($ch, CURLOPT_URL,$url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+            'Content-Type: Infhotel/json',                                                                                
+            'Content-Length: ' . strlen($data_string))                                                                       
+        );
+        // Execute
+        $result = curl_exec($ch);
+        */
+        return $data_string;
+    }
+
 }
 /* End of file pi.infhotel.php */
 /* Location: ./system/expressionengine/third_party/infhotel/pi.infhotel.php */
