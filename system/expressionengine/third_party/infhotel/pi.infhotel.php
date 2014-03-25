@@ -293,7 +293,7 @@ class Infhotel
                                                 "FSalidaReserva" => "\/Date(1396674000000-0500)\/",
                                                 "NPrecio" => "150",  
                                                 "TCodigoHabitacion" => "110003",      
-                                            ),
+                                            )
                                         ),
                         "NPasajero" => "2",
                         "Pasajeros" => array(
