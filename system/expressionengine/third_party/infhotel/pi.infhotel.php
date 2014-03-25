@@ -319,7 +319,8 @@ class Infhotel
                                                 "TTipoDocumento" => "02",
                                                 "TTipoTarjeta" => "02"    
                                             )
-                    );
+                                        )
+        );
 
         $data_string = json_encode($data, true);
         /*
