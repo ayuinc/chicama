@@ -592,13 +592,16 @@ figure {
       font-size: 0.8rem;
       margin-top: 0.7rem; }
 
-  .weather .weather_icon {
-    height: 30px;
-    padding-top: 20px; }
-  .weather .weather_title span {
-    font-size: 9px !important; }
-  .weather span {
-    font-size: 0.9rem !important; }
+  .weather {
+    position: relative;
+    top: 2rem; }
+    .weather .weather_icon {
+      height: 30px;
+      padding-top: 20px; }
+    .weather .weather_title span {
+      font-size: 9px !important; }
+    .weather span {
+      font-size: 0.9rem !important; }
 
   #footer {
     text-align: center; }
@@ -607,6 +610,8 @@ figure {
 
   #promo {
     text-align: center; }
+    #promo h3 {
+      font-size: 1.35rem; }
 
   .gray_curve {
     display: none; }
@@ -615,7 +620,14 @@ figure {
     display: none; }
 
   .headline h1 {
-    font-size: 4rem; } }
+    font-size: 4rem; }
+
+  #content h4 {
+    font-weight: 400;
+    line-height: 105%;
+    margin: 0.3rem 0;
+    padding-bottom: 0.4rem;
+    font-size: 1.2rem; } }
 @media only screen and (min-width: 40.063em) {
   #footer p {
     display: none; }

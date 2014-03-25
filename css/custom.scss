@@ -781,6 +781,8 @@ figure {
 	}	
 	
 	.weather{
+		position: relative;
+		top: 2rem;
 		.weather_icon{
 			height: 30px;
 			padding-top:20px;
@@ -804,6 +806,9 @@ figure {
 
 	#promo{
 		text-align: center;
+		h3 {
+			font-size: 1.35rem;
+		}
 	}
 
 	.gray_curve{
@@ -818,6 +823,16 @@ figure {
 	.headline{
 		h1{
 			font-size: 4rem;
+		}
+	}
+	
+	#content {
+		h4 {
+			font-weight: 400;
+			line-height: 105%;
+			margin: 0.3rem 0;
+			padding-bottom: 0.4rem;
+			font-size: 1.2rem;
 		}
 	}
 
