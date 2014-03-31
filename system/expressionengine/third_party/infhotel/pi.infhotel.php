@@ -323,7 +323,7 @@ class Infhotel
         );
 
         $data_string = json_encode($data, true);
-        /*$url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
+        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
         $ch = curl_init($url);
         // Disable SSL verification
@@ -346,10 +346,8 @@ class Infhotel
         {
             curl_close($ch);
             return 'Operation completed without any errors';
-        }*/
-        return $data_string;
+        }
     }
-
 }
 /* End of file pi.infhotel.php */
 /* Location: ./system/expressionengine/third_party/infhotel/pi.infhotel.php */
