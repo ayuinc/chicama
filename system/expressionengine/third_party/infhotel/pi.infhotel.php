@@ -347,7 +347,7 @@ class Infhotel
         else
         {
             curl_close($ch);
-            return 'Operation completed without any errors';
+            return 'Curl Log: Operation completed without any errors';
         }
         //return $data_string;
     }
