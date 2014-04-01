@@ -336,8 +336,8 @@ class Infhotel
             'Content-Length: ' . strlen($data_string))
         ); 
         $result = curl_exec($ch);
-        curl_exec($ch);
-        return $data_string;
+        curl_close($ch);
+        return $result;
         // Execute
         /*if(curl_exec($ch) === false)
         {
