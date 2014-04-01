@@ -277,28 +277,28 @@ class Infhotel
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
-        $data = array(  "FLlegada" => "05/04/14 12:00:00 a.m.",
-                        "FSalida" => "07/04/14 12:00:00 a.m.", 
+        $data = array(  "FLlegada" => "05/04/2014 12:00:00 a.m.",
+                        "FSalida" => "07/04/2014 12:00:00 a.m.", 
                         "HLlegada" => null,
                         "HSalida" => null,
                         "Habitaciones" => array(
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "05/04/14",
-                                                "FSalidaReserva" => "07/04/14",
+                                                "FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 120,  
                                                 "TCodigoHabitacion" => "110004",      
                                             ),
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "05/04/14",
-                                                "FSalidaReserva" => "07/04/14",
+                                                "FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 150,  
                                                 "TCodigoHabitacion" => "110005",      
                                             )
                                         ),
                         "NPasajero" => "2",
                         "Pasajeros" => array(
-                                            array("FLlegadaReserva" => "05/04/14",
-                                                "FSalidaReserva" => "07/04/14",
+                                            array("FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero01",  
                                                 "TNacionalidad" => "069",      
@@ -308,8 +308,8 @@ class Infhotel
                                                 "TTipoDocumento" => "02",
                                                 "TTipoTarjeta" => "04" 
                                             ),
-                                            array("FLlegadaReserva" => "05/04/14",
-                                                "FSalidaReserva" => "07/04/14",
+                                            array("FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero02",  
                                                 "TNacionalidad" => "069",      
