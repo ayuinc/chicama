@@ -297,8 +297,8 @@ class Infhotel
                                         ),
                         "NPasajero" => "2",
                         "Pasajeros" => array(
-                                            array("FLlegadaReserva" => null,
-                                                "FSalidaReserva" => null,
+                                            array("FLlegadaReserva" => "05/04/14",
+                                                "FSalidaReserva" => "07/04/14",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero01",  
                                                 "TNacionalidad" => "069",      
@@ -308,8 +308,8 @@ class Infhotel
                                                 "TTipoDocumento" => "02",
                                                 "TTipoTarjeta" => "04" 
                                             ),
-                                            array("FLlegadaReserva" => null,
-                                                "FSalidaReserva" => null,
+                                            array("FLlegadaReserva" => "05/04/14",
+                                                "FSalidaReserva" => "07/04/14",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero02",  
                                                 "TNacionalidad" => "069",      
