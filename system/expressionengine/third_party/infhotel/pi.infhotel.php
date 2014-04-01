@@ -283,8 +283,8 @@ class Infhotel
                         "HSalida" => "null",
                         "Habitaciones" => array(
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "05/04/14 12:00:00 a.m.",
-                                                "FSalidaReserva" => "07/04/14 12:00:00 a.m.",
+                                                "FLlegadaReserva" => "05/04/14",
+                                                "FSalidaReserva" => "07/04/14",
                                                 "NPrecio" => 120,  
                                                 "TCodigoHabitacion" => "110004",      
                                             ),
