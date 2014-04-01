@@ -337,7 +337,9 @@ class Infhotel
             'Content-Length: ' . strlen($data_string))                                                                       
         );
         // Execute
-        if(curl_exec($ch) === false)
+        $result = curl_exec($ch);
+        return $result;
+        /*if(curl_exec($ch) === false)
         {
             curl_close($ch);
             return 'Curl error: ' . curl_error($ch);
@@ -346,7 +348,7 @@ class Infhotel
         {
             curl_close($ch);
             return 'Operation completed without any errors';
-        }
+        }*/
         //return $data_string;
     }
 }
