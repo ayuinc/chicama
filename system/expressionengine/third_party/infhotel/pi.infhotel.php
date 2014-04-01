@@ -277,20 +277,20 @@ class Infhotel
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
-        $data = array(  "FLlegada" => "05/04/14 12:00:00 a.m.",
-                        "FSalida" => "07/04/14 12:00:00 a.m.", 
+        $data = array(  "FLlegada" => null,
+                        "FSalida" => null, 
                         "HLlegada" => null,
                         "HSalida" => null,
                         "Habitaciones" => array(
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "05/04/14",
-                                                "FSalidaReserva" => "07/04/14",
+                                                "FLlegadaReserva" => null,
+                                                "FSalidaReserva" => null,
                                                 "NPrecio" => 120,  
                                                 "TCodigoHabitacion" => "110004",      
                                             ),
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "05/04/14",
-                                                "FSalidaReserva" => "07/04/14",
+                                                "FLlegadaReserva" => null,
+                                                "FSalidaReserva" => null,
                                                 "NPrecio" => 150,  
                                                 "TCodigoHabitacion" => "110005",      
                                             )
@@ -330,16 +330,16 @@ class Infhotel
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
         //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
-        curl_setopt($ch, CURLOPT_URL,$url);
+        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
+        //curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
             'Content-Type: Infhotel/json',                                                                                
             'Content-Length: ' . strlen($data_string))                                                                       
         );
+        /*$result = curl_exec($ch);
+        return $result;*/
         // Execute
-        $result = curl_exec($ch);
-        return $result;
-        /*if(curl_exec($ch) === false)
+        if(curl_exec($ch) === false)
         {
             curl_close($ch);
             return 'Curl error: ' . curl_error($ch);
@@ -348,7 +348,7 @@ class Infhotel
         {
             curl_close($ch);
             return 'Operation completed without any errors';
-        }*/
+        }
         //return $data_string;
     }
 }
