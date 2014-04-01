@@ -337,7 +337,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_exec($ch);
-        return $result;*/
+        return $result;
         // Execute
         /*if(curl_exec($ch) === false)
         {
