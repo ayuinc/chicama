@@ -360,8 +360,8 @@ class Infhotel
         $context  = stream_context_create($options);
         $result = file_get_contents($url, false, $context);
 
-        //var_dump($result);
-        return $result;
+        var_dump($result);
+        //return $result;
     }
 }
 /* End of file pi.infhotel.php */
