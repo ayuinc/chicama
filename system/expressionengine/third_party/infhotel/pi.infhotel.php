@@ -335,11 +335,11 @@ class Infhotel
             'Content-Type: application/json',                                                                                
             'Content-Length: ' . strlen($data_string))
         ); 
-        /*$result = curl_exec($ch);
+        $result = curl_exec($ch);
         curl_exec($ch);
         return $result;*/
         // Execute
-        if(curl_exec($ch) === false)
+        /*if(curl_exec($ch) === false)
         {
             curl_close($ch);
             return 'Curl error: ' . curl_error($ch);
@@ -348,7 +348,7 @@ class Infhotel
         {
             curl_close($ch);
             return 'Curl Log: Operation completed without any errors';
-        }
+        }*/
         // use key 'http' even if you send the request to https://...
         /*$options = array(
             'http' => array(
