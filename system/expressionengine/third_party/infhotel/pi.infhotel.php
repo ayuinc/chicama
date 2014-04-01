@@ -325,7 +325,7 @@ class Infhotel
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
-        /*$ch = curl_init($url);
+        $ch = curl_init($url);
         // Disable SSL verification
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
@@ -348,9 +348,9 @@ class Infhotel
         {
             curl_close($ch);
             return 'Curl Log: Operation completed without any errors';
-        }*/
+        }
         // use key 'http' even if you send the request to https://...
-        $options = array(
+        /*$options = array(
             'http' => array(
                 'header'  => "Content-type: json",
                 'method'  => 'POST',
@@ -361,7 +361,7 @@ class Infhotel
         $result = file_get_contents($url, false, $context);
 
         var_dump($result);
-        //return $result;
+        return $result;*/
     }
 }
 /* End of file pi.infhotel.php */
