@@ -337,7 +337,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result;
+        return $result."  ".$data_string;
         // Execute
         /*if(curl_exec($ch) === false)
         {
