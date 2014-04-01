@@ -705,6 +705,13 @@ figure {
 	input[type="text"], input[type="url"], textarea {
 		font-weight: 300;
 		margin-bottom: 2em;
+		position: relative;
+	}
+
+	small.error {
+		top: 37px !important;
+		background: transparent !important;
+		color: #f04124 !important;
 	}
 }
 
