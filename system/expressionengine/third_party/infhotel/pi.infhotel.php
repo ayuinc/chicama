@@ -334,8 +334,7 @@ class Infhotel
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-            'Content-Type: application/json',                                                                                
-            'Content-Length: ' . strlen($data_string))                                                                       
+            "Accept: application/json"                                                                     
         );
         $result = curl_exec($ch);
         return $result;
