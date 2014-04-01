@@ -323,6 +323,7 @@ class Infhotel
         );
 
         $data_string = json_encode($data, true);
+        
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
         $ch = curl_init($url);
