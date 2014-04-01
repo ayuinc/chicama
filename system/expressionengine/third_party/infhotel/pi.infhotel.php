@@ -335,8 +335,9 @@ class Infhotel
             'Content-Type: application/json',                                                                                
             'Content-Length: ' . strlen($data_string))
         ); 
-        $result = curl_exec($ch);
-        return $result;
+        /*$result = curl_exec($ch);
+        curl_exec($ch);
+        return $result;*/
         // Execute
         if(curl_exec($ch) === false)
         {
