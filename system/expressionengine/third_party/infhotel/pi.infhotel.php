@@ -277,8 +277,8 @@ class Infhotel
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
-        $data = array(  "FLlegada" => "05/04/2014 12:00:00 a.m.",
-                        "FSalida" => "07/04/2014 12:00:00 a.m.", 
+        $data = array(  "FLlegada" => "05/04/2014 12:00:00",
+                        "FSalida" => "07/04/2014 12:00:00", 
                         "HLlegada" => null,
                         "HSalida" => null,
                         "Habitaciones" => array(
