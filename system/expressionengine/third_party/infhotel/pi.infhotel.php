@@ -286,13 +286,13 @@ class Infhotel
                                                 "FLlegadaReserva" => "05/04/2014",
                                                 "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 120,  
-                                                "TCodigoHabitacion" => "110004",      
+                                                "TCodigoHabitacion" => "110004"    
                                             ),
                                             array("CantHab" => "1",
                                                 "FLlegadaReserva" => "05/04/2014",
                                                 "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110005",      
+                                                "TCodigoHabitacion" => "110005"     
                                             )
                                         ),
                         "NPasajero" => "2",
