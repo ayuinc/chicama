@@ -277,23 +277,28 @@ class Infhotel
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
-        $data = array(  "FLlegada" => "2014-04-08 13:30:00.000",
-                        "FSalida" => "2014-04-10 15:45:00.000", 
-                        "HLlegada" => "2014-04-8 13:30:00.000",
-                        "HSalida" => "2014-04-10 15:45:00.000",
+        $data = array(  "FLlegada" => "05/04/2014 12:00:00 a.m.",
+                        "FSalida" => "07/04/2014 12:00:00 a.m.", 
+                        "HLlegada" => null,
+                        "HSalida" => null,
                         "Habitaciones" => array(
-                                            array("CantHab" => 1, 
+                                            array("CantHab" => "1",
+                                                "FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 120,  
-                                                "TCodigoHabitacion" => "110001"    
+                                                "TCodigoHabitacion" => "110004"    
                                             ),
-                                            array("CantHab" => 1, 
+                                            array("CantHab" => "1",
+                                                "FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110002"
+                                                "TCodigoHabitacion" => "110005"     
                                             )
                                         ),
-                        "NPasajero" => 2,
+                        "NPasajero" => "2",
                         "Pasajeros" => array(
-                                            array(
+                                            array("FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero01",  
                                                 "TNacionalidad" => "069",      
@@ -303,7 +308,8 @@ class Infhotel
                                                 "TTipoDocumento" => "02",
                                                 "TTipoTarjeta" => "04" 
                                             ),
-                                            array(
+                                            array("FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero02",  
                                                 "TNacionalidad" => "069",      
@@ -316,22 +322,22 @@ class Infhotel
                                         )
         );
 
-        $data_string = json_encode($data);
-        
+        $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
+        //  Initiate curl
         $ch = curl_init($url);
+        // Disable SSL verification
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPHEADER,array(
-            'Content-Type: application/json', 'charset=utf-8')
+            'Content-Type: application/json',                                                                                
+            'Content-Length: ' . strlen($data_string))
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-
-        return $result;       
-    }
+        return $result."  ".$data_string;
         // Execute
         /*if(curl_exec($ch) === false)
         {
