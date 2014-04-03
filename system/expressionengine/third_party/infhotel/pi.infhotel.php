@@ -284,11 +284,11 @@ class Infhotel
                         "Habitaciones" => array(
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 120,  
-                                                "TCodigoHabitacion" => "110001",      
+                                                "TCodigoHabitacion" => "110001"    
                                             ),
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110002",
+                                                "TCodigoHabitacion" => "110002"
                                             )
                                         ),
                         "NPasajero" => 2,
@@ -321,7 +321,7 @@ class Infhotel
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_string)); 
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string); 
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPHEADER,array(
