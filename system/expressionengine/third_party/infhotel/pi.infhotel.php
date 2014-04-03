@@ -277,28 +277,28 @@ class Infhotel
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
-        $data = array(  "FLlegada" => "/Date(1396328400000-0500)/",
-                        "FSalida" => "/Date(1396674000000-0500)/", 
-                        "HLlegada" => "/Date(-62135578800000-0500)/",
-                        "HSalida" => "/Date(-62135578800000-0500)/",
+        $data = array(  "FLlegada" => "05/04/2014 12:00:00 a.m.",
+                        "FSalida" => "07/04/2014 12:00:00 a.m.", 
+                        "HLlegada" => null,
+                        "HSalida" => null,
                         "Habitaciones" => array(
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "/Date(1396328400000-0500)/",
-                                                "FSalidaReserva" => "/Date(1396674000000-0500)/",
+                                                "FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 120,  
-                                                "TCodigoHabitacion" => "110001",      
+                                                "TCodigoHabitacion" => "110004"    
                                             ),
                                             array("CantHab" => "1",
-                                                "FLlegadaReserva" => "/Date(1396328400000-0500)/",
-                                                "FSalidaReserva" => "/Date(1396674000000-0500)/",
+                                                "FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110003",      
+                                                "TCodigoHabitacion" => "110005"     
                                             )
                                         ),
                         "NPasajero" => "2",
                         "Pasajeros" => array(
-                                            array("FLlegadaReserva" => "/Date(-62135578800000-0500)/",
-                                                "FSalidaReserva" => "/Date(-62135578800000-0500)/",
+                                            array("FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero01",  
                                                 "TNacionalidad" => "069",      
@@ -308,8 +308,8 @@ class Infhotel
                                                 "TTipoDocumento" => "02",
                                                 "TTipoTarjeta" => "04" 
                                             ),
-                                            array("FLlegadaReserva" => "/Date(-62135578800000-0500)/",
-                                                "FSalidaReserva" => "/Date(-62135578800000-0500)/",
+                                            array("FLlegadaReserva" => "05/04/2014",
+                                                "FSalidaReserva" => "07/04/2014",
                                                 "TDocumento" => "12345678",
                                                 "TMaterno" => "pasajero02",  
                                                 "TNacionalidad" => "069",      
@@ -328,16 +328,18 @@ class Infhotel
         $ch = curl_init($url);
         // Disable SSL verification
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                  
-        //curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        //curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
-        //curl_setopt($ch, CURLOPT_URL,$url);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-            'Content-Type: Infhotel/json',                                                                                
-            'Content-Length: ' . strlen($data_string))                                                                       
-        );
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
+        curl_setopt($ch, CURLOPT_URL,$url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,array(
+            'Content-Type: application/json',                                                                                
+            'Content-Length: ' . strlen($data_string))
+        ); 
+        $result = curl_exec($ch);
+        curl_close($ch);
+        return $result."  ".$data_string;
         // Execute
-        if(curl_exec($ch) === false)
+        /*if(curl_exec($ch) === false)
         {
             curl_close($ch);
             return 'Curl error: ' . curl_error($ch);
@@ -345,8 +347,21 @@ class Infhotel
         else
         {
             curl_close($ch);
-            return 'Operation completed without any errors';
-        }
+            return 'Curl Log: Operation completed without any errors';
+        }*/
+        // use key 'http' even if you send the request to https://...
+        /*$options = array(
+            'http' => array(
+                'header'  => "Content-type: json",
+                'method'  => 'POST',
+                'content' => http_build_query($data),
+            ),
+        );
+        $context  = stream_context_create($options);
+        $result = file_get_contents($url, false, $context);
+
+        var_dump($result);
+        return $result;*/
     }
 }
 /* End of file pi.infhotel.php */
