@@ -11,21 +11,28 @@
                                 </h3>
                             </div>
                             
-                            	{exp:freeform:form form_id="4" return="es/thank-you"}
-                            <div class="large-2 columns">	
-									{freeform:field:email attr:placeholder = "Enter your e-mail."}
-							</div>
-							<div class="large-2 columns">		
-									{freeform:field:country}
-							</div>
-							<div class="large-2 columns">		
-									{freeform:field:surfer}
-							</div>
-							<div class="large-1 columns">		
-									<button type="submit">
-										<img src="{site_url}/img/send.png" alt="">
-									</button>
-							</div>		
+                                {exp:freeform:form
+                                    form_id="4"
+                                    return="en/thank-you"
+                                    form:data-abide=""
+                                }
+                            <div class="large-2 columns">   
+                                {freeform:field:email attr:placeholder = "Enter your e-mail." attr:required="" attr:pattern="email"}
+                                <small class="error">E-mail is required.</small>
+                            </div>
+                            <div class="large-2 columns">       
+                                {freeform:field:country attr:required=""}
+                                <small class="error">Required field.</small>
+                            </div>
+                            <div class="large-2 columns">       
+                                {freeform:field:surfer attr:required=""}
+                                <small class="error">Required field.</small>
+                            </div>
+                            <div class="large-1 columns">       
+                                <button type="submit">
+                                    <img src="{site_url}/img/send.png" alt="">
+                                </button>
+                            </div>      
                                 {/exp:freeform:form}
                         </div>
                     </div>
