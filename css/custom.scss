@@ -708,11 +708,20 @@ figure {
 		position: relative;
 	}
 
-	small.error {
-		top: 37px !important;
-		background: transparent !important;
-		color: #f04124 !important;
+	textarea {
+		font-weight: 300;
+		margin-bottom: 2em;
 	}
+
+	small.error {
+		position: absolute;
+		top: 37px !important;
+	}
+}
+
+.error {
+	background: transparent !important;
+	color: #f04124 !important;
 }
 
 #form_box{

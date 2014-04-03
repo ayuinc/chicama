@@ -64,6 +64,7 @@
                                     {freeform:field:first_name
                                         attr:placeholder="ENTER YOUR NAME"
                                         attr:required=""
+                                        attr:pattern="[a-zA-Z]+"
                                     }
                                     <small class="error">Your name is required.</small>
                                 </div>
@@ -71,6 +72,7 @@
                                     {freeform:field:last_name
                                         attr:placeholder="ENTER YOUR LAST NAME"
                                         attr:required=""
+                                        attr:pattern="[a-zA-Z]+"
                                     }
                                     <small class="error">Your last name is required.</small>
                                 </div>
@@ -78,6 +80,7 @@
                                     {freeform:field:phone
                                         attr:placeholder="ENTER YOUR PHONE NUMBER"
                                         attr:required=""
+                                        attr:pattern="telef"
                                     }
                                     <small class="error">Your phone number is required.</small>
                                 </div>
@@ -107,18 +110,18 @@
                                     <small class="error">Your e-mail is required.</small>
                                 </div>
                                 <div class="large-4 columns">
-                                    {freeform:field:persons_number attr:required=""}
+                                    {freeform:field:persons_number attr:required="" attr:pattern="number"}
                                     <small class="error">The persons number is required.</small>
                                 </div>
                                 <div class="large-4 columns">
-                                    {freeform:field:room_type attr:required=""}
+                                    {freeform:field:room_type attr:required="" attr:pattern="number"}
                                     <small class="error">The room type is required.</small>
                                 </div>
 
                             </div>
                             <div class="row">
                                 <div class="large-4 columns">
-                                    {freeform:field:reservation_type attr:required=""}
+                                    {freeform:field:reservation_type attr:required="" attr:pattern="number"}
                                     <small class="error">The reservation type is required.</small>
                                 </div>
                                 <div class="large-4 columns">

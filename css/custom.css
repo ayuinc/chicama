@@ -542,8 +542,14 @@ figure {
   font-weight: 300;
   margin-bottom: 2em;
   position: relative; }
+#book_a_room textarea {
+  font-weight: 300;
+  margin-bottom: 2em; }
 #book_a_room small.error {
-  top: 37px !important;
+  position: absolute;
+  top: 37px !important; }
+
+.error {
   background: transparent !important;
   color: #f04124 !important; }
 
