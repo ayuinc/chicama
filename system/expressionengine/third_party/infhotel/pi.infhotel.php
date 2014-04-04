@@ -183,7 +183,7 @@ class Infhotel
     }
 
     public function disponibilidadhabitaciones(){
-        $html ="<div>";
+        $html ="<div> <ul>";
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
 
@@ -207,7 +207,7 @@ class Infhotel
         }
         $fecha = array_unique($fecha);
         foreach ($fecha as $fech) {
-            $html .=  '<div>
+            $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
                 if ($fech == $row["FFecha"]){
@@ -216,14 +216,13 @@ class Infhotel
                     $codigo_habitacion = $row["TCodigoHabitacion"];
                     $tipo_de_habitacion = $row["TDescripcionCompletaProducto"];
 
-                    $html .= '<p>Tipo :'.$tipo_de_habitacion.':</p>
-                            <p>Precio : '.$precio_base.' - Cant. de hab. disponibles :'.$disponible.':</p>
-                            </div>';
+                    $html .= '<p> Tipo :'.$tipo_de_habitacion.' - <p>Precio : '.$precio_base.' - Cant. de hab. disponibles :'.$disponible.':</p>
+                            </div> </li>';
                 }
             }
         }
 
-        $html .= '</div>';
+        $html .= '</ul></div>';
         
         return $html ;
     }
