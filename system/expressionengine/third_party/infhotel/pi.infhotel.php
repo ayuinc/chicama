@@ -208,7 +208,7 @@ class Infhotel
         $fecha = array_unique($fecha);
         foreach ($fecha as $fech) {
             $html .=  '<div>
-                        <p>Fecha :'.$fecha.'</p>' ;
+                        <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
                 if ($fech == $row["FFecha"]){
                     $disponible = $row["NDisponible"];
