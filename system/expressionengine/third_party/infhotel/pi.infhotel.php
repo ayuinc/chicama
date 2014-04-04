@@ -186,11 +186,7 @@ class Infhotel
         $html ="<div>";
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
-        /*$simple = 0;
-        $doble = 0;
-        $triple = 0;
-        $suite = 0;*/
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
+
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
         //  Initiate curl
         $ch = curl_init($url);
@@ -210,20 +206,22 @@ class Infhotel
             $n=$n+1;
         }
         $fecha = array_unique($fecha);
-        /*foreach($data as $row){
-            $fecha = $row["FFecha"];
-            $disponible = $row["NDisponible"];
-            $precio_base = $row["NPrecioBase"];
-            $codigo_habitacion = $row["TCodigoHabitacion"];
-            $tipo_de_habitacion = $row["TDescripcionCompletaProducto"];
+        foreach ($fecha as $fech) {
+            $html .=  '<div>
+                        <p>Fecha :'.$fecha.'</p>' ;
+            foreach($data as $row){
+                if ($fech == $row["FFecha"]){
+                    $disponible = $row["NDisponible"];
+                    $precio_base = $row["NPrecioBase"];
+                    $codigo_habitacion = $row["TCodigoHabitacion"];
+                    $tipo_de_habitacion = $row["TDescripcionCompletaProducto"];
 
-            $html .= '<div>
-                <p>Fecha :'.$fecha.'</p>
-                <p>Tipo :'.$tipo_de_habitacion.':</p>
-                <p>Cantidad de habitaciones disponibles :'.$disponible.':</p>
-                <p>Precio : '.$precio_base.'</p>
-                </div>';
-        }*/
+                    $html .= '<p>Tipo :'.$tipo_de_habitacion.':</p>
+                            <p>Precio : '.$precio_base.' - Cant. de hab. disponibles :'.$disponible.':</p>
+                            </div>';
+                }
+            }
+        }
 
         $html .= '</div>';
         
