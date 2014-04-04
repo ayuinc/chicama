@@ -276,7 +276,6 @@ class Infhotel
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $data = array(  "FLlegada" => "2014-05-05 13:30:00.000",
                         "FSalida" => "2014-05-07 15:45:00.000", 
                         "HLlegada" => "2014-05-05 13:30:00.000",
@@ -329,31 +328,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result."  ".$data_string;
-        // Execute
-        /*if(curl_exec($ch) === false)
-        {
-            curl_close($ch);
-            return 'Curl error: ' . curl_error($ch);
-        }
-        else
-        {
-            curl_close($ch);
-            return 'Curl Log: Operation completed without any errors';
-        }*/
-        // use key 'http' even if you send the request to https://...
-        /*$options = array(
-            'http' => array(
-                'header'  => "Content-type: json",
-                'method'  => 'POST',
-                'content' => http_build_query($data),
-            ),
-        );
-        $context  = stream_context_create($options);
-        $result = file_get_contents($url, false, $context);
-
-        var_dump($result);
-        return $result;*/
+        return $result."  ".$data_string; 
     }
 }
 /* End of file pi.infhotel.php */

@@ -1,3 +1,20 @@
+<p>Nombre</p>
+<input type="text">
+<p>Apellido</p>
+<input type="text">
+<p>Tipo de tarjeta</p>
+{exp:infhotel:tipodetarjeta}
+<p>Tipo de Documento</p>
+{exp:infhotel:tipodedocumento}
+<p>Pais</p>
+{exp:infhotel:pais}
+{exp:infhotel:disponibilidadhabitaciones 
+	fecha_checkin = "08052014"
+	fecha_checkout = "18052014" }
+{/exp:infhotel:disponibilidadhabitaciones}
 
-{exp:infhotel:insertarreservar}
-{/exp:infhotel:insertarreservar}
+{exp:infhotel:tarifadehabitacionesdisponibles 
+	fecha_checkin = "08052014"
+	fecha_checkout = "18052014" }
+{/exp:infhotel:disponibilidadhabitaciones}
+
