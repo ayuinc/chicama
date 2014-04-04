@@ -216,10 +216,10 @@ class Infhotel
                     $codigo_habitacion = $row["TCodigoHabitacion"];
                     $tipo_de_habitacion = $row["TDescripcionCompletaProducto"];
 
-                    $html .= '<p> Tipo :'.$tipo_de_habitacion.' - <p>Precio : '.$precio_base.' - Cant. de hab. disponibles :'.$disponible.':</p>
-                            </div> </li>';
+                    $html .= '<p> Tipo :'.$tipo_de_habitacion.' - Precio : '.$precio_base.' - Cant. de hab. disponibles :'.$disponible.':</p>';
                 }
             }
+            $html .= '</div> </li>' ;
         }
 
         $html .= '</ul></div>';
