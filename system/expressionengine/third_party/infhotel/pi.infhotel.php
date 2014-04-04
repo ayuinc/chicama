@@ -202,11 +202,15 @@ class Infhotel
         curl_setopt($ch, CURLOPT_URL,$url);
         // Execute
         $result=curl_exec($ch);
-
+        $n=0;
         // Will dump a beauty json :3
         $data = json_decode($result, true);
-
         foreach($data as $row){
+            $fecha[$n] = $row["FFecha"];
+            $n=$n+1;
+        }
+        $fecha = array_unique($fecha);
+        /*foreach($data as $row){
             $fecha = $row["FFecha"];
             $disponible = $row["NDisponible"];
             $precio_base = $row["NPrecioBase"];
@@ -219,11 +223,11 @@ class Infhotel
                 <p>Cantidad de habitaciones disponibles :'.$disponible.':</p>
                 <p>Precio : '.$precio_base.'</p>
                 </div>';
-        }
+        }*/
 
         $html .= '</div>';
         
-        return $html;
+        return $fecha ;
     }
 
     public function tarifadehabitacionesdisponibles(){
