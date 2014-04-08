@@ -4,33 +4,37 @@
 	<form action="#" method="POST">
 		<div class="row">
 			<div class="large-6 columns">
-				<div class="large-6 columns">
-					<input type="text" name="check_out_date" value="" id="check_out" maxlength="150" placeholder="Check-out Date" required="" class="hasDatepicker">
-				</div>
-				<div class="large-6 columns">
-					<input type="text" name="check_in_date" value="" id="check_in" maxlength="150" placeholder="Check-in Date" required="" class="hasDatepicker">
+				<div class="row">
+					<div class="large-6 columns">
+						<input type="text" name="check_out_date" value="" id="check_out" maxlength="150" placeholder="Check-out Date" required="" class="hasDatepicker">
+					</div>
+					<div class="large-6 columns">
+						<input type="text" name="check_in_date" value="" id="check_in" maxlength="150" placeholder="Check-in Date" required="" class="hasDatepicker">
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="large-6 columns">
-				<div class="large-4 columms">
-					<select name="persons_number" id="freeform_persons_number" required="" pattern="number" data-invalid="">
-						<option value="" selected="selected">Guests Number</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
-				</div>
-				<div class="large-4 columms">
-					<select name="room_type" id="freeform_room_type" required="" pattern="number" data-invalid="">
-						<option value="" selected="selected">Room Type</option>
-						<option value="1">Simple</option>
-						<option value="2">Double</option>
-						<option value="3">Triple</option>
-						<option value="4">Suite</option>
-					</select>
+				<div class="row">
+					<div class="large-6 columms">
+						<select name="persons_number" id="freeform_persons_number" required="" pattern="number" data-invalid="">
+							<option value="" selected="selected">Guests Number</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</div>
+					<div class="large-6 columms">
+						<select name="room_type" id="freeform_room_type" required="" pattern="number" data-invalid="">
+							<option value="" selected="selected">Room Type</option>
+							<option value="1">Simple</option>
+							<option value="2">Double</option>
+							<option value="3">Triple</option>
+							<option value="4">Suite</option>
+						</select>
+					</div>
 				</div>
 	        </div>
         </div>
