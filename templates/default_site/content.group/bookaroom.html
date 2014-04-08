@@ -1,7 +1,7 @@
 {embed="includes/header"}
 <div>
 	<h2>Book A Room</h2>
-	<form action="" method="POST">
+	<form action="#" me9thod="POST">
 		<div>
 			<input type="text" name="check_out_date" value="" id="check_out_date" maxlength="150" placeholder="Check-out Date" required="" class="hasDatepicker" data-invalid="">
 			<input type="text" name="check_in_date" value="" id="check_in_date" maxlength="150" placeholder="Check-in Date" required="" class="hasDatepicker">
@@ -28,3 +28,9 @@
 	</form>
 </div>
 {embed="includes/footer"}
+<script>
+	$(function() {
+    	$("#check_in_date").datepicker();
+    	$("#check_out_date").datepicker();
+	});
+</script>
