@@ -1,52 +1,52 @@
 {embed="includes/header"}
-<div class="row">
-	<h2>Book A Room</h2>
-	<form action="#" method="POST">
-		<div class="row">
-			<div class="large-3 columns">
-				<div class="row">
-					<div class="large-12 columns">
-						<input type="text" placeholder="Check-in Date" id="check_in">
-						<input type="text" placeholder="Check-out Date" id="check_out">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="large-3 columns">
-				<div class="row">
-					<div class="large-2 columns">
-						<select name="persons_number"  required="" pattern="number" data-invalid="">
-							<option value="1" selected="selected">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div class="large-4 columns">
-						<span>Adults</span>
-					</div>
-					<div class="large-2 columns">
-						<select name="room_number"  required="" pattern="number" data-invalid="">
-							<option value="1" selected="selected">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-						</select>
-					</div>
-					<div class="large-4 columns">
-						<span>Rooms</span>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-3 large-offset-9 columns">
-						<input type="submit" name="submit" value="Submit" class="send button">
-					</div>
-				</div>
-	        </div>
-        </div>
-	</form>
-</div>
+    <div id="form_box" class="row">
+        <h2>Book A Room</h2>
+        <form id="book_a_room" action="#" method="POST">
+          <div class="row">
+            <div class="large-3 columns">
+              <div class="row">
+                <div class="large-12 columns">
+                  <input type="text" placeholder="Check-in Date" id="check_in_date">
+                  <input type="text" placeholder="Check-out Date" id="check_out_date">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-3 columns">
+              <div class="row">
+                <div class="large-2 columns">
+                  <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="large-4 columns">
+                  <p>Adults</p>
+                </div>
+                <div class="large-2 columns">
+                  <select name="room_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <div class="large-4 columns">
+                  <p>Rooms</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-3 large-offset-9 columns">
+                  <input type="submit" name="submit" value="Submit" class="send button">
+                </div>
+              </div>
+                </div>
+              </div>
+        </form>
+    </div>
 {embed="includes/footer"}
 <script>
 	$(function() {
