@@ -567,17 +567,18 @@ figure {
     line-height: 1.2;
     margin-bottom: 0px;
   }
-  #title_reservation p{ 
+  #title_reservation p{
+    margin-bottom: 0px; 
     color: #B9AFAE;
     padding-top: 25px;
   }
 
   #sub_title_reservation h3{
     border-bottom: 1px solid #2c2625;
-    margin-top: 0px;
+    margin-top: 0;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   #sub_title_reservation p{ 
     color: #B9AFAE;
