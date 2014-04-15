@@ -455,6 +455,9 @@ figure {
 #surfing_around_cover {
   background: url("../img/surfing_around_cover.jpg"); }
 
+#rooms p, h2{
+  margin: 0;
+}
 #the_rooms_cover {
   background: url("../img/the_rooms_cover.jpg"); }
 
