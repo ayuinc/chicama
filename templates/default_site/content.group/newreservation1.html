@@ -1,14 +1,14 @@
 {embed="includes/header"}
     <div id="form_box" class="row">
         <h2>Book A Room</h2>
-        <form id="book_a_room" action="/content/newreservation" method="POST">
+        <form id="book_a_room" action="/content/newreservation2" method="POST">
           <div class="large-3 columns">
-          <div class="row">
-                <div class="large-12 columns">
-                  <input type="text" placeholder="Check-in Date" id="check_in_date">
-                  <input type="text" placeholder="Check-out Date" id="check_out_date">
-                </div>
-          </div>
+              <div class="row">
+                    <div class="large-12 columns">
+                      <input type="text" placeholder="Check-in Date" id="check_in_date">
+                      <input type="text" placeholder="Check-out Date" id="check_out_date">
+                    </div>
+              </div>
               <div class="row">
                 <div class="large-12 columns">
                       <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
@@ -23,37 +23,37 @@
                         <option value="ai">Anguilla</option>
                         <option value="aq">Antarctica</option>
                       </select>
-                  </div>
-          </div>
-          <div class="row">
-                <div class="large-3 columns">
-                  <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
-                      <option value="1" selected="selected">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                  </select>
-                </div>
-                <div class="large-3 columns">
-                  <p>Adults</p>
-                </div>
-                <div class="large-3 columns">
-                  <select name="room_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
-                      <option value="1" selected="selected">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                  </select>
-                </div>
-                <div class="large-3 columns">
-                  <p>Rooms</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="large-3 large-offset-9 columns">
-                  <input type="submit" name="submit" value="Check Availability" class="send button">
                 </div>
               </div>
+              <div class="row">
+                    <div class="large-3 columns">
+                      <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                          <option value="1" selected="selected">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                      </select>
+                    </div>
+                    <div class="large-3 columns">
+                      <p>Adults</p>
+                    </div>
+                    <div class="large-3 columns">
+                      <select name="room_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                          <option value="1" selected="selected">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                      </select>
+                    </div>
+                    <div class="large-3 columns">
+                      <p>Rooms</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 large-offset-9 columns">
+                      <input type="submit" name="submit" value="Check Availability" class="send button">
+                    </div>
+                </div>
             </div>
         </form>
     </div>
