@@ -566,7 +566,7 @@
         });
 
         $("#testimonio").waypoint(function (d) {
-            console.log();
+            console.log("detectando subida");
             return "down" === d ? $("#caja_lateral").removeClass("is-fixed") : $("#caja_lateral").addClass("is-fixed");
         }, { offset: "100%" });
     });
