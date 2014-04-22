@@ -558,4 +558,14 @@
     map.scrollWheelZoom.disable();
     // disable tap handler, if present.
     if (map.tap) map.tap.disable();
+
+    $(function() {
+        $("#caja_lateral").waypoint(function (d) {
+            return "down" === d ? $("#caja_lateral").addClass("is-fixed") : $("#caja_lateral").removeClass("is-fixed");
+        });
+
+        $("#caja_lateral").waypoint(function (d) {
+            return "down" === d ? $("#caja_lateral").removeClass("is-fixed") : $("#caja_lateral").addClass("is-fixed");
+        }, { offset: "100%" });
+    });
 </script>
