@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5 {
 .is-fixed {
   position: fixed;
   top: 100px;
-  right: 0px;
+  right: 20px;
   z-index: 4;
 }
 
