@@ -70,7 +70,8 @@
 
     });
     $(function() {
-        $("#titulo").waypoint(function (d) {
+        $("#testimonio").waypoint(function (d) {
+            console.log("detectando caida");
             return "down" === d ? $("#caja_lateral").addClass("is-fixed") : $("#caja_lateral").removeClass("is-fixed");
         });
     });
