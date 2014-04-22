@@ -193,7 +193,6 @@ h1, h2, h3, h4, h5 {
     top: 1px; }
 
 #caja_lateral {
-  position: fixed;
   right: 0px;
   z-index: 4;
 }
