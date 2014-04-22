@@ -122,6 +122,19 @@ h1,h2,h3,h4,h5{
 	}
 }
 
+.close-booking {
+	position: relative;
+	top: -1rem;
+	left: 40rem;
+	width: 1.3rem;
+	font-size: 30px;
+	cursor: pointer;
+	&:hover {
+		opacity:0.5;
+	}
+}
+
+
 #cover_container_index{
 	background: #F3F3ED;
 	height: 100%;

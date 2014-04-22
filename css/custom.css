@@ -10,7 +10,6 @@ html, body {
   src: url("../fonts/cplay.eot?#iefix") format("embedded-opentype"), url("../fonts/cplay.ttf") format("truetype"), url("../fonts/cplay.woff") format("woff"), url("../fonts/cplay.svg#cplay") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'cplay';
   speak: none;
@@ -89,6 +88,16 @@ h1, h2, h3, h4, h5 {
   z-index: 5; }
   #book_button:hover {
     background: black; }
+
+.close-booking {
+  position: relative;
+  top: -1rem;
+  left: 40rem;
+  width: 1.3rem;
+  font-size: 30px;
+  cursor: pointer; }
+  .close-booking:hover {
+    opacity: 0.5; }
 
 #cover_container_index {
   background: #F3F3ED;
@@ -244,10 +253,6 @@ h1, h2, h3, h4, h5 {
     border-radius: 100%;
     background-color: transparent;
     outline: none; }
-
-  #sumary p{
-    margin-bottom: 0px;
-  }
 
 #footer {
   background-color: #2C2625;
@@ -455,9 +460,6 @@ figure {
 #surfing_around_cover {
   background: url("../img/surfing_around_cover.jpg"); }
 
-#rooms p, h2{
-  margin: 0;
-}
 #the_rooms_cover {
   background: url("../img/the_rooms_cover.jpg"); }
 
@@ -561,36 +563,6 @@ figure {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
   color: #f04124 !important; }
-
-#title_reservation{
-  border-bottom: 1px solid #2c2625;
-  margin-bottom: 1.5rem;
-  margin-top: 0;
-  font-weight: 400;
-  line-height: 1.2; }
-  #title_reservation h2{
-    margin-top: 0;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 0px;
-  }
-  #title_reservation p{
-    margin-bottom: 0px; 
-    color: #B9AFAE;
-    padding-top: 25px;
-  }
-
-  #sub_title_reservation h3{
-    border-bottom: 1px solid #2c2625;
-    margin-top: 0;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 0;
-  }
-  #sub_title_reservation p{ 
-    color: #B9AFAE;
-    padding-top: 25px;
-  }
 
 #form_box {
   background-color: #FFFFFF;
