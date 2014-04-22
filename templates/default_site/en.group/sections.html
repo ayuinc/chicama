@@ -561,7 +561,7 @@
 
     $(function() {
         $("#testimonio").waypoint(function (d) {
-            console.log();
+            console.log("detectando caida");
             return "down" === d ? $("#caja_lateral").addClass("is-fixed") : $("#caja_lateral").removeClass("is-fixed");
         });
 
