@@ -192,7 +192,8 @@ h1, h2, h3, h4, h5 {
     position: relative;
     top: 1px; }
 
-#caja_lateral {
+.is-fixed {
+  position: fixed;
   right: 0px;
   z-index: 4;
 }
