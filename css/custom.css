@@ -192,6 +192,11 @@ h1, h2, h3, h4, h5 {
     position: relative;
     top: 1px; }
 
+#caja_lateral{
+  position: fixed;
+  right: 0;
+}
+
 #views {
   background-color: #FFFFFF;
   padding: 1.5em 0 2.5em;
@@ -206,7 +211,7 @@ h1, h2, h3, h4, h5 {
     border-bottom-left-radius: 80% 80%;
     border-bottom-right-radius: 80% 80%;
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     top: 0; }
   #views .white_curve {
     height: 10%;
