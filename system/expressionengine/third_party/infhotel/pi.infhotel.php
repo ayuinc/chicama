@@ -206,7 +206,11 @@ class Infhotel
             $n=$n+1;
         }
         $fecha = array_unique($fecha);
-        foreach ($fecha as $fech) {
+        foreach ($data as $d) {
+            
+            # code...
+        }
+        /*foreach ($fecha as $fech) {
             $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
@@ -220,11 +224,11 @@ class Infhotel
                 }
             }
             $html .= '</div> </li>' ;
-        }
+        }*/
 
         $html .= '</ul></div>';
         
-        return $html;
+        return $data;
     }
 
     public function tarifadehabitacionesdisponibles(){
