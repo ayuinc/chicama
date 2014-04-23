@@ -224,7 +224,7 @@ class Infhotel
 
         $html .= '</ul></div>';
         
-        return $data ;
+        return $result ;
     }
 
     public function tarifadehabitacionesdisponibles(){
