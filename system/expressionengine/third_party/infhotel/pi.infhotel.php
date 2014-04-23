@@ -205,10 +205,21 @@ class Infhotel
             $fecha[$n] = $row["FFecha"];
             $n=$n+1;
         }
+        $n=0;
+        foreach($data as $row){
+            $codigo_habitacion[$n] = $row["TCodigoHabitacion"];
+            $n=$n+1;
+        }
         $fecha = array_unique($fecha);
-        foreach ($data as $d) {
-            
-            # code...
+        foreach ($data as $row) {
+            $html .=  '<li> <div>';
+            foreach ($codigo_habitacion as $cod_hab) {
+                if($cod_hab == $row["TCodigoHabitacion"]){
+                    $html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';
+                    break;
+                }
+            }
+            $html .= '</div> </li>' ;
         }
         /*foreach ($fecha as $fech) {
             $html .=  '<li> <div>
