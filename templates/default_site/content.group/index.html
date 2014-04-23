@@ -1,31 +1,9 @@
 {embed="includes/header"}
-<p>Nombre</p>
-<input type="text">
-<p>Apellido</p>
-<input type="text">
-<p>Tipo de tarjeta</p>
-{exp:infhotel:tipodetarjeta}
-<p>Tipo de Documento</p>
-{exp:infhotel:tipodedocumento}
-<p>Pais</p>
-{exp:infhotel:pais}
-<p>Habitaciones disponinbles</p>
-<input type="text" placeholder="Check-in Date" id="check_in_date">
-<input type="text" placeholder="Check-out Date" id="check_out_date">
-<button id="seleccionar_dispo">Verificar</button>
-<div id="Disponibilidad">
-	
-</div>
 <p>Tarifa de las habitaciones disponinbles</p>
 {exp:infhotel:tarifadehabitacionesdisponibles 
 	fecha_checkin = "08052014"
 	fecha_checkout = "18052014" }
 {/exp:infhotel:tarifadehabitacionesdisponibles}
 {embed="includes/footer"}
-<script>
-	$(function() {
-    	$("#check_in").datepicker();
-    	$("#check_out").datepicker();
-	});
-</script>
+
 
