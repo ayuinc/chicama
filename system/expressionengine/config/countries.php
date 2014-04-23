@@ -23,6 +23,7 @@
  * @link		http://ellislab.com
  */
 $countries = array(
+					'' => 'Country/País',
 					'af' => 'Afghanistan',
 					'ax' => 'Aland Islands',
 					'al' => 'Albania',
