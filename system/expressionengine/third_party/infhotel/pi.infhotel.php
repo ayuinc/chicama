@@ -229,7 +229,6 @@ class Infhotel
                     if($tip_hab == $row["TDescripcionCompletaProducto"]){
                         if($cod_hab == $row["TCodigoHabitacion"] && $fecha[$m]==$row["FFecha"]){
                             $flag = true;
-                            continue;
                         }
                         else{
                             $flag = false;
