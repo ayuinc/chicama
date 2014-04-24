@@ -228,10 +228,12 @@ class Infhotel
                     }
                     else{
                         $flag = false;
-                    }
+                    }        
                 }
-
-                
+                if($flag==true){
+                    $html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';
+                }
+                $flag = false;
             }
             $html .= '</div> </li>' ;
         }
