@@ -216,7 +216,6 @@ class Infhotel
             $n=$n+1;
         }
         $flag = false;
-        $fecha = array_unique($fecha);
         $codigo_habitacion = array_unique($codigo_habitacion);
         $tipo_de_habitacion = array_unique($tipo_de_habitacion);
         foreach ($tipo_de_habitacion as $tip_hab) {
@@ -232,7 +231,7 @@ class Infhotel
                     }        
                 }
                 if($flag==true){
-                    $html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';
+                    $html .=  ''.$row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion.'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';
                 }
                 $flag = false;
             }
