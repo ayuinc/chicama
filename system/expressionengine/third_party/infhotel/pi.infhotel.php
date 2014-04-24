@@ -230,10 +230,7 @@ class Infhotel
                         else{
                             $flag = false;
                         }
-                    }
-                    else{
-                        break;
-                    }        
+                    }       
                 }
                 if($flag==true){
                     $html .=  '<p>'.$row["FFecha"].' Habitacion:'.$tip_hab.'- Codigo'.$cod_hab.'- Precio'.$precio_base.'</p>';
