@@ -210,18 +210,44 @@ class Infhotel
             $codigo_habitacion[$n] = $row["TCodigoHabitacion"];
             $n=$n+1;
         }
+        $n=0;
+        foreach($data as $row){
+            $tipo_de_habitacion[$n] = $row["TDescripcionCompletaProducto"]
+            $n=$n+1;
+        }
+        $flag = false;
         $fecha = array_unique($fecha);
+        foreach ($tipodehabitacion as $tip_hab) {
+            $html .=  '<li> <div>';
+            $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></p>';
+            foreach ($codigo_habitacion as $cod_hab) {
+                foreach ($data as $row) { 
+                    if($tip_hab == $row["TDescripcionCompletaProducto"] && $cod_hab == $row["TCodigoHabitacion"]){
+                        $flag = true;
+                        /*$html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';*/
+                    }
+                    else{
+                        $flag = false;
+                    }
+                }
+
+                
+            }
+            $html .= '</div> </li>' ;
+        }
+        /*
         foreach ($data as $row) {
             $html .=  '<li> <div>';
             foreach ($codigo_habitacion as $cod_hab) {
                 if($cod_hab == $row["TCodigoHabitacion"]){
+                    $var = true;
                     $html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';
                     break;
                 }
             }
             $html .= '</div> </li>' ;
         }
-        /*foreach ($fecha as $fech) {
+        foreach ($fecha as $fech) {
             $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
