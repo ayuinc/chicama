@@ -198,9 +198,144 @@ class Infhotel
         curl_setopt($ch, CURLOPT_URL,$url);
         // Execute
         $result=curl_exec($ch);
-        $n=0;
+        $test='[
+   {
+      "FFecha":"01\/04\/2014 12:00:00 a.m.",
+      "NDisponible":5,
+      "NPrecioBase":195,
+      "TCodigoHabitacion":"110001",
+      "TDescripcionCompletaProducto":"SIMPLE"
+   },
+   {
+      "FFecha":"03\/04\/2014 12:00:00 a.m.",
+      "NDisponible":5,
+      "NPrecioBase":195,
+      "TCodigoHabitacion":"110001",
+      "TDescripcionCompletaProducto":"SIMPLE"
+   },
+   {
+      "FFecha":"04\/04\/2014 12:00:00 a.m.",
+      "NDisponible":5,
+      "NPrecioBase":195,
+      "TCodigoHabitacion":"110001",
+      "TDescripcionCompletaProducto":"SIMPLE"
+   },
+   {
+      "FFecha":"05\/04\/2014 12:00:00 a.m.",
+      "NDisponible":6,
+      "NPrecioBase":195,
+      "TCodigoHabitacion":"110001",
+      "TDescripcionCompletaProducto":"SIMPLE"
+   },
+   {
+      "FFecha":"01\/04\/2014 12:00:00 a.m.",
+      "NDisponible":7,
+      "NPrecioBase":300,
+      "TCodigoHabitacion":"110002",
+      "TDescripcionCompletaProducto":"DOBLE"
+   },
+   {
+      "FFecha":"02\/04\/2014 12:00:00 a.m.",
+      "NDisponible":7,
+      "NPrecioBase":300,
+      "TCodigoHabitacion":"110002",
+      "TDescripcionCompletaProducto":"DOBLE"
+   },
+   {
+      "FFecha":"03\/04\/2014 12:00:00 a.m.",
+      "NDisponible":7,
+      "NPrecioBase":300,
+      "TCodigoHabitacion":"110002",
+      "TDescripcionCompletaProducto":"DOBLE"
+   },
+   {
+      "FFecha":"04\/04\/2014 12:00:00 a.m.",
+      "NDisponible":7,
+      "NPrecioBase":300,
+      "TCodigoHabitacion":"110002",
+      "TDescripcionCompletaProducto":"DOBLE"
+   },
+   {
+      "FFecha":"05\/04\/2014 12:00:00 a.m.",
+      "NDisponible":8,
+      "NPrecioBase":300,
+      "TCodigoHabitacion":"110002",
+      "TDescripcionCompletaProducto":"DOBLE"
+   },
+   {
+      "FFecha":"01\/04\/2014 12:00:00 a.m.",
+      "NDisponible":4,
+      "NPrecioBase":390,
+      "TCodigoHabitacion":"110003",
+      "TDescripcionCompletaProducto":"TRIPLE"
+   },
+   {
+      "FFecha":"02\/04\/2014 12:00:00 a.m.",
+      "NDisponible":4,
+      "NPrecioBase":390,
+      "TCodigoHabitacion":"110003",
+      "TDescripcionCompletaProducto":"TRIPLE"
+   },
+   {
+      "FFecha":"03\/04\/2014 12:00:00 a.m.",
+      "NDisponible":4,
+      "NPrecioBase":390,
+      "TCodigoHabitacion":"110003",
+      "TDescripcionCompletaProducto":"TRIPLE"
+   },
+   {
+      "FFecha":"04\/04\/2014 12:00:00 a.m.",
+      "NDisponible":4,
+      "NPrecioBase":390,
+      "TCodigoHabitacion":"110003",
+      "TDescripcionCompletaProducto":"TRIPLE"
+   },
+   {
+      "FFecha":"05\/04\/2014 12:00:00 a.m.",
+      "NDisponible":4,
+      "NPrecioBase":390,
+      "TCodigoHabitacion":"110003",
+      "TDescripcionCompletaProducto":"TRIPLE"
+   },
+   {
+      "FFecha":"01\/04\/2014 12:00:00 a.m.",
+      "NDisponible":2,
+      "NPrecioBase":690,
+      "TCodigoHabitacion":"110004",
+      "TDescripcionCompletaProducto":"SUITE"
+   },
+   {
+      "FFecha":"02\/04\/2014 12:00:00 a.m.",
+      "NDisponible":2,
+      "NPrecioBase":690,
+      "TCodigoHabitacion":"110004",
+      "TDescripcionCompletaProducto":"SUITE"
+   },
+   {
+      "FFecha":"03\/04\/2014 12:00:00 a.m.",
+      "NDisponible":2,
+      "NPrecioBase":690,
+      "TCodigoHabitacion":"110004",
+      "TDescripcionCompletaProducto":"SUITE"
+   },
+   {
+      "FFecha":"04\/04\/2014 12:00:00 a.m.",
+      "NDisponible":2,
+      "NPrecioBase":690,
+      "TCodigoHabitacion":"110004",
+      "TDescripcionCompletaProducto":"SUITE"
+   },
+   {
+      "FFecha":"05\/04\/2014 12:00:00 a.m.",
+      "NDisponible":2,
+      "NPrecioBase":690,
+      "TCodigoHabitacion":"110004",
+      "TDescripcionCompletaProducto":"SUITE"
+   }
+]'
+        $n=0; 
         // Will dump a beauty json :3
-        $data = json_decode($result, true);
+        $data = json_decode($test, true);
         foreach($data as $row){
             $fecha[$n] = $row["FFecha"];
             $n=$n+1;
