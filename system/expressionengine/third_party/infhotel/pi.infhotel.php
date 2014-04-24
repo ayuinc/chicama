@@ -217,14 +217,15 @@ class Infhotel
         }
         $flag = false;
         $fecha = array_unique($fecha);
+        $codigo_habitacion = array_unique($codigo_habitacion);
+        $tipo_de_habitacion = array_unique($tipo_de_habitacion);
         foreach ($tipodehabitacion as $tip_hab) {
             $html .=  '<li> <div>';
-            $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></p>';
+            $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></b>';
             foreach ($codigo_habitacion as $cod_hab) {
                 foreach ($data as $row) { 
                     if($tip_hab == $row["TDescripcionCompletaProducto"] && $cod_hab == $row["TCodigoHabitacion"]){
                         $flag = true;
-                        /*$html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';*/
                     }
                     else{
                         $flag = false;
