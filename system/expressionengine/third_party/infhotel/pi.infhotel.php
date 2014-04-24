@@ -212,7 +212,7 @@ class Infhotel
         }
         $n=0;
         foreach($data as $row){
-            $tipo_de_habitacion[$n] = $row["TDescripcionCompletaProducto"]
+            $tipo_de_habitacion[$n] = $row["TDescripcionCompletaProducto"];
             $n=$n+1;
         }
         $flag = false;
