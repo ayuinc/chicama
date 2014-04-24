@@ -230,6 +230,7 @@ class Infhotel
                         }
                         else{
                             $flag = false;
+                            break;
                         }
                     }       
                 }
