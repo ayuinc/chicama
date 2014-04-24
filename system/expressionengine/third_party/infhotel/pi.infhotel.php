@@ -223,10 +223,11 @@ class Infhotel
             $html .=  '<li> <div>';
             $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></b>';
             foreach ($codigo_habitacion as $cod_hab) {
-                foreach ($data as $row) { 
+                foreach ($data as $row){ 
                     if($tip_hab == $row["TDescripcionCompletaProducto"]){
                         if($cod_hab == $row["TCodigoHabitacion"]){
                             $flag = true;
+                            continue;
                         }
                         else{
                             $flag = false;
@@ -235,7 +236,7 @@ class Infhotel
                     }       
                 }
                 if($flag==true){
-                    $html .=  '<p>'.$row["FFecha"].' Habitacion:'.$tip_hab.'- Codigo'.$cod_hab.'- Precio'.$precio_base.'</p>';
+                    $html .=  '<p>'.$row["FFecha"].' Habitacion:'.$tip_hab.'- Codigo'.$cod_hab.'- Precio'.$row["NPrecioBase"].'</p>';
                 }
                 $flag = false;
             }
