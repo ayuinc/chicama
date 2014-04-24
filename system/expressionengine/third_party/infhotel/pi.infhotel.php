@@ -219,7 +219,7 @@ class Infhotel
         $fecha = array_unique($fecha);
         $codigo_habitacion = array_unique($codigo_habitacion);
         $tipo_de_habitacion = array_unique($tipo_de_habitacion);
-        foreach ($tipodehabitacion as $tip_hab) {
+        foreach ($tipo_de_habitacion as $tip_hab) {
             $html .=  '<li> <div>';
             $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></b>';
             foreach ($codigo_habitacion as $cod_hab) {
