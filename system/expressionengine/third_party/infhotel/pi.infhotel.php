@@ -221,7 +221,13 @@ class Infhotel
         $lenght = count($fecha);
         $codigo_habitacion = array_unique($codigo_habitacion);
         $tipo_de_habitacion = array_unique($tipo_de_habitacion);
-        foreach ($tipo_de_habitacion as $tip_hab) {
+        
+        foreach ($data as $row){
+            foreach ($codigo_habitacion as $cod_hab) {
+                # code...
+            }
+        }
+        /*foreach ($tipo_de_habitacion as $tip_hab) {
             $html .=  '<li> <div>';
             $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></b>';
             foreach ($codigo_habitacion as $cod_hab) {
@@ -249,7 +255,7 @@ class Infhotel
                 $flag = false;
             }
             $html .= '</div> </li>' ;
-        }
+        }*/
         /*
         foreach ($data as $row) {
             $html .=  '<li> <div>';
