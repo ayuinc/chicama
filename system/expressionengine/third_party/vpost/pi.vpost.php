@@ -62,7 +62,7 @@ class Vpost
     }
     public function phpinfo(){
         
-        return phpinfo();
+        phpinfo();
     }
     // END
 }
