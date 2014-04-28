@@ -277,10 +277,10 @@ class Infhotel
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
-        $data = array(  "FLlegada" => "2014-07-01 13:30:00.000",
-                        "FSalida" => "2014-07-05 15:45:00.000", 
-                        "HLlegada" => "2014-07-01 13:30:00.000",
-                        "HSalida" => "2014-07-05 15:45:00.000",
+        $data = array(  "FLlegada" => "2014-07-01 12:00:00.000",
+                        "FSalida" => "2014-07-05 12:00:00.000", 
+                        "HLlegada" => "2014-07-01 12:00:00.000",
+                        "HSalida" => "2014-07-05 12:00:00.000",
                         "Habitaciones" => array(
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 120,  
