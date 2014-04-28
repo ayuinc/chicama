@@ -288,7 +288,7 @@ class Infhotel
                                             ),
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110002"
+                                                "TCodigoHabitacion" => "110001"
                                             )
                                         ),
                         "NPasajero" => 2,
