@@ -329,7 +329,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result."  ".$data_string; 
+        return $result; 
     }
 }
 /* End of file pi.infhotel.php */
