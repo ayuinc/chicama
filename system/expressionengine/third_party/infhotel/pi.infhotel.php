@@ -277,18 +277,18 @@ class Infhotel
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
-        $data = array(  "FLlegada" => "2014-07-01 13:30:00.000",
-                        "FSalida" => "2014-07-05 15:45:00.000", 
-                        "HLlegada" = "2014-07-01 13:30:00.000",
-                        "HSalida" => "2014-07-05 15:45:00.000",
+        $data = array(  "FLlegada" => "2014-05-05 13:30:00.000",
+                        "FSalida" => "2014-05-07 15:45:00.000", 
+                        "HLlegada" => "2014-05-05 13:30:00.000",
+                        "HSalida" => "2014-05-07 15:45:00.000",
                         "Habitaciones" => array(
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 120,  
-                                                "TCodigoHabitacion" => "110004"  
+                                                "TCodigoHabitacion" => "110001"  
                                             ),
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110004"
+                                                "TCodigoHabitacion" => "110002"
                                             )
                                         ),
                         "NPasajero" => 2,
@@ -329,7 +329,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result; 
+        return $result."  ".$data_string; 
     }
 }
 /* End of file pi.infhotel.php */
