@@ -197,77 +197,15 @@ class Infhotel
         // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
         // Execute
-        //$result=curl_exec($ch);
-        $result = '[{"FFecha":"02\/04\/2014 12:00:00 a.m.","NDisponible":5,"NPrecioBase":195,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE"},{"FFecha":"03\/04\/2014 12:00:00 a.m.","NDisponible":5,"NPrecioBase":195,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE"},{"FFecha":"04\/04\/2014 12:00:00 a.m.","NDisponible":5,"NPrecioBase":195,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE"},{"FFecha":"05\/04\/2014 12:00:00 a.m.","NDisponible":6,"NPrecioBase":195,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE"},{"FFecha":"01\/04\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":300,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE"},{"FFecha":"02\/04\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":300,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE"},{"FFecha":"03\/04\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":300,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE"},{"FFecha":"04\/04\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":300,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE"},{"FFecha":"05\/04\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":300,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE"},{"FFecha":"01\/04\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":390,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE"},{"FFecha":"02\/04\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":390,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE"},{"FFecha":"03\/04\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":390,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE"},{"FFecha":"04\/04\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":390,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE"},{"FFecha":"05\/04\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":390,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE"},{"FFecha":"01\/04\/2014 12:00:00 a.m.","NDisponible":2,"NPrecioBase":690,"TCodigoHabitacion":"110004","TDescripcionCompletaProducto":"SUITE"},{"FFecha":"02\/04\/2014 12:00:00 a.m.","NDisponible":2,"NPrecioBase":690,"TCodigoHabitacion":"110004","TDescripcionCompletaProducto":"SUITE"},{"FFecha":"03\/04\/2014 12:00:00 a.m.","NDisponible":2,"NPrecioBase":690,"TCodigoHabitacion":"110004","TDescripcionCompletaProducto":"SUITE"},{"FFecha":"04\/04\/2014 12:00:00 a.m.","NDisponible":2,"NPrecioBase":690,"TCodigoHabitacion":"110004","TDescripcionCompletaProducto":"SUITE"},{"FFecha":"05\/04\/2014 12:00:00 a.m.","NDisponible":2,"NPrecioBase":690,"TCodigoHabitacion":"110004","TDescripcionCompletaProducto":"SUITE"}]';
-        $n=0; 
+        $result=curl_exec($ch);
+        $n=0;
         // Will dump a beauty json :3
         $data = json_decode($result, true);
         foreach($data as $row){
             $fecha[$n] = $row["FFecha"];
             $n=$n+1;
         }
-        $n=0;
-        foreach($data as $row){
-            $codigo_habitacion[$n] = $row["TCodigoHabitacion"];
-            $n=$n+1;
-        }
-        $n=0;
-        foreach($data as $row){
-            $tipo_de_habitacion[$n] = $row["TDescripcionCompletaProducto"];
-            $n=$n+1;
-        }
-        $m=0;
-        $flag = false;
-        $lenght = count($fecha);
-        $codigo_habitacion = array_unique($codigo_habitacion);
-        $tipo_de_habitacion = array_unique($tipo_de_habitacion);
-        
-        foreach ($data as $row){
-            foreach ($codigo_habitacion as $cod_hab) {
-                # code...
-            }
-        }
-        /*foreach ($tipo_de_habitacion as $tip_hab) {
-            $html .=  '<li> <div>';
-            $html .=  '<b><p> Habitaciones'.$tip_hab.':</p></b>';
-            foreach ($codigo_habitacion as $cod_hab) {
-                foreach ($data as $row){ 
-                    if($tip_hab == $row["TDescripcionCompletaProducto"]){
-                        if($cod_hab == $row["TCodigoHabitacion"] && $fecha[$m]==$row["FFecha"]){
-                            $flag = true;
-                        }
-                        else{
-                            $flag = false;
-                            break;
-                        }
-                    }
-                    $m=$m+1;
-                    if($m == $lenght){
-                        $m=0;
-                    }       
-                }
-                if($flag==true){
-                    $html .=  '<p>'.$row["FFecha"].' Habitacion:'.$tip_hab.'- Codigo'.$cod_hab.'- Precio'.$row["NPrecioBase"].'</p>';
-                }
-                else{
-                    break;
-                }
-                $flag = false;
-            }
-            $html .= '</div> </li>' ;
-        }*/
-        /*
-        foreach ($data as $row) {
-            $html .=  '<li> <div>';
-            foreach ($codigo_habitacion as $cod_hab) {
-                if($cod_hab == $row["TCodigoHabitacion"]){
-                    $var = true;
-                    $html .=  $row["FFecha"].'<p>Habitacion:'.$tipo_de_habitacion = $row["TDescripcionCompletaProducto"].'- Codigo'.$row["TCodigoHabitacion"].'- Precio'.$precio_base = $row["NPrecioBase"].'</p>';
-                    break;
-                }
-            }
-            $html .= '</div> </li>' ;
-        }
+        $fecha = array_unique($fecha);
         foreach ($fecha as $fech) {
             $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
@@ -282,7 +220,7 @@ class Infhotel
                 }
             }
             $html .= '</div> </li>' ;
-        }*/
+        }
 
         $html .= '</ul></div>';
         
