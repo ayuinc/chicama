@@ -284,11 +284,11 @@ class Infhotel
                         "Habitaciones" => array(
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 120,  
-                                                "TCodigoHabitacion" => "110004"  
+                                                "TCodigoHabitacion" => "110003"  
                                             ),
                                             array("CantHab" => 1, 
                                                 "NPrecio" => 150,  
-                                                "TCodigoHabitacion" => "110004"
+                                                "TCodigoHabitacion" => "110003"
                                             )
                                         ),
                         "NPasajero" => 2,
