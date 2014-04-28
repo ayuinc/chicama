@@ -265,7 +265,8 @@ class Infhotel
     }
 
     public function insertarreservar(){
-        /*$nombre = ee()->TMPL->fetch_param('nombre');
+        /*
+        $nombre = ee()->TMPL->fetch_param('nombre');
         $apellido = ee()->TMPL->fetch_param('apellido');
         $dni = ee()->TMPL->fetch_param('dni');
         $tipo_dni = ee()->TMPL->fetch_param('tipo_dni');
@@ -276,7 +277,8 @@ class Infhotel
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
-        $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');*/
+        $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');
+        */
         $data = array(  "FLlegada" => "2014-07-01 12:00:00.000",
                         "FSalida" => "2014-07-06 12:00:00.000", 
                         "HLlegada" => "2014-07-01 12:00:00.000",
