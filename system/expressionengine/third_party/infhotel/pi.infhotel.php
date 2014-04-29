@@ -211,26 +211,26 @@ class Infhotel
             $cod_hab[$n] = $row["TCodigoHabitacion"];
             $n=$n+1;
         }
-        $simple=20;
-        $double=20;
-        $triple=20;
-        $suite=20;
+        $disponibilidad["simple"]=20;
+        $disponibilidad["double"]=20;
+        $disponibilidad["triple"]=20;
+        $disponibilidad["suite"]=20;
         $cod_hab = array_unique($cod_hab);
         foreach ($fecha as $fech) {
             $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
-                if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$simple ){
-                    $simple=$row["NDisponible"];
+                if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple"] ){
+                    $disponibilidad["simple"]=$row["NDisponible"];
                 }
-                if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$double ){
-                    $double=$row["NDisponible"];
+                if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["double"] ){
+                    $disponibilidad["double"]=$row["NDisponible"];
                 }
-                if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$triple ){
-                    $triple=$row["NDisponible"];
+                if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple"] ){
+                    $disponibilidad["triple"]=$row["NDisponible"];
                 }
-                if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$suite ){
-                    $suite=$row["NDisponible"];
+                if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$disponibilidad["suite"] ){
+                    $disponibilidad["suite"]=$row["NDisponible"];
                 }
                 if ($fech == $row["FFecha"]){
                     $disponible = $row["NDisponible"];
@@ -245,7 +245,7 @@ class Infhotel
         }
 
         $html .= '</ul></div>';
-        $html .= '<div><p>Simples:'.$simple.'</p><p>Dobles:'.$double.'</p><p>Triples:'.$triple.'</p><p>Suites:'.$suite.'</p>
+        $html .= '<div><p>Simples:'. $disponibilidad["simple"].'</p><p>Dobles:'.$disponibilidad["double"].'</p><p>Triples:'.$disponibilidad["triple"].'</p><p>Suites:'.$disponibilidad["suite"].'</p>
                     </div>';
         return $html ;
     }
