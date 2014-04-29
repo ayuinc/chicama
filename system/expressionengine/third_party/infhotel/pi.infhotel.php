@@ -220,16 +220,16 @@ class Infhotel
             $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
-                if($row["TCodigoHabitacion"]==10001 && $row["NDisponible"]<$simple ){
+                if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$simple ){
                     $simple=$row["NDisponible"];
                 }
-                if($row["TCodigoHabitacion"]==10002 && $row["NDisponible"]<$double ){
+                if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$double ){
                     $double=$row["NDisponible"];
                 }
-                if($row["TCodigoHabitacion"]==10003 && $row["NDisponible"]<$triple ){
+                if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$triple ){
                     $triple=$row["NDisponible"];
                 }
-                if($row["TCodigoHabitacion"]==10004 && $row["NDisponible"]<$suite ){
+                if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$suite ){
                     $suite=$row["NDisponible"];
                 }
                 if ($fech == $row["FFecha"]){
@@ -245,7 +245,7 @@ class Infhotel
         }
 
         $html .= '</ul></div>';
-        $html .= '<div><p>Simples'.$simple.'</p><p>Dobles'.$double.'</p><p>Triples'.$triple.'</p><p>Suites'.$suite.'</p>
+        $html .= '<div><p>Simples:'.$simple.'</p><p>Dobles:'.$double.'</p><p>Triples:'.$triple.'</p><p>Suites:'.$suite.'</p>
                     </div>';
         return $html ;
     }
