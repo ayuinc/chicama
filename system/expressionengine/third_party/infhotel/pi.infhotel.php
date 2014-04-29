@@ -206,10 +206,32 @@ class Infhotel
             $n=$n+1;
         }
         $fecha = array_unique($fecha);
+        $n=0;
+        foreach($data as $row){
+            $cod_hab[$n] = $row["TCodigoHabitacion"];
+            $n=$n+1;
+        }
+        $simple=20;
+        $double=20;
+        $triple=20;
+        $suite=20;
+        $cod_hab = array_unique($cod_hab);
         foreach ($fecha as $fech) {
             $html .=  '<li> <div>
                         <p>Fecha :'.$fech.'</p>' ;
             foreach($data as $row){
+                if($row["TCodigoHabitacion"]==10001 && $row["NDisponible"]<$simple ){
+                    $simple=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==10002 && $row["NDisponible"]<$double ){
+                    $double=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==10003 && $row["NDisponible"]<$triple ){
+                    $triple=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==10004 && $row["NDisponible"]<$suite ){
+                    $suite=$row["NDisponible"];
+                }
                 if ($fech == $row["FFecha"]){
                     $disponible = $row["NDisponible"];
                     $precio_base = $row["NPrecioBase"];
@@ -223,7 +245,8 @@ class Infhotel
         }
 
         $html .= '</ul></div>';
-        
+        $html .= '<div><p>Simples'.$simple.'</p><p>Dobles'.$double.'</p><p>Triples'.$triple.'</p><p>Suites'.$suite.'</p>
+                    </div>';
         return $html ;
     }
 
