@@ -64,6 +64,6 @@
 <script>
 	$(function() {
     	$("#check_in").datepicker({ dateFormat: 'dd-mm-yy' });
-    	$("#check_out").datepicker({ dateFormat: 'dd-mm-yy' });
+    	$("#check_out").datepicker("option", "dateFormat", "yy-mm-dd");
 	});
 </script>
