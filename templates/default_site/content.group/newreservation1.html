@@ -9,6 +9,7 @@
                       <input type="text" placeholder="Check-out Date" id="check_out_date">
                     </div>
               </div>
+              <!--
               <div class="row">
                 <div class="large-12 columns">
                       <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
@@ -24,7 +25,7 @@
                         <option value="aq">Antarctica</option>
                       </select>
                 </div>
-              </div>
+              </div>-->
               <div class="row">
                     <div class="large-3 columns">
                       <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
@@ -34,7 +35,7 @@
                           <option value="4">4</option>
                       </select>
                     </div>
-                    <div class="large-3 columns">
+                    <!--<div class="large-3 columns">
                       <p>Adults</p>
                     </div>
                     <div class="large-3 columns">
@@ -44,7 +45,7 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                       </select>
-                    </div>
+                    </div>-->
                     <div class="large-3 columns">
                       <p>Rooms</p>
                     </div>
@@ -60,7 +61,7 @@
 {embed="includes/footer"}
 <script>
 	$(function() {
-    	$("#check_in").datepicker();
-    	$("#check_out").datepicker();
+    	$("#check_in").datepicker({ dateFormat: 'ddmmyy' });
+    	$("#check_out").datepicker({ dateFormat: 'ddmmyy' });
 	});
 </script>

@@ -243,7 +243,6 @@ class Infhotel
             }
             $html .= '</div> </li>' ;
         }
-
         $html .= '</ul></div>';
         $html .= '<div><p>Simples:'. $disponibilidad["simple"].'</p><p>Dobles:'.$disponibilidad["double"].'</p><p>Triples:'.$disponibilidad["triple"].'</p><p>Suites:'.$disponibilidad["suite"].'</p>
                     </div>';
