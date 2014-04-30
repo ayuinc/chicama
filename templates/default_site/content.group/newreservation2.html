@@ -10,6 +10,11 @@
 						<p>Phone reservations +511-440-6040</p>
 					</div>
 			</div>
+			{exp:get_post_vars parse="inward"}
+				{post_check_in_date} 
+				{post_check_out_date}
+				{post_room_number}
+			{/exp:get_post_vars}
 		</div>
 		<div class="row">
 			<div id="sub_title_reservation" class="row">
