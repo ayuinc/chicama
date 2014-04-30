@@ -27,6 +27,7 @@
                 </div>
               </div>-->
               <div class="row">
+                     <!--
                     <div class="large-3 columns">
                       <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
                           <option value="1" selected="selected">1</option>
@@ -35,9 +36,10 @@
                           <option value="4">4</option>
                       </select>
                     </div>
-                    <!--<div class="large-3 columns">
+                   <div class="large-3 columns">
                       <p>Adults</p>
                     </div>
+                    -->
                     <div class="large-3 columns">
                       <select name="room_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
                           <option value="1" selected="selected">1</option>
@@ -45,7 +47,7 @@
                           <option value="3">3</option>
                           <option value="4">4</option>
                       </select>
-                    </div>-->
+                    </div>
                     <div class="large-3 columns">
                       <p>Rooms</p>
                     </div>
@@ -57,11 +59,11 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> 
 {embed="includes/footer"}
 <script>
 	$(function() {
-    	$("#check_in").datepicker({ dateFormat: 'ddmmyy' });
-    	$("#check_out").datepicker({ dateFormat: 'ddmmyy' });
+    	$("#check_in").datepicker({ dateFormat: 'dd-mm-yy' });
+    	$("#check_out").datepicker({ dateFormat: 'dd-mm-yy' });
 	});
 </script>
