@@ -182,6 +182,154 @@ class Infhotel
         return $form;
     }
 
+    public function disponibilidadinicialhabitaciones(){
+        $response =" ";
+        $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
+        $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
+        //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
+
+        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
+        //  Initiate curl
+        $ch = curl_init($url);
+        // Disable SSL verification
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // Will return the response, if false it print the response
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // Set the url
+        curl_setopt($ch, CURLOPT_URL,$url);
+        // Execute
+        $result=curl_exec($ch);
+        $n=0;
+        // Will dump a beauty json :3
+        $data = json_decode($result, true);
+        foreach($data as $row){
+            $fecha[$n] = $row["FFecha"];
+            $n=$n+1;
+        }
+        $fecha = array_unique($fecha);
+        $disponibilidad["simple"]=2000;
+        $disponibilidad["double"]=2000;
+        $disponibilidad["triple"]=2000;
+        $disponibilidad["suite"]=2000;
+        foreach ($fecha as $fech) {
+            foreach($data as $row){
+                if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple"] ){
+                    $disponibilidad["simple"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["double"] ){
+                    $disponibilidad["double"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple"] ){
+                    $disponibilidad["triple"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$disponibilidad["suite"] ){
+                    $disponibilidad["suite"]=$row["NDisponible"];
+                }
+            }
+        }
+        if( $disponibilidad["simple"] == 2000){
+             $disponibilidad["simple"] = 0;
+        }
+        if( $disponibilidad["double"] == 2000){
+             $disponibilidad["double"] = 0;
+        }
+        if( $disponibilidad["triple"] == 2000){
+             $disponibilidad["triple"] = 0;
+        }
+        if( $disponibilidad["suite"] == 2000){
+             $disponibilidad["suite"] = 0;
+        }
+        //simple+doble = ocean
+        //triples+suites =garden
+        $ocean_view = $disponibilidad["simple"] + $disponibilidad["double"];
+        $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
+        
+        if($garden_view == 0){
+            $result .= '<p>Habitaciones Garden View: 0</p>';
+        }
+        else{
+            $result .= '<p>Habitaciones Garden View: '.$garden_view.'</p>'
+        }
+        if($ocean_view == 0){
+            $result .= '<p>Habitaciones Ocean View: 0</p>';
+        }
+        else{
+            $result .= '<p>Habitaciones Ocean View: '.$ocean_view.'</p>'
+        }
+        return $result ;
+    }
+    public function disponibilidadinicialhabitaciones2(){
+        $response =" ";
+        $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
+        $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
+        $rooms_num = ee()->TMPL->fetch_param('rooms_num');
+
+        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
+        //  Initiate curl
+        $ch = curl_init($url);
+        // Disable SSL verification
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // Will return the response, if false it print the response
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // Set the url
+        curl_setopt($ch, CURLOPT_URL,$url);
+        // Execute
+        $result=curl_exec($ch);
+        $n=0;
+        // Will dump a beauty json :3
+        $data = json_decode($result, true);
+        foreach($data as $row){
+            $fecha[$n] = $row["FFecha"];
+            $n=$n+1;
+        }
+        $fecha = array_unique($fecha);
+        $disponibilidad["simple"]=2000;
+        $disponibilidad["double"]=2000;
+        $disponibilidad["triple"]=2000;
+        $disponibilidad["suite"]=2000;
+        foreach ($fecha as $fech) {
+            foreach($data as $row){
+                if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple"] ){
+                    $disponibilidad["simple"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["double"] ){
+                    $disponibilidad["double"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple"] ){
+                    $disponibilidad["triple"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$disponibilidad["suite"] ){
+                    $disponibilidad["suite"]=$row["NDisponible"];
+                }
+            }
+        }
+        if( $disponibilidad["simple"] == 2000){
+             $disponibilidad["simple"] = 0;
+        }
+        if( $disponibilidad["double"] == 2000){
+             $disponibilidad["double"] = 0;
+        }
+        if( $disponibilidad["triple"] == 2000){
+             $disponibilidad["triple"] = 0;
+        }
+        if( $disponibilidad["suite"] == 2000){
+             $disponibilidad["suite"] = 0;
+        }
+        //simple+doble = ocean
+        //triples+suites =garden
+        $ocean_view = $disponibilidad["simple"] + $disponibilidad["double"];
+        $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
+        $total_hab = $ocean_view + $garden_view;
+        if($total_hab == 0){
+            $result = '0';
+        }
+        else{
+            $result = '1'
+        }
+        return $result ;
+    }
+
+
     public function disponibilidadhabitaciones(){
         $html ="<div> <ul>";
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
