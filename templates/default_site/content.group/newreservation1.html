@@ -69,6 +69,7 @@
 {embed="includes/footer"}
 <script>
   $( "#submit" ).click(function (evt) {
+      url='http://chicamasurf.com/?/content/newreservation2';
       evt.preventDefault();
       str = $("#book_a_room").serialize();
       $.ajax({
@@ -76,7 +77,8 @@
              url: "/?/content/index",
              data: str, // serializes the form's elements.
              success: function(response){ 
-               alert(response);
+               if(response==1){window.location(url);}
+               else{ alert("NO HAY HABITACIONES DISP ") }
                //$('#response').html(response);
              }
            });
