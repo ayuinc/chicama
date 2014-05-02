@@ -249,9 +249,9 @@ class Infhotel
         }
         else{
             for ($i=0; $i<$rooms_num ; $i++) { 
-                $result .= '<div class="row" id="rooms">';
+                $response .= '<div class="row'.$i.'" id="rooms">';
                 if ( $i<$garden_view) {
-                    $result .= '<div class="large-5 columns">
+                    $response .= '<div class="large-5 columns">
                     <div class="row">
                         <div class="large-5 columns">
                             <figure>
@@ -307,7 +307,7 @@ class Infhotel
             </div>';
                 }
                 if ($i<$ocean_view) {
-                    $result .= '<div class="row" id="rooms">
+                    $response .= '<div class="row" id="rooms">
                 <div class="large-5 columns">
                     <div class="row">
                         <div class="large-5 columns">
@@ -362,10 +362,10 @@ class Infhotel
                     </div>  
                 </div>';
                 }
-                $result .= '</div>';
+                $response .= '</div>';
             }
         }
-        return $result ;
+        return $response ;
     }
 
     public function disponibilidadinicialhabitaciones2(){
