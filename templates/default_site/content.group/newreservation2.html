@@ -44,3 +44,13 @@
 	</div>
 </form>
 {embed="includes/footer"}
+	{exp:get_post_vars parse="inward"}
+<script>
+	$(function() {
+		num_hab = {post_room_number};
+		for(i=1;i<num_hab;i++){
+			$('#rooms_num'+i).hide();
+		}
+      });
+</script>
+{/exp:get_post_vars}
