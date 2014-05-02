@@ -322,10 +322,10 @@ class Infhotel
         $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
         $total_hab = $ocean_view + $garden_view;
         if($total_hab == 0){
-            $response = '0';
+            $response = 0;
         }
         else{
-            $response = '1';
+            $response = 1;
         }
         return $response ;
     }
