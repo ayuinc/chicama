@@ -183,7 +183,7 @@ class Infhotel
     }
 
     public function disponibilidadinicialhabitaciones3(){
-        $response =" ";
+        $response ='';
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
@@ -243,13 +243,15 @@ class Infhotel
         //triples+suites =garden
         $ocean_view = $disponibilidad["simple"] + $disponibilidad["double"];
         $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
-        
-        if($garden_view == 0){
-            $response .= '';
+        $total_hab = $ocean_view + $garden_view;
+        if($total_hab == 0){
+            $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.<p>';
         }
         else{
-            $response .= '<div class="row" id="rooms">
-                <div class="large-5 columns">
+            for ($i=0; $i<$total_hab ; $i++) { 
+                $result .= '<div class="row" id="rooms">';
+                if ( $i<$garden_view) {
+                    $result .= '<div class="large-5 columns">
                     <div class="row">
                         <div class="large-5 columns">
                             <figure>
@@ -303,13 +305,9 @@ class Infhotel
                     </div>  
                 </div>
             </div>';
-        }
-        if($ocean_view == 0){
-            $response .= '';
-        }
-        else{
-            $response .= '
-            <div class="row" id="rooms">
+                }
+                if ($i<$ocean_view) {
+                    $result .= '<div class="row" id="rooms">
                 <div class="large-5 columns">
                     <div class="row">
                         <div class="large-5 columns">
@@ -362,10 +360,11 @@ class Infhotel
                             <button type="button">Click Me!</button>
                         </div>
                     </div>  
-                </div>
-            </div>';
+                </div>';
+                }
+                $result .= '</div>';
+            }
         }
-        
         return $response ;
     }
 
