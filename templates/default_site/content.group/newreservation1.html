@@ -77,9 +77,11 @@
              url: "/?/content/index",
              data: str, // serializes the form's elements.
              success: function(response){ 
-               if(response==1){window.location(url);}
-               else{ alert("NO HAY HABITACIONES DISP ") }
-               //$('#response').html(response);
+               if(response==1){
+                window.location(url);
+              }
+               else{ alert(response); 
+              }
              }
            });
       });
