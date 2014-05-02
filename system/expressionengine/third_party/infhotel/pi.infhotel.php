@@ -186,7 +186,7 @@ class Infhotel
         $response ='';
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
-        //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
+        $rooms_num = ee()->TMPL->fetch_param('rooms_num');
 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
         //  Initiate curl
@@ -248,7 +248,7 @@ class Infhotel
             $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.<p>';
         }
         else{
-            for ($i=0; $i<$total_hab ; $i++) { 
+            for ($i=0; $i<$rooms_num ; $i++) { 
                 $result .= '<div class="row" id="rooms">';
                 if ( $i<$garden_view) {
                     $result .= '<div class="large-5 columns">
