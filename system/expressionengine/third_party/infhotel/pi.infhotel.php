@@ -183,7 +183,7 @@ class Infhotel
     }
 
     public function disponibilidadinicialhabitaciones3(){
-        $result =" ";
+        $response =" ";
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
@@ -245,18 +245,18 @@ class Infhotel
         $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
         
         if($garden_view == 0){
-            $result .= '<p>Habitaciones Garden View: 0</p>';
+            $response .= '<p>Habitaciones Garden View: 0</p>';
         }
         else{
-            $result .= '<p>Habitaciones Garden View: '.$garden_view.'</p>';
+            $response .= '<p>Habitaciones Garden View: '.$garden_view.'</p>';
         }
         if($ocean_view == 0){
-            $result .= '<p>Habitaciones Ocean View: 0</p>';
+            $response .= '<p>Habitaciones Ocean View: 0</p>';
         }
         else{
-            $result .= '<p>Habitaciones Ocean View: '.$ocean_view.'</p>';
+            $response .= '<p>Habitaciones Ocean View: '.$ocean_view.'</p>';
         }
-        return $result ;
+        return $response ;
     }
 
     public function disponibilidadinicialhabitaciones2(){
@@ -322,12 +322,12 @@ class Infhotel
         $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
         $total_hab = $ocean_view + $garden_view;
         if($total_hab == 0){
-            $result = '0';
+            $response = '0';
         }
         else{
-            $result = '1';
+            $response = '1';
         }
-        return $result ;
+        return $response ;
     }
 
 
