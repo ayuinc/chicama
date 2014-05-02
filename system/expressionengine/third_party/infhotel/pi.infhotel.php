@@ -248,13 +248,13 @@ class Infhotel
             $result .= '<p>Habitaciones Garden View: 0</p>';
         }
         else{
-            $result .= '<p>Habitaciones Garden View: '.$garden_view.'</p>'
+            $result .= '<p>Habitaciones Garden View: '.$garden_view.'</p>';
         }
         if($ocean_view == 0){
             $result .= '<p>Habitaciones Ocean View: 0</p>';
         }
         else{
-            $result .= '<p>Habitaciones Ocean View: '.$ocean_view.'</p>'
+            $result .= '<p>Habitaciones Ocean View: '.$ocean_view.'</p>';
         }
         return $result ;
     }
