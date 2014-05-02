@@ -324,7 +324,7 @@ class Infhotel
             $result = '0';
         }
         else{
-            $result = '1'
+            $result = '1';
         }
         return $result ;
     }
