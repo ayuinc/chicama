@@ -88,8 +88,8 @@
         $( "#check_out_date" ).datepicker({
           dateFormat: 'ddmmyy',
           defaultDate: "+1w",
-          changeMonth: true,
-          numberOfMonths: 1,
+          changeMonth: false,
+          numberOfMonths: 2,
           onClose: function( selectedDate ) {
             $( "#from" ).datepicker( "option", "maxDate", selectedDate );
           }
