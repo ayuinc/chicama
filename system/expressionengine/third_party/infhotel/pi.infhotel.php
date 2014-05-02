@@ -249,9 +249,10 @@ class Infhotel
         }
         else{
             for ($i=0; $i<$rooms_num ; $i++) { 
-                $response .= '<div class="row" id="rooms">';
+                $response .= '<div class="row">';
                 if ( $i<$garden_view) {
-                    $response .= '<div class="large-5 columns">
+                    $response .= ' <div class="row" id="rooms">
+                    <div class="large-5 columns">
                     <div class="row">
                         <div class="large-5 columns">
                             <figure>
@@ -360,6 +361,7 @@ class Infhotel
                             <button type="button">Click Me!</button>
                         </div>
                     </div>  
+                </div>
                 </div>';
                 }
                 $response .= '</div>';
