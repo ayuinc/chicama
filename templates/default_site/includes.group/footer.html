@@ -75,10 +75,29 @@
             return "down" === d ? $("#caja_lateral").addClass("is-fixed") : $("#caja_lateral").removeClass("is-fixed");
         });
     }); */
+    $(function() {
+        $( "#check_in_date" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 1,
+          onClose: function( selectedDate ) {
+            $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
+          }
+        });
+        $( "#check_out_date" ).datepicker({
+          defaultDate: "+1w",
+          changeMonth: true,
+          numberOfMonths: 1,
+          onClose: function( selectedDate ) {
+            $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+          }
+        });
+      });
+    /*
 	$(function() {
     	$("#check_in_date").datepicker({ dateFormat: 'ddmmyy' });
     	$("#check_out_date").datepicker({ dateFormat: 'ddmmyy' });
-	});
+	});*/
 
     var divs = $('h1');
     $(window).on('scroll', function() {
