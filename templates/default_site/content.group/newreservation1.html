@@ -77,8 +77,7 @@
              url: "/?/content/index",
              data: str, // serializes the form's elements.
              success: function(response){ 
-              result=response;
-              url=url+str;
+              result=response+"";
                if(result=='1'){
                 $("#book_a_room").submit();
               }
