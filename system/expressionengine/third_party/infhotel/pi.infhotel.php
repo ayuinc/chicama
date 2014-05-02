@@ -249,7 +249,7 @@ class Infhotel
         }
         else{
             for ($i=0; $i<$rooms_num ; $i++) { 
-                $response .= '<div class="row'.$i.'" id="rooms">';
+                $response .= '<div class="row" id="rooms">';
                 if ( $i<$garden_view) {
                     $response .= '<div class="large-5 columns">
                     <div class="row">
