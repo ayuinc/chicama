@@ -183,7 +183,7 @@ class Infhotel
     }
 
     public function disponibilidadinicialhabitaciones3(){
-        $response =" ";
+        $result =" ";
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
@@ -258,6 +258,7 @@ class Infhotel
         }
         return $result ;
     }
+
     public function disponibilidadinicialhabitaciones2(){
         $response =" ";
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
