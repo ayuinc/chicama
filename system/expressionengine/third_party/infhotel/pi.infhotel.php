@@ -254,15 +254,13 @@ class Infhotel
         }
         else{
             $it_tri=$rooms_num-$it_sui;
-        }
-        
+        }      
         if($it_sim<=0){
             $it_dou=0;
         }
         else{
              $it_dou=$rooms_num - $it_sim;
         }
-        
         if($total_hab == 0){
             $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
         }
