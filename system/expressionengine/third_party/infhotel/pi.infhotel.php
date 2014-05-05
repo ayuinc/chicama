@@ -244,70 +244,149 @@ class Infhotel
         $ocean_view = $disponibilidad["simple"] + $disponibilidad["double"];
         $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
         $total_hab = $ocean_view + $garden_view;
+
+        $it_sui = $rooms_num - $disponibilidad["suite"];
+        //$it_tri = $rooms_num - $disponibilidad["triple"];
+        $it_sim = $rooms_num - $disponibilidad["simple"];
+        //$it_dou = $rooms_num - $disponibilidad["double"];
+        if($it_sui<=0){
+            $it_tri=0;
+        }
+        else{
+            $it_tri=$rooms_num-$it_sui;
+        }
+        
+        if($it_sim<=0){
+            $it_dou=0;
+        }
+        else{
+             $it_dou=$rooms_num - $it_sim;
+        }
+        
         if($total_hab == 0){
-            $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.<p>';
+            $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
         }
         else{
             for ($i=0; $i<$rooms_num ; $i++) { 
                 $response .= '<div class="row" id="rooms'.$i.'">';
                 if ( $i<$garden_view) {
-                    $response .= ' <div class="row">
-                    <div class="large-5 columns">
-                    <div class="row">
+                    if($i<$it_tri){
+                        $response .= ' <div class="row">
                         <div class="large-5 columns">
-                            <figure>
-                                 <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
-                            </figure>
-                        </div>
-                        <div class="large-7 columns">
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    <h2>Garden View</h2>
+                        <div class="row">
+                            <div class="large-5 columns">
+                                <figure>
+                                     <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                                </figure>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <h2>Garden View</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <p>Personas</p>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                          <option value="1" selected="selected">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="large-6 columns">
-                                    <p>Personas</p>
-                                </div>
-                                <div class="large-6 columns">
-                                    <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
-                                      <option value="1" selected="selected">1</option>
-                                      <option value="2">2</option>
-                                      <option value="3">3</option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                    <div class="large-7 columns">
+                        <div class="row">
+                            <div class="large-8 columns">
+                                <p>Breakfast only</p>
+                                <h2>USD 120/night</h2>
+                            </div>
+                            <div class="large-4 columns">
+                                <button id="add_room_triple" type="button">Click Me (?)!</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-8 columns">
+                                <p>Value pack, including breakfast, lunch and meals.</p>
+                                <h2>USD 150/night</h2>
+                            </div>
+                            <div class="large-4 columns">
+                                <button type="button">Click Me!</button>
+                            </div>
+                        </div>  
+                    </div>
+                </div>';
+                    }
+                    else{
+                        $response .= ' <div class="row">
+                        <div class="large-5 columns">
+                        <div class="row">
+                            <div class="large-5 columns">
+                                <figure>
+                                     <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                                </figure>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <h2>Garden View</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <p>Personas</p>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                          <option value="1" selected="selected">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="large-7 columns">
-                    <div class="row">
-                        <div class="large-8 columns">
-                            <p>Breakfast only</p>
-                            <h2>USD 120/night</h2>
+                    <div class="large-7 columns">
+                        <div class="row">
+                            <div class="large-8 columns">
+                                <p>Breakfast only</p>
+                                <h2>USD 120/night</h2>
+                            </div>
+                            <div class="large-4 columns">
+                                <button id="add_room_suite" type="button">Click Me (?)!</button>
+                            </div>
                         </div>
-                        <div class="large-4 columns">
-                            <button type="button">Click Me!</button>
-                        </div>
+                        <div class="row">
+                            <div class="large-8 columns">
+                                <p>Value pack, including breakfast, lunch and meals.</p>
+                                <h2>USD 150/night</h2>
+                            </div>
+                            <div class="large-4 columns">
+                                <button type="button">Click Me!</button>
+                            </div>
+                        </div>  
                     </div>
-                    <div class="row">
-                        <div class="large-8 columns">
-                            <p>Value pack, including breakfast, lunch and meals.</p>
-                            <h2>USD 150/night</h2>
-                        </div>
-                        <div class="large-4 columns">
-                            <button type="button">Click Me!</button>
-                        </div>
-                    </div>  
-                </div>
-            </div>';
+                </div>';
+                    }
                 }
                 if ($i<$ocean_view) {
+                    if($i<$it_sim){
                     $response .= '<div class="row">
                 <div class="large-5 columns">
                     <div class="row">
@@ -349,7 +428,7 @@ class Infhotel
                             <h2>USD 120/night</h2>
                         </div>
                         <div class="large-4 columns">
-                            <button type="button">Click Me!</button>
+                            <button id="add_room_simple" type="button">Click Me(?)!</button>
                         </div>
                     </div>
                     <div class="row">
@@ -363,6 +442,64 @@ class Infhotel
                     </div>  
                 </div>
                 </div>';
+                }
+                else{
+                    $response .= '<div class="row">
+                <div class="large-5 columns">
+                    <div class="row">
+                        <div class="large-5 columns">
+                            <figure>
+                                 <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                            </figure>
+                        </div>
+                        <div class="large-7 columns">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <h2>Ocean View</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-6 columns">
+                                    <p>Personas</p>
+                                </div>
+                                <div class="large-6 columns">
+                                    <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                      <option value="1" selected="selected">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 columns">
+                    <div class="row">
+                        <div class="large-8 columns">
+                            <p>Breakfast only</p>
+                            <h2>USD 120/night</h2>
+                        </div>
+                        <div class="large-4 columns">
+                            <button id="add_room_double" type="button">Click Me(?)!</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-8 columns">
+                            <p>Value pack, including breakfast, lunch and meals.</p>
+                            <h2>USD 150/night</h2>
+                        </div>
+                        <div class="large-4 columns">
+                            <button type="button">Click Me!</button>
+                        </div>
+                    </div>  
+                </div>
+                </div>';
+                    }
                 }
                 $response .= '</div>';
             }
