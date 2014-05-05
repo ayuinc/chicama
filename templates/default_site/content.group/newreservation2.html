@@ -48,7 +48,7 @@
 <script>
 	$(function() {
 		num_hab = {post_room_number};
-		hide_divs(0,num_hab);
+		hide_divs(num_hab,0);
       });
 
 	$(function() {
@@ -79,7 +79,7 @@
 		reservar_hab(num_hab, '#add_room_doble0', 1, doble);
 		reservar_hab(num_hab, '#add_room_triple0', 1, triple);
 		reservar_hab(num_hab, '#add_room_suite0', 1, suite);
-
+		
 		reservar_hab(num_hab, '#add_room_simple1', 2, simple);
 		reservar_hab(num_hab, '#add_room_doble1', 2, doble);
 		reservar_hab(num_hab, '#add_room_triple1', 2, triple);
@@ -128,7 +128,7 @@
 
       });
 
-	function hide_divs (div_visible, rooms_num){
+	function hide_divs (rooms_num, div_visible){
 		for(i=0;i<rooms_num;i++){
 			if(i!=div_visible) {
 				$("#rooms"+i).hide();
@@ -139,7 +139,7 @@
 	function reservar_hab (rooms_num, buttom, next_div, num_hab_reserv){
 		$(buttom).click(function(){
 			num_hab_reserv = num_hab_reserv + 1 ;
-			hide_divs(next_div, rooms_num);
+			hide_divs(rooms_num, next_div);
 		});
 	}
 </script>
