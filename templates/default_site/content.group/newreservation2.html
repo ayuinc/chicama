@@ -1,6 +1,6 @@
 {embed="includes/header"}
 <form action="#" id="book_a_room">
-	<div id="form_box">
+	<div id="form_box_2">
 		<div class="row">
 			<div id="title_reservation" class="row">
 					<div class="large-4 columns">
@@ -48,9 +48,7 @@
 <script>
 	$(function() {
 		num_hab = {post_room_number};
-		for(i=1;i<num_hab;i++){
-			$('#rooms'+i).hide();
-		}
+		hide_divs(0,num_hab);
       });
 
 	$(function() {
@@ -58,7 +56,11 @@
 		var checkout_date ="";
 		var checkin = ""+{post_check_in_date} ;
 		var checkout = ""+{post_check_out_date} ;
-		
+		var simple = 0;
+		var doble = 0;
+		var triple = 0;
+		var suite = 0;
+
 		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
 		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
 		var data = {
@@ -70,7 +72,21 @@
 			    "MObservacion": "",				
                 "NPasajero": "",
                 "Pasajeros" : {}
-		};	
+		};
+
+		$('#add_room_simple').click(function(){
+			 simple = simple + 1 ;
+		});
+		$('#add_room_double').click(function(){
+			 doble = doble + 1 ;	
+		});
+		$('#add_room_triple').click(function(){
+			 triple = triple + 1 ;	
+		});
+		$('#add_room_suite').click(function(){
+			 suite = suite + 1 ;
+		});
+
 		var habitacion = {
 			"CantHab" : "1" ,
 			"NPrecio" : "150" ,
@@ -95,5 +111,21 @@
 		console.log(send);
 
       });
+
+	function hide_divs (div_visible, rooms_num){
+		for(i=0;i<rooms_num;i++){
+			if(i!=div_visible) {
+				$(rooms+i).hide();
+			}
+		}
+	}
+
+	function tiempoN (rooms_num, buttom, next_div, num_hab_reserv){
+		$(buttom).click(function(){
+			num_hab_reserv = num_hab_reserv + 1 ;
+			hide_divs(next_div, rooms_num);
+			num_hab_reserv=num_hab_reserv+1;
+		});
+	}
 </script>
 {/exp:get_post_vars}

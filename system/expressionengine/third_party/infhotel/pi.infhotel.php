@@ -90,6 +90,11 @@ class Infhotel
         return $form;
     }
 
+    public function paso3(){
+        $form_3 = '';
+        return ''
+    }
+
     public function tipodedocumento(){
         $form = '<select name="tipo_de_documento" id="tipo_de_documento" > <option value="TIPO DE DOCUMENTO" selected>TIPO DE DOCUMENTO</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
@@ -310,7 +315,7 @@ class Infhotel
                                 <h2>USD 120/night</h2>
                             </div>
                             <div class="large-4 columns">
-                                <button id="add_room_triple" type="button">Click Me triple(?)!</button>
+                                <button id="add_room_triple'.$i.'" type="button">Click Me triple(?)!</button>
                             </div>
                         </div>
                         <div class="row">
@@ -367,7 +372,7 @@ class Infhotel
                                 <h2>USD 120/night</h2>
                             </div>
                             <div class="large-4 columns">
-                                <button id="add_room_suite" type="button">Click Me suite(?)!</button>
+                                <button id="add_room_suite'.$i.'" type="button">Click Me suite(?)!</button>
                             </div>
                         </div>
                         <div class="row">
@@ -426,7 +431,7 @@ class Infhotel
                             <h2>USD 120/night</h2>
                         </div>
                         <div class="large-4 columns">
-                            <button id="add_room_simple" type="button">Click Me simple(?)!</button>
+                            <button id="add_room_simple'.$i.'" type="button">Click Me simple(?)!</button>
                         </div>
                     </div>
                     <div class="row">
@@ -483,7 +488,7 @@ class Infhotel
                             <h2>USD 120/night</h2>
                         </div>
                         <div class="large-4 columns">
-                            <button id="add_room_double" type="button">Click Me double(?)!</button>
+                            <button id="add_room_double'.$i.'" type="button">Click Me double(?)!</button>
                         </div>
                     </div>
                     <div class="row">
