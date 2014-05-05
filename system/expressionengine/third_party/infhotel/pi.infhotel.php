@@ -89,12 +89,7 @@ class Infhotel
         
         return $form;
     }
-
-    public function paso3(){
-        $form_3 = '';
-        return ''
-    }
-
+    
     public function tipodedocumento(){
         $form = '<select name="tipo_de_documento" id="tipo_de_documento" > <option value="TIPO DE DOCUMENTO" selected>TIPO DE DOCUMENTO</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
