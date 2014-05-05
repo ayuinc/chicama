@@ -66,19 +66,32 @@
 			    "FSalida": checkout_date,
 			    "HLlegada": checkin_date,
 			    "HSalida": checkout_date,
-			    "Habitaciones": {}
+			    "Habitaciones": {},
+			    "MObservacion": "",				
+                "NPasajero": "",
+                "Pasajeros" : {}
 		};	
 		var habitacion = {
 			"CantHab" : "1" ,
 			"NPrecio" : "150" ,
 			"TCodigoHabitacion" : "120"
 		}
-
+		var persona = {
+			"TDocumento": "12345678",
+            "TMaterno" : "pasajero01",  
+            "TNacionalidad" : "069",      
+            "TNombre" : "pasajero01",
+            "TPaterno" : "pasajero01",  
+            "TTarjeta" : "1234567890",
+            "TTipoDocumento" : "02",
+            "TTipoTarjeta" : "04" 
+		} 
 		data["Habitaciones"]["0"]=habitacion;
 		data["Habitaciones"]["1"]=habitacion;
 		data["Habitaciones"]["2"]=habitacion;
-		console.log(data["Habitaciones"]);
-		
+		data["Pasajeros"]["0"]=persona;
+		console.log(data);
+
       });
 </script>
 {/exp:get_post_vars}
