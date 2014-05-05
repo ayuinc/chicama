@@ -79,7 +79,7 @@
 		reservar_hab(num_hab, '#add_room_doble0', 1, doble);
 		reservar_hab(num_hab, '#add_room_triple0', 1, triple);
 		reservar_hab(num_hab, '#add_room_suite0', 1, suite);
-		
+
 		reservar_hab(num_hab, '#add_room_simple1', 2, simple);
 		reservar_hab(num_hab, '#add_room_doble1', 2, doble);
 		reservar_hab(num_hab, '#add_room_triple1', 2, triple);
@@ -130,7 +130,10 @@
 
 	function hide_divs (rooms_num, div_visible){
 		for(i=0;i<rooms_num;i++){
-			if(i!=div_visible) {
+			if(i==div_visible) {
+				$("#rooms"+i).show();
+			}
+			else{
 				$("#rooms"+i).hide();
 			}
 		}
