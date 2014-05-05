@@ -59,8 +59,8 @@
 		var checkin = ""+{post_check_in_date} ;
 		var checkout = ""+{post_check_out_date} ;
 		
-		checkin_date = checkin.substr(4, 8)+"-"+checkin.substr(2, 3)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
-		checkout_date = checkout.substr(4, 8)+"-"+checkout.substr(2, 3)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
+		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
 		var obj = {
 			 	"FLlegada": checkin_date,
 			    "FSalida": checkout_date,
