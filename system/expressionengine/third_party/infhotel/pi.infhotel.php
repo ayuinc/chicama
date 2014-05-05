@@ -312,7 +312,7 @@ class Infhotel
                                 <h2>USD 120/night</h2>
                             </div>
                             <div class="large-4 columns">
-                                <button id="add_room_triple" type="button">Click Me (?)!</button>
+                                <button id="add_room_triple" type="button">Click Me triple(?)!</button>
                             </div>
                         </div>
                         <div class="row">
@@ -369,7 +369,7 @@ class Infhotel
                                 <h2>USD 120/night</h2>
                             </div>
                             <div class="large-4 columns">
-                                <button id="add_room_suite" type="button">Click Me (?)!</button>
+                                <button id="add_room_suite" type="button">Click Me suite(?)!</button>
                             </div>
                         </div>
                         <div class="row">
@@ -428,7 +428,7 @@ class Infhotel
                             <h2>USD 120/night</h2>
                         </div>
                         <div class="large-4 columns">
-                            <button id="add_room_simple" type="button">Click Me(?)!</button>
+                            <button id="add_room_simple" type="button">Click Me simple(?)!</button>
                         </div>
                     </div>
                     <div class="row">
@@ -485,7 +485,7 @@ class Infhotel
                             <h2>USD 120/night</h2>
                         </div>
                         <div class="large-4 columns">
-                            <button id="add_room_double" type="button">Click Me(?)!</button>
+                            <button id="add_room_double" type="button">Click Me double(?)!</button>
                         </div>
                     </div>
                     <div class="row">
