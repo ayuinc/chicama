@@ -20,7 +20,9 @@
 		<div class="row">
 			<div id="sub_title_reservation" class="row">
 				<div class="large-6 columns "> 
+					{exp:get_post_vars parse="inward"}
 					<b><h3 id="step_in_reservation">Room 1 of {post_room_number}</h3></b>
+					{/exp:get_post_vars}
 					<b><p>Select from availability below</p></b>
 				</div>
 			</div>
@@ -139,16 +141,16 @@
 		}
 		switch(div_visible){
 			case 0:
-			    $("step_in_reservation").html("Room 1 of {post_room_number}");
+			    $("#step_in_reservation").html("Room 1 of "+num_hab);
 			    break;
 			case 1:
-			    $("step_in_reservation").html("Room 2 of {post_room_number}");
+			    $("#step_in_reservation").html("Room 2 of "+num_hab);
 			    break;
 			case 2:
-			    $("step_in_reservation").html("Room 3 of {post_room_number}");
+			    $("#step_in_reservation").html("Room 3 of "+num_hab);
 			    break;
 			case 3:
-			    $("step_in_reservation").html("Room 4 of {post_room_number}");
+			    $("#step_in_reservation").html("Room 4 of "+num_hab);
 			    break;
 		}
 	}
