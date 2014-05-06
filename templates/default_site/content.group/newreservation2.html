@@ -161,17 +161,37 @@ function hide_divs (rooms_num, div_visible){
 		}
 		switch(div_visible){
 			case 0:
-			    $("#step_in_reservation").html("Room 1 of "+num_hab);
+				if(0<rooms_num){
+			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
+			    }
+			    else{
+			    	window.location.replace("http://chicamasurf.com/content/newreservation3");
+			    }
 			    break;
 			case 1:
-			    $("#step_in_reservation").html("Room 2 of "+num_hab);
+				if(1<rooms_num){
+			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
+			    }
+			    else{
+			    	window.location.replace("http://chicamasurf.com/content/newreservation3");
+			    }
 			    break;
 			case 2:
-			    $("#step_in_reservation").html("Room 3 of "+num_hab);
+			    if(2<rooms_num){
+			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
+			    }
+			    else{
+			    	window.location.replace("http://chicamasurf.com/content/newreservation3");
+			    }
 			    break;
 			case 3:
-			    $("#step_in_reservation").html("Room 4 of "+num_hab);
-			    break;
+			    if(3<rooms_num){
+			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
+			    }
+			    else{
+			    	window.location.replace("http://chicamasurf.com/content/newreservation3");
+			    }
+			    break;   
 		}
 	}
 </script>
