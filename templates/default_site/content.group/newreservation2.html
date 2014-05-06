@@ -115,9 +115,7 @@
 		var send = JSON.stringify(data);
 		console.log(send);
 
-      });
-
-	function hide_divs (rooms_num, div_visible){
+		function hide_divs (rooms_num, div_visible){
 		for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
@@ -172,6 +170,7 @@
 			    });
 			    break;
 		}
-	}
+
+      });
 </script>
 {/exp:get_post_vars}
