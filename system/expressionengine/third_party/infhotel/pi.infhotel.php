@@ -483,7 +483,7 @@ class Infhotel
                             <h2>USD 120/night</h2>
                         </div>
                         <div class="large-4 columns">
-                            <button id="add_room_double'.$i.'" type="button">Click Me double(?)!</button>
+                            <button id="add_room_doble'.$i.'" type="button">Click Me double(?)!</button>
                         </div>
                     </div>
                     <div class="row">

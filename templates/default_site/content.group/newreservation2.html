@@ -20,7 +20,7 @@
 		<div class="row">
 			<div id="sub_title_reservation" class="row">
 				<div class="large-6 columns "> 
-					<b><h3>Room 1 of 2</h3></b>
+					<b><h3 id="step_in_reservation">Room 1 of {post_room_number}</h3></b>
 					<b><p>Select from availability below</p></b>
 				</div>
 			</div>
@@ -137,12 +137,27 @@
 				$("#rooms"+i).hide();
 			}
 		}
+		switch(div_visible){
+			case 0:
+			    $("step_in_reservation").html("Room 1 of {post_room_number}");
+			    break;
+			case 1:
+			    $("step_in_reservation").html("Room 2 of {post_room_number}");
+			    break;
+			case 2:
+			    $("step_in_reservation").html("Room 3 of {post_room_number}");
+			    break;
+			case 3:
+			    $("step_in_reservation").html("Room 4 of {post_room_number}");
+			    break;
+		}
 	}
 
 	function reservar_hab (rooms_num, buttom, next_div, num_hab_reserv){
 		$(buttom).click(function(){
 			num_hab_reserv = num_hab_reserv + 1 ;
 			hide_divs(rooms_num, next_div);
+			console.log(buttom+":"+num_hab_reserv);
 		});
 	}
 </script>
