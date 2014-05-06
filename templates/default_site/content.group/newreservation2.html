@@ -160,11 +160,10 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, num_hab_reserv){
 		$(buttom).click(function(){
-			num_hab_reserv = num_hab_reserv + 1 ;
 			hide_divs(rooms_num, next_div);
 			console.log(buttom+":"+num_hab_reserv);
-			return num_hab_reserv ;
 		});
+		return num_hab_reserv + 1 ; 
 	}
 </script>
 {/exp:get_post_vars}
