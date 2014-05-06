@@ -77,29 +77,20 @@
                 "Pasajeros" : {}
 		};
 		
-		simple=reservar_hab(num_hab, '#add_room_simple0', 1, simple);
-		doble=reservar_hab(num_hab, '#add_room_doble0', 1, doble);
-		triple=reservar_hab(num_hab, '#add_room_triple0', 1, triple);
-		suite=reservar_hab(num_hab, '#add_room_suite0', 1, suite);
+		reservar_hab(num_hab, '#add_room_simple0', 1, 1);
+		reservar_hab(num_hab, '#add_room_doble0', 1, 2);
+		reservar_hab(num_hab, '#add_room_triple0', 1, 3);
+		reservar_hab(num_hab, '#add_room_suite0', 1, 4);
 
-		
+		reservar_hab(num_hab, '#add_room_simple1', 2, 1);
+		reservar_hab(num_hab, '#add_room_doble1', 2, 2);
+		reservar_hab(num_hab, '#add_room_triple1', 2, 3);
+		reservar_hab(num_hab, '#add_room_suite1', 2, 4);
 
-		simple=reservar_hab(num_hab, '#add_room_simple1', 2, simple);
-		doble=reservar_hab(num_hab, '#add_room_doble1', 2, doble);
-		triple=reservar_hab(num_hab, '#add_room_triple1', 2, triple);
-		suite=reservar_hab(num_hab, '#add_room_suite1', 2, suite);
-
-		
-
-		simple=reservar_hab(num_hab, '#add_room_simple2', 3, simple);
-		doble=reservar_hab(num_hab, '#add_room_doble2', 3, doble);
-		triple=reservar_hab(num_hab, '#add_room_triple2', 3, triple);
-		suite=reservar_hab(num_hab, '#add_room_suite2', 3, suite);
-
-		console.log("simple:"+simple);
-		console.log("doble:"+doble);
-		console.log("triple:"+triple);
-		console.log("suite:"+suite);
+		reservar_hab(num_hab, '#add_room_simple2', 3, 1);
+		reservar_hab(num_hab, '#add_room_doble2', 3, 2);
+		reservar_hab(num_hab, '#add_room_triple2', 3, 3);
+		reservar_hab(num_hab, '#add_room_suite2', 3, 4);
 
 		var habitacion = {
 			"CantHab" : "1" ,
@@ -150,14 +141,37 @@
 			    break;
 		}
 	}
-
 	function reservar_hab (rooms_num, buttom, next_div, num_hab_reserv){
-		$(buttom).click(function(){
-			num_hab_reserv = num_hab_reserv + 1;
-			hide_divs(rooms_num, next_div);
-			console.log(buttom+":"+num_hab_reserv);
-			return num_hab_reserv ; 
-		});
+		switch(type_hab){
+			case 1:
+			    $(buttom).click(function(){
+			    	simple = simple + 1;
+			    	hide_divs(rooms_num, next_div);
+			    	console.log(buttom+":"+simple);
+			    });
+			    break;
+			case 2:
+			    $(buttom).click(function(){
+			    	doble = doble + 1;
+			    	hide_divs(rooms_num, next_div);
+			    	console.log(buttom+":"+doble);
+			    });
+			    break;
+			case 3:
+			    $(buttom).click(function(){
+			    	triple = triple + 1;
+			    	hide_divs(rooms_num, next_div);
+			    	console.log(buttom+":"+triple);
+			    });
+			    break;
+			case 4:
+			    $(buttom).click(function(){
+			    	suite = suite + 1;
+			    	hide_divs(rooms_num, next_div);
+			    	console.log(buttom+":"+suite);
+			    });
+			    break;
+		}
 	}
 </script>
 {/exp:get_post_vars}
