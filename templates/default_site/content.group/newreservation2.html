@@ -48,12 +48,10 @@
 {embed="includes/footer"}
 	{exp:get_post_vars parse="inward"}
 <script>
+
 	$(function() {
 		num_hab = {post_room_number};
 		hide_divs(num_hab,0);
-      });
-
-	$(function() {
 		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
@@ -117,40 +115,38 @@
 
 		
 	function reservar_hab (rooms_num, buttom, next_div, type_hab){
-		switch(type_hab){
-			case 1:
-			    $(buttom).click(function(){
-			    	simple = simple + 1;
-			    	hide_divs(rooms_num, next_div);
-			    	console.log(buttom+":"+simple);
-			    });
-			    break;
-			case 2:
-			    $(buttom).click(function(){
-			    	doble = doble + 1;
-			    	hide_divs(rooms_num, next_div);
-			    	console.log(buttom+":"+doble);
-			    });
-			    break;
-			case 3:
-			    $(buttom).click(function(){
-			    	triple = triple + 1;
-			    	hide_divs(rooms_num, next_div);
-			    	console.log(buttom+":"+triple);
-			    });
-			    break;
-			case 4:
-			    $(buttom).click(function(){
-			    	suite = suite + 1;
-			    	hide_divs(rooms_num, next_div);
-			    	console.log(buttom+":"+suite);
-			    });
-			    break;
+			switch(type_hab){
+				case 1:
+				    $(buttom).click(function(){
+				    	simple = simple + 1;
+				    	hide_divs(rooms_num, next_div);
+				    	console.log(buttom+":"+simple);
+				    });
+				    break;
+				case 2:
+				    $(buttom).click(function(){
+				    	doble = doble + 1;
+				    	hide_divs(rooms_num, next_div);
+				    	console.log(buttom+":"+doble);
+				    });
+				    break;
+				case 3:
+				    $(buttom).click(function(){
+				    	triple = triple + 1;
+				    	hide_divs(rooms_num, next_div);
+				    	console.log(buttom+":"+triple);
+				    });
+				    break;
+				case 4:
+				    $(buttom).click(function(){
+				    	suite = suite + 1;
+				    	hide_divs(rooms_num, next_div);
+				    	console.log(buttom+":"+suite);
+				    });
+				    break;
+			}
 		}
-		}
-      });
-
-function hide_divs (rooms_num, div_visible){
+	function hide_divs (rooms_num, div_visible){
 		for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
@@ -174,5 +170,6 @@ function hide_divs (rooms_num, div_visible){
 			    break;
 		}
 	}
+      });
 </script>
 {/exp:get_post_vars}
