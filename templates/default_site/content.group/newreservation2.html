@@ -82,21 +82,14 @@
 		triple=reservar_hab(num_hab, '#add_room_triple0', 1, triple);
 		suite=reservar_hab(num_hab, '#add_room_suite0', 1, suite);
 
-		console.log("simple:"+simple);
-		console.log("doble:"+doble);
-		console.log("triple:"+triple);
-		console.log("suite:"+suite);
-
+		
 
 		simple=reservar_hab(num_hab, '#add_room_simple1', 2, simple);
 		doble=reservar_hab(num_hab, '#add_room_doble1', 2, doble);
 		triple=reservar_hab(num_hab, '#add_room_triple1', 2, triple);
 		suite=reservar_hab(num_hab, '#add_room_suite1', 2, suite);
 
-		console.log("simple:"+simple);
-		console.log("doble:"+doble);
-		console.log("triple:"+triple);
-		console.log("suite:"+suite);
+		
 
 		simple=reservar_hab(num_hab, '#add_room_simple2', 3, simple);
 		doble=reservar_hab(num_hab, '#add_room_doble2', 3, doble);
@@ -163,8 +156,8 @@
 			num_hab_reserv = num_hab_reserv + 1;
 			hide_divs(rooms_num, next_div);
 			console.log(buttom+":"+num_hab_reserv);
+			return num_hab_reserv ; 
 		});
-		return num_hab_reserv + 1 ; 
 	}
 </script>
 {/exp:get_post_vars}
