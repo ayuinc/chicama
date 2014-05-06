@@ -54,7 +54,7 @@
       });
 
 	$(function() {
-		var tercer_paso = new String('{exp:infhotel:tercer_paso}');
+		//var tercer_paso = new String('{exp:infhotel:tercer_paso}');
 		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
@@ -172,7 +172,7 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html(tercer_paso);
+			    	$("#form_box_2").html("{exp:infhotel:tercer_paso}");
 			    }
 			    break;
 			case 1:
@@ -180,7 +180,7 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html(tercer_paso);
+			    	$("#form_box_2").html("{exp:infhotel:tercer_paso}");
 			    }
 			    break;
 			case 2:
@@ -188,7 +188,7 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html(tercer_paso);
+			    	$("#form_box_2").html("{exp:infhotel:tercer_paso}");
 			    }
 			    break;
 			case 3:
@@ -196,11 +196,11 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html(tercer_paso);
+			    	$("#form_box_2").html("{exp:infhotel:tercer_paso}");
 			    }
 			    break;
 			case 4:
-					$("#form_box_2").html(tercer_paso);
+					$("#form_box_2").html("{exp:infhotel:tercer_paso}");
 			    break; 
 		}
 	}
