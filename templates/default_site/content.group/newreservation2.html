@@ -45,16 +45,20 @@
 		</div>
 	</div>
 </form>
+
+{exp:infhotel:tercer_paso}
+
 {embed="includes/footer"}
 	{exp:get_post_vars parse="inward"}
 <script>
 	$(function() {
 		num_hab = {post_room_number};
+		$("#form_box_3").hide();
 		hide_divs(num_hab,0);
       });
 
 	$(function() {
-		//var tercer_paso = new String('');
+		//var tercer_paso = new String('{exp:infhotel:tercer_paso}');
 		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
@@ -172,7 +176,7 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html('{exp:infhotel:tercer_paso}');
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 1:
@@ -180,7 +184,7 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html('{exp:infhotel:tercer_paso}');
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 2:
@@ -188,7 +192,7 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html('{exp:infhotel:tercer_paso}');
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 3:
@@ -196,11 +200,11 @@ function hide_divs (rooms_num, div_visible){
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2").html('{exp:infhotel:tercer_paso}');
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 4:
-					$("#form_box_2").html('{exp:infhotel:tercer_paso}');
+					$("#form_box_2").html($("#form_box_3").html());
 			    break; 
 		}
 	}
