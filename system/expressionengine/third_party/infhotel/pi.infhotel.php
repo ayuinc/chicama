@@ -711,6 +711,7 @@ class Infhotel
                                             )
                                         ),
                         "NPasajero" => 2,
+                        "MObservacion" => "Esta es mi xxxxx observación, espero que grabe",     
                         "Pasajeros" => array(
                                             array(
                                                 "TDocumento" => "12345678",
