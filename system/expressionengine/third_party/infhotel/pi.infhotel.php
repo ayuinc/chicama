@@ -696,17 +696,17 @@ class Infhotel
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');
         */
-        $data = array(  "FLlegada" => "2014-07-06 12:00:00.000",
-                        "FSalida" => "2014-07-13 12:00:00.000", 
-                        "HLlegada" => "2014-07-06 12:00:00.000",
-                        "HSalida" => "2014-07-13 12:00:00.000",
+        $data = array(  "FLlegada" => "2014-10-06 12:00:00.000",
+                        "FSalida" => "2014-10-13 12:00:00.000", 
+                        "HLlegada" => "2014-10-06 12:00:00.000",
+                        "HSalida" => "2014-10-13 12:00:00.000",
                         "Habitaciones" => array(
                                             array("CantHab" => 1, 
-                                                "NPrecio" => 120,  
+                                                "NPrecio" => 160,  
                                                 "TCodigoHabitacion" => "110001"  
                                             ),
                                             array("CantHab" => 1, 
-                                                "NPrecio" => 150,  
+                                                "NPrecio" => 180,  
                                                 "TCodigoHabitacion" => "110001"
                                             )
                                         ),
@@ -721,16 +721,6 @@ class Infhotel
                                                 "TTarjeta" => "1234567890",
                                                 "TTipoDocumento" => "02",
                                                 "TTipoTarjeta" => "04" 
-                                            ),
-                                            array(
-                                                "TDocumento" => "12345678",
-                                                "TMaterno" => "pasajero02",  
-                                                "TNacionalidad" => "069",      
-                                                "TNombre" => "pasajero02",
-                                                "TPaterno" => "pasajero02",  
-                                                "TTarjeta" => "1234567890",
-                                                "TTipoDocumento" => "02",
-                                                "TTipoTarjeta" => "02"    
                                             )
                                         )
         );
@@ -766,7 +756,6 @@ class Infhotel
                         {/exp:get_post_vars}
                     </div>
             </div>
-
         </div>
         <div class="row">
             <div class="large-9 columns">
