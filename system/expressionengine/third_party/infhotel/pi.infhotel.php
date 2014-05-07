@@ -288,7 +288,7 @@ class Infhotel
                                         <p>Guests</p>
                                     </div>
                                     <div class="large-6 columns">
-                                        <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                        <select name="persons_number"  id="guests_triple'.$i.'" required="" pattern="number" data-invalid="">
                                           <option value="1" selected="selected">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
@@ -306,8 +306,9 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <p id="num_guest'.$i.'">One Guest</p>
-                                <h2 id="cost_'.$i.'">USD 100/night</h2>
+                                <p id="num_guest_triple'.$i.'">One Guest</p>
+                                <h2 id="cost_triple'.$i.'">USD 100/night</h2>
+                                <span>*OFERTA</span>
                             </div>
                             <div class="large-4 columns">
                                 <button id="add_room_triple'.$i.'" type="button">Click Me triple(?)!</button>
@@ -336,7 +337,7 @@ class Infhotel
                                         <p>Guests</p>
                                     </div>
                                     <div class="large-6 columns">
-                                        <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                        <select name="persons_number"  id="guests_suite'.$i.'" required="" pattern="number" data-invalid="">
                                           <option value="1" selected="selected">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
@@ -354,8 +355,9 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <p id="num_guest'.$i.'">One Guest</p>
-                                <h2 id="cost_'.$i.'">USD 100/night</h2>
+                                <p id="num_guest_suite'.$i.'">One Guest</p>
+                                <h2 id="cost_suite'.$i.'">USD 100/night</h2>
+                                <span>*OFERTA</span>
                             </div>
                             <div class="large-4 columns">
                                 <button id="add_room_suite'.$i.'" type="button">Click Me suite(?)!</button>
@@ -386,7 +388,7 @@ class Infhotel
                                     <p>Guests</p>
                                 </div>
                                 <div class="large-6 columns">
-                                    <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                    <select name="persons_number"  id="guests_simple'.$i.'" required="" pattern="number" data-invalid="">
                                       <option value="1" selected="selected">1</option>
                                       <option value="2">2</option>
                                       <option value="3">3</option>
@@ -404,8 +406,9 @@ class Infhotel
                 <div class="large-7 columns">
                     <div class="row">
                         <div class="large-8 columns">
-                            <p id="num_guest'.$i.'">One Guest</p>
-                            <h2 id="cost_'.$i.'">USD 110/night</h2>
+                            <p id="num_guest_simple'.$i.'">One Guest</p>
+                            <h2 id="cost_simple'.$i.'">USD 110/night</h2>
+                            <span>*OFERTA</span>
                         </div>
                         <div class="large-4 columns">
                             <button id="add_room_simple'.$i.'" type="button">Click Me simple(?)!</button>
@@ -434,7 +437,7 @@ class Infhotel
                                     <p>Guests</p>
                                 </div>
                                 <div class="large-6 columns">
-                                    <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                                    <select name="persons_number"  id="guests_doble'.$i.'" required="" pattern="number" data-invalid="">
                                       <option value="1" selected="selected">1</option>
                                       <option value="2">2</option>
                                       <option value="3">3</option>
@@ -452,8 +455,9 @@ class Infhotel
                 <div class="large-7 columns">
                     <div class="row">
                         <div class="large-8 columns">
-                            <p id="num_guest'.$i.'">One Guest</p>
-                            <h2 id="cost_'.$i.'">USD 110/night</h2>
+                            <p id="num_guest_doble'.$i.'">One Guest</p>
+                            <h2 id="cost_doble'.$i.'">USD 110/night</h2>
+                            <span>*OFERTA</span>
                         </div>
                         <div class="large-4 columns">
                             <button id="add_room_doble'.$i.'" type="button">Click Me double(?)!</button>

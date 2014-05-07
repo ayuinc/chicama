@@ -68,6 +68,7 @@
 		var doble = 0;
 		var triple = 0;
 		var suite = 0;
+		var hab_simple = {};
 
 		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
 		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
@@ -130,9 +131,18 @@
 			switch(type_hab){
 				case 1:
 				    $(buttom).click(function(){
+		    			var data = {
+	    				 	"CantHab" => 1, 
+                            "NPrecio" => 120,  
+                            "TCodigoHabitacion" => "110001"
+		    			};
 				    	simple = simple + 1;
 				    	hide_divs(rooms_num, next_div);
-				    	console.log(buttom+":"+simple);
+				    	//console.log(buttom+":"+simple);
+				    	console.log(data);
+				    	data["Habitaciones"]["0"]=data;
+				    	var send = JSON.stringify(data);
+						console.log(send);
 				    });
 				    break;
 				case 2:
