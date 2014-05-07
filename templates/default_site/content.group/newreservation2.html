@@ -82,7 +82,27 @@
                 "NPasajero": "",
                 "Pasajeros" : {}
 		};
+
+		cambio_costos('#guests_simple0','#num_guest_simple0','#cost_simple0',1);
+		cambio_costos('#guests_simple1','#num_guest_simple1','#cost_simple1',1);
+		cambio_costos('#guests_simple2','#num_guest_simple2','#cost_simple2',1);
+		cambio_costos('#guests_simple3','#num_guest_simple3','#cost_simple3',1);
 		
+		cambio_costos('#guests_doble0','#num_guest_doble0','#cost_doble0',1);
+		cambio_costos('#guests_doble1','#num_guest_doble1','#cost_doble1',1);
+		cambio_costos('#guests_doble2','#num_guest_doble2','#cost_doble2',1);
+		cambio_costos('#guests_doble3','#num_guest_doble3','#cost_doble3',1);
+		
+		cambio_costos('#guests_triple0','#num_guest_triple0','#cost_triple0',0);
+		cambio_costos('#guests_triple1','#num_guest_triple1','#cost_triple1',0);
+		cambio_costos('#guests_triple2','#num_guest_triple2','#cost_triple2',0);
+		cambio_costos('#guests_triple3','#num_guest_triple3','#cost_triple3',0);
+
+		cambio_costos('#guests_suite0','#num_guest_suite0','#cost_suite0',0);
+		cambio_costos('#guests_suite1','#num_guest_suite1','#cost_suite1',0);
+		cambio_costos('#guests_suite2','#num_guest_suite2','#cost_suite2',0);
+		cambio_costos('#guests_suite3','#num_guest_suite3','#cost_suite3',0);
+
 		reservar_hab(num_hab, '#add_room_simple0', 1, 1);
 		reservar_hab(num_hab, '#add_room_doble0', 1, 2);
 		reservar_hab(num_hab, '#add_room_triple0', 1, 3);
@@ -121,12 +141,52 @@
 		//data["Habitaciones"]["0"]=habitacion;
 		//data["Habitaciones"]["1"]=habitacion;
 		//data["Habitaciones"]["2"]=habitacion;
-		data["Pasajeros"]["0"]=persona;
+		data["Pasajeros"]["0"]=persona; 
 
 		//var send = JSON.stringify(data);
 		//console.log(send);
 
-		
+	function cambio_costos(select_box , encabezado , precio, tipo_hab){
+		$(select_box).change(function(){
+			if(tipo_hab==0){
+				switch($(select_box).val()){
+					case 1:
+						$(encabezado).html("One Guest");
+						$(precio).("100");
+						break;
+					case 2:
+						$(encabezado).html("Two Guests");
+						$(precio).("140");
+						break;
+					case 3:
+						$(encabezado).html("Three Guests");
+						$(precio).("180");
+						break;
+					case 4:
+						break;
+				}
+			}
+			if(tipo_hab==1){
+				switch($(select_box).val()){
+					case 1:
+						$(encabezado).html("One Guest");
+						$(precio).("110");
+						break;
+					case 2:
+						$(encabezado).html("Two Guests");
+						$(precio).("110");
+						break;
+					case 3:
+						$(encabezado).html("Three Guests");
+						$(precio).("110");
+						break;
+					case 4:
+						break;
+				}
+			}
+		});
+	}
+	
 	function reservar_hab (rooms_num, buttom, next_div, type_hab){
 			var orden = next_div - 1 ;
 			switch(type_hab){
@@ -140,7 +200,7 @@
 				    	simple = simple + 1;
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+simple);
-				    	console.log(data);
+				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
@@ -156,7 +216,7 @@
 				    	doble = doble + 1;
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+doble);
-				    	console.log(temp);
+				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
@@ -172,7 +232,7 @@
 				    	triple = triple + 1;
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+triple);
-				    	console.log(temp);
+				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
@@ -189,7 +249,7 @@
 				    	hide_divs(rooms_num, next_div);
 				    	//window.location.replace("http://chicamasurf.com/content/newreservation3");
 				    	//console.log(buttom+":"+suite);
-				    	console.log(data);
+				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
