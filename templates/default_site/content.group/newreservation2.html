@@ -128,6 +128,7 @@
 
 		
 	function reservar_hab (rooms_num, buttom, next_div, type_hab){
+			var orden = next_div - 1 ;
 			switch(type_hab){
 				case 1:
 				    $(buttom).click(function(){
@@ -140,7 +141,7 @@
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+simple);
 				    	console.log(data);
-				    	data["Habitaciones"]["0"]=temp;
+				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
@@ -156,7 +157,7 @@
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+doble);
 				    	console.log(temp);
-				    	data["Habitaciones"]["0"]=temp;
+				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
@@ -172,7 +173,7 @@
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+triple);
 				    	console.log(temp);
-				    	data["Habitaciones"]["0"]=temp;
+				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
@@ -189,7 +190,7 @@
 				    	//window.location.replace("http://chicamasurf.com/content/newreservation3");
 				    	//console.log(buttom+":"+suite);
 				    	console.log(data);
-				    	data["Habitaciones"]["0"]=temp;
+				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
