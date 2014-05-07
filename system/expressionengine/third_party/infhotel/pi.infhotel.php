@@ -702,7 +702,7 @@ class Infhotel
                         "HSalida" => "2014-10-13 12:00:00.000",
                         "Habitaciones" => array(
                                             array("CantHab" => 1, 
-                                                "NPrecio" => 160,  
+                                                "NPrecio" => 220,  
                                                 "TCodigoHabitacion" => "110001"  
                                             ),
                                             array("CantHab" => 1, 
