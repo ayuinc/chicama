@@ -285,7 +285,7 @@ class Infhotel
                                 </div>
                                 <div class="row">
                                     <div class="large-6 columns">
-                                        <p>Personas</p>
+                                        <p>Guests</p>
                                     </div>
                                     <div class="large-6 columns">
                                         <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
@@ -306,8 +306,8 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <p>Breakfast only</p>
-                                <h2>USD 120/night</h2>
+                                <p id="num_guest'.$i.'">One Guest</p>
+                                <h2 id="cost_'.$i.'">USD 110/night</h2>
                             </div>
                             <div class="large-4 columns">
                                 <button id="add_room_triple'.$i.'" type="button">Click Me triple(?)!</button>
@@ -333,7 +333,7 @@ class Infhotel
                                 </div>
                                 <div class="row">
                                     <div class="large-6 columns">
-                                        <p>Personas</p>
+                                        <p>Guests</p>
                                     </div>
                                     <div class="large-6 columns">
                                         <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
@@ -354,8 +354,8 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <p>Breakfast only</p>
-                                <h2>USD 120/night</h2>
+                                <p id="num_guest'.$i.'">One Guest</p>
+                                <h2 id="cost_'.$i.'">USD 110/night</h2>
                             </div>
                             <div class="large-4 columns">
                                 <button id="add_room_suite'.$i.'" type="button">Click Me suite(?)!</button>
@@ -383,7 +383,7 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-6 columns">
-                                    <p>Personas</p>
+                                    <p>Guests</p>
                                 </div>
                                 <div class="large-6 columns">
                                     <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
@@ -404,8 +404,8 @@ class Infhotel
                 <div class="large-7 columns">
                     <div class="row">
                         <div class="large-8 columns">
-                            <p>Breakfast only</p>
-                            <h2>USD 120/night</h2>
+                            <p id="num_guest'.$i.'">One Guest</p>
+                            <h2 id="cost_'.$i.'">USD 100/night</h2>
                         </div>
                         <div class="large-4 columns">
                             <button id="add_room_simple'.$i.'" type="button">Click Me simple(?)!</button>
@@ -431,7 +431,7 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-6 columns">
-                                    <p>Personas</p>
+                                    <p>Guests</p>
                                 </div>
                                 <div class="large-6 columns">
                                     <select name="persons_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
@@ -452,8 +452,8 @@ class Infhotel
                 <div class="large-7 columns">
                     <div class="row">
                         <div class="large-8 columns">
-                            <p>Breakfast only</p>
-                            <h2>USD 120/night</h2>
+                            <p id="num_guest'.$i.'">One Guest</p>
+                            <h2 id="cost_'.$i.'">USD 110/night</h2>
                         </div>
                         <div class="large-4 columns">
                             <button id="add_room_doble'.$i.'" type="button">Click Me double(?)!</button>
