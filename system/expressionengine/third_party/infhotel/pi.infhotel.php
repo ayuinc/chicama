@@ -306,8 +306,8 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <p id="person_"'.$i.'>Una persona</p>
-                                <h2 id="cost_"'.$i.'>USD 120/night</h2>
+                                <p>Breakfast only</p>
+                                <h2>USD 120/night</h2>
                             </div>
                             <div class="large-4 columns">
                                 <button id="add_room_triple'.$i.'" type="button">Click Me triple(?)!</button>
@@ -361,12 +361,6 @@ class Infhotel
                                 <button id="add_room_suite'.$i.'" type="button">Click Me suite(?)!</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="large-8 columns">
-                                <p id="person_"'.$i.'>Una persona</p>
-                                <h2 id="cost_"'.$i.'>USD 150/night</h2>
-                            </div>
-                        </div>  
                     </div>
                 </div>';
                     }
@@ -417,12 +411,6 @@ class Infhotel
                             <button id="add_room_simple'.$i.'" type="button">Click Me simple(?)!</button>
                         </div>
                     </div>
-                   <div class="row">
-                            <div class="large-8 columns">
-                                <p id="person_"'.$i.'>Una persona</p>
-                                <h2 id="cost_"'.$i.'>USD 150/night</h2>
-                            </div>
-                        </div>  
                 </div>
                 </div>';
                 }
@@ -471,12 +459,6 @@ class Infhotel
                             <button id="add_room_doble'.$i.'" type="button">Click Me double(?)!</button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="large-8 columns">
-                            <p id="person_"'.$i.'>Una persona</p>
-                            <h2 id="cost_"'.$i.'>USD 150/night</h2>
-                        </div>
-                    </div>    
                 </div>
                 </div>';
                     }
