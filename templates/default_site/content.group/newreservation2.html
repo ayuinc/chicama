@@ -131,7 +131,7 @@
 			switch(type_hab){
 				case 1:
 				    $(buttom).click(function(){
-		    			var data = {
+		    			var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : 120,  
                             "TCodigoHabitacion" : "110001"
@@ -140,14 +140,14 @@
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+simple);
 				    	console.log(data);
-				    	data["Habitaciones"]["0"]=data;
+				    	data["Habitaciones"]["0"]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
 				    break;
 				case 2:
 				    $(buttom).click(function(){
-				    	var data = {
+				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : 120,  
                             "TCodigoHabitacion" : "110002"
@@ -155,15 +155,15 @@
 				    	doble = doble + 1;
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+doble);
-				    	console.log(data);
-				    	data["Habitaciones"]["0"]=data;
+				    	console.log(temp);
+				    	data["Habitaciones"]["0"]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
 				    break;
 				case 3:
 				    $(buttom).click(function(){
-				    	var data = {
+				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : 120,  
                             "TCodigoHabitacion" : "110003"
@@ -171,15 +171,15 @@
 				    	triple = triple + 1;
 				    	hide_divs(rooms_num, next_div);
 				    	//console.log(buttom+":"+triple);
-				    	console.log(data);
-				    	data["Habitaciones"]["0"]=data;
+				    	console.log(temp);
+				    	data["Habitaciones"]["0"]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
 				    break;
 				case 4:
 				    $(buttom).click(function(){
-				    	var data = {
+				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : 120,  
                             "TCodigoHabitacion" : "110004"
@@ -189,7 +189,7 @@
 				    	//window.location.replace("http://chicamasurf.com/content/newreservation3");
 				    	//console.log(buttom+":"+suite);
 				    	console.log(data);
-				    	data["Habitaciones"]["0"]=data;
+				    	data["Habitaciones"]["0"]=temp;
 				    	var send = JSON.stringify(data);
 						console.log(send);
 				    });
