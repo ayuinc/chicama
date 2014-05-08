@@ -289,7 +289,7 @@ class Infhotel
                                     </div>
                                     <div class="large-6 columns">
                                         <select name="persons_number"  id="guests_triple'.$i.'" required="" pattern="number" data-invalid="">
-                                          <option value="1" selected="selected">1</option>
+                                          <option value="1">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
                                         </select>
