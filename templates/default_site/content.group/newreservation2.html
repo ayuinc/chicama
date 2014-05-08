@@ -149,7 +149,7 @@
 	function cambio_costos(select_box , encabezado , precio, tipo_hab){
 		$(select_box).change(function(){
 			console.log($( select_box ).val());
-			console.log(tipo_hab);
+			console.log($(tipo_hab));
 			switch (tipo_hab) {
 				case 0:
 					switch($( select_box ).val()){ 
