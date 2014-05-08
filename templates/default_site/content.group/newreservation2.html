@@ -149,7 +149,7 @@
 	function cambio_costos(select_box , encabezado , precio, tipo_hab){
 		$(select_box).change(function(){
 			if(tipo_hab==0){
-				switch($(select_box+"option:selected" ).text()){ )
+				switch($(select_box+"option:selected" ).text()){ 
 					case 1:
 						$(encabezado).html("One Guest");
 						$(precio).html("100");
