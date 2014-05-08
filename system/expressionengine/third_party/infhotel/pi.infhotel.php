@@ -280,7 +280,7 @@ class Infhotel
                             <div class="large-7 columns">
                                 <div class="row">
                                     <div class="large-12 columns">
-                                        <h2>Garden View</h2>
+                                        <h2 id="type_hab_triple'.$i.'">Garden View</h2>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -289,7 +289,7 @@ class Infhotel
                                     </div>
                                     <div class="large-6 columns">
                                         <select name="persons_number"  id="guests_triple'.$i.'" required="" pattern="number" data-invalid="">
-                                          <option value="1">1</option>
+                                          <option value="1" selected="selected">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
                                         </select>
@@ -329,7 +329,7 @@ class Infhotel
                             <div class="large-7 columns">
                                 <div class="row">
                                     <div class="large-12 columns">
-                                        <h2>Garden View</h2>
+                                        <h2 id="type_hab_suite'.$i.'" >Garden View</h2>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -380,7 +380,7 @@ class Infhotel
                         <div class="large-7 columns">
                             <div class="row">
                                 <div class="large-12 columns">
-                                    <h2>Ocean View</h2>
+                                    <h2 id="type_hab_simple'.$i.'" >Ocean View</h2>
                                 </div>
                             </div>
                             <div class="row">
@@ -429,7 +429,7 @@ class Infhotel
                         <div class="large-7 columns">
                             <div class="row">
                                 <div class="large-12 columns">
-                                    <h2>Ocean View</h2>
+                                    <h2 id="type_hab_doble'.$i.'">Ocean View</h2>
                                 </div>
                             </div>
                             <div class="row">
