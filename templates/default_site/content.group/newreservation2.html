@@ -220,12 +220,13 @@
 		}
       });
 function cambio_costos(select_box , encabezado , precio, hab){
-	var  tipo_de_hab = $(hab).value();
+	var  tipo_de_hab = $(hab).text();
 	$(select_box).change(function(){
+		$( select_box+" option:selected" ).each(function() {
 		console.log(tipo_de_hab);
-		console.log($( select_box ).value());
+		console.log($( this ).val());
 		if(tipo_de_hab=="Garden View"){
-			switch($( select_box ).val()){ 
+			switch($( this ).val()){ 
 				case 1:
 					console.log($( select_box ).val());
 					$(encabezado).html("One Guest");
@@ -246,7 +247,7 @@ function cambio_costos(select_box , encabezado , precio, hab){
 			}
 		}
 		if(tipo_de_hab=="Ocean View"){
-			switch($(select_box).val()){
+			switch($(this).val()){
 				case 1:
 					console.log($( select_box ).val());
 					$(encabezado).html("One Guest");
@@ -266,6 +267,7 @@ function cambio_costos(select_box , encabezado , precio, hab){
 					break;
 			}
 		}
+		});
 	});
 }
 function hide_divs (rooms_num, div_visible){
