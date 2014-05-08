@@ -149,16 +149,19 @@
 	function cambio_costos(select_box , encabezado , precio, tipo_hab){
 		$(select_box).change(function(){
 			if(tipo_hab==0){
-				switch($(select_box+" option:selected" ).val()){ 
+				switch($( this +" option:selected" ).text()){ 
 					case 1:
+						console.log($( this +" option:selected" ).text());
 						$(encabezado).html("One Guest");
 						$(precio).html("100");
 						break;
 					case 2:
+						console.log($( this +" option:selected" ).text());
 						$(encabezado).html("Two Guests");
 						$(precio).html("140");
 						break;
 					case 3:
+						console.log($( this +" option:selected" ).text());
 						$(encabezado).html("Three Guests");
 						$(precio).html("180");
 						break;
@@ -169,14 +172,17 @@
 			if(tipo_hab==1){
 				switch($(select_box).val()){
 					case 1:
+						console.log($( this +" option:selected" ).text());
 						$(encabezado).html("One Guest");
 						$(precio).html("110");
 						break;
 					case 2:
+						console.log($( this +" option:selected" ).text());
 						$(encabezado).html("Two Guests");
 						$(precio).html("110");
 						break;
 					case 3:
+						console.log($( this +" option:selected" ).text());
 						$(encabezado).html("Three Guests");
 						$(precio).html("110");
 						break;
