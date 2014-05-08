@@ -149,6 +149,7 @@
 	function cambio_costos(select_box , encabezado , precio, hab){
 		$(select_box).change(function(){
 			console.log($(hab).text());
+			console.log($( select_box ).val());
 			if($(hab).text() == "Garden View"){
 				switch($( select_box ).val()){ 
 					case 1:
