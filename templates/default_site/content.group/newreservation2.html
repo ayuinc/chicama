@@ -146,55 +146,7 @@
 		//var send = JSON.stringify(data);
 		//console.log(send);
 
-	function cambio_costos(select_box , encabezado , precio, hab){
-		var  tipo_de_hab = $(hab).text();
-		$(select_box).change(function(){
-			console.log(tipo_de_hab);
-			console.log($( select_box ).val());
-			if(tipo_de_hab=="Garden View"){
-				switch($( select_box ).val()){ 
-					case 1:
-						console.log($( select_box ).val());
-						$(encabezado).html("One Guest");
-						$(precio).html("100");
-						break;
-					case 2:
-						console.log($( select_box ).val());
-						$(encabezado).html("Two Guests");
-						$(precio).html("140");
-						break;
-					case 3:
-						console.log($( select_box ).val());
-						$(encabezado).html("Three Guests");
-						$(precio).html("180");
-						break;
-					case 4:
-						break;
-				}
-			}
-			if(tipo_de_hab=="Ocean View"){
-				switch($(select_box).val()){
-					case 1:
-						console.log($( select_box ).val());
-						$(encabezado).html("One Guest");
-						$(precio).html("110");
-						break;
-					case 2:
-						console.log($( select_box ).val());
-						$(encabezado).html("Two Guests");
-						$(precio).html("110");
-						break;
-					case 3:
-						console.log($( select_box ).val());
-						$(encabezado).html("Three Guests");
-						$(precio).html("110");
-						break;
-					case 4:
-						break;
-				}
-			}
-		});
-	}
+	
 	
 	function reservar_hab (rooms_num, buttom, next_div, type_hab){
 			var orden = next_div - 1 ;
@@ -267,7 +219,55 @@
 			}
 		}
       });
-
+function cambio_costos(select_box , encabezado , precio, hab){
+	var  tipo_de_hab = $(hab).text();
+	$(select_box).change(function(){
+		console.log(tipo_de_hab);
+		console.log($( select_box ).val());
+		if(tipo_de_hab=="Garden View"){
+			switch($( select_box ).val()){ 
+				case 1:
+					console.log($( select_box ).val());
+					$(encabezado).html("One Guest");
+					$(precio).html("100");
+					break;
+				case 2:
+					console.log($( select_box ).val());
+					$(encabezado).html("Two Guests");
+					$(precio).html("140");
+					break;
+				case 3:
+					console.log($( select_box ).val());
+					$(encabezado).html("Three Guests");
+					$(precio).html("180");
+					break;
+				case 4:
+					break;
+			}
+		}
+		if(tipo_de_hab=="Ocean View"){
+			switch($(select_box).val()){
+				case 1:
+					console.log($( select_box ).val());
+					$(encabezado).html("One Guest");
+					$(precio).html("110");
+					break;
+				case 2:
+					console.log($( select_box ).val());
+					$(encabezado).html("Two Guests");
+					$(precio).html("110");
+					break;
+				case 3:
+					console.log($( select_box ).val());
+					$(encabezado).html("Three Guests");
+					$(precio).html("110");
+					break;
+				case 4:
+					break;
+			}
+		}
+	});
+}
 function hide_divs (rooms_num, div_visible){
 		for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
