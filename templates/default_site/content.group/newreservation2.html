@@ -149,6 +149,10 @@
 	function cambio_costos(select_box , encabezado , precio, tipo_hab){
 		$(select_box).change(function(){
 			console.log($( select_box ).val());
+			if($select_box.val() == 2 ){
+				$(encabezado).html("Two Guests");
+						$(precio).html("140");
+			}
 			if(tipo_hab==0){
 				switch($( select_box ).val()){ 
 					case 1:
