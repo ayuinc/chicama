@@ -149,19 +149,19 @@
 	function cambio_costos(select_box , encabezado , precio, tipo_hab){
 		$(select_box).change(function(){
 			if(tipo_hab==0){
-				switch($( this +" option:selected" ).val()){ 
+				switch($( this ).find("option:selected").val()){ 
 					case 1:
-						console.log($( this +" option:selected" ).val());
+						console.log($( this ).find("option:selected").val());
 						$(encabezado).html("One Guest");
 						$(precio).html("100");
 						break;
 					case 2:
-						console.log($( this +" option:selected" ).val());
+						console.log($( this ).find("option:selected").val());
 						$(encabezado).html("Two Guests");
 						$(precio).html("140");
 						break;
 					case 3:
-						console.log($( this +" option:selected" ).val());
+						console.log($( this ).find("option:selected").val());
 						$(encabezado).html("Three Guests");
 						$(precio).html("180");
 						break;
@@ -172,17 +172,17 @@
 			if(tipo_hab==1){
 				switch($(select_box).val()){
 					case 1:
-						console.log($( this +" option:selected" ).val());
+						console.log($( this ).find("option:selected").val());
 						$(encabezado).html("One Guest");
 						$(precio).html("110");
 						break;
 					case 2:
-						console.log($( this +" option:selected" ).val());
+						console.log($( this ).find("option:selected").val());
 						$(encabezado).html("Two Guests");
 						$(precio).html("110");
 						break;
 					case 3:
-						console.log($( this +" option:selected" ).val());
+						console.log($( this ).find("option:selected").val());
 						$(encabezado).html("Three Guests");
 						$(precio).html("110");
 						break;
