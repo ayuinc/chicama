@@ -83,25 +83,25 @@
                 "Pasajeros" : {}
 		};
 
-		cambio_costos('#guests_simple0','#num_guest_simple0','#cost_simple0',"1");
-		cambio_costos('#guests_simple1','#num_guest_simple1','#cost_simple1',"1");
-		cambio_costos('#guests_simple2','#num_guest_simple2','#cost_simple2',"1");
-		cambio_costos('#guests_simple3','#num_guest_simple3','#cost_simple3',"1");
+		cambio_costos('#guests_simple0','#num_guest_simple0','#cost_simple0',1);
+		cambio_costos('#guests_simple1','#num_guest_simple1','#cost_simple1',1);
+		cambio_costos('#guests_simple2','#num_guest_simple2','#cost_simple2',1);
+		cambio_costos('#guests_simple3','#num_guest_simple3','#cost_simple3',1);
 		
-		cambio_costos('#guests_doble0','#num_guest_doble0','#cost_doble0',"1");
-		cambio_costos('#guests_doble1','#num_guest_doble1','#cost_doble1',"1");
-		cambio_costos('#guests_doble2','#num_guest_doble2','#cost_doble2',"1");
-		cambio_costos('#guests_doble3','#num_guest_doble3','#cost_doble3',"1");
+		cambio_costos('#guests_doble0','#num_guest_doble0','#cost_doble0',1);
+		cambio_costos('#guests_doble1','#num_guest_doble1','#cost_doble1',1);
+		cambio_costos('#guests_doble2','#num_guest_doble2','#cost_doble2',1);
+		cambio_costos('#guests_doble3','#num_guest_doble3','#cost_doble3',1);
 		
-		cambio_costos('#guests_triple0','#num_guest_triple0','#cost_triple0','0');
-		cambio_costos('#guests_triple1','#num_guest_triple1','#cost_triple1','0');
-		cambio_costos('#guests_triple2','#num_guest_triple2','#cost_triple2','0');
-		cambio_costos('#guests_triple3','#num_guest_triple3','#cost_triple3','0');
+		cambio_costos('#guests_triple0','#num_guest_triple0','#cost_triple0',0);
+		cambio_costos('#guests_triple1','#num_guest_triple1','#cost_triple1',0);
+		cambio_costos('#guests_triple2','#num_guest_triple2','#cost_triple2',0);
+		cambio_costos('#guests_triple3','#num_guest_triple3','#cost_triple3',0);
 
-		cambio_costos('#guests_suite0','#num_guest_suite0','#cost_suite0','0');
-		cambio_costos('#guests_suite1','#num_guest_suite1','#cost_suite1','0');
-		cambio_costos('#guests_suite2','#num_guest_suite2','#cost_suite2','0');
-		cambio_costos('#guests_suite3','#num_guest_suite3','#cost_suite3','0');
+		cambio_costos('#guests_suite0','#num_guest_suite0','#cost_suite0',0);
+		cambio_costos('#guests_suite1','#num_guest_suite1','#cost_suite1',0);
+		cambio_costos('#guests_suite2','#num_guest_suite2','#cost_suite2',0);
+		cambio_costos('#guests_suite3','#num_guest_suite3','#cost_suite3',0);
 
 		reservar_hab(num_hab, '#add_room_simple0', 1, 1);
 		reservar_hab(num_hab, '#add_room_doble0', 1, 2);
@@ -149,51 +149,50 @@
 	function cambio_costos(select_box , encabezado , precio, tipo_hab){
 		$(select_box).change(function(){
 			console.log($( select_box ).val());
-			if($(select_box).val() == 2 ){
-				$(encabezado).html("Two Guests");
-						$(precio).html("140");
-			}
-			if(tipo_hab == 0){
-				switch($( select_box ).val()){ 
-					case 1:
-						console.log($( select_box ).val());
-						$(encabezado).html("One Guest");
-						$(precio).html("100");
-						break;
-					case 2:
-						console.log($( select_box ).val());
-						$(encabezado).html("Two Guests");
-						$(precio).html("140");
-						break;
-					case 3:
-						console.log($( select_box ).val());
-						$(encabezado).html("Three Guests");
-						$(precio).html("180");
-						break;
-					case 4:
-						break;
-				}
-			}
-			if(tipo_hab == 1){
-				switch($(select_box).val()){
-					case 1:
-						console.log($( select_box ).val());
-						$(encabezado).html("One Guest");
-						$(precio).html("110");
-						break;
-					case 2:
-						console.log($( select_box ).val());
-						$(encabezado).html("Two Guests");
-						$(precio).html("110");
-						break;
-					case 3:
-						console.log($( select_box ).val());
-						$(encabezado).html("Three Guests");
-						$(precio).html("110");
-						break;
-					case 4:
-						break;
-				}
+			switch (tipo_hab) {
+				case 0:
+					switch($( select_box ).val()){ 
+						case 1:
+							console.log($( select_box ).val());
+							$(encabezado).html("One Guest");
+							$(precio).html("100");
+							break;
+						case 2:
+							console.log($( select_box ).val());
+							$(encabezado).html("Two Guests");
+							$(precio).html("140");
+							break;
+						case 3:
+							console.log($( select_box ).val());
+							$(encabezado).html("Three Guests");
+							$(precio).html("180");
+							break;
+						case 4:
+							break;
+					}
+				break;
+
+				case 1:
+					switch($(select_box).val()){
+						case 1:
+							console.log($( select_box ).val());
+							$(encabezado).html("One Guest");
+							$(precio).html("110");
+							break;
+						case 2:
+							console.log($( select_box ).val());
+							$(encabezado).html("Two Guests");
+							$(precio).html("110");
+							break;
+						case 3:
+							console.log($( select_box ).val());
+							$(encabezado).html("Three Guests");
+							$(precio).html("110");
+							break;
+						case 4:
+							break;
+					}
+				break;
 			}
 		});
 	}
