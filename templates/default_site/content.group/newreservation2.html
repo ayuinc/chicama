@@ -146,9 +146,10 @@
 		//var send = JSON.stringify(data);
 		//console.log(send);
 
-	function cambio_costos(select_box , encabezado , precio, tipo_hab){
+	function cambio_costos(select_box , encabezado , precio, hab){
 		$(select_box).change(function(){
-			if($(tipo_hab).text() == "Garden View"){
+			console.log($(hab).text());
+			if($(hab).text() == "Garden View"){
 				switch($( select_box ).val()){ 
 					case 1:
 						console.log($( select_box ).val());
@@ -169,7 +170,7 @@
 						break;
 				}
 			}
-			if($(tipo_hab).text() == "Ocean View")){
+			if($(hab).text() == "Ocean View")){
 				switch($(select_box).val()){
 					case 1:
 						console.log($( select_box ).val());
