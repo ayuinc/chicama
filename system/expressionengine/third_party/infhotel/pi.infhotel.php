@@ -660,8 +660,9 @@ class Infhotel
         $tipo_dni = ee()->TMPL->fetch_param('tipo_dni');
         $tarjeta = ee()->TMPL->fetch_param('tarjeta');
         $tipo_tarjeta = ee()->TMPL->fetch_param('tipo_tarjeta');
-        $json = ee()->TMPL->fetch_param('request');
         */
+        $json = ee()->TMPL->fetch_param('request');
+        
         $data = json_decode($json, true);
         return var_dump($data);
         //$precio = ee()->TMPL->fetch_param('preio');

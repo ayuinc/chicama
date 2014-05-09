@@ -1,5 +1,8 @@
 {embed="includes/header"}
 <p>Tu código de reserva es: </p>
-{exp:infhotel:insertarreservar}
-{/exp:infhotel:insertarreservar}
+{exp:get_post_vars parse="inward"}
+	{exp:infhotel:insertarreservar
+		request="{post_request}"}
+	{/exp:infhotel:insertarreservar}
+{/exp:get_post_vars}
 {embed="includes/footer"}
