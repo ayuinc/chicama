@@ -720,8 +720,6 @@ class Infhotel
     }
     public function tercer_paso(){
         $form = '<div id="form_box_3">
-         <form id="book_a_room" action="/?/content/reserva" method="POST">
-          <input type="hidden" name="XID" value="{XID_HASH}" /> 
         <div class="row">
             <div id="title_reservation" class="row">
                     <div class="large-4 columns">
@@ -1036,7 +1034,6 @@ class Infhotel
                 <input type="submit" name="submit" value="Book Now" class="send button">
             </div>
         </div>
-        </form>
     </div>';  
         return $form;
     }
