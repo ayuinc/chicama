@@ -306,7 +306,7 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <input id="final_cost_triple'.$i.'" type="text" name="cost_suite'.$i.'" value="usrname"/>
+                                <input id="final_cost_triple'.$i.'" type="text" name="final_cost_triple'.$i.'" value="100"/>
                                 <p id="num_guest_triple'.$i.'">One Guest</p>
                                 <h2 id="cost_triple'.$i.'">USD 100/night</h2>
                                 <span>*OFERTA</span>
@@ -356,7 +356,7 @@ class Infhotel
                     <div class="large-7 columns">
                         <div class="row">
                             <div class="large-8 columns">
-                                <input id="final_cost_suite'.$i.'" type="text" name="cost_suite'.$i.'" value="usrname"/>           
+                                <input id="final_cost_suite'.$i.'" type="text" name="final_cost_suite'.$i.'" value="100"/>           
                                 <p id="num_guest_suite'.$i.'">One Guest</p>
                                 <h2 id="cost_suite'.$i.'">USD 100/night</h2>
                                 <span>*OFERTA</span>
@@ -408,7 +408,7 @@ class Infhotel
                 <div class="large-7 columns">
                     <div class="row">
                         <div class="large-8 columns">
-                            <input id="final_cost_simple'.$i.'" type="text" name="cost_suite'.$i.'" value="usrname"/>   
+                            <input id="final_cost_simple'.$i.'" type="text" name="final_cost_simple'.$i.'" value="110"/>   
                             <p id="num_guest_simple'.$i.'">One Guest</p>
                             <h2 id="cost_simple'.$i.'">USD 110/night</h2>
                             <span>*OFERTA</span>
@@ -458,7 +458,7 @@ class Infhotel
                 <div class="large-7 columns">
                     <div class="row">
                         <div class="large-8 columns">
-                            <input id="final_cost_doble'.$i.'" type="text" name="cost_suite'.$i.'" value="usrname"/>
+                            <input id="final_cost_doble'.$i.'" type="text" name="final_cost_doble'.$i.'" value="110"/>
                             <p id="num_guest_doble'.$i.'">One Guest</p>
                             <h2 id="cost_doble'.$i.'">USD 110/night</h2>
                             <span>*OFERTA</span>
