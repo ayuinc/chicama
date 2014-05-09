@@ -663,8 +663,8 @@ class Infhotel
         */
         $json = ee()->TMPL->fetch_param('request');
         
-        $json = str_replace("(a)", "}", $json);
-        $json = str_replace("(b)", "{", $json);
+        $json = str_replace("(a)", "{", $json);
+        $json = str_replace("(b)", "}", $json);
         $json = str_replace('(c)', '"', $json);
         $json = str_replace("(d)", ":", $json);
         $json = str_replace("(e)", " ", $json);
