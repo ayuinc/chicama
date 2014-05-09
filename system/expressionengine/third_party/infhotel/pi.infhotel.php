@@ -911,7 +911,7 @@ class Infhotel
                         <p>Request *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="request" value="" maxlength="number"  id="full_request">
+                        <input type="text" name="request" maxlength="200"  id="full_request">
                     </div>
                 </div>
             </div>
