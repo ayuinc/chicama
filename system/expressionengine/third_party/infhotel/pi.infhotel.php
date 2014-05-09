@@ -653,21 +653,25 @@ class Infhotel
         return $form;
     }
 
-    public function insertarreservar(){
-        /*
-        $nombre = ee()->TMPL->fetch_param('nombre');
+    public function insertarreservar()
+        /*$nombre = ee()->TMPL->fetch_param('nombre');
         $apellido = ee()->TMPL->fetch_param('apellido');
         $dni = ee()->TMPL->fetch_param('dni');
         $tipo_dni = ee()->TMPL->fetch_param('tipo_dni');
         $tarjeta = ee()->TMPL->fetch_param('tarjeta');
         $tipo_tarjeta = ee()->TMPL->fetch_param('tipo_tarjeta');
-        $precio = ee()->TMPL->fetch_param('preio');
-        $cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
+        $json = ee()->TMPL->fetch_param('request');
+        */
+        $data = json_decode($json, true);
+        return var_dump($data);
+        //$precio = ee()->TMPL->fetch_param('preio');
+        /*$cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
         $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');
         */
+        /*
         $data = array(  "FLlegada" => "2014-10-06 12:00:00.000",
                         "FSalida" => "2014-10-13 12:00:00.000", 
                         "HLlegada" => "2014-10-06 12:00:00.000",
@@ -711,10 +715,12 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result."  ".$data_string; 
+        return $result."  ".$data_string; */
     }
     public function tercer_paso(){
         $form = '<div id="form_box_3">
+         <form id="book_a_room" action="/?/content/reserva" method="POST">
+          <input type="hidden" name="XID" value="{XID_HASH}" /> 
         <div class="row">
             <div id="title_reservation" class="row">
                     <div class="large-4 columns">
@@ -1025,6 +1031,7 @@ class Infhotel
                 <input type="submit" name="submit" value="Book Now" class="send button">
             </div>
         </div>
+        </form>
     </div>';  
         return $form;
     }
