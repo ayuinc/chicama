@@ -196,12 +196,13 @@
 	
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost){
 			var orden = next_div - 1 ;
+			var tsoc_lanif = $(final_cost).val();
 			switch(type_hab){
 				case 1:
 				    $(buttom).click(function(){
 		    			var temp = {
 	    				 	"CantHab" : 1, 
-                            "NPrecio" : $(final_cost).val(),  
+                            "NPrecio" : tsoc_lanif,  
                             "TCodigoHabitacion" : "110001"
 		    			};
 				    	simple = simple + 1;
@@ -217,7 +218,7 @@
 				    $(buttom).click(function(){
 				    	var temp = {
 	    				 	"CantHab" : 1, 
-                            "NPrecio" : $(final_cost).val(),  
+                            "NPrecio" : tsoc_lanif,  
                             "TCodigoHabitacion" : "110002"
 		    			};
 				    	doble = doble + 1;
@@ -233,7 +234,7 @@
 				    $(buttom).click(function(){
 				    	var temp = {
 	    				 	"CantHab" : 1, 
-                            "NPrecio" : $(final_cost).val(),  
+                            "NPrecio" : tsoc_lanif,  
                             "TCodigoHabitacion" : "110003"
 		    			};
 				    	triple = triple + 1;
@@ -249,7 +250,7 @@
 				    $(buttom).click(function(){
 				    	var temp = {
 	    				 	"CantHab" : 1, 
-                            "NPrecio" : $(final_cost).val(),  
+                            "NPrecio" : tsoc_lanif,  
                             "TCodigoHabitacion" : "110004"
 		    			};
 				    	suite = suite + 1;
