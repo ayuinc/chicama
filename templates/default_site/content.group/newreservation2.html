@@ -208,7 +208,7 @@
 			}
 		});
 	}
-	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost){
+	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request){
 			var orden = next_div - 1 ;
 			switch(type_hab){
 				case 1:
@@ -225,6 +225,7 @@
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	$(request).val(send);
 						console.log(send);
 				    });
 				    break;
@@ -242,6 +243,7 @@
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	$(request).val(send);
 						console.log(send);
 				    });
 				    break;
@@ -259,6 +261,7 @@
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	$(request).val(send);
 						console.log(send);
 				    });
 				    break;
@@ -277,6 +280,7 @@
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	$(request).val(send);
 						console.log(send);
 				    });
 				    break;

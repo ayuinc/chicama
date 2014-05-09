@@ -899,6 +899,14 @@ class Infhotel
                         <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Request *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="request" value="" id="full_request">
+                    </div>
+                </div>
             </div>
             <div class="large-3 columns" id="sumary">
                 <div class="row">
