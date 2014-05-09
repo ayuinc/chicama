@@ -206,6 +206,7 @@
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	send = send.replace('"', "@");
 				    	$(request).val(send);
 						console.log(send);
 				    });
@@ -224,6 +225,7 @@
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	send = send.replace('"', "@");
 				    	$(request).val(send);
 						console.log(send);
 				    });
@@ -242,6 +244,7 @@
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	send = send.replace('"', "@");
 				    	$(request).val(send);
 						console.log(send);
 				    });
@@ -261,6 +264,7 @@
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
 				    	var send = JSON.stringify(data);
+				    	send = send.replace('"', "@");
 				    	$(request).val(send);
 						console.log(send);
 				    });
