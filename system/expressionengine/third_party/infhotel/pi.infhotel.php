@@ -653,7 +653,7 @@ class Infhotel
         return $form;
     }
 
-    public function insertarreservar()
+    public function insertarreservar(){
         /*$nombre = ee()->TMPL->fetch_param('nombre');
         $apellido = ee()->TMPL->fetch_param('apellido');
         $dni = ee()->TMPL->fetch_param('dni');
