@@ -739,6 +739,7 @@ class Infhotel
         </div>
         <div class="row">
             <div class="large-9 columns">
+                <!--
                 <div class="row">
                     <div id="sub_title_reservation" class="row">
                         <b><h3>Guest Information</h3></b>
@@ -906,6 +907,7 @@ class Infhotel
                         <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
+                -->
                 <div class="row">
                     <div class="large-3 columns">
                         <p>Request *</p>
@@ -915,6 +917,7 @@ class Infhotel
                     </div>
                 </div>
             </div>
+            <!--
             <div class="large-3 columns" id="sumary">
                 <div class="row">
                     <div class="large-12 columns">
@@ -1026,6 +1029,7 @@ class Infhotel
                     </div>
                 </div>
             </div>
+            -->
         </div>
         <div class="row">
             <div class="large-6 columns">
