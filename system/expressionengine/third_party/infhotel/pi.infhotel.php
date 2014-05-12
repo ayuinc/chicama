@@ -666,6 +666,17 @@ class Infhotel
         
         $json = ee()->TMPL->fetch_param('request');
         
+        $person = array(
+            "TDocumento" => $document_id,
+            "TMaterno" => "ApMaterno",  
+            "TNacionalidad" => $country,      
+            "TNombre" => $first_name,
+            "TPaterno" => $last_name,  
+            "TTarjeta" => $card_id,
+            "TTipoDocumento" => $document_type,
+            "TTipoTarjeta" => $card_type 
+        );
+
         $json = str_replace("(a)", "{", $json);
         $json = str_replace("(b)", "}", $json);
         $json = str_replace('(c)', '"', $json);
@@ -674,9 +685,10 @@ class Infhotel
         $json = str_replace("(f)", ",", $json);
         
         $data = json_decode($json, true);
-        $data = json_encode($data);
-        return $first_name." ".$last_name." ".$dni." ".$country." ".$document_id." ".$document_type." ".$card_type." ".$card_id;
-        //return $data;        
+        array_push($data["pasajeros"]["1"],$person);
+        //$data = json_encode($data);
+        //return $first_name." ".$last_name." ".$dni." ".$country." ".$document_id." ".$document_type." ".$card_type." ".$card_id;
+        return var_dump($data);        
         //$precio = ee()->TMPL->fetch_param('preio');
         /*$cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
