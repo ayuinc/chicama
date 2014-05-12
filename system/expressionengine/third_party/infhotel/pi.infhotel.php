@@ -674,9 +674,9 @@ class Infhotel
         $json = str_replace("(f)", ",", $json);
         
         $data = json_decode($json, true);
-        $data = json_encode($data);
-        //return var_dump($data
-        return $data;        
+        //$data = json_encode($data);
+        return var_dump($data);
+        //return $data;        
         //$precio = ee()->TMPL->fetch_param('preio');
         /*$cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
@@ -768,7 +768,7 @@ class Infhotel
                         <p>Last/Family Name *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="last_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="last_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="">
                     </div>
                 </div>
                 <div class="row">
@@ -784,7 +784,7 @@ class Infhotel
                         <p>Document ID *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="document_id" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR DOCUMENT ID" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="document_id" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR DOCUMENT ID" required="" >
                     </div>
                 </div>
                 <div class="row">
@@ -826,7 +826,7 @@ class Infhotel
                         <p>Name on card *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER NAME OF CARD" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER NAME OF CARD" required="" >
                     </div>
                 </div>
                 <div class="row">
@@ -842,7 +842,7 @@ class Infhotel
                         <p>Card Number *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="card_id" value="" id="freeform_phone" maxlength="9" placeholder="ENTER CARD NUMBER" required="" pattern="telef" data-invalid="">
+                        <input type="text" name="card_id" value="" id="freeform_phone" maxlength="9" placeholder="ENTER CARD NUMBER" required="" >
                     </div>
                 </div>
                 <div class="row">
