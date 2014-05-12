@@ -2,7 +2,15 @@
 <p>Tu código de reserva es: </p>
 {exp:get_post_vars parse="inward"}
 	{exp:infhotel:insertarreservar
-		request="{post_request}"}
+		request="{post_request}"
+		first_name="{first_name}"
+		last_name="{last_name}"
+		country="{country}"
+		document_id="{document_id}"
+		document_type="{document_type}"
+		card_id="{card_id}"
+		card_type="{card_type}"
+		}
 	{/exp:infhotel:insertarreservar}
 {/exp:get_post_vars}
 {embed="includes/footer"}
