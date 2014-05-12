@@ -340,7 +340,7 @@ class Infhotel
                                             <p>Guests</p>
                                         </div>
                                         <div class="large-6 columns">
-                                            <select name="persons_number"  id="guests_suite'.$id.'" required="" pattern="number" data-invalid="">
+                                            <select name="persons_number"  id="guests_suite'.$i.'" required="" pattern="number" data-invalid="">
                                               <option value="1" selected="selected">1</option>
                                               <option value="2">2</option>
                                               <option value="3">3</option>
@@ -374,54 +374,54 @@ class Infhotel
                 }
                 if ($i<$ocean_view) {
                     if($i<$it_sim){
-                    $response .= '<div class="row">
-                <div class="large-5 columns">
-                    <div class="row">
-                        <div class="large-5 columns">
-                            <figure>
-                                 <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
-                            </figure>
-                        </div>
-                        <div class="large-7 columns">
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    <h2 id="type_hab_simple'.$i.'" >Ocean View</h2>
+                        $response .= '<div class="row">
+                    <div class="large-5 columns">
+                        <div class="row">
+                            <div class="large-5 columns">
+                                <figure>
+                                     <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                                </figure>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <h2 id="type_hab_simple'.$i.'" >Ocean View</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-6 columns">
+                                        <p>Guests</p>
+                                    </div>
+                                    <div class="large-6 columns">
+                                        <select name="persons_number"  id="guests_simple'.$i.'" required="" pattern="number" data-invalid="">
+                                          <option value="1" selected="selected">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="large-6 columns">
-                                    <p>Guests</p>
-                                </div>
-                                <div class="large-6 columns">
-                                    <select name="persons_number"  id="guests_simple'.$i.'" required="" pattern="number" data-invalid="">
-                                      <option value="1" selected="selected">1</option>
-                                      <option value="2">2</option>
-                                      <option value="3">3</option>
-                                    </select>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                    <div class="large-7 columns">
+                        <div class="row">
+                            <div class="large-8 columns">
+                                <input id="final_cost_simple'.$i.'" type="text" name="final_cost_simple'.$i.'" value="110"/>   
+                                <p id="num_guest_simple'.$i.'">One Guest</p>
+                                <h2 id="cost_simple'.$i.'">USD 110/night</h2>
+                                <span>*OFERTA</span>
+                            </div>
+                            <div class="large-4 columns">
+                                <button id="add_room_simple'.$i.'" type="button">Click Me simple(?)!</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="large-7 columns">
-                    <div class="row">
-                        <div class="large-8 columns">
-                            <input id="final_cost_simple'.$i.'" type="text" name="final_cost_simple'.$i.'" value="110"/>   
-                            <p id="num_guest_simple'.$i.'">One Guest</p>
-                            <h2 id="cost_simple'.$i.'">USD 110/night</h2>
-                            <span>*OFERTA</span>
-                        </div>
-                        <div class="large-4 columns">
-                            <button id="add_room_simple'.$i.'" type="button">Click Me simple(?)!</button>
-                        </div>
-                    </div>
-                </div>
-                </div>';
+                    </div>';
                 }
                 else{
                     if($i<$it_dou){
