@@ -3,13 +3,13 @@
 {exp:get_post_vars parse="inward"}
 	{exp:infhotel:insertarreservar
 		request="{post_request}"
-		first_name="{first_name}"
-		last_name="{last_name}"
-		country="{country}"
-		document_id="{document_id}"
-		document_type="{document_type}"
-		card_id="{card_id}"
-		card_type="{card_type}"
+		first_name="{post_first_name}"
+		last_name="{post_last_name}"
+		country="{post_country}"
+		document_id="{post_document_id}"
+		document_type="{post_document_type}"
+		card_id="{post_card_id}"
+		card_type="{post_card_type}"
 		}
 	{/exp:infhotel:insertarreservar}
 {/exp:get_post_vars}
