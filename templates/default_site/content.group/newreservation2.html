@@ -194,7 +194,7 @@
 			switch(type_hab){
 				case 1:
 				    $(buttom).click(function(){
-				    	console.log($(select_box).val());
+				    	var valor = $(select_box).val();
 		    			var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -205,7 +205,7 @@
 				    	//console.log(buttom+":"+simple);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");	
@@ -219,7 +219,7 @@
 				    break;
 				case 2:
 				    $(buttom).click(function(){
-				    	console.log($(select_box).val());
+				    	var valor = $(select_box).val();
 				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -230,7 +230,7 @@
 				    	//console.log(buttom+":"+doble);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -244,7 +244,7 @@
 				    break;
 				case 3:
 				    $(buttom).click(function(){
-				    	console.log($(select_box).val());
+				    	var valor = $(select_box).val();
 				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -255,7 +255,7 @@
 				    	//console.log(buttom+":"+triple);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -269,7 +269,7 @@
 				    break;
 				case 4:
 				    $(buttom).click(function(){
-				    	console.log($(select_box).val());
+				    	var valor = $(select_box).val();
 				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -281,7 +281,7 @@
 				    	//console.log(buttom+":"+suite);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
