@@ -808,7 +808,7 @@ class Infhotel
                         <p>Name on card *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER NAME OF CARD" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
@@ -824,7 +824,7 @@ class Infhotel
                         <p>Card Number *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER" required="" pattern="telef" data-invalid="">
+                        <input type="text" name="card_number" value="" id="freeform_phone" maxlength="9" placeholder="ENTER CARD NUMBER" required="" pattern="telef" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
@@ -832,19 +832,23 @@ class Infhotel
                         <p>Expiration Date *</p>
                     </div>
                     <div class="large-3 columns">
-                        <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
-                        <option value="Month">Month</option>
-                        <option value="Enero">Enero Islands</option>
-                        <option value="Febrero">Febrero</option>
-                        <option value="Marzo">Marzo</option>
+                        <select name="expiration_date_month" id="freeform_country" placeholder="ENTER MONTH" required="">
+                            <option value="Month">Month</option>
+                            <option value="Enero">Enero Islands</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
                         </select>
                     </div>
                     <div class="large-3 columns">
-                        <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
-                        <option value="Year">Year</option>
-                        <option value="ax">Aland Islands</option>
-                        <option value="al">Albania</option>
-                        <option value="dz">Algeria</option>
+                        <select name="expiration_date_year" id="freeform_country" placeholder="ENTER YEAR" required="">
+                            <option value="Year">Year</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
                         </select>
                     </div>
                 </div>
@@ -858,11 +862,11 @@ class Infhotel
                         <p>Country *</p>
                     </div>
                     <div class="large-9 columns">
-                        <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
-                        <option value="af">Afghanistan</option>
-                        <option value="ax">Aland Islands</option>
-                        <option value="al">Albania</option>
-                        <option value="dz">Algeria</option>
+                        <select name="country_billing" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+                            <option value="af">Afghanistan</option>
+                            <option value="ax">Aland Islands</option>
+                            <option value="al">Albania</option>
+                            <option value="dz">Algeria</option>
                         </select>
                     </div>
                 </div>
@@ -871,7 +875,7 @@ class Infhotel
                         <p>Street *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="street_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STREET BILLING" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
@@ -879,7 +883,7 @@ class Infhotel
                         <p>City *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="city_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER CITY BILLING" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
@@ -887,7 +891,7 @@ class Infhotel
                         <p>State *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="state_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STATE BILLING" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
@@ -895,7 +899,7 @@ class Infhotel
                         <p>Postal Code *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="postal_code" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER POSTAL CODE" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 
