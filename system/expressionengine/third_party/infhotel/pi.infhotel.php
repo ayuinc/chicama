@@ -686,16 +686,8 @@ class Infhotel
         
         $data = json_decode($json, true);
         $data["Pasajeros"]["0"]= $person;
-        $data = json_encode($data);
-        //return $first_name." ".$last_name." ".$dni." ".$country." ".$document_id." ".$document_type." ".$card_type." ".$card_id;
-        return $data;        
-        //$precio = ee()->TMPL->fetch_param('preio');
-        /*$cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
-        $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
-        $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
-        $hora_checkin = ee()->TMPL->fetch_param('hora_checkin');
-        $hora_checkout = ee()->TMPL->fetch_param('hora_checkin');
-        */
+        $data["NPasajero"]="10";
+        
         /*
         $data = array(  "FLlegada" => "2014-10-06 12:00:00.000",
                         "FSalida" => "2014-10-13 12:00:00.000", 
@@ -726,7 +718,7 @@ class Infhotel
                                             )
                                         )
         );
-
+        */
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
