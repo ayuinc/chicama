@@ -760,7 +760,7 @@ class Infhotel
                         <p>Firt/Given Name *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" >
                     </div>
                 </div>
                 <div class="row">
@@ -792,7 +792,7 @@ class Infhotel
                         <p>E-mail*</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="email" value="" id="freeform_email" maxlength="150" placeholder="ENTER YOUR E-MAIL" required="" data-invalid="">
+                        <input type="text" name="email" value="" id="freeform_email" maxlength="150" placeholder="ENTER YOUR E-MAIL" required="" >
                     </div>
                 </div>
                 <div class="row">
@@ -800,7 +800,7 @@ class Infhotel
                         <p>Phone Number *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER" required="" pattern="telef" data-invalid="">
+                        <input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER" required=""  >
                     </div>
                 </div>
                 <div class="row">
@@ -893,7 +893,7 @@ class Infhotel
                         <p>Street *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="street_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STREET BILLING" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="street_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STREET BILLING" >
                     </div>
                 </div>
                 <div class="row">
@@ -901,7 +901,7 @@ class Infhotel
                         <p>City *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="city_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER CITY BILLING" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="city_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER CITY BILLING" >
                     </div>
                 </div>
                 <div class="row">
@@ -909,7 +909,7 @@ class Infhotel
                         <p>State *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="state_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STATE BILLING" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="state_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STATE BILLING" >
                     </div>
                 </div>
                 <div class="row">
@@ -917,7 +917,7 @@ class Infhotel
                         <p>Postal Code *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="postal_code" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER POSTAL CODE" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="postal_code" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER POSTAL CODE" >
                     </div>
                 </div>
                 
