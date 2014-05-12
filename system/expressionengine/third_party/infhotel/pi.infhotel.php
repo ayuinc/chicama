@@ -91,7 +91,7 @@ class Infhotel
     }
     
     public function tipodedocumento(){
-        $form = '<select name="tipo_de_documento" id="tipo_de_documento" > <option value="TIPO DE DOCUMENTO" selected>TIPO DE DOCUMENTO</option>';
+        $form = '<select name="document_type" id="document_type" > <option value="TIPO DE DOCUMENTO" selected>TIPO DE DOCUMENTO</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoDocumento';
         //  Initiate curl
@@ -655,9 +655,10 @@ class Infhotel
     }
 
     public function insertarreservar(){
-        /*$nombre = ee()->TMPL->fetch_param('nombre');
-        $apellido = ee()->TMPL->fetch_param('apellido');
+        /*$first_name = ee()->TMPL->fetch_param('first_name');
+        $last_name = ee()->TMPL->fetch_param('last_name');
         $dni = ee()->TMPL->fetch_param('dni');
+        $country = ee()->TMPL->fetch_param('country');
         $tipo_dni = ee()->TMPL->fetch_param('tipo_dni');
         $tarjeta = ee()->TMPL->fetch_param('tarjeta');
         $tipo_tarjeta = ee()->TMPL->fetch_param('tipo_tarjeta');
@@ -767,6 +768,22 @@ class Infhotel
                     </div>
                     <div class="large-9 columns">
                         <input type="text" name="last_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Document type *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        {exp:infhotel:tipodedocumento}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Document ID *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="document_id" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR DOCUMENT ID" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
