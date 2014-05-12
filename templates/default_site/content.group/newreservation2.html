@@ -205,7 +205,7 @@
 				    	//console.log(buttom+":"+simple);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + $( select_box ).val();
+				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");	
@@ -230,7 +230,7 @@
 				    	//console.log(buttom+":"+doble);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + $( select_box ).val();
+				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -255,7 +255,7 @@
 				    	//console.log(buttom+":"+triple);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + $( select_box ).val();
+				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -281,7 +281,7 @@
 				    	//console.log(buttom+":"+suite);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = data["NPasajero"] + $( select_box ).val();
+				    	data["NPasajero"] = data["NPasajero"] + parseInt($( select_box ).val());
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
