@@ -262,7 +262,7 @@ class Infhotel
         else{
              $it_dou=$rooms_num - $it_sim;
         }
-        if($total_hab == 0){
+        if($total_hab < $rooms_num){
             $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
         }
         else{
