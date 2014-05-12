@@ -59,6 +59,7 @@
       });
 
 	$(function() {
+		//var tercer_paso = new String('{exp:infhotel:tercer_paso}');
 		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
@@ -79,7 +80,7 @@
 			    "HSalida": checkout_date,
 			    "Habitaciones": {},
 			    "MObservacion": "",				
-                "NPasajero": "0" ,
+                "NPasajero": 0 ,
                 "Pasajeros" : {}
 		};
 
@@ -176,8 +177,7 @@
 			switch(type_hab){
 				case 1:
 				    $(buttom).click(function(){
-				    	var valor = parseInt($(select_box).val());
-				    	console.log(valor);
+				    	var valor = $(select_box).val();
 		    			var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -188,9 +188,7 @@
 				    	//console.log(buttom+":"+simple);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = parseInt(data["NPasajero"]);
-				    	data["NPasajero"] = parseInt(data["NPasajero"]) + valor;
-				    	data["NPasajero"] = new String(data["NPasajero"]);
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");	
@@ -204,8 +202,7 @@
 				    break;
 				case 2:
 				    $(buttom).click(function(){
-				    	var valor = parseInt($(select_box).val());
-				    	console.log(valor);
+				    	var valor = $(select_box).val();
 				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -216,9 +213,7 @@
 				    	//console.log(buttom+":"+doble);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = parseInt(data["NPasajero"]);
-				    	data["NPasajero"] = parseInt(data["NPasajero"]) + valor;
-				    	data["NPasajero"] = new String(data["NPasajero"]);
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -232,8 +227,7 @@
 				    break;
 				case 3:
 				    $(buttom).click(function(){
-				    	var valor = parseInt($(select_box).val());
-				    	console.log(valor);
+				    	var valor = $(select_box).val();
 				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -244,9 +238,7 @@
 				    	//console.log(buttom+":"+triple);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = parseInt(data["NPasajero"]);
-				    	data["NPasajero"] = parseInt(data["NPasajero"]) + valor;
-				    	data["NPasajero"] = new String(data["NPasajero"]);
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -260,8 +252,7 @@
 				    break;
 				case 4:
 				    $(buttom).click(function(){
-				    	var valor = parseInt($(select_box).val());
-				    	console.log(valor);
+				    	var valor = $(select_box).val();
 				    	var temp = {
 	    				 	"CantHab" : 1, 
                             "NPrecio" : $(final_cost).val(),  
@@ -273,9 +264,7 @@
 				    	//console.log(buttom+":"+suite);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
-				    	data["NPasajero"] = parseInt(data["NPasajero"]);
-				    	data["NPasajero"] = parseInt(data["NPasajero"]) + valor;
-				    	data["NPasajero"] = new String(data["NPasajero"]);
+				    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
