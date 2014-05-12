@@ -245,27 +245,27 @@ class Infhotel
         $ocean_view = $disponibilidad["simple"] + $disponibilidad["double"];
         $garden_view = $disponibilidad["triple"] + $disponibilidad["suite"];
         $total_hab = $ocean_view + $garden_view;
-
-        $it_sui = $rooms_num - $disponibilidad["suite"];
-        //$it_tri = $rooms_num - $disponibilidad["triple"];
-        $it_sim = $rooms_num - $disponibilidad["simple"];
-        //$it_dou = $rooms_num - $disponibilidad["double"];
-        if($it_sui<=0){
-            $it_tri=0;
-        }
-        else{
-            $it_tri=$rooms_num-$it_sui;
-        }      
-        if($it_sim<=0){
-            $it_dou=0;
-        }
-        else{
-             $it_dou=$rooms_num - $it_sim;
-        }
         if($total_hab < $rooms_num){
-            $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
-        }
-        else{
+                    $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
+                }
+            else{
+            $it_sui = $rooms_num - $disponibilidad["triple"];
+            //$it_tri = $rooms_num - $disponibilidad["triple"];
+            $it_sim = $rooms_num - $disponibilidad["double"];
+            //$it_dou = $rooms_num - $disponibilidad["double"];
+            if($it_sui<=0){
+                $it_tri=$rooms_num;
+            }
+            else{
+                $it_tri=$rooms_num-$disponibilidad["suite"];
+            }      
+            if($it_sim<=0){
+                $it_dou=$rooms_num;
+            }
+            else{
+                 $it_dou=$rooms_num - $disponibilidad["simple"];
+            }
+        
             for ($i=0; $i<$rooms_num ; $i++) { 
                 $response .= '<div class="row" id="rooms'.$i.'">';
                 if ( $i<$garden_view) {
