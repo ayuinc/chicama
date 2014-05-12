@@ -686,7 +686,7 @@ class Infhotel
         
         $data = json_decode($json, true);
         $data["Pasajeros"]["0"]= $person;
-        //$data["NPasajero"]="10";
+        $data["NPasajero"]="10";
         
         /*
         $data = array(  "FLlegada" => "2014-10-06 12:00:00.000",
