@@ -685,7 +685,7 @@ class Infhotel
         $json = str_replace("(f)", ",", $json);
         
         $data = json_decode($json, true);
-        array_push($data["pasajeros"]["1"],$person);
+        $data["Pasajeros"]["0"]=array($person);
         //$data = json_encode($data);
         //return $first_name." ".$last_name." ".$dni." ".$country." ".$document_id." ".$document_type." ".$card_type." ".$card_id;
         return var_dump($data);        
