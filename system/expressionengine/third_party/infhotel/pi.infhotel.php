@@ -63,7 +63,7 @@ class Infhotel
     // END
 
     public function tipodetarjeta(){
-        $form = '<select name="type_of_card" id="tipo_de_tarjeta" > <option value="TIPO DE TARJETA" selected>TIPO DE TARJETA</option>';
+        $form = '<select name="card_type" id="tipo_de_tarjeta" > <option value="TIPO DE TARJETA" selected>TIPO DE TARJETA</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoTarjeta';
         //  Initiate curl
@@ -659,9 +659,10 @@ class Infhotel
         $last_name = ee()->TMPL->fetch_param('last_name');
         $dni = ee()->TMPL->fetch_param('dni');
         $country = ee()->TMPL->fetch_param('country');
-        $tipo_dni = ee()->TMPL->fetch_param('tipo_dni');
-        $tarjeta = ee()->TMPL->fetch_param('tarjeta');
-        $tipo_tarjeta = ee()->TMPL->fetch_param('tipo_tarjeta');
+        $document_id = ee()->TMPL->fetch_param('document_id');
+        $document_type = ee()->TMPL->fetch_param('document_type');
+        $card_id = ee()->TMPL->fetch_param('card_id');
+        $card_type = ee()->TMPL->fetch_param('card_type');
         */
         $json = ee()->TMPL->fetch_param('request');
         
@@ -841,7 +842,7 @@ class Infhotel
                         <p>Card Number *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="card_number" value="" id="freeform_phone" maxlength="9" placeholder="ENTER CARD NUMBER" required="" pattern="telef" data-invalid="">
+                        <input type="text" name="card_id" value="" id="freeform_phone" maxlength="9" placeholder="ENTER CARD NUMBER" required="" pattern="telef" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
