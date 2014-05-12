@@ -320,54 +320,56 @@ class Infhotel
                 </div>';
                     }
                     else{
-                        $response .= ' <div class="row">
-                        <div class="large-5 columns">
-                        <div class="row">
+                        if($i<$it_sui){
+                            $response .= ' <div class="row">
                             <div class="large-5 columns">
-                                <figure>
-                                     <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
-                                </figure>
-                            </div>
-                            <div class="large-7 columns">
-                                <div class="row">
-                                    <div class="large-12 columns">
-                                        <h2 id="type_hab_suite'.$i.'" >Garden View</h2>
+                            <div class="row">
+                                <div class="large-5 columns">
+                                    <figure>
+                                         <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                                    </figure>
+                                </div>
+                                <div class="large-7 columns">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <h2 id="type_hab_suite'.$i.'" >Garden View</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-6 columns">
+                                            <p>Guests</p>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <select name="persons_number"  id="guests_suite'.$id.'" required="" pattern="number" data-invalid="">
+                                              <option value="1" selected="selected">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="large-6 columns">
-                                        <p>Guests</p>
-                                    </div>
-                                    <div class="large-6 columns">
-                                        <select name="persons_number"  id="guests_suite'.$id.'" required="" pattern="number" data-invalid="">
-                                          <option value="1" selected="selected">1</option>
-                                          <option value="2">2</option>
-                                          <option value="3">3</option>
-                                        </select>
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                        <div class="large-7 columns">
+                            <div class="row">
+                                <div class="large-8 columns">
+                                    <input id="final_cost_suite'.$i.'" type="text" name="final_cost_suite'.$i.'" value="100"/>           
+                                    <p id="num_guest_suite'.$i.'">One Guest</p>
+                                    <h2 id="cost_suite'.$i.'">USD 100/night</h2>
+                                    <span>*OFERTA</span>
+                                </div>
+                                <div class="large-4 columns">
+                                    <button id="add_room_suite'.$i.'" type="button">Click Me suite(?)!</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="large-7 columns">
-                        <div class="row">
-                            <div class="large-8 columns">
-                                <input id="final_cost_suite'.$i.'" type="text" name="final_cost_suite'.$i.'" value="100"/>           
-                                <p id="num_guest_suite'.$i.'">One Guest</p>
-                                <h2 id="cost_suite'.$i.'">USD 100/night</h2>
-                                <span>*OFERTA</span>
-                            </div>
-                            <div class="large-4 columns">
-                                <button id="add_room_suite'.$i.'" type="button">Click Me suite(?)!</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>';
+                    </div>';
+                        }
                     }
                 }
                 if ($i<$ocean_view) {
@@ -422,6 +424,7 @@ class Infhotel
                 </div>';
                 }
                 else{
+                    if($i<$it_dou){
                     $response .= '<div class="row">
                 <div class="large-5 columns">
                     <div class="row">
@@ -470,6 +473,7 @@ class Infhotel
                     </div>
                 </div>
                 </div>';
+            }
                     }
                 }
                 $response .= '</div>';
