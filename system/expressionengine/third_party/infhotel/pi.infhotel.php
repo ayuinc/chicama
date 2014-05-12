@@ -320,7 +320,6 @@ class Infhotel
                 </div>';
                     }
                     else{
-                        if($i<$it_sui){
                             $response .= ' <div class="row">
                             <div class="large-5 columns">
                             <div class="row">
@@ -369,7 +368,6 @@ class Infhotel
                             </div>
                         </div>
                     </div>';
-                        }
                     }
                 }
                 if ($i<$ocean_view) {
@@ -424,7 +422,6 @@ class Infhotel
                     </div>';
                 }
                 else{
-                    if($i<$it_dou){
                     $response .= '<div class="row">
                 <div class="large-5 columns">
                     <div class="row">
@@ -473,7 +470,7 @@ class Infhotel
                     </div>
                 </div>
                 </div>';
-            }
+            
                     }
                 }
                 $response .= '</div>';
