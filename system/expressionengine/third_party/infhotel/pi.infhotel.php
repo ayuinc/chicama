@@ -91,7 +91,7 @@ class Infhotel
     }
     
     public function tipodedocumento(){
-        $form = '<select name="document_type" id="document_type" > <option value="TIPO DE DOCUMENTO" selected>TIPO DE DOCUMENTO</option>';
+        $form = '<select name="document_type" id="document_type" > <option value="00" selected>TIPO DE DOCUMENTO</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoDocumento';
         //  Initiate curl
@@ -856,7 +856,7 @@ class Infhotel
                     <div class="large-3 columns">
                         <select name="expiration_date_month" id="freeform_country" placeholder="ENTER MONTH" required="">
                             <option value="Month">Month</option>
-                            <option value="Enero">Enero Islands</option>
+                            <option value="Enero">Enero</option>
                             <option value="Febrero">Febrero</option>
                             <option value="Marzo">Marzo</option>
                             <option value="Abril">Abril</option>
