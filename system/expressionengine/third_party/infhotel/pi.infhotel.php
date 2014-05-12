@@ -685,10 +685,10 @@ class Infhotel
         $json = str_replace("(f)", ",", $json);
         
         $data = json_decode($json, true);
-        $data["Pasajeros"]["0"]=array($person);
-        //$data = json_encode($data);
+        $data["Pasajeros"]["0"]= $person;
+        $data = json_encode($data);
         //return $first_name." ".$last_name." ".$dni." ".$country." ".$document_id." ".$document_type." ".$card_type." ".$card_id;
-        return var_dump($data);        
+        return $data;        
         //$precio = ee()->TMPL->fetch_param('preio');
         /*$cantidad_de_habitaciones = ee()->TMPL->fetch_param('cantidad_de_habitaciones');
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
