@@ -80,7 +80,7 @@
 			    "HSalida": checkout_date,
 			    "Habitaciones": {},
 			    "MObservacion": "",				
-                "NPasajero": "",
+                "NPasajero": 0,
                 "Pasajeros" : {}
 		};
 
@@ -205,9 +205,10 @@
 				    	//console.log(buttom+":"+simple);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
+				    	data["NPasajero"] = data["NPasajero"] + 1;
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
-				    	send = send.replace(/}/gi, "(b)");
+				    	send = send.replace(/}/gi, "(b)");	
 				    	send = send.replace(/"/gi, "(c)");
 				    	send = send.replace(/:/gi, "(d)");
 				    	send = send.replace(/ /gi, "(e)");
@@ -229,6 +230,7 @@
 				    	//console.log(buttom+":"+doble);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
+				    	data["NPasajero"] = data["NPasajero"] + 1;
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -253,6 +255,7 @@
 				    	//console.log(buttom+":"+triple);
 				    	//console.log(temp);
 				    	data["Habitaciones"][orden]=temp;
+				    	data["NPasajero"] = data["NPasajero"] + 1;
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
@@ -278,6 +281,7 @@
 				    	//console.log(buttom+":"+suite);
 				    	//console.log(data);
 				    	data["Habitaciones"][orden]=temp;
+				    	data["NPasajero"] = data["NPasajero"] + 1;
 				    	var send = JSON.stringify(data);
 				    	send = send.replace(/{/gi, "(a)");
 				    	send = send.replace(/}/gi, "(b)");
