@@ -63,7 +63,7 @@ class Infhotel
     // END
 
     public function tipodetarjeta(){
-        $form = '<select name="tipo_de_tarjeta" id="tipo_de_tarjeta" > <option value="TIPO DE TARJETA" selected>TIPO DE TARJETA</option>';
+        $form = '<select name="type_of_card" id="tipo_de_tarjeta" > <option value="TIPO DE TARJETA" selected>TIPO DE TARJETA</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoTarjeta';
         //  Initiate curl
@@ -119,7 +119,8 @@ class Infhotel
     }
 
     public function pais(){
-        $form = '<select name="pais" id="pais" > <option value="PAÍS" selected>PAÍS</option>';
+        //$form = '<select name="pais" id="pais" > <option value="PAÍS" selected>PAÍS</option>';
+        $form = '<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetPais';
         //  Initiate curl
@@ -338,7 +339,7 @@ class Infhotel
                                         <p>Guests</p>
                                     </div>
                                     <div class="large-6 columns">
-                                        <select name="persons_number"  id="guests_suite'.$i.'" required="" pattern="number" data-invalid="">
+                                        <select name="persons_number"  id="guests_suite'.$id.'" required="" pattern="number" data-invalid="">
                                           <option value="1" selected="selected">1</option>
                                           <option value="2">2</option>
                                           <option value="3">3</option>
@@ -746,7 +747,7 @@ class Infhotel
         </div>
         <div class="row">
             <div class="large-9 columns">
-                <!--
+                
                 <div class="row">
                     <div id="sub_title_reservation" class="row">
                         <b><h3>Guest Information</h3></b>
@@ -765,7 +766,7 @@ class Infhotel
                         <p>Last/Family Name *</p>
                     </div>
                     <div class="large-9 columns">
-                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+                        <input type="text" name="last_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
                 <div class="row">
@@ -789,19 +790,7 @@ class Infhotel
                         <p>Country *</p>
                     </div>
                     <div class="large-9 columns">
-                        <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
-                        <option value="af">Afghanistan</option>
-                        <option value="ax">Aland Islands</option>
-                        <option value="al">Albania</option>
-                        <option value="dz">Algeria</option>
-                        <option value="as">American Samoa</option>
-                        <option value="ad">Andorra</option>
-                        <option value="ao">Angola</option>
-                        <option value="ai">Anguilla</option>
-                        <option value="aq">Antarctica</option>
-                        <option value="ag">Antigua and Barbuda</option>
-                        <option value="ar">Argentina</option>
-                        </select>
+                        {exp:infhotel:pais}
                     </div>
                 </div>
                 <div class="row">
@@ -827,12 +816,7 @@ class Infhotel
                         <p>Card type *</p>
                     </div>
                     <div class="large-9 columns">
-                        <select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
-                        <option value="af">Afghanistan</option>
-                        <option value="ax">Aland Islands</option>
-                        <option value="al">Albania</option>
-                        <option value="dz">Algeria</option>
-                        </select>
+                        {exp:infhotel:tipodetarjeta}
                     </div>
                 </div>
                 <div class="row">
@@ -914,7 +898,7 @@ class Infhotel
                         <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
                     </div>
                 </div>
-                -->
+                
                 <div class="row">
                     <div class="large-3 columns">
                         <p>Request *</p>
