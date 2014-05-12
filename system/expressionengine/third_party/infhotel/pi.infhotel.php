@@ -732,7 +732,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result."  ".$data_string; */
+        return $result; 
     }
     public function tercer_paso(){
         $form = '<div id="form_box_3">
