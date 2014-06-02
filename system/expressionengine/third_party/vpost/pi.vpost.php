@@ -259,7 +259,37 @@ class Vpost
             return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
             //inicializacion o el VPOS no ha enviado valores correctos
         }
-        return $idorden;
+        return "<p> Numero de Orden:".$idorden."</p>".
+                '<form name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
+
+   <table border="0">
+  <tr>
+    <td>IDACQUIRER:</td>
+    <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
+  </tr>
+  <tr>
+    <td>COMMERCE:</td>
+    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="6573"></td>
+  </tr>
+  <tr>
+    <td>XML:</td>
+    <td><input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'></td>
+  </tr>
+  <tr>
+    <td>SIGNATURE:</td>
+    <td><input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'></td>
+  </tr>
+  <tr>
+    <td>SESSIONKEY:</td>
+    <td><input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="envio" id="envio" value="Enviar" /></td>
+
+    </tr>
+</table>
+
+</form>';
     // END
         }
 }
