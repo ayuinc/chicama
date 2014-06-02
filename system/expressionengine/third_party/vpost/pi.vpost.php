@@ -201,7 +201,7 @@ class Vpost
     }
 
     public function test_envio(){
-       require_once 'vpos/vpos_pluging.php'; 
+       require_once 'vpos/vpos_plugin.php'; 
        $codigo1 ='840';
        $codigoAdquirente = 144;
        $codigoComercio = 6573;
