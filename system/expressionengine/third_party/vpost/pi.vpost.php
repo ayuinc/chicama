@@ -262,5 +262,6 @@ class Vpost
         return $idorden;
     // END
 }
+}
 /* End of file pi.vpost.php */
 /* Location: ./system/expressionengine/third_party/vpost/pi.vpost.php */
