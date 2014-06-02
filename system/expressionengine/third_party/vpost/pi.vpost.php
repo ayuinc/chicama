@@ -134,7 +134,7 @@ class Vpost
           //Puede haber un problema de mala configuración de las llaves,
           //vector deinicializacion o el VPOS no ha enviado valores
           //correctos
-              echo "<br> Respuesta Inv&acute;lida";
+              return "<br> Respuesta Inv&acute;lida";
           }
     }
     public function envio(){
@@ -191,10 +191,10 @@ class Vpost
         "brFIQ3P93NyzRiw6S5hEC/9fGAx5M/4tvPcvqqlsUkkThKGPfrku4u26plF4SFrh\n".
         "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
         "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
-        "-----END RSA PRIVATE KEY-----"
+        "-----END RSA PRIVATE KEY-----";
         if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
         }else{
-            $msj = "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
+            return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
             //inicializacion o el VPOS no ha enviado valores correctos
         }
         return $idorden;
@@ -253,15 +253,15 @@ class Vpost
         "brFIQ3P93NyzRiw6S5hEC/9fGAx5M/4tvPcvqqlsUkkThKGPfrku4u26plF4SFrh\n".
         "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
         "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
-        "-----END RSA PRIVATE KEY-----"
+        "-----END RSA PRIVATE KEY-----";
         if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
         }else{
-            $msj = "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
+            return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
             //inicializacion o el VPOS no ha enviado valores correctos
         }
         return $idorden;
     // END
-}
+        }
 }
 /* End of file pi.vpost.php */
 /* Location: ./system/expressionengine/third_party/vpost/pi.vpost.php */
