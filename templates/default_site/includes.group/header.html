@@ -20,6 +20,7 @@
         <script type="text/javascript" src="//use.typekit.net/lsr8drn.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+        <meta name="google-site-verification" content="fcO8WzX_bebtme1OLBzli8SUmPkL4Nw9qHgDVeHmG1o" />
         
         {if segment_1=='en'}
 	    <meta name="description" content="Where history blends with the ocean." />
@@ -51,6 +52,36 @@
 	    {if:else}
 	    <meta property="og:description" content="Donde la historia se mezcla con el mar." />
 	    {/if}		
+	    
+	    {if segment_2=='reservation-confirmed' OR segment_2=='reservacion-confirmada'}
+			<!-- Facebook Conversion Code for Book a Room Form -->
+			
+			<script type="text/javascript">
+
+			var fb_param = {};
+	
+			fb_param.pixel_id = '6017024993180';
+			
+			fb_param.value = '0.01';
+			
+			fb_param.currency = 'PEN';
+			
+			(function(){
+			
+			var fpw = document.createElement('script');
+			
+			fpw.async = true;
+			
+			fpw.src = '//connect.facebook.net/en_US/fp.js';
+			
+			var ref = document.getElementsByTagName('script')[0];
+			
+			ref.parentNode.insertBefore(fpw, ref);
+			
+			})();
+			
+			</script>
+	    {/if}
 		
 		<!--Kiss Metrix-->
 		<script type="text/javascript">var _kmq = _kmq || [];
