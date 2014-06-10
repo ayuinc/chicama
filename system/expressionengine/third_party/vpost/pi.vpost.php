@@ -106,7 +106,7 @@ class Vpost
          $arrayOut = '';
 
         //valor del vector de inicializacion
-         $VI = "0000000000000000";
+         $VI = "F20CA985A4B34DEC";
 
           if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
 
@@ -168,7 +168,7 @@ class Vpost
        $arrayOut['SESSIONKEY']="";
 
        # Vector
-       $VI = "0000000000000000";
+       $VI = "F20CA985A4B34DEC";
 
         $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
         "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
@@ -230,7 +230,7 @@ class Vpost
        $arrayOut['SESSIONKEY']="";
 
        # Vector
-       $VI = "0000000000000000";
+       $VI = "F20CA985A4B34DEC";
 
        $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
         "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
@@ -239,7 +239,7 @@ class Vpost
         "DRr1jPeilfsiFwiO8wIDAQAB\n".
         "-----END PUBLIC KEY-----";
 
-        $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
+         $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
         "MIICWwIBAAKBgQCw9S8vnGIW04tG4N98f0HXoMJlB6K9v2iJZlsFYNtP6Xv6Ax5d\n".
         "LEBzym/edPj89lraAxzmZUVPzPVoLlT0gSZMjlPPPfTyQp4QRWkME9AtT71q5gw5\n".
         "lISCW0X8bVWqwksJ515Va0LMjSohf2V+azVw2QBTS3IofH5DUfPOjSAfXwIDAQAB\n".
