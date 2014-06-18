@@ -341,7 +341,6 @@ class Infhotel
                 if ( $i<$garden_view) {
                     if($i<$first_iteration_garden){ //Simple Garden
                         $response .= '<div class="row">
-                         <div class="row">
                             <div class="large-5 columns">
                             <div class="row">
                                 <div class="large-5 columns">
@@ -495,8 +494,7 @@ class Infhotel
                 }
                 if ($i<$ocean_view) {
                     if($i<$first_iteration_ocean){ //Simple Ocean
-                        $response .= '<div class="row">
-                         <div class="row">
+                        $response .= ' <div class="row">
                             <div class="large-5 columns">
                             <div class="row">
                                 <div class="large-5 columns">
