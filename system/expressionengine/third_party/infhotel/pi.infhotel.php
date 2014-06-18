@@ -188,7 +188,7 @@ class Infhotel
         //$fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         //$fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
-        $rooms_num = 4;
+        $rooms_num = '4';
         $result='[
         {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
         {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
