@@ -90,12 +90,12 @@ class Vpost
         "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
         "-----END RSA PRIVATE KEY-----\n";
 
-        $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
-        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
-        "TEjv0SFkTM04qHyHFU90Da8Ep1F0gI2SFpCkLmQtsXKOrLrQTF0100dL/gDQlLt0\n".
-        "Ut8kM/PRLEM5thMPqtPq6G1GTjqmcsPzUUL18+tYwN3xFi4XBog4Hdv0ml1SRkVO\n".
-        "DRr1jPeilfsiFwiO8wIDAQAB\n".
-        "-----END PUBLIC KEY-----";
+        $llavePublicaFirma = "BEGIN PUBLIC KEY-----\n".
+        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
+        "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
+        "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
+        "pIs4aIDXarTYJGWlyQIDAQAB\n".
+        "-----END PUBLIC KEY-----\n";
 
          $arrayIn['IDACQUIRER'] =$IDACQUIRER;
          $arrayIn['IDCOMMERCE'] = $IDCOMMERCE;
