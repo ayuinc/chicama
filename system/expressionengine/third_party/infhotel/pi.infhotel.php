@@ -337,10 +337,10 @@ class Infhotel
             $second_iteration_ocean = $it_simple_ocean + $it_doble_ocean;
             //$third_iteration_ocean = 
             for ($i=0; $i<$rooms_num ; $i++) { 
-                $response .= 'Habitaciones';
+                $response .= '<div class="row" id="rooms'.$i.'">';
                 if ( $i<$garden_view) {
                     if($i<$first_iteration_garden){ //Simple Garden
-                        $response .= '
+                        $response .= '<div class="row">
                          <div class="row">
                             <div class="large-5 columns">
                             <div class="row">
@@ -392,7 +392,7 @@ class Infhotel
                     }
                     else{
                         if($i<$second_iteration_garden){ //Doble Garden
-                            $response .= '
+                            $response .= '<div class="row">
                                 <div class="large-5 columns">
                                 <div class="row">
                                     <div class="large-5 columns">
@@ -442,7 +442,7 @@ class Infhotel
                         </div>';
                         }
                         else{//Triple Garden
-                            $response .= '
+                            $response .= '<div class="row">
                             <div class="large-5 columns">
                                 <div class="row">
                                     <div class="large-5 columns">
@@ -495,14 +495,156 @@ class Infhotel
                 }
                 if ($i<$ocean_view) {
                     if($i<$first_iteration_ocean){ //Simple Ocean
-                        $response .= '<p>Simple Ocean</p>';
+                        $response .= '<div class="row">
+                         <div class="row">
+                            <div class="large-5 columns">
+                            <div class="row">
+                                <div class="large-5 columns">
+                                    <figure>
+                                         <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                                    </figure>
+                                </div>
+                                <div class="large-7 columns">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <h2 id="type_hab_simple_ocean'.$i.'">Ocean View</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-6 columns">
+                                            <p>Guests</p>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <select name="persons_number"  id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                              <option value="1" selected="selected">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="large-7 columns">
+                            <div class="row">
+                                <div class="large-8 columns">
+                                    <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="100"/>
+                                    <p id="num_guest_simple_ocean'.$i.'">One Guest</p>
+                                    <h2 id="cost_simple_ocean'.$i.'">USD 100/night</h2>
+                                    <span>*OFERTA</span>
+                                </div>
+                                <div class="large-4 columns">
+                                    <button id="add_room_simple_ocean'.$i.'" type="button">Click Me Simple Ocean(?)!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
                     }
                     else{
                         if($i<$second_iteration_ocean){ //Doble Ocean
-                            $response .= '<p>Doble Ocean</p>';
+                            $response .= '<div class="row">
+                                <div class="large-5 columns">
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <figure>
+                                             <img src="http://placehold.it/250x110" alt="Doble Room" width="250" height="100">
+                                        </figure>
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <h2 id="type_hab_doble_ocean'.$i.'">Ocean View</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-6 columns">
+                                                <p>Guests</p>
+                                            </div>
+                                            <div class="large-6 columns">
+                                                <select name="persons_number"  id="guests_doble_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                                  <option value="1" selected="selected">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <input id="final_cost_doble_ocean'.$i.'" type="text" name="final_cost_doble_ocean'.$i.'" value="100"/>
+                                        <p id="num_guest_doble_ocean'.$i.'">One Guest</p>
+                                        <h2 id="cost_doble_ocean'.$i.'">USD 100/night</h2>
+                                        <span>*OFERTA</span>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <button id="add_room_doble_ocean'.$i.'" type="button">Click Me Doble Ocean(?)!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
                         }
                         else{
-                            $response .= '<p>Triple Ocean</p>'; //Triple Ocean
+                            $response .= '<div class="row">
+                            <div class="large-5 columns">
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <figure>
+                                             <img src="http://placehold.it/250x110" alt="Triple Room" width="250" height="100">
+                                        </figure>
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <h2 id="type_hab_triple_ocean'.$i.'">Ocean View</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-6 columns">
+                                                <p>Guests</p>
+                                            </div>
+                                            <div class="large-6 columns">
+                                                <select name="persons_number"  id="guests_triple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                                  <option value="1" selected="selected">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <input id="final_cost_triple_ocean'.$i.'" type="text" name="final_cost_trple_ocean'.$i.'" value="100"/>
+                                        <p id="num_guest_triple_ocean'.$i.'">One Guest</p>
+                                        <h2 id="cost_triple_ocean'.$i.'">USD 100/night</h2>
+                                        <span>*OFERTA</span>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <button id="add_room_triple_ocean'.$i.'" type="button">Click Me Triple Ocean(?)!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>'; //Triple Ocean
                         }
                     }
                 }
