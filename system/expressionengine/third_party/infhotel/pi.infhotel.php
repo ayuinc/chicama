@@ -230,7 +230,7 @@ class Infhotel
 
         $fecha = array_unique($fecha);
         $disponibilidad["simple_garden"]=2000;
-        $disponibilidad["double_garden"]=2000;
+        $disponibilidad["doble_garden"]=2000;
         $disponibilidad["triple_garden"]=2000;
         //$disponibilidad["suite"]=2000; No se usa
         $disponibilidad["simple_ocean"]=2000;
