@@ -367,7 +367,7 @@ class Infhotel
                 $response .= 'Fin de las Habitaciones';
             }
         }
-        return var_dump($disponibilidad); 
+        return $response; 
     }
 
     public function disponibilidadinicialhabitaciones3(){
