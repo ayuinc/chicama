@@ -183,6 +183,193 @@ class Infhotel
         return $form;
     }
 
+    public function disponibilidadinicialhabitaciones_final(){
+        $response ='';
+        //$fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
+        //$fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
+        //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
+        $rooms_num = 4;
+        $result='[
+        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
+        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
+        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
+        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
+        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
+        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
+        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
+        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
+        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
+        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
+        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
+        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
+        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
+        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
+        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
+        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
+        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
+        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
+        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
+        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
+        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
+        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
+        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
+        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
+        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
+        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
+        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
+        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
+        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
+        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"}
+        ]';
+
+        $data = json_decode($result, true);
+        foreach($data as $row){
+            $fecha[$n] = $row["FFecha"];
+            $n=$n+1;
+        }
+
+        $fecha = array_unique($fecha);
+        $disponibilidad["simple_garden"]=2000;
+        $disponibilidad["double_garden"]=2000;
+        $disponibilidad["triple_garden"]=2000;
+        //$disponibilidad["suite"]=2000; No se usa
+        $disponibilidad["simple_ocean"]=2000;
+        $disponibilidad["doble_ocean"]=2000;
+        $disponibilidad["triple_ocean"]=2000;
+        foreach ($fecha as $fech) {
+            foreach($data as $row){
+                if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple_garden"] ){
+                    $disponibilidad["simple"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["doble_garden"] ){
+                    $disponibilidad["double"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple_garden"] ){
+                    $disponibilidad["triple"]=$row["NDisponible"];
+                }
+                /*if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$disponibilidad["suite"] ){
+                    $disponibilidad["suite"]=$row["NDisponible"];
+                }*/
+                if($row["TCodigoHabitacion"]==110005 && $row["NDisponible"]<$disponibilidad["simple_ocean"] ){
+                    $disponibilidad["simple"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110006 && $row["NDisponible"]<$disponibilidad["doble_ocean"] ){
+                    $disponibilidad["double"]=$row["NDisponible"];
+                }
+                if($row["TCodigoHabitacion"]==110007 && $row["NDisponible"]<$disponibilidad["triple_ocean"] ){
+                    $disponibilidad["triple"]=$row["NDisponible"];
+                }
+            }
+        }
+        if( $disponibilidad["simple_garden"] == 2000){
+             $disponibilidad["simple_garden"] = 0;
+        }
+        if( $disponibilidad["doble_garden"] == 2000){
+             $disponibilidad["doble_garden"] = 0;
+        }
+        if( $disponibilidad["triple_garden"] == 2000){
+             $disponibilidad["triple_garden"] = 0;
+        }
+        /*if( $disponibilidad["suite"] == 2000){
+             $disponibilidad["suite"] = 0;
+        }*/
+        if( $disponibilidad["simple_ocean"] == 2000){
+             $disponibilidad["simple_ocean"] = 0;
+        }
+        if( $disponibilidad["doble_ocean"] == 2000){
+             $disponibilidad["doble_ocean"] = 0;
+        }
+        if( $disponibilidad["triple_ocean"] == 2000){
+             $disponibilidad["triple_ocean"] = 0;
+        }    
+        $garden_view = $disponibilidad["simple_garden"] + $disponibilidad["doble_garden"] + $disponibilidad["triple_garden"];
+        $ocean_view = $disponibilidad["simple_ocean"] + $disponibilidad["doble_ocean"] + $disponibilidad["triple_ocean"];
+        $total_hab = $ocean_view + $garden_view;
+        if($total_hab < $rooms_num){
+            $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
+        }
+        else{
+            $rooms_rest = $rooms_num - $disponibilidad["simple_garden"];
+            if($rooms_rest<=0){
+                $it_simple_garden = $disponibilidad["simple_garden"];
+                $it_doble_garden = 0;
+                $it_triple_garden = 0;
+            }
+            else{
+                $it_simple_garden = $disponibilidad["simple_garden"];
+                $rooms_rest = $rooms_rest -  $disponibilidad["doble_garden"];
+                if($rooms_rest<=0){
+                    $it_doble_garden = $disponibilidad["doble_garden"];
+                    $it_triple_garden = 0;
+                }
+                else{
+                    $it_doble_garden = $disponibilidad["doble_garden"];
+                    $rooms_rest = $rooms_rest -  $disponibilidad["triple_garden"];
+                    if($rooms_rest<=0){
+                        $it_triple_garden = $rooms_rest;
+                    }
+                }
+            }
+            if($rooms_rest<=0){
+                $it_simple_ocean = $disponibilidad["simple_ocean"];
+                $it_doble_ocean = 0;
+                $it_triple_ocean = 0;
+            }
+            else{
+                $it_simple_ocean = $disponibilidad["simple_ocean"];
+                $rooms_rest = $rooms_rest -  $disponibilidad["doble_ocean"];
+                if($rooms_rest<=0){
+                    $it_doble_ocean = $disponibilidad["doble_ocean"];
+                    $it_triple_ocean = 0;
+                }
+                else{
+                    $it_doble_ocean = $disponibilidad["doble_ocean"];
+                    $rooms_rest = $rooms_rest -  $disponibilidad["triple_ocean"];
+                    if($rooms_rest<=0){
+                        $it_triple_ocean = $rooms_rest;
+                    }
+                }
+            }
+            $first_iteration_garden = $it_simple_garden;
+            $second_iteration_garden = $it_simple_garden + $it_doble_garden;
+            //$third_iteration_garden = 
+            $first_iteration_ocean = $it_simple_ocean;
+            $second_iteration_ocean = $it_simple_ocean + $it_doble_ocean;
+            //$third_iteration_ocean = 
+            for ($i=0; $i<$rooms_num ; $i++) { 
+                $response .= 'Habitaciones';
+                if ( $i<$garden_view) {
+                    if($i<$first_iteration_garden){ //Simple Garden
+                        $response .= '<p>Simple Garden</p>';
+                    }
+                    else{
+                        if($i<$second_iteration_garden){ //Doble Garden
+                            $response .= '<p>Doble Garden</p>';
+                        }
+                        else{
+                            $response .= '<p>Triple Garden</p>'; //Triple Garden
+                        }
+                    }
+                }
+                if ($i<$ocean_view) {
+                    if($i<$first_iteration_ocean){ //Simple Ocean
+                        $response .= '<p>Simple Ocean</p>';
+                    }
+                    else{
+                        if($i<$second_iteration_ocean){ //Doble Ocean
+                            $response .= '<p>Doble Ocean</p>';
+                        }
+                        else{
+                            $response .= '<p>Triple Ocean</p>'; //Triple Ocean
+                        }
+                    }
+                }
+                $response .= 'Fin de las Habitaciones';
+            }
+        }
+        return $response; 
+    }
+
     public function disponibilidadinicialhabitaciones3(){
         $response ='';
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
