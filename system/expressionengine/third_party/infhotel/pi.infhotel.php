@@ -340,14 +340,156 @@ class Infhotel
                 $response .= 'Habitaciones';
                 if ( $i<$garden_view) {
                     if($i<$first_iteration_garden){ //Simple Garden
-                        $response .= '<p>Simple Garden</p>';
+                        $response .= '
+                         <div class="row">
+                            <div class="large-5 columns">
+                            <div class="row">
+                                <div class="large-5 columns">
+                                    <figure>
+                                         <img src="http://placehold.it/250x110" alt="Single Room" width="250" height="100">
+                                    </figure>
+                                </div>
+                                <div class="large-7 columns">
+                                    <div class="row">
+                                        <div class="large-12 columns">
+                                            <h2 id="type_hab_simple_garden'.$i.'">Garden View</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="large-6 columns">
+                                            <p>Guests</p>
+                                        </div>
+                                        <div class="large-6 columns">
+                                            <select name="persons_number"  id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                              <option value="1" selected="selected">1</option>
+                                              <option value="2">2</option>
+                                              <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="large-7 columns">
+                            <div class="row">
+                                <div class="large-8 columns">
+                                    <input id="final_cost_simple_garden'.$i.'" type="text" name="final_cost_simple_garden'.$i.'" value="100"/>
+                                    <p id="num_guest_simple_garden'.$i.'">One Guest</p>
+                                    <h2 id="cost_simple_garden'.$i.'">USD 100/night</h2>
+                                    <span>*OFERTA</span>
+                                </div>
+                                <div class="large-4 columns">
+                                    <button id="add_room_simple_garden'.$i.'" type="button">Click Me Simple Garden(?)!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
                     }
                     else{
                         if($i<$second_iteration_garden){ //Doble Garden
-                            $response .= '<p>Doble Garden</p>';
+                            $response .= '
+                                <div class="large-5 columns">
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <figure>
+                                             <img src="http://placehold.it/250x110" alt="Doble Room" width="250" height="100">
+                                        </figure>
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <h2 id="type_hab_doble_garden'.$i.'">Garden View</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-6 columns">
+                                                <p>Guests</p>
+                                            </div>
+                                            <div class="large-6 columns">
+                                                <select name="persons_number"  id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                                  <option value="1" selected="selected">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <input id="final_cost_doble_garden'.$i.'" type="text" name="final_cost_doble_garden'.$i.'" value="100"/>
+                                        <p id="num_guest_doble_garden'.$i.'">One Guest</p>
+                                        <h2 id="cost_doble_garden'.$i.'">USD 100/night</h2>
+                                        <span>*OFERTA</span>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <button id="add_room_doble_garden'.$i.'" type="button">Click Me Doble Garden(?)!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
                         }
-                        else{
-                            $response .= '<p>Triple Garden</p>'; //Triple Garden
+                        else{//Triple Garden
+                            $response .= '
+                            <div class="large-5 columns">
+                                <div class="row">
+                                    <div class="large-5 columns">
+                                        <figure>
+                                             <img src="http://placehold.it/250x110" alt="Triple Room" width="250" height="100">
+                                        </figure>
+                                    </div>
+                                    <div class="large-7 columns">
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                <h2 id="type_hab_triple_garden'.$i.'">Garden View</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="large-6 columns">
+                                                <p>Guests</p>
+                                            </div>
+                                            <div class="large-6 columns">
+                                                <select name="persons_number"  id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                                  <option value="1" selected="selected">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-7 columns">
+                                <div class="row">
+                                    <div class="large-8 columns">
+                                        <input id="final_cost_triple_garden'.$i.'" type="text" name="final_cost_trple_garden'.$i.'" value="100"/>
+                                        <p id="num_guest_triple_garden'.$i.'">One Guest</p>
+                                        <h2 id="cost_triple_garden'.$i.'">USD 100/night</h2>
+                                        <span>*OFERTA</span>
+                                    </div>
+                                    <div class="large-4 columns">
+                                        <button id="add_room_triple_garden'.$i.'" type="button">Click Me Triple Garden(?)!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>'; 
                         }
                     }
                 }
