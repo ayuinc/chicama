@@ -239,25 +239,25 @@ class Infhotel
         foreach ($fecha as $fech) {
             foreach($data as $row){
                 if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple_garden"] ){
-                    $disponibilidad["simple"]=$row["NDisponible"];
+                    $disponibilidad["simple_garden"]=$row["NDisponible"];
                 }
                 if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["doble_garden"] ){
-                    $disponibilidad["double"]=$row["NDisponible"];
+                    $disponibilidad["doble_garden"]=$row["NDisponible"];
                 }
                 if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple_garden"] ){
-                    $disponibilidad["triple"]=$row["NDisponible"];
+                    $disponibilidad["triple_garden"]=$row["NDisponible"];
                 }
                 /*if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$disponibilidad["suite"] ){
                     $disponibilidad["suite"]=$row["NDisponible"];
                 }*/
                 if($row["TCodigoHabitacion"]==110005 && $row["NDisponible"]<$disponibilidad["simple_ocean"] ){
-                    $disponibilidad["simple"]=$row["NDisponible"];
+                    $disponibilidad["simple_ocean"]=$row["NDisponible"];
                 }
                 if($row["TCodigoHabitacion"]==110006 && $row["NDisponible"]<$disponibilidad["doble_ocean"] ){
-                    $disponibilidad["double"]=$row["NDisponible"];
+                    $disponibilidad["doble_ocean"]=$row["NDisponible"];
                 }
                 if($row["TCodigoHabitacion"]==110007 && $row["NDisponible"]<$disponibilidad["triple_ocean"] ){
-                    $disponibilidad["triple"]=$row["NDisponible"];
+                    $disponibilidad["triple_ocean"]=$row["NDisponible"];
                 }
             }
         }
