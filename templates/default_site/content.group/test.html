@@ -43,30 +43,7 @@
 		hide_divs(num_hab,0);
       });
 	$(function() {
-		var tercer_paso = new String('{exp:infhotel:tercer_paso}');
-        var num_hab = large-4;
-        var checkin_date ="";
-        var checkout_date ="";
-        var checkin = ""+{post_check_in_date} ;
-        var checkout = ""+{post_check_out_date} ;
-        var simple = 0;
-        var doble = 0;
-        var triple = 0;
-        var suite = 0;
-        var hab_simple = {};
-
-        checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
-        checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
-        var data = {
-                "FLlegada": checkin_date,
-                "FSalida": checkout_date,
-                "HLlegada": checkin_date,
-                "HSalida": checkout_date,
-                "Habitaciones": {},
-                "MObservacion": "",             
-                "NPasajero": "0" ,
-                "Pasajeros" : {}
-        };
+		num_hab = 4;
 		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
         cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
         cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
@@ -96,6 +73,200 @@
         cambio_costos('#guests_triple_ocean1','#num_guest_triple_ocean1','#cost_triple_ocean1',"#type_hab_triple_ocean1","#final_cost_triple_ocean_ocean1");
         cambio_costos('#guests_triple_ocean2','#num_guest_triple_ocean2','#cost_triple_ocean2',"#type_hab_triple_ocean2","#final_cost_triple_ocean2");
         cambio_costos('#guests_triple_ocean3','#num_guest_triple_ocean3','#cost_triple_ocean3',"#type_hab_triple_ocean3","#final_cost_triple_ocean3");
+
+       	reservar_hab(num_hab, '#add_room_simple_garden0', 1, 1,"#final_cost_simple_garden0","#full_request","#guests_simple_garden0");
+       	reservar_hab(num_hab, '#add_room_doble_garden0', 1, 2,"#final_cost_doble_garden0","#full_request","#guests_doble_garden0");
+       	reservar_hab(num_hab, '#add_room_triple_garden0', 1, 3,"#final_cost_triple_garden0","#full_request","#guests_triple_garden0");
+       	
+       	reservar_hab(num_hab, '#add_room_simple_garden1', 2, 1,"#final_cost_simple_garden1","#full_request","#guests_simple_garden1");
+       	reservar_hab(num_hab, '#add_room_doble_garden1', 2, 2,"#final_cost_doble_garden1","#full_request","#guests_doble_garden1");
+       	reservar_hab(num_hab, '#add_room_triple_garden1', 2, 3,"#final_cost_triple_garden1","#full_request","#guests_triple_garden1");
+
+       	reservar_hab(num_hab, '#add_room_simple_garden2', 3, 1,"#final_cost_simple_garden2","#full_request","#guests_simple_garden2");
+       	reservar_hab(num_hab, '#add_room_doble_garden2', 3, 2,"#final_cost_doble_garden2","#full_request","#guests_doble_garden2");
+       	reservar_hab(num_hab, '#add_room_triple_garden2', 3, 3,"#final_cost_triple_garden2","#full_request","#guests_triple_garden2");
+
+       	reservar_hab(num_hab, '#add_room_simple_garden3', 4, 1,"#final_cost_simple_garden3","#full_request","#guests_simple_garden3");
+       	reservar_hab(num_hab, '#add_room_doble_garden3', 4, 2,"#final_cost_doble_garden3","#full_request","#guests_doble_garden3");
+       	reservar_hab(num_hab, '#add_room_triple_garden3', 4, 3,"#final_cost_triple_garden3","#full_request","#guests_triple_garden3");
+
+       	reservar_hab(num_hab, '#add_room_simple_ocean0', 1, 4,"#final_cost_simple_ocean0","#full_request","#guests_simple_ocean0");
+       	reservar_hab(num_hab, '#add_room_doble_ocean0', 1, 5,"#final_cost_doble_ocean0","#full_request","#guests_doble_ocean0");
+       	reservar_hab(num_hab, '#add_room_triple_ocean0', 1, 6,"#final_cost_triple_ocean0","#full_request","#guests_triple_ocean0");
+       	
+       	reservar_hab(num_hab, '#add_room_simple_ocean1', 2, 4,"#final_cost_simple_ocean1","#full_request","#guests_simple_ocean1");
+       	reservar_hab(num_hab, '#add_room_doble_ocean1', 2, 5,"#final_cost_doble_ocean1","#full_request","#guests_doble_ocean1");
+       	reservar_hab(num_hab, '#add_room_triple_ocean1', 2, 6,"#final_cost_triple_ocean1","#full_request","#guests_triple_ocean1");
+
+       	reservar_hab(num_hab, '#add_room_simple_ocean2', 3, 4,"#final_cost_simple_ocean2","#full_request","#guests_simple_ocean2");
+       	reservar_hab(num_hab, '#add_room_doble_ocean2', 3, 5,"#final_cost_doble_ocean2","#full_request","#guests_doble_ocean2");
+       	reservar_hab(num_hab, '#add_room_triple_ocean2', 3, 6,"#final_cost_triple_ocean2","#full_request","#guests_triple_ocean2");
+
+       	reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3");
+       	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3");
+       	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3");
+       	
+	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
+	var orden = next_div - 1 ;
+	switch(type_hab){
+	    case 1:
+	        $(buttom).click(function(){
+	            /*var valor = $(select_box).val();
+	            var temp = {
+	                "CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110001"
+	            };
+	            simple = simple + 1;*/
+	            hide_divs(rooms_num, next_div);
+	            //console.log(buttom+":"+simple);
+	            //console.log(data);
+	            /*data["Habitaciones"][orden]=temp;
+	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+	            var send = JSON.stringify(data);
+	            send = send.replace(/{/gi, "(a)");
+	            send = send.replace(/}/gi, "(b)");  
+	            send = send.replace(/"/gi, "(c)");
+	            send = send.replace(/:/gi, "(d)");
+	            send = send.replace(/ /gi, "(e)");
+	            send = send.replace(/,/gi, "(f)");
+	            $(request).val(send);
+	            console.log(send);*/
+	        });
+	        break;
+	    case 2:
+	        $(buttom).click(function(){
+	            /*var valor = $(select_box).val();
+	            var temp = {
+	                "CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110002"
+	            };
+	            doble = doble + 1;*/
+	            hide_divs(rooms_num, next_div);
+	            //console.log(buttom+":"+doble);
+	            //console.log(temp);
+	            /*data["Habitaciones"][orden]=temp;
+	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+	            var send = JSON.stringify(data);
+	            send = send.replace(/{/gi, "(a)");
+	            send = send.replace(/}/gi, "(b)");
+	            send = send.replace(/"/gi, "(c)");
+	            send = send.replace(/:/gi, "(d)");
+	            send = send.replace(/ /gi, "(e)");
+	            send = send.replace(/,/gi, "(f)");
+	            $(request).val(send);
+	            console.log(send);*/
+	        });
+	        break;
+	    case 3:
+	        $(buttom).click(function(){
+	            /*var valor = $(select_box).val();
+	            var temp = {
+	                "CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110003"
+	            };
+	            triple = triple + 1;*/
+	            hide_divs(rooms_num, next_div);
+	            //console.log(buttom+":"+triple);
+	            //console.log(temp);
+	            /*data["Habitaciones"][orden]=temp;
+	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+	            var send = JSON.stringify(data);
+	            send = send.replace(/{/gi, "(a)");
+	            send = send.replace(/}/gi, "(b)");
+	            send = send.replace(/"/gi, "(c)");
+	            send = send.replace(/:/gi, "(d)");
+	            send = send.replace(/ /gi, "(e)");
+	            send = send.replace(/,/gi, "(f)");
+	            $(request).val(send);
+	            console.log(send);*/
+	        });
+	        break;
+	    case 4:
+	        $(buttom).click(function(){
+	            /*var valor = $(select_box).val();
+	            var temp = {
+	                "CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110004"
+	            };
+	            suite = suite + 1;*/
+	            hide_divs(rooms_num, next_div);
+	            //window.location.replace("http://chicamasurf.com/content/newreservation3");
+	            //console.log(buttom+":"+suite);
+	            //console.log(data);
+	            /*data["Habitaciones"][orden]=temp;
+	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+	            var send = JSON.stringify(data);
+	            send = send.replace(/{/gi, "(a)");
+	            send = send.replace(/}/gi, "(b)");
+	            send = send.replace(/"/gi, "(c)");
+	            send = send.replace(/:/gi, "(d)");
+	            send = send.replace(/ /gi, "(e)");
+	            send = send.replace(/,/gi, "(f)");
+	            $(request).val(send);
+	            console.log(send);*/
+	        });
+	        break;
+	    case 5:
+	        $(buttom).click(function(){
+	            /*var valor = $(select_box).val();
+	            var temp = {
+	                "CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110004"
+	            };
+	            suite = suite + 1;*/
+	            hide_divs(rooms_num, next_div);
+	            //window.location.replace("http://chicamasurf.com/content/newreservation3");
+	            //console.log(buttom+":"+suite);
+	            //console.log(data);
+	            /*data["Habitaciones"][orden]=temp;
+	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+	            var send = JSON.stringify(data);
+	            send = send.replace(/{/gi, "(a)");
+	            send = send.replace(/}/gi, "(b)");
+	            send = send.replace(/"/gi, "(c)");
+	            send = send.replace(/:/gi, "(d)");
+	            send = send.replace(/ /gi, "(e)");
+	            send = send.replace(/,/gi, "(f)");
+	            $(request).val(send);
+	            console.log(send);*/
+	        });
+	        break;
+	    case 6:
+	        $(buttom).click(function(){
+	            /*var valor = $(select_box).val();
+	            var temp = {
+	                "CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110004"
+	            };
+	            suite = suite + 1;*/
+	            hide_divs(rooms_num, next_div);
+	            //window.location.replace("http://chicamasurf.com/content/newreservation3");
+	            //console.log(buttom+":"+suite);
+	            //console.log(data);
+	            /*data["Habitaciones"][orden]=temp;
+	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+	            var send = JSON.stringify(data);
+	            send = send.replace(/{/gi, "(a)");
+	            send = send.replace(/}/gi, "(b)");
+	            send = send.replace(/"/gi, "(c)");
+	            send = send.replace(/:/gi, "(d)");
+	            send = send.replace(/ /gi, "(e)");
+	            send = send.replace(/,/gi, "(f)");
+	            $(request).val(send);
+	            console.log(send);*/
+	        });
+	        break;
+
+	    }
+	}
+});
+
 	function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
 			$(select_box).change(function(){
