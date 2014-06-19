@@ -36,3 +36,59 @@
 		</div>
 
 {embed="includes/footer"}
+<script type="text/javascript">
+	$(function() {
+		num_hab = 4;
+		$("#form_box_3").hide();
+		hide_divs(num_hab,0);
+      });
+	
+
+	function hide_divs (rooms_num, div_visible){
+			for(i=0;i<rooms_num;i++){
+				if(i==div_visible) {
+					$("#rooms"+i).show();
+				}
+				else{
+					$("#rooms"+i).hide();
+				}
+			}
+			switch(div_visible){
+				case 0:
+					if(0<rooms_num){
+				    	$("#step_in_reservation").html("Room 1 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 1:
+					if(1<rooms_num){
+				    	$("#step_in_reservation").html("Room 2 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 2:
+				    if(2<rooms_num){
+				    	$("#step_in_reservation").html("Room 3 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 3:
+				    if(3<rooms_num){
+				    	$("#step_in_reservation").html("Room 4 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 4:
+						$("#form_box_2").html($("#form_box_3").html());
+				    break; 
+			}
+		}
+</script>
