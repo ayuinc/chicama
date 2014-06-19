@@ -1,1 +1,561 @@
-{exp:infhotel:tercer_paso}
+{embed="includes/header"}
+<form id="book_a_room" action="/?/content/reserva" method="POST">
+	<input type="hidden" name="XID" value="{XID_HASH}" /> 
+	<div id="form_box_2">
+		<div class="row">
+			<div id="title_reservation" class="row">
+					<div class="large-4 columns">
+						<h2>NEW RESERVATION</h2>
+					</div>
+					<div class="large-4 large-offset-4 columns">
+						<p>Phone reservations +511-440-6040</p>
+							<p>FECHA CHECKIN: 01-09-2014 </p>
+							<p>FECHA CHECKOUT: 10-09-2014</p>
+							<p>ROOM: 4</p>
+					</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div id="sub_title_reservation" class="row">
+				<div class="large-6 columns ">
+					<b><h3 id="step_in_reservation">Room 1 of 4</h3></b>
+					<b><p>Select from availability below</p></b>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-5 columns">
+					<h4>Room Type</h4>
+				</div>
+				<div class="large-7 columns">
+					<h4>Average Rate per Night</h4>
+				</div>
+			</div>
+				{exp:infhotel:disponibilidadinicialhabitaciones_final}
+				{/exp:infhotel:disponibilidadinicialhabitaciones_final}
+		</div>
+
+<div id="form_box_3">
+        <div class="row">
+            <div id="title_reservation" class="row">
+                    <div class="large-4 columns">
+                        <h2>NEW RESERVATION</h2>
+                    </div>
+                    <div class="large-4 large-offset-4 columns">
+                        <p>Phone reservations +511-440-6040</p>
+                        {exp:get_post_vars parse="inward"}
+                            <p>FECHA CHECKIN: {post_check_in_date} </p>
+                            <p>FECHA CHECKOUT: {post_check_out_date}</p>
+                            <p>ROOM: {post_room_number}</p>
+                        {/exp:get_post_vars}
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-9 columns">
+                
+                <div class="row">
+                    <div id="sub_title_reservation" class="row">
+                        <b><h3>Guest Information</h3></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Firt/Given Name *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Last/Family Name *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="last_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Document type *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        {exp:infhotel:tipodedocumento}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Document ID *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="document_id" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR DOCUMENT ID" required="" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>E-mail*</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="email" value="" id="freeform_email" maxlength="150" placeholder="ENTER YOUR E-MAIL" required="" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Phone Number *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER" required=""  >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Country *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        {exp:infhotel:pais}
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="sub_title_reservation" class="row">
+                    <b><h3>Guarantee</h3></b>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns "> 
+                        <b><h4>Credit Card Information</h4></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Name on card *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER NAME OF CARD" required="" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Card type *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        {exp:infhotel:tipodetarjeta}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Card Number *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="card_id" value="" id="freeform_phone" maxlength="9" placeholder="ENTER CARD NUMBER" required="" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Expiration Date *</p>
+                    </div>
+                    <div class="large-3 columns">
+                        <select name="expiration_date_month" id="freeform_country" placeholder="ENTER MONTH" required="">
+                            <option value="Month">Month</option>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                        </select>
+                    </div>
+                    <div class="large-3 columns">
+                        <select name="expiration_date_year" id="freeform_country" placeholder="ENTER YEAR" required="">
+                            <option value="Year">Year</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns "> 
+                        <b><h4>Billing Address</h4></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Country *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <select name="country_billing" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+                            <option value="af">Afghanistan</option>
+                            <option value="ax">Aland Islands</option>
+                            <option value="al">Albania</option>
+                            <option value="dz">Algeria</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Street *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="street_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STREET BILLING" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>City *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="city_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER CITY BILLING" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>State *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="state_billing" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STATE BILLING" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Postal Code *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="postal_code" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER POSTAL CODE" >
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Request *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="request" maxlength="1000"  id="full_request">
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="large-3 columns" id="sumary">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <b><h4>Sumary</h4></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns ">
+                        <p>Arrival:</p>
+                    </div>
+                    <div id="checkout_date" class="large-9 columns">
+                        <p>15/05/2014</p>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="large-3 columns">
+                        <p>Departure:</p>
+                    </div>
+                    <div id="checkin_date" class="large-9 columns">
+                        <p>25/05/2014</p>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="large-6 columns">
+                        <p>Number of nights:</p>
+                    </div>
+                    <div id="checkin_date" class="large-6 columns">
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="row"> 
+                    <div class="large-6 columns">
+                        <p>Number of rooms:</p>
+                    </div>
+                    <div id="checkin_date" class="large-6 columns">
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <b><h5>Room 1</h5></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>Room Type:</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <p>Single</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>Reservation Type:</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <p>Value Pack</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <b><h5>Room 2</h5></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>Room Type:</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <p>Single</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-6 columns">
+                        <p>Reservation Type:</p>
+                    </div>
+                    <div class="large-6 columns">
+                        <p>Breakfast Only</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <b><h4>Costs</h4></b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p>Rooms</p>
+                    </div>
+                    <div class="large-4 columns">
+                        <p>USD 440</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p>Tax</p>
+                    </div>
+                    <div class="large-4 columns">
+                        <p>USD 50</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="large-4 large-offset-4 columns">
+                        <p>Total Cost</p>
+                    </div>
+                    <div class="large-4 columns">
+                        <p>USD 490</p>
+                    </div>
+                </div>
+            </div>
+            -->
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+                <input type="submit" name="submit" value="Book Now" class="send button">
+            </div>
+        </div>
+    </div>
+
+{embed="includes/footer"}
+<script type="text/javascript">
+	$(function() {
+		num_hab = 4;
+		$("#form_box_3").hide();
+		hide_divs(num_hab,0);
+      });
+	$(function() {
+		num_hab = 4;
+		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
+        cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
+        cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
+        cambio_costos('#guests_simple_garden3','#num_guest_simple_garden3','#cost_simple_garden3',"#type_hab_simple_garden3","#final_cost_simple_garden3");
+        
+        cambio_costos('#guests_doble_garden0','#num_guest_doble_garden0','#cost_doble_garden0',"#type_hab_doble_garden0","#final_cost_doble_garden0");
+        cambio_costos('#guests_doble_garden1','#num_guest_doble_garden1','#cost_doble_garden1',"#type_hab_doble_garden1","#final_cost_doble_garden1");
+        cambio_costos('#guests_doble_garden2','#num_guest_doble_garden2','#cost_doble_garden2',"#type_hab_doble_garden2","#final_cost_doble_garden2");
+        cambio_costos('#guests_doble_garden3','#num_guest_doble_garden3','#cost_doble_garden3',"#type_hab_doble_garden3","#final_cost_doble_garden3");
+        
+        cambio_costos('#guests_triple_garden0','#num_guest_triple_garden0','#cost_triple_garden0',"#type_hab_triple_garden0","#final_cost_triple_garden0");
+        cambio_costos('#guests_triple_garden1','#num_guest_triple_garden1','#cost_triple_garden1',"#type_hab_triple_garden1","#final_cost_triple_garden_garden1");
+        cambio_costos('#guests_triple_garden2','#num_guest_triple_garden2','#cost_triple_garden2',"#type_hab_triple_garden2","#final_cost_triple_garden2");
+        cambio_costos('#guests_triple_garden3','#num_guest_triple_garden3','#cost_triple_garden3',"#type_hab_triple_garden3","#final_cost_triple_garden3");
+
+        cambio_costos('#guests_simple_ocean0','#num_guest_simple_ocean0','#cost_simple_ocean0', "#type_hab_simple_ocean0","#final_cost_simple_ocean0");
+        cambio_costos('#guests_simple_ocean1','#num_guest_simple_ocean1','#cost_simple_ocean1',"#type_hab_simple_ocean1","#final_cost_simple_ocean1");
+        cambio_costos('#guests_simple_ocean2','#num_guest_simple_ocean2','#cost_simple_ocean2',"#type_hab_simple_ocean2","#final_cost_simple_ocean2");
+        cambio_costos('#guests_simple_ocean3','#num_guest_simple_ocean3','#cost_simple_ocean3',"#type_hab_simple_ocean3","#final_cost_simple_ocean3");
+        
+        cambio_costos('#guests_doble_ocean0','#num_guest_doble_ocean0','#cost_doble_ocean0',"#type_hab_doble_ocean0","#final_cost_doble_ocean0");
+        cambio_costos('#guests_doble_ocean1','#num_guest_doble_ocean1','#cost_doble_ocean1',"#type_hab_doble_ocean1","#final_cost_doble_ocean1");
+        cambio_costos('#guests_doble_ocean2','#num_guest_doble_ocean2','#cost_doble_ocean2',"#type_hab_doble_ocean2","#final_cost_doble_ocean2");
+        cambio_costos('#guests_doble_ocean3','#num_guest_doble_ocean3','#cost_doble_ocean3',"#type_hab_doble_ocean3","#final_cost_doble_ocean3");
+        
+        cambio_costos('#guests_triple_ocean0','#num_guest_triple_ocean0','#cost_triple_ocean0',"#type_hab_triple_ocean0","#final_cost_triple_ocean0");
+        cambio_costos('#guests_triple_ocean1','#num_guest_triple_ocean1','#cost_triple_ocean1',"#type_hab_triple_ocean1","#final_cost_triple_ocean_ocean1");
+        cambio_costos('#guests_triple_ocean2','#num_guest_triple_ocean2','#cost_triple_ocean2',"#type_hab_triple_ocean2","#final_cost_triple_ocean2");
+        cambio_costos('#guests_triple_ocean3','#num_guest_triple_ocean3','#cost_triple_ocean3',"#type_hab_triple_ocean3","#final_cost_triple_ocean3");
+
+       	reservar_hab(num_hab, '#add_room_simple_garden0', 1, 1,"#final_cost_simple_garden0","#full_request","#guests_simple_garden0");
+       	reservar_hab(num_hab, '#add_room_doble_garden0', 1, 2,"#final_cost_doble_garden0","#full_request","#guests_doble_garden0");
+       	reservar_hab(num_hab, '#add_room_triple_garden0', 1, 3,"#final_cost_triple_garden0","#full_request","#guests_triple_garden0");
+       	
+       	reservar_hab(num_hab, '#add_room_simple_garden1', 2, 1,"#final_cost_simple_garden1","#full_request","#guests_simple_garden1");
+       	reservar_hab(num_hab, '#add_room_doble_garden1', 2, 2,"#final_cost_doble_garden1","#full_request","#guests_doble_garden1");
+       	reservar_hab(num_hab, '#add_room_triple_garden1', 2, 3,"#final_cost_triple_garden1","#full_request","#guests_triple_garden1");
+
+       	reservar_hab(num_hab, '#add_room_simple_garden2', 3, 1,"#final_cost_simple_garden2","#full_request","#guests_simple_garden2");
+       	reservar_hab(num_hab, '#add_room_doble_garden2', 3, 2,"#final_cost_doble_garden2","#full_request","#guests_doble_garden2");
+       	reservar_hab(num_hab, '#add_room_triple_garden2', 3, 3,"#final_cost_triple_garden2","#full_request","#guests_triple_garden2");
+
+       	reservar_hab(num_hab, '#add_room_simple_garden3', 4, 1,"#final_cost_simple_garden3","#full_request","#guests_simple_garden3");
+       	reservar_hab(num_hab, '#add_room_doble_garden3', 4, 2,"#final_cost_doble_garden3","#full_request","#guests_doble_garden3");
+       	reservar_hab(num_hab, '#add_room_triple_garden3', 4, 3,"#final_cost_triple_garden3","#full_request","#guests_triple_garden3");
+
+       	reservar_hab(num_hab, '#add_room_simple_ocean0', 1, 4,"#final_cost_simple_ocean0","#full_request","#guests_simple_ocean0");
+       	reservar_hab(num_hab, '#add_room_doble_ocean0', 1, 5,"#final_cost_doble_ocean0","#full_request","#guests_doble_ocean0");
+       	reservar_hab(num_hab, '#add_room_triple_ocean0', 1, 6,"#final_cost_triple_ocean0","#full_request","#guests_triple_ocean0");
+       	
+       	reservar_hab(num_hab, '#add_room_simple_ocean1', 2, 4,"#final_cost_simple_ocean1","#full_request","#guests_simple_ocean1");
+       	reservar_hab(num_hab, '#add_room_doble_ocean1', 2, 5,"#final_cost_doble_ocean1","#full_request","#guests_doble_ocean1");
+       	reservar_hab(num_hab, '#add_room_triple_ocean1', 2, 6,"#final_cost_triple_ocean1","#full_request","#guests_triple_ocean1");
+
+       	reservar_hab(num_hab, '#add_room_simple_ocean2', 3, 4,"#final_cost_simple_ocean2","#full_request","#guests_simple_ocean2");
+       	reservar_hab(num_hab, '#add_room_doble_ocean2', 3, 5,"#final_cost_doble_ocean2","#full_request","#guests_doble_ocean2");
+       	reservar_hab(num_hab, '#add_room_triple_ocean2', 3, 6,"#final_cost_triple_ocean2","#full_request","#guests_triple_ocean2");
+
+       	reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3");
+       	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3");
+       	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3");
+});
+
+	       	
+	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
+	var orden = next_div - 1 ;
+	switch(type_hab){
+	    case 1:
+	        $(buttom).click(function(){
+	            hide_divs(rooms_num, next_div);
+	        });
+	        break;
+	    case 2:
+	        $(buttom).click(function(){
+	            hide_divs(rooms_num, next_div);
+	        });
+	        break;
+	    case 3:
+	        $(buttom).click(function(){
+	            hide_divs(rooms_num, next_div);
+	        });
+	        break;
+	    case 4:
+	        $(buttom).click(function(){
+	            hide_divs(rooms_num, next_div);
+	        });
+	        break;
+	    case 5:
+	        $(buttom).click(function(){
+	            hide_divs(rooms_num, next_div);
+	        });
+	        break;
+	    case 6:
+	        $(buttom).click(function(){
+	            hide_divs(rooms_num, next_div);
+	        });
+	        break;
+
+	    }
+	}
+	function cambio_costos(select_box , encabezado , precio, hab, final_cost){
+			var  tipo_de_hab = $(hab).text();
+			$(select_box).change(function(){
+				if(tipo_de_hab=="Garden View"){
+					switch($( select_box ).val()){ 
+						case "1":
+							$(encabezado).html("One Guest");
+							$(precio).html("USD 100/night");
+							$(final_cost).val("100");
+							break;
+						case "2":
+							$(encabezado).html("Two Guests");
+							$(precio).html("USD 130/night");
+							$(final_cost).val("130");
+							break;
+						case "3":
+							$(encabezado).html("Three Guests");
+							$(precio).html("USD 160/night");
+							$(final_cost).val("160");
+							break;
+						case "4":
+							break;
+					}
+				}
+				if(tipo_de_hab=="Ocean View"){
+					switch($(select_box).val()){
+						case "1":
+							$(encabezado).html("One Guest");
+							$(precio).html("USD 110/night");
+							$(final_cost).val("110");
+							break;
+						case "2":
+							$(encabezado).html("Two Guests");
+							$(precio).html("USD 140/night");
+							$(final_cost).val("140");
+							break;
+						case "3":
+							$(encabezado).html("Three Guests");
+							$(precio).html("USD 180/night");
+							$(final_cost).val("180");
+							break;
+						case "4":
+							break;
+					}
+				}
+			});
+		}
+	function hide_divs (rooms_num, div_visible){
+			for(i=0;i<rooms_num;i++){
+				if(i==div_visible) {
+					$("#rooms"+i).show();
+				}
+				else{
+					$("#rooms"+i).hide();
+				}
+			}
+			switch(div_visible){
+				case 0:
+					if(0<rooms_num){
+				    	$("#step_in_reservation").html("Room 1 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 1:
+					if(1<rooms_num){
+				    	$("#step_in_reservation").html("Room 2 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 2:
+				    if(2<rooms_num){
+				    	$("#step_in_reservation").html("Room 3 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 3:
+				    if(3<rooms_num){
+				    	$("#step_in_reservation").html("Room 4 of "+num_hab);
+				    }
+				    else{
+				    	$("#form_box_2").html($("#form_box_3").html());
+				    }
+				    break;
+				case 4:
+						$("#form_box_2").html($("#form_box_3").html());
+				    break; 
+			}
+		}
+</script>
