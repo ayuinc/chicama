@@ -1282,7 +1282,7 @@ class Infhotel
                         <p>Country *</p>
                     </div>
                     <div class="large-9 columns">
-                        {exp:infhotel:pais}
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -1308,7 +1308,7 @@ class Infhotel
                         <p>Card type *</p>
                     </div>
                     <div class="large-9 columns">
-                        {exp:infhotel:tipodetarjeta}
+                        
                     </div>
                 </div>
                 <div class="row">
