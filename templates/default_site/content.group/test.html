@@ -42,8 +42,55 @@
 		$("#form_box_3").hide();
 		hide_divs(num_hab,0);
       });
-	
-
+	$(function() {
+	function cambio_costos(select_box , encabezado , precio, hab, final_cost){
+			var  tipo_de_hab = $(hab).text();
+			$(select_box).change(function(){
+				if(tipo_de_hab=="Garden View"){
+					switch($( select_box ).val()){ 
+						case "1":
+							$(encabezado).html("One Guest");
+							$(precio).html("USD 100/night");
+							$(final_cost).val("100");
+							break;
+						case "2":
+							$(encabezado).html("Two Guests");
+							$(precio).html("USD 130/night");
+							$(final_cost).val("130");
+							break;
+						case "3":
+							$(encabezado).html("Three Guests");
+							$(precio).html("USD 160/night");
+							$(final_cost).val("160");
+							break;
+						case "4":
+							break;
+					}
+				}
+				if(tipo_de_hab=="Ocean View"){
+					switch($(select_box).val()){
+						case "1":
+							$(encabezado).html("One Guest");
+							$(precio).html("USD 110/night");
+							$(final_cost).val("110");
+							break;
+						case "2":
+							$(encabezado).html("Two Guests");
+							$(precio).html("USD 140/night");
+							$(final_cost).val("140");
+							break;
+						case "3":
+							$(encabezado).html("Three Guests");
+							$(precio).html("USD 180/night");
+							$(final_cost).val("180");
+							break;
+						case "4":
+							break;
+					}
+				}
+			});
+		}
+	});
 	function hide_divs (rooms_num, div_visible){
 			for(i=0;i<rooms_num;i++){
 				if(i==div_visible) {
