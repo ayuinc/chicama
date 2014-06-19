@@ -105,168 +105,45 @@
        	reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3");
        	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3");
        	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3");
-       	
+});
+
+	       	
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
-	            /*var valor = $(select_box).val();
-	            var temp = {
-	                "CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110001"
-	            };
-	            simple = simple + 1;*/
 	            hide_divs(rooms_num, next_div);
-	            //console.log(buttom+":"+simple);
-	            //console.log(data);
-	            /*data["Habitaciones"][orden]=temp;
-	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
-	            var send = JSON.stringify(data);
-	            send = send.replace(/{/gi, "(a)");
-	            send = send.replace(/}/gi, "(b)");  
-	            send = send.replace(/"/gi, "(c)");
-	            send = send.replace(/:/gi, "(d)");
-	            send = send.replace(/ /gi, "(e)");
-	            send = send.replace(/,/gi, "(f)");
-	            $(request).val(send);
-	            console.log(send);*/
 	        });
 	        break;
 	    case 2:
 	        $(buttom).click(function(){
-	            /*var valor = $(select_box).val();
-	            var temp = {
-	                "CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110002"
-	            };
-	            doble = doble + 1;*/
 	            hide_divs(rooms_num, next_div);
-	            //console.log(buttom+":"+doble);
-	            //console.log(temp);
-	            /*data["Habitaciones"][orden]=temp;
-	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
-	            var send = JSON.stringify(data);
-	            send = send.replace(/{/gi, "(a)");
-	            send = send.replace(/}/gi, "(b)");
-	            send = send.replace(/"/gi, "(c)");
-	            send = send.replace(/:/gi, "(d)");
-	            send = send.replace(/ /gi, "(e)");
-	            send = send.replace(/,/gi, "(f)");
-	            $(request).val(send);
-	            console.log(send);*/
 	        });
 	        break;
 	    case 3:
 	        $(buttom).click(function(){
-	            /*var valor = $(select_box).val();
-	            var temp = {
-	                "CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110003"
-	            };
-	            triple = triple + 1;*/
 	            hide_divs(rooms_num, next_div);
-	            //console.log(buttom+":"+triple);
-	            //console.log(temp);
-	            /*data["Habitaciones"][orden]=temp;
-	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
-	            var send = JSON.stringify(data);
-	            send = send.replace(/{/gi, "(a)");
-	            send = send.replace(/}/gi, "(b)");
-	            send = send.replace(/"/gi, "(c)");
-	            send = send.replace(/:/gi, "(d)");
-	            send = send.replace(/ /gi, "(e)");
-	            send = send.replace(/,/gi, "(f)");
-	            $(request).val(send);
-	            console.log(send);*/
 	        });
 	        break;
 	    case 4:
 	        $(buttom).click(function(){
-	            /*var valor = $(select_box).val();
-	            var temp = {
-	                "CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110004"
-	            };
-	            suite = suite + 1;*/
 	            hide_divs(rooms_num, next_div);
-	            //window.location.replace("http://chicamasurf.com/content/newreservation3");
-	            //console.log(buttom+":"+suite);
-	            //console.log(data);
-	            /*data["Habitaciones"][orden]=temp;
-	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
-	            var send = JSON.stringify(data);
-	            send = send.replace(/{/gi, "(a)");
-	            send = send.replace(/}/gi, "(b)");
-	            send = send.replace(/"/gi, "(c)");
-	            send = send.replace(/:/gi, "(d)");
-	            send = send.replace(/ /gi, "(e)");
-	            send = send.replace(/,/gi, "(f)");
-	            $(request).val(send);
-	            console.log(send);*/
 	        });
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
-	            /*var valor = $(select_box).val();
-	            var temp = {
-	                "CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110004"
-	            };
-	            suite = suite + 1;*/
 	            hide_divs(rooms_num, next_div);
-	            //window.location.replace("http://chicamasurf.com/content/newreservation3");
-	            //console.log(buttom+":"+suite);
-	            //console.log(data);
-	            /*data["Habitaciones"][orden]=temp;
-	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
-	            var send = JSON.stringify(data);
-	            send = send.replace(/{/gi, "(a)");
-	            send = send.replace(/}/gi, "(b)");
-	            send = send.replace(/"/gi, "(c)");
-	            send = send.replace(/:/gi, "(d)");
-	            send = send.replace(/ /gi, "(e)");
-	            send = send.replace(/,/gi, "(f)");
-	            $(request).val(send);
-	            console.log(send);*/
 	        });
 	        break;
 	    case 6:
 	        $(buttom).click(function(){
-	            /*var valor = $(select_box).val();
-	            var temp = {
-	                "CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110004"
-	            };
-	            suite = suite + 1;*/
 	            hide_divs(rooms_num, next_div);
-	            //window.location.replace("http://chicamasurf.com/content/newreservation3");
-	            //console.log(buttom+":"+suite);
-	            //console.log(data);
-	            /*data["Habitaciones"][orden]=temp;
-	            data["NPasajero"] = data["NPasajero"] + parseInt(valor);
-	            var send = JSON.stringify(data);
-	            send = send.replace(/{/gi, "(a)");
-	            send = send.replace(/}/gi, "(b)");
-	            send = send.replace(/"/gi, "(c)");
-	            send = send.replace(/:/gi, "(d)");
-	            send = send.replace(/ /gi, "(e)");
-	            send = send.replace(/,/gi, "(f)");
-	            $(request).val(send);
-	            console.log(send);*/
 	        });
 	        break;
 
 	    }
 	}
-});
-
 	function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
 			$(select_box).change(function(){
@@ -314,7 +191,6 @@
 				}
 			});
 		}
-	});
 	function hide_divs (rooms_num, div_visible){
 			for(i=0;i<rooms_num;i++){
 				if(i==div_visible) {
