@@ -1,2 +1,38 @@
-{exp:infhotel:disponibilidadinicialhabitaciones_final}
+{embed="includes/header"}
+<form id="book_a_room" action="/?/content/reserva" method="POST">
+	<input type="hidden" name="XID" value="{XID_HASH}" /> 
+	<div id="form_box_2">
+		<div class="row">
+			<div id="title_reservation" class="row">
+					<div class="large-4 columns">
+						<h2>NEW RESERVATION</h2>
+					</div>
+					<div class="large-4 large-offset-4 columns">
+						<p>Phone reservations +511-440-6040</p>
+							<p>FECHA CHECKIN: 01-09-2014 </p>
+							<p>FECHA CHECKOUT: 10-09-2014</p>
+							<p>ROOM: 4</p>
+					</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div id="sub_title_reservation" class="row">
+				<div class="large-6 columns ">
+					<b><h3 id="step_in_reservation">Room 1 of 4</h3></b>
+					<b><p>Select from availability below</p></b>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-5 columns">
+					<h4>Room Type</h4>
+				</div>
+				<div class="large-7 columns">
+					<h4>Average Rate per Night</h4>
+				</div>
+			</div>
+				{exp:infhotel:disponibilidadinicialhabitaciones_final}
 				{/exp:infhotel:disponibilidadinicialhabitaciones_final}
+		</div>
+
+{embed="includes/footer"}
