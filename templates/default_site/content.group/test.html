@@ -43,7 +43,31 @@
 		hide_divs(num_hab,0);
       });
 	$(function() {
-	cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
+		var tercer_paso = new String('{exp:infhotel:tercer_paso}');
+        var num_hab = large-4;
+        var checkin_date ="";
+        var checkout_date ="";
+        var checkin = ""+{post_check_in_date} ;
+        var checkout = ""+{post_check_out_date} ;
+        var simple = 0;
+        var doble = 0;
+        var triple = 0;
+        var suite = 0;
+        var hab_simple = {};
+
+        checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
+        checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+        var data = {
+                "FLlegada": checkin_date,
+                "FSalida": checkout_date,
+                "HLlegada": checkin_date,
+                "HSalida": checkout_date,
+                "Habitaciones": {},
+                "MObservacion": "",             
+                "NPasajero": "0" ,
+                "Pasajeros" : {}
+        };
+		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
         cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
         cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
         cambio_costos('#guests_simple_garden3','#num_guest_simple_garden3','#cost_simple_garden3',"#type_hab_simple_garden3","#final_cost_simple_garden3");
