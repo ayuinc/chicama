@@ -1213,11 +1213,11 @@ class Infhotel
                     </div>
                     <div class="large-4 large-offset-4 columns">
                         <p>Phone reservations +511-440-6040</p>
-                        {exp:get_post_vars parse="inward"}
-                            <p>FECHA CHECKIN: {post_check_in_date} </p>
-                            <p>FECHA CHECKOUT: {post_check_out_date}</p>
-                            <p>ROOM: {post_room_number}</p>
-                        {/exp:get_post_vars}
+                        
+                            <p>FECHA CHECKIN:   </p>
+                            <p>FECHA CHECKOUT:  </p>
+                            <p>ROOM: 4</p>
+                        
                     </div>
             </div>
         </div>
