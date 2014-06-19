@@ -1250,7 +1250,6 @@ class Infhotel
                         <p>Document type *</p>
                     </div>
                     <div class="large-9 columns">
-                        {exp:infhotel:tipodedocumento}
                     </div>
                 </div>
                 <div class="row">
