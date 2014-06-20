@@ -130,9 +130,55 @@
        	reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3");
        	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3");
        	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3");
-});
 
-	       	
+    function cambio_costos(select_box , encabezado , precio, hab, final_cost){
+			var  tipo_de_hab = $(hab).text();
+			$(select_box).change(function(){
+				if(tipo_de_hab=="Garden View"){
+					switch($( select_box ).val()){ 
+						case "1":
+							$(encabezado).html("One Guest");
+							$(precio).html("USD 100/night");
+							$(final_cost).val("100");
+							break;
+						case "2":
+							$(encabezado).html("Two Guests");
+							$(precio).html("USD 130/night");
+							$(final_cost).val("130");
+							break;
+						case "3":
+							$(encabezado).html("Three Guests");
+							$(precio).html("USD 160/night");
+							$(final_cost).val("160");
+							break;
+						case "4":
+							break;
+					}
+				}
+				if(tipo_de_hab=="Ocean View"){
+					switch($(select_box).val()){
+						case "1":
+							$(encabezado).html("One Guest");
+							$(precio).html("USD 110/night");
+							$(final_cost).val("110");
+							break;
+						case "2":
+							$(encabezado).html("Two Guests");
+							$(precio).html("USD 140/night");
+							$(final_cost).val("140");
+							break;
+						case "3":
+							$(encabezado).html("Three Guests");
+							$(precio).html("USD 180/night");
+							$(final_cost).val("180");
+							break;
+						case "4":
+							break;
+					}
+				}
+			});
+		}
+
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
 	switch(type_hab){
@@ -277,98 +323,53 @@
 
 	    }
 	}
-	function cambio_costos(select_box , encabezado , precio, hab, final_cost){
-			var  tipo_de_hab = $(hab).text();
-			$(select_box).change(function(){
-				if(tipo_de_hab=="Garden View"){
-					switch($( select_box ).val()){ 
-						case "1":
-							$(encabezado).html("One Guest");
-							$(precio).html("USD 100/night");
-							$(final_cost).val("100");
-							break;
-						case "2":
-							$(encabezado).html("Two Guests");
-							$(precio).html("USD 130/night");
-							$(final_cost).val("130");
-							break;
-						case "3":
-							$(encabezado).html("Three Guests");
-							$(precio).html("USD 160/night");
-							$(final_cost).val("160");
-							break;
-						case "4":
-							break;
-					}
-				}
-				if(tipo_de_hab=="Ocean View"){
-					switch($(select_box).val()){
-						case "1":
-							$(encabezado).html("One Guest");
-							$(precio).html("USD 110/night");
-							$(final_cost).val("110");
-							break;
-						case "2":
-							$(encabezado).html("Two Guests");
-							$(precio).html("USD 140/night");
-							$(final_cost).val("140");
-							break;
-						case "3":
-							$(encabezado).html("Three Guests");
-							$(precio).html("USD 180/night");
-							$(final_cost).val("180");
-							break;
-						case "4":
-							break;
-					}
-				}
-			});
-		}
+});
+
 	function hide_divs (rooms_num, div_visible){
-			for(i=0;i<rooms_num;i++){
-				if(i==div_visible) {
-					$("#rooms"+i).show();
-				}
-				else{
-					$("#rooms"+i).hide();
-				}
+		for(i=0;i<rooms_num;i++){
+			if(i==div_visible) {
+				$("#rooms"+i).show();
 			}
-			switch(div_visible){
-				case 0:
-					if(0<rooms_num){
-				    	$("#step_in_reservation").html("Room 1 of "+num_hab);
-				    }
-				    else{
-				    	$("#form_box_2").html($("#form_box_3").html());
-				    }
-				    break;
-				case 1:
-					if(1<rooms_num){
-				    	$("#step_in_reservation").html("Room 2 of "+num_hab);
-				    }
-				    else{
-				    	$("#form_box_2").html($("#form_box_3").html());
-				    }
-				    break;
-				case 2:
-				    if(2<rooms_num){
-				    	$("#step_in_reservation").html("Room 3 of "+num_hab);
-				    }
-				    else{
-				    	$("#form_box_2").html($("#form_box_3").html());
-				    }
-				    break;
-				case 3:
-				    if(3<rooms_num){
-				    	$("#step_in_reservation").html("Room 4 of "+num_hab);
-				    }
-				    else{
-				    	$("#form_box_2").html($("#form_box_3").html());
-				    }
-				    break;
-				case 4:
-						$("#form_box_2").html($("#form_box_3").html());
-				    break; 
+			else{
+				$("#rooms"+i).hide();
 			}
 		}
+		switch(div_visible){
+			case 0:
+				if(0<rooms_num){
+			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
+			    }
+			    else{
+			    	$("#form_box_2").html($("#form_box_3").html());
+			    }
+			    break;
+			case 1:
+				if(1<rooms_num){
+			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
+			    }
+			    else{
+			    	$("#form_box_2").html($("#form_box_3").html());
+			    }
+			    break;
+			case 2:
+			    if(2<rooms_num){
+			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
+			    }
+			    else{
+			    	$("#form_box_2").html($("#form_box_3").html());
+			    }
+			    break;
+			case 3:
+			    if(3<rooms_num){
+			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
+			    }
+			    else{
+			    	$("#form_box_2").html($("#form_box_3").html());
+			    }
+			    break;
+			case 4:
+					$("#form_box_2").html($("#form_box_3").html());
+			    break; 
+		}
+	}
 </script>
