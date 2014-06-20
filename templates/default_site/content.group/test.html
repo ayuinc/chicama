@@ -45,7 +45,30 @@
 		hide_divs(num_hab,0);
       });
 	$(function() {
-		num_hab = 4;
+		var num_hab = 4;
+		var checkin_date ="";
+		var checkout_date ="";
+		var checkin = "01092014";
+		var checkout = "10092014" ;
+		var simple_garden = 0;
+		var doble_garden = 0;
+		var triple_garden = 0;
+		var simple_ocean = 0;
+		var doble_ocean = 0;
+		var triple_ocean = 0;
+
+		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
+		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+		var data = {
+			 	"FLlegada": checkin_date,
+			    "FSalida": checkout_date,
+			    "HLlegada": checkin_date,
+			    "HSalida": checkout_date,
+			    "Habitaciones": {},
+			    "MObservacion": "",				
+                "NPasajero": "0" ,
+                "Pasajeros" : {}
+		};
 		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
         cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
         cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
@@ -115,32 +138,140 @@
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
+		    	var valor = $(select_box).val();
+    			var temp = {
+				 	"CantHab" : 1, 
+                    "NPrecio" : $(final_cost).val(),  
+                    "TCodigoHabitacion" : "110001"
+    			};
+		    	simple_garden = simple_garden + 1;
 	            hide_divs(rooms_num, next_div);
+	            data["Habitaciones"][orden]=temp;
+		    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+				console.log(send);
 	        });
 	        break;
 	    case 2:
 	        $(buttom).click(function(){
+		    	var valor = $(select_box).val();
+    			var temp = {
+				 	"CantHab" : 1, 
+                    "NPrecio" : $(final_cost).val(),  
+                    "TCodigoHabitacion" : "110002"
+    			};
+		    	doble_garden = doble_garden + 1;
 	            hide_divs(rooms_num, next_div);
+	            data["Habitaciones"][orden]=temp;
+		    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+    	    	var send = JSON.stringify(data);
+    	    	send = send.replace(/{/gi, "(a)");
+    	    	send = send.replace(/}/gi, "(b)");	
+    	    	send = send.replace(/"/gi, "(c)");
+    	    	send = send.replace(/:/gi, "(d)");
+    	    	send = send.replace(/ /gi, "(e)");
+    	    	send = send.replace(/,/gi, "(f)");
+    	    	$(request).val(send);
+    			console.log(send);
 	        });
 	        break;
 	    case 3:
 	        $(buttom).click(function(){
+		    	var valor = $(select_box).val();
+    			var temp = {
+				 	"CantHab" : 1, 
+                    "NPrecio" : $(final_cost).val(),  
+                    "TCodigoHabitacion" : "110003"
+    			};
+		    	triple_garden =triple_garden + 1;
 	            hide_divs(rooms_num, next_div);
+	            data["Habitaciones"][orden]=temp;
+		    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+				console.log(send);
 	        });
 	        break;
 	    case 4:
 	        $(buttom).click(function(){
+	            var valor = $(select_box).val();
+    			var temp = {
+				 	"CantHab" : 1, 
+                    "NPrecio" : $(final_cost).val(),  
+                    "TCodigoHabitacion" : "110005"
+    			};
+		    	simple_ocean =simple_ocean + 1;
 	            hide_divs(rooms_num, next_div);
+	            data["Habitaciones"][orden]=temp;
+		    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+				console.log(send);
 	        });
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
+	            var valor = $(select_box).val();
+    			var temp = {
+				 	"CantHab" : 1, 
+                    "NPrecio" : $(final_cost).val(),  
+                    "TCodigoHabitacion" : "110006"
+    			};
+		    	doble_ocean =doble_ocean+ 1;
 	            hide_divs(rooms_num, next_div);
+	            data["Habitaciones"][orden]=temp;
+		    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+				console.log(send);
 	        });
 	        break;
 	    case 6:
 	        $(buttom).click(function(){
+	            var valor = $(select_box).val();
+				var temp = {
+				 	"CantHab" : 1, 
+	                "NPrecio" : $(final_cost).val(),  
+	                "TCodigoHabitacion" : "110007"
+				};
+		    	triple_ocean =triple_ocean + 1;
 	            hide_divs(rooms_num, next_div);
+	            data["Habitaciones"][orden]=temp;
+		    	data["NPasajero"] = data["NPasajero"] + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+				console.log(send);
 	        });
 	        break;
 
