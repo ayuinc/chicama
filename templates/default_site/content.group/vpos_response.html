@@ -1,3 +1,12 @@
 {embed="includes/header"}
 <h1>Vpos - RESPONSE</h1>
+{exp:get_post_vars parse="inward"}
+	{exp:vpost:recepcion
+		IDACQUIRER ="{post_IDACQUIRER}"
+		IDCOMMERCE ="{post_IDCOMMERCE}"
+		XMLRES ="{post_XMLRES}"
+		DIGITALSIGN ="{post_DIGITALSIGN}"
+		SESSIONKEY ="{post_SESSIONKEY}"}
+	{/exp:vpost:recepcion}
+{/exp:get_post_vars}
 {embed="includes/footer"}

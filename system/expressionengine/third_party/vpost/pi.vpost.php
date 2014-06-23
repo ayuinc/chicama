@@ -140,12 +140,15 @@ class Vpost
     public function envio(){
        require_once 'vpos/vpos_pluging.php'; 
        $codigo1 ='840';
+
+       /*obtecion de parametros (métodos del framework) 
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
        $purchaseAmount = ee()->TMPL->fetch_param('purchaseAmount');
        $IDACQUIRER =  ee()->TMPL->fetch_param('IDACQUIRER');
        $IDCOMMERCE = ee()->TMPL->fetch_param('IDCOMMERCE');
+       */
        $XMLRES = ee()->TMPL->fetch_param('XMLRES');
        $DIGITALSIGN = ee()->TMPL->fetch_param('DIGITALSIGN');
        $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
