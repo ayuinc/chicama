@@ -108,34 +108,14 @@ class Vpost
         //valor del vector de inicializacion
          $VI = "F20CA985A4B34DEC";
 
-          if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
-
-            echo ('OK');
-          //La salida esta en $arrayOut con todos los parámetros decifrados devueltos por  el VPOS
-            $resultadoAutorizacion = $arrayOut['authorizationResult'];
-            $codigoAutorizacion = $arrayOut['authorizationCode'];
-            $codigoError = $arrayOut['errorCode'];
-            $errormensaje = $arrayOut['errorMessage'];
-
-            echo ('<br>');
-            echo $resultadoAutorizacion;
-            echo ('<br>');
-            echo $codigoAutorizacion;
-            echo ('<br>');
-            echo $codigoError;
-            echo ('<br>');
-            echo $errormensaje;
-            echo ('<br>');
-
-          // se deben revisar luego los demas campos de acuerdo a lo indicado en la guia de integracion
-
-          }else{
-
-          //Puede haber un problema de mala configuración de las llaves,
-          //vector deinicializacion o el VPOS no ha enviado valores
-          //correctos
-              return "<br> Respuesta Inv&acute;lida";
+         if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
+          while(list($key, $val) = each($arrayOut)){
+            return "<br> $key => ".$val;
           }
+
+         }else{
+          return "<br> Respuesta Inv&acute;lida";
+         }
     }
     public function envio(){
        require_once 'vpos/vpos_pluging.php'; 
