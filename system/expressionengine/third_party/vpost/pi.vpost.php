@@ -91,10 +91,10 @@ class Vpost
         "-----END RSA PRIVATE KEY-----";
 
         $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
-        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCw9S8vnGIW04tG4N98f0HXoMJl\n".
-        "B6K9v2iJZlsFYNtP6Xv6Ax5dLEBzym/edPj89lraAxzmZUVPzPVoLlT0gSZMjlPP\n".
-        "PfTyQp4QRWkME9AtT71q5gw5lISCW0X8bVWqwksJ515Va0LMjSohf2V+azVw2QBT\n".
-        "S3IofH5DUfPOjSAfXwIDAQAB\n".
+        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
+        "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
+        "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
+        "pIs4aIDXarTYJGWlyQIDAQAB\n".
         "-----END PUBLIC KEY-----";
 
          $arrayIn['IDACQUIRER'] =$IDACQUIRER;
