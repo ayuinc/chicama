@@ -90,7 +90,7 @@ class Vpost
         "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
         "-----END RSA PRIVATE KEY-----";
 
-        $llavePublicaFirma = "BEGIN PUBLIC KEY-----\n".
+        $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n\n".
         "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
         "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
         "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
