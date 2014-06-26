@@ -229,7 +229,7 @@ class Vpost
        $array_send['billingLastName']='Sanz';
        $array_send['billingAddress']='Av. Belisario Suarez ';
        $array_send['billingCity']='Lima';
-       $array_send['billingZip']='Lima 32';
+       $array_send['billingZIP']='Lima 32';
        $array_send['billingState']='Lima';
        $array_send['billingCountry']='PE';
        $array_send['language']="SP";
