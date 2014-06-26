@@ -233,9 +233,9 @@ class Vpost
        $array_send['billingState']='Lima';
        $array_send['billingCountry']='PE';
        $array_send['language']="SP";
-       $array_send['RERSERVED1']="840"; // codigo de moneda nacional
-       $array_send['RERSERVED2']="100"; //mismo  monto quee purchaseAmount en nuestro caso
-       $array_send['RERSERVED3']="6573"; // id de comercio adicional
+       $array_send['Reserved1']="840"; // codigo de moneda nacional
+       $array_send['Reserved2']="100"; //mismo  monto quee purchaseAmount en nuestro caso
+       $array_send['Reserved3']="6573"; // id de comercio adicional
        $arrayOut['XMLREQ']="";
        $arrayOut['DIGITALSIGN']="";
        $arrayOut['SESSIONKEY']="";
