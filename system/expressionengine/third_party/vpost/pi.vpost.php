@@ -208,7 +208,7 @@ class Vpost
        $codigo1 ='840';
        $codigoAdquirente = 144;
        $codigoComercio = 6573;
-       $idorden = 00001;
+       $idorden = "".((int)(microtime()*1000000));
        /*
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
@@ -227,6 +227,11 @@ class Vpost
        $array_send['billingEMail']='soluciones@bizlinks.la';
        $array_send['billingFirstName']='Tony';
        $array_send['billingLastName']='Sanz';
+       $array_send['billingAddress']='Av. Belisario Suarez ';
+       $array_send['billingCity']='Lima';
+       $array_send['billingZip']='051';
+       $array_send['billingState']='Lima';
+       $array_send['billingCountry']='Peru';
        $array_send['language']="SP"; //En espaÃ±ol,
        $arrayOut['XMLREQ']="";
        $arrayOut['DIGITALSIGN']="";
