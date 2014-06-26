@@ -229,10 +229,13 @@ class Vpost
        $array_send['billingLastName']='Sanz';
        $array_send['billingAddress']='Av. Belisario Suarez ';
        $array_send['billingCity']='Lima';
-       //$array_send['billingZip']='51';
+       $array_send['billingZip']='Lima 32';
        $array_send['billingState']='Lima';
-       $array_send['billingCountry']='Peru';
-       $array_send['language']="SP"; //En espaÃ±ol,
+       $array_send['billingCountry']='PE';
+       $array_send['language']="SP";
+       $array_send['Reserved1']="840"; // codigo de moneda nacional
+       $array_send['Reserved2']="100"; //mismo  monto quee purchaseAmount en nuestro caso
+       $array_send['Reserved3']="6573"; // id de comercio adicional
        $arrayOut['XMLREQ']="";
        $arrayOut['DIGITALSIGN']="";
        $arrayOut['SESSIONKEY']="";
