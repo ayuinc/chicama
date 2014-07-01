@@ -1222,7 +1222,15 @@ class Infhotel
             </div>
         </div>
         <div class="row">
-            
+                <div class="row">
+                    <div class="large-3 columns">
+                        <p>Request *</p>
+                    </div>
+                    <div class="large-9 columns">
+                        <input type="text" name="request" maxlength="1000"  id="full_request">
+                    </div>
+                </div>
+            </div>
         <div class="row">
             <div class="large-6 columns">
                 <input type="submit" name="submit" value="Book Now" class="send button">
