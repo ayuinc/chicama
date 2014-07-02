@@ -41,13 +41,10 @@ $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
 
 $VI = "F20CA985A4B34DEC";
 
- if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
- 	while(list($key, $val) = each($arrayOut)){
- 		echo "<br> $key => ".$val;
- 	}
-
- }else{
- 	echo "<br> Respuesta Inv&acute;lida";
- }
+ if (VPOSResponse($arrayIn, $arrayOut, $llavePub, $llavePriv, $vi)) {
+        echo "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+} else {
+        echo "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+}
 
 ?>
