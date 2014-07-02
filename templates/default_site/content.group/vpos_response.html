@@ -1,12 +1,12 @@
 <h1>Todo OK!</h1>
 {embed="includes/header"}
   {exp:get_post_vars parse="inward"}
-    {exp:infhotel:recepcion
+    {exp:vpost:recepcion
     IDACQUIRER="{post_IDACQUIRER}"
     IDCOMMERCE="{post_IDCOMMERCE}"
     XMLRES="{post_XMLRES}"
     DIGITALSIGN="{post_DIGITALSIGN}"
     SESSIONKEY="{post_SESSIONKEY}" }
-    {/exp:infhotel:recepcion}
+    {/exp:vpost:recepcion}
   {/exp:get_post_vars}
 {embed="includes/footer"}
