@@ -188,7 +188,7 @@ class Vpost
        $codigo1 ='840';
        $codigoAdquirente = 144;
        $codigoComercio = 6573;
-       $idorden = "".((int)(microtime()*1000000));
+       $idorden = "".((int)(microtime()*100000));
        /*
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
@@ -210,7 +210,7 @@ class Vpost
        $array_send['billingAddress']='Av. Belisario Suarez ';
        $array_send['billingCity']='Lima';
        $array_send['billingZIP']='Lima 32';
-       $array_send['billingState']='Lima';
+       $array_send['billingState']='LI';
        $array_send['billingCountry']='PE';
        $array_send['language']="SP";
        $array_send['reserved1']="840"; // codigo de moneda nacional
