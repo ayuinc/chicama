@@ -66,8 +66,8 @@ class Vpost
     }
 
     public function recepcion(){
-      
-       require_once 'vpos/vpos_pluging.php'; 
+
+       require_once 'vpos/vpos_plugin.php'; 
        
        $IDACQUIRER= ee()->TMPL->fetch_param('IDACQUIRER');
        $IDCOMMERCE= ee()->TMPL->fetch_param('IDCOMMERCE');
@@ -116,7 +116,7 @@ class Vpost
           }
     }
     public function envio(){
-       require_once 'vpos/vpos_pluging.php'; 
+       require_once 'vpos/vpos_plugin.php'; 
        $codigo1 ='840';
 
        /*obtecion de parametros (métodos del framework) 
