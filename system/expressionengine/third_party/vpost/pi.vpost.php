@@ -104,7 +104,7 @@ class Vpost
          $arrayIn['DIGITALSIGN'] = $DIGITALSIGN;
          $arrayIn['SESSIONKEY'] = $SESSIONKEY;
 
-         $arrayOut = '';
+         $arrayOut[] = '';
 
         //valor del vector de inicializacion
          $VI = "F20CA985A4B34DEC";
