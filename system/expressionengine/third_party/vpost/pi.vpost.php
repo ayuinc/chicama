@@ -66,6 +66,7 @@ class Vpost
     }
 
     public function recepcion(){
+      
        require_once 'vpos/vpos_pluging.php'; 
        
        $IDACQUIRER= ee()->TMPL->fetch_param('IDACQUIRER');
@@ -108,14 +109,11 @@ class Vpost
         //valor del vector de inicializacion
          $VI = "F20CA985A4B34DEC";
 
-         if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
-          while(list($key, $val) = each($arrayOut)){
-            return "<br> $key => ".$val;
+          if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
+              return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+          } else {
+              return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
           }
-
-         }else{
-          return "<br> Respuesta Inv&acute;lida";
-         }
     }
     public function envio(){
        require_once 'vpos/vpos_pluging.php'; 
