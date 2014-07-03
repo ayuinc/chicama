@@ -335,11 +335,12 @@ function hide_divs (rooms_num, div_visible){
 		hide_divs(num_hab,0);
       });
 	$(function() {
-		var num_hab = 4;
+
+		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
-		var checkin = "01092014";
-		var checkout = "10092014" ;
+		var checkin = ""+{post_check_in_date};
+		var checkout = ""+{post_check_out_date} ;
 		var simple_garden = 0;
 		var doble_garden = 0;
 		var triple_garden = 0;
