@@ -203,8 +203,7 @@ class Infhotel
 
         $data = json_decode($result, true);
 
-        
-        return $data; 
+        return $data.$fecha_checkin.$fecha_checkout.$rooms_num; 
     }
 
     public function disponibilidadinicialhabitaciones3(){
