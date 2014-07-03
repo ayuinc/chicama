@@ -10,7 +10,7 @@
   <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
   {/exp:channel:entries}
   <div class="row">
-    <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+    <form id="book_a_room" action="/?/content/reserva" method="POST">
       <input type="hidden" name="XID" value="{XID_HASH}" />
       <div class="large-10 large-centered columns"> 
         <div id="form_box_2">
@@ -24,7 +24,7 @@
               <hr>
               <div class="row">
                 <div class="large-12 columns">
-                  <form>
+                  <form action="/?/content/newservation2" method="POST">>
                     <div class="row">
                       <!-- <div class="large-1 columns">
                         <label for="right-label" class="inline">Check-in</label>
