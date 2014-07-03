@@ -1,51 +1,87 @@
-{embed="includes/header"}
-<form id="book_a_room" action="/?/content/reserva" method="POST">
-	<input type="hidden" name="XID" value="{XID_HASH}" /> 
-	<div id="form_box_2">
-		<div class="row">
-			<div id="title_reservation" class="row">
-					<div class="large-4 columns">
-						<h2>NEW RESERVATION</h2>
-					</div>
-					<div class="large-4 large-offset-4 columns">
-						<p>Phone reservations +511-440-6040</p>
-						{exp:get_post_vars parse="inward"}
-							<p>FECHA CHECKIN: {post_check_in_date} </p>
-							<p>FECHA CHECKOUT: {post_check_out_date}</p>
-							<p>ROOM: {post_room_number}</p>
-						{/exp:get_post_vars}
-					</div>
-			</div>
-
-		</div>
-		<div class="row">
-			<div id="sub_title_reservation" class="row">
-				<div class="large-6 columns "> 
-					{exp:get_post_vars parse="inward"}
-					<b><h3 id="step_in_reservation">Room 1 of {post_room_number}</h3></b>
-					{/exp:get_post_vars}
-					<b><p>Select from availability below</p></b>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-5 columns">
-					<h4>Room Type</h4>
-				</div>
-				<div class="large-7 columns">
-					<h4>Average Rate per Night</h4>
-				</div>
-			</div>
-			{exp:get_post_vars parse="inward"}
-				{exp:infhotel:disponibilidadinicialhabitaciones_final
-					fecha_checkin = "{post_check_in_date}"
-					fecha_checkout = "{post_check_out_date}"
-					rooms_num =  "{post_room_number}" 
-				}
-				{/exp:infhotel:disponibilidadinicialhabitaciones_final}
-			{/exp:get_post_vars}
-		</div>
-	</div>
-</form>
+{exp:channel:entries channel="secciones" limit="1"}
+{imagen_de_fondo limit="1"}
+{embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
+{/imagen_de_fondo}
+{/exp:channel:entries}
+<div class="book_container cover_container">
+  {exp:channel:entries channel="secciones" limit="1"}
+  <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
+  </section>
+  <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
+  {/exp:channel:entries}
+  <div class="row">
+    <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+      <input type="hidden" name="XID" value="{XID_HASH}" />
+      <div class="large-10 large-centered columns"> 
+        <div id="form_box_2">
+          <div class="row">
+            <div id="title_reservation" class="row">
+              <div class="row">
+                <div class="large-4 columns">
+                  <h3>NEW RESERVATION</h3>
+                </div>
+              </div>  
+              <hr>
+              <div class="row">
+                <div class="large-12 columns">
+                  <form>
+                    <div class="row">
+                      <!-- <div class="large-1 columns">
+                        <label for="right-label" class="inline">Check-in</label>
+                      </div> -->
+                      <div class="large-2 columns">
+                        <input type="text" id="check_in_date" placeholder="CHECK-IN">
+                      </div>
+                      <!-- <div class="large-1 columns">
+                        <label for="right-label" class="inline">Check-out</label>
+                      </div> -->
+                      <div class="large-2 columns">
+                        <input type="text" id="check_out_date" placeholder="CHECK-OUT">
+                      </div>
+                      <div class="large-1 columns">
+                        <label for="right-label" class="inline">Rooms</label>
+                      </div>
+                      <div class="large-2 columns">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="large-2 columns end">
+                        <input type="submit" class="button tiny send" value="check again">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr style="margin-top:0">  
+            </div>
+          </div>
+          <div class="row">
+            <div id="sub_title_reservation" class="row">
+              <div class="large-4 columns "> 
+                {exp:get_post_vars parse="inward"}
+                <b><h3 id="step_in_reservation">Room 1 of {post_room_number}</h3></b>
+                {/exp:get_post_vars}
+                <!-- <b><p>Select from availability below</p></b> -->
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="large-5 columns">
+                <h4>Room Type</h4>
+              </div>
+              <div class="large-7 columns">
+                <h4>Average Rate per Night</h4>
+              </div>
+            </div> -->
+            
+        </div>
+      </div>  
+    </form>
+  </div>  
+</div>  
 
 {exp:infhotel:tercer_paso}
 
