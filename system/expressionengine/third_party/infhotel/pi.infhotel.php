@@ -184,43 +184,23 @@ class Infhotel
     }
 
     public function disponibilidadinicialhabitaciones_final(){
+
         $response ='';
-        //$fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
-        //$fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
-        //$rooms_num = ee()->TMPL->fetch_param('rooms_num');
-        $rooms_num = '4';
-        $result='[
-        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
-        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
-        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
-        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
-        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":120,"TCodigoHabitacion":"110001","TDescripcionCompletaProducto":"SIMPLE GARDEN VIEW"},
-        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
-        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
-        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
-        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
-        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":150,"TCodigoHabitacion":"110002","TDescripcionCompletaProducto":"DOBLE GARDEN VIEW"},
-        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
-        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
-        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
-        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
-        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110003","TDescripcionCompletaProducto":"TRIPLE GARDEN VIEW"},
-        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
-        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
-        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
-        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
-        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":7,"NPrecioBase":190,"TCodigoHabitacion":"110005","TDescripcionCompletaProducto":"SIMPLE OCEAN VIEW"},
-        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
-        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
-        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
-        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
-        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":8,"NPrecioBase":190,"TCodigoHabitacion":"110006","TDescripcionCompletaProducto":"DOBLE OCEAN VIEW"},
-        {"FFecha":"01\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
-        {"FFecha":"02\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
-        {"FFecha":"03\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
-        {"FFecha":"04\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"},
-        {"FFecha":"05\/09\/2014 12:00:00 a.m.","NDisponible":4,"NPrecioBase":190,"TCodigoHabitacion":"110007","TDescripcionCompletaProducto":"TRIPLE OCEAN VIEW"}
-        ]';
+        $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
+        $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
+        $rooms_num = ee()->TMPL->fetch_param('rooms_num');
+
+        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
+        //  Initiate curl
+        $ch = curl_init($url);
+        // Disable SSL verification
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // Will return the response, if false it print the response
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // Set the url
+        curl_setopt($ch, CURLOPT_URL,$url);
+
+        $result=curl_exec($ch);
 
         $data = json_decode($result, true);
         foreach($data as $row){
