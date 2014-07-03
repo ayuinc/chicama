@@ -600,6 +600,11 @@ figure {
   #form_box_3 .send {
     float: right; }
 
+#form_box {
+  display: block;
+  position: static;
+  margin-top: 3em; }
+
 #form_box_2,
 #form_box_3 {
   margin-top: 3em;
