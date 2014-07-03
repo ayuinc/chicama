@@ -1,55 +1,12 @@
+<h1>Todo OK!</h1>
 {embed="includes/header"}
-<?php
-require_once 'vpos/vpos_pluging.php'; 
-/*
- * Created on Feb 7, 2006
- *
- * To change the template for this generated file go to
- * Window - Preferences - PHPeclipse - PHP - Code Templates
- */
-
-$llavePrivadaCifrado = "-----BEGIN RSA PRIVATE KEY-----\n".
-        "MIICXAIBAAKBgQDr3OXAFjoBokuPfCWs1QScfz0Ejyn4JuEuMpZCRYGhn/1pWCN1\n".
-        "kHVXrfk4fDephOBRVWEJq03fKkAJAxNMTMSbcjyMdSvhP4o/n8wpPGdHT1FZq1rD\n".
-        "OOkKKRUwyuZm/h5+hR97ud3WTccQ7RRQHBCl2rTi7ofG56NddecjI7iw8QIDAQAB\n".
-        "AoGARfH1JDizLQbfF4b+eTmWq35ELxTxokiNYLDZxH9uSOr0MIhVw6h6U+0gyjJ0\n".
-        "I05nY1dJdp+ZcUPLR6Dk2Syu5MSCFhlfEkni8kb+pK1OlkwqZ4aF3mMKW1PbXB38\n".
-        "M/vBKiZyANOTHAtdp7HuOjsAFdGT6m3Xi0bEmpAUxES+YlECQQD5tbsFBwN217FQ\n".
-        "OzZSarosXh8QVsTO4D9LMNQGw188OdgZZD29i9JGgtzxfG4VQqW7TaRjWJK/JqXU\n".
-        "p+Fgi4olAkEA8c3fqG0bT7whPxokCJGV9xCHHDB2y5qCu8RoPAnRvTcRudpqvKJR\n".
-        "ZSXkqnDgz86VGovZei32yQENm7//GtQD3QJAZ9jrERksmKT1Ca/GVJosGL1/37Sm\n".
-        "Hn7l86g31SQ1G//WXiDxCD340fgkWI1t3oucDvwoLGSuiq5Q8tJqiVMevQJAGoY/\n".
-        "04TsawmzB+4BJ+N4dNqeR4xVa64uSxSXboaROFVTH3UDImAX16WZeMzbDFCX8IqI\n".
-        "t6tVF+WCraQZAsNhDQJBALz43SvNjptXnbaHKJCKWC0tGjtC0fDjm1Tsf8jfka8o\n".
-        "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
-        "-----END RSA PRIVATE KEY-----";
-
-$llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
-"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
-"Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
-"g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
-"pIs4aIDXarTYJGWlyQIDAQAB\n".
-"-----END PUBLIC KEY-----";
-
- $arrayIn['IDACQUIRER'] = $_POST['IDACQUIRER'];
- $arrayIn['IDCOMMERCE'] = $_POST['IDCOMMERCE'];
- $arrayIn['XMLRES'] = $_POST['XMLRES'];
- $arrayIn['DIGITALSIGN'] = $_POST['DIGITALSIGN'];
- $arrayIn['SESSIONKEY'] = $_POST['SESSIONKEY'];
-
- $arrayOut = '';
-
-
-$VI = "F20CA985A4B34DEC";
-
- if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
- 	while(list($key, $val) = each($arrayOut)){
- 		echo "<br> $key => ".$val;
- 	}
-
- }else{
- 	echo "<br> Respuesta Inv&acute;lida";
- }
-
-?>
+  {exp:get_post_vars parse="inward"}
+    {exp:vpost:recepcion
+    IDACQUIRER="{post_IDACQUIRER}"
+    IDCOMMERCE="{post_IDCOMMERCE}"
+    XMLRES="{post_XMLRES}"
+    DIGITALSIGN="{post_DIGITALSIGN}"
+    SESSIONKEY="{post_SESSIONKEY}" }
+    {/exp:vpost:recepcion}
+  {/exp:get_post_vars}
 {embed="includes/footer"}

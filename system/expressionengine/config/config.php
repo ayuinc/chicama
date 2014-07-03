@@ -158,7 +158,7 @@ $config['url_suffix'] = '';
 */
 $config['enable_hooks'] = FALSE;
 
-
+$config['secure_forms'] = "n"; 
 /*
 |--------------------------------------------------------------------------
 | Class Extension Prefix

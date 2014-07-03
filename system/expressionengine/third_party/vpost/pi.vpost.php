@@ -66,7 +66,8 @@ class Vpost
     }
 
     public function recepcion(){
-       require_once 'vpos/vpos_pluging.php'; 
+
+       require_once 'vpos/vpos_plugin.php'; 
        
        $IDACQUIRER= ee()->TMPL->fetch_param('IDACQUIRER');
        $IDCOMMERCE= ee()->TMPL->fetch_param('IDCOMMERCE');
@@ -103,22 +104,22 @@ class Vpost
          $arrayIn['DIGITALSIGN'] = $DIGITALSIGN;
          $arrayIn['SESSIONKEY'] = $SESSIONKEY;
 
-         $arrayOut = '';
+         $arrayOut['authorizationResult'] = '';
+         $arrayOut['authorizationCode'] = '';
+         $arrayOut['errorCode'] = '';
+         $arrayOut['errorMessage'] = '';
 
         //valor del vector de inicializacion
          $VI = "F20CA985A4B34DEC";
 
-         if(VPOSResponse($arrayIn,$arrayOut,$llavePublicaFirma,$llavePrivadaCifrado,$VI)){
-          while(list($key, $val) = each($arrayOut)){
-            return "<br> $key => ".$val;
+          if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
+              return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+          } else {
+              return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
           }
-
-         }else{
-          return "<br> Respuesta Inv&acute;lida";
-         }
     }
     public function envio(){
-       require_once 'vpos/vpos_pluging.php'; 
+       require_once 'vpos/vpos_plugin.php'; 
        $codigo1 ='840';
 
        /*obtecion de parametros (métodos del framework) 
@@ -188,7 +189,7 @@ class Vpost
        $codigo1 ='840';
        $codigoAdquirente = 144;
        $codigoComercio = 6573;
-       $idorden = "".((int)(microtime()*1000000));
+       $idorden = "".((int)(microtime()*100000));
        /*
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
@@ -210,7 +211,7 @@ class Vpost
        $array_send['billingAddress']='Av. Belisario Suarez ';
        $array_send['billingCity']='Lima';
        $array_send['billingZIP']='Lima 32';
-       $array_send['billingState']='Lima';
+       $array_send['billingState']='LI';
        $array_send['billingCountry']='PE';
        $array_send['language']="SP";
        $array_send['reserved1']="840"; // codigo de moneda nacional
