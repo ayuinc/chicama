@@ -536,27 +536,27 @@ class Infhotel
                                 </div>
                             </div>
                         </div>
-      <div class="large-offset-1 large-6 columns">
-        <div class="row">
-            <div class="large-6 columns">
-                <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                  <option value="1" selected="selected">Simple</option>
-                  <option value="2">Double</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-8 columns">
-                <!-- <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean0" value="100"> -->
-                <!-- <p id="num_guest_simple_ocean'.$i.'">One Guest</p> -->
-                <h2 id="cost_simple_ocean'.$i.'">USD 100/night</h2>
-                <!-- <span>*OFERTA</span> -->
-            </div>
-            <div class="large-4 columns">
-                <button id="add_room_simple_ocean'.$i.'" type="button" class="send">Select</button>
-            </div>
-        </div>
-      </div>
+                          <div class="large-offset-1 large-6 columns">
+                            <div class="row">
+                                <div class="large-6 columns">
+                                    <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                      <option value="1" selected="selected">Simple</option>
+                                      <option value="2">Double</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-8 columns">
+                                    <!-- <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean0" value="100"> -->
+                                    <!-- <p id="num_guest_simple_ocean'.$i.'">One Guest</p> -->
+                                    <h2 id="cost_simple_ocean'.$i.'">USD 100/night</h2>
+                                    <!-- <span>*OFERTA</span> -->
+                                </div>
+                                <div class="large-4 columns">
+                                    <button id="add_room_simple_ocean'.$i.'" type="button" class="send">Select</button>
+                                </div>
+                            </div>
+                          </div>
                         <--<div class="large-7 columns">
                             <div class="row">
                                 <div class="large-8 columns">
@@ -571,8 +571,8 @@ class Infhotel
                             </div>
                         </div>-->
                     </div>
-  </div>
-</div>';
+                  </div>
+                </div>';
                     }
                     else{
                         if($i<$second_iteration_ocean){ //Doble Ocean
