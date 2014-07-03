@@ -334,18 +334,18 @@ class Infhotel
                                             <h2 id="type_hab_simple_garden'.$i.'">Garden View</h2>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="large-6 columns">
-                                            <p>Guests</p>
-                                        </div>
-                                        <div class="large-6 columns">
-                                            <select name="persons_number"  id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                              <option value="1" selected="selected">1</option>
-                                              <option value="2">2</option>
-                                              <option value="3">3</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <!-- <div class="row">
+                                      <div class="large-6 columns">
+                                        <p>Guests</p>
+                                      </div>
+                                      <div class="large-6 columns">
+                                        <select name="persons_number" id="guests_simple_garden0" required="" pattern="number" data-invalid="">
+                                          <option value="1" selected="selected">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                        </select>
+                                      </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="row">
@@ -354,6 +354,34 @@ class Infhotel
                                 </div>
                             </div>
                         </div>
+                            <div class="large-offset-1 large-6 columns">
+                            <div class="row">
+                              <!-- <div class="large-6 columns">
+                                <p>Guests</p>
+                              </div> -->
+                              <div class="large-6 columns">
+                                <select name="persons_number" id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                  <option value="1" selected="selected">Simple</option>
+                                  <option value="2">Double</option>
+                                  <option value="3">Trible</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="large-8 columns">
+                                  <!-- <input id="final_cost_simple_garden'.$i.'" type="text" name="final_cost_simple_garden0" value="100"> -->
+                                  <!-- <p id="num_guest_simple_garden'.$i.'">One Guest</p> -->
+                                  <h2 id="cost_simple_garden'.$i.'">USD 100/night</h2>
+                                  <!-- <span>*OFERTA</span> -->
+                              </div>
+                              <div class="large-4 columns">
+                                  <button id="add_room_simple_garden'.$i.'" type="button" class="send">Select</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
+                        <hr>
+                        <!--
                         <div class="large-7 columns">
                             <div class="row">
                                 <div class="large-8 columns">
@@ -367,7 +395,7 @@ class Infhotel
                                 </div>
                             </div>
                         </div>
-                    </div>';
+                    </div>-->';
                     }
                     else{
                         if($i<$second_iteration_garden){ //Doble Garden
@@ -488,27 +516,48 @@ class Infhotel
                                             <h2 id="type_hab_simple_ocean'.$i.'">Ocean View</h2>
                                         </div>
                                     </div>
-                                    <div class="row">
+                                     <!-- <div class="row">
                                         <div class="large-6 columns">
                                             <p>Guests</p>
                                         </div>
                                         <div class="large-6 columns">
-                                            <select name="persons_number"  id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                            <select name="persons_number" id="guests_simple_ocean0" required="" pattern="number" data-invalid="">
                                               <option value="1" selected="selected">1</option>
                                               <option value="2">2</option>
                                               <option value="3">3</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="large-12 columns">
-                                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</figcaption>
+                                    <figcaption><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius deserunt vitae id possimus dolores quidem distinctio nostrum consequatur et laudantium. Corrupti, eum delectus tenetur doloremque totam dolor perferendis minima consectetur.</p></figcaption>
                                 </div>
                             </div>
                         </div>
-                        <div class="large-7 columns">
+      <div class="large-offset-1 large-6 columns">
+        <div class="row">
+            <div class="large-6 columns">
+                <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                  <option value="1" selected="selected">Simple</option>
+                  <option value="2">Double</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-8 columns">
+                <!-- <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean0" value="100"> -->
+                <!-- <p id="num_guest_simple_ocean'.$i.'">One Guest</p> -->
+                <h2 id="cost_simple_ocean'.$i.'">USD 100/night</h2>
+                <!-- <span>*OFERTA</span> -->
+            </div>
+            <div class="large-4 columns">
+                <button id="add_room_simple_ocean'.$i.'" type="button" class="send">Select</button>
+            </div>
+        </div>
+      </div>
+                        <--<div class="large-7 columns">
                             <div class="row">
                                 <div class="large-8 columns">
                                     <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="100"/>
@@ -520,8 +569,10 @@ class Infhotel
                                     <button id="add_room_simple_ocean'.$i.'" type="button">Click Me Simple Ocean(?)!</button>
                                 </div>
                             </div>
-                        </div>
-                    </div>';
+                        </div>-->
+                    </div>
+  </div>
+</div>';
                     }
                     else{
                         if($i<$second_iteration_ocean){ //Doble Ocean
