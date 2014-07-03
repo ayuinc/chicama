@@ -1344,7 +1344,7 @@ class Infhotel
         return $result."  ".$data_string; 
     }
     public function tercer_paso(){
-        $form = '
+        $form = '<div id="form_box_3">
         <div class="row">
             <div id="title_reservation" class="row">
                     <div class="large-4 columns">
@@ -1374,7 +1374,8 @@ class Infhotel
             <div class="large-6 columns">
                 <input type="submit" name="submit" value="Book Now" class="send button">
             </div>
-        </div>';  
+        </div>
+    </div>';  
         return $form;
     }
 }
