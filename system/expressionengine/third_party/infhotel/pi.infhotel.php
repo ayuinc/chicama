@@ -1352,7 +1352,6 @@ class Infhotel
                     </div>
                     <div class="large-4 large-offset-4 columns">
                         <p>Phone reservations +511-440-6040</p>
-                        
                             <p>FECHA CHECKIN:   </p>
                             <p>FECHA CHECKOUT:  </p>
                             <p>ROOM: 4</p>

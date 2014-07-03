@@ -22,7 +22,7 @@
               <hr>
               <div class="row">
                 <div class="large-12 columns">
-                  <form action="/?/content/newreservation2" method="POST">
+                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
                   	<input type="hidden" name="XID" value="{XID_HASH}" />
                     <div class="row">
                       <!-- <div class="large-1 columns">
@@ -77,15 +77,15 @@
             </div> -->
             <form id="book_a_room" action="/?/content/reserva" method="POST">
       			<input type="hidden" name="XID" value="{XID_HASH}" />
-            {exp:get_post_vars parse="inward"}
-				{exp:infhotel:disponibilidadinicialhabitaciones_final
-					fecha_checkin = "{post_check_in_date}"
-					fecha_checkout = "{post_check_out_date}"
-					rooms_num =  "{post_room_number}" 
-				}
-				{/exp:infhotel:disponibilidadinicialhabitaciones_final}
-			{/exp:get_post_vars}
-			{exp:infhotel:tercer_paso}
+	            {exp:get_post_vars parse="inward"}
+					{exp:infhotel:disponibilidadinicialhabitaciones_final
+						fecha_checkin = "{post_check_in_date}"
+						fecha_checkout = "{post_check_out_date}"
+						rooms_num =  "{post_room_number}" 
+					}
+					{/exp:infhotel:disponibilidadinicialhabitaciones_final}
+				{/exp:get_post_vars}
+				{exp:infhotel:tercer_paso}
 			</form>
         </div>
       </div>  
