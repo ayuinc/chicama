@@ -549,7 +549,7 @@ class Infhotel
                                 </div>
                             </div>
                         </div>
-                    </div>-->';
+                    </div> -->';
                         }
                     }
                 }
@@ -625,7 +625,7 @@ class Infhotel
                                     <button id="add_room_simple_ocean'.$i.'" type="button">Click Me Simple Ocean(?)!</button>
                                 </div>
                             </div>
-                        </div>-->
+                        </div>  -->
                     </div>
                   </div>
                 </div>';
@@ -690,7 +690,7 @@ class Infhotel
                                 </div>
                             </div>
                           </div>
-                        <--<div class="large-7 columns">
+                        <!-- <div class="large-7 columns">
                             <div class="row">
                                 <div class="large-8 columns">
                                     <input id="final_cost_doble_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="100"/>
@@ -702,7 +702,7 @@ class Infhotel
                                     <button id="add_room_doble_ocean'.$i.'" type="button">Click Me Simple Ocean(?)!</button>
                                 </div>
                             </div>
-                        </div>-->
+                        </div> -->
                     </div>
                   </div>
                 </div>';
@@ -766,7 +766,7 @@ class Infhotel
                                 </div>
                             </div>
                           </div>
-                        <--<div class="large-7 columns">
+                        <!-- <div class="large-7 columns">
                             <div class="row">
                                 <div class="large-8 columns">
                                     <input id="final_cost_triple_ocean'.$i.'" type="text" name="final_cost_triple_ocean'.$i.'" value="100"/>
@@ -778,7 +778,7 @@ class Infhotel
                                     <button id="add_room_triple_ocean'.$i.'" type="button">Click Me Simple Ocean(?)!</button>
                                 </div>
                             </div>
-                        </div>-->
+                        </div> -->
                     </div>
                   </div>
                 </div>';
