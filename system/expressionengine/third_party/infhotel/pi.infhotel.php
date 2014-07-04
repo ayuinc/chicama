@@ -613,7 +613,7 @@ class Infhotel
                                 </div>
                             </div>
                           </div>
-                        <--<div class="large-7 columns">
+                        <!-- <div class="large-7 columns">
                             <div class="row">
                                 <div class="large-8 columns">
                                     <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="100"/>
