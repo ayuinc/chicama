@@ -202,7 +202,7 @@ class Vpost
         */
        $array_send['acquirerId']=$codigoAdquirente;
        $array_send['commerceId']=$codigoComercio;
-       $array_send['purchaseAmount']='120000';
+       $array_send['purchaseAmount']='75';
        $array_send['purchaseCurrencyCode']=$codigo1;
        $array_send['purchaseOperationNumber']= $idorden;
        $array_send['billingEMail']='soluciones@bizlinks.la';
