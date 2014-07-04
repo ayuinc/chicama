@@ -1,0 +1,42 @@
+{exp:channel:entries channel="secciones" limit="1"}
+{imagen_de_fondo limit="1"}
+{embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
+{/imagen_de_fondo}
+{/exp:channel:entries}
+<div class="book_container cover_container">
+  {exp:channel:entries channel="secciones" limit="1"}
+  <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
+  </section>
+  <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
+  {/exp:channel:entries}
+  <div class="row">
+		<form action="#" id="book_a_room">
+			<div class="large-10 large-centered columns"> 
+				<div id="form_box_6">
+					<div class="row">
+						<div id="title_reservation" class="">
+								<div class="large-4 large-centered text-center columns">
+									<h2>SORRY!</h2>
+								</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="row">
+								<div class="large-12 columns">
+									<h4 class="text-center" style="margin:80px 0">The Room requested is not available, try again please</h4>
+									<div class="row">
+				            <div class="large-7 columns">
+				              	<input type="submit" name="submit" value="Back" class="send button">
+				            </div>
+					        </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</form>
+	</div>
+</div>	
+{embed="includes/footer"}

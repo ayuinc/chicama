@@ -566,7 +566,9 @@ figure {
 
 #form_box,
 #form_box_2,
-#form_box_3 {
+#form_box_3,
+#form_box_4,
+#form_box_5 {
   display: none;
   background-color: #FFFFFF;
   -webkit-border-radius: 4px;
@@ -580,11 +582,15 @@ figure {
   top: 96px; }
   #form_box h2,
   #form_box_2 h2,
-  #form_box_3 h2 {
+  #form_box_3 h2,
+  #form_box_4 h2,
+  #form_box_5 h2 {
     color: #2c2625; }
   #form_box h3,
   #form_box_2 h3,
-  #form_box_3 h3 {
+  #form_box_3 h3,
+  #form_box_4 h3,
+  #form_box_5 h3 {
     border-bottom: 1px solid #2c2625;
     margin-bottom: 1.5rem;
     margin-top: 0;
@@ -592,24 +598,72 @@ figure {
     line-height: 1.2; }
   #form_box p,
   #form_box_2 p,
-  #form_box_3 p {
+  #form_box_3 p,
+  #form_box_4 p,
+  #form_box_5 p {
     font-size: 1rem;
     color: #2c2625; }
   #form_box .send,
   #form_box_2 .send,
-  #form_box_3 .send {
+  #form_box_3 .send,
+  #form_box_4 .send,
+  #form_box_5 .send {
     float: right; }
 
-#form_box {
-  display: block;
-  position: static;
-  margin-top: 3em; }
-
+#form_box,
 #form_box_2,
-#form_box_3 {
+#form_box_3,
+#form_box_4,
+#form_box_5,
+#form_box_6 {
   margin-top: 3em;
   position: static;
   display: block; }
+
+/*step2 book a room*/
+figcaption p {
+  margin-top: 20px; }
+
+/*step3 book a room*/
+table thead {
+  background: #939393; }
+  table thead tr th {
+    color: #fff; }
+
+/*checkboxes customization*/
+.addon .label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  font-size: 13px;
+  background: transparent;
+  color: #666; }
+.addon input[type=checkbox] {
+  display: none; }
+.addon .label:before {
+  content: "";
+  background: url(../img/checkbox-unchecked.png) no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  border-radius: 3px;
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.8); }
+.addon input[type=checkbox]:checked + .label:before {
+  content: "";
+  background: url(../img/checkbox-checked.png) no-repeat;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 15px;
+  background-size: 100%; }
 
 /* END BOOK A ROOM */
 /* map */
