@@ -626,8 +626,6 @@ class Infhotel
                                 </div>
                             </div>
                         </div>  -->
-                    </div>
-                  </div>
                 </div>';
                     }
                     else{
@@ -703,8 +701,6 @@ class Infhotel
                                 </div>
                             </div>
                         </div> -->
-                    </div>
-                  </div>
                 </div>';
                         }
                         else{
@@ -780,8 +776,7 @@ class Infhotel
                             </div>
                         </div> -->
                     </div>
-                  </div>
-                </div>';
+                  ';
                         }
                     }
                 }
