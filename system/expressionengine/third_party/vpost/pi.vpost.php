@@ -202,7 +202,7 @@ class Vpost
         */
        $array_send['acquirerId']=$codigoAdquirente;
        $array_send['commerceId']=$codigoComercio;
-       $array_send['purchaseAmount']='125000';
+       $array_send['purchaseAmount']='75';
        $array_send['purchaseCurrencyCode']=$codigo1;
        $array_send['purchaseOperationNumber']= $idorden;
        $array_send['billingEMail']='soluciones@bizlinks.la';
@@ -215,7 +215,7 @@ class Vpost
        $array_send['billingCountry']='PE';
        $array_send['language']="SP";
        $array_send['reserved1']="840"; // codigo de moneda nacional
-       $array_send['reserved2']="125000"; //mismo  monto quee purchaseAmount en nuestro caso
+       $array_send['reserved2']="75"; //mismo  monto quee purchaseAmount en nuestro caso
        $array_send['reserved3']="6573"; // id de comercio adicional
        $arrayOut['XMLREQ']="";
        $arrayOut['DIGITALSIGN']="";
