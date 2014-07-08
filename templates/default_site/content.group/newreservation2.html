@@ -187,9 +187,7 @@
        	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3");
        	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3");
 
-       	for (var i = sumary.length - 1; i >= 0; i--) {
-       		console.log(sumary[i]);
-       	};
+       	
 
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
@@ -264,8 +262,11 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-				console.log(sumary[0]['CantHab']);
+				console.log(JSON.stringify(sumary));
 				//console.log(send);
+				for (var i = sumary.length - 1; i >= 0; i--) {
+		       		console.log(sumary[i]);
+		       	};
 	        });
 	        break;
 	    case 2:
