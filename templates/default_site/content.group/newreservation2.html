@@ -112,7 +112,7 @@
 		var simple_ocean = 0;
 		var doble_ocean = 0;
 		var triple_ocean = 0;
-
+		var sumary = { };
 		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
 		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
 		var data = {
@@ -187,6 +187,19 @@
        	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3");
        	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3");
 
+       	if(sumary[1]){
+	    	console.log("el primero esta lleno");
+	    }
+	    if(sumary[2]){
+	    	console.log("el segundo esta lleno");
+	    }
+	    if(sumary[3]){
+	    	console.log("el tercero esta lleno");
+	    }
+	    if(sumary[4]){
+	    	console.log("el cuarto esta lleno");
+	    }
+
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
 			$(select_box).change(function(){
@@ -237,8 +250,7 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
-	var sumary = {
-	};
+
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
@@ -392,18 +404,7 @@
 	        break;
 
 	    }
-	    if(sumary[1]){
-	    	console.log("el primero esta lleno");
-	    }
-	    if(sumary[2]){
-	    	console.log("el segundo esta lleno");
-	    }
-	    if(sumary[3]){
-	    	console.log("el tercero esta lleno");
-	    }
-	    if(sumary[4]){
-	    	console.log("el cuarto esta lleno");
-	    }
+	    
 	}
 
 });
