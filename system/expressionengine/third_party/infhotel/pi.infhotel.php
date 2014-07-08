@@ -1338,6 +1338,230 @@ class Infhotel
         curl_close($ch);
         return $result."  ".$data_string; 
     }
+    public function reservation_3(){
+        $response= '            <div id="form_box_3_container" class="large-10 large-centered columns"> 
+                <div id="form_box_3">
+                    <div class="row">
+                        <div id="title_reservation" class="">
+                                <div class="large-4 columns">
+                                    <h3>SUMMARY</h3>
+                                </div>
+                                <div class="large-4 large-offset-4 columns">
+                                    <p>Phone reservations +511-440-6040</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns" id="sumary">
+                            <div class="row">   
+                                <div class="large-12 columns">
+                                    <table class="text-center">
+                                      <thead>
+                                        <tr>
+                                          <th>Arrival</th>
+                                          <th>Departure</th>
+                                          <th>Number of nights</th>
+                                          <th>Number of rooms</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>15/05/2014</td>
+                                          <td>25/05/2014</td>
+                                          <td>2</td>
+                                          <td>2</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>  
+                            </div>  
+                            <div class="row">   
+                                <div class="large-4 columns">
+                                    <div class="row" id="room1">
+                                        <h4>Room 1</h4>
+                                        <table class="text-center">
+                                          <thead>
+                                            <tr>
+                                              <th>Room type</th>
+                                              <th>Reservation type</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Single</td>
+                                              <td>Value pack</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row" id="room2">
+                                        <h4>Room 2</h4>
+                                        <table class="text-center">
+                                          <thead>
+                                            <tr>
+                                              <th>Room type</th>
+                                              <th>Reservation type</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Single</td>
+                                              <td>Breakfast Only</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row" id="room3">
+                                        <h4>Room 3</h4>
+                                        <table class="text-center">
+                                          <thead>
+                                            <tr>
+                                              <th>Room type</th>
+                                              <th>Reservation type</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Single</td>
+                                              <td>Breakfast Only</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row" id="room4">
+                                        <h4>Room 4</h4>
+                                        <table class="text-center">
+                                          <thead>
+                                            <tr>
+                                              <th>Room type</th>
+                                              <th>Reservation type</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td>Single</td>
+                                              <td>Breakfast Only</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                </div>  
+                                <div class="large-8 columns">   
+                                    <h4>Costs</h4>
+                                    <table class="">
+                                      <thead>
+                                        <tr>
+                                          <th>Items</th>
+                                          <th>Price</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr id="price_room1">
+                                          <td>Room 1</td>
+                                          <td>USD 50</td>
+                                        </tr>
+                                        <tr id="price_room2">
+                                          <td>Room 2</td>
+                                          <td>USD 70</td>
+                                        </tr>
+                                        <tr id="price_room3">
+                                          <td>Room 3</td>
+                                          <td>USD 70</td>
+                                        </tr>
+                                        <tr id="price_room4">
+                                          <td>Room 4</td>
+                                          <td>USD 70</td>
+                                        </tr>
+                                      </tbody>
+                                      <tfoot>
+                                        <tr>
+                                          <td>Tax</td>
+                                          <td>USD 10</td>
+                                        </tr>
+                                        <tr id"total_price_sumary">
+                                          <td>Total cost</td>
+                                          <td>USD 130</td>
+                                        </tr>
+                                      </tfoot>
+                                    </table>
+                                </div>
+                                <div class="row">   
+                                    <div class="large-4 columns">   
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <div class="row">
+                                <div id="title_reservation" class="">
+                                        <div class="large-4 columns">
+                                            <h3>ADD-ONS</h3>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="row">
+                                    <div class="large-12 columns" id="addons">
+                                        <div class="row">
+                                            <div class="addon">
+                                                <div class="large-7 columns">
+                                                    <h4>ALL MEALS</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe, praesentium, amet blanditiis sed at expedita molestias officia odit modi officiis esse distinctio. Quas, neque odio consectetur magni cum dolore!
+                                                    </p>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    <div class="row">
+                                                        <h2 id="">USD 100</h2>
+                                                        <div class="large-3 columns">
+                                                            <label for="people" class="inline">People</label>
+                                                        </div>  
+                                                        <div class="large-9 columns">
+                                      <select id="people">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                      </select>
+                                    </div>
+                                                        <input id="addon1" type="checkbox">
+                                                        <label for="addon1" class="label">ADD TO TRIP</label>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="addon">
+                                                <div class="large-7 columns">
+                                                    <h4>TRANSPORTATION</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe, praesentium, amet blanditiis sed at expedita molestias officia odit modi officiis esse distinctio. Quas, neque odio consectetur magni cum dolore!
+                                                    </p>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    <div class="row">
+                                                        <h2 id="">USD 100</h2>
+                                                        <input id="addon2" type="checkbox">
+                                                        <label for="addon2" class="label">ADD TO TRIP</label>
+                                                    </div>  
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                        <button type="button" class="send">Continue</button>
+                </div>
+              </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>';
+            return $response;
+    }
     public function tercer_paso(){
         $form = '
         <div id="form_box_3">
