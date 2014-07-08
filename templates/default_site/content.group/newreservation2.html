@@ -237,6 +237,7 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
+	var sumary ={};
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
@@ -249,6 +250,7 @@
 		    	simple_garden = simple_garden + 1;
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
+	            sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
 		    	send = send.replace(/{/gi, "(a)");
@@ -258,7 +260,8 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-				console.log(send);
+				console.log(sumary);
+				//console.log(send);
 	        });
 	        break;
 	    case 2:
@@ -272,6 +275,7 @@
 		    	doble_garden = doble_garden + 1;
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
     	    	var send = JSON.stringify(data);
     	    	send = send.replace(/{/gi, "(a)");
@@ -281,7 +285,8 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
     	    	$(request).val(send);
-    			console.log(send);
+    			console.log(sumary);
+				//console.log(send);
 	        });
 	        break;
 	    case 3:
@@ -295,6 +300,7 @@
 		    	triple_garden =triple_garden + 1;
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
 		    	send = send.replace(/{/gi, "(a)");
@@ -304,7 +310,8 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-				console.log(send);
+				console.log(sumary);
+				//console.log(send);
 	        });
 	        break;
 	    case 4:
@@ -318,6 +325,7 @@
 		    	simple_ocean =simple_ocean + 1;
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
 		    	send = send.replace(/{/gi, "(a)");
@@ -327,7 +335,8 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-				console.log(send);
+				console.log(sumary);
+				//console.log(send);
 	        });
 	        break;
 	    case 5:
@@ -341,6 +350,7 @@
 		    	doble_ocean =doble_ocean+ 1;
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
 		    	send = send.replace(/{/gi, "(a)");
@@ -350,8 +360,8 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-				console.log(send);
-	        });
+				console.log(sumary);
+				//console.log(send);	        });
 	        break;
 	    case 6:
 	        $(buttom).click(function(){
@@ -364,6 +374,7 @@
 		    	triple_ocean =triple_ocean + 1;
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
 		    	send = send.replace(/{/gi, "(a)");
@@ -373,14 +384,13 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-				console.log(send);
+				console.log(sumary);
+				//console.log(send);
 	        });
 	        break;
 
 	    }
 	}
-	habita =  data["Habitaciones"];
-		console.log(habita);
 });
 
 	function hide_divs (rooms_num, div_visible){
