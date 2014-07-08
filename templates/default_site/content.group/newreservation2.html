@@ -237,7 +237,12 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
-	var sumary ={};
+	var sumary = {
+		"1":"",
+		"2":"",
+		"3":"",
+		"4":"",
+	};
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
