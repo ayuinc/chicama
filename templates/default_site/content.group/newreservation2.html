@@ -85,12 +85,13 @@
 					}
 					{/exp:infhotel:disponibilidadinicialhabitaciones_final}
 				{/exp:get_post_vars}
+				{exp:infhotel:reservation_3}
 			</form>
         </div>
       </div>  
   </div>  
 </div>  
-{exp:infhotel:reservation_3}
+
 {embed="includes/footer"}
 	{exp:get_post_vars parse="inward"}
 <script>
@@ -269,6 +270,8 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
+		    	$("#room1").html("");
+		    	$("#room1").show();
 				console.log(sumary[orden]);
 				//console.log(send);
 	        });

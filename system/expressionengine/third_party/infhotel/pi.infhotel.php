@@ -1360,16 +1360,16 @@ class Infhotel
                                         <tr>
                                           <th>Arrival</th>
                                           <th>Departure</th>
-                                          <th>Number of nights</th>
+                                          <!-- <th>Number of nights</th> -->
                                           <th>Number of rooms</th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td>15/05/2014</td>
-                                          <td>25/05/2014</td>
-                                          <td>2</td>
-                                          <td>2</td>
+                                          <td id="sum_arrival">15/05/2014</td>
+                                          <td id="sum_departure">25/05/2014</td>
+                                          <!-- <td id="">2</td> -->
+                                          <td id="sum_rooms">2</td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1388,7 +1388,7 @@ class Infhotel
                                           </thead>
                                           <tbody>
                                             <tr>
-                                              <td>Single</td>
+                                              <td >Single</td>
                                               <td>Value pack</td>
                                             </tr>
                                           </tbody>
@@ -1478,9 +1478,9 @@ class Infhotel
                                           <td>Tax</td>
                                           <td>USD 10</td>
                                         </tr>
-                                        <tr id"total_price_sumary">
+                                        <tr>
                                           <td>Total cost</td>
-                                          <td>USD 130</td>
+                                          <td id"total_price_sumary" >USD 130</td>
                                         </tr>
                                       </tfoot>
                                     </table>
