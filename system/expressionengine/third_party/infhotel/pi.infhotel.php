@@ -369,7 +369,7 @@ class Infhotel
                             </div>
                             <div class="row">
                               <div class="large-8 columns">
-                                  <!-- <input id="final_cost_simple_garden'.$i.'" type="text" name="final_cost_simple_garden'.$i.'" value="100"> -->
+                                  <input id="final_cost_simple_garden'.$i.'" type="hidden" name="final_cost_simple_garden'.$i.'" value="100"> 
                                   <!-- <p id="num_guest_simple_garden'.$i.'">One Guest</p> -->
                                   <h2 id="cost_simple_garden'.$i.'">USD 100/night</h2>
                                   <!-- <span>*OFERTA</span> -->
@@ -447,7 +447,7 @@ class Infhotel
                             </div>
                             <div class="row">
                               <div class="large-8 columns">
-                                  <!-- <input id="final_cost_doble_garden'.$i.'" type="text" name="final_cost_doble_garden'.$i.'" value="100"> -->
+                                  <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="100">
                                   <!-- <p id="num_guest_doble_garden'.$i.'">One Guest</p> -->
                                   <h2 id="cost_doble_garden'.$i.'">USD 100/night</h2>
                                   <!-- <span>*OFERTA</span> -->
@@ -524,7 +524,7 @@ class Infhotel
                             </div>
                             <div class="row">
                               <div class="large-8 columns">
-                                  <!-- <input id="final_cost_triple_garden'.$i.'" type="text" name="final_cost_triple_garden'.$i.'" value="100"> -->
+                                  <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="100">
                                   <!-- <p id="num_guest_triple_garden'.$i.'">One Guest</p> -->
                                   <h2 id="cost_triple_garden'.$i.'">USD 100/night</h2>
                                   <!-- <span>*OFERTA</span> -->
@@ -603,7 +603,7 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-8 columns">
-                                    <!-- <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="100"> -->
+                                    <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="100">
                                     <!-- <p id="num_guest_simple_ocean'.$i.'">One Guest</p> -->
                                     <h2 id="cost_simple_ocean'.$i.'">USD 100/night</h2>
                                     <!-- <span>*OFERTA</span> -->
@@ -678,7 +678,7 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-8 columns">
-                                    <!-- <input id="final_cost_doble_ocean'.$i.'" type="text" name="final_cost_doble_ocean'.$i.'" value="100"> -->
+                                    <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="100">
                                     <!-- <p id="num_guest_doble_ocean'.$i.'">One Guest</p> -->
                                     <h2 id="cost_doble_ocean'.$i.'">USD 100/night</h2>
                                     <!-- <span>*OFERTA</span> -->
@@ -752,7 +752,7 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-8 columns">
-                                    <!-- <input id="final_cost_triple_ocean'.$i.'" type="text" name="final_cost_triple_ocean'.$i.'" value="100"> -->
+                                    <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="100">
                                     <!-- <p id="num_guest_triple_ocean'.$i.'">One Guest</p> -->
                                     <h2 id="cost_triple_ocean'.$i.'">USD 100/night</h2>
                                     <!-- <span>*OFERTA</span> -->
