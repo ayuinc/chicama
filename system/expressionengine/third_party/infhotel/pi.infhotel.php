@@ -363,7 +363,7 @@ class Infhotel
                                 <select name="persons_number" id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
                                   <option value="1" selected="selected">Simple</option>
                                   <option value="2">Double</option>
-                                  <option value="3">Trible</option>
+                                  <option value="3">Triple</option>
                                 </select>
                               </div>
                             </div>
@@ -441,7 +441,7 @@ class Infhotel
                                 <select name="persons_number" id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
                                   <option value="1" selected="selected">Simple</option>
                                   <option value="2">Double</option>
-                                  <option value="3">Trible</option>
+                                  <option value="3">Triple</option>
                                 </select>
                               </div>
                             </div>
@@ -518,7 +518,7 @@ class Infhotel
                                 <select name="persons_number" id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
                                   <option value="1" selected="selected">Simple</option>
                                   <option value="2">Double</option>
-                                  <option value="3">Trible</option>
+                                  <option value="3">triple</option>
                                 </select>
                               </div>
                             </div>
