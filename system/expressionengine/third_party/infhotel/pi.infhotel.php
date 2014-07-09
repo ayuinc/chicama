@@ -1339,9 +1339,10 @@ class Infhotel
         return $result."  ".$data_string; 
     }
     public function reservation_3(){
-        $response= '<form id="form_box_3" action="#" id="book_a_room">
-            <div  class="large-10 large-centered columns"> 
-                <div id="form_box_3">
+        $response= '<div id="form_box_3" class="row">
+        <form action="#" id="book_a_room">
+            <div id="form_box_3_container" class="large-10 large-centered columns"> 
+                <div class="row">
                     <div class="row">
                         <div id="title_reservation" class="">
                                 <div class="large-4 columns">
