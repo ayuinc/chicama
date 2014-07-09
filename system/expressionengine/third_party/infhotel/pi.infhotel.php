@@ -1340,7 +1340,6 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '            <div id="form_box_3_container" class="large-10 large-centered columns"> 
-        <form id="book_a_room" action="/?/content/reserva" method="POST">
                 <div id="form_box_3">
                     <div class="row">
                         <div id="title_reservation" class="">
@@ -1560,8 +1559,7 @@ class Infhotel
                         </div>
                     </div>  
                 </div>
-            </div>
-            </form>';
+            </div>';
             return $response;
     }
     public function tercer_paso(){
