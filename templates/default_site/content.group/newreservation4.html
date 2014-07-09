@@ -1,0 +1,355 @@
+{exp:channel:entries channel="secciones" limit="1"}
+{imagen_de_fondo limit="1"}
+{embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
+{/imagen_de_fondo}
+{/exp:channel:entries}
+<div class="book_container cover_container">
+  {exp:channel:entries channel="secciones" limit="1"}
+  <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
+  </section>
+  <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
+  {/exp:channel:entries}
+  <div class="row">
+		<form action="#" id="book_a_room">
+			<div id="form_box_4_container" class="large-10 large-centered columns"> 
+				<div id="form_box_4">
+					<div class="row">
+						<div id="title_reservation" class="">
+								<div class="large-4 columns">
+									<h3>PAYMENT</h3>
+								</div>
+								<div class="large-4 large-offset-4 columns">
+									<p>Phone reservations +511-440-6040</p>
+								</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="large-7 columns">
+							<div class="row">
+								<div id="sub_title_reservation" class="large-12 columns">
+									<b><h3>Guest Information</h3></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Firt/Given Name *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Last/Family Name *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>E-mail*</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="email" value="" id="freeform_email" maxlength="150" placeholder="ENTER YOUR E-MAIL" required="" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Phone Number *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER" required="" pattern="telef" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Country *</p>
+								</div>
+								<div class="large-9 columns">
+									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+									<option value="af">Afghanistan</option>
+									<option value="ax">Aland Islands</option>
+									<option value="al">Albania</option>
+									<option value="dz">Algeria</option>
+									<option value="as">American Samoa</option>
+									<option value="ad">Andorra</option>
+									<option value="ao">Angola</option>
+									<option value="ai">Anguilla</option>
+									<option value="aq">Antarctica</option>
+									<option value="ag">Antigua and Barbuda</option>
+									<option value="ar">Argentina</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div id="sub_title_reservation" class="large-12 columns">
+									<b><h3>Guarantee</h3></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-12 columns "> 
+									<b><h4>Credit Card Information</h4></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Name on card *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Card type *</p>
+								</div>
+								<div class="large-9 columns">
+									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+									<option value="af">Afghanistan</option>
+									<option value="ax">Aland Islands</option>
+									<option value="al">Albania</option>
+									<option value="dz">Algeria</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Card Number *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER" required="" pattern="telef" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Expiration Date *</p>
+								</div>
+								<div class="large-3 columns">
+									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+									<option value="Month">Month</option>
+									<option value="Enero">Enero Islands</option>
+									<option value="Febrero">Febrero</option>
+									<option value="Marzo">Marzo</option>
+									</select>
+								</div>
+								<div class="large-3 columns">
+									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+									<option value="Year">Year</option>
+									<option value="ax">Aland Islands</option>
+									<option value="al">Albania</option>
+									<option value="dz">Algeria</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-12 columns "> 
+									<b><h4>Billing Address</h4></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Country *</p>
+								</div>
+								<div class="large-9 columns">
+									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">
+									<option value="af">Afghanistan</option>
+									<option value="ax">Aland Islands</option>
+									<option value="al">Albania</option>
+									<option value="dz">Algeria</option>
+									</select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Street *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>City *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>State *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Postal Code *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+								</div>
+							</div>
+						</div>
+						<div class="large-4 columns" id="sumary">
+							<div class="row">
+								<div class="large-12 columns">
+									<b><h4>Sumary</h4></b>
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns ">
+									<p>Arrival:</p>
+								</div>
+								<div id="checkout_date" class="large-9 columns">
+									<p>15/05/2014</p>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="large-3 columns">
+									<p>Departure:</p>
+								</div>
+								<div id="checkin_date" class="large-9 columns">
+									<p>25/05/2014</p>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="large-6 columns">
+									<p>Number of nights:</p>
+								</div>
+								<div id="checkin_date" class="large-6 columns">
+									<p>2</p>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="large-6 columns">
+									<p>Number of rooms:</p>
+								</div>
+								<div id="checkin_date" class="large-6 columns">
+									<p>2</p>
+								</div>
+							</div>
+							<div class="row">	
+								<div class="large-12 columns">
+									<h4>Room 1</h4>
+									<table class="text-center">
+									  <thead>
+									    <tr>
+									      <th>Room type</th>
+									      <th>Reservation type</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>Single</td>
+									      <td>Value pack</td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>	
+								<div class="large-12 columns">	
+									<h4>Room 2</h4>
+									<table class="text-center">
+									  <thead>
+									    <tr>
+									      <th>Room type</th>
+									      <th>Reservation type</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>Single</td>
+									      <td>Breakfast Only</td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>
+								<div class="large-12 columns">	
+									<h4>Room 3</h4>
+									<table class="text-center">
+									  <thead>
+									    <tr>
+									      <th>Room type</th>
+									      <th>Reservation type</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>Single</td>
+									      <td>Breakfast Only</td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>
+								<div class="large-12 columns">	
+									<h4>Room 4</h4>
+									<table class="text-center">
+									  <thead>
+									    <tr>
+									      <th>Room type</th>
+									      <th>Reservation type</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>Single</td>
+									      <td>Breakfast Only</td>
+									    </tr>
+									  </tbody>
+									</table>
+								</div>	
+								<div class="large-12 columns">	
+									<h4>Costs</h4>
+									<table class="">
+									  <thead>
+									    <tr>
+									      <th>Items</th>
+									      <th>Price</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td>Room 1</td>
+									      <td>USD 50</td>
+									    </tr>
+									    <tr>
+									      <td>Room 2</td>
+									      <td>USD 70</td>
+									    </tr>
+									    <tr>
+									      <td>Room 3</td>
+									      <td>USD 70</td>
+									    </tr>
+									    <tr>
+									      <td>Room 4</td>
+									      <td>USD 70</td>
+									    </tr>
+									  </tbody>
+									  <tfoot>
+									    <tr>
+									      <td>Tax</td>
+									      <td>USD 10</td>
+									    </tr>
+									    <tr>
+									      <td>Total cost</td>
+									      <td>USD 130</td>
+									    </tr>
+									  </tfoot>
+									</table>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div class="row">
+            <div class="large-7 columns">
+              	<input type="submit" name="submit" value="Book Now" class="send button">
+            </div>
+	        </div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>	
+{embed="includes/footer"}

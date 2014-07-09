@@ -1340,7 +1340,7 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '<div id="form_box_3_container"  class="row">
-        <form action="#" id="book_a_room">
+        <form action="/?/content/newreservation4" id="book_a_room">
             <div class="large-10 large-centered columns"> 
                 <div id="form_box_3">
                     <div class="row">
@@ -1520,15 +1520,15 @@ class Infhotel
                                                         <div class="large-3 columns">
                                                             <label for="people" class="inline">People</label>
                                                         </div>  
-                                                        <div class="large-9 columns">
-                                      <select id="people">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                      </select>
-                                    </div>
-                                                        <input id="addon1" type="checkbox">
-                                                        <label for="addon1" class="label">ADD TO TRIP</label>
+                                                        <!-- <div class="large-9 columns">
+                                                          <select id="people">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                          </select>
+                                                        </div> -->
+                                                        <input id="all_meals" type="checkbox">
+                                                        <label for="all_meals" class="label">ADD TO TRIP</label>
                                                     </div>
                                                 </div>  
                                             </div>
@@ -1544,8 +1544,8 @@ class Infhotel
                                                 <div class="large-4 columns">
                                                     <div class="row">
                                                         <h2 id="">USD 100</h2>
-                                                        <input id="addon2" type="checkbox">
-                                                        <label for="addon2" class="label">ADD TO TRIP</label>
+                                                        <input id="transport" type="checkbox">
+                                                        <label for="transport" class="label">ADD TO TRIP</label>
                                                     </div>  
                                                 </div>  
                                             </div>
