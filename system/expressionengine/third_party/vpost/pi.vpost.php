@@ -213,7 +213,7 @@ class Vpost
        $array_send['billingEMail']=$billingEMail;
        $array_send['billingFirstName']=$billingFirstName;
        $array_send['billingLastName']=$billingLastName;
-       $array_send['billingAddress']='Av. Belisario Suarez ';
+       $array_send['billingAddress']=$billingAddress;
        $array_send['billingCity']='Lima';
        $array_send['billingZIP']='Lima 32';
        $array_send['billingState']='LI';
