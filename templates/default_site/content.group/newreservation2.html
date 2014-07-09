@@ -9,8 +9,8 @@
   </section>
   <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
   {/exp:channel:entries}
-  <div id="form_box_2_container" class="row">
-      <div  class="large-10 large-centered columns"> 
+  <div class="row">
+      <div id="form_box_2_container" class="large-10 large-centered columns"> 
         <div id="form_box_2">
           <div class="row">
             <div id="title_reservation" class="row">
@@ -419,7 +419,7 @@
 			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3").html());
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 1:
@@ -427,15 +427,15 @@
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3").html());
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 2:
 			    if(2<rooms_num){
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
-			    else{form_box_2_container
-			    	$("#form_box_2_container").html($("#form_box_3").html());
+			    else{
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 3:
@@ -443,11 +443,11 @@
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3").html());
+			    	$("#form_box_2").html($("#form_box_3").html());
 			    }
 			    break;
 			case 4:
-					$("#form_box_2_container").html($("#form_box_3").html());
+					$("#form_box_2").html($("#form_box_3").html());
 			    break; 
 		}
 	}
