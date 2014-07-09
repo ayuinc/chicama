@@ -1340,8 +1340,8 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '            
-        <form id="book_a_room" action="/?/content/reserva" method="POST">
-        <div id="form_box_3_container" class="large-10 large-centered columns"> 
+                <form action="#" id="book_a_room">
+            <div id="form_box_3_container" class="large-10 large-centered columns"> 
                 <div id="form_box_3">
                     <div class="row">
                         <div id="title_reservation" class="">
@@ -1362,16 +1362,16 @@ class Infhotel
                                         <tr>
                                           <th>Arrival</th>
                                           <th>Departure</th>
-                                          <!-- <th>Number of nights</th> -->
+                                          <th>Number of nights</th>
                                           <th>Number of rooms</th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                         <tr>
-                                          <td id="sum_arrival">15/05/2014</td>
-                                          <td id="sum_departure">25/05/2014</td>
-                                          <!-- <td id="">2</td> -->
-                                          <td id="sum_rooms">2</td>
+                                          <td>15/05/2014</td>
+                                          <td>25/05/2014</td>
+                                          <td>2</td>
+                                          <td>2</td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -1390,7 +1390,7 @@ class Infhotel
                                           </thead>
                                           <tbody>
                                             <tr>
-                                              <td >Single</td>
+                                              <td>Single</td>
                                               <td>Value pack</td>
                                             </tr>
                                           </tbody>
@@ -1480,9 +1480,9 @@ class Infhotel
                                           <td>Tax</td>
                                           <td>USD 10</td>
                                         </tr>
-                                        <tr>
+                                        <tr id"total_price_sumary">
                                           <td>Total cost</td>
-                                          <td id"total_price_sumary" >USD 130</td>
+                                          <td>USD 130</td>
                                         </tr>
                                       </tfoot>
                                     </table>
@@ -1555,14 +1555,14 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-12 columns">
-                        <button type="button" class="send">Continue</button>
+                      <button id="add_room_simple_ocean0" type="button" class="send">Continue</button>
                 </div>
               </div>
                         </div>
                     </div>  
                 </div>
             </div>
-            </form>';
+        </form>';
             return $response;
     }
     public function tercer_paso(){
