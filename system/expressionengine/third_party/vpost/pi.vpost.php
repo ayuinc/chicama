@@ -194,6 +194,8 @@ class Vpost
        $purchaseAmount = ee()->TMPL->fetch_param('purchaseAmount');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
+       $billingEMail = ee()->TMPL->fetch_param('billingEMail');
+       $billingAddress = ee()->TMPL->fetch_param('billingAddress');
        /*
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
@@ -210,7 +212,7 @@ class Vpost
        $array_send['purchaseOperationNumber']= $idorden;
        $array_send['billingEMail']='soluciones@bizlinks.la';
        $array_send['billingFirstName']=$billingFirstName;
-       $array_send['billingLastName']='Sanz';
+       $array_send['billingLastName']=$billingLastName;
        $array_send['billingAddress']='Av. Belisario Suarez ';
        $array_send['billingCity']='Lima';
        $array_send['billingZIP']='Lima 32';
