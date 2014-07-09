@@ -90,12 +90,12 @@
       </div>  
   </div>  
 </div>  
-{exp:infhotel:reservation_3}
 {embed="includes/footer"}
 	{exp:get_post_vars parse="inward"}
 <script>
 	$(function() {
 		num_hab = {post_room_number};
+		tercer_paso = {exp:infhotel:reservation_3};
 		$("#room1").hide();
 		$("#room2").hide();
 		$("#room3").hide();
@@ -104,7 +104,7 @@
 		$("#price_room2").hide();
 		$("#price_room3").hide();
 		$("#price_room4").hide();
-		$("#form_box_3").hide();
+		//$("#form_box_3").hide();
 		hide_divs(num_hab,0);
       });
 	$(function() {
@@ -419,7 +419,7 @@
 			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
+			    	$("#form_box_2_container").html(tercer_paso);
 			    }
 			    break;
 			case 1:
@@ -427,7 +427,7 @@
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
+			    	$("#form_box_2_container").html(tercer_paso);
 			    }
 			    break;
 			case 2:
@@ -435,7 +435,7 @@
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
+			    	$("#form_box_2_container").html(tercer_paso);
 			    }
 			    break;
 			case 3:
@@ -443,11 +443,11 @@
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
+			    	$("#form_box_2_container").html(tercer_paso);
 			    }
 			    break;
 			case 4:
-					$("#form_box_2_container").html($("#form_box_3_container").html());
+					$("#form_box_2_container").html(tercer_paso);
 			    break; 
 		}
 	}
