@@ -1340,7 +1340,8 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '<div id="form_box_3_container"  class="row">
-        <form action="/?/content/newreservation4" id="book_a_room">
+        <form action="/?/content/newreservation4" id="book_a_room" methos="POST">
+            <input type="hidden" name="XID" value="{XID_HASH}" /> 
             <div class="large-10 large-centered columns"> 
                 <div id="form_box_3">
                     <div class="row">
@@ -1557,7 +1558,7 @@ class Infhotel
                             <div class="row">
                                 <div class="large-12 columns">
                                 <!-- <input type="submit" id="submit" name="submit" value="Continue" class="send"> -->
-                                <button id="add_room_simple_ocean0" type="submit" class="send">Continue</button> 
+                                <button id="submit_paso3" type="submit" class="send">Continue</button> 
                 </div>
               </div>
                         </div>
