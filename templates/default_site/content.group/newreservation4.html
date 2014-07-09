@@ -192,6 +192,32 @@
 									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
+							{exp:get_post_vars parse="inward"}
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Transport</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="transport" maxlength="1000"  id="full_request">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>All Meals</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="all_meals" maxlength="1000"  id="full_request">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Full-Request</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="full_request" maxlength="1000"  id="full_request">
+								</div>
+							</div>
+							{/exp:get_post_vars}
 						</div>
 						<div class="large-4 columns" id="sumary">
 							<div class="row">
