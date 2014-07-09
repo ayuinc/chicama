@@ -10,7 +10,7 @@
   <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
   {/exp:channel:entries}
   <div class="row">
-		<form action="#" id="book_a_room">
+		<form action="/?/content/newreservation5" id="book_a_room" method="POST">
 			<div id="form_box_4_container" class="large-10 large-centered columns"> 
 				<div id="form_box_4">
 					<div class="row">
@@ -43,7 +43,7 @@
 									<p>Last/Family Name *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
+									<input type="text" name="last_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR LAST NAME" required="" pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
 							<div class="row">
