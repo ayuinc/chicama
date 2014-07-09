@@ -1340,7 +1340,7 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '<div id="form_box_3_container"  class="row">
-        <form action="/?/content/newreservation4" id="book_a_room" methos="POST">
+        <form action="/?/content/newreservation4" id="book_a_room" method="POST">
             <input type="hidden" name="XID" value="{XID_HASH}" /> 
             <div class="large-10 large-centered columns"> 
                 <div id="form_box_3">
