@@ -210,7 +210,7 @@ class Vpost
        $array_send['purchaseAmount']=$purchaseAmount;
        $array_send['purchaseCurrencyCode']=$codigo1;
        $array_send['purchaseOperationNumber']= $idorden;
-       $array_send['billingEMail']='soluciones@bizlinks.la';
+       $array_send['billingEMail']=$billingEMail;
        $array_send['billingFirstName']=$billingFirstName;
        $array_send['billingLastName']=$billingLastName;
        $array_send['billingAddress']='Av. Belisario Suarez ';
