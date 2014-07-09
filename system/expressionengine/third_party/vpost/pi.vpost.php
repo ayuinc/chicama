@@ -190,10 +190,13 @@ class Vpost
        $codigoAdquirente = 144;
        $codigoComercio = 6573;
        $idorden = "".((int)(microtime()*100000));
-       /*
+       
+       $purchaseAmount= ee()->TMPL->fetch_param('purchaseAmount');
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
+       $billingAddress = ee()->TPML->fetch_param('billingAddress');
+       /*
        $IDACQUIRER =  ee()->TMPL->fetch_param('IDACQUIRER');
        $IDCOMMERCE = ee()->TMPL->fetch_param('IDCOMMERCE');
        $XMLRES = ee()->TMPL->fetch_param('XMLRES');
@@ -202,13 +205,13 @@ class Vpost
         */
        $array_send['acquirerId']=$codigoAdquirente;
        $array_send['commerceId']=$codigoComercio;
-       $array_send['purchaseAmount']='75';
+       $array_send['purchaseAmount']=$purchaseAmount;
        $array_send['purchaseCurrencyCode']=$codigo1;
        $array_send['purchaseOperationNumber']= $idorden;
-       $array_send['billingEMail']='soluciones@bizlinks.la';
-       $array_send['billingFirstName']='Tony';
-       $array_send['billingLastName']='Sanz';
-       $array_send['billingAddress']='Av. Belisario Suarez ';
+       $array_send['billingEMail']=$billingEMail;
+       $array_send['billingFirstName']=$billingFirstName;
+       $array_send['billingLastName']=$billingLastName;
+       $array_send['billingAddress']=$billingAddress;
        $array_send['billingCity']='Lima';
        $array_send['billingZIP']='Lima 32';
        $array_send['billingState']='LI';
