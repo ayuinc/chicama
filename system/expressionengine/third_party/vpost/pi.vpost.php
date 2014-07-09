@@ -218,7 +218,7 @@ class Vpost
        $array_send['billingCountry']='PE';
        $array_send['language']="SP";
        $array_send['reserved1']="840"; // codigo de moneda nacional
-       $array_send['reserved2']="75"; //mismo  monto quee purchaseAmount en nuestro caso
+       $array_send['reserved2']=$purchaseAmount; //mismo  monto quee purchaseAmount en nuestro caso
        $array_send['reserved3']="6573"; // id de comercio adicional
        $arrayOut['XMLREQ']="";
        $arrayOut['DIGITALSIGN']="";
