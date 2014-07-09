@@ -22,7 +22,7 @@
               <hr>
               <div class="row">
                 <div class="large-12 columns">
-                  <form id="book_a_room1" action="/?/content/newreservation2" method="POST">
+                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
                   	<input type="hidden" name="XID" value="{XID_HASH}" />
                     <div class="row">
                       <!-- <div class="large-1 columns">
@@ -75,7 +75,7 @@
                 <h4>Average Rate per Night</h4>
               </div>
             </div> -->
-            <form id="book_a_room2" action="/?/content/reserva" method="POST">
+            <form id="book_a_room" action="/?/content/reserva" method="POST">
       			<input type="hidden" name="XID" value="{XID_HASH}" />
 	            {exp:get_post_vars parse="inward"}
 					{exp:infhotel:disponibilidadinicialhabitaciones_final
