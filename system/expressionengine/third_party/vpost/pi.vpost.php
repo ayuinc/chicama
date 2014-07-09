@@ -193,6 +193,7 @@ class Vpost
        
        $purchaseAmount = ee()->TMPL->fetch_param('purchaseAmount');
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
+       $billingLastName = ee()->TMPL->fetch_param('billingLastName');
        /*
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
