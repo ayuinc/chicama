@@ -1339,9 +1339,8 @@ class Infhotel
         return $result."  ".$data_string; 
     }
     public function reservation_3(){
-        $response= '            
-                <div id="form_box_3_container" class="large-10 large-centered columns"> 
-                <form action="#" id="book_a_room">
+        $response= '<form action="#" id="book_a_room">
+            <div id="form_box_3_container" class="large-10 large-centered columns"> 
                 <div id="form_box_3">
                     <div class="row">
                         <div id="title_reservation" class="">
@@ -1561,8 +1560,9 @@ class Infhotel
                         </div>
                     </div>  
                 </div>
-                </form>
-            </div>';
+            </div>
+        </form>
+    </div>';
             return $response;
     }
     public function tercer_paso(){
