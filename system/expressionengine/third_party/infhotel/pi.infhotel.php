@@ -1556,7 +1556,8 @@ class Infhotel
                             </div>
                             <div class="row">
                                 <div class="large-12 columns">
-                      <button id="add_room_simple_ocean0" type="button" class="send">Continue</button>
+                                <input type="submit" id="submit" name="submit" value="Continue" class="send">
+                      <!-- <button id="add_room_simple_ocean0" type="button" class="send">Continue</button> -->
                 </div>
               </div>
                         </div>
