@@ -273,12 +273,6 @@ class Vpost
     </div>
     <div class="row">
       <div class="large-7 columns">
-
-        <div class="row">
-          <div id="sub_title_reservation" class="large-12 columns">
-            <b><h3>REDIRECCIONANDO</h3></b>
-          </div>
-        </div>
         <div class="row">
           <div class="large-3 columns">
             <p>IDACQUIRER:</p>
