@@ -8,19 +8,23 @@
   <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
   </section>
   <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
-
-{exp:vpost:test_envio
-	purchaseAmount="100"
-	billingFirstName="Gianfranco"
-	billingLastName="Montoya"
-	billingEMail="gms122@gmail.com"
-	billingAddress="Av Belisario Suárez 488"}
-{/exp:vpost:test_envio}
-
+  {/exp:channel:entries}
+  <div class="row">
+  	<div id="form_box_4_container" class="large-10 large-centered columns"> 
+  		<h1>RECIRECCIONANDO . . . </h1>
+	{exp:vpost:test_envio
+		purchaseAmount="100"
+		billingFirstName="Gianfranco"
+		billingLastName="Montoya"
+		billingEMail="gms122@gmail.com"
+		billingAddress="Av Belisario Suárez 488"}
+	{/exp:vpost:test_envio}
+ 	</div>
+ </div>
 </div>	
 {embed="includes/footer"}
 <script type="text/javascript">
  $(function(){
-	$('#form_envio').submit();
+	//$('#form_envio').submit();
  });
 </script>
