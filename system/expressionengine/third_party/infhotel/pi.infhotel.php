@@ -199,7 +199,15 @@ class Infhotel
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
-
+        $result=curl_exec($ch);
+        $n=0;
+        // Will dump a beauty json :3
+        $data = json_decode($result, true);
+        foreach($data as $row){
+            $fecha[$n] = $row["FFecha"];
+            $n=$n+1;
+        }
+        
         $result=curl_exec($ch);
 
         $data = json_decode($result, true);
