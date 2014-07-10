@@ -18,15 +18,6 @@
 								<div class="large-4 large-centered text-center columns">
 									<h2>THANK YOU</h2>
 									{exp:get_post_vars parse="inward"}
-									  {exp:vpost:recepcion
-									  request="{exp:session_variables:get name='full_request'}"
-									  first_name="{exp:session_variables:get name='name'}"
-									  last_name="{exp:session_variables:get name='last_name'}"
-									  country="{exp:session_variables:get name='country'}"
-									  document_id="{exp:session_variables:get name='document_id'}"
-									  document_type="{exp:session_variables:get name='document_type'}"
-									  card_id="{exp:session_variables:get name='card_id'}"
-									  card_type="{exp:session_variables:get name='card_type'}"
 									  IDACQUIRER="{post_IDACQUIRER}"
 									  IDCOMMERCE="{post_IDCOMMERCE}"
 									  XMLRES="{post_XMLRES}"
@@ -182,24 +173,7 @@
 		</form>
 	</div>
 	{exp:session_variables:get name='full_request'}
-	{exp:session_variables:get name='name'}
-	{exp:session_variables:get name='last_name'}
-	{exp:session_variables:get name='country'}
-	{exp:session_variables:get name='email'}
-	{exp:session_variables:get name='document_id'}
-	{exp:session_variables:get name='document_type'}
-	{exp:session_variables:get name='card_id'}
-	{exp:session_variables:get name='card_type'}
-
-
+	
 	{exp:session_variables:delete name='full_request'}
-	{exp:session_variables:delete name='name'}
-	{exp:session_variables:delete name='last_name'}
-	{exp:session_variables:delete name='country'}
-	{exp:session_variables:delete name='email'}
-	{exp:session_variables:delete name='document_id'}
-	{exp:session_variables:delete name='document_type'}
-	{exp:session_variables:delete name='card_id'}
-	{exp:session_variables:delete name='card_type'}
 </div>	
 {embed="includes/footer"}
