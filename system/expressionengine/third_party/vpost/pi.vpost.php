@@ -259,69 +259,34 @@ class Vpost
             //inicializacion o el VPOS no ha enviado valores correctos
         }
         return "<!--<p> Numero de Orden:".$idorden."</p> -->".
-'<form  id="book_a_room" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
-  <div id="form_box_4" style="height: 70vh;">
-    <div class="row">
-      <div id="title_reservation" class="">
-          <div class="large-4 columns">
-            <h3>PAYMENT</h3>
-          </div>
-          <div class="large-4 large-offset-4 columns">
-            <p>Phone reservations +511-440-6040</p>
-          </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-6 large-centered columns" style="text-align: center;">
-        <h2>REDIRECCIONANDO . . . </h2>
-        <div style="display:none;">
-          <div class="row">
-            <div class="large-3 columns">
-              <p>IDACQUIRER:</p>
-            </div>
-            <div class="large-9 columns">
-              <input name="IDACQUIRER" id="IDACQUIRER" value="144">
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-3 columns">
-              <p>COMMERCE:</p>
-            </div>
-            <div class="large-9 columns">
-              <input name="IDCOMMERCE" id="IDCOMMERCE" value="6573">
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-3 columns">
-              <p>XML:</p>
-            </div>
-            <div class="large-9 columns">
-              <input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-3 columns">
-              <p>SIGNATURE:</p>
-            </div>
-            <div class="large-9 columns">
-              <input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-3 columns">
-              <p>SESSIONKEY:</p>
-            </div>
-            <div class="large-9 columns">
-              <input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'>
-            </div>
-          </div>
-          <div class="large-7 columns">
-              <input type="submit" name="envio" id="envio" class="send button" value="Enviar" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+'<form  id="form_envio" style="display:none;" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
+   <table border="0">
+  <tr>
+    <td>IDACQUIRER:</td>
+    <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
+  </tr>
+  <tr>
+    <td>COMMERCE:</td>
+    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="6573"></td>
+  </tr>
+  <tr>
+    <td>XML:</td>
+    <td><input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'></td>
+  </tr>
+  <tr>
+    <td>SIGNATURE:</td>
+    <td><input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'></td>
+  </tr>
+  <tr>
+    <td>SESSIONKEY:</td>
+    <td><input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="envio" id="envio" value="Enviar" /></td>
+
+    </tr>
+</table>
+
 </form>';
     // END
         }
