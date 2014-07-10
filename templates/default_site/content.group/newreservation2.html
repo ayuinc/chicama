@@ -248,6 +248,7 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
+	var amount = 0;
 
 	switch(type_hab){
 	    case 1:
@@ -271,8 +272,10 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
-		    	$("#room1").html("");
-		    	$("#room1").show();
+		    	amount = amount + $(select_box).val();
+		    	$("#purchase_amount").val(amount);
+		    	//$("#room1").html("");
+		    	//$("#room1").show();
 				console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -297,6 +300,8 @@
 		    	send = send.replace(/:/gi, "(d)");
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
+    	    	amount = amount + $(select_box).val();
+		    	$("#purchase_amount").val(amount);
     	    	$(request).val(send);
     			console.log(sumary[orden]);
 				//console.log(send);
@@ -322,6 +327,8 @@
 		    	send = send.replace(/:/gi, "(d)");
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
+		    	amount = amount + $(select_box).val();
+		    	$("#purchase_amount").val(amount);
 		    	$(request).val(send);
 				console.log(sumary[orden]);
 				//console.log(send);
@@ -347,6 +354,8 @@
 		    	send = send.replace(/:/gi, "(d)");
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
+		    	amount = amount + $(select_box).val();
+		    	$("#purchase_amount").val(amount);
 		    	$(request).val(send);
 				console.log(sumary[orden]);
 				//console.log(send);
@@ -372,6 +381,8 @@
 		    	send = send.replace(/:/gi, "(d)");
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
+		    	amount = amount + $(select_box).val();
+		    	$("#purchase_amount").val(amount);
 		    	$(request).val(send);
 				console.log(sumary[orden]);
 				//console.log(send);	        
@@ -397,6 +408,8 @@
 		    	send = send.replace(/:/gi, "(d)");
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
+		    	amount = amount + $(select_box).val();
+		    	$("#purchase_amount").val(amount);
 		    	$(request).val(send);
 				console.log(sumary[orden]);
 				//console.log(send);

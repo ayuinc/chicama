@@ -1553,6 +1553,7 @@ class Infhotel
                                             </div>
                                         </div>
                                         <input type="text" name="request" maxlength="1000"  id="full_request">
+                                        <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
                                     </div>
                                 </div>
                             </div>
