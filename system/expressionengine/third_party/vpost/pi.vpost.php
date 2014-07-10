@@ -134,7 +134,7 @@ class Vpost
                           card_id='.$card_id.'
                           card_type='.$card_type.'
                           }
-                        {/exp:infhotel:insertarreservar}'
+                        {/exp:infhotel:insertarreservar}';
               }
           } else {
               return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
