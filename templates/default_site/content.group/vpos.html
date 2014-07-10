@@ -8,11 +8,11 @@ Redireccionando . . .
 	billingAddress: {post_address}
 {/exp:get_post_vars}
 	{exp:vpost:test_envio
-		purchaseAmount="100"
-		billingFirstName="Gianfranco"
-		billingLastName="Montoya"
-		billingEMail="gms122@gmail.com"
-		billingAddress="Av Belisario Suárez 488"}
+		purchaseAmount="{post_purchase_amount}"
+		billingFirstName="{post_firstname}"
+		billingLastName="{post_last_name}"
+		billingEMail="{post_email}"
+		billingAddress="{post_address}"}
 	{/exp:vpost:test_envio}
 <script src="{site_url}/js/jquery.js"></script>
 <script src="{site_url}/js/expanding.js"></script>    
@@ -27,6 +27,6 @@ Redireccionando . . .
 </script>
 <script type="text/javascript">
  $(function(){
-	//$('#form_envio').submit();
+	$('#form_envio').submit();
  });
 </script>
