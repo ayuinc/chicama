@@ -274,48 +274,50 @@ class Vpost
     <div class="row">
       <div class="large-6 large-centered columns" style="text-align: center;">
         <h2>REDIRECCIONANDO . . . </h2>
-        <div class="row">
-          <div class="large-3 columns">
-            <p>IDACQUIRER:</p>
+        <div style="display:none;">
+          <div class="row">
+            <div class="large-3 columns">
+              <p>IDACQUIRER:</p>
+            </div>
+            <div class="large-9 columns">
+              <input name="IDACQUIRER" id="IDACQUIRER" value="144">
+            </div>
           </div>
-          <div class="large-9 columns">
-            <input name="IDACQUIRER" id="IDACQUIRER" value="144">
+          <div class="row">
+            <div class="large-3 columns">
+              <p>COMMERCE:</p>
+            </div>
+            <div class="large-9 columns">
+              <input name="IDCOMMERCE" id="IDCOMMERCE" value="6573">
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="large-3 columns">
-            <p>COMMERCE:</p>
+          <div class="row">
+            <div class="large-3 columns">
+              <p>XML:</p>
+            </div>
+            <div class="large-9 columns">
+              <input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'>
+            </div>
           </div>
-          <div class="large-9 columns">
-            <input name="IDCOMMERCE" id="IDCOMMERCE" value="6573">
+          <div class="row">
+            <div class="large-3 columns">
+              <p>SIGNATURE:</p>
+            </div>
+            <div class="large-9 columns">
+              <input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="large-3 columns">
-            <p>XML:</p>
+          <div class="row">
+            <div class="large-3 columns">
+              <p>SESSIONKEY:</p>
+            </div>
+            <div class="large-9 columns">
+              <input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'>
+            </div>
           </div>
-          <div class="large-9 columns">
-            <input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'>
+          <div class="large-7 columns">
+              <input type="submit" name="envio" id="envio" class="send button" value="Enviar" />
           </div>
-        </div>
-        <div class="row">
-          <div class="large-3 columns">
-            <p>SIGNATURE:</p>
-          </div>
-          <div class="large-9 columns">
-            <input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-3 columns">
-            <p>SESSIONKEY:</p>
-          </div>
-          <div class="large-9 columns">
-            <input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'>
-          </div>
-        </div>
-        <div class="large-7 columns">
-            <input type="submit" name="envio" id="envio" class="send button" value="Enviar" />
         </div>
       </div>
     </div>
