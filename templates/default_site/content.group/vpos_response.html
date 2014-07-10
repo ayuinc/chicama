@@ -19,7 +19,7 @@
 									<h2>THANK YOU</h2>
 									{exp:get_post_vars parse="inward"}
 									  {exp:vpost:recepcion
-									  request="{exp:session_variables:get name='name'}"
+									  request="{exp:session_variables:get name='request'}"
 									  first_name="{exp:session_variables:get name='name'}"
 									  last_name="{exp:session_variables:get name='last_name'}"
 									  country="{exp:session_variables:get name='country'}"
@@ -34,7 +34,15 @@
 									  SESSIONKEY="{post_SESSIONKEY}" }
 									  {/exp:vpost:recepcion}
 									{/exp:get_post_vars}
-									  VARIABLE DE SECCION {exp:session_variables:get name='name'} - {exp:session_variables:get name='last_name'}
+									  {exp:session_variables:delete name='request'}
+									  {exp:session_variables:delete name='name'}
+									  {exp:session_variables:delete name='last_name'}
+									  {exp:session_variables:delete name='country'}
+									  {exp:session_variables:delete name='email'}
+									  {exp:session_variables:delete name='document_id'}
+									  {exp:session_variables:delete name='document_type'}
+									  {exp:session_variables:delete name='card_id'}
+									  {exp:session_variables:delete name='card_type'}
 								</div>
 						</div>
 					</div>
