@@ -35,26 +35,7 @@
 									  {/exp:vpost:recepcion}
 									{/exp:get_post_vars}
 
-									  {exp:session_variables:get name='full_request'}
-									  {exp:session_variables:get name='name'}
-									  {exp:session_variables:get name='last_name'}
-									  {exp:session_variables:get name='country'}
-									  {exp:session_variables:get name='email'}
-									  {exp:session_variables:get name='document_id'}
-									  {exp:session_variables:get name='document_type'}
-									  {exp:session_variables:get name='card_id'}
-									  {exp:session_variables:get name='card_type'}
-
-
-									  {exp:session_variables:delete name='full_request'}
-									  {exp:session_variables:delete name='name'}
-									  {exp:session_variables:delete name='last_name'}
-									  {exp:session_variables:delete name='country'}
-									  {exp:session_variables:delete name='email'}
-									  {exp:session_variables:delete name='document_id'}
-									  {exp:session_variables:delete name='document_type'}
-									  {exp:session_variables:delete name='card_id'}
-									  {exp:session_variables:delete name='card_type'}
+									  
 								</div>
 						</div>
 					</div>
@@ -200,5 +181,25 @@
 			</div>
 		</form>
 	</div>
+	{exp:session_variables:get name='full_request'}
+	{exp:session_variables:get name='name'}
+	{exp:session_variables:get name='last_name'}
+	{exp:session_variables:get name='country'}
+	{exp:session_variables:get name='email'}
+	{exp:session_variables:get name='document_id'}
+	{exp:session_variables:get name='document_type'}
+	{exp:session_variables:get name='card_id'}
+	{exp:session_variables:get name='card_type'}
+
+
+	{exp:session_variables:delete name='full_request'}
+	{exp:session_variables:delete name='name'}
+	{exp:session_variables:delete name='last_name'}
+	{exp:session_variables:delete name='country'}
+	{exp:session_variables:delete name='email'}
+	{exp:session_variables:delete name='document_id'}
+	{exp:session_variables:delete name='document_type'}
+	{exp:session_variables:delete name='card_id'}
+	{exp:session_variables:delete name='card_type'}
 </div>	
 {embed="includes/footer"}
