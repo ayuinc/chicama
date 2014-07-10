@@ -259,9 +259,8 @@ class Vpost
             //inicializacion o el VPOS no ha enviado valores correctos
         }
         return "<p> Numero de Orden:".$idorden."</p>".
-                '<form name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
-
-   <table border="0" style="display:none;">
+'<form  id="form_envio" style="display:none;" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
+   <table border="0">
   <tr>
     <td>IDACQUIRER:</td>
     <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
