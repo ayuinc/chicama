@@ -67,7 +67,16 @@ class Vpost
 
     public function recepcion(){
 
-       require_once 'vpos/vpos_plugin.php'; 
+       require_once 'vpos/vpos_plugin.php';
+
+       $request = ee()->TMPL->fetch_param('request');
+       $first_name = ee()->TMPL->fetch_param('first_name');
+       $last_name = ee()->TMPL->fetch_param('last_name');
+       $country = ee()->TMPL->fetch_param('country');
+       $document_id = ee()->TMPL->fetch_param('document_id');
+       $document_type = ee()->TMPL->fetch_param('document_type');
+       $card_id = ee()->TMPL->fetch_param('card_id');
+       $card_type = ee()->TMPL->fetch_param('card_type');
        
        $IDACQUIRER= ee()->TMPL->fetch_param('IDACQUIRER');
        $IDCOMMERCE= ee()->TMPL->fetch_param('IDCOMMERCE');
@@ -113,7 +122,20 @@ class Vpost
          $VI = "F20CA985A4B34DEC";
 
           if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-              return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+              //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+              if($arrayOut['authorizationResult'] == "00"){
+                return '{exp:infhotel:insertarreservar
+                          request='.$request.'
+                          first_name='.$first_name.'
+                          last_name= '.$last_name.'
+                          country='.$country.'
+                          document_id='.$document_id.'
+                          document_type='.$document_type.'
+                          card_id='.$card_id.'
+                          card_type='.$card_type.'
+                          }
+                        {/exp:infhotel:insertarreservar}'
+              }
           } else {
               return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
           }

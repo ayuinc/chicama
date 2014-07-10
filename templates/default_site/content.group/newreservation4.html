@@ -72,10 +72,10 @@
 							</div>
 							<div class="row">
 								<div class="large-3 columns">
-									<p>Country *</p>
+									<p>Country Test*</p>
 								</div>
 								<div class="large-9 columns">
-									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
+									<select name="country_test" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
 									<option value="af">Afghanistan</option>
 									<option value="ax">Aland Islands</option>
 									<option value="al">Albania</option>
@@ -110,14 +110,28 @@
 							</div>
 							<div class="row">
 								<div class="large-3 columns">
+									<p>Document ID *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="document_id" value="0123456789" id="freeform_first_name" maxlength="150" placeholder="ENTER DOCUMENT ID"  data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
+									<p>Document Type *</p>
+								</div>
+								<div class="large-9 columns">
+									<input type="text" name="document_type" value="DNI" id="freeform_first_name" maxlength="150" placeholder="ENTER DOCUMENT TYPE" data-invalid="">
+								</div>
+							</div>
+							<div class="row">
+								<div class="large-3 columns">
 									<p>Card type *</p>
 								</div>
 								<div class="large-9 columns">
-									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
-									<option value="af">Afghanistan</option>
-									<option value="ax">Aland Islands</option>
-									<option value="al">Albania</option>
-									<option value="dz">Algeria</option>
+									<select name="card_type" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
+										<option value="visa">Visa</option>
+										<option value="mastercard">Mastercard</option>
 									</select>
 								</div>
 							</div>
@@ -126,7 +140,7 @@
 									<p>Card Number *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="phone" value="" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR PHONE NUMBER"  pattern="telef" data-invalid="">
+									<input type="text" name="card_num" value="4234854312" id="freeform_phone" maxlength="9" placeholder="ENTER YOUR CARD NUMBER"  data-invalid="">
 								</div>
 							</div>
 							<div class="row">
@@ -161,10 +175,10 @@
 								</div>
 								<div class="large-9 columns">
 									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
-									<option value="af">Afghanistan</option>
-									<option value="ax">Aland Islands</option>
-									<option value="al">Albania</option>
-									<option value="dz">Algeria</option>
+									<option value="Afghanistan">Afghanistan</option>
+									<option value="Aland_Islands">Aland Islands</option>
+									<option value="Albania">Albania</option>
+									<option value="Algeria">Algeria</option>
 									</select>
 								</div>
 							</div>
