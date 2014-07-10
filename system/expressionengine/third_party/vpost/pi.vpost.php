@@ -261,7 +261,7 @@ class Vpost
         return "<p> Numero de Orden:".$idorden."</p>".
                 '<form name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
 
-   <table border="0">
+   <table border="0" style="display:none;">
   <tr>
     <td>IDACQUIRER:</td>
     <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
