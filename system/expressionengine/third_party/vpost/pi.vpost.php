@@ -196,6 +196,7 @@ class Vpost
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingAddress = ee()->TMPL->fetch_param('billingAddress');
+       
        /*
        $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
        $billingLastName = ee()->TMPL->fetch_param('billingLastName');
@@ -205,6 +206,7 @@ class Vpost
        $DIGITALSIGN = ee()->TMPL->fetch_param('DIGITALSIGN');
        $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
         */
+       
        $array_send['acquirerId']=$codigoAdquirente;
        $array_send['commerceId']=$codigoComercio;
        $array_send['purchaseAmount']=$purchaseAmount;
