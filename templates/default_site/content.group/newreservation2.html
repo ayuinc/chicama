@@ -259,7 +259,6 @@
                     "TCodigoHabitacion" : "110001"
     			};
 		    	simple_garden = simple_garden + 1;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 	            sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -278,6 +277,7 @@
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
+	            hide_divs(rooms_num, next_div);
 	        });
 	        break;
 	    case 2:
@@ -289,7 +289,6 @@
                     "TCodigoHabitacion" : "110002"
     			};
 		    	doble_garden = doble_garden + 1;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -306,6 +305,7 @@
     			console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
+	            hide_divs(rooms_num, next_div);
 	        });
 	        break;
 	    case 3:
@@ -317,7 +317,6 @@
                     "TCodigoHabitacion" : "110003"
     			};
 		    	triple_garden =triple_garden + 1;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -334,6 +333,7 @@
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
+	            hide_divs(rooms_num, next_div);
 	        });
 	        break;
 	    case 4:
@@ -345,7 +345,6 @@
                     "TCodigoHabitacion" : "110005"
     			};
 		    	simple_ocean =simple_ocean + 1;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -362,6 +361,7 @@
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
+	            hide_divs(rooms_num, next_div);
 	        });
 	        break;
 	    case 5:
@@ -373,7 +373,6 @@
                     "TCodigoHabitacion" : "110006"
     			};
 		    	doble_ocean =doble_ocean+ 1;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -388,6 +387,7 @@
 		    	$("#purchase_amount").val(amount);
 		    	$(request).val(send);
 				console.log(amount);
+				hide_divs(rooms_num, next_div);
 				//console.log(sumary[orden]);
 				//console.log(send);	        
 			});
@@ -401,7 +401,6 @@
 	                "TCodigoHabitacion" : "110007"
 				};
 		    	triple_ocean =triple_ocean + 1;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -418,6 +417,7 @@
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
+				hide_divs(rooms_num, next_div);
 	        });
 	        break;
 	    } 
