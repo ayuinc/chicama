@@ -413,8 +413,8 @@
 		    	send = send.replace(/:/gi, "(d)");
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
-		    	amount = amount + $(final_cost).val();
 		    	amount = amount + parseInt($(final_cost).val());
+		    	$("#purchase_amount").val(amount);
 		    	$(request).val(send);
 				console.log(amount);
 				//console.log(sumary[orden]);
