@@ -12,6 +12,15 @@ Redireccionando . . .
 {post_card_id}
 {post_card_type}
 
+	{exp:session_variables:set name='request' value="{post_full_request}"}
+	{exp:session_variables:set name='name' value="{post_firstname}"}
+	{exp:session_variables:set name='last_name' value="{post_last_name}"}
+	{exp:session_variables:set name='country' value="{post_country}""}
+	{exp:session_variables:set name='email' value="{post_email}""}
+	{exp:session_variables:set name='document_id' value="{post_document_id}"}
+	{exp:session_variables:set name='document_type' value="{post_document_type}"}
+	{exp:session_variables:set name='card_id' value="{post_card_id}"}
+	{exp:session_variables:set name='card_type' value="{post_card_type}"}
 
 	{exp:vpost:test_envio
 		purchaseAmount="{post_purchase_amount}"
