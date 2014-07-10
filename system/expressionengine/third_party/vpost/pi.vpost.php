@@ -272,7 +272,7 @@ class Vpost
       </div>
     </div>
     <div class="row">
-      <div class="large-8 large-centered columns">
+      <div class="large-6 large-centered columns">
         <h2>REDIRECCIONANDO . . . </h2>
         <div class="row">
           <div class="large-3 columns">
