@@ -260,7 +260,7 @@ class Vpost
         }
         return "<!--<p> Numero de Orden:".$idorden."</p> -->".
 '<form  id="book_a_room" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
-  <div id="form_box_4">
+  <div id="form_box_4" style="height: 61vh;">
     <div class="row">
       <div id="title_reservation" class="">
           <div class="large-4 columns">
