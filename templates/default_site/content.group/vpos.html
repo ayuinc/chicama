@@ -1,5 +1,6 @@
 {embed="includes/header"}
 Redireccionando . . .
+{exp:get_post_vars parse="inward"}
 	{exp:vpost:test_envio
 		purchaseAmount="{post_purchase_amount}"
 		billingFirstName="{post_firstname}"
@@ -7,6 +8,7 @@ Redireccionando . . .
 		billingEMail="{post_email}"
 		billingAddress="{post_address}"}
 	{/exp:vpost:test_envio}
+	{/exp:get_post_vars}
 <script src="{site_url}/js/jquery.js"></script>
 <script src="{site_url}/js/expanding.js"></script>    
 <script src="{site_url}/js/foundation.min.js"></script>
