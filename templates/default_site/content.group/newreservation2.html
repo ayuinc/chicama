@@ -110,7 +110,7 @@
 		hide_divs(num_hab,0);
       });
 	$(function() {
-
+		var amount = 0;
 		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
@@ -248,7 +248,6 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box ){
 	var orden = next_div - 1 ;
-	var amount = 0;
 
 	switch(type_hab){
 	    case 1:
