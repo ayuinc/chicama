@@ -131,8 +131,8 @@ class Vpost
                           country='.$country.'
                           document_id='.$document_id.'
                           document_type='.$document_type.'
-                          card_id='.$card_id.'
-                          card_type='.$card_type.'
+                          card_id=4234854312
+                          card_type=visa
                           }
                         {/exp:infhotel:insertarreservar}';
               }
