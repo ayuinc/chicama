@@ -19,7 +19,7 @@
 									<h2>THANK YOU</h2>
 									{exp:get_post_vars parse="inward"}
 									  {exp:vpost:recepcion
-									  request="{exp:session_variables:get name='request'}"
+									  request="{exp:session_variables:get name='full_request'}"
 									  first_name="{exp:session_variables:get name='name'}"
 									  last_name="{exp:session_variables:get name='last_name'}"
 									  country="{exp:session_variables:get name='country'}"
