@@ -258,7 +258,7 @@ class Vpost
             return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
             //inicializacion o el VPOS no ha enviado valores correctos
         }
-        return '<form style="display:none;" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
+        return '<form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
    <table border="0">
   <tr>
     <td>IDACQUIRER:</td>
