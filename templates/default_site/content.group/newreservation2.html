@@ -260,7 +260,6 @@
     			};
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val());
-		    	$(purchase_amount).val(amount);
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 	            sumary[orden]=temp;
@@ -273,6 +272,7 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 		    	//$("#room1").html("");
 		    	//$("#room1").show();
 				console.log(amount);
@@ -290,7 +290,6 @@
     			};
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val());
-		    	$(purchase_amount).val(amount);
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
@@ -303,6 +302,7 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
     	    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
     			console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
@@ -318,7 +318,6 @@
     			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val());
-		    	$(purchase_amount).val(amount);
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
@@ -331,6 +330,7 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
@@ -346,7 +346,6 @@
     			};
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val());
-		    	$(purchase_amount).val(amount);
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
@@ -359,6 +358,7 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
@@ -374,7 +374,6 @@
     			};
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val());
-		    	$(purchase_amount).val(amount);
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
@@ -387,6 +386,7 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);	        
@@ -402,7 +402,6 @@
 				};
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val());
-		    	$(purchase_amount).val(amount);
 	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
@@ -415,6 +414,7 @@
 		    	send = send.replace(/ /gi, "(e)");
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 				console.log(amount);
 				//console.log(sumary[orden]);
 				//console.log(send);
