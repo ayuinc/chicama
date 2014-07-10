@@ -272,7 +272,7 @@ class Vpost
       </div>
     </div>
     <div class="row">
-      <div class="large-7 columns">
+      <div class="large-6 large-centered columns">
         <div class="row">
           <div class="large-3 columns">
             <p>IDACQUIRER:</p>
