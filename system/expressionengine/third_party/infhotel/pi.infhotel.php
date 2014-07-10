@@ -201,7 +201,7 @@ class Infhotel
         curl_setopt($ch, CURLOPT_URL,$url);
 
         $result=curl_exec($ch);
-
+        $n=0;
         $data = json_decode($result, true);
         foreach($data as $row){
             $fecha[$n] = $row["FFecha"];
