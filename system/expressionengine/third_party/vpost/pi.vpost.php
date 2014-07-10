@@ -124,17 +124,7 @@ class Vpost
           if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
               //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
               if($arrayOut['authorizationResult'] == "00"){
-                return '{exp:infhotel:insertarreservar
-                          request='.$request.'
-                          first_name='.$first_name.'
-                          last_name= '.$last_name.'
-                          country=Peru
-                          document_id=0123456789
-                          document_type=DNI
-                          card_id=4234854312
-                          card_type=visa
-                          }
-                        {/exp:infhotel:insertarreservar}';
+                return $request;
               }
           } else {
               return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
