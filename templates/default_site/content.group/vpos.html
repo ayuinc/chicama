@@ -1,5 +1,12 @@
 {embed="includes/header"}
 Redireccionando . . . 
+{exp:get_post_vars parse="inward"}
+	PurchaseAmount: {post_PurchaseAmount}
+	billingFirstName: {post_first_name}
+	billingLastName: {post_last_name}
+	billingEMail: {post_email}
+	billingAddress: {post_address}
+{/exp:get_post_vars}
 	{exp:vpost:test_envio
 		purchaseAmount="100"
 		billingFirstName="Gianfranco"
