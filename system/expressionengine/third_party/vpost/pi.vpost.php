@@ -128,9 +128,9 @@ class Vpost
                           request='.$request.'
                           first_name='.$first_name.'
                           last_name= '.$last_name.'
-                          country='.$country.'
-                          document_id='.$document_id.'
-                          document_type='.$document_type.'
+                          country=Peru
+                          document_id=0123456789
+                          document_type=DNI
                           card_id=4234854312
                           card_type=visa
                           }
