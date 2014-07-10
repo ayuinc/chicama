@@ -18,11 +18,12 @@
 								<div class="large-4 large-centered text-center columns">
 									<h2>THANK YOU</h2>
 									{exp:get_post_vars parse="inward"}
-									  IDACQUIRER="{post_IDACQUIRER}"
-									  IDCOMMERCE="{post_IDCOMMERCE}"
-									  XMLRES="{post_XMLRES}"
-									  DIGITALSIGN="{post_DIGITALSIGN}"
-									  SESSIONKEY="{post_SESSIONKEY}" }
+									  {exp:vpost:recepcion
+										  IDACQUIRER="{post_IDACQUIRER}"
+										  IDCOMMERCE="{post_IDCOMMERCE}"
+										  XMLRES="{post_XMLRES}"
+										  DIGITALSIGN="{post_DIGITALSIGN}"
+										  SESSIONKEY="{post_SESSIONKEY}" }
 									  {/exp:vpost:recepcion}
 									{/exp:get_post_vars}
 
@@ -172,8 +173,5 @@
 			</div>
 		</form>
 	</div>
-	{exp:session_variables:get name='full_request'}
-	
-	{exp:session_variables:delete name='full_request'}
 </div>	
 {embed="includes/footer"}
