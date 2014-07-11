@@ -1,26 +1,25 @@
 {embed="includes/header"}
 Redireccionando . . .
 {exp:get_post_vars parse="inward"}
+	full_request="{post_full_request}"
+	country="{post_country}"
+	phone="{post_phone}"
+	document_id="{post_document_id}"
+	document_type="{post_document_type}"
+	card_id="{post_card_id}"
+	card_type="{post_card_type}"
+	street="{post_street}"
+	state="{post_state}"
+	city="{post_city}"
+	transport="{post_transport}"
+	all_meals="{post_all_meals}"
 	{exp:vpost:test_envio
-		full_request="{post_full_request}"
-		country="{post_country}"
-		phone="{post_phone}"
-		document_id="{post_document_id}"
-		document_type="{post_document_type}"
-		card_id="{post_card_id}"
-		card_type="{post_card_type}"
-		street="{post_street}"
-		state="{post_state}"
-		city="{post_city}"
-		transport="{post_transport}"
-		all_meals="{post_all_meals}"
 		purchaseAmount="{post_purchase_amount}"
 		billingFirstName="{post_firstname}"
 		billingLastName="{post_last_name}"
 		billingEMail="{post_email}"
 		billingAddress="{post_address}"}
 	{/exp:vpost:test_envio}
-
 {/exp:get_post_vars}
 <script src="{site_url}/js/jquery.js"></script>
 <script src="{site_url}/js/expanding.js"></script>    
