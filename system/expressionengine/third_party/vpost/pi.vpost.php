@@ -209,15 +209,41 @@ class Vpost
        $billingEMail = ee()->TMPL->fetch_param('billingEMail');
        $billingAddress = ee()->TMPL->fetch_param('billingAddress');
        
-       /*
-       $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
-       $billingLastName = ee()->TMPL->fetch_param('billingLastName');
-       $IDACQUIRER =  ee()->TMPL->fetch_param('IDACQUIRER');
-       $IDCOMMERCE = ee()->TMPL->fetch_param('IDCOMMERCE');
-       $XMLRES = ee()->TMPL->fetch_param('XMLRES');
-       $DIGITALSIGN = ee()->TMPL->fetch_param('DIGITALSIGN');
-       $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
-        */
+       $transport = ee()->TMPL->fetch_param('transport');
+       $all_meals = ee()->TMPL->fetch_param('all_meals');
+       $phone = ee()->TMPL->fetch_param('phone');
+       $street = ee()->TMPL->fetch_param('street');
+       $city = ee()->TMPL->fetch_param('city');
+       $state = ee()->TMPL->fetch_param('state');
+       $full_request = ee()->TMPL->fetch_param('full_request');
+       $country = ee()->TMPL->fetch_param('country');
+       $document_id = ee()->TMPL->fetch_param('document_id');
+       $document_type = ee()->TMPL->fetch_param('document_type');
+       $card_id = ee()->TMPL->fetch_param('card_id');
+       $card_type = ee()->TMPL->fetch_param('card_type');
+
+       $data = array(
+            'first_name'=> $billingFirstName;
+            'last_name'=> $billingLastName;
+            'email' => $billingEMail,
+            'phone' => $phone,
+            'country'=> $country,
+            'street'=> $street,
+            'city'=> $city,
+            'state' => $state,
+            'document_id'=>$document_id,
+            'document_type'=>$audocument_type,
+            'card_id'=>$card_id
+            'card_type'=>$card_type,
+            'purchase_amount'=>$purchaseAmount,
+            'transport'=>$transport,
+            'all_meals'=>$all_meals
+            'address'=>$billingAddress,
+            'validate'=>'no',
+            'full_request'=>$full_request
+            );
+
+       ee()->db->insert('exp_hotel_reservations', $data)
        
        $array_send['acquirerId']=$codigoAdquirente;
        $array_send['commerceId']=$codigoComercio;

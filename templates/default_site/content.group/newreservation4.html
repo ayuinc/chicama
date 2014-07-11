@@ -105,7 +105,7 @@
 									<p>Name on card *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" pattern="[a-zA-Z]+" data-invalid="">
+									<input type="text" name="card_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME" pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
 							<div class="row">
@@ -148,19 +148,23 @@
 									<p>Expiration Date *</p>
 								</div>
 								<div class="large-3 columns">
-									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
-									<option value="Month">Month</option>
-									<option value="Enero">Enero Islands</option>
-									<option value="Febrero">Febrero</option>
-									<option value="Marzo">Marzo</option>
+									<select name="expiration_date_month" id="freeform_country" placeholder="ENTER MONTH" >
+										<option value="Month">Month</option>
+										<option value="Enero">Enero</option>
+										<option value="Febrero">Febrero</option>
+										<option value="Marzo">Marzo</option>
 									</select>
 								</div>
 								<div class="large-3 columns">
-									<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" >
-									<option value="Year">Year</option>
-									<option value="ax">Aland Islands</option>
-									<option value="al">Albania</option>
-									<option value="dz">Algeria</option>
+									<select name="expiration_date_month" id="freeform_country" placeholder="ENTER YEAR" >
+										<option value="Year">Year</option>
+										<option value="2014">2014</option>
+										<option value="2015">2015</option>
+										<option value="2016">2016</option>
+										<option value="2017">2017</option>
+										<option value="2018">2018</option>
+										<option value="2019">2019</option>
+										<option value="2020">2020</option>
 									</select>
 								</div>
 							</div>
@@ -187,7 +191,7 @@
 									<p>Street *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME"  pattern="[a-zA-Z]+" data-invalid="">
+									<input type="text" name="street" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STREET"  pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
 							<div class="row">
@@ -195,7 +199,7 @@
 									<p>City *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME"  pattern="[a-zA-Z]+" data-invalid="">
+									<input type="text" name="city" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER CITY"  pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
 							<div class="row">
@@ -203,7 +207,7 @@
 									<p>State *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME"  pattern="[a-zA-Z]+" data-invalid="">
+									<input type="text" name="state" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER STATE"  pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
 							<div class="row">
@@ -211,7 +215,7 @@
 									<p>Postal Code *</p>
 								</div>
 								<div class="large-9 columns">
-									<input type="text" name="first_name" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER YOUR FIRST NAME"  pattern="[a-zA-Z]+" data-invalid="">
+									<input type="text" name="postal_code" value="" id="freeform_first_name" maxlength="150" placeholder="ENTER POSTAL CODE"  pattern="[a-zA-Z]+" data-invalid="">
 								</div>
 							</div>
 							{exp:get_post_vars parse="inward"}
