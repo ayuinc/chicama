@@ -223,8 +223,8 @@ class Vpost
        $card_type = ee()->TMPL->fetch_param('card_type');
 
        $data = array(
-            'first_name'=> $billingFirstName;
-            'last_name'=> $billingLastName;
+            'first_name'=> $billingFirstName,
+            'last_name'=> $billingLastName,
             'email' => $billingEMail,
             'phone' => $phone,
             'country'=> $country,
@@ -233,11 +233,11 @@ class Vpost
             'state' => $state,
             'document_id'=>$document_id,
             'document_type'=>$audocument_type,
-            'card_id'=>$card_id
+            'card_id'=>$card_id,
             'card_type'=>$card_type,
             'purchase_amount'=>$purchaseAmount,
             'transport'=>$transport,
-            'all_meals'=>$all_meals
+            'all_meals'=>$all_meals,
             'address'=>$billingAddress,
             'validate'=>'no',
             'full_request'=>$full_request
