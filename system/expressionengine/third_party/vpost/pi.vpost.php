@@ -243,7 +243,7 @@ class Vpost
             'full_request'=>$full_request
             );
 
-       ee()->db->insert('exp_hotel_reservations', $data)
+       ee()->db->insert('exp_hotel_reservations', $data);
        
        $array_send['acquirerId']=$codigoAdquirente;
        $array_send['commerceId']=$codigoComercio;
