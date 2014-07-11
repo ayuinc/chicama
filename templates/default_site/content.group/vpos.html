@@ -1,17 +1,14 @@
 {embed="includes/header"}
 Redireccionando . . .
 {exp:get_post_vars parse="inward"}
-
-{post_full_request}
-{post_firstname}
-{post_last_name}
-{post_email}
-{post_country}
-{post_document_type}
-{post_document_id}
-{post_card_id}
-{post_card_type}
-
+	request="{post_request}"
+	first_name="{post_firstname}"
+	last_name="{post_last_name}"
+	country="{post_country}"
+	document_id="{post_document_id}"
+	document_type="{post_document_type}"
+	card_id="{post_card_id}"
+	card_type="{post_card_type}"
 	{exp:vpost:test_envio
 		purchaseAmount="{post_purchase_amount}"
 		billingFirstName="{post_firstname}"
@@ -34,6 +31,6 @@ Redireccionando . . .
 </script>
 <script type="text/javascript">
  $(function(){
-	$('#form_envio').submit();
+	//$('#form_envio').submit();
  });
 </script>
