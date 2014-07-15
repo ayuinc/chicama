@@ -243,88 +243,86 @@ class Vpost
             'full_request'=>$full_request
             );
 
-       ee()->db->insert('exp_hotel_reservations', $data);
-       
-       $array_send['acquirerId']=$codigoAdquirente;
-       $array_send['commerceId']=$codigoComercio;
-       $array_send['purchaseAmount']=$purchaseAmount;
-       $array_send['purchaseCurrencyCode']=$codigo1;
-       $array_send['purchaseOperationNumber']= $idorden;
-       $array_send['billingEMail']=$billingEMail;
-       $array_send['billingFirstName']=$billingFirstName;
-       $array_send['billingLastName']=$billingLastName;
-       $array_send['billingAddress']=$billingAddress;
-       $array_send['billingCity']='Lima';
-       $array_send['billingZIP']='Lima 32';
-       $array_send['billingState']='LI';
-       $array_send['billingCountry']='PE';
-       $array_send['language']="SP";
-       $array_send['reserved1']="840"; // codigo de moneda nacional
-       $array_send['reserved2']=$purchaseAmount; //mismo  monto quee purchaseAmount en nuestro caso
-       $array_send['reserved3']="6573"; // id de comercio adicional
-       $arrayOut['XMLREQ']="";
-       $arrayOut['DIGITALSIGN']="";
-       $arrayOut['SESSIONKEY']="";
+       if( ee()->db->insert('exp_hotel_reservations', $data) ){
+             $array_send['acquirerId']=$codigoAdquirente;
+             $array_send['commerceId']=$codigoComercio;
+             $array_send['purchaseAmount']=$purchaseAmount;
+             $array_send['purchaseCurrencyCode']=$codigo1;
+             $array_send['purchaseOperationNumber']= $idorden;
+             $array_send['billingEMail']=$billingEMail;
+             $array_send['billingFirstName']=$billingFirstName;
+             $array_send['billingLastName']=$billingLastName;
+             $array_send['billingAddress']=$billingAddress;
+             $array_send['billingCity']='Lima';
+             $array_send['billingZIP']='Lima 32';
+             $array_send['billingState']='LI';
+             $array_send['billingCountry']='PE';
+             $array_send['language']="SP";
+             $array_send['reserved1']="840"; // codigo de moneda nacional
+             $array_send['reserved2']=$purchaseAmount; //mismo  monto quee purchaseAmount en nuestro caso
+             $array_send['reserved3']="6573"; // id de comercio adicional
+             $arrayOut['XMLREQ']="";
+             $arrayOut['DIGITALSIGN']="";
+             $arrayOut['SESSIONKEY']="";
+             # Vector
+             $VI = "F20CA985A4B34DEC";
+             $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
+              "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
+              "TEjv0SFkTM04qHyHFU90Da8Ep1F0gI2SFpCkLmQtsXKOrLrQTF0100dL/gDQlLt0\n".
+              "Ut8kM/PRLEM5thMPqtPq6G1GTjqmcsPzUUL18+tYwN3xFi4XBog4Hdv0ml1SRkVO\n".
+              "DRr1jPeilfsiFwiO8wIDAQAB\n".
+              "-----END PUBLIC KEY-----";
 
-       # Vector
-       $VI = "F20CA985A4B34DEC";
+               $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
+              "MIICWwIBAAKBgQCw9S8vnGIW04tG4N98f0HXoMJlB6K9v2iJZlsFYNtP6Xv6Ax5d\n".
+              "LEBzym/edPj89lraAxzmZUVPzPVoLlT0gSZMjlPPPfTyQp4QRWkME9AtT71q5gw5\n".
+              "lISCW0X8bVWqwksJ515Va0LMjSohf2V+azVw2QBTS3IofH5DUfPOjSAfXwIDAQAB\n".
+              "AoGAfb060jHk4SNgC/Ut2GD0gCuS9gb+9KVVuowokSHJtHbLyVL9+GbBRYXLB99G\n".
+              "LTlARTmBB5VeMt4IYwbJBxPeCcj49sHwDpPzltSZSN6kp11f8o28Tj/UjjGnuMZY\n".
+              "l4tSGlUWErojWe8/61YMoSK7700yOxOHTtZIlzuJ1a7OgcECQQDhtF2R1Zx9oRtb\n".
+              "Bt7RQqyiCZV2X/8dEJgoLV+ruCDBVcnpM4Irbiw9Bio+iHpo8gZA0FCfdGUMjF0A\n".
+              "i+LmNR0dAkEAyLXJZNbmN6wyTwzT+838guo8W+6/CiZ6rfCqk4Sooqibph6k5QZu\n".
+              "g84mMJdm4F8zIZGNvqtKVUwGk149DZXRqwJAXrqGsxiGb6vYgWHmzsk/D1saYe50\n".
+              "ckxusB4rEzVaegp5jejSb0v0QUB/JnO9fKJnwXgs/l+psZSPzBTqDFiqeQJAGMK8\n".
+              "brFIQ3P93NyzRiw6S5hEC/9fGAx5M/4tvPcvqqlsUkkThKGPfrku4u26plF4SFrh\n".
+              "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
+              "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
+              "-----END RSA PRIVATE KEY-----";
+              if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
+              }else{
+                  return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
+                  //inicializacion o el VPOS no ha enviado valores correctos
+              }
+              return '
+                <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
+                   <table border="0">
+                  <tr>
+                    <td>IDACQUIRER:</td>
+                    <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
+                  </tr>
+                  <tr>
+                    <td>COMMERCE:</td>
+                    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="6573"></td>
+                  </tr>
+                  <tr>
+                    <td>XML:</td>
+                    <td><input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'></td>
+                  </tr>
+                  <tr>
+                    <td>SIGNATURE:</td>
+                    <td><input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'></td>
+                  </tr>
+                  <tr>
+                    <td>SESSIONKEY:</td>
+                    <td><input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'></td>
+                  </tr>
+                  <tr>
+                    <td><input type="submit" name="envio" id="envio" value="Enviar" /></td>
 
-       $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
-        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
-        "TEjv0SFkTM04qHyHFU90Da8Ep1F0gI2SFpCkLmQtsXKOrLrQTF0100dL/gDQlLt0\n".
-        "Ut8kM/PRLEM5thMPqtPq6G1GTjqmcsPzUUL18+tYwN3xFi4XBog4Hdv0ml1SRkVO\n".
-        "DRr1jPeilfsiFwiO8wIDAQAB\n".
-        "-----END PUBLIC KEY-----";
-
-         $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
-        "MIICWwIBAAKBgQCw9S8vnGIW04tG4N98f0HXoMJlB6K9v2iJZlsFYNtP6Xv6Ax5d\n".
-        "LEBzym/edPj89lraAxzmZUVPzPVoLlT0gSZMjlPPPfTyQp4QRWkME9AtT71q5gw5\n".
-        "lISCW0X8bVWqwksJ515Va0LMjSohf2V+azVw2QBTS3IofH5DUfPOjSAfXwIDAQAB\n".
-        "AoGAfb060jHk4SNgC/Ut2GD0gCuS9gb+9KVVuowokSHJtHbLyVL9+GbBRYXLB99G\n".
-        "LTlARTmBB5VeMt4IYwbJBxPeCcj49sHwDpPzltSZSN6kp11f8o28Tj/UjjGnuMZY\n".
-        "l4tSGlUWErojWe8/61YMoSK7700yOxOHTtZIlzuJ1a7OgcECQQDhtF2R1Zx9oRtb\n".
-        "Bt7RQqyiCZV2X/8dEJgoLV+ruCDBVcnpM4Irbiw9Bio+iHpo8gZA0FCfdGUMjF0A\n".
-        "i+LmNR0dAkEAyLXJZNbmN6wyTwzT+838guo8W+6/CiZ6rfCqk4Sooqibph6k5QZu\n".
-        "g84mMJdm4F8zIZGNvqtKVUwGk149DZXRqwJAXrqGsxiGb6vYgWHmzsk/D1saYe50\n".
-        "ckxusB4rEzVaegp5jejSb0v0QUB/JnO9fKJnwXgs/l+psZSPzBTqDFiqeQJAGMK8\n".
-        "brFIQ3P93NyzRiw6S5hEC/9fGAx5M/4tvPcvqqlsUkkThKGPfrku4u26plF4SFrh\n".
-        "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
-        "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
-        "-----END RSA PRIVATE KEY-----";
-        if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
-        }else{
-            return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
-            //inicializacion o el VPOS no ha enviado valores correctos
-        }
-        return '<form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
-   <table border="0">
-  <tr>
-    <td>IDACQUIRER:</td>
-    <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
-  </tr>
-  <tr>
-    <td>COMMERCE:</td>
-    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="6573"></td>
-  </tr>
-  <tr>
-    <td>XML:</td>
-    <td><input name="XMLREQ" id="XMLREQ" value='.$arrayOut['XMLREQ'].'></td>
-  </tr>
-  <tr>
-    <td>SIGNATURE:</td>
-    <td><input name="DIGITALSIGN" id="SIGNATURE" value='.$arrayOut['DIGITALSIGN'].'></td>
-  </tr>
-  <tr>
-    <td>SESSIONKEY:</td>
-    <td><input name="SESSIONKEY" id="SESSIONKEY" value='.$arrayOut['SESSIONKEY'].'></td>
-  </tr>
-  <tr>
-    <td><input type="submit" name="envio" id="envio" value="Enviar" /></td>
-
-    </tr>
-</table>
-
-</form>';
+                    </tr>
+                </table>
+                </form>';
+          }
     // END
         }
 }
