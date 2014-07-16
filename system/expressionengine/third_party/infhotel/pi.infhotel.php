@@ -140,6 +140,9 @@ class Infhotel
         foreach($data as $row){
             $codigo_pais = $row["TCodigoPais"];
             $nombre_pais = $row["TDescripcionPais"];
+            if($nombre_pais == "Ninguno"){
+                $nombre_pais = 'ENTER YOUR COUNTRY';
+            }
             //$nacionalidad = $rom["TDescripcionNacionalidad"]; -> Dato NO utilizado.
             $form .= '<option value='.$codigo_pais.'>'.$nombre_pais.'</option>';
         }
