@@ -232,7 +232,7 @@ class Vpost
             'city'=> $city,
             'state' => $state,
             'document_id'=>$document_id,
-            'document_type'=>$audocument_type,
+            'document_type'=>$document_type,
             'card_id'=>$card_id,
             'card_type'=>$card_type,
             'purchase_amount'=>$purchaseAmount,
