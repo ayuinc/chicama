@@ -63,7 +63,7 @@ class Infhotel
     // END
 
     public function tipodetarjeta(){
-        $form = '<select name="card_type" id="tipo_de_tarjeta" > <option value="TIPO DE TARJETA" selected>TIPO DE TARJETA</option>';
+        $form = '<select name="card_type" id="tipo_de_tarjeta" > <option value="ENTER YOUR TYPE CARD" selected>TYPE CARD</option>';
         //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoTarjeta';
         //  Initiate curl
