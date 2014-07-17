@@ -257,7 +257,7 @@ class Vpost
             $first_name = $row->first_name;
             $last_name = $row->last_name;
             $country = $row->country;
-            $document_id = $row->document_id:
+            $document_id = $row->document_id;
             $document_type = $row->document_type;
             $card_id = $row->card_id;
             $card_type = $row->card_type;
