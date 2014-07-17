@@ -205,6 +205,7 @@ class Vpost
      $XMLRES= ee()->TMPL->fetch_param('XMLRES');
      $DIGITALSIGN= ee()->TMPL->fetch_param('DIGITALSIGN');
      $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
+     session_start();
      $id=$_SESSION['id'];
      unset($_SESSION['id']);
      session_destroy();
@@ -246,7 +247,7 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-          return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+          return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
           //if($arrayOut['authorizationResult'] == "00"){
             //return $request;
           //}
