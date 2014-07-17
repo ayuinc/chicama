@@ -789,7 +789,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result."  ".$data_string; 
+        return "Su código de reserva es: ".$result;
     }
     public function reservation_3(){
         $response= '<div id="form_box_3_container"  class="row">

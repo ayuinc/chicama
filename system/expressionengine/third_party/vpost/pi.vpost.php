@@ -66,7 +66,7 @@ class Vpost
     }
     
     public function envio(){
-     require_once 'vpos/vpos_plugin.php'; 
+     require_once 'vpos/vpos_plugin_NOTAX.php'; 
      $codigo1 ='840';
      $codigoAdquirente = 144;
      $codigoComercio = 6573;
@@ -199,7 +199,7 @@ class Vpost
     
     public function recepcion(){
 
-     require_once 'vpos/vpos_plugin.php';
+     require_once 'vpos/vpos_plugin_NOTAX.php';
      $IDACQUIRER= ee()->TMPL->fetch_param('IDACQUIRER');
      $IDCOMMERCE= ee()->TMPL->fetch_param('IDCOMMERCE');
      $XMLRES= ee()->TMPL->fetch_param('XMLRES');
