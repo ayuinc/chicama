@@ -19,7 +19,7 @@ Redireccionando . . .
 		billingLastName="{post_last_name}"
 		billingEMail="{post_email}"
 		billingAddress="{post_address}"}
-	{/exp:vpost:test_envio}
+	{/exp:vpost:envio}
 {/exp:get_post_vars}
 <script src="{site_url}/js/jquery.js"></script>
 <script src="{site_url}/js/expanding.js"></script>    
@@ -34,6 +34,6 @@ Redireccionando . . .
 </script>
 <script type="text/javascript">
  $(function(){
-	//$('#form_envio').submit();
+	$('#form_envio').submit();
  });
 </script>
