@@ -64,20 +64,12 @@ class Infhotel
 
     public function tipodetarjeta(){
         $form = '<select name="card_type" id="tipo_de_tarjeta" > <option value="" selected>SELECT YOUR TYPE CARD</option>';
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoTarjeta';
-        //  Initiate curl
         $ch = curl_init($url);
-        // Disable SSL verification
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
-        // Execute
         $result=curl_exec($ch);
-
-        // Will dump a beauty json :3
         $data = json_decode($result, true);
 
         foreach($data as $row){
@@ -92,20 +84,12 @@ class Infhotel
     
     public function tipodedocumento(){
         $form = '<select name="document_type" id="document_type" > <option value="00" selected>SELECT YOUR TYPE DOCUMENT</option>';
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoDocumento';
-        //  Initiate curl
         $ch = curl_init($url);
-        // Disable SSL verification
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
-        // Execute
-        $result=curl_exec($ch);
-
-        // Will dump a beauty json :3
+        $result=curl_exec($ch)
         $data = json_decode($result, true);
 
         foreach($data as $row){
@@ -119,22 +103,13 @@ class Infhotel
     }
 
     public function pais(){
-        //$form = '<select name="pais" id="pais" > <option value="PAÍS" selected>PAÍS</option>';
         $form = '<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">';
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetPais';
-        //  Initiate curl
         $ch = curl_init($url);
-        // Disable SSL verification
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
-        // Execute
         $result=curl_exec($ch);
-
-        // Will dump a beauty json :3
         $data = json_decode($result, true);
 
         foreach($data as $row){
@@ -143,7 +118,6 @@ class Infhotel
             if($nombre_pais == "Ninguno"){
                 $nombre_pais = 'ENTER YOUR COUNTRY';
             }
-            //$nacionalidad = $rom["TDescripcionNacionalidad"]; -> Dato NO utilizado.
             $form .= '<option value='.$codigo_pais.'>'.$nombre_pais.'</option>';
         }
         $form = $form.'</select>';
@@ -153,20 +127,12 @@ class Infhotel
 
     public function tipodehabitacion(){
         $form = '<select name="tipo_de_habitacion" id="tipo_de_habitacion" > <option value="TIPO DE HABITACIÓN" selected>TIPO DE HABITACIÓN</option>';
-        //$url = "http://es.magicseaweed.com/api/3XpBW72Em3wuAo7O0BYc17k582W308Ek/forecast/?spot_id=416&units=eu"; 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionTarifa';
-        //  Initiate curl
         $ch = curl_init($url);
-        // Disable SSL verification
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
-        // Execute
-        $result=curl_exec($ch);
-
-        // Will dump a beauty json :3
+        $result=curl_exec($ch)
         $data = json_decode($result, true);
 
         foreach($data as $row){
@@ -194,15 +160,10 @@ class Infhotel
         $rooms_num = ee()->TMPL->fetch_param('rooms_num');
 
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
-        //  Initiate curl
         $ch = curl_init($url);
-        // Disable SSL verification
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        // Will return the response, if false it print the response
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        // Set the url
         curl_setopt($ch, CURLOPT_URL,$url);
-
         $result=curl_exec($ch);
         $n=0;
         $data = json_decode($result, true);
@@ -230,9 +191,6 @@ class Infhotel
                 if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple_garden"] ){
                     $disponibilidad["triple_garden"]=$row["NDisponible"];
                 }
-                /*if($row["TCodigoHabitacion"]==110004 && $row["NDisponible"]<$disponibilidad["suite"] ){
-                    $disponibilidad["suite"]=$row["NDisponible"];
-                }*/
                 if($row["TCodigoHabitacion"]==110005 && $row["NDisponible"]<$disponibilidad["simple_ocean"] ){
                     $disponibilidad["simple_ocean"]=$row["NDisponible"];
                 }
@@ -253,9 +211,6 @@ class Infhotel
         if( $disponibilidad["triple_garden"] == 2000){
              $disponibilidad["triple_garden"] = 0;
         }
-        /*if( $disponibilidad["suite"] == 2000){
-             $disponibilidad["suite"] = 0;
-        }*/
         if( $disponibilidad["simple_ocean"] == 2000){
              $disponibilidad["simple_ocean"] = 0;
         }
@@ -315,10 +270,8 @@ class Infhotel
             }
             $first_iteration_garden = $it_simple_garden;
             $second_iteration_garden = $it_simple_garden + $it_doble_garden;
-            //$third_iteration_garden = 
             $first_iteration_ocean = $it_simple_ocean;
             $second_iteration_ocean = $it_simple_ocean + $it_doble_ocean;
-            //$third_iteration_ocean = 
             for ($i=0; $i<$rooms_num ; $i++) { 
                 $response .= '<div class="row" id="rooms'.$i.'">';
                 if ( $i<$garden_view) {
@@ -822,38 +775,7 @@ class Infhotel
         $data = json_decode($json, true);
         $data["Pasajeros"]["0"]= $person;
         $data["NPasajero"]="10";
-        
-        /*
-        $data = array(  "FLlegada" => "2014-10-06 12:00:00.000",
-                        "FSalida" => "2014-10-13 12:00:00.000", 
-                        "HLlegada" => "2014-10-06 12:00:00.000",
-                        "HSalida" => "2014-10-13 12:00:00.000",
-                        "Habitaciones" => array(
-                                            array("CantHab" => 1, 
-                                                "NPrecio" => 220,  
-                                                "TCodigoHabitacion" => "110001"  
-                                            ),
-                                            array("CantHab" => 1, 
-                                                "NPrecio" => 180,  
-                                                "TCodigoHabitacion" => "110001"
-                                            )
-                                        ),
-                        "NPasajero" => 2,
-                        "MObservacion" => "Esta es mi xxxxx observación, espero que grabe",     
-                        "Pasajeros" => array(
-                                            array(
-                                                "TDocumento" => "12345678",
-                                                "TMaterno" => "pasajero01",  
-                                                "TNacionalidad" => "069",      
-                                                "TNombre" => "pasajero01",
-                                                "TPaterno" => "pasajero01",  
-                                                "TTarjeta" => "1234567890",
-                                                "TTipoDocumento" => "02",
-                                                "TTipoTarjeta" => "04" 
-                                            )
-                                        )
-        );
-        */
+       
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
@@ -1101,43 +1023,6 @@ class Infhotel
         </form>
     </div>';
             return $response;
-    }
-    public function tercer_paso(){
-        $form = '
-        <div id="form_box_3">
-        <form id="book_a_room" action="/?/content/reserva" method="POST">
-        <div class="row">
-            <div id="title_reservation" class="row">
-                    <div class="large-4 columns">
-                        <h2>NEW RESERVATION</h2>
-                    </div>
-                    <div class="large-4 large-offset-4 columns">
-                        <p>Phone reservations +511-440-6040</p>
-                            <p>FECHA CHECKIN:   </p>
-                            <p>FECHA CHECKOUT:  </p>
-                            <p>ROOM: 4</p>
-                        
-                    </div>
-            </div>
-        </div>
-        <div class="row">
-                <div class="row">
-                    <div class="large-3 columns">
-                        <p>Request *</p>
-                    </div>
-                    <div class="large-9 columns">
-                        <input type="text" name="request" maxlength="1000"  id="full_request">
-                    </div>
-                </div>
-            </div>
-        <div class="row">
-            <div class="large-6 columns">
-                <input type="submit" name="submit" value="Book Now" class="send button">
-            </div>
-        </div>
-    </form>
-    </div>';  
-        return $form;
     }
 }
 /* End of file pi.infhotel.php */

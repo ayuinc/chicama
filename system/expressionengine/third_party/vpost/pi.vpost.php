@@ -244,6 +244,7 @@ class Vpost
             );
 
        if( ee()->db->insert('exp_hotel_reservations', $data) ){
+             $id=ee()->db->insert_id();
              $array_send['acquirerId']=$codigoAdquirente;
              $array_send['commerceId']=$codigoComercio;
              $array_send['purchaseAmount']=$purchaseAmount;
@@ -293,7 +294,7 @@ class Vpost
                   return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
                   //inicializacion o el VPOS no ha enviado valores correctos
               }
-              return '
+              return 'last_id_insert=> '$id.' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
                    <table border="0">
                   <tr>
