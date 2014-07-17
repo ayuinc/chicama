@@ -89,7 +89,7 @@ class Infhotel
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_URL,$url);
-        $result=curl_exec($ch)
+        $result=curl_exec($ch);
         $data = json_decode($result, true);
 
         foreach($data as $row){
@@ -132,7 +132,7 @@ class Infhotel
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_URL,$url);
-        $result=curl_exec($ch)
+        $result=curl_exec($ch);
         $data = json_decode($result, true);
 
         foreach($data as $row){
