@@ -253,7 +253,7 @@ class Vpost
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
           ee()->db->update(
-                'channel',
+                'exp_hotel_reservations',
                 array(
                     'validate'  => 'si'
                 ),
