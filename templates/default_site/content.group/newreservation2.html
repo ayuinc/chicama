@@ -197,8 +197,8 @@
        	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3","#purchase_amount");
        	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3","#purchase_amount");
 
-        cambio_costos_addons('#people_transport' , '#encabezado_transport', '#purchase_amount');
-        cambio_costos_addons('#people_all_mealls' , '#encabezado_all_meals', '#purchase_amount');
+        cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+        cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
@@ -248,28 +248,7 @@
 			});
 		}
 
-    function cambio_costos_addons(select_box , encabezado, purchase_amount){
-      $(select_box).change(function(){
-          switch($(select_box).val()){ 
-            case "100":
-              $(encabezado).html("USD 100");
-              console.log(parseInt($(purchase_amount).val())+10000);
-              //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
-              break;
-            case "200":
-              $(encabezado).html("USD 200");
-              console.log(parseInt($(purchase_amount).val())+20000);
-              //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
-              break;
-            case "300":
-              $(encabezado).html("USD 300");
-              console.log(parseInt($(purchase_amount).val())+30000);
-              //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
-              break;
-          }
-      });
-    }
-
+    
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box, purchase_amount ){
 	var orden = next_div - 1 ;
 
@@ -506,5 +485,27 @@
 			    break; 
 		}
 	}
+  function cambio_costos_addons(select_box, encabezado, purchase_amount){
+      $(select_box).change(function(){
+          switch($(select_box).val()){ 
+            case "100":
+              $(encabezado).html("USD 100");
+              console.log(parseInt($(purchase_amount).val())+10000);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
+              break;
+            case "200":
+              $(encabezado).html("USD 200");
+              console.log(parseInt($(purchase_amount).val())+20000);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
+              break;
+            case "300":
+              $(encabezado).html("USD 300");
+              console.log(parseInt($(purchase_amount).val())+30000);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
+              break;
+          }
+      });
+    }
+
 </script>
 {/exp:get_post_vars}
