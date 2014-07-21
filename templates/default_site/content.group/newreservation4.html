@@ -427,30 +427,4 @@
 	</div>
 </div>	
 {embed="includes/footer"}
-<script type="text/javascript">
-$(function() {
-    function cambio_costos_addon(select_box , encabezado , precio, hab, final_cost){
-		$(select_box).change(function(){
-			switch($( select_box ).val()){ 
-				case "1":
-					$(encabezado).html("One Guest");
-					$(precio).html("USD 100/night");
-					$(final_cost).val("100");
-					break;
-				case "2":
-					$(encabezado).html("Two Guests");
-					$(precio).html("USD 130/night");
-					$(final_cost).val("130");
-					break;
-				case "3":
-					$(encabezado).html("Three Guests");
-					$(precio).html("USD 160/night");
-					$(final_cost).val("160");
-					break;
-				case "4": 
-					break;
-			}
-		});
-	}
-});
-</script>
+
