@@ -250,18 +250,18 @@
 
     function cambio_costos_addons(select_box , encabezado, purchase_amount){
       $(select_box).change(function(){
-          switch($( select_box ).val()){ 
-            case 100:
+          switch($(select_box).val()){ 
+            case "100":
               $(encabezado).html("USD 100");
-              $(purchase_amount).val($(purchase_amount).val()+100);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
               break;
-            case 200:
+            case "200":
               $(encabezado).html("USD 200");
-              $(purchase_amount).val($(purchase_amount).val()+200);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
               break;
-            case 300:
+            case "300":
               $(encabezado).html("USD 300");
-              $(purchase_amount).val($(purchase_amount).val()+300);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
               break;
           }
       });
