@@ -234,10 +234,9 @@
 				}
 			});
 		}
-    function cambio_costos_addons(select_box, encabezad
-      o, purchase_amount){
-      debugger;
+    function cambio_costos_addons(select_box, encabezado, purchase_amount){
       $(select_box).change(function(){
+      debugger;
           switch($(select_box).val()){ 
             case "100":
               $(encabezado).html("USD 100");
