@@ -107,6 +107,30 @@
 		$("#price_room3").hide();
 		$("#price_room4").hide();
 		$("#form_box_3").hide();
+    
+    function cambio_costos_addons(select_box, encabezado, purchase_amount){
+      var temp = $(select_box).val();
+      console.log(temp);
+      $(select_box).change(function(){
+          switch(temp){ 
+            case "1":
+              $(encabezado).html("USD 100");
+              console.log(parseInt($(purchase_amount).val())+10000);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
+              break;
+            case "2":
+              $(encabezado).html("USD 200");
+              console.log(parseInt($(purchase_amount).val())+20000);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
+              break;
+            case "3":
+              $(encabezado).html("USD 300");
+              console.log(parseInt($(purchase_amount).val())+30000);
+              //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
+              break;
+          }
+      });
+    }
     cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
     cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 		hide_divs(num_hab,0);
@@ -236,29 +260,6 @@
 			});
 		}
 
-    function cambio_costos_addons(select_box, encabezado, purchase_amount){
-      var temp = $(select_box).val();
-      console.log(temp);
-      $(select_box).change(function(){
-          switch(temp){ 
-            case "1":
-              $(encabezado).html("USD 100");
-              console.log(parseInt($(purchase_amount).val())+10000);
-              //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
-              break;
-            case "2":
-              $(encabezado).html("USD 200");
-              console.log(parseInt($(purchase_amount).val())+20000);
-              //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
-              break;
-            case "3":
-              $(encabezado).html("USD 300");
-              console.log(parseInt($(purchase_amount).val())+30000);
-              //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
-              break;
-          }
-      });
-    }
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box, purchase_amount ){
 	var orden = next_div - 1 ;
