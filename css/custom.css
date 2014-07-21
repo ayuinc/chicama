@@ -10,6 +10,7 @@ html, body {
   src: url("../fonts/cplay.eot?#iefix") format("embedded-opentype"), url("../fonts/cplay.ttf") format("truetype"), url("../fonts/cplay.woff") format("woff"), url("../fonts/cplay.svg#cplay") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'cplay';
   speak: none;
@@ -594,11 +595,13 @@ figure {
   #form_box_4 h3,
   #form_box_5 h3,
   #form_box_6 h3 {
+    display: inline-block;
     border-bottom: 1px solid #2c2625;
     margin-bottom: 1.5rem;
     margin-top: 0;
-    font-weight: 400;
-    line-height: 1.2; }
+    font-weight: 200;
+    line-height: 1.2;
+    font-size: 2rem; }
   #form_box p,
   #form_box_2 p,
   #form_box_3 p,
@@ -625,11 +628,129 @@ figure {
   position: static;
   display: block; }
 
-/*step2 book a room*/
+#steps_list {
+  border-top: 1px solid #2c2625;
+  border-bottom: 1px solid #2c2625;
+  margin-bottom: 3rem;
+  padding: 0.5rem 0; }
+  #steps_list .circle {
+    color: #8b623b;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+    line-height: 30px; }
+    #steps_list .circle + p {
+      font-size: 0.8rem;
+      margin-bottom: 0; }
+    #steps_list .circle.active {
+      color: #2c2625;
+      border: 1px solid #2c2625; }
+
+/* step1 book a room */
+#form_box_2_container h4 {
+  color: #8b623b;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 3rem; }
+#form_box_2_container .item-room {
+  margin-bottom: 3rem; }
+  #form_box_2_container .item-room h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 2rem; }
+  #form_box_2_container .item-room p {
+    font-size: 0.95rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #2c2625;
+    color: #888; }
+  #form_box_2_container .item-room figure {
+    position: relative; }
+    #form_box_2_container .item-room figure a {
+      border: 2px solid white;
+      border-radius: 5px;
+      width: 1.8rem;
+      line-height: 1.8rem;
+      height: 1.8rem;
+      position: absolute;
+      right: 0.5rem;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      bottom: 0.5rem; }
+
+/* end step1 */
+/* step2 book a room */
+#form_box_3_container h4 {
+  color: #8b623b;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 3rem; }
+#form_box_3_container .item-addon {
+  margin-bottom: 3rem; }
+  #form_box_3_container .item-addon .selector p {
+    font-size: .8rem;
+    display: inline-block;
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  #form_box_3_container .item-addon .selector select {
+    width: 4rem; }
+  #form_box_3_container .item-addon .selector .addon-cost {
+    line-height: 35px;
+    font-size: 1.8rem;
+    text-align: right; }
+  #form_box_3_container .item-addon h2 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 2rem; }
+  #form_box_3_container .item-addon p {
+    font-size: 0.95rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #2c2625;
+    color: #888; }
+  #form_box_3_container .item-addon figure {
+    position: relative; }
+    #form_box_3_container .item-addon figure a {
+      border: 2px solid white;
+      border-radius: 5px;
+      width: 1.8rem;
+      line-height: 1.8rem;
+      height: 1.8rem;
+      position: absolute;
+      right: 0.5rem;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      bottom: 0.5rem; }
+#form_box_3_container .your-stay {
+  padding: 1rem;
+  border: 1px solid #8F8F8F;
+  border-radius: 5px;
+  color: #8F8F8F; }
+  #form_box_3_container .your-stay hr {
+    border-color: #8F8F8F;
+    margin: 0.5rem 0; }
+  #form_box_3_container .your-stay h2 {
+    color: #8F8F8F; }
+  #form_box_3_container .your-stay p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none; }
+
 figcaption p {
   margin-top: 20px; }
 
-/*step3 book a room*/
+/* step3 book a room */
 table thead {
   background: #939393; }
   table thead tr th {
