@@ -196,7 +196,7 @@
        	reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3","#purchase_amount");
        	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3","#purchase_amount");
        	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3","#purchase_amount");
-
+        
         cambio_costos_addons('#people_transport' , '#encabezado_transport', '#purchase_amount');
         cambio_costos_addons('#people_all_mealls' , '#encabezado_all_meals', '#purchase_amount');
 
@@ -251,15 +251,15 @@
     function cambio_costos_addons(select_box , encabezado, purchase_amount){
       $(select_box).change(function(){
           switch($( select_box ).val()){ 
-            case "1":
+            case "100":
               $(encabezado).html("USD 100");
               $(purchase_amount).val($(purchase_amount).val()+100);
               break;
-            case "2":
+            case "200":
               $(encabezado).html("USD 200");
               $(purchase_amount).val($(purchase_amount).val()+200);
               break;
-            case "3":
+            case "300":
               $(encabezado).html("USD 300");
               $(purchase_amount).val($(purchase_amount).val()+300);
               break;
