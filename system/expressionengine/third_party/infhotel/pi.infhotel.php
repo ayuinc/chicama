@@ -959,7 +959,7 @@ class Infhotel
                                 </div>
                             </div>
                             <div class="panel">
-                                <div class="row">
+                                <div class="row">   
                                     <div class="large-12 columns" id="addons">
                                         <div class="row">
                                             <div class="addon">
@@ -976,9 +976,9 @@ class Infhotel
                                                         </div>  
                                                         <div class="large-9 columns">
                                                           <select id="people_all_meals">
-                                                            <option value="100">1</option>
-                                                            <option value="200">2</option>
-                                                            <option value="300">3</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
                                                           </select>
                                                           </div>
                                                         <input id="all_meals" name="all_meals" type="checkbox">
@@ -999,13 +999,13 @@ class Infhotel
                                                     <div class="row">
                                                         <h2 id="encabezado_transport">USD 100</h2>
                                                         <div class="large-3 columns">
-                                                            <label for="people_transport" class="inline">People</label>
+                                                            <label for="people" class="inline">People</label>
                                                         </div>  
                                                         <div class="large-9 columns">
                                                           <select id="people_transport">
-                                                            <option value="100">1</option>
-                                                            <option value="200">2</option>
-                                                            <option value="300">3</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
                                                           </select>
                                                           </div>
                                                         <input id="transport" name="transport" type="checkbox">

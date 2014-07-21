@@ -234,21 +234,21 @@
 				}
 			});
 		}
+
     function cambio_costos_addons(select_box, encabezado, purchase_amount){
       $(select_box).change(function(){
-      debugger;
           switch($(select_box).val()){ 
-            case "100":
+            case "1":
               $(encabezado).html("USD 100");
               console.log(parseInt($(purchase_amount).val())+10000);
               //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
               break;
-            case "200":
+            case "2":
               $(encabezado).html("USD 200");
               console.log(parseInt($(purchase_amount).val())+20000);
               //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
               break;
-            case "300":
+            case "3":
               $(encabezado).html("USD 300");
               console.log(parseInt($(purchase_amount).val())+30000);
               //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
