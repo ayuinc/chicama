@@ -237,8 +237,10 @@
 		}
 
     function cambio_costos_addons(select_box, encabezado, purchase_amount){
+      var temp = $(select_box).val();
+      console.log(temp);
       $(select_box).change(function(){
-          switch($(select_box).val()){ 
+          switch(temp){ 
             case "1":
               $(encabezado).html("USD 100");
               console.log(parseInt($(purchase_amount).val())+10000);
