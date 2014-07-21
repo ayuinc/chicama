@@ -253,14 +253,17 @@
           switch($(select_box).val()){ 
             case "100":
               $(encabezado).html("USD 100");
+              console.log(parseInt($(purchase_amount).val())+10000);
               //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
               break;
             case "200":
               $(encabezado).html("USD 200");
+              console.log(parseInt($(purchase_amount).val())+20000);
               //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
               break;
             case "300":
               $(encabezado).html("USD 300");
+              console.log(parseInt($(purchase_amount).val())+30000);
               //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
               break;
           }
