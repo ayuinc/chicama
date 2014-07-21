@@ -107,6 +107,8 @@
 		$("#price_room3").hide();
 		$("#price_room4").hide();
 		$("#form_box_3").hide();
+    cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+    cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 		hide_divs(num_hab,0);
       });
 	$(function() {
@@ -159,8 +161,6 @@
     cambio_costos('#guests_triple_ocean1','#num_guest_triple_ocean1','#cost_triple_ocean1',"#type_hab_triple_ocean1","#final_cost_triple_ocean1");
     cambio_costos('#guests_triple_ocean2','#num_guest_triple_ocean2','#cost_triple_ocean2',"#type_hab_triple_ocean2","#final_cost_triple_ocean2");
     cambio_costos('#guests_triple_ocean3','#num_guest_triple_ocean3','#cost_triple_ocean3',"#type_hab_triple_ocean3","#final_cost_triple_ocean3");
-   	cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
-    cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
     reservar_hab(num_hab, '#add_room_simple_garden0', 1, 1,"#final_cost_simple_garden0","#full_request","#guests_simple_garden0","#purchase_amount");
    	reservar_hab(num_hab, '#add_room_doble_garden0', 1, 2,"#final_cost_doble_garden0","#full_request","#guests_doble_garden0","#purchase_amount");
    	reservar_hab(num_hab, '#add_room_triple_garden0', 1, 3,"#final_cost_triple_garden0","#full_request","#guests_triple_garden0","#purchase_amount");
