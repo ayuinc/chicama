@@ -959,7 +959,7 @@ class Infhotel
                                 </div>
                             </div>
                             <div class="panel">
-                                <div class="row">
+                                <div class="row">   
                                     <div class="large-12 columns" id="addons">
                                         <div class="row">
                                             <div class="addon">
@@ -970,18 +970,17 @@ class Infhotel
                                                 </div>
                                                 <div class="large-4 columns">
                                                     <div class="row">
-                                                        <h2 id="">USD 100</h2>
-                                                        <!-- 
+                                                        <h2 id="encabezado_all_meals">USD 100</h2>
                                                         <div class="large-3 columns">
                                                             <label for="people" class="inline">People</label>
                                                         </div>  
                                                         <div class="large-9 columns">
-                                                          <select id="people">
+                                                          <select id="people_all_meals">
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
                                                             <option value="3">3</option>
                                                           </select>
-                                                        </div> -->
+                                                          </div>
                                                         <input id="all_meals" name="all_meals" type="checkbox">
                                                         <label for="all_meals" class="label">ADD TO TRIP</label>
                                                     </div>
@@ -998,7 +997,17 @@ class Infhotel
                                                 </div>
                                                 <div class="large-4 columns">
                                                     <div class="row">
-                                                        <h2 id="">USD 100</h2>
+                                                        <h2 id="encabezado_transport">USD 100</h2>
+                                                        <div class="large-3 columns">
+                                                            <label for="people" class="inline">People</label>
+                                                        </div>  
+                                                        <div class="large-9 columns">
+                                                          <select id="people_transport">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                          </select>
+                                                          </div>
                                                         <input id="transport" name="transport" type="checkbox">
                                                         <label for="transport" class="label">ADD TO TRIP</label>
                                                     </div>  

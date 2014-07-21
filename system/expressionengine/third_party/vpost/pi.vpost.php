@@ -255,7 +255,7 @@ class Vpost
           ee()->db->update(
                 'exp_hotel_reservations',
                 array(
-                    'validate'  => 'si'
+                    'validate'  => 'yes'
                 ),
                 array(
                     'id' => $id 
