@@ -207,6 +207,8 @@ class Vpost
      $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
      session_start();
      $id=$_SESSION['id'];
+     unset($_SESSION['id']);
+     session_destroy();
      $llavePrivadaCifrado = "-----BEGIN RSA PRIVATE KEY-----\n".
     "MIICXAIBAAKBgQDr3OXAFjoBokuPfCWs1QScfz0Ejyn4JuEuMpZCRYGhn/1pWCN1\n".
     "kHVXrfk4fDephOBRVWEJq03fKkAJAxNMTMSbcjyMdSvhP4o/n8wpPGdHT1FZq1rD\n".
@@ -250,6 +252,15 @@ class Vpost
           ee()->db->select('*');
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
+          ee()->db->update(
+                'channel',
+                array(
+                    'validate'  => 'si'
+                ),
+                array(
+                    'id' => $id 
+                )
+            );
           foreach($query->result() as $row){
             $full_request = $row->full_request;
             $first_name = $row->first_name;
@@ -272,23 +283,10 @@ class Vpost
                       {/exp:infhotel:insertarreservar}';
               
             }
-            ee()->db->update(
-                'channel',
-                array(
-                    'validate'  => 'si'
-                ),
-                array(
-                    'id' => $id
-                )
-            );
-            unset($_SESSION['id']);
-            session_destroy();
             return $div;
             //return $request;
           }
       } else {
-          unset($_SESSION['id']);
-          session_destroy();
           return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
       }
     }
