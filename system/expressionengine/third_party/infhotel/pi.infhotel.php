@@ -970,15 +970,15 @@ class Infhotel
                                                 </div>
                                                 <div class="large-4 columns">
                                                     <div class="row">
-                                                        <h2 id="">USD 100</h2>
+                                                        <h2 id="encabezado_all_meals">USD 100</h2>
                                                         <div class="large-3 columns">
                                                             <label for="people" class="inline">People</label>
                                                         </div>  
                                                         <div class="large-9 columns">
-                                                          <select id="people">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
+                                                          <select id="people_all_meals">
+                                                            <option value="100">1</option>
+                                                            <option value="200">2</option>
+                                                            <option value="300">3</option>
                                                           </select>
                                                           </div>
                                                         <input id="all_meals" name="all_meals" type="checkbox">
@@ -997,15 +997,15 @@ class Infhotel
                                                 </div>
                                                 <div class="large-4 columns">
                                                     <div class="row">
-                                                        <h2 id="">USD 100</h2>
+                                                        <h2 id="encabezado_transport">USD 100</h2>
                                                         <div class="large-3 columns">
-                                                            <label for="people" class="inline">People</label>
+                                                            <label for="people_transport" class="inline">People</label>
                                                         </div>  
                                                         <div class="large-9 columns">
-                                                          <select id="people">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
+                                                          <select id="people_transport">
+                                                            <option value="100">1</option>
+                                                            <option value="200">2</option>
+                                                            <option value="300">3</option>
                                                           </select>
                                                           </div>
                                                         <input id="transport" name="transport" type="checkbox">
