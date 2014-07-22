@@ -930,6 +930,10 @@ figure {
 				bottom: 0.5rem;
 			}
 		}
+
+		.addon-cost {
+			font-weight: 500;
+		}
 	}
 
 	.your-stay {
@@ -945,12 +949,22 @@ figure {
 
 		h2 {
 			color: #8F8F8F;
+			font-weight: 500;
 		}
 
 		p {
 			padding-bottom: 0;
 			margin-bottom: 0;
 			border: none;
+		}
+
+		.ys-label {
+			color: #5E5E5E;
+		}
+
+		.ys-field {
+			font-size: 0.9rem;
+			font-weight: 500;
 		}
 	}
 }

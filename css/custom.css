@@ -10,7 +10,6 @@ html, body {
   src: url("../fonts/cplay.eot?#iefix") format("embedded-opentype"), url("../fonts/cplay.ttf") format("truetype"), url("../fonts/cplay.woff") format("woff"), url("../fonts/cplay.svg#cplay") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'cplay';
   speak: none;
@@ -732,6 +731,8 @@ figure {
       color: white;
       font-weight: bold;
       bottom: 0.5rem; }
+  #form_box_3_container .item-addon .addon-cost {
+    font-weight: 500; }
 #form_box_3_container .your-stay {
   padding: 1rem;
   border: 1px solid #8F8F8F;
@@ -741,11 +742,17 @@ figure {
     border-color: #8F8F8F;
     margin: 0.5rem 0; }
   #form_box_3_container .your-stay h2 {
-    color: #8F8F8F; }
+    color: #8F8F8F;
+    font-weight: 500; }
   #form_box_3_container .your-stay p {
     padding-bottom: 0;
     margin-bottom: 0;
     border: none; }
+  #form_box_3_container .your-stay .ys-label {
+    color: #5E5E5E; }
+  #form_box_3_container .your-stay .ys-field {
+    font-size: 0.9rem;
+    font-weight: 500; }
 
 figcaption p {
   margin-top: 20px; }
