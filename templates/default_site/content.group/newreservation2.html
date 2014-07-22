@@ -188,7 +188,7 @@
     cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 
     $("#people_all_meals").change(function(){
-        switch("#people_all_meals").val()){ 
+        switch($("#people_all_meals").val()){ 
           case "1":
             $('#encabezado_all_meals').html("USD 100");
             console.log(parseInt($('#purchase_amount').val())+10000);
