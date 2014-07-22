@@ -426,7 +426,9 @@
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount){
     $(input).val("10000");
     $(select_box).change(function(){
-        $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+        if($(select_box).val()){
+          $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+        }
         switch($(select_box).val()){ 
           case "1":
             $(encabezado).html("USD 100");
