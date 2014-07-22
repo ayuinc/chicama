@@ -186,7 +186,25 @@
     
     cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
     cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
-
+    $("#people_all_meals").change(function(){
+        switch("#people_all_meals").val()){ 
+          case "1":
+            $('#encabezado_all_meals').html("USD 100");
+            console.log(parseInt($(purchase_amount).val())+10000);
+            //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
+            break;
+          case "2":
+            $('#encabezado_all_meals').html("USD 200");
+            console.log(parseInt($(purchase_amount).val())+20000);
+            //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
+            break;
+          case "3":
+            $('#encabezado_all_meals').html("USD 300");
+            console.log(parseInt($(purchase_amount).val())+30000);
+            //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
+            break;
+        }
+    });
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
 			$(select_box).change(function(){
