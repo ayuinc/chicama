@@ -412,7 +412,17 @@
 	}
 });
 
-  function cambio_costos_addons(check_box, select_box, encabezado, input){
+  function agregar_costos_addons(check_box, input, purchase_amount){
+    $(input).attr("checked","checked");
+    if($(input).is(":checked")){
+      $(purchase_amount).val(parseInt(purchase_amount).val()+parseInt(input.val()));
+    }
+    else{
+      $(purchase_amount).val(parseInt(purchase_amount).val()-parseInt(input.val()));
+    }
+  }
+
+  function cambio_costos_addons(select_box, encabezado, input){
     $(input).val("100");
     $(select_box).change(function(){
         switch($(select_box).val()){ 
@@ -450,8 +460,10 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#transport","#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#all_meals","#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
+            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
 			    break;
 			case 1:
@@ -462,8 +474,10 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#transport","#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#all_meals","#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
+            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
 			    break;
 			case 2:
@@ -474,8 +488,10 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#transport","#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#all_meals","#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
+            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
 			    break;
 			case 3:
@@ -486,16 +502,20 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#transport","#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#all_meals","#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
+            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
 			    break;
 			case 4:
 					$("#form_box_2_container").html($("#form_box_3_container").html());
 					$("#add_on").html("");
 					$("#form_box_3").show();
-            cambio_costos_addons("#transport","#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#all_meals","#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
+            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    break; 
 		}
 	}
