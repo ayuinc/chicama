@@ -423,21 +423,30 @@
     });
   }
 
-  function cambio_costos_addons(select_box, encabezado, input){
+  function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount){
     $(input).val("10000");
     $(select_box).change(function(){
         switch($(select_box).val()){ 
           case "1":
             $(encabezado).html("USD 100");
-            $(input).val("10000");  
+            $(input).val("10000");
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+            }  
             break;
           case "2":
             $(encabezado).html("USD 200");
             $(input).val("20000");
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+            }
             break;
           case "3":
             $(encabezado).html("USD 300");
             $(input).val("30000");  
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+            }
             break;
         }
     });
@@ -461,8 +470,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount")
+            cambio_costos_addons("#people_all_meals", "#all_meals", '#encabezado_all_meals', '#transport_input', "#purchase_amount")
             agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
             agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
@@ -475,8 +484,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount")
+            cambio_costos_addons("#people_all_meals", "#all_meals", '#encabezado_all_meals', '#transport_input', "#purchase_amount")
             agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
             agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
@@ -489,8 +498,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount")
+            cambio_costos_addons("#people_all_meals", "#all_meals", '#encabezado_all_meals', '#transport_input', "#purchase_amount")
             agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
             agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
@@ -503,8 +512,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
-            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount")
+            cambio_costos_addons("#people_all_meals", "#all_meals", '#encabezado_all_meals', '#transport_input', "#purchase_amount")
             agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
             agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
 			    }
@@ -513,8 +522,8 @@
 					$("#form_box_2_container").html($("#form_box_3_container").html());
 					$("#add_on").html("");
 					$("#form_box_3").show();
-            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
-            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
+            cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount")
+            cambio_costos_addons("#people_all_meals", "#all_meals", '#encabezado_all_meals', '#transport_input', "#purchase_amount")
             agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
             agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");  
 			    break; 
