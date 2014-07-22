@@ -97,6 +97,25 @@
 	{exp:get_post_vars parse="inward"}
 <script>
 	$(function() {
+    $("#people_all_meals").change(function(){
+        switch($("#people_all_meals").val()){ 
+          case "1":
+            $('#encabezado_all_meals').html("USD 100");
+            console.log(parseInt($('#purchase_amount').val())+10000);
+            //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
+            break;
+          case "2":
+            $('#encabezado_all_meals').html("USD 200");
+            console.log(parseInt($('#purchase_amount').val())+20000);
+            //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
+            break;
+          case "3":
+            $('#encabezado_all_meals').html("USD 300");
+            console.log(parseInt($('#purchase_amount').val())+30000);
+            //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
+            break;
+        }
+    });
 		num_hab = {post_room_number};
 		$("#room1").hide();
 		$("#room2").hide();
