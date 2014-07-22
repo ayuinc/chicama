@@ -413,6 +413,7 @@
 });
 
   function cambio_costos_addons(check_box, select_box, encabezado, input){
+    $(input).val("100");
     $(select_box).change(function(){
         switch($(select_box).val()){ 
           case "1":
@@ -432,8 +433,6 @@
   }
 
 	function hide_divs (rooms_num, div_visible){
-		$('#transport_input').val("100");
-    $('#all_meals_input').val("100");
     for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
