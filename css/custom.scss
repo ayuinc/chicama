@@ -1,6 +1,8 @@
 $primary-color: #2C2625;
 $padding: 1.25em 0;
 $border-bottom: 1px solid #2C2625;
+$color-black: #2C2625;
+$color-brown: #8B623B;
 
 html, body {
   	height: 100%;
@@ -760,11 +762,13 @@ figure {
 		color: #2c2625;
 	}
 	h3{
+		display: inline-block;
 		border-bottom: 1px solid #2c2625;
 		margin-bottom: 1.5rem;
 		margin-top: 0;
-		font-weight: 400;
+		font-weight: 200;
 		line-height: 1.2;
+		font-size: 2rem;
 	}
 	p{
 		font-size: 1rem;
@@ -775,11 +779,6 @@ figure {
 	}
 }
 
-// #form_box{
-// 	display: block;
-// 	position: static;
-// 	margin-top: 3em;
-// }
 #form_box,
 #form_box_2,
 #form_box_3,
@@ -790,13 +789,178 @@ figure {
 	position: static;
 	display: block;
 }
-/*step2 book a room*/
+
+#steps_list {
+	border-top: 1px solid $color-black;
+	border-bottom: 1px solid $color-black;
+	margin-bottom: 3rem;
+	padding: 0.5rem 0;
+
+	.circle {
+		color: $color-brown;
+		border-radius: 50%;
+		display: inline-block;
+		font-size: 1.2rem;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		+ p {
+			font-size: 0.8rem;
+			margin-bottom: 0;
+		}
+
+		&.active{
+			color: $color-black;
+			border: 1px solid $color-black;
+		}
+	}
+}
+
+/* step1 book a room */
+#form_box_2_container {
+	h4 {
+		color: $color-brown;
+		font-size: 1.5rem;
+		line-height: 1;
+		margin-bottom: 3rem;
+	}
+
+	.item-room {
+		margin-bottom: 3rem;
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 100;
+			line-height: 1;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font-size: 0.95rem;
+			font-weight: 100;
+			letter-spacing: 1px;
+			text-align: justify;
+			padding-bottom: 3rem;
+			border-bottom: 1px solid $color-black;
+			color: #888;
+		}
+
+		figure {
+			position: relative;
+
+			a {
+				border: 2px solid white;
+				border-radius: 5px;
+				width: 1.8rem;
+				line-height: 1.8rem;
+				height: 1.8rem;
+				position: absolute;
+				right: 0.5rem;
+				font-size: 1.5rem;
+				color: white;
+				font-weight: bold;
+				bottom: 0.5rem;
+			}
+		}
+	}
+}
+/* end step1 */
+
+/* step2 book a room */
+#form_box_3_container {
+	h4 {
+		color: $color-brown;
+		font-size: 1.5rem;
+		line-height: 1;
+		margin-bottom: 3rem;
+	}
+	
+	.item-addon {
+		margin-bottom: 3rem;
+		.selector {
+			p {
+				font-size: .8rem;
+				display: inline-block;
+				border: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			select {
+				width: 4rem;
+			}
+
+			.addon-cost {
+				line-height: 35px;
+				font-size: 1.8rem;
+				text-align: right;
+			}
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 100;
+			line-height: 1;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			font-size: 0.95rem;
+			font-weight: 100;
+			letter-spacing: 1px;
+			text-align: justify;
+			padding-bottom: 3rem;
+			border-bottom: 1px solid $color-black;
+			color: #888;
+		}
+
+		figure {
+			position: relative;
+
+			a {
+				border: 2px solid white;
+				border-radius: 5px;
+				width: 1.8rem;
+				line-height: 1.8rem;
+				height: 1.8rem;
+				position: absolute;
+				right: 0.5rem;
+				font-size: 1.5rem;
+				color: white;
+				font-weight: bold;
+				bottom: 0.5rem;
+			}
+		}
+	}
+
+	.your-stay {
+		padding: 1rem;
+		border: 1px solid #8F8F8F;
+		border-radius: 5px;
+		color: #8F8F8F;
+
+		hr {
+			border-color: #8F8F8F;
+			margin: 0.5rem 0;
+		}
+
+		h2 {
+			color: #8F8F8F;
+		}
+
+		p {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border: none;
+		}
+	}
+}
+
 figcaption {
 	p{
 		margin-top: 20px;
 	}
 }
-/*step3 book a room*/
+/* step3 book a room */
 table {
 	thead {
 		background: #939393;
@@ -807,6 +971,7 @@ table {
 			}
 	}		
 }
+
 /*checkboxes customization*/
 .addon{ 
 	.label {
