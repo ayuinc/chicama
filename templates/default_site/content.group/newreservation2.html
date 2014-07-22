@@ -415,10 +415,10 @@
   function agregar_costos_addons(check_box, input, purchase_amount){
     $(check_box).attr("checked","checked");
     if($(check_box).is(":checked")){
-      $(purchase_amount).val(parseInt(purchase_amount).val()+parseInt(input.val()));
+      $(purchase_amount).val(parseInt( $(purchase_amount).val()) + parseInt($(input).val()) );
     }
     else{
-      $(purchase_amount).val(parseInt(purchase_amount).val()-parseInt(input.val()));
+      $(purchase_amount).val(parseInt( $(purchase_amount).val()) - parseInt($(input).val()) );
     }
   }
 
