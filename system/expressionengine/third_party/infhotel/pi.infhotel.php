@@ -1018,6 +1018,8 @@ class Infhotel
                                                 </div>  
                                             </div>
                                         </div>
+                                        <input type="text" name="all_meals_input" maxlength="1000"  id="all_meals_input">
+                                        <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
                                         <input type="text" name="request" maxlength="1000"  id="full_request">
                                         <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
                                     </div>
