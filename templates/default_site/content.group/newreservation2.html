@@ -425,14 +425,16 @@
             break;
           case "3":
             $(encabezado).html("USD 300");
-            $(input).val("300");
+            $(input).val("300");  
             break;
         }
     });
   }
 
 	function hide_divs (rooms_num, div_visible){
-		for(i=0;i<rooms_num;i++){
+		$('#transport_input').val("100");
+    $('#all_meals_input').val("100");
+    for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
 			}
