@@ -87,23 +87,6 @@
 				{/exp:get_post_vars}
 			</form>
         </div>
-        <div class="large-4 columns">
-            <div class="row">
-                <h2 id="encabezado_transport">USD 100</h2>
-                <div class="large-3 columns">
-                    <label for="people" class="inline">People</label>
-                </div>  
-                <div class="large-9 columns">
-                  <select id="people_transport">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                  </div>
-                <input id="transport" name="transport" type="checkbox">
-                <label for="transport" class="label">ADD TO TRIP</label>
-            </div>  
-        </div>
       </div>  
   </div>  
 </div>
@@ -201,29 +184,8 @@
    	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3","#purchase_amount");
    	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3","#purchase_amount");
     
-    cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
-    cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 
-    $("#people_all_meals").change(function(){
-        switch($("#people_all_meals").val()){ 
-          case "100":
-            $('#encabezado_all_meals').html("USD 100");
-            console.log(parseInt($('#purchase_amount').val())+10000);
-            //$(purchase_amount).val(parseInt($(purchase_amount).val())+10000);
-            break;
-          case "200":
-            $('#encabezado_all_meals').html("USD 200");
-            console.log(parseInt($('#purchase_amount').val())+20000);
-            //$(purchase_amount).val(parseInt($(purchase_amount).val())+20000);
-            break;
-          case "300":
-            $('#encabezado_all_meals').html("USD 300");
-            console.log(parseInt($('#purchase_amount').val())+30000);
-            //$(purchase_amount).val(parseInt($(purchase_amount).val())+30000);
-            break;
-        }
-    });
-    
+
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
 			$(select_box).change(function(){
@@ -490,6 +452,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 
 			    }
 			    break;
@@ -501,6 +465,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 			    }
 			    break;
 			case 2:
@@ -511,6 +477,8 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 			    }
 			    break;
 			case 3:
@@ -521,12 +489,16 @@
 			    	$("#form_box_2_container").html($("#form_box_3_container").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3").show();
+            cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+            cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 			    }
 			    break;
 			case 4:
 					$("#form_box_2_container").html($("#form_box_3_container").html());
 					$("#add_on").html("");
 					$("#form_box_3").show();
+          cambio_costos_addons("#people_transport" , '#encabezado_transport', '#purchase_amount');
+          cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#purchase_amount');
 			    break; 
 		}
 	}
