@@ -413,7 +413,7 @@
 });
 
   function agregar_costos_addons(check_box, input, purchase_amount){
-    $(check_box).attr("checked","checked");
+    //$(check_box).attr("checked","checked");
     $(check_box).change(function(){
       if($(check_box).is(":checked")){
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
