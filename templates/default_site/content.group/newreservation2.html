@@ -413,8 +413,8 @@
 });
 
   function agregar_costos_addons(check_box, input, purchase_amount){
-    $(input).attr("checked","checked");
-    if($(input).is(":checked")){
+    $(check_box).attr("checked","checked");
+    if($(check_box).is(":checked")){
       $(purchase_amount).val(parseInt(purchase_amount).val()+parseInt(input.val()));
     }
     else{
@@ -515,7 +515,7 @@
             cambio_costos_addons("#people_transport" , '#encabezado_transport', '#transport_input');
             cambio_costos_addons("#people_all_meals" , '#encabezado_all_meals', '#all_meals_input');
             agregar_costos_addons("#all_meals", '#all_meals_input', "#purchase_amount");
-            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
+            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");  
 			    break; 
 		}
 	}
