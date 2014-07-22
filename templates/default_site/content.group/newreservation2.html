@@ -429,6 +429,9 @@
         if($(select_box).is(":checked")){
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
         }
+        else{
+           $(purchase_amount).val( parseInt($(purchase_amount).val()) );
+        }
         switch($(select_box).val()){ 
           case "1":
             $(encabezado).html("USD 100");
