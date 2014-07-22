@@ -414,12 +414,14 @@
 
   function agregar_costos_addons(check_box, input, purchase_amount){
     $(check_box).attr("checked","checked");
-    if($(check_box).is(":checked")){
-      $(purchase_amount).val(parseInt( $(purchase_amount).val()) + parseInt($(input).val()) );
-    }
-    else{
-      $(purchase_amount).val(parseInt( $(purchase_amount).val()) - parseInt($(input).val()) );
-    }
+    $(check_box).change(function(){
+      if($(check_box).is(":checked")){
+        $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+      }
+      else{
+        $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+      }
+    });
   }
 
   function cambio_costos_addons(select_box, encabezado, input){
@@ -428,15 +430,15 @@
         switch($(select_box).val()){ 
           case "1":
             $(encabezado).html("USD 100");
-            $(input).val("100");  
+            $(input).val("10000");  
             break;
           case "2":
             $(encabezado).html("USD 200");
-            $(input).val("200");
+            $(input).val("20000");
             break;
           case "3":
             $(encabezado).html("USD 300");
-            $(input).val("300");  
+            $(input).val("30000");  
             break;
         }
     });
