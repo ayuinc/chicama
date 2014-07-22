@@ -985,7 +985,7 @@ class Infhotel
                                                             <option value="3">3</option>
                                                           </select>
                                                           </div>
-                                                        <input id="all_meals_checkbox" name="all_meals" type="checkbox">
+                                                        <input id="all_meals" name="all_meals" type="checkbox">
                                                         <label for="all_meals" class="label">ADD TO TRIP</label>
                                                     </div>
                                                 </div>  
@@ -1012,7 +1012,7 @@ class Infhotel
                                                             <option value="3">3</option>
                                                           </select>
                                                           </div>
-                                                        <input id="transport_checkbox" name="transport" type="checkbox">
+                                                        <input id="transport" name="transport" type="checkbox">
                                                         <label for="transport" class="label">ADD TO TRIP</label>
                                                     </div>  
                                                 </div>  
