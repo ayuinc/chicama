@@ -741,7 +741,7 @@ class Infhotel
             }
         }
         else{
-            $response = 'Error de conección intentelo nuevamente':
+            $response = 'Error de conexión intentelo nuevamente':
         }
         return $response; 
     }
