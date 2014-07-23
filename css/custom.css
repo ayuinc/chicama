@@ -1,3 +1,4 @@
+@charset "CP850";
 html, body {
   height: 100%;
   font-family: "proxima-nova",sans-serif;
@@ -691,7 +692,9 @@ figure {
   line-height: 1;
   margin-bottom: 3rem; }
 #form_box_3_container .item-addon {
-  margin-bottom: 3rem; }
+  border-bottom: 1px solid #2c2625;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem; }
   #form_box_3_container .item-addon .selector p {
     font-size: .8rem;
     display: inline-block;
@@ -714,8 +717,7 @@ figure {
     font-weight: 100;
     letter-spacing: 1px;
     text-align: justify;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #2c2625;
+    padding-bottom: 1rem;
     color: #888; }
   #form_box_3_container .item-addon figure {
     position: relative; }
@@ -733,6 +735,20 @@ figure {
       bottom: 0.5rem; }
   #form_box_3_container .item-addon .addon-cost {
     font-weight: 500; }
+  #form_box_3_container .item-addon .add {
+    background: transparent;
+    border: 1px solid #2c2625;
+    border-radius: 3px;
+    color: #2c2625;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 0.9rem; }
+    #form_box_3_container .item-addon .add.active {
+      background: #2c2625;
+      color: white;
+      font-size: 0.9rem; }
+      #form_box_3_container .item-addon .add.active:before {
+        content: "✓ "; }
 #form_box_3_container .your-stay {
   padding: 1rem;
   border: 1px solid #8F8F8F;
@@ -750,9 +766,13 @@ figure {
     border: none; }
   #form_box_3_container .your-stay .ys-label {
     color: #5E5E5E; }
+    #form_box_3_container .your-stay .ys-label span {
+      float: right; }
   #form_box_3_container .your-stay .ys-field {
     font-size: 0.9rem;
     font-weight: 500; }
+    #form_box_3_container .your-stay .ys-field span {
+      float: right; }
 
 figcaption p {
   margin-top: 20px; }

@@ -876,7 +876,9 @@ figure {
 	}
 	
 	.item-addon {
-		margin-bottom: 3rem;
+		border-bottom: 1px solid $color-black;
+		padding-bottom: 2.5rem;
+		margin-bottom: 2.5rem;
 		.selector {
 			p {
 				font-size: .8rem;
@@ -908,8 +910,7 @@ figure {
 			font-weight: 100;
 			letter-spacing: 1px;
 			text-align: justify;
-			padding-bottom: 3rem;
-			border-bottom: 1px solid $color-black;
+			padding-bottom: 1rem;
 			color: #888;
 		}
 
@@ -933,6 +934,24 @@ figure {
 
 		.addon-cost {
 			font-weight: 500;
+		}
+
+		.add {
+			background: transparent;
+			border: 1px solid $color-black;
+			border-radius: 3px;
+			color: $color-black;
+			height: 50px;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+			&.active {
+				background: $color-black;
+				color: white;
+				font-size: 0.9rem;
+				&:before {
+					content: "✓ ";
+				}
+			}
 		}
 	}
 
@@ -960,11 +979,18 @@ figure {
 
 		.ys-label {
 			color: #5E5E5E;
+			span {
+				float: right;
+			}
 		}
 
 		.ys-field {
 			font-size: 0.9rem;
 			font-weight: 500;
+
+			span {
+				float: right;
+			}
 		}
 	}
 }
