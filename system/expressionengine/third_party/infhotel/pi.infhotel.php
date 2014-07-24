@@ -543,7 +543,8 @@ class Infhotel
               <!-- check-in form -->
               <div class="row">
                 <div class="large-9 large-centered columns">
-                  <form>
+                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                    <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <!-- check-in inputs row -->
                     <div class="row">
                       <div class="large-3 columns">
@@ -599,6 +600,8 @@ class Infhotel
 
             <!-- row-container -->
             <div class="large-12 columns">
+            <form action="/?/content/newreservation4" id="book_a_room" method="POST">
+                <input type="hidden" name="XID" value="{XID_HASH}" /> 
               <div class="row">
                 <div class="large-9 columns">
                   <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
