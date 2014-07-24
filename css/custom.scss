@@ -805,6 +805,7 @@ figure {
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
+		position: relative;
 		+ p {
 			font-size: 0.8rem;
 			margin-bottom: 0;
@@ -813,6 +814,24 @@ figure {
 		&.active{
 			color: $color-black;
 			border: 1px solid $color-black;
+
+			&:after{
+				background: url(../img/book-step-current.png) no-repeat;
+			}
+		}
+
+		&:after {
+			content: "";
+			background: url(../img/book-step.png) no-repeat;
+			position: absolute;
+			width: 16px;
+			left: 7rem;
+			top: 0.7rem;
+			height: 23px;
+		}
+
+		&.last:after{
+			content: none;
 		}
 	}
 }
@@ -970,14 +989,23 @@ figure {
 
 #form_box_5{
 	
+	#title_reservation {
+		margin-bottom: 3rem;
+	}
+
 	.sub-title {
 		color: #888;
 		text-transform: uppercase;
 		font-size: 1rem;
 	}
 
-	.your-stay {
+	.sub-title.first {
+		margin-top: 1rem;
+		margin-bottom: 2.5rem;
+	}
 
+	.your-stay {
+		margin-bottom: 4rem;;
 		p {
 			color: #888;
 			line-height: 2;
@@ -1023,6 +1051,26 @@ figure {
 		span {
 			float: right;
 		}
+	}
+}
+
+#form_box_6 {
+	h2 {
+		color: #888;
+	}
+
+	.body-msg {
+		text-transform: uppercase;
+
+		h4 {
+			color: #888;
+			font-size: 1rem;
+			margin: 2rem 0 6rem;
+		}
+	}
+
+	.button {
+		float: none;
 	}
 }
 
