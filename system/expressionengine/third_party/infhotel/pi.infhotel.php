@@ -546,10 +546,10 @@ class Infhotel
                     <!-- check-in inputs row -->
                     <div class="row">
                       <div class="large-3 columns">
-                        <input type="text" id="check_in_date" placeholder="CHECK-IN">
+                        <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN">
                       </div>
                       <div class="large-3 columns">
-                        <input type="text" id="check_out_date" placeholder="CHECK-OUT">
+                        <input type="text" id="check_out_date" name="check_in_date" placeholder="CHECK-OUT">
                       </div>
                       <div class="large-1 columns">
                         <label for="right-label" class="inline">Rooms</label>
