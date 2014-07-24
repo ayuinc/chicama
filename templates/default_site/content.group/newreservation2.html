@@ -431,21 +431,21 @@
         }
         switch($(select_box).val()){ 
           case "1":
-            $(encabezado).html("USD 100");
+            $(encabezado).html("$100.00");
             $(input).val("10000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
             }  
             break;
           case "2":
-            $(encabezado).html("USD 200");
+            $(encabezado).html("$200.00");
             $(input).val("20000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
             }
             break;
           case "3":
-            $(encabezado).html("USD 300");
+            $(encabezado).html("$300.00");
             $(input).val("30000");  
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
