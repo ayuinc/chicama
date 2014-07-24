@@ -284,7 +284,7 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_simple_garden'.$i.'" >GARDEN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
@@ -315,7 +315,7 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_doble_garden'.$i.'" >GARDEN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
@@ -345,7 +345,7 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_triple_garden'.$i.'" >GARDEN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
@@ -379,7 +379,7 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_simple_ocean'.$i.'" >OCEAN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
@@ -411,7 +411,7 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_doble_ocean'.$i.'" >OCEAN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
@@ -442,7 +442,7 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description" >
                                   <h2 id="type_hab_triple_ocean'.$i.'" >OCEAN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
