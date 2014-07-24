@@ -791,7 +791,7 @@ figure {
 	display: block;
 }
 
-/* #steps_list {
+#steps_list {
 	border-top: 1px solid $color-black;
 	border-bottom: 1px solid $color-black;
 	margin-bottom: 3rem;
@@ -809,6 +809,7 @@ figure {
 		+ p {
 			font-size: 0.8rem;
 			margin-bottom: 0;
+			color: $color-brown;
 		}
 
 		&.active{
@@ -817,6 +818,10 @@ figure {
 
 			&:after{
 				background: url(../img/book-step-current.png) no-repeat;
+			}
+
+			+ p {
+				color: $color-black;
 			}
 		}
 
@@ -833,65 +838,6 @@ figure {
 		&.last:after{
 			content: none;
 		}
-	}
-} */
-
-/*BOOKING STEPS*/
-.booking-steps{
-	ul{
-		float: none !important;
-	}
-	li{
-		position: relative;
-		// margin-right: 11%;
-		&:after{
-			content: "";
-			position: absolute;
-			background: url(../img/book-step.png) no-repeat;
-			width: 14px;
-			height: 22px;
-			top: 20%;
-			left: 90%;
-		}
-	}
-	li.last{
-		&:after{
-			content: none;
-		}
-	}
-	a{
-		color: #8c6339 !important;
-		margin-top: 0 !important;
-		font-size: 0.7em !important;
-		display: inline-block;
-		span{
-			display: block;
-			text-align: center;
-			font-size: 1.5em;
-			margin-bottom: 7px;
-		}
-	}
-	.current{
-		&:after{
-			background: url(../img/book-step-current.png) no-repeat;
-		}
-		a{
-
-			color: #2c2625 !important;
-		}
-		span{
-			color: #2c2625 !important;
-			border: 1px solid;
-			-webkit-border-radius: 100%;
-			-moz-border-radius: 100%;
-			border-radius: 100%;
-			width: 36%;
-			margin: 0 auto;
-			margin-bottom: 7px;
-		}
-	}
-	.booking{
-		width: 75%;
 	}
 }
 
