@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "IBM437";
 html, body {
   height: 100%;
   font-family: "proxima-nova",sans-serif;
@@ -752,6 +752,14 @@ figure {
       font-size: 0.9rem; }
       #form_box_3_container .item-addon .add.active:before {
         content: "✓ "; }
+
+#form_box_5 .sub-title {
+  color: #888;
+  text-transform: uppercase;
+  font-size: 1rem; }
+#form_box_5 .your-stay p {
+  color: #888;
+  line-height: 2; }
 
 .your-stay {
   padding: 1rem;
