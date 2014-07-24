@@ -525,7 +525,8 @@ class Infhotel
         return "Su código de reserva es: ".$result;
     }
     public function reservation_3(){
-        $response= '    <div id="form_box_3_container" class="large-12 large-centered columns"> 
+        $response= '    
+        <div id="form_box_3_container" class="large-12 large-centered columns"> 
         <div id="form_box_3">
           <!-- reservation-header -->
           <div class="row">
@@ -641,7 +642,8 @@ class Infhotel
                             </div>
 
                             <div class="large-3 columns right">
-                              <a href="#" class="add expand button">Add</a>
+                              <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
+                              <input id="lunch_and_dinner_checkbox" name="all_meals" type="checkbox">
                             </div>
                           </div>
                         </div>
@@ -682,7 +684,8 @@ class Infhotel
                             </div>
 
                             <div class="large-3 columns right">
-                              <a href="#" class="add expand button active">Add</a>
+                              <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
+                              <input id="transport_checkbox" name="all_meals" type="checkbox">
                             </div>
                           </div>
                         </div>
