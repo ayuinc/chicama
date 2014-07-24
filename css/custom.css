@@ -750,13 +750,20 @@ figure {
       #form_box_3_container .item-addon .add.active:before {
         content: "✓ "; }
 
+#form_box_5 #title_reservation {
+  margin-bottom: 3rem; }
 #form_box_5 .sub-title {
   color: #888;
   text-transform: uppercase;
   font-size: 1rem; }
-#form_box_5 .your-stay p {
-  color: #888;
-  line-height: 2; }
+#form_box_5 .sub-title.first {
+  margin-top: 1rem;
+  margin-bottom: 2.5rem; }
+#form_box_5 .your-stay {
+  margin-bottom: 4rem; }
+  #form_box_5 .your-stay p {
+    color: #888;
+    line-height: 2; }
 
 .your-stay {
   padding: 1rem;
