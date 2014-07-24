@@ -1,4 +1,4 @@
-@charset "IBM437";
+@charset "CP850";
 html, body {
   height: 100%;
   font-family: "proxima-nova",sans-serif;
@@ -362,7 +362,8 @@ figure {
     filter: alpha(opacity=0); }
 
 .book_container {
-  height: auto; }
+  height: auto;
+  background: url("../img/wood_pattern.jpg"); }
 
 .cover {
   -webkit-background-size: cover;
@@ -656,6 +657,9 @@ figure {
   margin-bottom: 3rem; }
 #form_box_2_container .item-room {
   margin-bottom: 3rem; }
+  #form_box_2_container .item-room .room-description {
+    padding-left: 2rem;
+    padding-right: 0; }
   #form_box_2_container .item-room h2 {
     font-size: 1.5rem;
     font-weight: 100;
@@ -690,11 +694,14 @@ figure {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 3rem; }
+  /* margin-bottom: 3rem; */ }
 #form_box_3_container .item-addon {
   border-bottom: 1px solid #2c2625;
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem; }
+  #form_box_3_container .item-addon .addon-description {
+    padding-left: 2rem;
+    padding-right: 0; }
   #form_box_3_container .item-addon .selector p {
     font-size: .8rem;
     display: inline-block;
