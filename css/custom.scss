@@ -954,43 +954,43 @@ figure {
 			}
 		}
 	}
+}
 
-	.your-stay {
-		padding: 1rem;
-		border: 1px solid #8F8F8F;
-		border-radius: 5px;
+.your-stay {
+	padding: 1rem;
+	border: 1px solid #8F8F8F;
+	border-radius: 5px;
+	color: #8F8F8F;
+
+	hr {
+		border-color: #8F8F8F;
+		margin: 0.5rem 0;
+	}
+
+	h2 {
 		color: #8F8F8F;
+		font-weight: 500;
+	}
 
-		hr {
-			border-color: #8F8F8F;
-			margin: 0.5rem 0;
+	p {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border: none;
+	}
+
+	.ys-label {
+		color: #5E5E5E;
+		span {
+			float: right;
 		}
+	}
 
-		h2 {
-			color: #8F8F8F;
-			font-weight: 500;
-		}
+	.ys-field {
+		font-size: 0.9rem;
+		font-weight: 500;
 
-		p {
-			padding-bottom: 0;
-			margin-bottom: 0;
-			border: none;
-		}
-
-		.ys-label {
-			color: #5E5E5E;
-			span {
-				float: right;
-			}
-		}
-
-		.ys-field {
-			font-size: 0.9rem;
-			font-weight: 500;
-
-			span {
-				float: right;
-			}
+		span {
+			float: right;
 		}
 	}
 }
