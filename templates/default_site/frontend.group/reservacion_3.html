@@ -4,11 +4,6 @@
 {/imagen_de_fondo}
 {/exp:channel:entries}
 <div class="book_container cover_container">
-  {exp:channel:entries channel="secciones" limit="1"}
-  <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
-  </section>
-  <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
-  {/exp:channel:entries}
   <div class="row">
     <div id="form_box_3_container" class="large-12 large-centered columns"> 
       <form id="book_a_room" action="/?/content/reserva" method="POST">
@@ -81,91 +76,97 @@
             <div class="large-12 columns">
               <h4>ADD - ONS</h4>
             </div>
-            
+
             <!-- row-container -->
             <div class="large-12 columns">
               <div class="row">
-                <!-- add-ons list -->
                 <div class="large-9 columns">
-                  <!-- add-on item -->
-                  <div class="row item-addon">
-                    <!-- add-on img -->
-                    <div class="large-5 columns">
-                      <figure>
-                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                        <a class="text-center" href="#"><span>+</span></a>
-                      </figure>
-                    </div>
-                    <!-- end add-on img -->
-                    <!-- add-on description -->
-                    <div class="large-7 columns">
-                      <h2>LUNCH AND DINNER</h2>
-                      <div class="row selector">
-                        <div class="large-7 columns">
-                          <p>Number of persons
-                            <select>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                            </select>
-                          </p>
-                        </div>
-                        <div class="large-4 columns">
-                          <p class="addon-cost right">$60.00</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="large-12 columns">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
-                        </div>
+                  <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
 
-                        <div class="large-3 columns right">
-                          <a href="#" class="add expand button">Add</a>
+                  <!-- add-ons list -->
+                  <div class="row">
+                    <div class="large-11 columns">
+                      <!-- add-on item -->
+                      <div class="row item-addon">
+                        <!-- add-on img -->
+                        <div class="large-5 columns">
+                          <figure>
+                            <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                            <a class="text-center" href="#"><span>+</span></a>
+                          </figure>
                         </div>
-                      </div>
-                    </div>
-                    <!-- end add-on description -->
-                  </div>
-                  <!-- end add-on item -->
+                        <!-- end add-on img -->
+                        <!-- add-on description -->
+                        <div class="large-7 columns addon-description">
+                          <h2>LUNCH AND DINNER</h2>
+                          <div class="row selector">
+                            <div class="large-7 columns">
+                              <p>Number of persons
+                                <select>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </p>
+                            </div>
+                            <div class="large-4 columns">
+                              <p class="addon-cost right">$60.00</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="large-12 columns">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                            </div>
 
-                  <!-- add-on item -->
-                  <div class="row item-addon">
-                    <!-- add-on img -->
-                    <div class="large-5 columns">
-                      <figure>
-                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                        <a class="text-center" href="#"><span>+</span></a>
-                      </figure>
-                    </div>
-                    <!-- end add-on img -->
-                    <!-- add-on description -->
-                    <div class="large-7 columns">
-                      <h2>LUNCH AND DINNER</h2>
-                      <div class="row selector">
-                        <div class="large-7 columns">
-                          <p>Number of persons
-                            <select>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                            </select>
-                          </p>
+                            <div class="large-3 columns right">
+                              <a href="#" class="add expand button">Add</a>
+                            </div>
+                          </div>
                         </div>
-                        <div class="large-4 columns">
-                          <p class="addon-cost right">$60.00</p>
-                        </div>
+                        <!-- end add-on description -->
                       </div>
-                      <div class="row">
-                        <div class="large-12 columns">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
-                        </div>
+                      <!-- end add-on item -->
 
-                        <div class="large-3 columns right">
-                          <a href="#" class="add expand button active">Add</a>
+                      <!-- add-on item -->
+                      <div class="row item-addon">
+                        <!-- add-on img -->
+                        <div class="large-5 columns">
+                          <figure>
+                            <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                            <a class="text-center" href="#"><span>+</span></a>
+                          </figure>
                         </div>
+                        <!-- end add-on img -->
+                        <!-- add-on description -->
+                        <div class="large-7 columns addon-description">
+                          <h2>LUNCH AND DINNER</h2>
+                          <div class="row selector">
+                            <div class="large-7 columns">
+                              <p>Number of persons
+                                <select>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </p>
+                            </div>
+                            <div class="large-4 columns">
+                              <p class="addon-cost right">$60.00</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="large-12 columns">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                            </div>
+
+                            <div class="large-3 columns right">
+                              <a href="#" class="add expand button active">Add</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end add-on description -->
                       </div>
                     </div>
-                    <!-- end add-on description -->
                   </div>
                   <!-- end add-on item -->
                 </div>

@@ -284,13 +284,14 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_simple_garden'.$i.'" >GARDEN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
+                                      <input id="final_cost_simple_garden'.$i.'" type="hidden" name="final_cost_simple_garden'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Simple</option>
                                         <option value="2">Double</option>
@@ -314,13 +315,14 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_doble_garden'.$i.'" >GARDEN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
+                                      <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Simple</option>
                                         <option value="2">Double</option>
@@ -343,13 +345,14 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_triple_garden'.$i.'" >GARDEN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
+                                      <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Simple</option>
                                         <option value="2">Double</option>
@@ -376,13 +379,14 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_simple_ocean'.$i.'" >OCEAN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
+                                      <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Simple</option>
                                         <option value="2">Double</option>
@@ -407,13 +411,14 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description">
                                   <h2 id="type_hab_doble_ocean'.$i.'" >OCEAN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
+                                      <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="100">
                                       <select name="persons_number" id="guests_doble_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Simple</option>
                                         <option value="2">Double</option>
@@ -437,13 +442,14 @@ class Infhotel
                                     <a class="text-center" href="#"><span>+</span></a>
                                   </figure>
                                 </div>
-                                <div class="large-5 columns">
+                                <div class="large-5 columns room-description" >
                                   <h2 id="type_hab_triple_ocean'.$i.'" >OCEAN VIEW</h2>
                                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                                 </div>
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
+                                    <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="100">
                                       <select name="persons_number" id="guests_triple_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Simple</option>
                                         <option value="2">Double</option>
