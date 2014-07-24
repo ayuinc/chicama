@@ -690,11 +690,14 @@ figure {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 3rem; }
+  /* margin-bottom: 3rem; */ }
 #form_box_3_container .item-addon {
   border-bottom: 1px solid #2c2625;
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem; }
+  #form_box_3_container .item-addon .addon-description {
+    padding-left: 2rem;
+    padding-right: 0; }
   #form_box_3_container .item-addon .selector p {
     font-size: .8rem;
     display: inline-block;

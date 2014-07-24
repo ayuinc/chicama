@@ -872,13 +872,19 @@ figure {
 		color: $color-brown;
 		font-size: 1.5rem;
 		line-height: 1;
-		margin-bottom: 3rem;
+		/* margin-bottom: 3rem; */
 	}
 	
 	.item-addon {
 		border-bottom: 1px solid $color-black;
 		padding-bottom: 2.5rem;
 		margin-bottom: 2.5rem;
+
+		.addon-description {
+			padding-left: 2rem;
+			padding-right: 0;
+		}
+		
 		.selector {
 			p {
 				font-size: .8rem;
