@@ -475,6 +475,7 @@ figure {
 
 .book_container{
 	height: auto;
+	background: url("../img/wood_pattern.jpg");
 }
 
 .cover{
@@ -827,6 +828,11 @@ figure {
 
 	.item-room {
 		margin-bottom: 3rem;
+
+		.room-description {
+			padding-left: 2rem;
+			padding-right: 0;
+		}
 
 		h2 {
 			font-size: 1.5rem;
