@@ -14,6 +14,7 @@
       <form id="book_a_room" action="/?/content/reserva" method="POST">
         <input type="hidden" name="XID" value="{XID_HASH}" />
         <div id="form_box_3">
+          <!-- reservation-header -->
           <div class="row">
             <div id="title_reservation" class="large-12 columns">
               <div class="row">
@@ -23,20 +24,16 @@
                 <div class="large-4 large-offset-4 columns">
                   <p>Phone reservations +511-440-6040</p>
                 </div>
-              </div>  
+              </div>
+              <!-- check-in form -->
               <div class="row">
                 <div class="large-9 large-centered columns">
                   <form>
+                    <!-- check-in inputs row -->
                     <div class="row">
-                      <!-- <div class="large-1 columns">
-                        <label for="right-label" class="inline">Check-in</label>
-                      </div> -->
                       <div class="large-3 columns">
                         <input type="text" id="check_in_date" placeholder="CHECK-IN">
                       </div>
-                      <!-- <div class="large-1 columns">
-                        <label for="right-label" class="inline">Check-out</label>
-                      </div> -->
                       <div class="large-3 columns">
                         <input type="text" id="check_out_date" placeholder="CHECK-OUT">
                       </div>
@@ -54,11 +51,15 @@
                         <input type="submit" class="button tiny send expand" value="check again">
                       </div>
                     </div>
+                    <!-- end check-in inputs row -->
                   </form>
                 </div>
               </div>
+              <!-- end check-in form -->
             </div>
           </div>
+
+          <!-- breadscrumbs -->
           <div class="row">
             <div class="large-12 columns">
               <div class="row" id="steps_list">
@@ -73,12 +74,15 @@
               </div>
             </div>
           </div>
+          <!-- end breadscrumbs -->
+          <!-- end reservation-header -->
 
           <div class="row">
             <div class="large-12 columns">
               <h4>ADD - ONS</h4>
             </div>
-
+            
+            <!-- row-container -->
             <div class="large-12 columns">
               <div class="row">
                 <!-- add-ons list -->
@@ -199,6 +203,7 @@
                 <!-- end your stay -->
               </div>
             </div>
+            <!-- end container -->
           </div>
         </div>
       </form>
