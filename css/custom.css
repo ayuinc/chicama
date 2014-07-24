@@ -645,12 +645,15 @@ figure {
     position: relative; }
     #steps_list .circle + p {
       font-size: 0.8rem;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      color: #8b623b; }
     #steps_list .circle.active {
       color: #2c2625;
       border: 1px solid #2c2625; }
       #steps_list .circle.active:after {
         background: url(../img/book-step-current.png) no-repeat; }
+      #steps_list .circle.active + p {
+        color: #2c2625; }
     #steps_list .circle:after {
       content: "";
       background: url(../img/book-step.png) no-repeat;

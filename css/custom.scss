@@ -809,6 +809,7 @@ figure {
 		+ p {
 			font-size: 0.8rem;
 			margin-bottom: 0;
+			color: $color-brown;
 		}
 
 		&.active{
@@ -817,6 +818,10 @@ figure {
 
 			&:after{
 				background: url(../img/book-step-current.png) no-repeat;
+			}
+
+			+ p {
+				color: $color-black;
 			}
 		}
 
