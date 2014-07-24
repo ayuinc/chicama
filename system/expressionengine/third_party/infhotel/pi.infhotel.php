@@ -525,246 +525,216 @@ class Infhotel
         return "Su código de reserva es: ".$result;
     }
     public function reservation_3(){
-        $response= '<div id="form_box_3_container"  class="row">
-        <form action="/?/content/newreservation4" id="book_a_room" method="POST">
-            <input type="hidden" name="XID" value="{XID_HASH}" /> 
-            <div class="large-10 large-centered columns"> 
-                <div id="form_box_3">
-                    <div class="row">
-                        <div id="title_reservation" class="">
-                                <div class="large-4 columns">
-                                    <h3>SUMMARY</h3>
-                                </div>
-                                <div class="large-4 large-offset-4 columns">
-                                    <p>Phone reservations +511-440-6040</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns" id="sumary">
-                            <div class="row">   
-                                <div class="large-12 columns">
-                                    <table class="text-center">
-                                      <thead>
-                                        <tr>
-                                          <th>Arrival</th>
-                                          <th>Departure</th>
-                                          <th>Number of nights</th>
-                                          <th>Number of rooms</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                                          <td>15/05/2014</td>
-                                          <td>25/05/2014</td>
-                                          <td>2</td>
-                                          <td>2</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                </div>  
-                            </div>  
-                            <div class="row">   
-                                <div class="large-4 columns">
-                                    <div class="row" id="room1">
-                                        <h4>Room 1</h4>
-                                        <table class="text-center">
-                                          <thead>
-                                            <tr>
-                                              <th>Room type</th>
-                                              <th>Reservation type</th>
-                                            </tr>
-                                          </thead>
-                                          <tbody>
-                                            <tr>
-                                              <td>Single</td>
-                                              <td>Value pack</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="row" id="room2">
-                                        <h4>Room 2</h4>
-                                        <table class="text-center">
-                                          <thead>
-                                            <tr>
-                                              <th>Room type</th>
-                                              <th>Reservation type</th>
-                                            </tr>
-                                          </thead>
-                                          <tbody>
-                                            <tr>
-                                              <td>Single</td>
-                                              <td>Breakfast Only</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="row" id="room3">
-                                        <h4>Room 3</h4>
-                                        <table class="text-center">
-                                          <thead>
-                                            <tr>
-                                              <th>Room type</th>
-                                              <th>Reservation type</th>
-                                            </tr>
-                                          </thead>
-                                          <tbody>
-                                            <tr>
-                                              <td>Single</td>
-                                              <td>Breakfast Only</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="row" id="room4">
-                                        <h4>Room 4</h4>
-                                        <table class="text-center">
-                                          <thead>
-                                            <tr>
-                                              <th>Room type</th>
-                                              <th>Reservation type</th>
-                                            </tr>
-                                          </thead>
-                                          <tbody>
-                                            <tr>
-                                              <td>Single</td>
-                                              <td>Breakfast Only</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                    </div>
-                                </div>  
-                                <div class="large-8 columns">   
-                                    <h4>Costs</h4>
-                                    <table class="">
-                                      <thead>
-                                        <tr>
-                                          <th>Items</th>
-                                          <th>Price</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr id="price_room1">
-                                          <td>Room 1</td>
-                                          <td>USD 50</td>
-                                        </tr>
-                                        <tr id="price_room2">
-                                          <td>Room 2</td>
-                                          <td>USD 70</td>
-                                        </tr>
-                                        <tr id="price_room3">
-                                          <td>Room 3</td>
-                                          <td>USD 70</td>
-                                        </tr>
-                                        <tr id="price_room4">
-                                          <td>Room 4</td>
-                                          <td>USD 70</td>
-                                        </tr>
-                                      </tbody>
-                                      <tfoot>
-                                        <tr>
-                                          <td>Tax</td>
-                                          <td>USD 10</td>
-                                        </tr>
-                                        <tr id"total_price_sumary">
-                                          <td>Total cost</td>
-                                          <td>USD 130</td>
-                                        </tr>
-                                      </tfoot>
-                                    </table>
-                                </div>
-                                <div class="row">   
-                                    <div class="large-4 columns">   
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <div class="row">
-                                <div id="title_reservation" class="">
-                                        <div class="large-4 columns">
-                                            <h3>ADD-ONS</h3>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="panel">
-                                <div class="row">   
-                                    <div class="large-12 columns" id="addons">
-                                        <div class="row">
-                                            <div class="addon">
-                                                <div class="large-7 columns">
-                                                    <h4>ALL MEALS</h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe, praesentium, amet blanditiis sed at expedita molestias officia odit modi officiis esse distinctio. Quas, neque odio consectetur magni cum dolore!
-                                                    </p>
-                                                </div>
-                                                <div class="large-4 columns">
-                                                    <div class="row">
-                                                        <h2 id="encabezado_all_meals">USD 100</h2>
-                                                        <div class="large-3 columns">
-                                                            <label for="people" class="inline">People</label>
-                                                        </div>  
-                                                        <div class="large-9 columns">
-                                                          <select id="people_all_meals">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                          </select>
-                                                          </div>
-                                                        <input id="all_meals" name="all_meals" type="checkbox">
-                                                        <label for="all_meals" class="label">ADD TO TRIP</label>
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                        </div>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="addon">
-                                                <div class="large-7 columns">
-                                                    <h4>TRANSPORTATION</h4>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, saepe, praesentium, amet blanditiis sed at expedita molestias officia odit modi officiis esse distinctio. Quas, neque odio consectetur magni cum dolore!
-                                                    </p>
-                                                </div>
-                                                <div class="large-4 columns">
-                                                    <div class="row">
-                                                        <h2 id="encabezado_transport">USD 100</h2>
-                                                        <div class="large-3 columns">
-                                                            <label for="people" class="inline">People</label>
-                                                        </div>  
-                                                        <div class="large-9 columns">
-                                                          <select id="people_transport">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                          </select>
-                                                          </div>
-                                                        <input id="transport" name="transport" type="checkbox">
-                                                        <label for="transport" class="label">ADD TO TRIP</label>
-                                                    </div>  
-                                                </div>  
-                                            </div>
-                                        </div>
-                                        <input type="text" name="all_meals_input" maxlength="1000"  id="all_meals_input">
-                                        <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
-                                        <input type="text" name="request" maxlength="1000"  id="full_request">
-                                        <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-12 columns">
-                                <!-- <input type="submit" id="submit" name="submit" value="Continue" class="send"> -->
-                                <button id="submit_paso3" type="submit" class="send">Continue</button> 
+        $response= '    <div id="form_box_3_container" class="large-12 large-centered columns"> 
+        <div id="form_box_3">
+          <!-- reservation-header -->
+          <div class="row">
+            <div id="title_reservation" class="large-12 columns">
+              <div class="row">
+                <div class="large-4 columns">
+                  <h3>NEW RESERVATION</h3>
+                </div>
+                <div class="large-4 large-offset-4 columns">
+                  <p>Phone reservations +511-440-6040</p>
                 </div>
               </div>
-                        </div>
-                    </div>  
+              <!-- check-in form -->
+              <div class="row">
+                <div class="large-9 large-centered columns">
+                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                    <input type="hidden" name="XID" value="{XID_HASH}" /> 
+                    <!-- check-in inputs row -->
+                    <div class="row">
+                      <div class="large-3 columns">
+                        <input type="text" id="check_in_date" placeholder="CHECK-IN">
+                      </div>
+                      <div class="large-3 columns">
+                        <input type="text" id="check_out_date" placeholder="CHECK-OUT">
+                      </div>
+                      <div class="large-1 columns">
+                        <label for="right-label" class="inline">Rooms</label>
+                      </div>
+                      <div class="large-2 columns">
+                        <select name="room_number"  pattern="number" data-invalid="">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="large-3 columns end">
+                        <input type="submit" class="button tiny send expand" value="check again">
+                      </div>
+                    </div>
+                    <!-- end check-in inputs row -->
+                  </form>
                 </div>
+              </div>
+              <!-- end check-in form -->
             </div>
-        </form>
+          </div>
+
+          <!-- breadscrumbs -->
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="row" id="steps_list">
+                <div class="large-9 large-centered columns text-center">
+                  <div class="row">
+                    <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
+                    <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
+                    <div class="large-3 columns"><span class="circle">3</span><p>GUEST INFORMATION</p></div>
+                    <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end breadscrumbs -->
+          <!-- end reservation-header -->
+
+          <div class="row">
+            <div class="large-12 columns">
+              <h4>ADD - ONS</h4>
+            </div>
+
+            <!-- row-container -->
+            <div class="large-12 columns">
+            <form action="/?/content/newreservation4" id="book_a_room" method="POST">
+                <input type="hidden" name="XID" value="{XID_HASH}" /> 
+              <div class="row">
+                <div class="large-9 columns">
+                  <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
+
+                  <!-- add-ons list -->
+                  <div class="row">
+                    <div class="large-11 columns">
+                      <!-- add-on item -->
+                      <div class="row item-addon">
+                        <!-- add-on img -->
+                        <div class="large-5 columns">
+                          <figure>
+                            <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                            <a class="text-center" href="#"><span>+</span></a>
+                          </figure>
+                        </div>
+                        <!-- end add-on img -->
+                        <!-- add-on description -->
+                        <div class="large-7 columns addon-description">
+                          <h2>LUNCH AND DINNER</h2>
+                          <div class="row selector">
+                            <div class="large-7 columns">
+                              <p>Number of persons
+                                <select id="lunch_and_dinner">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </p>
+                            </div>
+                            <div class="large-4 columns">
+                              <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="large-12 columns">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                            </div>
+
+                            <div class="large-3 columns right">
+                              <a href="#" class="add expand button">Add</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end add-on description -->
+                      </div>
+                      <!-- end add-on item -->
+
+                      <!-- add-on item -->
+                      <div class="row item-addon">
+                        <!-- add-on img -->
+                        <div class="large-5 columns">
+                          <figure>
+                            <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                            <a class="text-center" href="#"><span>+</span></a>
+                          </figure>
+                        </div>
+                        <!-- end add-on img -->
+                        <!-- add-on description -->
+                        <div class="large-7 columns addon-description">
+                          <h2>TRANSPORT</h2>
+                          <div class="row selector">
+                            <div class="large-7 columns">
+                              <p>Number of persons
+                                <select id="transport">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                </select>
+                              </p>
+                            </div>
+                            <div class="large-4 columns">
+                              <p id="encabezado_transport" class="addon-cost right">$60.00</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="large-12 columns">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                            </div>
+
+                            <div class="large-3 columns right">
+                              <a href="#" class="add expand button active">Add</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end add-on description -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end add-on item -->
+                  <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="all_meals_input">
+                  <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                  <input type="text" name="request" maxlength="1000"  id="full_request">
+                  <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                  <button id="submit_paso3" type="submit" class="send">Continue</button> 
+                </div>
+                <!-- end add-ons list -->
+                <!-- your stay -->
+                <div class="large-3 columns">
+                  <div class="row">
+                    <div class="large-12 large-centered columns">
+                      <div class="your-stay">
+                        <h2 class="text-center">YOUR STAY</h2>
+                        <hr>
+
+                        <p class="ys-label">ARRIVAL:</p>
+                        <p class="ys-field">Monday, July 07, 2014</p>
+                        <p class="ys-label">DEPARTURE:</p>
+                        <p class="ys-field">Monday, July 07, 2014</p>
+                        <p class="ys-label">2 Nights</p>
+
+                        <hr>
+
+                        <p class="ys-label">ROOM 1:</p>
+                        <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
+                        <p class="ys-label">ROOM 2:</p>
+                        <p class="ys-field">Monday, July 07, 2014 <span>$ 130.00</span></p>
+                        <p class="ys-label">ADD - ONS:</p>
+                        <p class="ys-field">Lunch And Dinner <span>$ 60.00</span></p>
+                        
+                        <hr>
+
+                        <p class="ys-label">TOTAL <span>$ 290.00</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end your stay -->
+              </div>
+            </div>
+            <!-- end container -->
+          </div>
+        </div>
+      </form>
     </div>';
             return $response;
     }
