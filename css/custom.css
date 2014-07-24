@@ -749,29 +749,30 @@ figure {
       font-size: 0.9rem; }
       #form_box_3_container .item-addon .add.active:before {
         content: "✓ "; }
-#form_box_3_container .your-stay {
+
+.your-stay {
   padding: 1rem;
   border: 1px solid #8F8F8F;
   border-radius: 5px;
   color: #8F8F8F; }
-  #form_box_3_container .your-stay hr {
+  .your-stay hr {
     border-color: #8F8F8F;
     margin: 0.5rem 0; }
-  #form_box_3_container .your-stay h2 {
+  .your-stay h2 {
     color: #8F8F8F;
     font-weight: 500; }
-  #form_box_3_container .your-stay p {
+  .your-stay p {
     padding-bottom: 0;
     margin-bottom: 0;
     border: none; }
-  #form_box_3_container .your-stay .ys-label {
+  .your-stay .ys-label {
     color: #5E5E5E; }
-    #form_box_3_container .your-stay .ys-label span {
+    .your-stay .ys-label span {
       float: right; }
-  #form_box_3_container .your-stay .ys-field {
+  .your-stay .ys-field {
     font-size: 0.9rem;
     font-weight: 500; }
-    #form_box_3_container .your-stay .ys-field span {
+    .your-stay .ys-field span {
       float: right; }
 
 figcaption p {
