@@ -4,13 +4,8 @@
 {/imagen_de_fondo}
 {/exp:channel:entries}
 <div class="book_container cover_container">
-  {exp:channel:entries channel="secciones" limit="1"}
-  <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
-  </section>
-  <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
-  {/exp:channel:entries}
   <div class="row">
-    <div id="form_box_2_container" class="large-11 large-centered columns"> 
+    <div id="form_box_2_container" class="large-12 large-centered columns"> 
         <div id="form_box_2">
           <div class="row">
             <div id="title_reservation" class="large-12 columns">
@@ -193,7 +188,7 @@
 
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
-			$(select_box).change(function(){
+			$(select_box).change(function(){	
 				if(tipo_de_hab=="GARDEN VIEW"){
 					switch($( select_box ).val()){ 
 						case "1":
