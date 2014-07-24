@@ -555,10 +555,11 @@ class Infhotel
                         <label for="right-label" class="inline">Rooms</label>
                       </div>
                       <div class="large-2 columns">
-                        <select>
+                        <select name="room_number"  pattern="number" data-invalid="">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
+                          <option value="4">4</option>
                         </select>
                       </div>
                       <div class="large-3 columns end">
