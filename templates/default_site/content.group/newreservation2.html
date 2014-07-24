@@ -194,7 +194,8 @@
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
 			var  tipo_de_hab = $(hab).text();
 			$(select_box).change(function(){
-				if(tipo_de_hab=="Garden View"){
+				console.log("blablabla1")
+				if(tipo_de_hab=="GARDEN VIEW"){
 					switch($( select_box ).val()){ 
 						case "1":
 							$(encabezado).html("One Guest");
@@ -215,7 +216,7 @@
 							break;
 					}
 				}
-				if(tipo_de_hab=="Ocean View"){
+				if(tipo_de_hab=="OCEAN VIEW"){
 					switch($(select_box).val()){
 						case "1":
 							$(encabezado).html("One Guest");
