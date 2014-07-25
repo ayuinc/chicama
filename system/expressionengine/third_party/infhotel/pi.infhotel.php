@@ -738,8 +738,7 @@ class Infhotel
       </form>
     </div>  
   </div> 
-</div>  
-{embed="includes/footer"}';
+</div>  ';
             return $response;
     }
 }
