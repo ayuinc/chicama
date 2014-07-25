@@ -525,10 +525,10 @@ class Infhotel
         return "Su código de reserva es: ".$result;
     }
     public function reservation_3(){
-        $response= '<div id="form_box_3_container" class="large-12 large-centered columns"> 
-  <form id="book_a_room" action="/?/content/reserva" method="POST">
-    <input type="hidden" name="XID" value="{XID_HASH}" />      
+        $response= '<div id="form_box_3_container" class="large-12 large-centered columns">     
  <div id="form_box_3">
+ <form id="book_a_room" action="/?/content/reserva" method="POST">
+   <input type="hidden" name="XID" value="{XID_HASH}" />  
           <!-- reservation-header -->
           <div class="row">
             <div id="title_reservation" class="large-12 columns">
