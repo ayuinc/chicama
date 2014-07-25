@@ -4,7 +4,7 @@
 {/imagen_de_fondo}
 {/exp:channel:entries}
 <div class="book_container cover_container">
-  <div class="row">
+  <div id="cont" class="row">
     <div id="form_box_2_container" class="large-12 large-centered columns"> 
       <div id="form_box_2">
         <div class="row">
@@ -485,7 +485,7 @@
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#add_on").html());
+			    	$("#content").html($("#add_on").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -499,7 +499,7 @@
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#add_on").html());
+			    	$("#content").html($("#add_on").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -513,7 +513,7 @@
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#add_on").html());
+			    		$("#content").html($("#add_on").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -523,7 +523,7 @@
 			    }
 			    break;
 			case 4:
-					$("#form_box_2_container").html($("#add_on").html());
+						$("#content").html($("#add_on").html());
 					//$("#add_on").html("");
 					$("#form_box_3").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
