@@ -19,7 +19,7 @@
             </div>  
             <div class="row">
               <div class="large-9 large-centered columns">
-                <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                <form class="book_a_room" action="/?/content/newreservation2" method="POST">
                 	<input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <div class="row">
                     <!-- <div class="large-1 columns">
@@ -74,7 +74,7 @@
 						<h4 id="step_in_reservation">Room 1 of {post_room_number}</h4>
 					{/exp:get_post_vars}
 					</div>
-				  <form id="book_a_room" action="/?/content/reserva" method="POST">
+				  <form class="book_a_room" action="/?/content/reserva" method="POST">
 						<input type="hidden" name="XID" value="{XID_HASH}" />
 					    {exp:get_post_vars parse="inward"}
 							{exp:infhotel:disponibilidadinicialhabitaciones_final
