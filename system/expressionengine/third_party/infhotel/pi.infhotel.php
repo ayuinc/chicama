@@ -602,7 +602,7 @@ class Infhotel
               <div class="row">
                 <div class="large-9 columns">
                   <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
-                  <form action="/?/content/newreservation4" id="book_a_room" method="POST">
+                  <form action="/?/content/newreservation4" class="book_a_room" method="POST">
                       <input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <!-- add-ons list -->
                   <div class="row">
