@@ -525,7 +525,8 @@ class Infhotel
         return "Su código de reserva es: ".$result;
     }
     public function reservation_3(){
-        $response= ' <div id="form_box_3">
+        $response= '<div id="form_box_3_container" class="large-12 large-centered columns"> 
+ <div id="form_box_3">
           <!-- reservation-header -->
           <div class="row">
             <div id="title_reservation" class="large-12 columns">
@@ -723,7 +724,8 @@ class Infhotel
             </div>
             <!-- end container -->
           </div>
-        </div>';
+        </div>
+    </div>';
             return $response;
     }
 }
