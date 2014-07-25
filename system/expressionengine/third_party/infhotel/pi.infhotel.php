@@ -526,8 +526,6 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '<div id="form_box_3_container" class="large-12 large-centered columns"> 
-      <form id="book_a_room" action="/?/content/reserva" method="POST">
-        <input type="hidden" name="XID" value="{XID_HASH}" />
         <div id="form_box_3">
           <!-- reservation-header -->
           <div class="row">
@@ -536,30 +534,32 @@ class Infhotel
                 <div class="large-4 columns">
                   <h3>NEW RESERVATION</h3>
                 </div>
-                <div class="large-4 text-right columns">
+                <div class="large-4 large-offset-4 columns">
                   <p>Phone reservations +511-440-6040</p>
                 </div>
               </div>
               <!-- check-in form -->
               <div class="row">
                 <div class="large-9 large-centered columns">
-                  <form>
+                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                    <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <!-- check-in inputs row -->
                     <div class="row">
                       <div class="large-3 columns">
-                        <input type="text" id="check_in_date" placeholder="CHECK-IN">
+                        <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN">
                       </div>
                       <div class="large-3 columns">
-                        <input type="text" id="check_out_date" placeholder="CHECK-OUT">
+                        <input type="text" id="check_out_date" name="check_in_date" placeholder="CHECK-OUT">
                       </div>
                       <div class="large-1 columns">
                         <label for="right-label" class="inline">Rooms</label>
                       </div>
                       <div class="large-2 columns">
-                        <select>
+                        <select name="room_number"  pattern="number" data-invalid="">
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
+                          <option value="4">4</option>
                         </select>
                       </div>
                       <div class="large-3 columns end">
@@ -599,6 +599,8 @@ class Infhotel
 
             <!-- row-container -->
             <div class="large-12 columns">
+            <form action="/?/content/newreservation4" id="book_a_room" method="POST">
+                <input type="hidden" name="XID" value="{XID_HASH}" /> 
               <div class="row">
                 <div class="large-9 columns">
                   <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
@@ -622,7 +624,7 @@ class Infhotel
                           <div class="row selector">
                             <div class="large-7 columns">
                               <p>Number of persons
-                                <select>
+                                <select id="lunch_and_dinner">
                                   <option value="1">1</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -630,7 +632,7 @@ class Infhotel
                               </p>
                             </div>
                             <div class="large-4 columns">
-                              <p class="addon-cost right">$60.00</p>
+                              <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
                             </div>
                           </div>
                           <div class="row">
@@ -639,7 +641,8 @@ class Infhotel
                             </div>
 
                             <div class="large-3 columns right">
-                              <a href="#" class="add expand button">Add</a>
+                              <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
+                              <input id="lunch_and_dinner_checkbox" name="all_meals" type="checkbox">
                             </div>
                           </div>
                         </div>
@@ -659,11 +662,11 @@ class Infhotel
                         <!-- end add-on img -->
                         <!-- add-on description -->
                         <div class="large-7 columns addon-description">
-                          <h2>LUNCH AND DINNER</h2>
+                          <h2>TRANSPORT</h2>
                           <div class="row selector">
                             <div class="large-7 columns">
                               <p>Number of persons
-                                <select>
+                                <select id="transport">
                                   <option value="1">1</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -671,7 +674,7 @@ class Infhotel
                               </p>
                             </div>
                             <div class="large-4 columns">
-                              <p class="addon-cost right">$60.00</p>
+                              <p id="encabezado_transport" class="addon-cost right">$60.00</p>
                             </div>
                           </div>
                           <div class="row">
@@ -680,15 +683,22 @@ class Infhotel
                             </div>
 
                             <div class="large-3 columns right">
-                              <a href="#" class="add expand button active">Add</a>
+                              <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
+                              <input id="transport_checkbox" name="all_meals" type="checkbox">
                             </div>
                           </div>
                         </div>
+                         </form>
                         <!-- end add-on description -->
                       </div>
                     </div>
                   </div>
                   <!-- end add-on item -->
+                  <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                  <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                  <input type="text" name="request" maxlength="1000"  id="full_request">
+                  <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                  <button id="submit_paso3" type="submit" class="send">Continue</button> 
                 </div>
                 <!-- end add-ons list -->
                 <!-- your stay -->
@@ -727,8 +737,7 @@ class Infhotel
             <!-- end container -->
           </div>
         </div>
-      </form>
-    </div>  ';
+    </div>';
             return $response;
     }
 }
