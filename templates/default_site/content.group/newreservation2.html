@@ -106,7 +106,7 @@
 		$("#price_room2").hide();
 		$("#price_room3").hide();
 		$("#price_room4").hide();
-		$("#form_box_3").hide();
+		$("#form_box_3_container").hide();
 		hide_divs(num_hab,0);
       });
 	$(function() {
@@ -471,7 +471,7 @@
 			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    }
 			    else{
-			    	$("#cont").html($("#add_on").html());
+			    	$("#cont").html($("#form_box_3_container").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -485,7 +485,7 @@
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#cont").html($("#add_on").html());
+			    	$("#cont").html($("#form_box_3_container").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -499,7 +499,7 @@
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#content").html($("#add_on").html());
+			    	$("#content").html($("#form_box_3_container").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -513,7 +513,7 @@
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    		$("#cont").html($("#add_on").html());
+			    		$("#cont").html($("#form_box_3_container").html());
 			    	//$("#add_on").html("");
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
@@ -523,7 +523,7 @@
 			    }
 			    break;
 			case 4:
-						$("#cont").html($("#add_on").html());
+						$("#cont").html($("#form_box_3_container").html());
 					//$("#add_on").html("");
 					$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
