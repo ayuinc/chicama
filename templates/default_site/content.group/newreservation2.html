@@ -6,87 +6,87 @@
 <div class="book_container cover_container">
   <div class="row">
     <div id="form_box_2_container" class="large-12 large-centered columns"> 
-        <div id="form_box_2">
-          <div class="row">
-            <div id="title_reservation" class="large-12 columns">
-              <div class="row">
-                <div class="large-4 columns">
-                  <h3>NEW RESERVATION</h3>
-                </div>
-                <div class="large-4 large-offset-4 columns">
-                  <p>Phone reservations +511-440-6040</p>
-                </div>
-              </div>  
-              <div class="row">
-                <div class="large-9 large-centered columns">
-                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
-                  	<input type="hidden" name="XID" value="{XID_HASH}" /> 
-                    <div class="row">
-                      <!-- <div class="large-1 columns">
-                        <label for="right-label" class="inline">Check-in</label>
-                      </div> -->
-                      <div class="large-3 columns">
-                        <input type="text" id="check_in_date" placeholder="CHECK-IN">
-                      </div>
-                      <!-- <div class="large-1 columns">
-                        <label for="right-label" class="inline">Check-out</label>
-                      </div> -->
-                      <div class="large-3 columns">
-                        <input type="text" id="check_out_date" placeholder="CHECK-OUT">
-                      </div>
-                      <div class="large-1 columns">
-                        <label for="right-label" class="inline">Rooms</label>
-                      </div>
-                      <div class="large-2 columns">
-                        <select name="room_number"  pattern="number" data-invalid="">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                      <div class="large-3 columns end">
-                        <input type="submit" class="button tiny send expand" value="check again">
-                      </div>
-                    </div>
-                  </form>
-                </div>
+      <div id="form_box_2">
+        <div class="row">
+          <div id="title_reservation" class="large-12 columns">
+            <div class="row">
+              <div class="large-4 columns">
+                <h3>NEW RESERVATION</h3>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <div class="row" id="steps_list">
-                <div class="large-9 large-centered columns text-center">
+              <div class="large-4 large-offset-4 columns">
+                <p>Phone reservations +511-440-6040</p>
+              </div>
+            </div>  
+            <div class="row">
+              <div class="large-9 large-centered columns">
+                <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                	<input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <div class="row">
-                    <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
-                    <div class="large-3 columns"><span class="circle">2</span><p>ADD SERVICE OPTIONS</p></div>
-                    <div class="large-3 columns"><span class="circle">3</span><p>GUEST INFORMATION</p></div>
-                    <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
+                    <!-- <div class="large-1 columns">
+                      <label for="right-label" class="inline">Check-in</label>
+                    </div> -->
+                    <div class="large-3 columns">
+                      <input type="text" id="check_in_date" placeholder="CHECK-IN">
+                    </div>
+                    <!-- <div class="large-1 columns">
+                      <label for="right-label" class="inline">Check-out</label>
+                    </div> -->
+                    <div class="large-3 columns">
+                      <input type="text" id="check_out_date" placeholder="CHECK-OUT">
+                    </div>
+                    <div class="large-1 columns">
+                      <label for="right-label" class="inline">Rooms</label>
+                    </div>
+                    <div class="large-2 columns">
+                      <select name="room_number"  pattern="number" data-invalid="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                    <div class="large-3 columns end">
+                      <input type="submit" class="button tiny send expand" value="check again">
+                    </div>
                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="row" id="steps_list">
+              <div class="large-9 large-centered columns text-center">
+                <div class="row">
+                  <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
+                  <div class="large-3 columns"><span class="circle">2</span><p>ADD SERVICE OPTIONS</p></div>
+                  <div class="large-3 columns"><span class="circle">3</span><p>GUEST INFORMATION</p></div>
+                  <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
                 </div>
               </div>
             </div>
           </div>
-					<div class="row">
-						<div class="large-12 columns">
-						{exp:get_post_vars parse="inward"}
-							<h4 id="step_in_reservation">Room 1 of {post_room_number}</h4>
-						{/exp:get_post_vars}
-						</div>
-					  <form id="book_a_room" action="/?/content/reserva" method="POST">
-							<input type="hidden" name="XID" value="{XID_HASH}" />
-						    {exp:get_post_vars parse="inward"}
-								{exp:infhotel:disponibilidadinicialhabitaciones_final
-									fecha_checkin = "{post_check_in_date}"
-									fecha_checkout = "{post_check_out_date}"
-									rooms_num =  "{post_room_number}" 
-								}
-								{/exp:infhotel:disponibilidadinicialhabitaciones_final}
-							{/exp:get_post_vars}
-						</form>
-					</div>
         </div>
+				<div class="row">
+					<div class="large-12 columns">
+					{exp:get_post_vars parse="inward"}
+						<h4 id="step_in_reservation">Room 1 of {post_room_number}</h4>
+					{/exp:get_post_vars}
+					</div>
+				  <form id="book_a_room" action="/?/content/reserva" method="POST">
+						<input type="hidden" name="XID" value="{XID_HASH}" />
+					    {exp:get_post_vars parse="inward"}
+							{exp:infhotel:disponibilidadinicialhabitaciones_final
+								fecha_checkin = "{post_check_in_date}"
+								fecha_checkout = "{post_check_out_date}"
+								rooms_num =  "{post_room_number}" 
+							}
+							{/exp:infhotel:disponibilidadinicialhabitaciones_final}
+						{/exp:get_post_vars}
+					</form>
+				</div>
+      </div>
     </div>  
   </div>  
 </div>  

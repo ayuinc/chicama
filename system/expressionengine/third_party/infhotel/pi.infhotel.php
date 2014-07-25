@@ -526,6 +526,7 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '<div id="form_box_3_container" class="large-12 large-centered columns"> 
+*****************************************************************************************************
         <div id="form_box_3">
           <!-- reservation-header -->
           <div class="row">
@@ -596,7 +597,6 @@ class Infhotel
             <div class="large-12 columns">
               <h4>ADD - ONS</h4>
             </div>
-
             <!-- row-container -->
             <div class="large-12 columns">
             <form action="/?/content/newreservation4" id="book_a_room" method="POST">
@@ -685,6 +685,11 @@ class Infhotel
                             <div class="large-3 columns right">
                               <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
                               <input id="transport_checkbox" name="all_meals" type="checkbox">
+                              <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                              <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                              <input type="text" name="request" maxlength="1000"  id="full_request">
+                              <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                              <button id="submit_paso3" type="submit" class="send">Continue</button> 
                             </div>
                           </div>
                         </div>
@@ -694,11 +699,7 @@ class Infhotel
                     </div>
                   </div>
                   <!-- end add-on item -->
-                  <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                  <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
-                  <input type="text" name="request" maxlength="1000"  id="full_request">
-                  <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                  <button id="submit_paso3" type="submit" class="send">Continue</button> 
+                  
                 </div>
                 <!-- end add-ons list -->
                 <!-- your stay -->
