@@ -604,6 +604,8 @@ class Infhotel
 
                   <!-- add-ons list -->
                   <div class="row">
+                    <form id="book_a_room" action="/?/content/newreservation4" method="POST">
+                      <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <div class="large-11 columns">
                       <!-- add-on item -->
                       <div class="row item-addon">
@@ -686,6 +688,7 @@ class Infhotel
                         <!-- end add-on description -->
                       </div>
                     </div>
+                    </form>
                   </div>
                   <!-- end add-on item -->
                 </div>
