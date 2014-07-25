@@ -525,7 +525,8 @@ class Infhotel
         return "Su código de reserva es: ".$result;
     }
     public function reservation_3(){
-        $response= '<div id="form_box_3_container" class="large-12 large-centered columns"> 
+        $response= '
+        <div id="form_box_3_container" class="large-12 large-centered columns"> 
         <div id="form_box_3">
           <!-- reservation-header -->
           <div class="row">
@@ -602,7 +603,7 @@ class Infhotel
               <div class="row">
                 <div class="large-9 columns">
                   <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
-                  <form action="/?/content/newreservation4" id="book_a_room" method="POST">
+                  <form action="/?/content/newreservation4" class="book_a_room" method="POST">
                       <input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <!-- add-ons list -->
                   <div class="row">
@@ -690,14 +691,14 @@ class Infhotel
                         <!-- end add-on description -->
                       </div>
                     </div>
+                    <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                    <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                    <input type="text" name="request" maxlength="1000"  id="full_request">
+                    <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                    <button id="submit_paso3" type="submit" class="send">Continue</button> 
                   </div>
                   <!-- end add-on item -->
                 </div>
-                <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
-                <input type="text" name="request" maxlength="1000"  id="full_request">
-                <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                <button id="submit_paso3" type="submit" class="send">Continue</button> 
                 </form>
                 <!-- end add-ons list -->
                 <!-- your stay -->

@@ -4,7 +4,7 @@
 {/imagen_de_fondo}
 {/exp:channel:entries}
 <div class="book_container cover_container">
-  <div class="row">
+  <div id="cont" class="row">
     <div id="form_box_2_container" class="large-12 large-centered columns"> 
       <div id="form_box_2">
         <div class="row">
@@ -19,7 +19,7 @@
             </div>  
             <div class="row">
               <div class="large-9 large-centered columns">
-                <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                <form class="book_a_room" action="/?/content/newreservation2" method="POST">
                 	<input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <div class="row">
                     <!-- <div class="large-1 columns">
@@ -74,7 +74,7 @@
 						<h4 id="step_in_reservation">Room 1 of {post_room_number}</h4>
 					{/exp:get_post_vars}
 					</div>
-				  <form id="book_a_room" action="/?/content/reserva" method="POST">
+				  <form class="book_a_room" action="/?/content/reserva" method="POST">
 						<input type="hidden" name="XID" value="{XID_HASH}" />
 					    {exp:get_post_vars parse="inward"}
 							{exp:infhotel:disponibilidadinicialhabitaciones_final
@@ -106,7 +106,7 @@
 		$("#price_room2").hide();
 		$("#price_room3").hide();
 		$("#price_room4").hide();
-		$("#form_box_3").hide();
+		$("#form_box_3_container").hide();
 		hide_divs(num_hab,0);
       });
 	$(function() {
@@ -471,9 +471,9 @@
 			    	$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3").show();
+			    	$("#cont").html($("#form_box_3_container").html());
+			    	//$("#add_on").html("");
+			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
             cambio_costos_addons("#people_lunch_and_dinner", "#lunch_and_dinner", '#encabezado_lunch_and_dinner', '#lunch_and_dinner_input', "#purchase_amount");
             agregar_costos_addons("#lunch_and_dinner", '#lunch_and_dinner_input', "#purchase_amount");
@@ -485,9 +485,9 @@
 			    	$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3").show();
+			    	$("#cont").html($("#form_box_3_container").html());
+			    	//$("#add_on").html("");
+			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
             cambio_costos_addons("#people_lunch_and_dinner", "#lunch_and_dinner", '#encabezado_lunch_and_dinner', '#lunch_and_dinner_input', "#purchase_amount");
             agregar_costos_addons("#lunch_and_dinner_checkbox", '#lunch_and_dinner_input', "#purchase_amount");
@@ -499,9 +499,9 @@
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3").show();
+			    	$("#content").html($("#form_box_3_container").html());
+			    	//$("#add_on").html("");
+			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
             cambio_costos_addons("#people_lunch_and_dinner", "#lunch_and_dinner", '#encabezado_lunch_and_dinner', '#lunch_and_dinner_input', "#purchase_amount");
             agregar_costos_addons("#lunch_and_dinner_checkbox", '#lunch_and_dinner_input', "#purchase_amount");
@@ -513,9 +513,9 @@
 			    	$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    }
 			    else{
-			    	$("#form_box_2_container").html($("#form_box_3_container").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3").show();
+			    		$("#cont").html($("#form_box_3_container").html());
+			    	//$("#add_on").html("");
+			    	$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
             cambio_costos_addons("#people_lunch_and_dinner", "#lunch_and_dinner", '#encabezado_lunch_and_dinner', '#lunch_and_dinner_input', "#purchase_amount");
             agregar_costos_addons("#lunch_and_dinner_checkbox", '#lunch_and_dinner_input', "#purchase_amount");
@@ -523,9 +523,9 @@
 			    }
 			    break;
 			case 4:
-					$("#form_box_2_container").html($("#form_box_3_container").html());
-					$("#add_on").html("");
-					$("#form_box_3").show();
+						$("#cont").html($("#form_box_3_container").html());
+					//$("#add_on").html("");
+					$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
             cambio_costos_addons("#people_lunch_and_dinner", "#lunch_and_dinner", '#encabezado_lunch_and_dinner', '#lunch_and_dinner_input', "#purchase_amount");
             agregar_costos_addons("#lunch_and_dinner_checkbox", '#lunch_and_dinner_input', "#purchase_amount");
