@@ -541,7 +541,7 @@ class Infhotel
               <!-- check-in form -->
               <div class="row">
                 <div class="large-9 large-centered columns">
-                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                  <form class="book_a_room" action="/?/content/newreservation2" method="POST">
                     <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <!-- check-in inputs row -->
                     <div class="row">
@@ -599,12 +599,11 @@ class Infhotel
 
             <!-- row-container -->
             <div class="large-12 columns">
-            <form action="/?/content/newreservation4" id="book_a_room" method="POST">
-                <input type="hidden" name="XID" value="{XID_HASH}" /> 
               <div class="row">
                 <div class="large-9 columns">
                   <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
-
+                  <form action="/?/content/newreservation4" id="book_a_room" method="POST">
+                      <input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <!-- add-ons list -->
                   <div class="row">
                     <div class="large-11 columns">
@@ -693,13 +692,13 @@ class Infhotel
                     </div>
                   </div>
                   <!-- end add-on item -->
-                  <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                  <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
-                  <input type="text" name="request" maxlength="1000"  id="full_request">
-                  <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                  <button id="submit_paso3" type="submit" class="send">Continue</button> 
-                  </form>
                 </div>
+                <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                <input type="text" name="request" maxlength="1000"  id="full_request">
+                <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                <button id="submit_paso3" type="submit" class="send">Continue</button> 
+                </form>
                 <!-- end add-ons list -->
                 <!-- your stay -->
                 <div class="large-3 columns">
