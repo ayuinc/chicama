@@ -526,217 +526,219 @@ class Infhotel
     }
     public function reservation_3(){
         $response= '
-        <div id="form_box_3_container" class="large-12 large-centered columns"> 
-        <div id="form_box_3">
-          <!-- reservation-header -->
-          <div class="row">
-            <div id="title_reservation" class="large-12 columns">
-              <div class="row">
-                <div class="large-4 columns">
-                  <h3>NEW RESERVATION</h3>
-                </div>
-                <div class="large-4 large-offset-4 columns">
-                  <p>Phone reservations +511-440-6040</p>
-                </div>
-              </div>
-              <!-- check-in form -->
-              <div class="row">
-                <div class="large-9 large-centered columns">
-                  <form class="book_a_room" action="/?/content/newreservation2" method="POST">
-                    <input type="hidden" name="XID" value="{XID_HASH}" /> 
-                    <!-- check-in inputs row -->
-                    <div class="row">
-                      <div class="large-3 columns">
-                        <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN">
-                      </div>
-                      <div class="large-3 columns">
-                        <input type="text" id="check_out_date" name="check_in_date" placeholder="CHECK-OUT">
-                      </div>
-                      <div class="large-1 columns">
-                        <label for="right-label" class="inline">Rooms</label>
-                      </div>
-                      <div class="large-2 columns">
-                        <select name="room_number"  pattern="number" data-invalid="">
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                      <div class="large-3 columns end">
-                        <input type="submit" class="button tiny send expand" value="check again">
-                      </div>
-                    </div>
-                    <!-- end check-in inputs row -->
-                  </form>
-                </div>
-              </div>
-              <!-- end check-in form -->
-            </div>
-          </div>
-
-          <!-- breadscrumbs -->
-          <div class="row">
-            <div class="large-12 columns">
-              <div class="row" id="steps_list">
-                <div class="large-9 large-centered columns text-center">
-                  <div class="row">
-                    <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
-                    <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
-                    <div class="large-3 columns"><span class="circle">3</span><p>GUEST INFORMATION</p></div>
-                    <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
+        <div id="contenedor">
+          <div id="form_box_3_container" class="large-12 large-centered columns"> 
+          <div id="form_box_3">
+            <!-- reservation-header -->
+            <div class="row">
+              <div id="title_reservation" class="large-12 columns">
+                <div class="row">
+                  <div class="large-4 columns">
+                    <h3>NEW RESERVATION</h3>
+                  </div>
+                  <div class="large-4 large-offset-4 columns">
+                    <p>Phone reservations +511-440-6040</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- end breadscrumbs -->
-          <!-- end reservation-header -->
-
-          <div class="row">
-            <div class="large-12 columns">
-              <h4>ADD - ONS</h4>
-            </div>
-
-            <!-- row-container -->
-            <div class="large-12 columns">
-              <div class="row">
-                <div class="large-9 columns">
-                  <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
-                  <form action="/?/content/newreservation4" class="book_a_room" method="POST">
+                <!-- check-in form -->
+                <div class="row">
+                  <div class="large-9 large-centered columns">
+                    <form class="book_a_room" action="/?/content/newreservation2" method="POST">
                       <input type="hidden" name="XID" value="{XID_HASH}" /> 
-                  <!-- add-ons list -->
-                  <div class="row">
-                    <div class="large-11 columns">
-                      <!-- add-on item -->
-                      <div class="row item-addon">
-                        <!-- add-on img -->
-                        <div class="large-5 columns">
-                          <figure>
-                            <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                            <a class="text-center" href="#"><span>+</span></a>
-                          </figure>
+                      <!-- check-in inputs row -->
+                      <div class="row">
+                        <div class="large-3 columns">
+                          <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN">
                         </div>
-                        <!-- end add-on img -->
-                        <!-- add-on description -->
-                        <div class="large-7 columns addon-description">
-                          <h2>LUNCH AND DINNER</h2>
-                          <div class="row selector">
-                            <div class="large-7 columns">
-                              <p>Number of persons
-                                <select id="lunch_and_dinner">
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                </select>
-                              </p>
-                            </div>
-                            <div class="large-4 columns">
-                              <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="large-12 columns">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
-                            </div>
-
-                            <div class="large-3 columns right">
-                              <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
-                              <input id="lunch_and_dinner_checkbox" name="all_meals" type="checkbox">
-                            </div>
-                          </div>
+                        <div class="large-3 columns">
+                          <input type="text" id="check_out_date" name="check_in_date" placeholder="CHECK-OUT">
                         </div>
-                        <!-- end add-on description -->
+                        <div class="large-1 columns">
+                          <label for="right-label" class="inline">Rooms</label>
+                        </div>
+                        <div class="large-2 columns">
+                          <select name="room_number"  pattern="number" data-invalid="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                        <div class="large-3 columns end">
+                          <input type="submit" class="button tiny send expand" value="check again">
+                        </div>
                       </div>
-                      <!-- end add-on item -->
-
-                      <!-- add-on item -->
-                      <div class="row item-addon">
-                        <!-- add-on img -->
-                        <div class="large-5 columns">
-                          <figure>
-                            <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                            <a class="text-center" href="#"><span>+</span></a>
-                          </figure>
-                        </div>
-                        <!-- end add-on img -->
-                        <!-- add-on description -->
-                        <div class="large-7 columns addon-description">
-                          <h2>TRANSPORT</h2>
-                          <div class="row selector">
-                            <div class="large-7 columns">
-                              <p>Number of persons
-                                <select id="transport">
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                </select>
-                              </p>
-                            </div>
-                            <div class="large-4 columns">
-                              <p id="encabezado_transport" class="addon-cost right">$60.00</p>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="large-12 columns">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
-                            </div>
-
-                            <div class="large-3 columns right">
-                              <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
-                              <input id="transport_checkbox" name="all_meals" type="checkbox">
-                            </div>
-                          </div>
-                        </div>
-                        <!-- end add-on description -->
-                      </div>
-                    </div>
-                    <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                    <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
-                    <input type="text" name="request" maxlength="1000"  id="full_request">
-                    <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                    <button id="submit_paso3" type="submit" class="send">Continue</button> 
-                  </div>
-                  <!-- end add-on item -->
-                </div>
-                </form>
-                <!-- end add-ons list -->
-                <!-- your stay -->
-                <div class="large-3 columns">
-                  <div class="row">
-                    <div class="large-12 large-centered columns">
-                      <div class="your-stay">
-                        <h2 class="text-center">YOUR STAY</h2>
-                        <hr>
-
-                        <p class="ys-label">ARRIVAL:</p>
-                        <p class="ys-field">Monday, July 07, 2014</p>
-                        <p class="ys-label">DEPARTURE:</p>
-                        <p class="ys-field">Monday, July 07, 2014</p>
-                        <p class="ys-label">2 Nights</p>
-
-                        <hr>
-
-                        <p class="ys-label">ROOM 1:</p>
-                        <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
-                        <p class="ys-label">ROOM 2:</p>
-                        <p class="ys-field">Monday, July 07, 2014 <span>$ 130.00</span></p>
-                        <p class="ys-label">ADD - ONS:</p>
-                        <p class="ys-field">Lunch And Dinner <span>$ 60.00</span></p>
-                        
-                        <hr>
-
-                        <p class="ys-label">TOTAL <span>$ 290.00</span></p>
-                      </div>
-                    </div>
+                      <!-- end check-in inputs row -->
+                    </form>
                   </div>
                 </div>
-                <!-- end your stay -->
+                <!-- end check-in form -->
               </div>
             </div>
-            <!-- end container -->
+
+            <!-- breadscrumbs -->
+            <div class="row">
+              <div class="large-12 columns">
+                <div class="row" id="steps_list">
+                  <div class="large-9 large-centered columns text-center">
+                    <div class="row">
+                      <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
+                      <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
+                      <div class="large-3 columns"><span class="circle">3</span><p>GUEST INFORMATION</p></div>
+                      <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end breadscrumbs -->
+            <!-- end reservation-header -->
+
+            <div class="row">
+              <div class="large-12 columns">
+                <h4>ADD - ONS</h4>
+              </div>
+
+              <!-- row-container -->
+              <div class="large-12 columns">
+                <div class="row">
+                  <div class="large-9 columns">
+                    <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
+                    <form action="/?/content/newreservation4" class="book_a_room" method="POST">
+                        <input type="hidden" name="XID" value="{XID_HASH}" /> 
+                    <!-- add-ons list -->
+                    <div class="row">
+                      <div class="large-11 columns">
+                        <!-- add-on item -->
+                        <div class="row item-addon">
+                          <!-- add-on img -->
+                          <div class="large-5 columns">
+                            <figure>
+                              <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                              <a class="text-center" href="#"><span>+</span></a>
+                            </figure>
+                          </div>
+                          <!-- end add-on img -->
+                          <!-- add-on description -->
+                          <div class="large-7 columns addon-description">
+                            <h2>LUNCH AND DINNER</h2>
+                            <div class="row selector">
+                              <div class="large-7 columns">
+                                <p>Number of persons
+                                  <select id="lunch_and_dinner">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                  </select>
+                                </p>
+                              </div>
+                              <div class="large-4 columns">
+                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="large-12 columns">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                              </div>
+
+                              <div class="large-3 columns right">
+                                <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
+                                <input id="lunch_and_dinner_checkbox" name="all_meals" type="checkbox">
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end add-on description -->
+                        </div>
+                        <!-- end add-on item -->
+
+                        <!-- add-on item -->
+                        <div class="row item-addon">
+                          <!-- add-on img -->
+                          <div class="large-5 columns">
+                            <figure>
+                              <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                              <a class="text-center" href="#"><span>+</span></a>
+                            </figure>
+                          </div>
+                          <!-- end add-on img -->
+                          <!-- add-on description -->
+                          <div class="large-7 columns addon-description">
+                            <h2>TRANSPORT</h2>
+                            <div class="row selector">
+                              <div class="large-7 columns">
+                                <p>Number of persons
+                                  <select id="transport">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                  </select>
+                                </p>
+                              </div>
+                              <div class="large-4 columns">
+                                <p id="encabezado_transport" class="addon-cost right">$60.00</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="large-12 columns">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                              </div>
+
+                              <div class="large-3 columns right">
+                                <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
+                                <input id="transport_checkbox" name="all_meals" type="checkbox">
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end add-on description -->
+                        </div>
+                      </div>
+                      <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                      <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                      <input type="text" name="request" maxlength="1000"  id="full_request">
+                      <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                      <button id="submit_paso3" type="submit" class="send">Continue</button> 
+                    </div>
+                    <!-- end add-on item -->
+                  </div>
+                  </form>
+                  <!-- end add-ons list -->
+                  <!-- your stay -->
+                  <div class="large-3 columns">
+                    <div class="row">
+                      <div class="large-12 large-centered columns">
+                        <div class="your-stay">
+                          <h2 class="text-center">YOUR STAY</h2>
+                          <hr>
+
+                          <p class="ys-label">ARRIVAL:</p>
+                          <p class="ys-field">Monday, July 07, 2014</p>
+                          <p class="ys-label">DEPARTURE:</p>
+                          <p class="ys-field">Monday, July 07, 2014</p>
+                          <p class="ys-label">2 Nights</p>
+
+                          <hr>
+
+                          <p class="ys-label">ROOM 1:</p>
+                          <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
+                          <p class="ys-label">ROOM 2:</p>
+                          <p class="ys-field">Monday, July 07, 2014 <span>$ 130.00</span></p>
+                          <p class="ys-label">ADD - ONS:</p>
+                          <p class="ys-field">Lunch And Dinner <span>$ 60.00</span></p>
+                          
+                          <hr>
+
+                          <p class="ys-label">TOTAL <span>$ 290.00</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end your stay -->
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
           </div>
-        </div>
+      </div>
     </div>';
             return $response;
     }
