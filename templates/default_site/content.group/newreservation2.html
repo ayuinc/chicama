@@ -97,6 +97,28 @@
 {exp:get_post_vars parse="inward"}
 <script>
 	$(function() {
+	    $( "#check_in_date" ).datepicker({
+	      minDate: new Date(),
+	      dateFormat: 'ddmmyy',
+	      defaultDate: "+1w",
+	      changeMonth: true,
+	      numberOfMonths: 1,
+	      onClose: function( selectedDate ) {
+	        $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
+	      }
+	    });
+	    $( "#check_out_date" ).datepicker({
+	      //minDate: new Date(),
+	      dateFormat: 'ddmmyy',
+	      defaultDate: "+1w",
+	      changeMonth: true,
+	      numberOfMonths: 1,
+	      onClose: function( selectedDate ) {
+	        $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
+	      }
+	    });
+	  });
+	$(function() {
 		num_hab = {post_room_number};
 		$("#room1").hide();
 		$("#room2").hide();
