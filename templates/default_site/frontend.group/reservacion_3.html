@@ -5,8 +5,7 @@
 {/exp:channel:entries}
 <div class="book_container cover_container">
   <div class="row">
-    
-        <input type="hidden" name="XID" value="{XID_HASH}" />
+    <div id="form_box_3_container" class="large-12 large-centered columns"> 
         <div id="form_box_3">
           <!-- reservation-header -->
           <div class="row">
@@ -22,7 +21,7 @@
               <!-- check-in form -->
               <div class="row">
                 <div class="large-9 large-centered columns">
-                  <form>
+                  <form class="book_a_room" action="#" method="POST">
                     <!-- check-in inputs row -->
                     <div class="row">
                       <div class="large-3 columns">
@@ -81,7 +80,8 @@
               <div class="row">
                 <div class="large-9 columns">
                   <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
-
+                  <form class="book_a_room" action="#" method="POST">
+                    <input type="hidden" name="XID" value="{XID_HASH}" />
                   <!-- add-ons list -->
                   <div class="row">
                     <div class="large-11 columns">
@@ -167,8 +167,10 @@
                       </div>
                     </div>
                   </div>
+                  </form>
                   <!-- end add-on item -->
                 </div>
+                
                 <!-- end add-ons list -->
                 <!-- your stay -->
                 <div class="large-3 columns">
@@ -206,7 +208,6 @@
             <!-- end container -->
           </div>
         </div>
-      </form>
     </div>  
   </div> 
 </div>  
