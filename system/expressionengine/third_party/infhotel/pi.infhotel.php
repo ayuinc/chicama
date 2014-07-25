@@ -541,7 +541,8 @@ class Infhotel
               <!-- check-in form -->
               <div class="row">
                 <div class="large-9 large-centered columns">
-                  <form>
+                  <form id="book_a_room" action="/?/content/newreservation2" method="POST">
+                    <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <!-- check-in inputs row -->
                     <div class="row">
                       <div class="large-3 columns">
