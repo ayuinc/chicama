@@ -412,12 +412,13 @@
 	}
 });
   function agregar_costos_addons(buttom, check_box, input, purchase_amount){
-    $(buttom).click(function{
+    $(buttom).click(function(){
     	if(check_box.is(":checked")) { // check select status
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active"); //select all checkboxes with class "checkbox1" 
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );        
-    	}else{
+    	}
+    	else{
         $(check_box).prop("checked", true);
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
