@@ -413,7 +413,7 @@
 });
   function agregar_costos_addons(buttom, check_box, input, purchase_amount){
     $(buttom).click(function(){
-    	if(check_box.is(":checked")) { // check select status
+    	if($(check_box).is(":checked")) { // check select status
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active"); //select all checkboxes with class "checkbox1" 
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );        
