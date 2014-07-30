@@ -633,7 +633,7 @@ class Infhotel
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
+                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$100.00</p>
                               </div>
                             </div>
                             <div class="row">
@@ -675,7 +675,7 @@ class Infhotel
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_transport" class="addon-cost right">$60.00</p>
+                                <p id="encabezado_transport" class="addon-cost right">$100.00</p>
                               </div>
                             </div>
                             <div class="row">
