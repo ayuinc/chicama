@@ -103,7 +103,7 @@ class Infhotel
     }
 
     public function pais(){
-        $form = '<select name="country" id="freeform_country" placeholder="ENTER YOUR COUNTRY" required="">';
+        $form = '<select name="country" placeholder="ENTER YOUR COUNTRY" required="">';
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetPais';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -685,7 +685,7 @@ class Infhotel
 
                               <div class="large-3 columns right">
                                 <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
-                                <input style="display:none" id="transport_checkbox" name="all_meals" type="checkbox">
+                                <input style="display:none" id="transport_checkbox" name="transport" type="checkbox">
                               </div>
                             </div>
                           </div>
