@@ -481,7 +481,7 @@
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
-              defaultDate: "-1w",
+              defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
               onClose: function( selectedDate ) {
@@ -603,7 +603,7 @@
 			    }
 			    break;
 			case 4:
-						$("#cont").html($("#contenedor").html());
+					$("#cont").html($("#contenedor").html());
 					$("#add_on").html("");
 					$("#form_box_3_container").show();
             cambio_costos_addons("#people_transport", "#transport", '#encabezado_transport', '#transport_input', "#purchase_amount");
