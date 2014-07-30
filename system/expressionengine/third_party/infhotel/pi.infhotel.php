@@ -522,7 +522,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return "Su código de reserva es: ".$result;
+        return "your reservation code is <b>".$result."</b>";
     }
     public function reservation_3(){
         $response= '
