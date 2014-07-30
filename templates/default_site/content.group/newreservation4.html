@@ -88,8 +88,8 @@
                       <div class="large-11 columns">
                         <div class="row">
                           <div class="large-6 columns">
-                            <input type="text" placeholder="FIRST / GIVEN NAME *" required>
-                            <input type="text" placeholder="E-MAIL *" required>
+                            <input type="text" name="firstname" placeholder="FIRST / GIVEN NAME *" required>
+                            <input type="text" name="email" placeholder="E-MAIL *" required>
                             <select name="country" placeholder="ENTER YOUR COUNTRY" required>
                               <option value="1">Perú</option>
                               <option value="2">Argentina</option>
@@ -98,12 +98,15 @@
                             </select>
                           </div>
                           <div class="large-6 columns">
-                            <input type="text" placeholder="LAST / FAMILY NAME *" required>
-                            <input type="text" placeholder="PHONE NUMBER *" required>
-                            <input type="text" placeholder="CITY *" required>
+                            <input type="text" name="last_name" placeholder="LAST / FAMILY NAME *" required>
+                            <input type="text" name="phone" placeholder="PHONE NUMBER *" required>
+                            <input type="text" name="city" placeholder="CITY *" required>
                           </div>
                         </div>
-
+                            <input type="text" name="all_meals" placeholder="ALL MEALS *" required>
+                            <input type="text" name="transport" placeholder="TRANSPORT *" required>
+                            <input type="text" name="purchase_amount" placeholder="PURCHASE AMOUNT *" required>
+                            <input type="text" name="full_request" placeholder="FULL REQUEST *" required>
                         <div class="row">
                           <div class="large-2 right columns">
                             <button type="submit" class="send tiny expand">BOOK NOW</button>
