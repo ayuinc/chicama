@@ -412,6 +412,8 @@
 	}
 });
   function agregar_costos_addons(buttom, check_box, input, purchase_amount){
+    $(check_box).prop("checked", false);
+		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
     	e.preventDefault();
     	if($(check_box).is(":checked")) { // check select status
