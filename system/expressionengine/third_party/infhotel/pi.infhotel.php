@@ -643,7 +643,7 @@ class Infhotel
 
                               <div class="large-3 columns right">
                                 <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
-                                <input style="display:none" id="lunch_and_dinner_checkbox" name="all_meals" type="checkbox">
+                                <input style="display:none" id="lunch_and_dinner_checkbox" name="lunch_and_dinner_checkbox" type="checkbox">
                               </div>
                             </div>
                           </div>
@@ -685,7 +685,7 @@ class Infhotel
 
                               <div class="large-3 columns right">
                                 <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
-                                <input style="display:none" id="transport_checkbox" name="transport" type="checkbox">
+                                <input style="display:none" id="transport_checkbox" name="transport_checkbox" type="checkbox">
                               </div>
                             </div>
                           </div>
