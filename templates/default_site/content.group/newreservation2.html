@@ -263,7 +263,7 @@
 		    	$(purchase_amount).val(amount);
 		    	//$("#room1").html("");
 		    	//$("#room1").show();
-				console.log(amount);
+				console.log(temp);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -291,7 +291,7 @@
 		    	send = send.replace(/,/gi, "(f)");
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-    			console.log(amount);
+    			console.log(temp);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -319,7 +319,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-				console.log(amount);
+				console.log(temp);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -334,8 +334,8 @@
     			};
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            hide_divs(rooms_num, next_div);
-	            data["Habitaciones"][orden]=temp;
+	        hide_divs(rooms_num, next_div);
+	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
@@ -347,7 +347,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-				console.log(amount);
+				console.log(temp);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -375,7 +375,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-				console.log(amount);
+				console.log(temp);
 				//console.log(sumary[orden]);
 				//console.log(send);	        
 			});
@@ -403,7 +403,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-				console.log(amount);
+				console.log(temp);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
