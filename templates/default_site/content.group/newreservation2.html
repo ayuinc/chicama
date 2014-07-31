@@ -214,8 +214,8 @@
 					switch($(select_box).val()){
 						case "1":
 							$(encabezado).html("One Guest");
-							$(precio).html("USD 110/night");
-							$(final_cost).val("110");
+							$(precio).html("USD 120/night");
+							$(final_cost).val("120");
 							break;
 						case "2":
 							$(encabezado).html("Two Guests");
@@ -236,6 +236,7 @@
 
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box, purchase_amount ){
 	var orden = next_div - 1 ;
+	var summary_cost_final = "";
 
 	switch(type_hab){
 	    case 1:
@@ -264,6 +265,30 @@
 		    	//$("#room1").html("");
 		    	//$("#room1").show();
 				console.log(orden+1);
+				summary_room=orden+1;
+				summary_cost=$(final_cost).val();
+				switch(summary_cost){
+					case "100":
+						summary_cost_final="Monday, July 07, 2014 $ 100.00";
+					break;
+					case "120":
+						summary_cost_final="Monday, July 07, 2014 $ 120.00";
+					break;
+					case "130":
+						summary_cost_final="Monday, July 07, 2014 $ 130.00";
+					break;
+					case "140":
+						summary_cost_final="Monday, July 07, 2014 $ 140.00";
+					break;
+					case "160":
+						summary_cost_final="Monday, July 07, 2014 $ 160.00";
+					break;
+					case "180":
+						summary_cost_final="Monday, July 07, 2014 $ 180.00";
+					break;
+				}
+				$("#title_room"+sumary+"_summary").html("ROOM 1:");
+				$("#cost_room"+sumary+"_summary").html(summary_cost_final);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -403,7 +428,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-					console.log(orden+1);
+					
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
