@@ -716,18 +716,24 @@ class Infhotel
                           <p class="ys-field">Monday, July 07, 2014</p>
                           <p class="ys-label">2 Nights</p>
 
+
                           <hr>
 
                           <p class="ys-label">ROOM 1:</p>
                           <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
                           <p class="ys-label">ROOM 2:</p>
-                          <p class="ys-field">Monday, July 07, 2014 <span>$ 130.00</span></p>
+                          <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
+                          <p class="ys-label">ROOM 3:</p>
+                          <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
+                          <p class="ys-label">ROOM 4:</p>
+                          <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
                           <p class="ys-label">ADD - ONS:</p>
-                          <p class="ys-field">Lunch And Dinner <span>$ 60.00</span></p>
+                          <p class="ys-field">Lunch And Dinner <span>$ 100.00</span></p>
+                          <p class="ys-field">Transport <span>$ 100.00</span></p>
                           
                           <hr>
 
-                          <p class="ys-label">TOTAL <span>$ 290.00</span></p>
+                          <p class="ys-label">TOTAL <span>$ 600.00</span></p>
                         </div>
                       </div>
                     </div>
