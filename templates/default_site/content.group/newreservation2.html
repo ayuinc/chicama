@@ -416,7 +416,15 @@
 		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
     	e.preventDefault();
-    	if($(check_box).is(":checked")) { // check select status
+    	if($(check_box).is(":checked")) {
+    		if(sumary=="lunch_and_dinner_summary"){
+    			$("#"+sumary).html("");
+    		}
+    		else{
+    			if(sumary=="transport_summary"){
+    				$("#"+sumary).html("");
+    			}
+    		}
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active"); //select all checkboxes with class "checkbox1" 
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );        
