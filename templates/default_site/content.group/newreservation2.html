@@ -411,7 +411,7 @@
 	    } 
 	}
 });
-  function agregar_costos_addons(buttom, check_box, input, purchase_amount){
+  function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
     $(check_box).prop("checked", false);
 		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
@@ -422,6 +422,14 @@
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );        
     	}
     	else{
+    		if(sumary=="lunch_and_dinner_summary"){
+    			$("#"+sumary).html($(encabezado).text());
+    		}
+    		else{
+    			if(sumary=="transport"){
+    				$("#"+sumary).html($(encabezado).text());
+    			}
+    		}
         $(check_box).prop("checked", true);
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
@@ -482,8 +490,8 @@
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount");
-            agregar_costos_addons("#lunch_and_dinner", '#lunch_and_dinner_input', "#purchase_amount");
-            agregar_costos_addons("#transport", '#transport_input', "#purchase_amount");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -517,8 +525,8 @@
              cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount");
             
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount")
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -552,8 +560,8 @@
               cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount");
             
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount")
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -587,8 +595,8 @@
              cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount");
             
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount")
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -618,8 +626,8 @@
              cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount");
             
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount")
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
