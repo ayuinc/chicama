@@ -237,6 +237,8 @@
 	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box, purchase_amount ){
 	var orden = next_div - 1 ;
 	var summary_cost_final = "";
+	var summary_room = "";
+	var summary_cost = "";
 
 	switch(type_hab){
 	    case 1:
@@ -265,8 +267,8 @@
 		    	//$("#room1").html("");
 		    	//$("#room1").show();
 				console.log(orden+1);
-				summary_room=orden+1;
-				summary_cost=$(final_cost).val();
+				summary_room = orden+1;
+				summary_cost = $(final_cost).val();
 				switch(summary_cost){
 					case "100":
 						summary_cost_final="Monday, July 07, 2014 $ 100.00";
