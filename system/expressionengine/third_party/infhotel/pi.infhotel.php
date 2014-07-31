@@ -728,8 +728,8 @@ class Infhotel
                           <p class="ys-label">ROOM 4:</p>
                           <p class="ys-field">Monday, July 07, 2014 <span>$ 100.00</span></p>
                           <p class="ys-label">ADD - ONS:</p>
-                          <p class="ys-field">Lunch And Dinner <span>$ 100.00</span></p>
-                          <p class="ys-field">Transport <span>$ 100.00</span></p>
+                          <p id="lunch_and_dinner_summary" class="ys-field">Lunch And Dinner <span>$ 100.00</span></p>
+                          <p id="transport_summary" class="ys-field">Transport <span>$ 100.00</span></p>
                           
                           <hr>
 
