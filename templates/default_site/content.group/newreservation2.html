@@ -412,6 +412,7 @@
 	}
 });
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
+    $("#"+sumary).html("");
     $(check_box).prop("checked", false);
 		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
