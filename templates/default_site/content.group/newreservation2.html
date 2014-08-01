@@ -251,7 +251,7 @@
     			};
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            hide_divs(rooms_num, next_div);
+	            
 	            data["Habitaciones"][orden]=temp;
 	            sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -295,6 +295,7 @@
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
+				hide_divs(rooms_num, next_div);
 	        break;
 	    case 2:
 	        $(buttom).click(function(){
