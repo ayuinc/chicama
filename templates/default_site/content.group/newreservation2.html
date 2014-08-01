@@ -291,6 +291,7 @@
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#summary_input").val($("#sumary").html());
 	        });
 					
 	        break;
@@ -344,6 +345,7 @@
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#summary_input").val($("#sumary").html());
 	        });
 	        break;
 	    case 3:
@@ -396,6 +398,7 @@
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#summary_input").val($("#sumary").html());
 	        });
 	        break;
 	    case 4:
@@ -449,6 +452,7 @@
 	        });
 					var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#summary_input").val($("#sumary").html());
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
@@ -500,6 +504,7 @@
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#summary_input").val($("#sumary").html());
 			});
 	        break;
 	    case 6:
@@ -552,6 +557,7 @@
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#summary_input").val($("#sumary").html());
 	        });
 	        break;
 	    } 
@@ -681,6 +687,7 @@
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
             agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#sumary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -715,6 +722,7 @@
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
             agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#sumary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -749,6 +757,7 @@
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
             agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#sumary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -783,6 +792,7 @@
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
             agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#sumary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
               dateFormat: 'ddmmyy',
@@ -813,6 +823,7 @@
           cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
           agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
           agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+          $("#summary_input").val($("#sumary").html());
           $( "#check_in_date" ).datepicker({
             minDate: new Date(),
             dateFormat: 'ddmmyy',

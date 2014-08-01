@@ -696,6 +696,7 @@ class Infhotel
                       <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
                       <input type="text" name="request" maxlength="1000"  id="full_request">
                       <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                      <input type="text" name="summary" maxlength="1000"  id="summary_input">
                       <button id="submit_paso3" type="submit" class="send">Continue</button> 
                     </div>
                     <!-- end add-on item -->
@@ -706,7 +707,7 @@ class Infhotel
                   <div class="large-3 columns">
                     <div class="row">
                       <div class="large-12 large-centered columns">
-                        <div class="your-stay">
+                        <div id="reserva_summary" class="your-stay">
                           <h2 class="text-center">YOUR STAY</h2>
                           <hr>
 
