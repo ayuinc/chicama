@@ -547,6 +547,7 @@
 	}
 });
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
+    var cost_summary = "";
     $("#"+sumary).html("");
     $(check_box).prop("checked", false);
 		$(buttom).removeClass("active");
@@ -577,7 +578,8 @@
         $(check_box).prop("checked", true);
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-        $("#total_summary").html();
+        cost_summary = ""+ (parseInt($(purchase_amount).val()) + parseInt($(input).val())/100;
+        $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>");
     	}
     });
   }
