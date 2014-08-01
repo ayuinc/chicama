@@ -289,11 +289,6 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	//$("#room1").html("");
-		    	//$("#room1").show();
-					//hide_divs(rooms_num, next_div);
-					//console.log(sumary[orden]);
-					//console.log(send);
 	        });
 					
 	        break;
@@ -307,18 +302,6 @@
     			};
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
-    	    	var send = JSON.stringify(data);
-    	    	send = send.replace(/{/gi, "(a)");
-		    	send = send.replace(/}/gi, "(b)");	
-		    	send = send.replace(/"/gi, "(c)");
-		    	send = send.replace(/:/gi, "(d)");
-		    	send = send.replace(/ /gi, "(e)");
-		    	send = send.replace(/,/gi, "(f)");
-    	    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -345,6 +328,19 @@
 					console.log(summary_cost_final);
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
+	        data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
+		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+    	    	var send = JSON.stringify(data);
+    	    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+    	    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
+    			
 	        });
 	        break;
 	    case 3:
@@ -357,20 +353,7 @@
     			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
-		    	var send = JSON.stringify(data);
-		    	send = send.replace(/{/gi, "(a)");
-		    	send = send.replace(/}/gi, "(b)");	
-		    	send = send.replace(/"/gi, "(c)");
-		    	send = send.replace(/:/gi, "(d)");
-		    	send = send.replace(/ /gi, "(e)");
-		    	send = send.replace(/,/gi, "(f)");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
-				console.log(orden+1);
-				summary_room = orden+1;
+    			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
@@ -396,20 +379,6 @@
 					console.log(summary_cost_final);
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
-				//console.log(sumary[orden]);
-				//console.log(send);
-	        });
-	        break;
-	    case 4:
-	        $(buttom).click(function(){
-	            var valor = $(select_box).val();
-    			var temp = {
-				 	"CantHab" : 1, 
-                    "NPrecio" : $(final_cost).val(),  
-                    "TCodigoHabitacion" : "110005"
-    			};
-		    	simple_ocean =simple_ocean + 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -422,8 +391,19 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-				console.log(orden+1);
-				summary_room = orden+1;
+	        });
+	        break;
+	    case 4:
+	        $(buttom).click(function(){
+	            var valor = $(select_box).val();
+    			var temp = {
+				 	"CantHab" : 1, 
+                    "NPrecio" : $(final_cost).val(),  
+                    "TCodigoHabitacion" : "110005"
+    			};
+		    	simple_ocean =simple_ocean + 1;
+		    	amount = amount + parseInt($(final_cost).val())*100;
+    			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
@@ -449,8 +429,18 @@
 					console.log(summary_cost_final);
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
-				//console.log(sumary[orden]);
-				//console.log(send);
+	        data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
+		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 	        });
 	        break;
 	    case 5:
@@ -463,19 +453,7 @@
     			};
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
-		    	var send = JSON.stringify(data);
-		    	send = send.replace(/{/gi, "(a)");
-		    	send = send.replace(/}/gi, "(b)");	
-		    	send = send.replace(/"/gi, "(c)");
-		    	send = send.replace(/:/gi, "(d)");
-		    	send = send.replace(/ /gi, "(e)");
-		    	send = send.replace(/,/gi, "(f)");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
-		    	summary_room = orden+1;
+    			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
@@ -501,9 +479,18 @@
 					console.log(summary_cost_final);
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
-				console.log(orden+1);
-				//console.log(sumary[orden]);
-				//console.log(send);	        
+	        data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
+		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 			});
 	        break;
 	    case 6:
@@ -516,19 +503,7 @@
 				};
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
-		    	var send = JSON.stringify(data);
-		    	send = send.replace(/{/gi, "(a)");
-		    	send = send.replace(/}/gi, "(b)");	
-		    	send = send.replace(/"/gi, "(c)");
-		    	send = send.replace(/:/gi, "(d)");
-		    	send = send.replace(/ /gi, "(e)");
-		    	send = send.replace(/,/gi, "(f)");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
-					summary_room = orden+1;
+    			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
@@ -554,8 +529,18 @@
 					console.log(summary_cost_final);
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
-				//console.log(sumary[orden]);
-				//console.log(send);
+	        data["Habitaciones"][orden]=temp;
+		    	sumary[orden]=temp;
+		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+		    	var send = JSON.stringify(data);
+		    	send = send.replace(/{/gi, "(a)");
+		    	send = send.replace(/}/gi, "(b)");	
+		    	send = send.replace(/"/gi, "(c)");
+		    	send = send.replace(/:/gi, "(d)");
+		    	send = send.replace(/ /gi, "(e)");
+		    	send = send.replace(/,/gi, "(f)");
+		    	$(request).val(send);
+		    	$(purchase_amount).val(amount);
 	        });
 	        break;
 	    } 
