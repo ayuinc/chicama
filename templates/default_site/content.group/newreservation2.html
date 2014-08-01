@@ -667,7 +667,7 @@
 			    	$("#cont").html($("#contenedor").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
-			    	$("#total_summary").html("TOTAL <span>$ "+total_summary+"</span>");
+			    	$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
             console.log(total_summary);
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
@@ -704,7 +704,7 @@
 			    	//$("#add_on").html("");
 			    	$("#form_box_3_container").show();
 			    	console.log(total_summary);
-			    	$("#total_summary").html("TOTAL <span>$ "+total_summary+"</span>");
+			    	$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -740,7 +740,7 @@
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
 			    	console.log(total_summary);
-			    	$("#total_summary").html("TOTAL <span>$ "+total_summary+"</span>");
+			    	$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -776,7 +776,7 @@
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
 			    	console.log(total_summary);
-			    	$("#total_summary").html("TOTAL <span>$ "+total_summary+"</span>");
+			    	$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -808,7 +808,7 @@
 					$("#add_on").html("");
 					$("#form_box_3_container").show();
 					console.log(total_summary);
-					$("#total_summary").html("TOTAL <span>$ "+total_summary+"</span>");
+					$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
