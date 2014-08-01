@@ -714,7 +714,7 @@ class Infhotel
                           <p class="ys-field">Monday, July 07, 2014</p>
                           <p class="ys-label">DEPARTURE:</p>
                           <p class="ys-field">Monday, July 07, 2014</p>
-                          <p class="ys-label">{post_room_number} Nights</p>
+                          <!-- <p id="room_number_summary" class="ys-label">Nights</p> -->
 
                           <hr>
 
