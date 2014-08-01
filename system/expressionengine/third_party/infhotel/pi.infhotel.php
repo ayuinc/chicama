@@ -714,9 +714,8 @@ class Infhotel
                           <p class="ys-field">Monday, July 07, 2014</p>
                           <p class="ys-label">DEPARTURE:</p>
                           <p class="ys-field">Monday, July 07, 2014</p>
-                          {exp:get_post_vars parse="inward"}
-                            <p class="ys-label">{post_room_number} Nights</p>
-                          {/exp:get_post_vars}
+                          <p class="ys-label">2 Nights</p>
+
 
                           <hr>
 
