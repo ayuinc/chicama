@@ -576,8 +576,8 @@
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active"); //select all checkboxes with class "checkbox1" 
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) ); 
-        cost_summary = ""+ parseInt($(purchase_amount).val())/100;
-        $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>"); 
+        var total_summary = $("#purchase_amount").val();
+   			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());      
     	}
     	else{
@@ -592,8 +592,8 @@
         $(check_box).prop("checked", true);
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-        cost_summary = ""+ parseInt($(purchase_amount).val())/100;
-        $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>");
+	    	var total_summary = $("#purchase_amount").val();
+ 				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());
     	}
     });
@@ -611,8 +611,8 @@
             $(input).val("10000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-              cost_summary = ""+ parseInt($(purchase_amount).val())/100;
-              $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>");
+              var total_summary = $("#purchase_amount").val();
+   						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
@@ -629,8 +629,8 @@
             $(input).val("20000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-              cost_summary = ""+ parseInt($(purchase_amount).val())/100;
-              $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>");
+    		    	var total_summary = $("#purchase_amount").val();
+       				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
               }
@@ -646,8 +646,8 @@
             $(input).val("30000");  
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-              cost_summary = ""+ parseInt($(purchase_amount).val())/100;
-              $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>");
+              var total_summary = $("#purchase_amount").val();
+   						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
