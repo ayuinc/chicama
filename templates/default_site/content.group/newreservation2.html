@@ -251,7 +251,7 @@
     			};
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	        
+	        hide_divs(rooms_num, next_div);
 	        data["Habitaciones"][orden]=temp;
 	        sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -292,7 +292,7 @@
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
 					console.log(summary_cost_final);
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-					hide_divs(rooms_num, next_div);
+					//hide_divs(rooms_num, next_div);
 					//console.log(sumary[orden]);
 					//console.log(send);
 	        });
@@ -308,7 +308,6 @@
     			};
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -321,9 +320,32 @@
 		    	send = send.replace(/,/gi, "(f)");
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-    			console.log(orden+1);
-				//console.log(sumary[orden]);
-				//console.log(send);
+    			summary_room = orden+1;
+					summary_cost = $(final_cost).val();
+					switch(summary_cost){
+						case "100":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+						break;
+						case "120":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+						break;
+						case "130":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+						break;
+						case "140":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+						break;
+						case "160":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+						break;
+						case "180":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+						break;
+					}
+					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+					console.log(summary_cost_final);
+					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+					hide_divs(rooms_num, next_div);
 	        });
 	        break;
 	    case 3:
@@ -336,7 +358,6 @@
     			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -350,6 +371,32 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 				console.log(orden+1);
+				summary_room = orden+1;
+					summary_cost = $(final_cost).val();
+					switch(summary_cost){
+						case "100":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+						break;
+						case "120":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+						break;
+						case "130":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+						break;
+						case "140":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+						break;
+						case "160":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+						break;
+						case "180":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+						break;
+					}
+					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+					console.log(summary_cost_final);
+					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+					hide_divs(rooms_num, next_div);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -364,7 +411,6 @@
     			};
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	        hide_divs(rooms_num, next_div);
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -378,6 +424,32 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 				console.log(orden+1);
+				summary_room = orden+1;
+					summary_cost = $(final_cost).val();
+					switch(summary_cost){
+						case "100":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+						break;
+						case "120":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+						break;
+						case "130":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+						break;
+						case "140":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+						break;
+						case "160":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+						break;
+						case "180":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+						break;
+					}
+					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+					console.log(summary_cost_final);
+					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+					hide_divs(rooms_num, next_div);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -392,7 +464,6 @@
     			};
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -405,6 +476,32 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
+		    	summary_room = orden+1;
+					summary_cost = $(final_cost).val();
+					switch(summary_cost){
+						case "100":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+						break;
+						case "120":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+						break;
+						case "130":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+						break;
+						case "140":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+						break;
+						case "160":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+						break;
+						case "180":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+						break;
+					}
+					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+					console.log(summary_cost_final);
+					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+					hide_divs(rooms_num, next_div);
 				console.log(orden+1);
 				//console.log(sumary[orden]);
 				//console.log(send);	        
@@ -420,7 +517,6 @@
 				};
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
-	            hide_divs(rooms_num, next_div);
 	            data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
@@ -433,7 +529,32 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-					
+					summary_room = orden+1;
+					summary_cost = $(final_cost).val();
+					switch(summary_cost){
+						case "100":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+						break;
+						case "120":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+						break;
+						case "130":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+						break;
+						case "140":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+						break;
+						case "160":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+						break;
+						case "180":
+							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+						break;
+					}
+					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+					console.log(summary_cost_final);
+					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+					hide_divs(rooms_num, next_div);
 				//console.log(sumary[orden]);
 				//console.log(send);
 	        });
@@ -472,6 +593,7 @@
         $(check_box).prop("checked", true);
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+        $("#total_summary").html();
     	}
     });
   }
@@ -495,7 +617,7 @@
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <span>"+$(encabezado).text()+"</span>");
               	}
-              }
+              }	
             }  
             break;
           case "2":
