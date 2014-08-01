@@ -289,6 +289,8 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
 	        });
 					
 	        break;
@@ -341,7 +343,7 @@
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
-	   			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
 	        });
 	        break;
 	    case 3:
@@ -392,7 +394,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
+					var total_summary = $("#purchase_amount").val();
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
 	        });
 	        break;
@@ -589,7 +591,7 @@
         $(check_box).prop("checked", true);
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-        cost_summary = parseInt($(purchase_amount).val())/100;
+        cost_summary = ""+ parseInt($(purchase_amount).val())/100;
         $("#total_summary").html("TOTAL <span>$ "+cost_summary+".00</span>");
     	}
     });
