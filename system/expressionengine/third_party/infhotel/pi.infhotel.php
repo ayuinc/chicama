@@ -293,9 +293,9 @@ class Infhotel
                                     <div class="large-9 large-centered columns">
                                       <input id="final_cost_simple_garden'.$i.'" type="hidden" name="final_cost_simple_garden'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Simple</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">Triple</option>
+                                        <option value="1" selected="selected">Single (1 person)</option>
+                                        <option value="2">Double (2 persons)</option>
+                                        <option value="3">Triple (3 persons)</option>
                                       </select>
                                       <h2 id="cost_simple_garden'.$i.'" class="text-center">USD 100/night</h2>
                                       <button id="add_room_simple_garden'.$i.'" type="button" class="tiny send expand">Select</button>
@@ -324,9 +324,9 @@ class Infhotel
                                     <div class="large-9 large-centered columns">
                                       <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Simple</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">Triple</option>
+                                        <option value="1" selected="selected">Single (1 person)</option>
+                                        <option value="2">Double (2 persons)</option>
+                                        <option value="3">Triple (3 persons)</option>
                                       </select>
                                       <h2 id="cost_doble_garden'.$i.'" class="text-center">USD 100/night</h2>
                                       <button id="add_room_doble_garden'.$i.'" type="button" class="tiny send expand">Select</button>
@@ -354,9 +354,9 @@ class Infhotel
                                     <div class="large-9 large-centered columns">
                                       <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Simple</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">Triple</option>
+                                        <option value="1" selected="selected">Single (1 person)</option>
+                                        <option value="2">Double (2 persons)</option>
+                                        <option value="3">Triple (3 persons)</option>
                                       </select>
                                       <h2 id="cost_triple_garden'.$i.'" class="text-center">USD 100/night</h2>
                                       <button id="add_room_triple_garden'.$i.'" type="button" class="tiny send expand">Select</button>
@@ -388,9 +388,9 @@ class Infhotel
                                     <div class="large-9 large-centered columns">
                                       <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="100"> 
                                       <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Simple</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">Triple</option>
+                                        <option value="1" selected="selected">Single (1 person)</option>
+                                        <option value="2">Double (2 persons)</option>
+                                        <option value="3">Triple (3 persons)</option>
                                       </select>
                                       <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 120/night</h2>
                                       <button id="add_room_simple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
@@ -420,9 +420,9 @@ class Infhotel
                                     <div class="large-9 large-centered columns">
                                       <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="100">
                                       <select name="persons_number" id="guests_doble_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Simple</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">Triple</option>
+                                        <option value="1" selected="selected">Single (1 person)</option>
+                                        <option value="2">Double (2 persons)</option>
+                                        <option value="3">Triple (3 persons)</option>
                                       </select>
                                       <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 120/night</h2>
                                       <button id="add_room_doble_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
@@ -451,9 +451,9 @@ class Infhotel
                                     <div class="large-9 large-centered columns">
                                     <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="100">
                                       <select name="persons_number" id="guests_triple_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Simple</option>
-                                        <option value="2">Double</option>
-                                        <option value="3">Triple</option>
+                                        <option value="1" selected="selected">Single (1 person)</option>
+                                        <option value="2">Double (2 persons)</option>
+                                        <option value="3">Triple (3 persons)</option>
                                       </select>
                                       <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 120/night</h2>
                                       <button id="add_room_triple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
@@ -584,7 +584,7 @@ class Infhotel
                     <div class="row">
                       <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
                       <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
-                      <div class="large-3 columns"><span class="circle">3</span><p>GUEST INFORMATION</p></div>
+                      <div class="large-3 columns"><span class="circle active">3</span><p>GUEST INFORMATION</p></div>
                       <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
                     </div>
                   </div>
@@ -603,7 +603,7 @@ class Infhotel
               <div class="large-12 columns">
                 <div class="row">
                   <div class="large-9 columns">
-                    <p>Chicama Surf Resort has set the option where you can add the services you want for your rate.</p>
+                    <p>Add additional services that we offer.</p>
                     <form action="/?/content/newreservation4" class="book_a_room" method="POST">
                         <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <!-- add-ons list -->
