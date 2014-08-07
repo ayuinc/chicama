@@ -27,20 +27,20 @@
                     </div> -->
                     {exp:get_post_vars parse="inward"}
                     <div class="large-3 columns">
-                      <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN" value="{check_in_date}">
+                      <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN" value="{post_check_in_date}">
                     </div>
                     <!-- <div class="large-1 columns">
                       <label for="right-label" class="inline">Check-out</label>
                     </div> -->
                     <div class="large-3 columns">
-                      <input type="text" id="check_out_date" name="check_out_date" placeholder="CHECK-OUT" value="{check_out_date}">
+                      <input type="text" id="check_out_date" name="check_out_date" placeholder="CHECK-OUT" value="{post_check_out_date}">
                     </div>
                     <div class="large-1 columns">
                       <label for="right-label" class="inline">Rooms</label>
                     </div>
                     <div class="large-2 columns">
                       <select name="room_number"  pattern="number" data-invalid="">
-                        {if {room_number} == "1"}
+                        {if {post_room_number} == "1"}
                         <option selected value="1">1</option> 
                         {if:else}
                         <option value="1">1</option>
@@ -592,7 +592,8 @@
     			}
     		}
         $(check_box).prop("checked", false);
-        $(buttom).removeClass("active"); //select all checkboxes with class "checkbox1" 
+        $(buttom).removeClass("active");
+        $(buttom).html("added"); //select all checkboxes with class "checkbox1" 
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) ); 
         var total_summary = $("#purchase_amount").val();
    			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
