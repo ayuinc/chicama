@@ -590,7 +590,6 @@
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) ); 
         var total_summary = $("#purchase_amount").val();
-        console.log(total_summary);
    			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());      
     	}
@@ -602,6 +601,7 @@
 	    	var total_summary = $("#purchase_amount").val();
  				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());
+                console.log(total_summary);
     		if(sumary == "lunch_and_dinner_summary"){
     			switch(total_summary){
     				case '10000':
