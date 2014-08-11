@@ -547,23 +547,41 @@ class Infhotel
                       <input type="hidden" name="XID" value="{XID_HASH}" /> 
                       <!-- check-in inputs row -->
                       <div class="row">
-                        <div class="large-3 columns">
-                          <input type="text" id="check_in_date" name="check_in_date" placeholder="Check-in Date">
-                        </div>
-                        <div class="large-3 columns">
-                          <input type="text" id="check_out_date" name="check_out_date" placeholder="Check-out Date">
-                        </div>
-                        <div class="large-1 columns">
-                          <label for="right-label" class="inline">Rooms</label>
-                        </div>
-                        <div class="large-2 columns">
-                          <select name="room_number"  pattern="number" data-invalid="">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                          </select>
-                        </div>
+                        {exp:get_post_vars parse="inward"}
+                    <div class="large-3 columns">
+                      <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN" value="{post_check_in_date}">
+                    </div>
+                    <div class="large-3 columns">
+                      <input type="text" id="check_out_date" name="check_out_date" placeholder="CHECK-OUT" value="{post_check_out_date}">
+                    </div>
+                    <div class="large-1 columns">
+                      <label for="right-label" class="inline">Rooms</label>
+                    </div>
+                    <div class="large-2 columns">
+                      <select name="room_number"  pattern="number" data-invalid="">
+                        {if {post_room_number} == "1"}
+                        <option selected value="1">1</option> 
+                        {if:else}
+                        <option value="1">1</option>
+                        {/if}
+                        {if {post_room_number} == "2"}
+                        <option selected value="2">2</option> 
+                        {if:else}
+                        <option value="2">2</option>
+                        {/if}
+                        {if {post_room_number} == "3"}
+                        <option selected value="3">3</option> 
+                        {if:else}
+                        <option value="3">3</option>
+                        {/if}
+                        {if {post_room_number} == "4"}
+                        <option selected value="4">4</option> 
+                        {if:else}
+                        <option value="4">4</option>
+                        {/if}
+                      </select>
+                    </div>
+                     {/exp:get_post_vars}
                         <div class="large-3 columns end">
                           <input type="submit" class="button tiny send expand" value="check again">
                         </div>
