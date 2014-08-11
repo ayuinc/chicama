@@ -22,16 +22,10 @@
                 <form class="book_a_room" action="/?/content/newreservation2" method="POST">
                 	<input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <div class="row">
-                    <!-- <div class="large-1 columns">
-                      <label for="right-label" class="inline">Check-in</label>
-                    </div> -->
                     {exp:get_post_vars parse="inward"}
                     <div class="large-3 columns">
                       <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN" value="{post_check_in_date}">
                     </div>
-                    <!-- <div class="large-1 columns">
-                      <label for="right-label" class="inline">Check-out</label>
-                    </div> -->
                     <div class="large-3 columns">
                       <input type="text" id="check_out_date" name="check_out_date" placeholder="CHECK-OUT" value="{post_check_out_date}">
                     </div>
@@ -45,17 +39,17 @@
                         {if:else}
                         <option value="1">1</option>
                         {/if}
-                        {if {room_number} == "2"}
+                        {if {post_room_number} == "2"}
                         <option selected value="2">2</option> 
                         {if:else}
                         <option value="2">2</option>
                         {/if}
-                        {if {room_number} == "3"}
+                        {if {post_room_number} == "3"}
                         <option selected value="3">3</option> 
                         {if:else}
                         <option value="3">3</option>
                         {/if}
-                        {if {room_number} == "4"}
+                        {if {post_room_number} == "4"}
                         <option selected value="4">4</option> 
                         {if:else}
                         <option value="4">4</option>
@@ -273,22 +267,22 @@
 		    	summary_cost = $(final_cost).val();
 		    	switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 		    	$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -326,22 +320,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+							summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 100.00</span>";
 						break;
 						case "120":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+							summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 120.00</span>";
 						break;
 						case "130":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+							summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
 						break;
 						case "140":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+							summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 140.00</span>";
 						break;
 						case "160":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+							summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 160.00</span>";
 						break;
 						case "180":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+							summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 180.00</span>";
 						break;
 					}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -378,22 +372,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+							summary_cost_final="Garden View Triple (2 persons) for N nights <span>$ 100.00</span>";
 						break;
 						case "120":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+							summary_cost_final="Garden View Triple (2 persons) for N nights <span>$ 120.00</span>";
 						break;
 						case "130":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+							summary_cost_final="Garden View Triple (2 persons) for N nights <span>$ 130.00</span>";
 						break;
 						case "140":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+							summary_cost_final="Garden View Triple (2 persons) for N nights <span>$ 140.00</span>";
 						break;
 						case "160":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+							summary_cost_final="Garden View Triple (2 persons) for N nights <span>$ 160.00</span>";
 						break;
 						case "180":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+							summary_cost_final="Garden View Triple (2 persons) for N nights <span>$ 180.00</span>";
 						break;
 					}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -430,22 +424,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+							summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 100.00</span>";
 						break;
 						case "120":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+							summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
 						break;
 						case "130":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+							summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 130.00</span>";
 						break;
 						case "140":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+							summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 140.00</span>";
 						break;
 						case "160":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+							summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 160.00</span>";
 						break;
 						case "180":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+							summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 180.00</span>";
 						break;
 					}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -482,22 +476,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+							summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 100.00</span>";
 						break;
 						case "120":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+							summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 120.00</span>";
 						break;
 						case "130":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+							summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 130.00</span>";
 						break;
 						case "140":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+							summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
 						break;
 						case "160":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+							summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 160.00</span>";
 						break;
 						case "180":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+							summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 180.00</span>";
 						break;
 					}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -534,22 +528,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 						case "100":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 100.00</span>";
+							summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 100.00</span>";
 						break;
 						case "120":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 120.00</span>";
+							summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 120.00</span>";
 						break;
 						case "130":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 130.00</span>";
+							summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 130.00</span>";
 						break;
 						case "140":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 140.00</span>";
+							summary_cost_final="Ocean View Triple (3 persons) for N nights<span>$ 140.00</span>";
 						break;
 						case "160":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 160.00</span>";
+							summary_cost_final="Ocean View Triple (3 persons) for N nights<span>$ 160.00</span>";
 						break;
 						case "180":
-							summary_cost_final="Monday, July 07, 2014 <span>$ 180.00</span>";
+							summary_cost_final="Ocean View Triple (3 persons) for N nights<span>$ 180.00</span>";
 						break;
 					}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -635,11 +629,11 @@
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner (1 person)<span>"+$(encabezado).text()+"</span>");
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport (1 person)<span>"+$(encabezado).text()+"</span>");
               	}
               }	
             }  
@@ -652,11 +646,11 @@
     		    	var total_summary = $("#purchase_amount").val();
        				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner (2 persons)<span>"+$(encabezado).text()+"</span>");
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport (2 persons)<span>"+$(encabezado).text()+"</span>");
               	}
               }
             }
@@ -670,11 +664,11 @@
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner (3 persons)<span>"+$(encabezado).text()+"</span>");
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport (3 persons)<span>"+$(encabezado).text()+"</span>");
               	}
               }
             }
