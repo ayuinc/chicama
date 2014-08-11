@@ -595,11 +595,31 @@
     	}
     	else{
     		if(sumary=="lunch_and_dinner_summary"){
-    			$("#"+sumary).html("Lunch And Dinner <span>"+$(encabezado).text()+"</span>");
+    			switch($(total_summary).val()){
+    				case "10000":
+    				$("#"+sumary).html("Lunch And Dinner (1 person)<span>"+$(encabezado).text()+"</span>");
+    				break;
+    				case "20000":
+    				$("#"+sumary).html("Lunch And Dinner (2 persons)<span>"+$(encabezado).text()+"</span>");
+    				break;
+    				case "30000":
+    				$("#"+sumary).html("Lunch And Dinner (3 persons)<span>"+$(encabezado).text()+"</span>");
+    				break;
+    			}
     		}
     		else{
     			if(sumary=="transport_summary"){
-    				$("#"+sumary).html("Transport <span>"+$(encabezado).text()+"</span>");
+    				switch($(total_summary).val()){
+    					case "10000":
+    					$("#"+sumary).html("Transport (1 person) <span>"+$(encabezado).text()+"</span>");
+    					break;
+    					case "20000":
+    					$("#"+sumary).html("Transport (2 persons) <span>"+$(encabezado).text()+"</span>");
+    					break;
+    					case "30000":
+    					$("#"+sumary).html("Transport (3 persons) <span>"+$(encabezado).text()+"</span>");
+    					break;
+    				}
     			}
     		}
         $(check_box).prop("checked", true);
