@@ -600,13 +600,13 @@
         console.log($(purchase_amount).val());
         if(sumary == "lunch_and_dinner_summary"){
     			switch($(purchase_amount).val()){
-    				case '10000':
+    				case 10000:
     				$("#"+sumary).html("Lunch And Dinner (1 person)<span>"+$(encabezado).text()+"</span>");
     				break;
-    				case '20000':
+    				case 20000:
     				$("#"+sumary).html("Lunch And Dinner (2 persons)<span>"+$(encabezado).text()+"</span>");
     				break;
-    				case '30000':
+    				case 30000:
     				$("#"+sumary).html("Lunch And Dinner (3 persons)<span>"+$(encabezado).text()+"</span>");
     				break;
     			}
@@ -614,13 +614,13 @@
     		else{
     			if(sumary == "transport_summary"){
     				switch($(purchase_amount).val()){
-    					case '10000':
+    					case 10000:
     					$("#"+sumary).html("Transport (1 person) <span>"+$(encabezado).text()+"</span>");
     					break;
-    					case '20000':
+    					case 20000:
     					$("#"+sumary).html("Transport (2 persons) <span>"+$(encabezado).text()+"</span>");
     					break;
-    					case '30000':
+    					case 30000:
     					$("#"+sumary).html("Transport (3 persons) <span>"+$(encabezado).text()+"</span>");
     					break;
     				}
