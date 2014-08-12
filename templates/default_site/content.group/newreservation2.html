@@ -135,12 +135,12 @@
 		var doble_ocean = 0;
 		var triple_ocean = 0;
 		var sumary = { };
- 
+ 		19/08/2014
 		console.log(String(checkin));
 		console.log(String(checkout));
-	
-		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
-		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+		2014-10-01
+		checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
+		checkout_date = checkout.substr(0, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
 		var data = {
 			 	"FLlegada": checkin_date,
 			    "FSalida": checkout_date,
