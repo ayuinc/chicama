@@ -136,9 +136,9 @@
 		var triple_ocean = 0;
 		var sumary = { };
 
-		var d1 = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-20"+checkin.substr(0, 2);
+		var d1 = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2);
 		var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
-		var d2 = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-20"+checkout.substr(0, 2)
+		var d2 = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)
 		var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
 		
 		var fin = dat2.getTime() - dat1.getTime();
