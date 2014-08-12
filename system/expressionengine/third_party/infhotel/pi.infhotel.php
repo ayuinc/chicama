@@ -731,9 +731,9 @@ class Infhotel
                           <hr>
 
                           <p class="ys-label">ARRIVAL:</p>
-                          <p class="ys-field">Monday, July 07, 2014</p>
+                          <p class="ys-field">{post_check_in_date}/p>
                           <p class="ys-label">DEPARTURE:</p>
-                          <p class="ys-field">Monday, July 07, 2014</p>
+                          <p class="ys-field">{post_check_out_date}</p>
                           
 
                           <hr>
