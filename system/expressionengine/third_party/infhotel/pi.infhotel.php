@@ -158,7 +158,8 @@ class Infhotel
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $rooms_num = ee()->TMPL->fetch_param('rooms_num');
-
+        $fecha_checkin = str_replace("/", "",$fecha_checkin);
+        $fecha_checkout = str_replace("/", "",$fecha_checkout);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
