@@ -143,7 +143,8 @@
 		
 		var fin = dat2.getTime() - dat1.getTime();
 		var dias = Math.floor(fin / (1000 * 60 * 60 * 24));  
-		
+		console.log(d1);
+		console.log(d2);
 		console.log(dias);
 		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
 		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
