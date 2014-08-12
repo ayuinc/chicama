@@ -126,8 +126,8 @@
 		var num_hab = {post_room_number};
 		var checkin_date ="";
 		var checkout_date ="";
-		var checkin = ""+{post_check_in_date};
-		var checkout = ""+{post_check_out_date} ;
+		var checkin = ""+"{post_check_in_date}";
+		var checkout = ""+"{post_check_out_date}" ;
 		var simple_garden = 0;
 		var doble_garden = 0;
 		var triple_garden = 0;
@@ -135,8 +135,19 @@
 		var doble_ocean = 0;
 		var triple_ocean = 0;
 		var sumary = { };
-		checkin_date = checkin.substr(4, 4)+"-"+checkin.substr(2, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
-		checkout_date = checkout.substr(4, 4)+"-"+checkout.substr(2, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+
+		var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+		d1 = d1.split("-");
+		var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+		var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+		d2 = d2.split("-");
+		var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+		
+		var fin = dat2.getTime() - dat1.getTime();
+		var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
+
+		checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
+		checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
 		var data = {
 			 	"FLlegada": checkin_date,
 			    "FSalida": checkout_date,
@@ -147,6 +158,7 @@
                 "NPasajero": "0" ,
                 "Pasajeros" : {}
 		};
+		console.log(data);
 		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
     cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
     cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
@@ -265,24 +277,25 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
+		    	console.log(dias);
 		    	switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
+		    			summary_cost_final="Ocean View Single (1 person) for "+dias+" nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Double (2 persons) for "+dias+" nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
+		    			summary_cost_final="Ocean View Double (2 persons) for "+dias+" nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Garden View Triple (3 persons) for N nights <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Triple (3 persons) for "+dias+" nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 180.00</span>";
+		    			summary_cost_final="Ocean View Triple (3 persons) for "+dias+" nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 		    	$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -301,7 +314,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 					
@@ -320,22 +333,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
+		    			summary_cost_final="Ocean View Single (1 person) for "+dias+" nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Double (2 persons) for "+dias+" nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
+		    			summary_cost_final="Ocean View Double (2 persons) for "+dias+" nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Garden View Triple (3 persons) for N nights <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Triple (3 persons) for "+dias+" nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 180.00</span>";
+		    			summary_cost_final="Ocean View Triple (3 persons) for "+dias+" nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -354,7 +367,7 @@
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 	        break;
@@ -372,22 +385,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
+		    			summary_cost_final="Ocean View Single (1 person) for "+dias+" nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Double (2 persons) for "+dias+" nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
+		    			summary_cost_final="Ocean View Double (2 persons) for "+dias+" nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Garden View Triple (3 persons) for N nights <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Triple (3 persons) for "+dias+" nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 180.00</span>";
+		    			summary_cost_final="Ocean View Triple (3 persons) for "+dias+" nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -406,7 +419,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 	        break;
@@ -424,22 +437,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
+		    			summary_cost_final="Ocean View Single (1 person) for "+dias+" nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Double (2 persons) for "+dias+" nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
+		    			summary_cost_final="Ocean View Double (2 persons) for "+dias+" nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Garden View Triple (3 persons) for N nights <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Triple (3 persons) for "+dias+" nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 180.00</span>";
+		    			summary_cost_final="Ocean View Triple (3 persons) for "+dias+" nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -459,7 +472,7 @@
 		    	$(purchase_amount).val(amount);
 	        });
 					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        break;
 	    case 5:
@@ -476,22 +489,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
+		    			summary_cost_final="Ocean View Single (1 person) for "+dias+" nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Double (2 persons) for "+dias+" nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
+		    			summary_cost_final="Ocean View Double (2 persons) for "+dias+" nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Garden View Triple (3 persons) for N nights <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Triple (3 persons) for "+dias+" nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 180.00</span>";
+		    			summary_cost_final="Ocean View Triple (3 persons) for "+dias+" nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -510,7 +523,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 			});
 	        break;
@@ -528,22 +541,22 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
+		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
 		    		break;
 		    		case "120":
-		    			summary_cost_final="Ocean View Single (1 person) for N nights <span>$ 120.00</span>";
+		    			summary_cost_final="Ocean View Single (1 person) for "+dias+" nights <span>$ 120.00</span>";
 		    		break;
 		    		case "130":
-		    			summary_cost_final="Garden View Double (2 persons) for N nights <span>$ 130.00</span>";
+		    			summary_cost_final="Garden View Double (2 persons) for "+dias+" nights <span>$ 130.00</span>";
 		    		break;
 		    		case "140":
-		    			summary_cost_final="Ocean View Double (2 persons) for N nights <span>$ 140.00</span>";
+		    			summary_cost_final="Ocean View Double (2 persons) for "+dias+" nights <span>$ 140.00</span>";
 		    		break;
 		    		case "160":
-		    			summary_cost_final="Garden View Triple (3 persons) for N nights <span>$ 160.00</span>";
+		    			summary_cost_final="Garden View Triple (3 persons) for "+dias+" nights <span>$ 160.00</span>";
 		    		break;
 		    		case "180":
-		    			summary_cost_final="Ocean View Triple (3 persons) for N nights <span>$ 180.00</span>";
+		    			summary_cost_final="Ocean View Triple (3 persons) for "+dias+" nights <span>$ 180.00</span>";
 		    		break;
 		    	}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -562,19 +575,35 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 	        break;
 	    } 
 	}
 });
+
+
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
+
+  	var checkin = ""+"{post_check_in_date}";
+  	var checkout = ""+"{post_check_out_date}" ;
+  	var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+  	d1 = d1.split("-");
+  	var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+  	var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+  	d2 = d2.split("-");
+  	var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+  	
+  	var fin = dat2.getTime() - dat1.getTime();
+  	var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
+
     var cost_summary = "";
     $("#"+sumary).html("");
     $(check_box).prop("checked", false);
 		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
+    	console.log(dias);
     	e.preventDefault();
     	if($(check_box).is(":checked")) {
     		if(sumary=="lunch_and_dinner_summary"){
@@ -588,8 +617,9 @@
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
-        $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) ); 
-        var total_summary = $("#purchase_amount").val();
+        var total_summary = parseInt($(purchase_amount).val()) - parseInt($(input).val());
+        $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+
    			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());      
     	}
@@ -598,15 +628,15 @@
         $(buttom).html("added");
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         if(sumary == "lunch_and_dinner_summary"){
-    			switch($("#encabezado_transport").html()){
+    			switch($("#encabezado_lunch_and_dinner").html()){
     				case "$100.00":
-    				$("#"+sumary).html("Lunch And Dinner (1 person)<span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner (1 person) <span>"+$(encabezado).text()+"</span>");
     				break;
     				case "$200.00":
-    				$("#"+sumary).html("Lunch And Dinner (2 persons)<span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner (2 persons) <span>"+$(encabezado).text()+"</span>");
     				break;
     				case "$300.00":
-    				$("#"+sumary).html("Lunch And Dinner (3 persons)<span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner (3 persons) <span>"+$(encabezado).text()+"</span>");
     				break;
     			}
     		}
@@ -625,8 +655,8 @@
     				}
     			}
     		}
+    		var total_summary = parseInt($(purchase_amount).val()*dias) + parseInt($(input).val());
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-	    	var total_summary = $("#purchase_amount").val();
  				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());
     	}
@@ -698,6 +728,7 @@
   }
 
 	function hide_divs (rooms_num, div_visible){
+
     for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
@@ -722,7 +753,7 @@
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -732,7 +763,7 @@
             });
             $( "#check_out_date" ).datepicker({
               //minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -748,7 +779,7 @@
 			    }
 			    else{
 			    	$("#cont").html($("#contenedor").html());
-			    	//$("#add_on").html("");
+			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
@@ -757,7 +788,7 @@
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -767,7 +798,7 @@
             });
             $( "#check_out_date" ).datepicker({
               //minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -782,7 +813,7 @@
 			    	$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    }
 			    else{
-			    	$("#content").html($("#contenedor").html());
+			    	$("#cont").html($("#contenedor").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
@@ -792,7 +823,7 @@
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -802,7 +833,7 @@
             });
             $( "#check_out_date" ).datepicker({
               //minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -827,7 +858,7 @@
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -837,7 +868,7 @@
             });
             $( "#check_out_date" ).datepicker({
               //minDate: new Date(),
-              dateFormat: 'ddmmyy',
+              dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
@@ -858,7 +889,7 @@
           $("#summary_input").val($("#reserva_summary").html());
           $( "#check_in_date" ).datepicker({
             minDate: new Date(),
-            dateFormat: 'ddmmyy',
+            dateFormat: 'dd/mm/yy',
             defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 1,
@@ -868,7 +899,7 @@
           });
           $( "#check_out_date" ).datepicker({
             //minDate: new Date(),
-            dateFormat: 'ddmmyy',
+            dateFormat: 'dd/mm/yy',
             defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 1,

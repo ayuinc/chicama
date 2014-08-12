@@ -158,7 +158,8 @@ class Infhotel
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $rooms_num = ee()->TMPL->fetch_param('rooms_num');
-
+        $fecha_checkin = str_replace("/", "",$fecha_checkin);
+        $fecha_checkout = str_replace("/", "",$fecha_checkout);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -710,11 +711,11 @@ class Infhotel
                           <!-- end add-on description -->
                         </div>
                       </div>
-                      <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                      <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
-                      <input type="hidden" name="request" maxlength="1000"  id="full_request">
-                      <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                      <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
+                      <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                      <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                      <input type="text" name="request" maxlength="1000"  id="full_request">
+                      <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                      <input type="text" name="summary" maxlength="1000"  id="summary_input">
                       <button id="submit_paso3" type="submit" class="send">Continue</button> 
                     </div>
                     <!-- end add-on item -->
@@ -728,13 +729,13 @@ class Infhotel
                         <div id="reserva_summary" class="your-stay">
                           <h2 class="text-center">YOUR STAY</h2>
                           <hr>
-
+                          {exp:get_post_vars parse="inward"}
                           <p class="ys-label">ARRIVAL:</p>
-                          <p class="ys-field">Monday, July 07, 2014</p>
+                          <p class="ys-field">{post_check_in_date}</p>
                           <p class="ys-label">DEPARTURE:</p>
-                          <p class="ys-field">Monday, July 07, 2014</p>
-                          
-
+                          <p class="ys-field">{post_check_out_date}</p>
+                                          
+                          {/exp:get_post_vars}
                           <hr>
 
                           <p id="title_room1_summary"class="ys-label"></p>
