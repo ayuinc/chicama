@@ -729,13 +729,13 @@ class Infhotel
                         <div id="reserva_summary" class="your-stay">
                           <h2 class="text-center">YOUR STAY</h2>
                           <hr>
-
+                          {exp:get_post_vars parse="inward"}
                           <p class="ys-label">ARRIVAL:</p>
                           <p class="ys-field">{post_check_in_date}/p>
                           <p class="ys-label">DEPARTURE:</p>
                           <p class="ys-field">{post_check_out_date}</p>
-                          
-
+                                          
+                          {/exp:get_post_vars}
                           <hr>
 
                           <p id="title_room1_summary"class="ys-label"></p>
