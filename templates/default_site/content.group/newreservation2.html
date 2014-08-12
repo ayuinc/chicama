@@ -588,6 +588,7 @@
     $(check_box).prop("checked", false);
 		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
+    	console.log(dias);
     	e.preventDefault();
     	if($(check_box).is(":checked")) {
     		if(sumary=="lunch_and_dinner_summary"){
