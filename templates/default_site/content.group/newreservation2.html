@@ -314,7 +314,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 					
@@ -367,7 +367,7 @@
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 	        break;
@@ -419,7 +419,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 	        break;
@@ -472,7 +472,7 @@
 		    	$(purchase_amount).val(amount);
 	        });
 					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        break;
 	    case 5:
@@ -523,7 +523,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 			});
 	        break;
@@ -575,7 +575,7 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
 	        });
 	        break;
