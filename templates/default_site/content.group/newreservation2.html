@@ -597,7 +597,7 @@
   	
   	var fin = dat2.getTime() - dat1.getTime();
   	var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
-  	
+
     var cost_summary = "";
     $("#"+sumary).html("");
     $(check_box).prop("checked", false);
@@ -617,7 +617,7 @@
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
-        var total_summary = parseInt($(purchase_amount).val()*dias) - parseInt($(input).val());
+        var total_summary = parseInt($(purchase_amount).val()) - parseInt($(input).val());
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
 
    			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
