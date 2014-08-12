@@ -714,6 +714,8 @@
   }
 
 	function hide_divs (rooms_num, div_visible){
+		var checkin = ""+"{post_check_in_date}";
+		var checkout = ""+"{post_check_out_date}" ;
 		var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
 		d1 = d1.split("-");
 		var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
@@ -723,7 +725,7 @@
 		
 		var fin = dat2.getTime() - dat1.getTime();
 		var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
-		
+
     for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
