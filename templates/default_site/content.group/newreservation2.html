@@ -598,15 +598,15 @@
         $(buttom).html("added");
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         if(sumary == "lunch_and_dinner_summary"){
-    			switch($("#encabezado_transport").html()){
+    			switch($("#encabezado_lunch_and_dinner").html()){
     				case "$100.00":
-    				$("#"+sumary).html("Lunch And Dinner (1 person)<span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner (1 person) <span>"+$(encabezado).text()+"</span>");
     				break;
     				case "$200.00":
-    				$("#"+sumary).html("Lunch And Dinner (2 persons)<span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner (2 persons) <span>"+$(encabezado).text()+"</span>");
     				break;
     				case "$300.00":
-    				$("#"+sumary).html("Lunch And Dinner (3 persons)<span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner (3 persons) <span>"+$(encabezado).text()+"</span>");
     				break;
     			}
     		}
