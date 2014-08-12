@@ -145,13 +145,6 @@
 		
 		var fin = dat2.getTime() - dat1.getTime();
 		var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
-		
-		console.log(d1);
-		console.log(d2);
-		console.log(dias);
-
-		console.log(checkin);
-		console.log(checkout);
 
 		checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
 		checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
@@ -284,6 +277,7 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
+		    	console.log(dias);
 		    	switch(summary_cost){
 		    		case "100":
 		    			summary_cost_final="Garden View Single (1 person) for N nights <span>$ 100.00</span>";
