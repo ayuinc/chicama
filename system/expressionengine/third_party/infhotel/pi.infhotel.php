@@ -731,7 +731,7 @@ class Infhotel
                           <hr>
                           {exp:get_post_vars parse="inward"}
                           <p class="ys-label">ARRIVAL:</p>
-                          <p class="ys-field">{post_check_in_date}/p>
+                          <p class="ys-field">{post_check_in_date}</p>
                           <p class="ys-label">DEPARTURE:</p>
                           <p class="ys-field">{post_check_out_date}</p>
                                           
