@@ -767,18 +767,45 @@ figure {
 	h3{
 		display: inline-block;
 		border-bottom: 1px solid #2c2625;
-		margin-bottom: 1.5rem;
+		margin-bottom: 3.5rem;
 		margin-top: 0;
 		font-weight: 200;
 		line-height: 1.2;
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 	p{
 		font-size: 1rem;
 		color: #2c2625;
 	}
+	.phone{
+		margin-left: 12px;
+		font-size: 1.4rem;
+	}
 	.send{
 		float: right;
+	}
+	.book_a_room{
+		padding-left: 3rem;
+		input[type="text"]{
+			height: 1.9rem;
+			margin-bottom: 3.2em;
+		}
+		select{
+			height: 1.9rem;
+			width: 4rem;
+			border-radius: 2px;
+			padding: 0 1rem;
+		}
+		.send{
+			background: #8c6339;
+			width: 8.5rem;
+			height: 2.5rem;
+			border-radius: 2px;
+			font-size: 0.9rem;
+			float: left;
+			position: relative;
+			top: -8px;
+		}
 	}
 }
 
@@ -813,17 +840,26 @@ figure {
 			margin-bottom: 0;
 			color: $color-brown;
 		}
-
-		&.active{
+		
+		&.done{
 			color: $color-black;
 			border: 1px solid $color-black;
+			
+			+ p {
+
+			}
+		}
+
+		&.active{
+			color: $color-brown;
+			border: 1px solid $color-brown;
 
 			&:after{
 				background: url(../img/book-step-current.png) no-repeat;
 			}
 
 			+ p {
-				color: $color-black;
+				color: $color-brown;
 			}
 		}
 
