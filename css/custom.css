@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "IBM437";
 html, body {
   height: 100%;
   font-family: "proxima-nova",sans-serif;
@@ -600,11 +600,11 @@ figure {
   #form_box_6 h3 {
     display: inline-block;
     border-bottom: 1px solid #2c2625;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
     margin-top: 0;
     font-weight: 200;
     line-height: 1.2;
-    font-size: 2rem; }
+    font-size: 1.8rem; }
   #form_box p,
   #form_box_2 p,
   #form_box_3 p,
@@ -613,6 +613,14 @@ figure {
   #form_box_6 p {
     font-size: 1rem;
     color: #2c2625; }
+  #form_box .phone,
+  #form_box_2 .phone,
+  #form_box_3 .phone,
+  #form_box_4 .phone,
+  #form_box_5 .phone,
+  #form_box_6 .phone {
+    margin-left: 12px;
+    font-size: 1.4rem; }
   #form_box .send,
   #form_box_2 .send,
   #form_box_3 .send,
@@ -620,6 +628,45 @@ figure {
   #form_box_5 .send,
   #form_box_6 .send {
     float: right; }
+  #form_box .book_a_room,
+  #form_box_2 .book_a_room,
+  #form_box_3 .book_a_room,
+  #form_box_4 .book_a_room,
+  #form_box_5 .book_a_room,
+  #form_box_6 .book_a_room {
+    padding-left: 3rem; }
+    #form_box .book_a_room input[type="text"],
+    #form_box_2 .book_a_room input[type="text"],
+    #form_box_3 .book_a_room input[type="text"],
+    #form_box_4 .book_a_room input[type="text"],
+    #form_box_5 .book_a_room input[type="text"],
+    #form_box_6 .book_a_room input[type="text"] {
+      height: 1.9rem;
+      margin-bottom: 3.2em; }
+    #form_box .book_a_room select,
+    #form_box_2 .book_a_room select,
+    #form_box_3 .book_a_room select,
+    #form_box_4 .book_a_room select,
+    #form_box_5 .book_a_room select,
+    #form_box_6 .book_a_room select {
+      height: 1.9rem;
+      width: 4rem;
+      border-radius: 2px;
+      padding: 0 1rem; }
+    #form_box .book_a_room .send,
+    #form_box_2 .book_a_room .send,
+    #form_box_3 .book_a_room .send,
+    #form_box_4 .book_a_room .send,
+    #form_box_5 .book_a_room .send,
+    #form_box_6 .book_a_room .send {
+      background: #8c6339;
+      width: 8.5rem;
+      height: 2.5rem;
+      border-radius: 2px;
+      font-size: 0.9rem;
+      float: left;
+      position: relative;
+      top: -8px; }
 
 #form_box,
 #form_box_2,
@@ -649,13 +696,16 @@ figure {
       font-size: 0.8rem;
       margin-bottom: 0;
       color: #8b623b; }
-    #steps_list .circle.active {
+    #steps_list .circle.done {
       color: #2c2625;
       border: 1px solid #2c2625; }
+    #steps_list .circle.active {
+      color: #8b623b;
+      border: 1px solid #8b623b; }
       #steps_list .circle.active:after {
         background: url(../img/book-step-current.png) no-repeat; }
       #steps_list .circle.active + p {
-        color: #2c2625; }
+        color: #8b623b; }
     #steps_list .circle:after {
       content: "";
       background: url(../img/book-step.png) no-repeat;
