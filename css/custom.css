@@ -622,7 +622,8 @@ figure {
   #form_box_5 .phone,
   #form_box_6 .phone {
     margin-left: 12px;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    color: #888; }
   #form_box .send,
   #form_box_2 .send,
   #form_box_3 .send,
@@ -669,12 +670,25 @@ figure {
       float: left;
       position: relative;
       top: -8px; }
+  #form_box .search_again,
+  #form_box_2 .search_again,
+  #form_box_3 .search_again,
+  #form_box_4 .search_again,
+  #form_box_5 .search_again,
+  #form_box_6 .search_again {
+    padding-left: 3.4rem; }
 
 #form_box_2 .main_form select {
   width: 11rem;
   height: 2.9rem; }
-#form_box_2 .main_form button {
-  background: #2e2113; }
+#form_box_2 .main_form .large-3 .large-9 {
+  text-align: right;
+  margin-right: 0;
+  margin-top: 62px; }
+#form_box_2 .main_form button.send {
+  background: #2e2113;
+  float: right;
+  margin-top: 40px; }
 
 #form_box,
 #form_box_2,
@@ -736,7 +750,7 @@ figure {
 #form_box_2_container .item-room {
   margin-bottom: 3rem; }
   #form_box_2_container .item-room .room-description {
-    padding-left: 2rem;
+    padding-left: 0;
     padding-right: 0; }
   #form_box_2_container .item-room h2 {
     font-size: 1.5rem;
@@ -749,8 +763,9 @@ figure {
     letter-spacing: 1px;
     text-align: justify;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #2c2625;
-    color: #888; }
+    border-bottom: 1px solid #ccc;
+    color: #888;
+    line-height: 2; }
   #form_box_2_container .item-room figure {
     position: relative; }
     #form_box_2_container .item-room figure a {
