@@ -378,6 +378,8 @@ figure {
 		max-width: 100%;
 		display: block;
 		position: relative;
+		height: auto;
+		width: 20.9rem;
 	}
 	figcaption {
 		position: absolute;
@@ -807,6 +809,12 @@ figure {
 			top: -8px;
 		}
 	}
+}
+
+#guests_simple_garden0,
+#guests_simple_ocean0{
+	width: 11rem;
+	height: 2.9rem;
 }
 
 #form_box,
