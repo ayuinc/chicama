@@ -811,11 +811,13 @@ figure {
 	}
 }
 #form_box_2 {
-	.book_a_room {
-		#guests_simple_garden0,
-		#guests_simple_ocean0{
+	.main_form {
+		select{
 			width: 11rem;
 			height: 2.9rem;		
+		}
+		button{
+			background: #2e2113;
 		}
 	}
 }
@@ -935,7 +937,7 @@ figure {
 				line-height: 1.8rem;
 				height: 1.8rem;
 				position: absolute;
-				right: 0.5rem;
+				right: 3rem;
 				font-size: 1.5rem;
 				color: white;
 				font-weight: bold;

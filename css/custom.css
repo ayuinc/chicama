@@ -670,10 +670,11 @@ figure {
       position: relative;
       top: -8px; }
 
-#form_box_2 .book_a_room #guests_simple_garden0,
-#form_box_2 .book_a_room #guests_simple_ocean0 {
+#form_box_2 .main_form select {
   width: 11rem;
   height: 2.9rem; }
+#form_box_2 .main_form button {
+  background: #2e2113; }
 
 #form_box,
 #form_box_2,
@@ -759,7 +760,7 @@ figure {
       line-height: 1.8rem;
       height: 1.8rem;
       position: absolute;
-      right: 0.5rem;
+      right: 3rem;
       font-size: 1.5rem;
       color: white;
       font-weight: bold;
