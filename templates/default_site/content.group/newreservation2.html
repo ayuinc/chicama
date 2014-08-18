@@ -678,6 +678,7 @@
     $(select_box).change(function(){
         if($(check_box).is(":checked")){
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+          $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         }
         switch($(select_box).val()){ 
           case "1":
