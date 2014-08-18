@@ -636,7 +636,7 @@ figure {
   #form_box_4 .book_a_room,
   #form_box_5 .book_a_room,
   #form_box_6 .book_a_room {
-    padding-left: 3rem; }
+    padding-left: 1.4rem; }
     #form_box .book_a_room input[type="text"],
     #form_box_2 .book_a_room input[type="text"],
     #form_box_3 .book_a_room input[type="text"],
@@ -670,8 +670,8 @@ figure {
       position: relative;
       top: -8px; }
 
-#guests_simple_garden0,
-#guests_simple_ocean0 {
+#form_box_2 .book_a_room #guests_simple_garden0,
+#form_box_2 .book_a_room #guests_simple_ocean0 {
   width: 11rem;
   height: 2.9rem; }
 
@@ -688,7 +688,7 @@ figure {
 #steps_list {
   border-top: 1px solid #2c2625;
   border-bottom: 1px solid #2c2625;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   padding: 0.5rem 0; }
   #steps_list .circle {
     color: #8b623b;
@@ -729,7 +729,9 @@ figure {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-weight: 600; }
 #form_box_2_container .item-room {
   margin-bottom: 3rem; }
   #form_box_2_container .item-room .room-description {
