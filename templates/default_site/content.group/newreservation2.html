@@ -610,7 +610,6 @@
     $(check_box).prop("checked", false);
 		$(buttom).removeClass("active");
     $(buttom).click(function( e ){
-    	console.log(dias);
     	e.preventDefault();
     	if($(check_box).is(":checked")) {
     		if(sumary=="lunch_and_dinner_summary"){
@@ -625,6 +624,7 @@
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
         var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
+        console.log(total_summary);
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
 
    			$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
@@ -663,6 +663,7 @@
     			}
     		}
     		var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
+    		console.log(total_summary);
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
  				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());
@@ -683,6 +684,7 @@
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
               var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
+              console.log(total_summary);
               //var total_summary = $("#purchase_amount").val();
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
@@ -702,6 +704,7 @@
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
     		    	var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
+    		    	console.log(total_summary);
               //var total_summary = $("#purchase_amount").val();
        				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
@@ -720,6 +723,7 @@
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
               var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
+              console.log(total_summary);
               //var total_summary = $("#purchase_amount").val();
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
