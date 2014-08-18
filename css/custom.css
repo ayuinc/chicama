@@ -655,7 +655,8 @@ figure {
       height: 1.9rem;
       width: 4rem;
       border-radius: 2px;
-      padding: 0 1rem; }
+      padding: 0 1rem;
+      color: #888; }
     #form_box .book_a_room .send,
     #form_box_2 .book_a_room .send,
     #form_box_3 .book_a_room .send,
@@ -669,7 +670,9 @@ figure {
       font-size: 0.9rem;
       float: left;
       position: relative;
-      top: -8px; }
+      top: -8px;
+      font-weight: 100 !important;
+      font-family: "proxima-nova",sans-serif; }
   #form_box .search_again,
   #form_box_2 .search_again,
   #form_box_3 .search_again,
@@ -721,16 +724,18 @@ figure {
     #steps_list .circle.done {
       color: #2c2625;
       border: 1px solid #2c2625; }
+      #steps_list .circle.done + p {
+        color: #2c2625; }
     #steps_list .circle.active {
       color: #8b623b;
       border: 1px solid #8b623b; }
       #steps_list .circle.active:after {
-        background: url(../img/book-step-current.png) no-repeat; }
+        background: url(../img/book-step.png) no-repeat; }
       #steps_list .circle.active + p {
         color: #8b623b; }
     #steps_list .circle:after {
       content: "";
-      background: url(../img/book-step.png) no-repeat;
+      background: url(../img/book-step-current.png) no-repeat;
       position: absolute;
       width: 16px;
       left: 7rem;
@@ -787,7 +792,8 @@ figure {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
-  /* margin-bottom: 3rem; */ }
+  margin-bottom: 3rem;
+  margin-top: 1rem; }
 #form_box_3_container .item-addon {
   border-bottom: 1px solid #2c2625;
   padding-bottom: 2.5rem;
@@ -872,10 +878,11 @@ figure {
   color: #8F8F8F; }
   .your-stay hr {
     border-color: #8F8F8F;
-    margin: 0.5rem 0; }
+    margin: 0.5rem 0 1.3rem; }
   .your-stay h2 {
     color: #8F8F8F;
-    font-weight: 500; }
+    font-weight: 500;
+    font-size: 1.5rem; }
   .your-stay p {
     padding-bottom: 0;
     margin-bottom: 0;
