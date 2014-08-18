@@ -765,6 +765,7 @@
   	var fin = dat2.getTime() - dat1.getTime();
   	var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
   	$("#rooms_input").val(parseInt($("#purchase_amount").val())*dias);
+  	console.log($("#rooms_input").val());
     for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
