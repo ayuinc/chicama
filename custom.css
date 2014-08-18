@@ -2,22 +2,20 @@
 Errno::ENOENT: No such file or directory - custom.scss
 
 Backtrace:
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:360:in `read'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:360:in `update_stylesheet'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:235:in `watch'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/plugin.rb:107:in `method_missing'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/exec.rb:463:in `watch_or_update'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/exec.rb:326:in `process_result'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/exec.rb:41:in `parse'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/lib/sass/exec.rb:21:in `parse!'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/gems/sass-3.2.14/bin/sass:13:in `<top (required)>'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/bin/sass:23:in `load'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/bin/sass:23:in `<main>'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/bin/ruby_noexec_wrapper:14:in `eval'
-/Users/rdiaz/.rvm/gems/ruby-1.9.3-p448@rails3/bin/ruby_noexec_wrapper:14:in `<main>'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin/compiler.rb:369:in `read'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin/compiler.rb:369:in `update_stylesheet'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin/compiler.rb:186:in `each'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin/compiler.rb:221:in `watch'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/plugin.rb:108:in `method_missing'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/exec.rb:509:in `watch_or_update'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/exec.rb:346:in `process_result'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/exec.rb:43:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/lib/sass/exec.rb:22:in `parse!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.3.9/bin/sass:13:in `<top (required)>'
+C:/Ruby193/bin/sass:23:in `load'
+C:/Ruby193/bin/sass:23:in `<main>'
 */
 body:before {
   white-space: pre;

@@ -58,7 +58,7 @@
                     </div>
                      {/exp:get_post_vars}
                     <div class="large-3 columns end">
-                      <input type="submit" class="button tiny send expand" value="check again">
+                      <input type="submit" class="button tiny send expand" value="search again">
                     </div>
                   </div>
                 </form>
@@ -85,6 +85,7 @@
 					{exp:get_post_vars parse="inward"}
 						<h4 id="step_in_reservation">Room 1 of {post_room_number}</h4>
 					{/exp:get_post_vars}
+					<h4 id="step_in_reservation2">select your first room</h4>
 					</div>
 				  <form class="book_a_room" action="/?/content/reserva" method="POST">
 						<input type="hidden" name="XID" value="{XID_HASH}" />
