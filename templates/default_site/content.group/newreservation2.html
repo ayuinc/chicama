@@ -276,6 +276,11 @@
     			};
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(parseInt(amount)*dias);
+   				console.log($("#rooms_input").val());
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
 		    	switch(summary_cost){
@@ -313,11 +318,6 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(amount)*dias);
-   				console.log($("#rooms_input").val());
 	        });
 					
 	        break;
@@ -331,6 +331,11 @@
     			};
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(parseInt(amount)*dias);
+   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -368,11 +373,6 @@
 		    	send = send.replace(/,/gi, "(f)");
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(amount)*dias);
-   				console.log($("#rooms_input").val());
 	        });
 	        break;
 	    case 3:
@@ -385,6 +385,11 @@
     			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(parseInt(amount)*dias);
+   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -422,11 +427,6 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(amount)*dias);
-   				console.log($("#rooms_input").val());
 	        });
 	        break;
 	    case 4:
@@ -439,6 +439,11 @@
     			};
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(parseInt(amount)*dias);
+   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -477,11 +482,6 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 	        });
-					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(amount)*dias);
-   				console.log($("#rooms_input").val());
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
@@ -493,6 +493,11 @@
     			};
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(parseInt(amount)*dias);
+   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -530,11 +535,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(amount)*dias);
-   				console.log($("#rooms_input").val());
+		    	
 			});
 	        break;
 	    case 6:
@@ -547,6 +548,11 @@
 				};
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = $("#purchase_amount").val();
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(parseInt(amount)*dias);
+   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -584,11 +590,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(amount)*dias);
-   				console.log($("#rooms_input").val());
+		    	
 	        });
 	        break;
 	    } 
