@@ -286,7 +286,9 @@ figure {
   figure img {
     max-width: 100%;
     display: block;
-    position: relative; }
+    position: relative;
+    height: auto;
+    width: 20.9rem; }
   figure figcaption {
     position: absolute;
     height: 100%;
@@ -667,6 +669,11 @@ figure {
       float: left;
       position: relative;
       top: -8px; }
+
+#guests_simple_garden0,
+#guests_simple_ocean0 {
+  width: 11rem;
+  height: 2.9rem; }
 
 #form_box,
 #form_box_2,
