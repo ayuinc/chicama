@@ -276,9 +276,12 @@
     			};
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = amount;
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(amount*dias);
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
-		    	console.log(dias);
 		    	switch(summary_cost){
 		    		case "100":
 		    			summary_cost_final="Garden View Single (1 person) for "+dias+" nights <span>$ 100.00</span>";
@@ -314,10 +317,6 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(total_summary)*dias);
 	        });
 					
 	        break;
@@ -331,6 +330,10 @@
     			};
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = amount;
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -368,10 +371,6 @@
 		    	send = send.replace(/,/gi, "(f)");
     	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(total_summary)*dias);
 	        });
 	        break;
 	    case 3:
@@ -384,6 +383,10 @@
     			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = amount;
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -421,10 +424,6 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(total_summary)*dias);
 	        });
 	        break;
 	    case 4:
@@ -437,6 +436,10 @@
     			};
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = amount;
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -475,10 +478,6 @@
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 	        });
-					var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(total_summary)*dias);
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
@@ -490,6 +489,10 @@
     			};
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = amount;
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -527,10 +530,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(total_summary)*dias);
+		    	
 			});
 	        break;
 	    case 6:
@@ -543,6 +543,10 @@
 				};
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
+		    	var total_summary = amount;
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+   				$("#summary_input").val($("#reserva_summary").html());
+   				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -580,10 +584,7 @@
 		    	send = send.replace(/,/gi, "(f)");
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
-		    	var total_summary = $("#purchase_amount").val();
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(parseInt(total_summary)*dias);
+		    	
 	        });
 	        break;
 	    } 
@@ -748,7 +749,7 @@
   }
 
 	function hide_divs (rooms_num, div_visible){
-
+		var rooms_input_summary = $("#rooms_input").val();
     for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
@@ -766,6 +767,8 @@
 			    	$("#cont").html($("#contenedor").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
+			    	$("#rooms_input").val(rooms_input_summary);
+			    	console.log(rooms_input_summary);
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -801,6 +804,8 @@
 			    	$("#cont").html($("#contenedor").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
+			    	$("#rooms_input").val(rooms_input_summary);
+			    	console.log(rooms_input_summary);
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -836,6 +841,8 @@
 			    	$("#cont").html($("#contenedor").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
+			    	$("#rooms_input").val(rooms_input_summary);
+			    	console.log(rooms_input_summary);
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -871,6 +878,8 @@
 			    	$("#cont").html($("#contenedor").html());
 			    	$("#add_on").html("");
 			    	$("#form_box_3_container").show();
+			    	$("#rooms_input").val(rooms_input_summary);
+			    	console.log(rooms_input_summary);
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
@@ -902,6 +911,8 @@
 					$("#cont").html($("#contenedor").html());
 					$("#add_on").html("");
 					$("#form_box_3_container").show();
+					$("#rooms_input").val(rooms_input_summary);
+					console.log(rooms_input_summary);
           cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
           cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
           agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport")
