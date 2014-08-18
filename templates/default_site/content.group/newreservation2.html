@@ -267,7 +267,7 @@
 
 	switch(type_hab){
 	    case 1:
-	        $(buttom).on('click', function(){
+	        $(buttom).click(function(){
 		    	var valor = $(select_box).val();
     			var temp = {
 				 	"CantHab" : 1, 
@@ -280,7 +280,6 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
-   				console.log($("#rooms_input").val());
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
 		    	switch(summary_cost){
@@ -322,7 +321,7 @@
 					
 	        break;
 	    case 2:
-	        $(buttom).on('click', function(){
+	        $(buttom).click(function(){
 		    	var valor = $(select_box).val();
     			var temp = {
 				 	"CantHab" : 1, 
@@ -335,7 +334,6 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
-   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -376,7 +374,7 @@
 	        });
 	        break;
 	    case 3:
-	        $(buttom).on('click', function(){
+	        $(buttom).click(function(){
 		    	var valor = $(select_box).val();
     			var temp = {
 				 	"CantHab" : 1, 
@@ -389,7 +387,6 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
-   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -430,7 +427,7 @@
 	        });
 	        break;
 	    case 4:
-	        $(buttom).on('click', function(){
+	        $(buttom).click(function(){
 	            var valor = $(select_box).val();
     			var temp = {
 				 	"CantHab" : 1, 
@@ -443,7 +440,6 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
-   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -484,7 +480,7 @@
 	        });
 	        break;
 	    case 5:
-	        $(buttom).on('click', function(){
+	        $(buttom).click(function(){
 	            var valor = $(select_box).val();
     			var temp = {
 				 	"CantHab" : 1, 
@@ -497,7 +493,6 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
-   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -539,7 +534,7 @@
 			});
 	        break;
 	    case 6:
-	        $(buttom).on('click', function(){
+	        $(buttom).click(function(){
 	            var valor = $(select_box).val();
 				var temp = {
 				 	"CantHab" : 1, 
@@ -552,7 +547,6 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
-   				console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -755,7 +749,7 @@
   }
 
 	function hide_divs (rooms_num, div_visible){
-
+		console.log($("#rooms_input").val());
     for(i=0;i<rooms_num;i++){
 			if(i==div_visible) {
 				$("#rooms"+i).show();
