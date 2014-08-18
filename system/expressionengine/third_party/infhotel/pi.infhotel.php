@@ -601,7 +601,7 @@ class Infhotel
                 <div class="row" id="steps_list">
                   <div class="large-9 large-centered columns text-center">
                     <div class="row">
-                      <div class="large-3 columns"><span class="circle active">1</span><p>SELECT ROOMS</p></div>
+                      <div class="large-3 columns"><span class="circle done">1</span><p>SELECT ROOMS</p></div>
                       <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
                       <div class="large-3 columns"><span class="circle active">3</span><p>GUEST INFORMATION</p></div>
                       <div class="large-3 columns"><span class="circle">4</span><p>CONFIRMATION</p></div>
