@@ -782,6 +782,7 @@ figure {
 	.phone{
 		margin-left: 12px;
 		font-size: 1.4rem;
+		color: #888;
 	}
 	.send{
 		float: right;
@@ -809,6 +810,9 @@ figure {
 			top: -8px;
 		}
 	}
+	.search_again{
+		padding-left: 3.4rem;
+	}
 }
 #form_box_2 {
 	.main_form {
@@ -816,8 +820,17 @@ figure {
 			width: 11rem;
 			height: 2.9rem;		
 		}
-		button{
+		.large-3{
+			.large-9{
+				text-align: right;
+				margin-right: 0;
+				margin-top: 62px;
+			}
+		}	
+		button.send{
 			background: #2e2113;
+			float: right;
+			margin-top: 40px;
 		}
 	}
 }
@@ -906,7 +919,7 @@ figure {
 		margin-bottom: 3rem;
 
 		.room-description {
-			padding-left: 2rem;
+			padding-left: 0;
 			padding-right: 0;
 		}
 
@@ -923,8 +936,9 @@ figure {
 			letter-spacing: 1px;
 			text-align: justify;
 			padding-bottom: 3rem;
-			border-bottom: 1px solid $color-black;
+			border-bottom: 1px solid #ccc;
 			color: #888;
+			line-height: 2;
 		}
 
 		figure {
