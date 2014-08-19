@@ -1095,7 +1095,7 @@ figure {
 
 .your-stay {
 	padding: 1rem;
-	border: 1px solid #8F8F8F;
+	border: 1px solid #ccc;
 	border-radius: 5px;
 	color: #8F8F8F;
 	margin-top: 4.7rem;
@@ -1120,7 +1120,8 @@ figure {
 	.ys-label {
 		color: #888 !important;
 		margin-bottom: -0.3rem;
-		
+		font-size: 0.9rem;
+
 		span {
 			float: right;
 		}
@@ -1229,7 +1230,15 @@ table {
 	}
 }
 
-
+.overlay-active{
+	.overlay{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background: #222;
+		z-index: 10;
+	}
+}
 @media only screen and (max-width: 40em) { 
 
 	#cover_container_index {	
