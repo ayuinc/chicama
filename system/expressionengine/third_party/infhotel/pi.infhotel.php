@@ -710,46 +710,6 @@ class Infhotel
                             </div>
                           </div>
                           <!-- end add-on description -->
-
-                        <!-- add-on item -->
-                        <div class="row item-addon">
-                          <!-- add-on img -->
-                          <div class="large-5 columns">
-                            <figure>
-                              <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
-                            </figure>
-                          </div>
-                          <!-- end add-on img -->
-                          <!-- add-on description -->
-                          <div class="large-7 columns addon-description">
-                            <h2>TRUJILLO´S AIRPORT OR BUS STATION</h2>
-                            <div class="row selector">
-                              <div class="large-7 columns">
-                                <p>Number of persons
-                                  <select id="transport">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                  </select>
-                                </p>
-                              </div>
-                              <div class="large-4 columns">
-                                <p id="encabezado_transport" class="addon-cost right">$100.00</p>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="large-12 columns">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
-                              </div>
-
-                              <div class="large-4 columns right">
-                                <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
-                                <input style="display:none" id="transport_checkbox" name="transport_checkbox" type="checkbox">
-                              </div>
-                            </div>
-                          </div>
-                          <!-- end add-on description -->
                         </div>
                         <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
                         <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
