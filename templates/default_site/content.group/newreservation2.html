@@ -652,13 +652,13 @@
         if(sumary == "lunch_and_dinner_summary"){
     			switch($("#encabezado_lunch_and_dinner").html()){
     				case "$100.00":
-    				$("#"+sumary).html("Lunch And Dinner (1 person) <span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>"+$(encabezado).text()+"</span>");
     				break;
     				case "$200.00":
-    				$("#"+sumary).html("Lunch And Dinner (2 persons) <span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
     				break;
     				case "$300.00":
-    				$("#"+sumary).html("Lunch And Dinner (3 persons) <span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
     				break;
     			}
     		}
@@ -666,13 +666,13 @@
     			if(sumary == "transport_summary"){
     				switch($("#encabezado_transport").html()){
     					case "$100.00":
-    					$("#"+sumary).html("Transport (1 person) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Transport <br>(1 person) <span>"+$(encabezado).text()+"</span>");
     					break;
     					case "$200.00":
-    					$("#"+sumary).html("Transport (2 persons) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Transport <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
     					break;
     					case "$300.00":
-    					$("#"+sumary).html("Transport (3 persons) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Transport <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
     					break;
     				}
     			}
@@ -707,11 +707,11 @@
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner (1 person)<span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>"+$(encabezado).text()+"</span>");
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport (1 person)<span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport <br>(1 person)<span>"+$(encabezado).text()+"</span>");
               	}
               }	
             }  
@@ -727,11 +727,11 @@
               //var total_summary = $("#purchase_amount").val();
        				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner (2 persons)<span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport (2 persons)<span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
               	}
               }
             }
@@ -748,11 +748,11 @@
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner (3 persons)<span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport (3 persons)<span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
               	}
               }
             }
