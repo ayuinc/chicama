@@ -660,7 +660,7 @@ class Infhotel
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                               </div>
 
-                              <div class="large-3 columns right">
+                              <div class="large-4 columns right">
                                 <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
                                 <input style="display:none" id="lunch_and_dinner_checkbox" name="lunch_and_dinner_checkbox" type="checkbox">
                               </div>
