@@ -677,7 +677,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                           <!-- add-on img -->
                           <div class="large-5 columns">
                             <figure>
-                              <img src="img/addon2.png" alt="">
+                              <img src="img/addon3.png" alt="">
                               <!-- <a class="text-center" href="#"><span>+</span></a> -->
                             </figure>
                           </div>
