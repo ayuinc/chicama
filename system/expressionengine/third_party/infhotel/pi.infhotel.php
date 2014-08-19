@@ -282,7 +282,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                   <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -313,7 +313,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -343,7 +343,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -377,7 +377,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -409,7 +409,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -440,7 +440,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description" >
@@ -603,7 +603,7 @@ class Infhotel
                     <div class="row">
                       <div class="large-3 columns"><span class="circle done">1</span><p>SELECT ROOMS</p></div>
                       <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
-                      <div class="large-3 columns"><span class="circle active">3</span><p>GUEST INFORMATION</p></div>
+                      <div class="large-3 columns"><span class="circle ">3</span><p>GUEST INFORMATION</p></div>
                       <div class="large-3 columns"><span class="circle last">4</span><p>CONFIRMATION</p></div>
                     </div>
                   </div>
@@ -634,8 +634,8 @@ class Infhotel
                           <!-- add-on img -->
                           <div class="large-5 columns">
                             <figure>
-                              <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                              <a class="text-center" href="#"><span>+</span></a>
+                              <img src="img/addon1.png" alt="">
+                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
                             </figure>
                           </div>
                           <!-- end add-on img -->
@@ -676,14 +676,14 @@ class Infhotel
                           <!-- add-on img -->
                           <div class="large-5 columns">
                             <figure>
-                              <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                              <a class="text-center" href="#"><span>+</span></a>
+                              <img src="img/addon2.png" alt="">
+                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
                             </figure>
                           </div>
                           <!-- end add-on img -->
                           <!-- add-on description -->
                           <div class="large-7 columns addon-description">
-                            <h2>TRANSPORT</h2>
+                            <h2>TRUJILLO´S AIRPORT OR BUS STATION</h2>
                             <div class="row selector">
                               <div class="large-7 columns">
                                 <p>Number of persons
@@ -711,14 +711,20 @@ class Infhotel
                           </div>
                           <!-- end add-on description -->
                         </div>
+                        <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                        <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
+                        <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
+                        <input type="hidden" name="request" maxlength="1000"  id="full_request">
+                        <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                        <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
+                        {exp:get_post_vars parse="inward"}
+                        <input type="hidden" name="check_in_date" value="{post_check_in_date}">
+                        <input type="hidden" name="check_out_date" value="{post_check_out_date}">
+                        <input type="hidden" name="room_number" value="{post_room_number}">
+                        {/exp:get_post_vars}
+                        <button id="submit_paso3" type="submit" class="send rigth">Continue</button> 
                       </div>
-                      <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                      <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
-                      <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
-                      <input type="hidden" name="request" maxlength="1000"  id="full_request">
-                      <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                      <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
-                      <button id="submit_paso3" type="submit" class="send">Continue</button> 
+                      
                     </div>
                     <!-- end add-on item -->
                   </div>
