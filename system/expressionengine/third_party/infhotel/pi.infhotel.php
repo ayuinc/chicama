@@ -635,7 +635,7 @@ class Infhotel
                           <div class="large-5 columns">
                             <figure>
                               <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                              <a class="text-center" href="#"><span>+</span></a>
+                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
                             </figure>
                           </div>
                           <!-- end add-on img -->
@@ -677,7 +677,7 @@ class Infhotel
                           <div class="large-5 columns">
                             <figure>
                               <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                              <a class="text-center" href="#"><span>+</span></a>
+                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
                             </figure>
                           </div>
                           <!-- end add-on img -->
