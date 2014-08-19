@@ -751,18 +751,18 @@ class Infhotel
                           </div>
                           <!-- end add-on description -->
                         </div>
-                          <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                          <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
-                          <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
-                          <input type="hidden" name="request" maxlength="1000"  id="full_request">
-                          <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
-                          <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
-                          {exp:get_post_vars parse="inward"}
-                          <input type="hidden" name="check_in_date" value="{post_check_in_date}">
-                          <input type="hidden" name="check_out_date" value="{post_check_out_date}">
-                          <input type="hidden" name="room_number" value="{post_room_number}">
-                          {/exp:get_post_vars}
-                          <button id="submit_paso3" type="submit" class="send rigth">Continue</button> 
+                        <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                        <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
+                        <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
+                        <input type="hidden" name="request" maxlength="1000"  id="full_request">
+                        <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                        <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
+                        {exp:get_post_vars parse="inward"}
+                        <input type="hidden" name="check_in_date" value="{post_check_in_date}">
+                        <input type="hidden" name="check_out_date" value="{post_check_out_date}">
+                        <input type="hidden" name="room_number" value="{post_room_number}">
+                        {/exp:get_post_vars}
+                        <button id="submit_paso3" type="submit" class="send rigth">Continue</button> 
                       </div>
                       
                     </div>
