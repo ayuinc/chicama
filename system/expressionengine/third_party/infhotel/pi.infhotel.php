@@ -671,49 +671,6 @@ class Infhotel
                         </div>
                         <!-- end add-on item -->
 
-                        <div class="large-11 columns">
-                          <!-- add-on item -->
-                          <div class="row item-addon">
-                            <!-- add-on img -->
-                            <div class="large-5 columns">
-                              <figure>
-                                <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                <!-- <a class="text-center" href="#"><span>+</span></a> -->
-                              </figure>
-                            </div>
-                            <!-- end add-on img -->
-                            <!-- add-on description -->
-                            <div class="large-7 columns addon-description">
-                              <h2>LUNCH AND DINNER</h2>
-                              <div class="row selector">
-                                <div class="large-7 columns">
-                                  <p>Number of persons
-                                    <select id="lunch_and_dinner">
-                                      <option value="1">1</option>
-                                      <option value="2">2</option>
-                                      <option value="3">3</option>
-                                    </select>
-                                  </p>
-                                </div>
-                                <div class="large-4 columns">
-                                  <p id="encabezado_lunch_and_dinner" class="addon-cost right">$100.00</p>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="large-12 columns">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
-                                </div>
-
-                                <div class="large-4 columns right">
-                                  <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
-                                  <input style="display:none" id="lunch_and_dinner_checkbox" name="lunch_and_dinner_checkbox" type="checkbox">
-                                </div>
-                              </div>
-                            </div>
-                            <!-- end add-on description -->
-                          </div>
-                          <!-- end add-on item -->
-
                         <!-- add-on item -->
                         <div class="row item-addon">
                           <!-- add-on img -->
@@ -766,7 +723,7 @@ class Infhotel
                       <input type="text" name="check_out_date" value="{post_check_out_date}">
                       <input type="text" name="room_number" value="{post_room_number}">
                       {/exp:get_post_vars}
-                      <button id="submit_paso3" type="submit" class="send right">Continue</button> 
+                      <button id="submit_paso3" type="submit" class="send">Continue</button> 
                     </div>
                     <!-- end add-on item -->
                   </div>
