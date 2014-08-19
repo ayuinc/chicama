@@ -603,7 +603,7 @@ class Infhotel
                     <div class="row">
                       <div class="large-3 columns"><span class="circle done">1</span><p>SELECT ROOMS</p></div>
                       <div class="large-3 columns"><span class="circle active">2</span><p>ADD SERVICE OPTIONS</p></div>
-                      <div class="large-3 columns"><span class="circle active">3</span><p>GUEST INFORMATION</p></div>
+                      <div class="large-3 columns"><span class="circle ">3</span><p>GUEST INFORMATION</p></div>
                       <div class="large-3 columns"><span class="circle last">4</span><p>CONFIRMATION</p></div>
                     </div>
                   </div>
