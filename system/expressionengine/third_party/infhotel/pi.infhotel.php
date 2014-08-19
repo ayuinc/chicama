@@ -671,6 +671,49 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                           <!-- end add-on description -->
                         </div>
                         <!-- end add-on item -->
+                        
+                        <!-- add-on item -->
+                        <div class="row item-addon">
+                          <!-- add-on img -->
+                          <div class="large-5 columns">
+                            <figure>
+                              <img src="img/addon2.png" alt="">
+                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                            </figure>
+                          </div>
+                          <!-- end add-on img -->
+                          <!-- add-on description -->
+                          <div class="large-7 columns addon-description">
+                            <h2>LUNCH AND DINNER</h2>
+                            <div class="row selector">
+                              <div class="large-7 columns">
+                                <p>Number of persons
+                                  <select id="lunch_and_dinner">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                  </select>
+                                </p>
+                              </div>
+                              <div class="large-4 columns">
+                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$100.00</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="large-12 columns">
+                                <p>1 Lunch + 1 Dinner + 1 Non-Alcoholic Beverage per Guest: You can choose from any Entrée, Main Course and Dessert from any of our 48 exquisite dishes. Remember it is only 1 of each, for example you may not choose 2 main courses.
+Note: If you don’t choose to Include meals, then you have the option to choose the dish of your preference and just pay for what you eat at the time of your check out.</p>
+                              </div>
+
+                              <div class="large-4 columns right">
+                                <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
+                                <input style="display:none" id="lunch_and_dinner_checkbox" name="lunch_and_dinner_checkbox" type="checkbox">
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end add-on description -->
+                        </div>
+                        <!-- end add-on item -->
 
                         <!-- add-on item -->
                         <div class="row item-addon">

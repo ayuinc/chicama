@@ -1005,6 +1005,9 @@ table thead {
     top: 46%;
     left: 46%; }
 
+.underline {
+  text-decoration: underline; }
+
 @media only screen and (max-width: 40em) {
   #cover_container_index {
     height: 680px; }
