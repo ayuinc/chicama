@@ -538,7 +538,7 @@ class Infhotel
                     <h3>NEW RESERVATION</h3>
                   </div>
                   <div class="large-4 large-offset-4 columns">
-                    <p>Phone reservations +511-440-6040</p>
+                    <p class="phone">Phone reservations +511-440-6040</p>
                   </div>
                 </div>
                 <!-- check-in form -->
@@ -614,16 +614,17 @@ class Infhotel
             <!-- end reservation-header -->
 
             <div class="row">
-              <div class="large-12 columns">
+              <!-- <div class="large-12 columns">
                 <h4>ADD - ONS</h4>
-              </div>
+              </div> -->
 
               <!-- row-container -->
               <div class="large-12 columns">
                 <div class="row">
                   <div class="large-9 columns">
-                    <p>Add additional services that we offer.</p>
                     <form action="/?/content/newreservation4" class="book_a_room" method="POST">
+                    <h4>ADD - ONS</h4>
+                    <p>Add additional services that we offer.</p>
                         <input type="hidden" name="XID" value="{XID_HASH}" /> 
                     <!-- add-ons list -->
                     <div class="row">
@@ -702,7 +703,7 @@ class Infhotel
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
                               </div>
 
-                              <div class="large-3 columns right">
+                              <div class="large-4 columns right">
                                 <a id="add_transport_buttom" href="#" class="add expand button active">Add</a>
                                 <input style="display:none" id="transport_checkbox" name="transport_checkbox" type="checkbox">
                               </div>
