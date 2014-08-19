@@ -729,7 +729,7 @@ class Infhotel
                     <div class="row">
                       <div class="large-12 large-centered columns">
                         <div id="reserva_summary" class="your-stay">
-                          <h2 class="text-center">YOUR STAY</h2>
+                          <h2 class="text-center">SUMMARY</h2>
                           <hr>
                           {exp:get_post_vars parse="inward"}
                           <p class="ys-label">ARRIVAL:</p>
