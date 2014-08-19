@@ -980,11 +980,16 @@ table thead {
   position: fixed;
   z-index: 10; }
   .overlay_active .overlay img {
-    width: 70px !important;
+    width: 90px !important;
     height: auto !important;
     z-index: 11;
     position: absolute;
     top: 40%;
+    left: 46%; }
+  .overlay_active .overlay div {
+    z-index: 11;
+    position: absolute;
+    top: 46%;
     left: 46%; }
 
 @media only screen and (max-width: 40em) {
