@@ -688,7 +688,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                             <div class="row selector">
                               <div class="large-7 columns">
                                 <p>Number of persons
-                                  <select id="lunch_and_dinner">
+                                  <select id="tow_back_service">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -696,7 +696,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_tow_back_service" class="addon-cost right">$100.00</p>
                               </div>
                             </div>
                             <div class="row">
@@ -705,8 +705,8 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                               </div>
 
                               <div class="large-4 columns right">
-                                <a id="add_lunch_and_dinner_buttom" href="#" class="add expand button">Add</a>
-                                <input style="display:none" id="lunch_and_dinner_checkbox" name="lunch_and_dinner_checkbox" type="checkbox">
+                                <a id="add_tow_back_service_buttom" href="#" class="add expand button">Add</a>
+                                <input style="display:none" id="tow_back_service_checkbox" name="tow_back_service_checkbox" type="checkbox">
                               </div>
                             </div>
                           </div>
