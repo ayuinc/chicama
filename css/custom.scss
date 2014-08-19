@@ -1019,6 +1019,7 @@ figure {
 			text-align: justify;
 			padding-bottom: 1rem;
 			color: #888;
+			line-height: 2rem;
 		}
 
 		figure {
@@ -1230,13 +1231,19 @@ table {
 	}
 }
 
-.overlay-active{
+.overlay_active{
 	.overlay{
 		width: 100%;
 		height: 100%;
 		position: fixed;
 		background: #222;
 		z-index: 10;
+		img{
+			z-index: 11;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
 	}
 }
 @media only screen and (max-width: 40em) { 
