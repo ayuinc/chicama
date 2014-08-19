@@ -812,6 +812,7 @@ figure {
 			top: -8px;
 			font-weight: 100 !important;
 			font-family: "proxima-nova",sans-serif;
+			line-height: 0.5rem;
 		}
 	}
 	.search_again{
@@ -847,6 +848,25 @@ figure {
 	margin-top: 3em;
 	position: static;
 	display: block;
+}
+
+#form_box_4 {
+	.book_a_room{
+		input[type="text"]{
+			background: none;
+		}
+		select{
+			background-color: #fff;
+			width: 100%;
+			padding-left: 0.3rem;
+			font-size: 0.8rem;
+			color: #888;
+			font-weight: 100;
+		}
+		button{
+			float: inherit !important;
+		}
+	}
 }
 
 #steps_list {
@@ -916,7 +936,6 @@ figure {
 		line-height: 1;
 		margin-bottom: 3rem;
 		text-transform: uppercase;
-		font-weight: 600;
 	}
 
 	.item-room {
@@ -972,7 +991,7 @@ figure {
 		color: $color-brown;
 		font-size: 1.5rem;
 		line-height: 1;
-		margin-bottom: 3rem;
+		margin-bottom: 1rem;
 		margin-top: 1rem;
 	}
 	
@@ -1062,6 +1081,12 @@ figure {
 					content: "✓ ";
 				}
 			}
+		}
+	}
+
+	.large-3{
+		.large-12{
+			padding: 0;
 		}
 	}
 }

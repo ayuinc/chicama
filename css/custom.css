@@ -672,7 +672,8 @@ figure {
       position: relative;
       top: -8px;
       font-weight: 100 !important;
-      font-family: "proxima-nova",sans-serif; }
+      font-family: "proxima-nova",sans-serif;
+      line-height: 0.5rem; }
   #form_box .search_again,
   #form_box_2 .search_again,
   #form_box_3 .search_again,
@@ -702,6 +703,18 @@ figure {
   margin-top: 3em;
   position: static;
   display: block; }
+
+#form_box_4 .book_a_room input[type="text"] {
+  background: none; }
+#form_box_4 .book_a_room select {
+  background-color: #fff;
+  width: 100%;
+  padding-left: 0.3rem;
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 100; }
+#form_box_4 .book_a_room button {
+  float: inherit !important; }
 
 #steps_list {
   border-top: 1px solid #2c2625;
@@ -750,8 +763,7 @@ figure {
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 3rem;
-  text-transform: uppercase;
-  font-weight: 600; }
+  text-transform: uppercase; }
 #form_box_2_container .item-room {
   margin-bottom: 3rem; }
   #form_box_2_container .item-room .room-description {
@@ -792,7 +804,7 @@ figure {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   margin-top: 1rem; }
 #form_box_3_container .item-addon {
   border-bottom: 1px solid #2c2625;
@@ -857,6 +869,8 @@ figure {
       font-size: 0.9rem; }
       #form_box_3_container .item-addon .add.active:before {
         content: "✓ "; }
+#form_box_3_container .large-3 .large-12 {
+  padding: 0; }
 
 #form_box_5 #title_reservation {
   margin-bottom: 3rem; }
