@@ -724,7 +724,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                         <input type="hidden" name="check_out_date" value="{post_check_out_date}">
                         <input type="hidden" name="room_number" value="{post_room_number}">
                         {/exp:get_post_vars}
-                        <button id="submit_paso3" type="submit" class="send rigth">Continue</button> 
+                        <button id="submit_paso3" type="submit right" class="send rigth">Continue</button> 
                       </div>
                       
                     </div>
