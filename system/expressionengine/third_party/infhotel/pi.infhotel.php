@@ -711,8 +711,7 @@ class Infhotel
                           </div>
                           <!-- end add-on description -->
                         </div>
-                      </div>
-                      <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                        <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
                       <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
                       <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
                       <input type="hidden" name="request" maxlength="1000"  id="full_request">
@@ -724,6 +723,8 @@ class Infhotel
                       <input type="text" name="room_number" value="{post_room_number}">
                       {/exp:get_post_vars}
                       <button id="submit_paso3" type="submit" class="send">Continue</button> 
+                      </div>
+                      
                     </div>
                     <!-- end add-on item -->
                   </div>
