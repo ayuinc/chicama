@@ -658,7 +658,8 @@ class Infhotel
                             </div>
                             <div class="row">
                               <div class="large-12 columns">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                                <p>1 Lunch + 1 Dinner + 1 Non-Alcoholic Beverage per Guest: You can choose from any Entrée, Main Course and Dessert from any of our 48 exquisite dishes. Remember it is only 1 of each, for example you may not choose 2 main courses.
+Note: If you don’t choose to Include meals, then you have the option to choose the dish of your preference and just pay for what you eat at the time of your check out.</p>
                               </div>
 
                               <div class="large-4 columns right">
@@ -676,7 +677,7 @@ class Infhotel
                           <!-- add-on img -->
                           <div class="large-5 columns">
                             <figure>
-                              <img src="img/addon2.png" alt="">
+                              <img src="img/addon3.png" alt="">
                               <!-- <a class="text-center" href="#"><span>+</span></a> -->
                             </figure>
                           </div>
@@ -700,7 +701,8 @@ class Infhotel
                             </div>
                             <div class="row">
                               <div class="large-12 columns">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque porro, accusantium? Quod facere laborum laboriosam, voluptatum quas, possimus optio quam rem maxime omnis, nesciunt repellat excepturi, eum neque! Provident, incidunt!</p>
+                                <p>Chicama is located about 70 km North of Trujillo, which we consider our hub for guests arrivingfrom Lima. Guests may arrive by plane or bus. Both the airport and bus stations are based in Trujillo city, so to get to Chicama you will require a proper and comfortable transfer, which will 
+take about 1 hour. Our professional drivers carry with them a sign that will have your names on it and will identify him as crew member of the Chicama Surf Resort. Prices for this service change depending on the amount of guest in one reservation.</p>
                               </div>
 
                               <div class="large-4 columns right">
