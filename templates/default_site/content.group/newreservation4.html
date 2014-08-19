@@ -23,7 +23,8 @@
                 <div class="large-9 large-centered columns">
                   <form action="/?/content/newreservation2" method="POST" class="book_a_room" > 
                     <!-- check-in inputs row -->
-                    {exp:get_post_vars parse="inward"}
+                    <div class="row">
+                      {exp:get_post_vars parse="inward"}
                     <div class="large-3 columns">
                       <input type="text" id="check_in_date" name="check_in_date" placeholder="CHECK-IN" value="{post_check_in_date}">
                     </div>
