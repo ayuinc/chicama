@@ -1237,14 +1237,14 @@ table {
 .overlay_active{
 	.overlay{
 		top: 0;
-		background: rgba(0,0,0,0.2);
+		background: rgba(0,0,0,0.1);
 		display: block;
 		width: 100%;
 		height: 100%;
 		position: fixed;
 		z-index: 10;
 		img{
-			width: 90px !important;
+			width: 54px !important;
 			height: auto !important;
 			z-index: 11;
 			position: absolute;
