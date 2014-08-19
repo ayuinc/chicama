@@ -714,7 +714,7 @@ figure {
   color: #888;
   font-weight: 100; }
 #form_box_4 .book_a_room button {
-  float: inherit; }
+  float: inherit !important; }
 
 #steps_list {
   border-top: 1px solid #2c2625;
