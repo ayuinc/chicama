@@ -282,7 +282,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                   <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -313,7 +313,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -343,7 +343,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -377,7 +377,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -409,7 +409,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -440,7 +440,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#"><span>+</span></a>
+                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description" >
@@ -683,7 +683,7 @@ class Infhotel
                           <!-- end add-on img -->
                           <!-- add-on description -->
                           <div class="large-7 columns addon-description">
-                            <h2>TRANSPORT</h2>
+                            <h2>TRUJILLO´S AIRPORT OR BUS STATION</h2>
                             <div class="row selector">
                               <div class="large-7 columns">
                                 <p>Number of persons
