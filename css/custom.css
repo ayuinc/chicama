@@ -614,7 +614,7 @@ figure {
   #form_box_5 p,
   #form_box_6 p {
     font-size: 1rem;
-    color: #2c2625; }
+    color: #888; }
   #form_box .phone,
   #form_box_2 .phone,
   #form_box_3 .phone,
@@ -846,9 +846,10 @@ figure {
     border: 1px solid #2c2625;
     border-radius: 3px;
     color: #2c2625;
-    height: 50px;
     text-transform: uppercase;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    height: 2.6rem;
+    line-height: 0.5; }
     #form_box_3_container .item-addon .add.active {
       background: #2c2625;
       color: white;
@@ -873,9 +874,10 @@ figure {
 
 .your-stay {
   padding: 1rem;
-  border: 1px solid #8F8F8F;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  color: #8F8F8F; }
+  color: #8F8F8F;
+  margin-top: 4.7rem; }
   .your-stay hr {
     border-color: #8F8F8F;
     margin: 0.5rem 0 1.3rem; }
@@ -888,12 +890,15 @@ figure {
     margin-bottom: 0;
     border: none; }
   .your-stay .ys-label {
-    color: #5E5E5E; }
+    color: #888 !important;
+    margin-bottom: -0.3rem;
+    font-size: 0.9rem; }
     .your-stay .ys-label span {
       float: right; }
   .your-stay .ys-field {
     font-size: 0.9rem;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-bottom: 0.5rem; }
     .your-stay .ys-field span {
       float: right; }
 
@@ -961,6 +966,13 @@ table thead {
     height: 100%; }
     #map-container .large-12 #map {
       height: 85%; }
+
+.overlay-active .overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #222;
+  z-index: 10; }
 
 @media only screen and (max-width: 40em) {
   #cover_container_index {

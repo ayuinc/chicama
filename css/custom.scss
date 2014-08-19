@@ -777,7 +777,8 @@ figure {
 	}
 	p{
 		font-size: 1rem;
-		color: #2c2625;
+		// color: #2c2625;
+		color: #888;
 	}
 	.phone{
 		margin-left: 12px;
@@ -1047,9 +1048,11 @@ figure {
 			border: 1px solid $color-black;
 			border-radius: 3px;
 			color: $color-black;
-			height: 50px;
+			// height: 50px;
 			text-transform: uppercase;
 			font-size: 0.9rem;
+			height: 2.6rem;
+			line-height: 0.5;
 			&.active {
 				background: $color-black;
 				color: white;
@@ -1092,9 +1095,10 @@ figure {
 
 .your-stay {
 	padding: 1rem;
-	border: 1px solid #8F8F8F;
+	border: 1px solid #ccc;
 	border-radius: 5px;
 	color: #8F8F8F;
+	margin-top: 4.7rem;
 
 	hr {
 		border-color: #8F8F8F;
@@ -1114,7 +1118,10 @@ figure {
 	}
 
 	.ys-label {
-		color: #5E5E5E;
+		color: #888 !important;
+		margin-bottom: -0.3rem;
+		font-size: 0.9rem;
+
 		span {
 			float: right;
 		}
@@ -1123,6 +1130,7 @@ figure {
 	.ys-field {
 		font-size: 0.9rem;
 		font-weight: 500;
+		margin-bottom: 0.5rem;
 
 		span {
 			float: right;
@@ -1222,7 +1230,15 @@ table {
 	}
 }
 
-
+.overlay-active{
+	.overlay{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background: #222;
+		z-index: 10;
+	}
+}
 @media only screen and (max-width: 40em) { 
 
 	#cover_container_index {	

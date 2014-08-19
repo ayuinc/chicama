@@ -269,7 +269,8 @@
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
-	        setTimeout(function(){$("body").addClass("overlay_active")},2000);
+	        $("body").addClass("overlay_active");	
+	        setTimeout(function(){$("body").removeClass("overlay_active")},2000);
 		    	var valor = $(select_box).val();
     			var temp = {
 				 	"CantHab" : 1, 
