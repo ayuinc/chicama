@@ -584,7 +584,7 @@ class Infhotel
                     </div>
                      {/exp:get_post_vars}
                         <div class="large-3 columns end">
-                          <input type="submit" class="button tiny send expand" value="check again">
+                          <input type="submit" class="button tiny send expand" value="search again">
                         </div>
                       </div>
                       <!-- end check-in inputs row -->
@@ -757,6 +757,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                         </div>
                         <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
                         <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
+                        <input type="hidden" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
                         <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
                         <input type="hidden" name="request" maxlength="1000"  id="full_request">
                         <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
@@ -800,6 +801,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           <p id="cost_room4_summary" class="ys-field"></p>
                           <p class="ys-label">ADD - ONS:</p>
                           <p id="lunch_and_dinner_summary" class="ys-field"></p>
+                          <p id="tow_back_service_summary" class="ys-field"></p>
                           <p id="transport_summary" class="ys-field"></p>
                           
                           <hr>
