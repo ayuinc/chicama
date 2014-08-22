@@ -935,10 +935,19 @@ figure {
 	border: none;
 	text-align: center;
 	.circle{
+		font-size: 0.9rem;
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
 		&:after{
 			left: 3rem;
 			top: 1.7rem;
 			background-size: 60%;
+		}
+		&.active{
+			&:after{
+				background-size: 60%;
+			}
 		}
 	}
 }

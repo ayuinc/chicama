@@ -762,10 +762,17 @@ figure {
 #steps_list_rooms {
   border: none;
   text-align: center; }
-  #steps_list_rooms .circle:after {
-    left: 3rem;
-    top: 1.7rem;
-    background-size: 60%; }
+  #steps_list_rooms .circle {
+    font-size: 0.9rem;
+    width: 25px;
+    height: 25px;
+    line-height: 25px; }
+    #steps_list_rooms .circle:after {
+      left: 3rem;
+      top: 1.7rem;
+      background-size: 60%; }
+    #steps_list_rooms .circle.active:after {
+      background-size: 60%; }
 
 /* step1 book a room */
 #form_box_2_container h4 {
