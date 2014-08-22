@@ -270,7 +270,51 @@ class Vpost
             $document_type = $row->document_type;
             $card_id = $row->card_id;
             $card_type = $row->card_type;
-            $div ='{exp:infhotel:insertarreservar
+            $div ='{exp:mandrillapp:send_email_reserva_chicama
+                        id_operación="'.$id_operación.'"
+                        operation_result="'.$operation_result.'"
+                        }
+                    {/exp:mandrillapp:send_email_reserva_chicama}
+                    {exp:infhotel:insertarreservar
+                        request="'.$full_request.'"
+                        first_name="'.$first_name.'"
+                        last_name="'.$last_name.'"
+                        country="'.$country.'"
+                        document_id="'.$document_id.'"
+                        document_type="'.$document_type.'"
+                        card_id="'.$card_id.'"
+                        card_type="'.$card_type.'"
+                        }
+                    {/exp:infhotel:insertarreservar}';
+              
+            }
+            return $div;
+            //return $request;
+          }
+      } else {/*
+         ee()->db->select('*');
+          ee()->db->where('id',$id);
+          $query = ee()->db->get('exp_hotel_reservations');
+          ee()->db->update(
+                'exp_hotel_reservations',
+                array(
+                    'validate'  => 'yes'
+                ),
+                array(
+                    'id' => $id 
+                )
+            );
+          foreach($query->result() as $row){
+            $full_request = $row->full_request;
+            $first_name = $row->first_name;
+            $last_name = $row->last_name;
+            $country = $row->country;
+            $document_id = $row->document_id;
+            $document_type = $row->document_type;
+            $card_id = $row->card_id;
+            $card_type = $row->card_type;
+            $div ='
+                    {exp:infhotel:insertarreservar
                         request="'.$full_request.'"
                         first_name="'.$first_name.'"
                         last_name="'.$last_name.'"
@@ -283,11 +327,8 @@ class Vpost
                       {/exp:infhotel:insertarreservar}';
               
             }
-            return $div;
-            //return $request;
-          }
-      } else {
-          return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+            return $div;*/
+            return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
       }
     }
 }
