@@ -929,13 +929,18 @@ figure {
 	}
 }
 
+/*steps rooms*/
+#steps_list_rooms{
+	@extend #steps_list;
+}
+
 /* step1 book a room */
 #form_box_2_container {
 	h4 {
 		color: $color-brown;
 		font-size: 1.5rem;
 		line-height: 1;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		text-transform: uppercase;
 	}
 
