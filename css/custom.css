@@ -716,12 +716,12 @@ figure {
 #form_box_4 .book_a_room button {
   float: inherit !important; }
 
-#steps_list {
+#steps_list, #steps_list_rooms {
   border-top: 1px solid #2c2625;
   border-bottom: 1px solid #2c2625;
   margin-bottom: 4rem;
   padding: 0.5rem 0; }
-  #steps_list .circle {
+  #steps_list .circle, #steps_list_rooms .circle {
     color: #8b623b;
     border-radius: 50%;
     display: inline-block;
@@ -730,24 +730,24 @@ figure {
     height: 30px;
     line-height: 30px;
     position: relative; }
-    #steps_list .circle + p {
+    #steps_list .circle + p, #steps_list_rooms .circle + p {
       font-size: 0.8rem;
       margin-bottom: 0;
       color: #8b623b; }
-    #steps_list .circle.done {
+    #steps_list .circle.done, #steps_list_rooms .circle.done {
       color: #2c2625;
       border: 1px solid #2c2625; }
-      #steps_list .circle.done + p {
+      #steps_list .circle.done + p, #steps_list_rooms .circle.done + p {
         color: #2c2625; }
-    #steps_list .circle.active {
+    #steps_list .circle.active, #steps_list_rooms .circle.active {
       color: #fff;
       border: 1px solid #2d251c;
       background: #2d251c; }
-      #steps_list .circle.active:after {
+      #steps_list .circle.active:after, #steps_list_rooms .circle.active:after {
         background: url(../img/book-step.png) no-repeat; }
-      #steps_list .circle.active + p {
+      #steps_list .circle.active + p, #steps_list_rooms .circle.active + p {
         color: #8b623b; }
-    #steps_list .circle:after {
+    #steps_list .circle:after, #steps_list_rooms .circle:after {
       content: "";
       background: url(../img/book-step-current.png) no-repeat;
       position: absolute;
@@ -755,15 +755,16 @@ figure {
       left: 7rem;
       top: 0.7rem;
       height: 23px; }
-    #steps_list .circle.last:after {
+    #steps_list .circle.last:after, #steps_list_rooms .circle.last:after {
       content: none; }
 
+/*steps rooms*/
 /* step1 book a room */
 #form_box_2_container h4 {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-transform: uppercase; }
 #form_box_2_container .item-room {
   margin-bottom: 3rem; }
