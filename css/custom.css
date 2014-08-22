@@ -889,6 +889,9 @@ figure {
 #form_box_3_container .large-3 .large-12 {
   padding: 0; }
 
+.row-bottom {
+  margin-top: 40px; }
+
 #form_box_5 #title_reservation {
   margin-bottom: 3rem; }
 #form_box_5 .sub-title {
