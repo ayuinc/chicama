@@ -87,6 +87,16 @@
 						<h4 id="step_in_reservation">select your first room</h4>
 					{/exp:get_post_vars}
 						<!-- <h4 id="step_in_reservation2">select your first room</h4> -->
+          <div class="row" id="steps_list_rooms">
+            <div class="large-5 columns">
+              <div class="row">
+                <div class="large-2 columns"><span class="circle active">1</span><p>ROOM</p></div>
+                <div class="large-2 columns"><span class="circle">2</span><p>ROOM</p></div>
+                <div class="large-2 columns"><span class="circle">3</span><p>ROOM</p></div>
+                <div class="large-2 columns end"><span class="circle last">4</span><p>ROOM</p></div>
+              </div>
+            </div>
+          </div>
 					</div>
 				  <form class="book_a_room main_form" action="/?/content/reserva" method="POST">
 						<input type="hidden" name="XID" value="{XID_HASH}" />
