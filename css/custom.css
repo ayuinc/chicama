@@ -764,7 +764,8 @@ figure {
   text-align: center; }
   #steps_list_rooms .circle:after {
     left: 3rem;
-    top: 1.7rem; }
+    top: 1.7rem;
+    background-size: 60%; }
 
 /* step1 book a room */
 #form_box_2_container h4 {
