@@ -939,9 +939,10 @@ figure {
 		width: 25px;
 		height: 25px;
 		line-height: 25px;
+		margin-bottom: 5px;
 		&:after{
 			left: 3rem;
-			top: 1.7rem;
+			top: 2rem;
 			background-size: 60%;
 		}
 		&.active{
@@ -1113,6 +1114,10 @@ figure {
 			padding: 0;
 		}
 	}
+}
+
+#form_box_4_container {
+	@extend #form_box_2_container;
 }
 
 #form_box_5{

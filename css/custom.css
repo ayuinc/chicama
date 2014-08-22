@@ -766,32 +766,33 @@ figure {
     font-size: 0.9rem;
     width: 25px;
     height: 25px;
-    line-height: 25px; }
+    line-height: 25px;
+    margin-bottom: 5px; }
     #steps_list_rooms .circle:after {
       left: 3rem;
-      top: 1.7rem;
+      top: 2rem;
       background-size: 60%; }
     #steps_list_rooms .circle.active:after {
       background-size: 60%; }
 
 /* step1 book a room */
-#form_box_2_container h4 {
+#form_box_2_container h4, #form_box_4_container h4 {
   color: #8b623b;
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 2rem;
   text-transform: uppercase; }
-#form_box_2_container .item-room {
+#form_box_2_container .item-room, #form_box_4_container .item-room {
   margin-bottom: 3rem; }
-  #form_box_2_container .item-room .room-description {
+  #form_box_2_container .item-room .room-description, #form_box_4_container .item-room .room-description {
     padding-left: 0;
     padding-right: 0; }
-  #form_box_2_container .item-room h2 {
+  #form_box_2_container .item-room h2, #form_box_4_container .item-room h2 {
     font-size: 1.5rem;
     font-weight: 100;
     line-height: 1;
     margin-bottom: 2rem; }
-  #form_box_2_container .item-room p {
+  #form_box_2_container .item-room p, #form_box_4_container .item-room p {
     font-size: 0.95rem;
     font-weight: 100;
     letter-spacing: 1px;
@@ -800,9 +801,9 @@ figure {
     border-bottom: 1px solid #ccc;
     color: #888;
     line-height: 2; }
-  #form_box_2_container .item-room figure {
+  #form_box_2_container .item-room figure, #form_box_4_container .item-room figure {
     position: relative; }
-    #form_box_2_container .item-room figure a {
+    #form_box_2_container .item-room figure a, #form_box_4_container .item-room figure a {
       border: 2px solid white;
       border-radius: 5px;
       width: 1.8rem;
