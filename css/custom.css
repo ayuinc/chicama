@@ -740,8 +740,9 @@ figure {
       #steps_list .circle.done + p {
         color: #2c2625; }
     #steps_list .circle.active {
-      color: #8b623b;
-      border: 1px solid #8b623b; }
+      color: #fff;
+      border: 1px solid #2d251c;
+      background: #2d251c; }
       #steps_list .circle.active:after {
         background: url(../img/book-step.png) no-repeat; }
       #steps_list .circle.active + p {
