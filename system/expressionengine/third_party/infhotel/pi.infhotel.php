@@ -524,7 +524,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return "your reservation code is <b>".$result."</b>";*/
+        return "your reservation code is <b>".$result."json".$json."</b>";*/
     }
     
     public function reservation_3(){
