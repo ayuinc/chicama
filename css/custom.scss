@@ -932,6 +932,14 @@ figure {
 /*steps rooms*/
 #steps_list_rooms{
 	@extend #steps_list;
+	border: none;
+	text-align: center;
+	.circle{
+		&:after{
+			left: 3rem;
+			top: 1.7rem;
+		}
+	}
 }
 
 /* step1 book a room */
