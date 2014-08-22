@@ -271,8 +271,8 @@ class Vpost
             $card_id = $row->card_id;
             $card_type = $row->card_type;
             $div ='{exp:mandrillapp:send_email_reserva_chicama
-                        id_operación="'.$id_operación.'"
-                        operation_result="'.$operation_result.'"
+                        id_operación= 100
+                        operation_result= 120"
                         }
                     {/exp:mandrillapp:send_email_reserva_chicama}
                     {exp:infhotel:insertarreservar

@@ -41,7 +41,7 @@ class Mandrillapp {
 	$mandrill = new Mandrill('u1hYP2cmJFlaSQ9-wxcd5g');
 	$id_operación= $TMPL->fetch_param('id_operación');
 	$operación_result= $TMPL->fetch_param('operation_result');
-	$to= "lita.les4@hotmail.com";
+	$to= "gms122@gmail.com";
 	$name= "Gianfranco";
 	$subject= "Solicitud de documento.";
 	$from= "admin@gym.com";
