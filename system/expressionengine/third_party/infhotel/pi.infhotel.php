@@ -508,7 +508,7 @@ class Infhotel
         
         $data = json_decode($json, true);
         $data["Pasajeros"]["0"]= $person;
-        return $json;
+        //return $json;
         //$data["NPasajero"]="10";
         /*
         $data_string = json_encode($data, true);
@@ -524,7 +524,8 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        return "your reservation code is <b>".$result."json".$json."</b>";*/
+        */
+        return "your reservation code is <b>".$result."json".$json."</b>";
     }
     
     public function reservation_3(){
