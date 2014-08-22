@@ -759,6 +759,13 @@ figure {
       content: none; }
 
 /*steps rooms*/
+#steps_list_rooms {
+  border: none;
+  text-align: center; }
+  #steps_list_rooms .circle:after {
+    left: 3rem;
+    top: 1.7rem; }
+
 /* step1 book a room */
 #form_box_2_container h4 {
   color: #8b623b;
