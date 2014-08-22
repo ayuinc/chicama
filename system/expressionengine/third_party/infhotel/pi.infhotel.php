@@ -510,7 +510,7 @@ class Infhotel
         $data["Pasajeros"]["0"]= $person;
         //return $json;
         //$data["NPasajero"]="10";
-        /*
+        
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
@@ -524,7 +524,7 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
-        */
+        
         return "your reservation code is <b>".$result."json".$json."</b>";
     }
     
