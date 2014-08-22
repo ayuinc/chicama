@@ -48,8 +48,8 @@ class Mandrillapp {
 	$from= "admin@gym.com";
 	//$text = $TMPL->tagdata;
 	$text = 'Estimado(a) Cliente,<p>
-	id_operación: '.$id_operación.'<p>.
-	operación_result: '.$operación_result.'<p>.
+	id_operación: '.$id_operación.'.<p>
+	operación_result: '.$operación_result.'.<p>
 	full_resquest: '.$resquest.'<p>.
 
 	<br>
