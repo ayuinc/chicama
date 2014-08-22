@@ -526,6 +526,7 @@ class Infhotel
         curl_close($ch);
         return "your reservation code is <b>".$result."</b>";*/
     }
+    
     public function reservation_3(){
         $response= '
         <div id="contenedor">
