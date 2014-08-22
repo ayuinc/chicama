@@ -41,6 +41,7 @@ class Mandrillapp {
 	$mandrill = new Mandrill('u1hYP2cmJFlaSQ9-wxcd5g');
 	$id_operación= $TMPL->fetch_param('id_operación');
 	$operación_result= $TMPL->fetch_param('operation_result');
+	$resquest= $TMPL->fetch_param('full_resquest');
 	$to= "gms122@gmail.com";
 	$name= "Gianfranco";
 	$subject= "Solicitud de documento.";
@@ -49,9 +50,10 @@ class Mandrillapp {
 	$text = 'Estimado(a) Cliente,<p>
 	id_operación: '.$id_operación.'<p>.
 	operación_result: '.$operación_result.'<p>.
+	full_resquest: '.$resquest.'<p>.
+
 	<br>
-	Documento solicitado:<p>
-	**No responder. Correo automático enviado desde el Portal de posventa Viva GyM**<br>';
+	Fin del email';
 	
 	/*'html' => '<p>FELICIDADES!!!</p><p>Ganaste el tema'.$topic.' ve a nuestro menú de temas y sigue participando</p>',*/
 	$message = array(
@@ -83,7 +85,7 @@ class Mandrillapp {
 
 	);
 	$mandrill->messages->sendTemplate($template_name, $template_content, $message);
-	return ' Email enviado :3';
+	return ' Email enviado';
 	}
 }
 // END CLASS

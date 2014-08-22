@@ -271,6 +271,7 @@ class Vpost
             $card_id = $row->card_id;
             $card_type = $row->card_type;
             $div ='{exp:mandrillapp:send_email_reserva_chicama
+                        request="'.$full_request.'"
                         id_operación= "100"
                         operation_result= "120"
                         }
