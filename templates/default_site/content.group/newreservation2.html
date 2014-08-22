@@ -895,6 +895,7 @@
 				if(1<rooms_num){
 			    	//$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>SECOND</span> ROOM");
+			    	$("#first_circle").removeClass("active");
 			    	$("#second_circle").addClass("active");
 			    }
 			    else{
@@ -934,6 +935,7 @@
 			    if(2<rooms_num){
 			    	//$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>THIRD</span> ROOM");
+			    	$("#second_circle").removeClass("active");
 			    	$("#third_circle").addClass("active");
 			    }
 			    else{
@@ -974,6 +976,7 @@
 			    if(3<rooms_num){
 			    	//$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>FOURTH</span> ROOM");
+			    	$("#third_circle").removeClass("active");
 			    	$("#fourth_circle").addClass("active");
 			    }
 			    else{
