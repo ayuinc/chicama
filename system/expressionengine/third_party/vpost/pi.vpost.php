@@ -289,7 +289,7 @@ class Vpost
                     {/exp:infhotel:insertarreservar}';
               
             }
-            return $$div;
+            return $div;
             //return $request;
           }
           else {
