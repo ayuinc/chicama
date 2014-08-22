@@ -92,23 +92,23 @@
               <div class="row">
               	{exp:get_post_vars parse="inward"}
               		{if {post_room_number} == "1"}
-                  <div class="large-2 columns end"><span class="circle active last">1</span><p>ROOM</p></div>
+                  <div class="large-2 columns end"><span id="first_circle" class="circle active last">1</span><p>ROOM</p></div>
 	                
                   {/if}
                   {if {post_room_number} == "2"}
-                  <div class="large-2 columns"><span class="circle active">1</span><p>ROOM</p></div>
-	                <div class="large-2 columns end"><span class="circle last">2</span><p>ROOM</p></div>
+                  <div class="large-2 columns"><span id="first_circle" class="circle active">1</span><p>ROOM</p></div>
+	                <div class="large-2 columns end"><span id="second_circle" class="circle last">2</span><p>ROOM</p></div>
                   {/if}
                   {if {post_room_number} == "3"}
-                  <div class="large-2 columns"><span class="circle active">1</span><p>ROOM</p></div>
-	                <div class="large-2 columns"><span class="circle">2</span><p>ROOM</p></div>
-	                <div class="large-2 columns end"><span class="circle last">3</span><p>ROOM</p></div>
+                  <div class="large-2 columns"><span id="first_circle" class="circle active">1</span><p>ROOM</p></div>
+	                <div class="large-2 columns"><span id="second_circle" class="circle">2</span><p>ROOM</p></div>
+	                <div class="large-2 columns end"><span id="third_circle" class="circle last">3</span><p>ROOM</p></div>
                   {/if}
                   {if {post_room_number} == "4"}
-                  <div class="large-2 columns"><span class="circle active">1</span><p>ROOM</p></div>
-	                <div class="large-2 columns"><span class="circle">2</span><p>ROOM</p></div>
-	                <div class="large-2 columns"><span class="circle">3</span><p>ROOM</p></div>
-	                <div class="large-2 columns end"><span class="circle last">4</span><p>ROOM</p></div>
+                  <div class="large-2 columns"><span id="first_circle" class="circle active">1</span><p>ROOM</p></div>
+	                <div class="large-2 columns"><span id="second_circle" class="circle">2</span><p>ROOM</p></div>
+	                <div class="large-2 columns"><span id="third_circle" class="circle">3</span><p>ROOM</p></div>
+	                <div class="large-2 columns end"><span id="fourth_circle" class="circle last">4</span><p>ROOM</p></div>
                   {/if}
                 {/exp:get_post_vars}
               </div>
@@ -855,6 +855,7 @@
 				if(0<rooms_num){
 			    	//$("#step_in_reservation").html("Room 1 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>FIRST</span> ROOM");
+			    	$("#first_circle").addClass("active");
 			    }
 			    else{
 			    	$("#cont").html($("#contenedor").html());
@@ -894,6 +895,7 @@
 				if(1<rooms_num){
 			    	//$("#step_in_reservation").html("Room 2 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>SECOND</span> ROOM");
+			    	$("#second_circle").addClass("active");
 			    }
 			    else{
 			    	$("#cont").html($("#contenedor").html());
@@ -932,6 +934,7 @@
 			    if(2<rooms_num){
 			    	//$("#step_in_reservation").html("Room 3 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>THIRD</span> ROOM");
+			    	$("#third_circle").addClass("active");
 			    }
 			    else{
 			    	$("#cont").html($("#contenedor").html());
@@ -971,6 +974,7 @@
 			    if(3<rooms_num){
 			    	//$("#step_in_reservation").html("Room 4 of "+num_hab);
 			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>FOURTH</span> ROOM");
+			    	$("#fourth_circle").addClass("active");
 			    }
 			    else{
 			    	$("#cont").html($("#contenedor").html());
