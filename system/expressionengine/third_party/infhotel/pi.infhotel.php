@@ -510,7 +510,7 @@ class Infhotel
         $data["Pasajeros"]["0"]= $person;
         //return $json;
         $data["NPasajeros"]="10";
-        
+
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         //  Initiate curl
@@ -762,7 +762,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                         <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
                         <input type="hidden" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
                         <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
-                        <input type="hidden" name="request" maxlength="1000"  id="full_request">
+                        <input type="text" name="request" maxlength="1000"  id="full_request">
                         <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
                         <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
                         {exp:get_post_vars parse="inward"}
