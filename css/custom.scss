@@ -900,8 +900,9 @@ figure {
 		}
 
 		&.active{
-			color: $color-brown;
-			border: 1px solid $color-brown;
+			color: #fff;
+			border: 1px solid #2d251c;
+			background: #2d251c;
 
 			&:after{
 				background: url(../img/book-step.png) no-repeat;
