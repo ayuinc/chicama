@@ -114,9 +114,50 @@ class Vpost
 
      if( ee()->db->insert('exp_hotel_reservations', $data) ){
            $id=ee()->db->insert_id();
-           session_start();
-           $_SESSION['id'] = $id;
-           $array_send['acquirerId']=$codigoAdquirente;
+           /*session_start();
+           $_SESSION['id'] = $id;*/
+           ee()->db->select('*');
+           ee()->db->where('id',$id);
+           $query = ee()->db->get('exp_hotel_reservations');
+           ee()->db->update(
+                 'exp_hotel_reservations',
+                 array(
+                     'validate'  => 'yes'
+                 ),
+                 array(
+                     'id' => $id 
+                 )
+             );
+           foreach($query->result() as $row){
+             $full_request = $row->full_request;
+             $first_name = $row->first_name;
+             $last_name = $row->last_name;
+             $country = $row->country;
+             $document_id = $row->document_id;
+             $document_type = $row->document_type;
+             $card_id = $row->card_id;
+             $card_type = $row->card_type;
+             $div ='{exp:mandrillapp:send_email_reserva_chicama
+                         request="'.$full_request.'"
+                         id_operación= "100"
+                         operation_result= "120"
+                         }
+                     {/exp:mandrillapp:send_email_reserva_chicama}
+                     {exp:infhotel:insertarreservar
+                         request="'.$full_request.'"
+                         first_name="'.$first_name.'"
+                         last_name="'.$last_name.'"
+                         country="'.$country.'"
+                         document_id="'.$document_id.'"
+                         document_type="'.$document_type.'"
+                         card_id="'.$card_id.'"
+                         card_type="'.$card_type.'"
+                         }
+                     {/exp:infhotel:insertarreservar}';
+               
+             }
+             return $div;
+           /*$array_send['acquirerId']=$codigoAdquirente;
            $array_send['commerceId']=$codigoComercio;
            $array_send['purchaseAmount']=$purchaseAmount;
            $array_send['purchaseCurrencyCode']=$codigo1;
@@ -194,7 +235,7 @@ class Vpost
                 return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
                 //inicializacion o el VPOS no ha enviado valores correctos
             }
-        }
+        }*/
     }
     
     public function recepcion(){
@@ -246,9 +287,9 @@ class Vpost
     //valor del vector de inicializacion
      $VI = "F20CA985A4B34DEC";
 
-      /*if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
+      if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
         //return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        if($arrayOut['authorizationResult'] == "00"){*/
+        if($arrayOut['authorizationResult'] == "00"){
           ee()->db->select('*');
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
@@ -291,11 +332,11 @@ class Vpost
             }
             return $div;
             //return $request;
-         /* }
+          }
           else {
             return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         }
-      } */
+      } 
     }
 }
 /* End of file pi.vpost.php */
