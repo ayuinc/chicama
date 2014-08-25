@@ -487,7 +487,7 @@ class Infhotel
         $card_type = ee()->TMPL->fetch_param('card_type');
         
         $json = ee()->TMPL->fetch_param('request');
-        var_dump($json);
+        //var_dump($json);
         $person = array(
             "TDocumento" => $document_id,
             "TMaterno" => "ApMaterno",  
