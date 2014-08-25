@@ -234,8 +234,8 @@ class Vpost
             }else{
                 return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
                 //inicializacion o el VPOS no ha enviado valores correctos
-            }
-        }*/
+            }*/
+        }
     }
     
     public function recepcion(){
