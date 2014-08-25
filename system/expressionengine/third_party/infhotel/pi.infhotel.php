@@ -505,7 +505,7 @@ class Infhotel
         $json = str_replace("(d)", ":", $json);
         $json = str_replace("(e)", " ", $json);
         $json = str_replace("(f)", ",", $json);
-        var_dump($data);
+        var_dump($json);
         $data = json_decode($json, true);
         //var_dump($data);
         $data["Pasajeros"]["0"]= $person;
