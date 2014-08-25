@@ -498,6 +498,12 @@ class Infhotel
             "TTipoDocumento" => $document_type,
             "TTipoTarjeta" => $card_type 
         );
+        $json = str_replace("$", "{", $json);
+        $json = str_replace("&", "}", $json);
+        $json = str_replace('(', '"', $json);
+        $json = str_replace(")", ":", $json);
+        $json = str_replace("?", " ", $json);
+        $json = str_replace("¿", ",", $json);
         /*
         $json = str_replace("(a)", "{", $json);
         $json = str_replace("(b)", "}", $json);
