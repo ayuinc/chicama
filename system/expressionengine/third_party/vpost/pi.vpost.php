@@ -246,9 +246,9 @@ class Vpost
     //valor del vector de inicializacion
      $VI = "F20CA985A4B34DEC";
 
-      if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
+      /*if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
         //return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        if($arrayOut['authorizationResult'] == "00"){
+        if($arrayOut['authorizationResult'] == "00"){*/
           ee()->db->select('*');
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
@@ -291,11 +291,11 @@ class Vpost
             }
             return $div;
             //return $request;
-          }
+         /* }
           else {
             return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         }
-      } 
+      } */
     }
 }
 /* End of file pi.vpost.php */
