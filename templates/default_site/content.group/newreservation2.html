@@ -296,14 +296,16 @@
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
-        	
+        	console.log("Caso: 1 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
     			var temp = {
-				 	"CantHab" : 1, 
-                    "NPrecio" : $(final_cost).val(),  
-                    "TCodigoHabitacion" : "110001"
+				 	  "hab" : "a"
+            /*
+            "CantHab" : 1, 
+            "NPrecio" : $(final_cost).val(),  
+            "TCodigoHabitacion" : "110001"*/
     			};
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -361,14 +363,16 @@
 	        break;
 	    case 2:
 	        $(buttom).click(function(){
-	        
+	        console.log("Caso: 2 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
     			var temp = {
-				 	"CantHab" : 1, 
-                    "NPrecio" : $(final_cost).val(),  
-                    "TCodigoHabitacion" : "110002"
+				 	  "hab" : "b"
+            /*
+            "CantHab" : 1, 
+            "NPrecio" : $(final_cost).val(),  
+            "TCodigoHabitacion" : "110002"*/
     			};
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -425,14 +429,16 @@
 	        break;
 	    case 3:
 	        $(buttom).click(function(){
-	        	
+	        console.log("Caso: 3 "+"Precio: "+$(final_cost).val());	
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
     			var temp = {
-				 	"CantHab" : 1, 
-                    "NPrecio" : $(final_cost).val(),  
-                    "TCodigoHabitacion" : "110003"
+            "hab" : "c"
+            /*
+				  	"CantHab" : 1, 
+            "NPrecio" : $(final_cost).val(),  
+            "TCodigoHabitacion" : "110003"*/
     			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -489,14 +495,16 @@
 	        break;
 	    case 4:
 	        $(buttom).click(function(){
-	        	
-	        	$("body").addClass("overlay_active");	
-	        	setTimeout(function(){$("body").removeClass("overlay_active")},1500);
-	            var valor = $(select_box).val();
+	        console.log("Caso: 4 "+"Precio: "+$(final_cost).val());	
+	        $("body").addClass("overlay_active");	
+	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        var valor = $(select_box).val();
     			var temp = {
-				 	"CantHab" : 1, 
-                    "NPrecio" : $(final_cost).val(),  
-                    "TCodigoHabitacion" : "110005"
+            "hab" : "d"
+            /*
+				 	  "CantHab" : 1, 
+            "NPrecio" : $(final_cost).val(),  
+            "TCodigoHabitacion" : "110005"*/
     			};
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -553,14 +561,16 @@
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
-	        	
+	        console.log("Caso: 5 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
     			var temp = {
-				 	"CantHab" : 1, 
-                    "NPrecio" : $(final_cost).val(),  
-                    "TCodigoHabitacion" : "110006"
+            "hab" : "e"
+            /*
+				 	  "CantHab" : 1, 
+            "NPrecio" : $(final_cost).val(),  
+            "TCodigoHabitacion" : "110006"*/
     			};
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -618,14 +628,16 @@
 	        break;
 	    case 6:
 	        $(buttom).click(function(){
-	        	
+	        console.log("Caso: 6 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
 					var temp = {
-				 	"CantHab" : 1, 
-	                "NPrecio" : $(final_cost).val(),  
-	                "TCodigoHabitacion" : "110007"
+            "hab" : "e"
+            /*
+				 	  "CantHab" : 1, 
+            "NPrecio" : $(final_cost).val(),  
+            "TCodigoHabitacion" : "110007"*/  
 				};
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
