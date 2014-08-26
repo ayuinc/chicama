@@ -105,8 +105,9 @@ class Vpost
           'card_id'=>$card_id,
           'card_type'=>$card_type,
           'purchase_amount'=>$purchaseAmount,
+          'zodiacs'=>$transport,
           'transport'=>$transport,
-          'all_meals'=>$all_meals,
+          'lunch_and_dinner'=>$all_meals,
           'address'=>$billingAddress,
           'validate'=>'no',
           'full_request'=>$full_request
@@ -277,6 +278,7 @@ class Vpost
                         }
                     {/exp:mandrillapp:send_email_reserva_chicama}
                     {exp:infhotel:insertarreservar
+                        id="'.$id.'"
                         request="'.$full_request.'"
                         first_name="'.$first_name.'"
                         last_name="'.$last_name.'"
