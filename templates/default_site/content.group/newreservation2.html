@@ -300,13 +300,11 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
-    			var temp = {
-				 	  "hab" : "a"
-            /*
+    			/*var temp = {
             "CantHab" : 1, 
             "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110001"*/
-    			};
+            "TCodigoHabitacion" : "110001"
+    			};*/
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -316,25 +314,43 @@
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
 		    	switch(summary_cost){
-		    		case "100":
-		    			summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-		    		break;
-		    		case "120":
-		    			summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
-		    		break;
-		    		case "130":
-		    			summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-		    		break;
-		    		case "140":
-		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-		    		break;
-		    		case "160":
-		    			summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-		    		break;
-		    		case "180":
-		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-		    		break;
-		    	}
+            case "100":
+              var temp = {
+                "TCodigoHabitacion" : "rmsg01"
+              };
+              summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
+            break;
+            case "120":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
+            break;
+            case "130":
+              var temp = {
+                "TCodigoHabitacion" : "rmdg01"
+              };
+              summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
+            break;
+            case "140":
+              var temp = {
+                "TCodigoHabitacion" : "110002"
+              };
+              summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
+            break;
+            case "160":
+              var temp = {
+                "TCodigoHabitacion" : "rmtg01"
+              };
+              summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
+            break;
+            case "180":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
+            break;
+          }
 		    	$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
 		    	$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 	        hide_divs(rooms_num, next_div);
@@ -367,13 +383,11 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
-    			var temp = {
-				 	  "hab" : "b"
-            /*
+    			/*var temp = {
             "CantHab" : 1, 
             "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110002"*/
-    			};
+            "TCodigoHabitacion" : "110002"
+    			};*/
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -383,25 +397,43 @@
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
-		    		case "100":
-		    			summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-		    		break;
-		    		case "120":
-		    			summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
-		    		break;
-		    		case "130":
-		    			summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-		    		break;
-		    		case "140":
-		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-		    		break;
-		    		case "160":
-		    			summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-		    		break;
-		    		case "180":
-		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-		    		break;
-		    	}
+            case "100":
+              var temp = {
+                "TCodigoHabitacion" : "rmsg02"
+              };
+              summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
+            break;
+            case "120":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
+            break;
+            case "130":
+              var temp = {
+                "TCodigoHabitacion" : "rmdg02"
+              };
+              summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
+            break;
+            case "140":
+              var temp = {
+                "TCodigoHabitacion" : "110002"
+              };
+              summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
+            break;
+            case "160":
+              var temp = {
+                "TCodigoHabitacion" : "rmtg02"
+              };
+              summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
+            break;
+            case "180":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
+            break;
+          }
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
@@ -450,23 +482,41 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
-		    			summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-		    		break;
-		    		case "120":
-		    			summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
-		    		break;
-		    		case "130":
-		    			summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-		    		break;
-		    		case "140":
-		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-		    		break;
-		    		case "160":
-		    			summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-		    		break;
-		    		case "180":
-		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-		    		break;
+              var temp = {
+                "TCodigoHabitacion" : "rmsg03"
+              };
+              summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
+            break;
+            case "120":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
+            break;
+            case "130":
+              var temp = {
+                "TCodigoHabitacion" : "rmdg03"
+              };
+              summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
+            break;
+            case "140":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
+            break;
+            case "160":
+              var temp = {
+                "TCodigoHabitacion" : "rmtg03"
+              };
+              summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
+            break;
+            case "180":
+              var temp = {
+                "TCodigoHabitacion" : "110003"
+              };
+              summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
+            break;
 		    	}
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
@@ -515,25 +565,43 @@
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
-		    		case "100":
-		    			summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-		    		break;
-		    		case "120":
-		    			summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
-		    		break;
-		    		case "130":
-		    			summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-		    		break;
-		    		case "140":
-		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-		    		break;
-		    		case "160":
-		    			summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-		    		break;
-		    		case "180":
-		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-		    		break;
-		    	}
+            case "100":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
+              summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
+            break;
+            case "120":
+              var temp = {
+                "TCodigoHabitacion" : "rmso05"
+              };
+              summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
+            break;
+            case "130":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
+              summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
+            break;
+            case "140":
+              var temp = {
+                "TCodigoHabitacion" : "rmdo05"
+              };
+              summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
+            break;
+            case "160":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
+              summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
+            break;
+            case "180":
+              var temp = {
+                "TCodigoHabitacion" : "rmto05"
+              };
+              summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
+            break;
+          }
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
@@ -565,13 +633,11 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
-    			var temp = {
-            "hab" : "e"
-            /*
+    			 /*var temp = {
 				 	  "CantHab" : 1, 
             "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110006"*/
-    			};
+            "TCodigoHabitacion" : "110006"
+    			};*/
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -582,21 +648,39 @@
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
 		    		case "100":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
 		    			summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
 		    		break;
 		    		case "120":
+              var temp = {
+                "TCodigoHabitacion" : "rmso06"
+              };
 		    			summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
 		    		break;
 		    		case "130":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
 		    			summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
 		    		break;
 		    		case "140":
+              var temp = {
+                "TCodigoHabitacion" : "rmdo06"
+              };
 		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
 		    		break;
 		    		case "160":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
 		    			summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
 		    		break;
 		    		case "180":
+              var temp = {
+                "TCodigoHabitacion" : "rmto06"
+              };
 		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
 		    		break;
 		    	}
@@ -647,26 +731,44 @@
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
-					switch(summary_cost){
-		    		case "100":
-		    			summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-		    		break;
-		    		case "120":
-		    			summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
-		    		break;
-		    		case "130":
-		    			summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-		    		break;
-		    		case "140":
-		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-		    		break;
-		    		case "160":
-		    			summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-		    		break;
-		    		case "180":
-		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-		    		break;
-		    	}
+          switch(summary_cost){
+            case "100":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
+              summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
+            break;
+            case "120":
+              var temp = {
+                "TCodigoHabitacion" : "rmso07"
+              };
+              summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(120*dias)+".00</span>";
+            break;
+            case "130":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
+              summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
+            break;
+            case "140":
+              var temp = {
+                "TCodigoHabitacion" : "rmdo07"
+              };
+              summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
+            break;
+            case "160":
+              var temp = {
+                "TCodigoHabitacion" : "110006"
+              };
+              summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
+            break;
+            case "180":
+              var temp = {
+                "TCodigoHabitacion" : "rmto07"
+              };
+              summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
+            break;
+          }
 					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
