@@ -94,6 +94,8 @@ class Vpost
      $card_id = ee()->TMPL->fetch_param('card_id');
      $card_type = ee()->TMPL->fetch_param('card_type');
 
+     $request = ee()->TMPL->fetch_param('full_request');
+
      $full_request = str_replace("$", "{", $full_request);
      $full_request = str_replace("&", "}", $full_request);
      $full_request = str_replace('(', '"', $full_request);
@@ -236,7 +238,7 @@ class Vpost
               $card_type = $row->card_type;
               $div ='{exp:infhotel:insertarreservar
                           id="'.$id.'"
-                          request="'.$full_request.'"
+                          request="'.$request.'"
                           first_name="'.$first_name.'"
                           last_name="'.$last_name.'"
                           country="'.$country.'"
