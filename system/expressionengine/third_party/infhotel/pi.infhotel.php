@@ -775,7 +775,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                         
                         <input type="text" name="rooms_input" maxlength="1000"  id="rooms_input">
                         <input type="text" name="request" maxlength="1000"  id="full_request">
-                        <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
+                        <input type="text" name="purchase_amount" maxlength="1000"  id="purchase_amount">
                         <input type="hidden" name="summary" maxlength="1000"  id="summary_input">
                         {exp:get_post_vars parse="inward"}
                         <input type="hidden" name="check_in_date" value="{post_check_in_date}">
