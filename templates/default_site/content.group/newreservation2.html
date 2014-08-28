@@ -749,17 +749,17 @@
     	if($(check_box).is(":checked")) {
     		if(sumary=="lunch_and_dinner_summary"){
     			$("#"+sumary).html("");
-          $("#lunch_and_dinner_serial").html("");
+          $("#lunch_and_dinner_serial").val("");
     		}
     		else{
     			if(sumary=="transport_summary"){
     				$("#"+sumary).html("");
-            $("#transport_serial").html("");
+            $("#transport_serial").val("");
     			}
     			else{
     				if(sumary=="tow_back_service_summary"){
     				$("#"+sumary).html("");
-            $("#tow_back_service_serial").html("");
+            $("#tow_back_service_serial").val("");
     				}
     			}
     		}
@@ -798,15 +798,15 @@
     				switch($("#encabezado_transport").html()){
     					case "$100.00":
     					$("#"+sumary).html("Transport <br>(1 person) <span>"+$(encabezado).text()+"</span>");
-              $("#transport_serial").valval("adtp01");
+              $("#transport_serial").val("adtp01");
     					break;
     					case "$200.00":
     					$("#"+sumary).html("Transport <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#transport_serial").valval("adtp02");
+              $("#transport_serial").val("adtp02");
     					break;
     					case "$300.00":
     					$("#"+sumary).html("Transport <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#transport_serial").valval("adtp03");
+              $("#transport_serial").val("adtp03");
     					break;
     				}
     			}
@@ -815,15 +815,15 @@
     					switch($("#encabezado_tow_back_service").html()){
     					case "$100.00":
     					$("#"+sumary).html("Tow back service <br>(1 person) <span>"+$(encabezado).text()+"</span>");
-              $("#tow_back_service_serial").valvalval("adzc01");
+              $("#tow_back_service_serial").val("adzc01");
     					break;
     					case "$200.00":
     					$("#"+sumary).html("Tow back service <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#tow_back_service_serial").valvalval("adzc02");
+              $("#tow_back_service_serial").val("adzc02");
     					break;
     					case "$300.00":
     					$("#"+sumary).html("Tow back service <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#tow_back_service_serial").valvalval("adzc03");
+              $("#tow_back_service_serial").val("adzc03");
     					break;
     					}
     				}
