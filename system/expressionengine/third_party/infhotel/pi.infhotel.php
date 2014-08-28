@@ -515,7 +515,7 @@ class Infhotel
         $data = json_decode($json, true);
         //var_dump($data);
         $data["Pasajeros"]["0"]= $person;
-        //var_dump($data);
+        var_dump($data);
         //return $json;
         //$data["NPasajeros"]="10";
 
