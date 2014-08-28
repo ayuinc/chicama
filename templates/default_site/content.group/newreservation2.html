@@ -296,7 +296,7 @@
 	    case 1:
 	        $(buttom).click(function(){
 	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        setTimeout(function(){$("body").removeClass("overlay_active")},750);
 		    	var valor = $(select_box).val();
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -366,7 +366,7 @@
 	    case 2:
 	        $(buttom).click(function(){
 	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        setTimeout(function(){$("body").removeClass("overlay_active")},750);
 		    	var valor = $(select_box).val();
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -435,7 +435,7 @@
 	    case 3:
 	        $(buttom).click(function(){
 	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        setTimeout(function(){$("body").removeClass("overlay_active")},750);
 		    	var valor = $(select_box).val();
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -504,7 +504,7 @@
 	    case 4:
 	        $(buttom).click(function(){
 	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        setTimeout(function(){$("body").removeClass("overlay_active")},750);
 	        var valor = $(select_box).val();
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -573,7 +573,7 @@
 	    case 5:
 	        $(buttom).click(function(){
 	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        setTimeout(function(){$("body").removeClass("overlay_active")},750);
 	        var valor = $(select_box).val();
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -643,7 +643,7 @@
 	    case 6:
 	        $(buttom).click(function(){
 	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
+	        setTimeout(function(){$("body").removeClass("overlay_active")},750);
 	        var valor = $(select_box).val();
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
@@ -767,17 +767,17 @@
         if(sumary == "lunch_and_dinner_summary"){
     			switch($("#encabezado_lunch_and_dinner").html()){
     				case "$100.00":
-    				$("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>$100.00</span>");
             $("#lunch_and_dinner_serial").val("adld01");
             console.log($(encabezado).text());
     				break;
     				case "$200.00":
-    				$("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>$200.00</span>");
             $("#lunch_and_dinner_serial").val("adld02");
             console.log($(encabezado).text());
     				break;
     				case "$300.00":
-    				$("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
+    				$("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>$300.00</span>");
             $("#lunch_and_dinner_serial").val("adld03");
             console.log($(encabezado).text());
     				break;
@@ -787,17 +787,17 @@
     			if(sumary == "transport_summary"){
     				switch($("#encabezado_transport").html()){
     					case "$100.00":
-    					$("#"+sumary).html("Transport <br>(1 person) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Transport <br>(1 person) <span>$100.00</span>");
               $("#transport_serial").val("adtp01");
               console.log($(encabezado).text());
     					break;
     					case "$200.00":
-    					$("#"+sumary).html("Transport <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Transport <br>(2 persons) <span>$200.00</span>");
               $("#transport_serial").val("adtp02");
               console.log($(encabezado).text());
     					break;
     					case "$300.00":
-    					$("#"+sumary).html("Transport <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Transport <br>(3 persons) <span>$300.00</span>");
               $("#transport_serial").val("adtp03");
               console.log($(encabezado).text());
     					break;
@@ -807,17 +807,17 @@
     				if(sumary == "tow_back_service_summary"){
     					switch($("#encabezado_tow_back_service").html()){
     					case "$100.00":
-    					$("#"+sumary).html("Tow back service <br>(1 person) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Tow back service <br>(1 person) <span>$100.00</span>");
               $("#tow_back_service_serial").val("adzc01");
               console.log($(encabezado).text());
     					break;
     					case "$200.00":
-    					$("#"+sumary).html("Tow back service <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Tow back service <br>(2 persons) <span>$200.00</span>");
               $("#tow_back_service_serial").val("adzc02");
               console.log($(encabezado).text());
     					break;
     					case "$300.00":
-    					$("#"+sumary).html("Tow back service <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
+    					$("#"+sumary).html("Tow back service <br>(3 persons) <span>$300.00</span>");
               $("#tow_back_service_serial").val("adzc03");
               console.log($(encabezado).text());
     					break;
@@ -853,19 +853,19 @@
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>$100.00</span>");
                 $("#lunch_and_dinner_serial").val("adld01");
                 console.log($(encabezado).text());
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <br>(1 person)<span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport <br>(1 person)<span>$100.00</span>");
                   $("#transport_serial").val("adtp01");
                   console.log($(encabezado).text());
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
-              			$("#"+sumary).html("Tow back service <br>(1 person)<span>"+$(encabezado).text()+"</span>");
+              			$("#"+sumary).html("Tow back service <br>(1 person)<span>$100.00</span>");
                     $("#tow_back_service_serial").val("adzc01");
                     console.log($(encabezado).text());
               		}
@@ -883,19 +883,19 @@
               //var total_summary = $("#purchase_amount").val();
        				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>$200.00</span>");
                 $("#lunch_and_dinner_serial").val("adld02");
                 console.log($(encabezado).text());
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport <br>(2 persons)<span>$200.00</span>");
                   $("#transport_serial").val("adtp02");
                   console.log($(encabezado).text());
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
-              			$("#"+sumary).html("Tow back service <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
+              			$("#"+sumary).html("Tow back service <br>(2 persons)<span>$200.00</span>");
                     $("#tow_back_service_serial").val("adzc02");
                     console.log($(encabezado).text());
               		}
@@ -914,19 +914,19 @@
    						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
+              	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>$300.00</span>");
                 $("#lunch_and_dinner_serial").val("adld03");
                 console.log($(encabezado).text());
               }
               else{
               	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
+              		$("#"+sumary).html("Transport <br>(3 persons)<span>$300.00</span>");
                   $("#transport_serial").val("adtp03");
                   console.log($(encabezado).text());
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
-              			$("#"+sumary).html("Tow back service <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
+              			$("#"+sumary).html("Tow back service <br>(3 persons)<span>$300.00</span>");
                     $("#tow_back_service_serial").val("adzc03");
                     console.log($(encabezado).text());
               		}
