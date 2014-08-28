@@ -860,14 +860,17 @@
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>"+$(encabezado).text()+"</span>");
+                $("#lunch_and_dinner_serial").html("adld01");
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(1 person)<span>"+$(encabezado).text()+"</span>");
+                  $("#transport_serial").html("adtp01");
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(1 person)<span>"+$(encabezado).text()+"</span>");
+                    $("#tow_back_service_serial").html("adzc01");
               		}
               	}
               }	
@@ -885,14 +888,17 @@
        				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
+                $("#lunch_and_dinner_serial").html("adld02");
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
+                  $("#transport_serial").html("adtp02");
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
+                    $("#tow_back_service_serial").html("adzc02");
               		}
               	}
               }
@@ -911,14 +917,17 @@
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
+                $("#lunch_and_dinner_serial").html("adld03");
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
+                  $("#transport_serial").html("adtp03");
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
+                    $("#tow_back_service_serial").html("adzc03");
               		}
               	}
               }
