@@ -387,7 +387,7 @@ class Infhotel
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
-                                      <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="120"> 
+                                      <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="120"> 
                                       <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Single (1 person)</option>
                                         <option value="2">Double (2 persons)</option>
