@@ -73,6 +73,7 @@ class Vpost
      $idorden = "".((int)(microtime()*100000));
      
      $purchaseAmount = ee()->TMPL->fetch_param('purchaseAmount');
+     $purchaseAmount = 0;
      $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
      $billingLastName = ee()->TMPL->fetch_param('billingLastName');
      $billingEMail = ee()->TMPL->fetch_param('billingEMail');
@@ -80,6 +81,8 @@ class Vpost
      
      $transport = ee()->TMPL->fetch_param('transport');
      $all_meals = ee()->TMPL->fetch_param('all_meals');
+     $tow_back_service = ee()->TMPL->fetch_param('tow_back_service');
+
      $phone = ee()->TMPL->fetch_param('phone');
      $street = ee()->TMPL->fetch_param('street');
      $city = ee()->TMPL->fetch_param('city');
@@ -91,6 +94,62 @@ class Vpost
      $card_id = ee()->TMPL->fetch_param('card_id');
      $card_type = ee()->TMPL->fetch_param('card_type');
 
+     $full_request = str_replace("$", "{", $full_request);
+     $full_request = str_replace("&", "}", $full_request);
+     $full_request = str_replace('(', '"', $full_request);
+     $full_request = str_replace(")", ":", $full_request);
+     $full_request = str_replace("?", " ", $full_request);
+     $full_request = str_replace("¿", ",", $full_request);
+     $data = json_decode($full_request, true);
+     $rooms_serials = $data["Habitaciones"];
+
+     for ($i=0; $i < count($rooms_serials); $i++) { 
+        $serial = $data["Habitaciones"][$i]["TCodigoHabitacion"];
+        ee()->db->select('*');
+        ee()->db->where('serial',$serial);
+        $query = ee()->db->get('exp_hotel_products');
+        foreach($query->result() as $row){
+          //$room_cod = $row->room_cod;
+          $purchaseAmount = $purchaseAmount + $row->cost;
+        }
+      }
+
+     ee()->db->select('*');
+     ee()->db->where('serial',$transport);
+     $query = ee()->db->get('exp_hotel_products');
+     if($query != null){
+       foreach($query->result() as $row){
+         $purchaseAmount = $purchaseAmount + $row->cost;
+         $transport = $row->name;
+       }
+     }
+     else{
+         $transport = 'Servicio No Contratado';
+     }
+     ee()->db->select('*');
+     ee()->db->where('serial',$all_meals);
+     $query = ee()->db->get('exp_hotel_products');
+     if($query != null){
+       foreach($query->result() as $row){
+         $purchaseAmount = $purchaseAmount + $row->cost;
+         $all_meals = $row->name;
+       }
+     }  
+     else{
+         $transport = 'Servicio No Contratado';
+     }
+     ee()->db->select('*');
+     ee()->db->where('serial',$tow_back_service);
+     $query = ee()->db->get('exp_hotel_products');
+     if($query != null){
+       foreach($query->result() as $row){
+         $purchaseAmount = $purchaseAmount + $row->cost;
+         $tow_back_service = $row->name;
+       }
+     }
+     else{
+         $transport = 'Servicio No Contratado';
+     }
      $data = array(
           'first_name'=> $billingFirstName,
           'last_name'=> $billingLastName,
@@ -105,7 +164,7 @@ class Vpost
           'card_id'=>$card_id,
           'card_type'=>$card_type,
           'purchase_amount'=>$purchaseAmount,
-          'zodiacs'=>$transport,
+          'zodiacs'=>$tow_back_service,
           'transport'=>$transport,
           'lunch_and_dinner'=>$all_meals,
           'address'=>$billingAddress,
@@ -161,6 +220,35 @@ class Vpost
             "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
             "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
             "-----END RSA PRIVATE KEY-----";
+          
+            ee()->db->select('*');
+            ee()->db->where('id',$id);
+            $query = ee()->db->get('exp_hotel_reservations');
+
+            foreach($query->result() as $row){
+              $full_request = $row->full_request;
+              $first_name = $row->first_name;
+              $last_name = $row->last_name;
+              $country = $row->country;
+              $document_id = $row->document_id;
+              $document_type = $row->document_type;
+              $card_id = $row->card_id;
+              $card_type = $row->card_type;
+              $div ='{exp:infhotel:insertarreservar
+                          id="'.$id.'"
+                          request="'.$full_request.'"
+                          first_name="'.$first_name.'"
+                          last_name="'.$last_name.'"
+                          country="'.$country.'"
+                          document_id="'.$document_id.'"
+                          document_type="'.$document_type.'"
+                          card_id="'.$card_id.'"
+                          card_type="'.$card_type.'"
+                          }
+                      {/exp:infhotel:insertarreservar}';
+                
+              }
+              return $div;
             /*if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
                 return 'last_id_insert=> '.$id.' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
