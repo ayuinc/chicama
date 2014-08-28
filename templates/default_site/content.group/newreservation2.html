@@ -363,6 +363,7 @@
 		    	$(request).val(send);
           console.log($(request).val());
 		    	$(purchase_amount).val(amount);
+          $("#rooms_input").val(amount*dias);
 	        });
 					
 	        break;
@@ -436,6 +437,7 @@
           $(request).val(send);
           console.log($(request).val());
 		    	$(purchase_amount).val(amount);
+          $("#rooms_input").val(amount*dias);
 	        });
 	        break;
 	    case 3:
@@ -508,6 +510,7 @@
 		    	$(request).val(send);
           console.log($(request).val());
 		    	$(purchase_amount).val(amount);
+          $("#rooms_input").val(amount*dias);
 	        });
 	        break;
 	    case 4:
@@ -580,6 +583,7 @@
 		    	$(request).val(send);
           console.log($(request).val());
 		    	$(purchase_amount).val(amount);
+          $("#rooms_input").val(amount*dias);
 	        });
 	        break;
 	    case 5:
@@ -652,6 +656,7 @@
 		    	$(request).val(send);
           console.log($(request).val());
 		    	$(purchase_amount).val(amount);
+          $("#rooms_input").val(amount*dias);
 		    	
 			});
 	        break;
@@ -665,8 +670,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
-          console.log($("#rooms_input").val());
+   			
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
           switch(summary_cost){
@@ -725,7 +729,8 @@
 		    	$(request).val(send);
           console.log($(request).val());
 		    	$(purchase_amount).val(amount);
-		    	
+	       $("#rooms_input").val(amount*dias);
+         console.log($("#rooms_input").val());
 	        });
 	        break;
 	    } 
