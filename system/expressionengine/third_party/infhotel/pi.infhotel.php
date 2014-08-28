@@ -517,10 +517,20 @@ class Infhotel
         $rooms_serials = $data["Habitaciones"];
         for ($i=0; $i < count($rooms_serials); $i++) { 
              $serial = $data["Habitaciones"][$i]["TCodigoHabitacion"];
-             var_dump($serial);
+             //var_dump($serial);
+            ee()->db->select('*');
+            ee()->db->where('serial',$serial);
+            $query = ee()->db->get('exp_hotel_products');
+            foreach($query->result() as $row){
+              $room_cod = $row->room_cod;
+              $cost = $row->cost;
+              }
+              $data["Habitaciones"][$i]["CantHab"] = '1';
+              $data["Habitaciones"][$i]["TCodigoHabitacion"] = $room_cod;
+              $data["Habitaciones"][$i]["NPrecio"] = $cost;
          } 
         $data["Pasajeros"]["0"]= $person;
-        //var_dump($rooms_serials);
+        var_dump( $data["Habitaciones"]);
         //return $json;
         //$data["NPasajeros"]="10";
 
