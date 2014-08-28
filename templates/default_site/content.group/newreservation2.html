@@ -187,7 +187,6 @@
                 "NPasajero": "0" ,
                 "Pasajeros" : {}
 		};
-		console.log(data);
 		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
     cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
     cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
@@ -300,11 +299,6 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
-    			/*var temp = {
-            "CantHab" : 1, 
-            "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110001"
-    			};*/
 		    	simple_garden = simple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -360,18 +354,12 @@
 	        sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
-		    	 send = send.replace(/{/gi, "$");
+		    	send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-          /*send = send.replace(/{/gi, "(a)");
-		    	send = send.replace(/}/gi, "(b)");	
-		    	send = send.replace(/"/gi, "(c)");
-		    	send = send.replace(/:/gi, "(d)");
-		    	send = send.replace(/ /gi, "(e)");
-		    	send = send.replace(/,/gi, "(f)");*/
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 	        });
@@ -383,11 +371,6 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
-    			/*var temp = {
-            "CantHab" : 1, 
-            "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110002"
-    			};*/
 		    	doble_garden = doble_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -449,13 +432,6 @@
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-          /*send = send.replace(/{/gi, "(a)");
-          send = send.replace(/}/gi, "(b)");  
-          send = send.replace(/"/gi, "(c)");
-          send = send.replace(/:/gi, "(d)");
-          send = send.replace(/ /gi, "(e)");
-          send = send.replace(/,/gi, "(f)");*/
-    	    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 	        });
 	        break;
@@ -465,13 +441,6 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
-    			var temp = {
-            "hab" : "c"
-            /*
-				  	"CantHab" : 1, 
-            "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110003"*/
-    			};
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -533,12 +502,6 @@
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-          /*send = send.replace(/{/gi, "(a)");
-          send = send.replace(/}/gi, "(b)");  
-          send = send.replace(/"/gi, "(c)");
-          send = send.replace(/:/gi, "(d)");
-          send = send.replace(/ /gi, "(e)");
-          send = send.replace(/,/gi, "(f)");*/
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 	        });
@@ -549,11 +512,6 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
-    			/*var temp = {
-				 	  "CantHab" : 1, 
-            "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110005"
-    			};*/
 		    	simple_ocean =simple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -615,12 +573,6 @@
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-          /*send = send.replace(/{/gi, "(a)");
-          send = send.replace(/}/gi, "(b)");  
-          send = send.replace(/"/gi, "(c)");
-          send = send.replace(/:/gi, "(d)");
-          send = send.replace(/ /gi, "(e)");
-          send = send.replace(/,/gi, "(f)");*/
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 	        });
@@ -631,11 +583,6 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
-    			/*var temp = {
-				 	  "CantHab" : 1, 
-            "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110006"
-    			};*/
 		    	doble_ocean =doble_ocean+ 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -686,8 +633,8 @@
 					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 					hide_divs(rooms_num, next_div);
 	        data["Habitaciones"][orden]=temp;
-		    console.log(data["Habitaciones"][orden]);
-		    console.log(data);
+		      console.log(data["Habitaciones"][orden]);
+		      console.log(data);
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
@@ -697,12 +644,6 @@
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-          /*send = send.replace(/{/gi, "(a)");
-          send = send.replace(/}/gi, "(b)");  
-          send = send.replace(/"/gi, "(c)");
-          send = send.replace(/:/gi, "(d)");
-          send = send.replace(/ /gi, "(e)");
-          send = send.replace(/,/gi, "(f)");*/
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	
@@ -714,11 +655,6 @@
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
-					/*var temp = {
-				 	  "CantHab" : 1, 
-            "NPrecio" : $(final_cost).val(),  
-            "TCodigoHabitacion" : "110007"  
-				  };*/
 		    	triple_ocean =triple_ocean + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
@@ -780,12 +716,6 @@
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-		    	/*send = send.replace(/{/gi, "(a)");
-          send = send.replace(/}/gi, "(b)");  
-          send = send.replace(/"/gi, "(c)");
-          send = send.replace(/:/gi, "(d)");
-          send = send.replace(/ /gi, "(e)");
-          send = send.replace(/,/gi, "(f)");*/
 		    	$(request).val(send);
 		    	$(purchase_amount).val(amount);
 		    	

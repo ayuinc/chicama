@@ -485,9 +485,7 @@ class Infhotel
         $document_type = ee()->TMPL->fetch_param('document_type');
         $card_id = ee()->TMPL->fetch_param('card_id');
         $card_type = ee()->TMPL->fetch_param('card_type');
-        
         $json = ee()->TMPL->fetch_param('request');
-        //var_dump($json);
         $person = array(
             "TDocumento" => $document_id,
             "TMaterno" => "ApMaterno",  
@@ -504,20 +502,10 @@ class Infhotel
         $json = str_replace(")", ":", $json);
         $json = str_replace("?", " ", $json);
         $json = str_replace("¿", ",", $json);
-        /*
-        $json = str_replace("(a)", "{", $json);
-        $json = str_replace("(b)", "}", $json);
-        $json = str_replace('(c)', '"', $json);
-        $json = str_replace("(d)", ":", $json);
-        $json = str_replace("(e)", " ", $json);
-        $json = str_replace("(f)", ",", $json);*/
-        //var_dump($json);
         $data = json_decode($json, true);
-        //var_dump($data);
         $rooms_serials = $data["Habitaciones"];
         for ($i=0; $i < count($rooms_serials); $i++) { 
              $serial = $data["Habitaciones"][$i]["TCodigoHabitacion"];
-             //var_dump($serial);
             ee()->db->select('*');
             ee()->db->where('serial',$serial);
             $query = ee()->db->get('exp_hotel_products');
@@ -530,14 +518,9 @@ class Infhotel
               $data["Habitaciones"][$i]["NPrecio"] = $cost;
          } 
         $data["Pasajeros"]["0"]= $person;
-        var_dump( $data["Habitaciones"]);
-        //return $json;
-        //$data["NPasajeros"]="10";
-
+        //var_dump( $data["Habitaciones"]);
         $data_string = json_encode($data, true);
-        //var_dump($data_string);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
-        //  Initiate curl
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_string)); 
