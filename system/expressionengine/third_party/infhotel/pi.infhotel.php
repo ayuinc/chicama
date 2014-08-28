@@ -516,7 +516,7 @@ class Infhotel
         //var_dump($data);
         $rooms_serials = $data["Habitaciones"];
         for ($i=0; $i < count($rooms_serials); $i++) { 
-             $serial = $data["Habitaciones"][$i];
+             $serial = $data["Habitaciones"][$i]["TCodigoHabitacion"];
              var_dump($serial);
          } 
         $data["Pasajeros"]["0"]= $person;
