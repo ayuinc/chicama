@@ -768,6 +768,11 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                         <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
                         <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
                         <input type="text" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
+
+                        <input type="text" name="lunch_and_dinner_serial" maxlength="1000"  id="lunch_and_dinner_input">
+                        <input type="text" name="transport_serial" maxlength="1000"  id="transport_input">
+                        <input type="text" name="tow_back_service_serial" maxlength="1000"  id="tow_back_service_input">
+                        
                         <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
                         <input type="hidden" name="request" maxlength="1000"  id="full_request">
                         <input type="hidden" name="purchase_amount" maxlength="1000"  id="purchase_amount">
