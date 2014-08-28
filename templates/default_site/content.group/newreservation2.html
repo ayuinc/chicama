@@ -295,7 +295,7 @@
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
-        	console.log("Simple Garden - Caso: 1 "+"Precio: "+$(final_cost).val());
+        	//console.log("Simple Garden - Caso: 1 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
@@ -350,8 +350,8 @@
 		    	$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
 	        hide_divs(rooms_num, next_div);
 	        data["Habitaciones"][orden]=temp;
-	        console.log(data["Habitaciones"][orden]);
-	        console.log(data);
+	        //console.log(data["Habitaciones"][orden]);
+	        //console.log(data);
 	        sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
 		    	var send = JSON.stringify(data);
