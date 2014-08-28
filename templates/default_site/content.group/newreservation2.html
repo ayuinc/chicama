@@ -769,14 +769,17 @@
     				case "$100.00":
     				$("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>"+$(encabezado).text()+"</span>");
             $("#lunch_and_dinner_serial").val("adld01");
+            console.log($(encabezado).text());
     				break;
     				case "$200.00":
     				$("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
             $("#lunch_and_dinner_serial").val("adld02");
+            console.log($(encabezado).text());
     				break;
     				case "$300.00":
     				$("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
             $("#lunch_and_dinner_serial").val("adld03");
+            console.log($(encabezado).text());
     				break;
     			}
     		}
@@ -786,14 +789,17 @@
     					case "$100.00":
     					$("#"+sumary).html("Transport <br>(1 person) <span>"+$(encabezado).text()+"</span>");
               $("#transport_serial").val("adtp01");
+              console.log($(encabezado).text());
     					break;
     					case "$200.00":
     					$("#"+sumary).html("Transport <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
               $("#transport_serial").val("adtp02");
+              console.log($(encabezado).text());
     					break;
     					case "$300.00":
     					$("#"+sumary).html("Transport <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
               $("#transport_serial").val("adtp03");
+              console.log($(encabezado).text());
     					break;
     				}
     			}
@@ -803,14 +809,17 @@
     					case "$100.00":
     					$("#"+sumary).html("Tow back service <br>(1 person) <span>"+$(encabezado).text()+"</span>");
               $("#tow_back_service_serial").val("adzc01");
+              console.log($(encabezado).text());
     					break;
     					case "$200.00":
     					$("#"+sumary).html("Tow back service <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
               $("#tow_back_service_serial").val("adzc02");
+              console.log($(encabezado).text());
     					break;
     					case "$300.00":
     					$("#"+sumary).html("Tow back service <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
               $("#tow_back_service_serial").val("adzc03");
+              console.log($(encabezado).text());
     					break;
     					}
     				}
@@ -846,16 +855,19 @@
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>"+$(encabezado).text()+"</span>");
                 $("#lunch_and_dinner_serial").val("adld01");
+                console.log($(encabezado).text());
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(1 person)<span>"+$(encabezado).text()+"</span>");
                   $("#transport_serial").val("adtp01");
+                  console.log($(encabezado).text());
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(1 person)<span>"+$(encabezado).text()+"</span>");
                     $("#tow_back_service_serial").val("adzc01");
+                    console.log($(encabezado).text());
               		}
               	}
               }	
@@ -873,16 +885,19 @@
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
                 $("#lunch_and_dinner_serial").val("adld02");
+                console.log($(encabezado).text());
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
                   $("#transport_serial").val("adtp02");
+                  console.log($(encabezado).text());
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
                     $("#tow_back_service_serial").val("adzc02");
+                    console.log($(encabezado).text());
               		}
               	}
               }
@@ -901,16 +916,19 @@
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
                 $("#lunch_and_dinner_serial").val("adld03");
+                console.log($(encabezado).text());
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
                   $("#transport_serial").val("adtp03");
+                  console.log($(encabezado).text());
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
                     $("#tow_back_service_serial").val("adzc03");
+                    console.log($(encabezado).text());
               		}
               	}
               }
@@ -934,7 +952,7 @@
 			case 0:
 				if(0<rooms_num){
 			    	//$("#step_in_reservation").html("Room 1 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>FIRST</span> ROOM");
+			    	$("#step_in_reservation").html("SELECT YOUR FIRST ROOM");
 			    	$("#first_circle").addClass("active");
 			    }
 			    else{
@@ -974,7 +992,7 @@
 			case 1:
 				if(1<rooms_num){
 			    	//$("#step_in_reservation").html("Room 2 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>SECOND</span> ROOM");
+			    	$("#step_in_reservation").html("SELECT YOUR SECOND  ROOM");
 			    	$("#first_circle").removeClass("active");
 			    	$("#second_circle").addClass("active");
 			    }
@@ -1014,7 +1032,7 @@
 			case 2:
 			    if(2<rooms_num){
 			    	//$("#step_in_reservation").html("Room 3 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>THIRD</span> ROOM");
+			    	$("#step_in_reservation").html("SELECT YOUR THIRD ROOM");
 			    	$("#second_circle").removeClass("active");
 			    	$("#third_circle").addClass("active");
 			    }
@@ -1055,7 +1073,7 @@
 			case 3:
 			    if(3<rooms_num){
 			    	//$("#step_in_reservation").html("Room 4 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR <span class='underline'>FOURTH</span> ROOM");
+			    	$("#step_in_reservation").html("SELECT YOUR FOURT ROOM");
 			    	$("#third_circle").removeClass("active");
 			    	$("#fourth_circle").addClass("active");
 			    }
