@@ -514,9 +514,13 @@ class Infhotel
         //var_dump($json);
         $data = json_decode($json, true);
         //var_dump($data);
-        $rooms_serials = $data["Habitaciones"]; 
+        $rooms_serials = $data["Habitaciones"];
+        for ($i=0; $i < count($rooms_serials); $i++) { 
+             $serial = $data["Habitaciones"][$i];
+             var_dump($serial);
+         } 
         $data["Pasajeros"]["0"]= $person;
-        var_dump($rooms_serials);
+        //var_dump($rooms_serials);
         //return $json;
         //$data["NPasajeros"]="10";
 
