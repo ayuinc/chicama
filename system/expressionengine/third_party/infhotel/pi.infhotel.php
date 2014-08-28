@@ -323,7 +323,7 @@ class Infhotel
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
-                                      <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="100"> 
+                                      <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="130"> 
                                       <select name="persons_number" id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Single (1 person)</option>
                                         <option value="2">Double (2 persons)</option>
@@ -353,7 +353,7 @@ class Infhotel
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
-                                      <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="100"> 
+                                      <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="160"> 
                                       <select name="persons_number" id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Single (1 person)</option>
                                         <option value="2">Double (2 persons)</option>
@@ -387,7 +387,7 @@ class Infhotel
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
-                                      <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="100"> 
+                                      <input id="final_cost_simple_ocean'.$i.'" type="text" name="final_cost_simple_ocean'.$i.'" value="120"> 
                                       <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Single (1 person)</option>
                                         <option value="2">Double (2 persons)</option>
@@ -419,7 +419,7 @@ class Infhotel
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
-                                      <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="100">
+                                      <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="140">
                                       <select name="persons_number" id="guests_doble_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Single (1 person)</option>
                                         <option value="2">Double (2 persons)</option>
@@ -450,7 +450,7 @@ class Infhotel
                                 <div class="large-3 columns">
                                   <div class="row">
                                     <div class="large-9 large-centered columns">
-                                    <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="100">
+                                    <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="180">
                                       <select name="persons_number" id="guests_triple_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                         <option value="1" selected="selected">Single (1 person)</option>
                                         <option value="2">Double (2 persons)</option>
