@@ -781,15 +781,15 @@
     			switch($("#encabezado_lunch_and_dinner").html()){
     				case "$100.00":
     				$("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>"+$(encabezado).text()+"</span>");
-            $("#lunch_and_dinner_serial").html("adld01");
+            $("#lunch_and_dinner_serial").val("adld01");
     				break;
     				case "$200.00":
     				$("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
-            $("#lunch_and_dinner_serial").html("adld02");
+            $("#lunch_and_dinner_serial").val("adld02");
     				break;
     				case "$300.00":
     				$("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
-            $("#lunch_and_dinner_serial").html("adld03");
+            $("#lunch_and_dinner_serial").val("adld03");
     				break;
     			}
     		}
@@ -798,15 +798,15 @@
     				switch($("#encabezado_transport").html()){
     					case "$100.00":
     					$("#"+sumary).html("Transport <br>(1 person) <span>"+$(encabezado).text()+"</span>");
-              $("#transport_serial").html("adtp01");
+              $("#transport_serial").valval("adtp01");
     					break;
     					case "$200.00":
     					$("#"+sumary).html("Transport <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#transport_serial").html("adtp02");
+              $("#transport_serial").valval("adtp02");
     					break;
     					case "$300.00":
     					$("#"+sumary).html("Transport <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#transport_serial").html("adtp03");
+              $("#transport_serial").valval("adtp03");
     					break;
     				}
     			}
@@ -815,15 +815,15 @@
     					switch($("#encabezado_tow_back_service").html()){
     					case "$100.00":
     					$("#"+sumary).html("Tow back service <br>(1 person) <span>"+$(encabezado).text()+"</span>");
-              $("#tow_back_service_serial").html("adzc01");
+              $("#tow_back_service_serial").valvalval("adzc01");
     					break;
     					case "$200.00":
     					$("#"+sumary).html("Tow back service <br>(2 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#tow_back_service_serial").html("adzc02");
+              $("#tow_back_service_serial").valvalval("adzc02");
     					break;
     					case "$300.00":
     					$("#"+sumary).html("Tow back service <br>(3 persons) <span>"+$(encabezado).text()+"</span>");
-              $("#tow_back_service_serial").html("adzc03");
+              $("#tow_back_service_serial").valvalval("adzc03");
     					break;
     					}
     				}
@@ -860,17 +860,17 @@
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>"+$(encabezado).text()+"</span>");
-                $("#lunch_and_dinner_serial").html("adld01");
+                $("#lunch_and_dinner_serial").val("adld01");
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(1 person)<span>"+$(encabezado).text()+"</span>");
-                  $("#transport_serial").html("adtp01");
+                  $("#transport_serial").val("adtp01");
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(1 person)<span>"+$(encabezado).text()+"</span>");
-                    $("#tow_back_service_serial").html("adzc01");
+                    $("#tow_back_service_serial").val("adzc01");
               		}
               	}
               }	
@@ -888,17 +888,17 @@
        				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
-                $("#lunch_and_dinner_serial").html("adld02");
+                $("#lunch_and_dinner_serial").val("adld02");
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
-                  $("#transport_serial").html("adtp02");
+                  $("#transport_serial").val("adtp02");
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(2 persons)<span>"+$(encabezado).text()+"</span>");
-                    $("#tow_back_service_serial").html("adzc02");
+                    $("#tow_back_service_serial").val("adzc02");
               		}
               	}
               }
@@ -917,17 +917,17 @@
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
               	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
-                $("#lunch_and_dinner_serial").html("adld03");
+                $("#lunch_and_dinner_serial").val("adld03");
               }
               else{
               	if(sumary=="transport_summary"){
               		$("#"+sumary).html("Transport <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
-                  $("#transport_serial").html("adtp03");
+                  $("#transport_serial").val("adtp03");
               	}
               	else{
               		if(sumary=="tow_back_service_summary"){
               			$("#"+sumary).html("Tow back service <br>(3 persons)<span>"+$(encabezado).text()+"</span>");
-                    $("#tow_back_service_serial").html("adzc03");
+                    $("#tow_back_service_serial").val("adzc03");
               		}
               	}
               }
