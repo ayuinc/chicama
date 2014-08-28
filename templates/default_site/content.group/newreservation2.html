@@ -305,6 +305,7 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
+          console.log($("#rooms_input").val());
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
 		    	switch(summary_cost){
@@ -361,6 +362,7 @@
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
 		    	$(request).val(send);
+          console.log($(request).val());
 		    	$(purchase_amount).val(amount);
 	        });
 					
@@ -377,6 +379,7 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
+          console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -432,6 +435,8 @@
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
+          $(request).val(send);
+          console.log($(request).val());
 		    	$(purchase_amount).val(amount);
 	        });
 	        break;
@@ -447,6 +452,7 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
+          console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -503,6 +509,7 @@
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
 		    	$(request).val(send);
+          console.log($(request).val());
 		    	$(purchase_amount).val(amount);
 	        });
 	        break;
@@ -518,6 +525,7 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
+          console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -574,6 +582,7 @@
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
 		    	$(request).val(send);
+          console.log($(request).val());
 		    	$(purchase_amount).val(amount);
 	        });
 	        break;
@@ -589,6 +598,7 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
+          console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
 					switch(summary_cost){
@@ -645,6 +655,7 @@
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
 		    	$(request).val(send);
+          console.log($(request).val());
 		    	$(purchase_amount).val(amount);
 		    	
 			});
@@ -661,6 +672,7 @@
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
+          console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
           switch(summary_cost){
@@ -717,6 +729,7 @@
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
 		    	$(request).val(send);
+          console.log($(request).val());
 		    	$(purchase_amount).val(amount);
 		    	
 	        });
