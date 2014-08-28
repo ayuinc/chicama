@@ -295,7 +295,6 @@
 	switch(type_hab){
 	    case 1:
 	        $(buttom).click(function(){
-        	//console.log("Simple Garden - Caso: 1 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
@@ -304,7 +303,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
+   				$("#rooms_input").val(total_summary);
           console.log($("#rooms_input").val());
 		    	summary_room = orden+1;
 		    	summary_cost = $(final_cost).val();
@@ -369,7 +368,6 @@
 	        break;
 	    case 2:
 	        $(buttom).click(function(){
-	        console.log("Doble Garden Caso: 2 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
@@ -378,7 +376,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
+   				$("#rooms_input").val(total_summary);
           console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
@@ -442,7 +440,6 @@
 	        break;
 	    case 3:
 	        $(buttom).click(function(){
-	        console.log("Triple Garden Caso: 3 "+"Precio: "+$(final_cost).val());	
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 		    	var valor = $(select_box).val();
@@ -451,7 +448,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
+   				$("#rooms_input").val(total_summary);
           console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
@@ -515,7 +512,6 @@
 	        break;
 	    case 4:
 	        $(buttom).click(function(){
-	        console.log("Simple Ocean Caso: 4 "+"Precio: "+$(final_cost).val());	
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
@@ -524,7 +520,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
+   				$("#rooms_input").val(total_summary);
           console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
@@ -588,7 +584,6 @@
 	        break;
 	    case 5:
 	        $(buttom).click(function(){
-	        console.log("Doble Ocean Caso: 5 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
@@ -597,7 +592,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
+   				$("#rooms_input").val(total_summary);
           console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
@@ -662,7 +657,6 @@
 	        break;
 	    case 6:
 	        $(buttom).click(function(){
-	        console.log("Triple Ocean Caso: 6 "+"Precio: "+$(final_cost).val());
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},1500);
 	        var valor = $(select_box).val();
@@ -671,7 +665,7 @@
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
+   				$("#rooms_input").val(total_summary);
           console.log($("#rooms_input").val());
     			summary_room = orden+1;
 					summary_cost = $(final_cost).val();
