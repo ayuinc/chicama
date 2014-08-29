@@ -533,7 +533,7 @@ class Infhotel
         $result = curl_exec($ch);
         curl_close($ch);
 
-        var_dump($result);
+        var_dump(count($result));
         
         return "your reservation code is <b>".$result;
     }
