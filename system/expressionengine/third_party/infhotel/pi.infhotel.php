@@ -477,6 +477,7 @@ class Infhotel
     }
 
     public function insertarreservar(){
+        $id = ee()->TMPL->fetch_param('id'); 
         $first_name = ee()->TMPL->fetch_param('first_name');
         $last_name = ee()->TMPL->fetch_param('last_name');
         $dni = ee()->TMPL->fetch_param('dni');
@@ -531,6 +532,8 @@ class Infhotel
         ); 
         $result = curl_exec($ch);
         curl_close($ch);
+
+        var_dump($result);
         
         return "your reservation code is <b>".$result;
     }
