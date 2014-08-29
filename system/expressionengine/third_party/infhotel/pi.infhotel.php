@@ -612,8 +612,8 @@ class Infhotel
 
                         <hr>
 
-                        <p Your credit card will be reimburse</p>
-                        <p If you have problem call 511-440-6040</p>
+                        <p> Your credit card will be reimburse</p>
+                        <p> If you have problem call 511-440-6040</p>
 
                       </div>
                     </div>
