@@ -477,6 +477,7 @@ class Infhotel
     }
 
     public function insertarreservar(){
+        $cod_reservation = "";
         $id = ee()->TMPL->fetch_param('id'); 
         $first_name = ee()->TMPL->fetch_param('first_name');
         $last_name = ee()->TMPL->fetch_param('last_name');
@@ -533,12 +534,12 @@ class Infhotel
         $result = curl_exec($ch);
         curl_close($ch);
 
-        $code = strlen($result);
+        $cod_reservation = str_replace('"', '', $cod_reservation);
 
         ee()->db->update(
             'exp_hotel_reservations',
             array(
-                'cod_reservation'  => $code
+                'cod_reservation'  => $cod_reservation
             ),
             array(
                 'id' => $id 
