@@ -522,7 +522,7 @@ class Infhotel
               $data["Habitaciones"][$i]["NPrecio"] = $cost;
          } 
         $data["Pasajeros"]["0"]= $person;
-        $llegada substr($data["FLlegada"], 0, -13); 
+        $llegada = substr($data["FLlegada"], 0, -13); 
         $salida = substr($data["FSalida"], 0, -13);
         //var_dump( $data["Habitaciones"]);
         $data_string = json_encode($data, true);
