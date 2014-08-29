@@ -231,7 +231,7 @@ class Vpost
             "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
             "-----END RSA PRIVATE KEY-----";
           
-            ee()->db->select('*');
+            /*ee()->db->select('*');
             ee()->db->where('id',$id);
             $query = ee()->db->get('exp_hotel_reservations');
 
@@ -258,8 +258,8 @@ class Vpost
                       {/exp:infhotel:insertarreservar}';
                 
               }
-              return $div;
-            /*if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
+              return $div;*/
+            if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
                 return 'last_id_insert=> '.$id.' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
                    <table border="0">
@@ -292,7 +292,7 @@ class Vpost
             }else{
                 return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
                 //inicializacion o el VPOS no ha enviado valores correctos
-            }*/
+            }
         }
     }
     
