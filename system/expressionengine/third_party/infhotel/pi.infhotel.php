@@ -536,15 +536,28 @@ class Infhotel
 
         $cod_reservation = str_replace('"', '', $result);
 
-        ee()->db->update(
-            'exp_hotel_reservations',
-            array(
-                'cod_reservation'  => $cod_reservation
-            ),
-            array(
-                'id' => $id 
-            )
-        );
+        if( strlen($cod_reservation) == 6 ) {
+            ee()->db->update(
+                'exp_hotel_reservations',
+                array(
+                    'cod_reservation'  => $cod_reservation
+                ),
+                array(
+                    'id' => $id 
+                )
+            );
+        }
+        else{
+            ee()->db->update(
+                'exp_hotel_reservations',
+                array(
+                    'cod_reservation'  => 'Error en la reserva'
+                ),
+                array(
+                    'id' => $id 
+                )
+            );   
+        }
         
         return " ---- your reservation code is <b>".$result;
     }
