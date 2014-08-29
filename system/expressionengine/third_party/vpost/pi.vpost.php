@@ -137,7 +137,7 @@ class Vpost
        }
      }  
      else{
-         $transport = 'Servicio No Contratado';
+         $all_meals = 'Servicio No Contratado';
      }
      ee()->db->select('*');
      ee()->db->where('serial',$tow_back_service);
@@ -149,7 +149,7 @@ class Vpost
        }
      }
      else{
-         $transport = 'Servicio No Contratado';
+         $tow_back_service = 'Servicio No Contratado';
      }
      $data = array(
           'first_name'=> $billingFirstName,
