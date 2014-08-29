@@ -122,6 +122,9 @@ class Vpost
        foreach($query->result() as $row){
          $purchaseAmount = $purchaseAmount + $row->cost;
          $transport = $row->name;
+         if($transport==""){
+            $transport = 'Servicio No Contratado';
+         }
        }
      }
      else{
@@ -134,6 +137,9 @@ class Vpost
        foreach($query->result() as $row){
          $purchaseAmount = $purchaseAmount + $row->cost;
          $all_meals = $row->name;
+         if($all_meals==""){
+            $all_meals = 'Servicio No Contratado';
+         }
        }
      }  
      else{
@@ -146,6 +152,9 @@ class Vpost
        foreach($query->result() as $row){
          $purchaseAmount = $purchaseAmount + $row->cost;
          $tow_back_service = $row->name;
+         if($tow_back_service==""){
+            $tow_back_service = 'Servicio No Contratado';
+         }
        }
      }
      else{
