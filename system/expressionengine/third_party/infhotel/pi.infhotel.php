@@ -559,7 +559,18 @@ class Infhotel
             );   
         }
         
-        return " ---- your reservation code is <b>".$result;
+        return '{exp:mandrillapp:send_email_reserva_cliente  
+                        id_operación= "200"
+                        operation_result= "220"
+                        }
+                    {/exp:mandrillapp:send_email_reserva_chicama}
+                    {exp:mandrillapp:send_email_reserva_chicama
+                        request="'.$full_request.'"
+                        id_operación= "100"
+                        operation_result= "120"
+                        }
+                    {/exp:mandrillapp:send_email_reserva_chicama} 
+                    your reservation code is <b>'.$result;
     }
     
     public function reservation_3(){
