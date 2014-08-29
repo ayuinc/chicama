@@ -533,9 +533,19 @@ class Infhotel
         $result = curl_exec($ch);
         curl_close($ch);
 
-        $code = sizeof($result);
+        $code = strlen($result);
+
+        ee()->db->update(
+            'exp_hotel_reservations',
+            array(
+                'cod_reservation'  => $code
+            ),
+            array(
+                'id' => $id 
+            )
+        );
         
-        return $code." ---- your reservation code is <b>".$result;
+        return " ---- your reservation code is <b>".$result;
     }
     
     public function reservation_3(){
