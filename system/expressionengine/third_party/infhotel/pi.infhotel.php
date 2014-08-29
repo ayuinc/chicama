@@ -478,6 +478,8 @@ class Infhotel
 
     public function insertarreservar(){
         $cod_reservation = "";
+        $llegada = "";
+        $salida = "";
         $id = ee()->TMPL->fetch_param('id'); 
         $first_name = ee()->TMPL->fetch_param('first_name');
         $last_name = ee()->TMPL->fetch_param('last_name');
@@ -520,6 +522,8 @@ class Infhotel
               $data["Habitaciones"][$i]["NPrecio"] = $cost;
          } 
         $data["Pasajeros"]["0"]= $person;
+        $llegada substr($data["FLlegada"], 0, -13); 
+        $salida = substr($data["FSalida"], 0, -13);
         //var_dump( $data["Habitaciones"]);
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
@@ -546,6 +550,37 @@ class Infhotel
                     'id' => $id 
                 )
             );
+            return '{exp:mandrillapp:send_email_reserva_chicama  
+                      id_operación= "200"
+                      operation_result= "220"
+                    }
+                    {/exp:mandrillapp:send_email_reserva_chicama}
+                    {exp:mandrillapp:send_email_reserva_chicama
+                        id_operación= "100"
+                        operation_result= "120"
+                    }
+                    {/exp:mandrillapp:send_email_reserva_chicama} 
+                    <div class="large-12 columns">
+                    <div class="row">
+                    <h4 class="text-center sub-title first">thank you. your reservation is complete</h4>
+                    <div class="large-6 large-centered columns">
+                      <div class="your-stay text-center">
+                        <h4 class="text-center sub-title">
+                    
+                        Your reservation code is <b>'.$result.'</h4>
+
+                        <hr>
+
+                        <p class="">ARRIVAL: <span>'.$llegada.'</span></p>
+                        <p class="">DEPARTURE: <span>'$salida.'</span></p>
+                        <p class="">2 Nights</p>
+                        <p class="">ADD - ONS: <span>Lunch and Dinner</span></p>
+                        <p class="">ADD - ONS: <span>Transport</span></p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>';
         }
         else{
             ee()->db->update(
@@ -557,19 +592,34 @@ class Infhotel
                     'id' => $id 
                 )
             );   
-        }
-        
-        return '{exp:mandrillapp:send_email_reserva_chicama  
-                        id_operación= "200"
-                        operation_result= "220"
-                        }
+            return '{exp:mandrillapp:send_email_reserva_chicama  
+                      id_operación= "200"
+                      operation_result= "220"
+                    }
                     {/exp:mandrillapp:send_email_reserva_chicama}
                     {exp:mandrillapp:send_email_reserva_chicama
                         id_operación= "100"
                         operation_result= "120"
-                        }
-                    {/exp:mandrillapp:send_email_reserva_chicama} 
-                    your reservation code is <b>'.$result;
+                    }
+                    {/exp:mandrillapp:send_email_reserva_chicama}
+                    <div class="large-12 columns">
+                    <div class="row">
+                    <h4 class="text-center sub-title first">sorry! </h4>
+                    <div class="large-6 large-centered columns">
+                      <div class="your-stay text-center">
+                        <h4 class="text-center sub-title">
+                        There was a problem with your reservation</h4>
+
+                        <hr>
+
+                        <p Your credit card will be reimburse</p>
+                        <p If you have problem call 511-440-6040</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>';
+        }
     }
     
     public function reservation_3(){
