@@ -480,6 +480,9 @@ class Infhotel
         $cod_reservation = "";
         $llegada = "";
         $salida = "";
+        $lunch_and_dinner = "";
+        $transport = "";
+        $zodiacs = "";
         $id = ee()->TMPL->fetch_param('id'); 
         $first_name = ee()->TMPL->fetch_param('first_name');
         $last_name = ee()->TMPL->fetch_param('last_name');
@@ -524,7 +527,21 @@ class Infhotel
         $data["Pasajeros"]["0"]= $person;
         $llegada = substr($data["FLlegada"], 0, -13); 
         $salida = substr($data["FSalida"], 0, -13);
-        //var_dump( $data["Habitaciones"]);
+        $dias = (strtotime($llegada)-strtotime($salida))/86400;
+        $dias = abs($dias); 
+        $dias = floor($dias); 
+
+        ee()->db->select('*');
+        ee()->db->where('id',$id);
+        $query = ee()->db->get('exp_hotel_reservations');
+        if($query != null){
+          foreach($query->result() as $row){
+            $lunch_and_dinner = $row->lunch_and_dinner;
+            $transport = $row->transport;
+            $zodiacs = $row->zodiacs;
+          }
+        }
+
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         $ch = curl_init($url);
@@ -573,9 +590,10 @@ class Infhotel
 
                         <p class="">ARRIVAL: <span>'.$llegada.'</span></p>
                         <p class="">DEPARTURE: <span>'.$salida.'</span></p>
-                        <p class="">2 Nights</p>
-                        <p class="">ADD - ONS: <span>Lunch and Dinner</span></p>
-                        <p class="">ADD - ONS: <span>Transport</span></p>
+                        <p class="">'.$dias.' Nights</p>
+                        <p class="">ADD - ONS: <span>'.$lunch_and_dinner.'</span></p>
+                        <p class="">ADD - ONS: <span>'.$transport.'</span></p>
+                        <p class="">ADD - ONS: <span>'.$zodiacs.'</span></p>
 
                       </div>
                     </div>
