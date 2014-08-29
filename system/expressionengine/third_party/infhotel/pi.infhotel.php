@@ -572,7 +572,7 @@ class Infhotel
                         <hr>
 
                         <p class="">ARRIVAL: <span>'.$llegada.'</span></p>
-                        <p class="">DEPARTURE: <span>'$salida.'</span></p>
+                        <p class="">DEPARTURE: <span>'.$salida.'</span></p>
                         <p class="">2 Nights</p>
                         <p class="">ADD - ONS: <span>Lunch and Dinner</span></p>
                         <p class="">ADD - ONS: <span>Transport</span></p>
