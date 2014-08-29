@@ -71,6 +71,7 @@ class Vpost
      $codigoAdquirente = 144;
      $codigoComercio = 6573;
      $idorden = "".((int)(microtime()*100000));
+     $purchaseAmount = 0;
      
      $billingFirstName = ee()->TMPL->fetch_param('billingFirstName');
      $billingLastName = ee()->TMPL->fetch_param('billingLastName');
