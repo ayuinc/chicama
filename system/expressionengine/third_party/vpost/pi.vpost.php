@@ -230,7 +230,7 @@ class Vpost
             "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
             "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
             "-----END RSA PRIVATE KEY-----";
-          
+            // inicio del codigo nuevo
             ee()->db->select('*');
             ee()->db->where('id',$id);
             $query = ee()->db->get('exp_hotel_reservations');
@@ -244,19 +244,7 @@ class Vpost
               $document_type = $row->document_type;
               $card_id = $row->card_id;
               $card_type = $row->card_type;
-              $div ='{exp:mandrillapp:send_email_reserva_chicama
-                        request="'.$full_request.'"
-                        id_operación= "200"
-                        operation_result= "220"
-                        }
-                    {/exp:mandrillapp:send_email_reserva_chicama}
-                    {exp:mandrillapp:send_email_reserva_chicama
-                        request="'.$full_request.'"
-                        id_operación= "100"
-                        operation_result= "120"
-                        }
-                    {/exp:mandrillapp:send_email_reserva_chicama}
-                      {exp:infhotel:insertarreservar
+              $div ='{exp:infhotel:insertarreservar
                           id="'.$id.'"
                           request="'.$request.'"
                           first_name="'.$first_name.'"
@@ -271,6 +259,7 @@ class Vpost
                 
               }
               return $div;
+              // fin del codigo nuevo
             /*if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
                 return 'last_id_insert=> '.$id.' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
@@ -358,8 +347,9 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        //return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+        // return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         if($arrayOut['authorizationResult'] == "00"){
+          // ingresar codigo nuevo aqui
           ee()->db->select('*');
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
