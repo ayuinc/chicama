@@ -591,10 +591,7 @@ class Infhotel
                         <p class="">ARRIVAL: <span>'.$llegada.'</span></p>
                         <p class="">DEPARTURE: <span>'.$salida.'</span></p>
                         <p class="">'.$dias.' Nights</p>
-                        <p class="">ADD - ONS: <span>'.$lunch_and_dinner.'</span></p>
-                        <p class="">ADD - ONS: <span>'.$transport.'</span></p>
-                        <p class="">ADD - ONS: <span>'.$zodiacs.'</span></p>
-
+                        '.$lunch_and_dinner.$transport.$zodiacs.'
                       </div>
                     </div>
                   </div>
