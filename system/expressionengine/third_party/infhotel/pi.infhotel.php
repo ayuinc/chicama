@@ -535,7 +535,7 @@ class Infhotel
 
         var_dump(count($result));
         
-        return "your reservation code is <b>".$result;
+        return count($result)." ---- your reservation code is <b>".$result;
     }
     
     public function reservation_3(){
