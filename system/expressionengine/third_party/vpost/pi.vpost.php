@@ -356,6 +356,7 @@ class Vpost
 
           foreach($query->result() as $row){
             $request = $row->full_request;
+            var_dump($request);
             $first_name = $row->first_name;
             $last_name = $row->last_name;
             $country = $row->country;
