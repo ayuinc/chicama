@@ -282,7 +282,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                   <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                                    <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -313,7 +313,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                                    <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -343,7 +343,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                                    <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -377,7 +377,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                                    <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -409,7 +409,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                                    <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description">
@@ -440,7 +440,7 @@ class Infhotel
                                 <div class="large-4 columns">
                                   <figure>
                                     <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                                    <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
                                   </figure>
                                 </div>
                                 <div class="large-5 columns room-description" >
