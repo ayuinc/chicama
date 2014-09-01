@@ -348,7 +348,7 @@ class Vpost
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
         // return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        if($arrayOut['authorizationResult'] == "05"){
+        if($arrayOut['authorizationResult'] == "01"){
           // ingresar codigo nuevo aqui
           ee()->db->select('*');
           ee()->db->where('id',$id);
