@@ -527,6 +527,7 @@ class Infhotel
         $data["Pasajeros"]["0"]= $person;
         $llegada = substr($data["FLlegada"], 0, -13); 
         $salida = substr($data["FSalida"], 0, -13);
+        var_dump($data);
         $dias = (strtotime($llegada)-strtotime($salida))/86400;
         $dias = abs($dias); 
         $dias = floor($dias); 
