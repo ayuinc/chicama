@@ -503,14 +503,14 @@ class Infhotel
             "TTarjeta" => $card_id,
             "TTipoDocumento" => $document_type,
             "TTipoTarjeta" => $card_type 
-        );
+        );/*
         $json = str_replace("$", "{", $json);
         $json = str_replace("&", "}", $json);
         $json = str_replace('(', '"', $json);
         $json = str_replace(")", ":", $json);
         $json = str_replace("?", " ", $json);
         $json = str_replace("¿", ",", $json);
-        $data = json_decode($json, true);
+        $data = json_decode($json, true);*/
         var_dump($data);
         $rooms_serials = $data["Habitaciones"];
         for ($i=0; $i < count($rooms_serials); $i++) { 
