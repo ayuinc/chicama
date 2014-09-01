@@ -94,6 +94,7 @@ class Vpost
      $card_type = ee()->TMPL->fetch_param('card_type');
 
      $request = ee()->TMPL->fetch_param('full_request');
+     var_dump($request);
 
      $full_request = str_replace("$", "{", $full_request);
      $full_request = str_replace("&", "}", $full_request);
@@ -179,7 +180,7 @@ class Vpost
           'lunch_and_dinner'=>$all_meals,
           'address'=>$billingAddress,
           'validate'=>'no',
-          'full_request'=>$full_request
+          'full_request'=>$request
           );
 
      if( ee()->db->insert('exp_hotel_reservations', $data) ){
