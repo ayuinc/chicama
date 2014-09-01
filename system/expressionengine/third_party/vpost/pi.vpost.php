@@ -355,7 +355,7 @@ class Vpost
           $query = ee()->db->get('exp_hotel_reservations');
 
           foreach($query->result() as $row){
-            $full_request = $row->full_request;
+            $request = $row->full_request;
             $first_name = $row->first_name;
             $last_name = $row->last_name;
             $country = $row->country;
