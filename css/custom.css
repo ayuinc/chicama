@@ -551,6 +551,8 @@ figure {
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.8);
   margin: 0; }
+.book_a_room input[name="submit"] {
+  width: 100%; }
 .book_a_room input[type="text"] {
   background: url(../img/calendar-icon.png) 95% center no-repeat;
   background-size: 13px;

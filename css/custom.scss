@@ -720,6 +720,9 @@ figure {
 		background: rgba(0, 0, 0, 0.8);
 		margin: 0;
 	}
+	input[name="submit"]{
+		width: 100%;
+	}
 	input[type="text"] {
 		background: url(../img/calendar-icon.png) 95% center no-repeat;
 		background-size: 13px;
