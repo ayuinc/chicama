@@ -493,6 +493,7 @@ class Infhotel
         $card_id = ee()->TMPL->fetch_param('card_id');
         $card_type = ee()->TMPL->fetch_param('card_type');
         $json = ee()->TMPL->fetch_param('request');
+        var_dump($json);
         $person = array(
             "TDocumento" => $document_id,
             "TMaterno" => "ApMaterno",  
@@ -513,7 +514,7 @@ class Infhotel
         var_dump($data);
         $rooms_serials = $data["Habitaciones"];
         for ($i=0; $i < count($rooms_serials); $i++) { 
-             $serial = $data["Habitaciones"][$i]["TCodigoHabitacion"];
+            $serial = $data["Habitaciones"][$i]["TCodigoHabitacion"];
             ee()->db->select('*');
             ee()->db->where('serial',$serial);
             $query = ee()->db->get('exp_hotel_products');
