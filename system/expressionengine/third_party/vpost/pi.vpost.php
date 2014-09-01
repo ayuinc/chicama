@@ -231,7 +231,7 @@ class Vpost
             "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
             "-----END RSA PRIVATE KEY-----";
             // inicio del codigo nuevo
-            ee()->db->select('*');
+            /*ee()->db->select('*');
             ee()->db->where('id',$id);
             $query = ee()->db->get('exp_hotel_reservations');
 
@@ -258,9 +258,9 @@ class Vpost
                       {/exp:infhotel:insertarreservar}';
                 
               }
-              return $div;
+              return $div; */
               // fin del codigo nuevo
-            /*if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
+            if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
                 return 'last_id_insert=> '.$id.' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
                    <table border="0">
@@ -293,7 +293,7 @@ class Vpost
             }else{
                 return "Hay un problema con el conector de pago"; //puede haber un problema de mala configuraciÃ³n de las llaves, vector de
                 //inicializacion o el VPOS no ha enviado valores correctos
-            }*/
+            }
         }
     }
     
@@ -353,15 +353,7 @@ class Vpost
           ee()->db->select('*');
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
-          ee()->db->update(
-                'exp_hotel_reservations',
-                array(
-                    'validate'  => 'yes'
-                ),
-                array(
-                    'id' => $id 
-                )
-            );
+
           foreach($query->result() as $row){
             $full_request = $row->full_request;
             $first_name = $row->first_name;
@@ -371,15 +363,9 @@ class Vpost
             $document_type = $row->document_type;
             $card_id = $row->card_id;
             $card_type = $row->card_type;
-            $div ='{exp:mandrillapp:send_email_reserva_chicama
-                        request="'.$full_request.'"
-                        id_operación= "100"
-                        operation_result= "120"
-                        }
-                    {/exp:mandrillapp:send_email_reserva_chicama}
-                    {exp:infhotel:insertarreservar
+            $div ='{exp:infhotel:insertarreservar
                         id="'.$id.'"
-                        request="'.$full_request.'"
+                        request="'.$request.'"
                         first_name="'.$first_name.'"
                         last_name="'.$last_name.'"
                         country="'.$country.'"
