@@ -1,36 +1,38 @@
 {embed="includes/header"}
 <div class="book_container cover_container">
-  <div id="form_box" class="row">
-    <div class="large-3 columns">
-      <form class="book_a_room" action="/?/content/newreservation2" method="POST">
-        <input type="hidden" name="XID" value="{XID_HASH}" /> 
-        <h2>Book A Room</h2>
-        <div class="row">
-          <div class="large-12 columns">
-            <input type="text" name="check_in_date" placeholder="Check-in Date" id="check_in_date">
-            <input type="text" name="check_out_date" placeholder="Check-out Date" id="check_out_date">
+  <div class="row">
+    <div id="form_box" class="large-3 columns">
+      <div class="">
+        <form class="book_a_room" action="/?/content/newreservation2" method="POST">
+          <input type="hidden" name="XID" value="{XID_HASH}" /> 
+          <h2>Book A Room</h2>
+          <div class="row">
+            <div class="large-12 columns">
+              <input type="text" name="check_in_date" placeholder="Check-in Date" id="check_in_date">
+              <input type="text" name="check_out_date" placeholder="Check-out Date" id="check_out_date">
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="large-4 columns">
-            <p>Rooms</p>
+          <div class="row">
+            <div class="large-4 columns">
+              <p>Rooms</p>
+            </div>
+            <div class="large-8 columns">
+              <select name="room_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
+                  <option value="1" selected="selected">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+              </select>
+            </div>
           </div>
-          <div class="large-8 columns">
-            <select name="room_number"  id="freeform_persons_number" required="" pattern="number" data-invalid="">
-                <option value="1" selected="selected">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
+          <div class="row">
+            <div class="large-12 large-centered columns">
+              <input type="submit" id="submit" name="submit" value="Check Availability" class="send button expand">
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="large-12 large-centered columns">
-            <input type="submit" id="submit" name="submit" value="Check Availability" class="send button expand">
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
-  </div> 
+  </div>  
 </div> 
 {embed="includes/footer"}
