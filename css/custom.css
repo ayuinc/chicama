@@ -686,7 +686,10 @@ figure {
     padding-left: 3.4rem; }
 
 #form_box {
-  padding: 25px; }
+  padding: 25px;
+  widows: 20%; }
+  #form_box h2 {
+    font-size: 2rem; }
   #form_box .book_a_room {
     padding: 0;
     text-align: center; }
