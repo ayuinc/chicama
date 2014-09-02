@@ -749,6 +749,10 @@ class Infhotel
                               <img src="img/addon1.png" alt="">
                               <a class="text-center" href="#" data-reveal-id="add1"><span>+</span></a>
                             </figure>
+                            <div id="add1" class="reveal-modal medium" data-reveal>
+                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                              <a class="close-reveal-modal">&#215;</a>
+                            </div>
                           </div>
                           <!-- end add-on img -->
                           <!-- add-on description -->
@@ -792,6 +796,10 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                               <img src="img/addon2.png" alt="">
                               <a class="text-center" href="#" data-reveal-id="add2"><span>+</span></a>
                             </figure>
+                            <div id="add2" class="reveal-modal medium" data-reveal>
+                              <img src="http://chicamasurf.com/img/addon2.png" alt="">
+                              <a class="close-reveal-modal">&#215;</a>
+                            </div>
                           </div>
                           <!-- end add-on img -->
                           <!-- add-on description -->
@@ -834,6 +842,10 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                               <img src="img/addon3.png" alt="">
                               <a class="text-center" href="#" data-reveal-id="add3"><span>+</span></a>
                             </figure>
+                            <div id="add3" class="reveal-modal medium" data-reveal>
+                              <img src="http://chicamasurf.com/img/addon3.png" alt="">
+                              <a class="close-reveal-modal">&#215;</a>
+                            </div>
                           </div>
                           <!-- end add-on img -->
                           <!-- add-on description -->
