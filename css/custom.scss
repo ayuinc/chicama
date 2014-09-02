@@ -1344,6 +1344,16 @@ table {
     img{
     	margin: 0 auto;
     }
+    .orbit-slide-number{
+    	left: 40px;
+    }
+    .orbit-prev{
+			width: 32px;
+			background-color: rgba(0, 0, 0, 0.3);
+    }
+  	.orbit-next{
+			@extend .orbit-prev;
+  	}
 }
 @media only screen and (max-width: 40em) {
 
