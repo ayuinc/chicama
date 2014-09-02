@@ -685,6 +685,18 @@ figure {
   #form_box_6 .search_again {
     padding-left: 3.4rem; }
 
+#form_box {
+  padding: 25px; }
+  #form_box .book_a_room {
+    padding: 0;
+    text-align: center; }
+    #form_box .book_a_room input[type="text"] {
+      margin-bottom: 2.2em; }
+    #form_box .book_a_room select {
+      width: inherit; }
+    #form_box .book_a_room .send {
+      top: 0; }
+
 #form_box_2 .main_form select {
   width: 11rem;
   height: 2.9rem; }
