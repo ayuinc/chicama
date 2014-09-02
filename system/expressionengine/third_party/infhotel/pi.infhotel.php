@@ -747,7 +747,7 @@ class Infhotel
                           <div class="large-5 columns">
                             <figure>
                               <img src="img/addon1.png" alt="">
-                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                              <a class="text-center" href="#" data-reveal-id="addon1"><span>+</span></a>
                             </figure>
                           </div>
                           <!-- end add-on img -->
@@ -790,7 +790,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                           <div class="large-5 columns">
                             <figure>
                               <img src="img/addon2.png" alt="">
-                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                              <a class="text-center" href="#" data-reveal-id="addon2"><span>+</span></a>
                             </figure>
                           </div>
                           <!-- end add-on img -->
@@ -832,7 +832,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                           <div class="large-5 columns">
                             <figure>
                               <img src="img/addon3.png" alt="">
-                              <!-- <a class="text-center" href="#"><span>+</span></a> -->
+                              <a class="text-center" href="#" data-reveal-id="addon3"><span>+</span></a>
                             </figure>
                           </div>
                           <!-- end add-on img -->
