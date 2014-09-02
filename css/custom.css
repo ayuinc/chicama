@@ -1048,6 +1048,11 @@ table thead {
   min-height: 463px; }
   .orbit-container img {
     margin: 0 auto; }
+  .orbit-container .orbit-slide-number {
+    left: 40px; }
+  .orbit-container .orbit-prev, .orbit-container .orbit-next {
+    width: 32px;
+    background-color: rgba(0, 0, 0, 0.3); }
 
 @media only screen and (max-width: 40em) {
   #cover_container_index {
