@@ -280,6 +280,9 @@ h1, h2, h3, h4, h5 {
 .redes-sociales {
   margin-top: 2rem !important; }
 
+.reveal-modal {
+  text-align: center; }
+
 figure {
   margin: 0;
   position: relative; }
