@@ -132,7 +132,17 @@
   </div>  
 </div>  
 <div id="oceanView" class="reveal-modal medium" data-reveal>
-  <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+  <ul class="gallery" data-orbit>
+    <li>
+      <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+    </li>
+    <li class="active">
+      <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+    </li>
+    <li>
+      <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+    </li>
+  </ul>
   <a class="close-reveal-modal">&#215;</a>
 </div>
 <div id="gardenView" class="reveal-modal medium" data-reveal>
@@ -659,7 +669,8 @@
 	        break;
 	    case 6:
 	        $(buttom).click(function(){
-          showIt('steps_list');  
+          showIt('step_in_reservation');
+          // showIt('steps_list');
 	        $("body").addClass("overlay_active");	
 	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
 	        var valor = $(select_box).val();
