@@ -53,6 +53,10 @@ input[type="text"], input[type="url"], textarea {
 	font-weight: 200;
 }
 
+input[type="text"], textarea{
+	margin-bottom: 1rem; 
+}
+
 form{
 	margin: 0;
 }

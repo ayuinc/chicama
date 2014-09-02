@@ -37,6 +37,9 @@ input[type="text"], input[type="url"], textarea {
   background: #FDFDFD;
   font-weight: 200; }
 
+input[type="text"], textarea {
+  margin-bottom: 1rem; }
+
 form {
   margin: 0; }
 
