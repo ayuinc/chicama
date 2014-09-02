@@ -640,6 +640,18 @@ class Infhotel
     public function reservation_3(){
         $response= '
         <div id="contenedor">
+        <div id="add1" class="reveal-modal medium" data-reveal>
+          <img src="http://chicamasurf.com/img/addon1.png" alt="">
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+        <div id="add2" class="reveal-modal medium" data-reveal>
+          <img src="http://chicamasurf.com/img/addon2.png" alt="">
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+        <div id="add3" class="reveal-modal medium" data-reveal>
+          <img src="http://chicamasurf.com/img/addon3.png" alt="">
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
           <div id="form_box_3_container" class="large-12 large-centered columns"> 
           <div id="form_box_3">
             <!-- reservation-header -->
