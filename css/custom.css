@@ -687,7 +687,7 @@ figure {
 
 #form_box {
   padding: 25px;
-  widows: 20%; }
+  width: 20%; }
   #form_box h2 {
     font-size: 2rem; }
   #form_box .book_a_room {
