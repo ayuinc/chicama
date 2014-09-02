@@ -1339,7 +1339,13 @@ table {
 .underline{
 	text-decoration: underline;
 }
-@media only screen and (max-width: 40em) { 
+.orbit-container {
+    min-height: 463px;
+    img{
+    	margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 40em) {
 
 	#cover_container_index {	
 		height:680px;
