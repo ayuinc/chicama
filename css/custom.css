@@ -1044,6 +1044,11 @@ table thead {
 .underline {
   text-decoration: underline; }
 
+.orbit-container {
+  min-height: 463px; }
+  .orbit-container img {
+    margin: 0 auto; }
+
 @media only screen and (max-width: 40em) {
   #cover_container_index {
     height: 680px; }
