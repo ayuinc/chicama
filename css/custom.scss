@@ -373,6 +373,7 @@ h1,h2,h3,h4,h5{
 .reveal-modal{
 	text-align: center;
 }
+
 figure {
 	margin: 0;
 	position: relative;
@@ -821,6 +822,22 @@ figure {
 		padding-left: 3.4rem;
 	}
 }
+#form_box {
+	padding: 25px;
+	.book_a_room {
+		padding: 0;
+		text-align: center;
+		input[type="text"]{
+			margin-bottom: 2.2em;
+		}
+		select{
+			width: inherit;
+		}
+		.send{
+			top: 0;
+		}
+	}
+}	
 #form_box_2 {
 	.main_form {
 		select{
