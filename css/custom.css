@@ -693,7 +693,7 @@ figure {
     #form_box .book_a_room input[type="text"] {
       margin-bottom: 2.2em; }
     #form_box .book_a_room select {
-      width: inherit; }
+      width: 100%; }
     #form_box .book_a_room .send {
       top: 0; }
 
