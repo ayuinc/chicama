@@ -293,8 +293,7 @@ figure {
     max-width: 100%;
     display: block;
     position: relative;
-    height: auto;
-    width: 20.9rem; }
+    height: auto; }
   figure figcaption {
     position: absolute;
     height: 100%;
@@ -318,7 +317,7 @@ figure {
   figure:hover figcaption {
     opacity: 1; }
   figure:hover .icono img {
-    -webkit-transform: scale(0.5); }
+    -webkit-transform: scale(1); }
 
 .icono {
   width: 100%;
@@ -680,6 +679,13 @@ figure {
       font-weight: 100 !important;
       font-family: "proxima-nova",sans-serif;
       line-height: 0.5rem; }
+    #form_box .book_a_room figure img,
+    #form_box_2 .book_a_room figure img,
+    #form_box_3 .book_a_room figure img,
+    #form_box_4 .book_a_room figure img,
+    #form_box_5 .book_a_room figure img,
+    #form_box_6 .book_a_room figure img {
+      width: 20.9rem; }
   #form_box .search_again,
   #form_box_2 .search_again,
   #form_box_3 .search_again,

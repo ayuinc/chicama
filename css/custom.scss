@@ -386,7 +386,7 @@ figure {
 		display: block;
 		position: relative;
 		height: auto;
-		width: 20.9rem;
+		// width: 20.9rem;
 	}
 	figcaption {
 		position: absolute;
@@ -413,7 +413,7 @@ figure {
 		opacity: 1;
 	}
 	&:hover .icono img{
-				-webkit-transform: scale(0.5);
+				-webkit-transform: scale(1);
 	}
 
 
@@ -820,6 +820,11 @@ figure {
 			font-weight: 100 !important;
 			font-family: "proxima-nova",sans-serif;
 			line-height: 0.5rem;
+		}
+		figure{
+			img{
+				width: 20.9rem;
+			}
 		}
 	}
 	.search_again{
