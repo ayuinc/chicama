@@ -413,7 +413,7 @@ figure {
 		opacity: 1;
 	}
 	&:hover .icono img{
-				-webkit-transform: scale(1);
+				-webkit-transform: scale(0.5);
 	}
 
 
@@ -430,7 +430,7 @@ figure {
 		overflow: auto;
 		margin: auto;
 		position: absolute;
-		top: 0;
+		top: 15%;
 		left: 0;
 		bottom: 0;
 		right: 0;
