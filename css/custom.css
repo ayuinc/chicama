@@ -484,6 +484,19 @@ figure {
   .beyond_surfing_item p, .the_hotel_item p, .surfing_around_item p, .the_crew_item p {
     font-size: 1rem; }
 
+.beyond_surfing_item .gallery-icon {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 1.8rem;
+  line-height: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  right: 3rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  bottom: 0.5rem; }
+
 .the_stories_item {
   margin-bottom: 2em !important; }
   .the_stories_item img {
