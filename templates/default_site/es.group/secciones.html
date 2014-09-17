@@ -330,10 +330,10 @@
                                 {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
                                 <div class="beyond_surfing_item row">
                                     <div class="large-6 columns">
-                                        
+                                        {item_image limit="1"}
                                         <img src="{image:url:small}" alt="">
-                                        
                                         <div id="gallery-{image:count}" class="reveal-modal medium" data-reveal>
+                                        {/item_image}
                                             <ul class="gallery" data-orbit>
                                                 {item_image}
                                                 <li>
