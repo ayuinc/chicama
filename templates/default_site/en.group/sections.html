@@ -321,13 +321,24 @@
                                 {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
                                 <div class="beyond_surfing_item row">
                                     <div class="large-6 columns">
-                                        {item_image}
-                                            <img src="{image:url:small}" alt="">
+                                        <a class="text-center gallery-icon" href="#" data-reveal-id="gallery-{count}"><span>+</span></a>
+                                        {item_image limit="1"}
+                                        <img src="{image:url:small}" alt="">
                                         {/item_image}
+                                        <div id="gallery-{count}" class="reveal-modal medium" data-reveal>
+                                            <ul class="gallery" data-orbit>
+                                                {item_image}
+                                                <li>
+                                                  <img src="{image:url:small}" alt="">
+                                                </li>
+                                                {/item_image}
+                                            </ul>
+                                            <a class="close-reveal-modal">&#215;</a>
+                                        </div>
                                     </div>
                                     <div class="large-6 columns">
-                                        <h4>{item_titulo_ingles}</h4>
-                                        <p>{item_descripcion_ingles}</p>
+                                        <h4>{title}</h4>
+                                        <p>{item_descripcion}</p>
                                     </div>
                                 </div>
                                 {/exp:channel:entries}
