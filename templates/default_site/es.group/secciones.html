@@ -328,12 +328,25 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
+                                {items}
                                 <div class="beyond_surfing_item row">
                                     <div class="large-6 columns">
                                         {item_image}
-                                        
-                                        var_dump({item_image})
                                             <img src="{image:url:small}" alt="">
+                                            <div id="oceanView" class="reveal-modal medium" data-reveal>
+                                              <ul class="gallery" data-orbit>
+                                                <li>
+                                                  <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+                                                </li>
+                                                <li class="active">
+                                                  <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+                                                </li>
+                                                <li>
+                                                  <img src="http://chicamasurf.com/img/ocean_view.png" alt="">
+                                                </li>
+                                              </ul>
+                                              <a class="close-reveal-modal">&#215;</a>
+                                            </div>
                                         {/item_image}
                                     </div>
                                     <div class="large-6 columns">
