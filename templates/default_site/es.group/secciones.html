@@ -328,10 +328,9 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc" }
-                                <!-- {exp:channel_image:images channel="items" category="2" dynamic="no" orderby="date" sort="asc"} -->
                                 <div class="beyond_surfing_item row">
                                     <div class="large-6 columns">
-                                        <a class="text-center" href="#" data-reveal-id="gallery-{image:count}"><span>+</span></a>
+                                        <a class="text-center" href="#" data-reveal-id="gallery-{count}"><span>+</span></a>
                                         {item_image limit="1"}
                                         <img src="{image:url:small}" alt="">
                                         {/item_image}
