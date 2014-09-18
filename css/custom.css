@@ -671,10 +671,10 @@ figure {
     #form_box_5 .book_a_room select,
     #form_box_6 .book_a_room select {
       height: 1.9rem;
-      margin-bottom: 3.2em; 
+      margin-bottom: 3.3em; 
       width: 4rem;
-      /*border-radius: 2px;
-      padding: 0 1rem;*/
+      border-radius: 2px;
+      padding: 0 1rem;
       color: #888; }
     #form_box .book_a_room .send,
     #form_box_2 .book_a_room .send,
