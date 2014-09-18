@@ -159,7 +159,7 @@ class Infhotel
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $rooms_num = ee()->TMPL->fetch_param('rooms_num');
         if($rooms_num == "5" ){
-            $response = "Para reserva superiores a las 4 habitaciones llamar al 511-440-6040 o enviar un email a aaaa@bbbb.com";
+            $response = "Para la reserva de 5 a más 4 habitaciones, por favor llamar al 511-440-6040 o enviar un email a aaaa@bbbb.com";
         }
         else{
             $fecha_checkin = str_replace("/", "",$fecha_checkin);
