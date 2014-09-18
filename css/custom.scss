@@ -910,6 +910,7 @@ figure {
 			font-size: 0.8rem;
 			color: #888;
 			font-weight: 100;
+			margin-bottom: 3.5em;
 		}
 		button{
 			float: inherit !important;
@@ -1190,7 +1191,7 @@ figure {
 	}
 
 	.your-stay {
-		margin-bottom: 4rem;;
+		margin-bottom: 4rem;
 		p {
 			color: #888;
 			line-height: 2;
@@ -1226,7 +1227,7 @@ figure {
 
 	.ys-label {
 		color: #888 !important;
-		margin-bottom: -0.3rem;
+		margin-bottom: inherit;
 		font-size: 0.9rem;
 
 		span {

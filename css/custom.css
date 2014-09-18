@@ -749,7 +749,8 @@ figure {
   padding-left: 0.3rem;
   font-size: 0.8rem;
   color: #888;
-  font-weight: 100; }
+  font-weight: 100;
+  margin-bottom: 3.5em; }
 #form_box_4 .book_a_room button {
   float: inherit !important; }
 
@@ -963,7 +964,7 @@ figure {
     border: none; }
   .your-stay .ys-label {
     color: #888 !important;
-    margin-bottom: -0.3rem;
+    margin-bottom: inherit;
     font-size: 0.9rem; }
     .your-stay .ys-label span {
       float: right; }
