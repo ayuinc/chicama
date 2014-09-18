@@ -253,8 +253,23 @@
                             {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="des"  limit="1" category="6"}
                             <div class="beyond_surfing_item row">
                                 <div class="large-6 columns">
+                                        <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                     {item_image}
                                         <img src="{image:url:small}" alt="">
+                                        <div id="gardenView" class="reveal-modal medium" data-reveal>
+                                          <ul class="gallery" data-orbit>
+                                            <li>
+                                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                                            </li>
+                                            <li class="active">
+                                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                                            </li>
+                                            <li>
+                                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                                            </li>
+                                          </ul>
+                                          <a class="close-reveal-modal">&#215;</a>
+                                        </div>
                                     {/item_image}
                                 </div>
                                 <div class="large-6 columns">
@@ -312,12 +327,23 @@
                     {if last_segment == "the-hotel"}
                         <div class="row">
                             <div class="large-12 columns">
-                                {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
+                                {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc" }
                                 <div class="beyond_surfing_item row">
                                     <div class="large-6 columns">
-                                        {item_image}
-                                            <img src="{image:url:small}" alt="">
+                                        <a class="text-center gallery-icon" href="#" data-reveal-id="gallery-{count}"><span>+</span></a>
+                                        {item_image limit="1"}
+                                        <img src="{image:url:small}" alt="">
                                         {/item_image}
+                                        <div id="gallery-{count}" class="reveal-modal medium" data-reveal>
+                                            <ul class="gallery" data-orbit data-options="animation:slide; pause_on_hover:true; timer:false; bullets:false;">
+                                                {item_image offset="1"}
+                                                <li>
+                                                  <img src="{image:url}" alt="">
+                                                </li>
+                                                {/item_image}
+                                            </ul>
+                                            <a class="close-reveal-modal">&#215;</a>
+                                        </div>
                                     </div>
                                     <div class="large-6 columns">
                                         <h4>{title}</h4>
@@ -521,7 +547,7 @@
 
                         {if segment_3!='surfing-around'}
                         <li>
-                            <a href="beyond-surfing">
+                            <a href="surfing-around">
                                 <div class="row">
                                     <div class="small-8 medium-8 large-8 columns">
                                         <h5>ALREDEDOR DE <span class="bold">CHICAMA</span></h5>

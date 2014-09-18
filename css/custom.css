@@ -37,6 +37,9 @@ input[type="text"], input[type="url"], textarea {
   background: #FDFDFD;
   font-weight: 200; }
 
+input[type="text"], textarea {
+  margin-bottom: 1rem; }
+
 form {
   margin: 0; }
 
@@ -290,8 +293,7 @@ figure {
     max-width: 100%;
     display: block;
     position: relative;
-    height: auto;
-    width: 20.9rem; }
+    height: auto; }
   figure figcaption {
     position: absolute;
     height: 100%;
@@ -326,7 +328,7 @@ figure {
     overflow: auto;
     margin: auto;
     position: absolute;
-    top: 0;
+    top: 15%;
     left: 0;
     bottom: 0;
     right: 0;
@@ -481,6 +483,19 @@ figure {
     font-size: 1.3rem; }
   .beyond_surfing_item p, .the_hotel_item p, .surfing_around_item p, .the_crew_item p {
     font-size: 1rem; }
+
+.beyond_surfing_item .gallery-icon {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 1.8rem;
+  line-height: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  bottom: 0.5rem; }
 
 .the_stories_item {
   margin-bottom: 2em !important; }
@@ -677,6 +692,13 @@ figure {
       font-weight: 100 !important;
       font-family: "proxima-nova",sans-serif;
       line-height: 0.5rem; }
+    #form_box .book_a_room figure img,
+    #form_box_2 .book_a_room figure img,
+    #form_box_3 .book_a_room figure img,
+    #form_box_4 .book_a_room figure img,
+    #form_box_5 .book_a_room figure img,
+    #form_box_6 .book_a_room figure img {
+      width: 20.9rem; }
   #form_box .search_again,
   #form_box_2 .search_again,
   #form_box_3 .search_again,
@@ -685,17 +707,17 @@ figure {
   #form_box_6 .search_again {
     padding-left: 3.4rem; }
 
-#form_box {
-  padding: 25px; }
-  #form_box .book_a_room {
-    padding: 0;
-    text-align: center; }
-    #form_box .book_a_room input[type="text"] {
-      margin-bottom: 2.2em; }
-    #form_box .book_a_room select {
-      width: 100%; }
-    #form_box .book_a_room .send {
-      top: 0; }
+#form_box h2 {
+  font-size: 2rem; }
+#form_box .book_a_room {
+  padding: 0;
+  text-align: center; }
+  #form_box .book_a_room input[type="text"] {
+    margin-bottom: 2.2em; }
+  #form_box .book_a_room select {
+    width: 100%; }
+  #form_box .book_a_room .send {
+    top: 0; }
 
 #form_box_2 .main_form select {
   width: 11rem;
@@ -1048,6 +1070,14 @@ table thead {
   min-height: 463px; }
   .orbit-container img {
     margin: 0 auto; }
+  .orbit-container .orbit-slide-number {
+    left: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.4rem; }
+  .orbit-container .orbit-prev, .orbit-container .orbit-next {
+    width: 32px;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 47%; }
 
 @media only screen and (max-width: 40em) {
   #cover_container_index {

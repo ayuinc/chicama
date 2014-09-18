@@ -246,6 +246,21 @@
                                 <div class="large-6 columns">
                                     {item_image}
                                         <img src="{image:url:small}" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
+                                        <div id="gardenView" class="reveal-modal medium" data-reveal>
+                                          <ul class="gallery" data-orbit>
+                                            <li>
+                                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                                            </li>
+                                            <li class="active">
+                                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                                            </li>
+                                            <li>
+                                              <img src="http://chicamasurf.com/img/addon1.png" alt="">
+                                            </li>
+                                          </ul>
+                                          <a class="close-reveal-modal">&#215;</a>
+                                        </div>
                                     {/item_image}
                                 </div>
                                 <div class="large-6 columns">
@@ -306,13 +321,24 @@
                                 {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc"}
                                 <div class="beyond_surfing_item row">
                                     <div class="large-6 columns">
-                                        {item_image}
-                                            <img src="{image:url:small}" alt="">
+                                        <a class="text-center gallery-icon" href="#" data-reveal-id="gallery-{count}"><span>+</span></a>
+                                        {item_image limit="1"}
+                                        <img src="{image:url:small}" alt="">
                                         {/item_image}
+                                        <div id="gallery-{count}" class="reveal-modal medium" data-reveal>
+                                            <ul class="gallery" data-orbit data-options="animation:slide; pause_on_hover:true; timer:false; bullets:false;">
+                                                {item_image offset="1"}
+                                                <li>
+                                                  <img src="{image:url}" alt="">
+                                                </li>
+                                                {/item_image}
+                                            </ul>
+                                            <a class="close-reveal-modal">&#215;</a>
+                                        </div>
                                     </div>
                                     <div class="large-6 columns">
-                                        <h4>{item_titulo_ingles}</h4>
-                                        <p>{item_descripcion_ingles}</p>
+                                        <h4>{title}</h4>
+                                        <p>{item_descripcion}</p>
                                     </div>
                                 </div>
                                 {/exp:channel:entries}
@@ -517,7 +543,7 @@
 
                         {if segment_3!='surfing-around'}
                         <li>
-                            <a href="beyond-surfing">
+                            <a href="surfing-around">
                                 <div class="row">
                                     <div class="small-8 medium-8 large-8 columns">
                                         <h5>SURFING <span class="bold">AROUND</span></h5>

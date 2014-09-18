@@ -53,6 +53,10 @@ input[type="text"], input[type="url"], textarea {
 	font-weight: 200;
 }
 
+input[type="text"], textarea{
+	margin-bottom: 1rem; 
+}
+
 form{
 	margin: 0;
 }
@@ -382,7 +386,7 @@ figure {
 		display: block;
 		position: relative;
 		height: auto;
-		width: 20.9rem;
+		// width: 20.9rem;
 	}
 	figcaption {
 		position: absolute;
@@ -426,7 +430,7 @@ figure {
 		overflow: auto;
 		margin: auto;
 		position: absolute;
-		top: 0;
+		top: 15%;
 		left: 0;
 		bottom: 0;
 		right: 0;
@@ -625,6 +629,22 @@ figure {
 	}
 }
 
+.beyond_surfing_item {
+	.gallery-icon {
+		border: 2px solid white;
+		border-radius: 5px;
+		width: 1.8rem;
+		line-height: 1.8rem;
+		height: 1.8rem;
+		position: absolute;
+		right: 1.5rem;
+		font-size: 1.5rem;
+		color: white;
+		font-weight: bold;
+		bottom: 0.5rem;
+	}
+}
+
 .the_stories_item{
 	margin-bottom: 2em !important;
 	img{
@@ -817,13 +837,22 @@ figure {
 			font-family: "proxima-nova",sans-serif;
 			line-height: 0.5rem;
 		}
+		figure{
+			img{
+				width: 20.9rem;
+			}
+		}
 	}
 	.search_again{
 		padding-left: 3.4rem;
 	}
 }
 #form_box {
-	padding: 25px;
+	// padding: 25px;
+	// width: 20%;
+	h2{
+		font-size: 2rem;
+	}
 	.book_a_room {
 		padding: 0;
 		text-align: center;
@@ -1344,6 +1373,19 @@ table {
     img{
     	margin: 0 auto;
     }
+    .orbit-slide-number{
+    	left: 40px;
+    	background: rgba(0,0,0,0.3);
+			padding: 0.4rem;
+    }
+    .orbit-prev{
+			width: 32px;
+			background-color: rgba(0, 0, 0, 0.3);
+			top: 47%;
+    }
+  	.orbit-next{
+			@extend .orbit-prev;
+  	}
 }
 @media only screen and (max-width: 40em) {
 
