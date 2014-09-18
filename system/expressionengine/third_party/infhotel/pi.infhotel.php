@@ -158,320 +158,325 @@ class Infhotel
         $fecha_checkin = ee()->TMPL->fetch_param('fecha_checkin');
         $fecha_checkout = ee()->TMPL->fetch_param('fecha_checkout');
         $rooms_num = ee()->TMPL->fetch_param('rooms_num');
-        $fecha_checkin = str_replace("/", "",$fecha_checkin);
-        $fecha_checkout = str_replace("/", "",$fecha_checkout);
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_URL,$url);
-        $result=curl_exec($ch);
-        $n=0;
-        $data = json_decode($result, true);
-        if($data != ""){
-            foreach($data as $row){
-                $fecha[$n] = $row["FFecha"];
-                $n=$n+1;
-            }
-            $fecha = array_unique($fecha);
-            $disponibilidad["simple_garden"]=2000;
-            $disponibilidad["doble_garden"]=2000;
-            $disponibilidad["triple_garden"]=2000;
-            //$disponibilidad["suite"]=2000; No se usa
-            $disponibilidad["simple_ocean"]=2000;
-            $disponibilidad["doble_ocean"]=2000;
-            $disponibilidad["triple_ocean"]=2000;
-            foreach ($fecha as $fech) {
+        if($rooms_num == "5" ){
+            $response = "Para la reserva de 5 a más habitaciones, por favor llamar al 511-440-6040 o enviar un email a aaaa@bbbb.com";
+        }
+        else{
+            $fecha_checkin = str_replace("/", "",$fecha_checkin);
+            $fecha_checkout = str_replace("/", "",$fecha_checkout);
+            $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_URL,$url);
+            $result=curl_exec($ch);
+            $n=0;
+            $data = json_decode($result, true);
+            if($data != ""){
                 foreach($data as $row){
-                    if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple_garden"] ){
-                        $disponibilidad["simple_garden"]=$row["NDisponible"];
-                    }
-                    if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["doble_garden"] ){
-                        $disponibilidad["doble_garden"]=$row["NDisponible"];
-                    }
-                    if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple_garden"] ){
-                        $disponibilidad["triple_garden"]=$row["NDisponible"];
-                    }
-                    if($row["TCodigoHabitacion"]==110005 && $row["NDisponible"]<$disponibilidad["simple_ocean"] ){
-                        $disponibilidad["simple_ocean"]=$row["NDisponible"];
-                    }
-                    if($row["TCodigoHabitacion"]==110006 && $row["NDisponible"]<$disponibilidad["doble_ocean"] ){
-                        $disponibilidad["doble_ocean"]=$row["NDisponible"];
-                    }
-                    if($row["TCodigoHabitacion"]==110007 && $row["NDisponible"]<$disponibilidad["triple_ocean"] ){
-                        $disponibilidad["triple_ocean"]=$row["NDisponible"];
+                    $fecha[$n] = $row["FFecha"];
+                    $n=$n+1;
+                }
+                $fecha = array_unique($fecha);
+                $disponibilidad["simple_garden"]=2000;
+                $disponibilidad["doble_garden"]=2000;
+                $disponibilidad["triple_garden"]=2000;
+                //$disponibilidad["suite"]=2000; No se usa
+                $disponibilidad["simple_ocean"]=2000;
+                $disponibilidad["doble_ocean"]=2000;
+                $disponibilidad["triple_ocean"]=2000;
+                foreach ($fecha as $fech) {
+                    foreach($data as $row){
+                        if($row["TCodigoHabitacion"]==110001 && $row["NDisponible"]<$disponibilidad["simple_garden"] ){
+                            $disponibilidad["simple_garden"]=$row["NDisponible"];
+                        }
+                        if($row["TCodigoHabitacion"]==110002 && $row["NDisponible"]<$disponibilidad["doble_garden"] ){
+                            $disponibilidad["doble_garden"]=$row["NDisponible"];
+                        }
+                        if($row["TCodigoHabitacion"]==110003 && $row["NDisponible"]<$disponibilidad["triple_garden"] ){
+                            $disponibilidad["triple_garden"]=$row["NDisponible"];
+                        }
+                        if($row["TCodigoHabitacion"]==110005 && $row["NDisponible"]<$disponibilidad["simple_ocean"] ){
+                            $disponibilidad["simple_ocean"]=$row["NDisponible"];
+                        }
+                        if($row["TCodigoHabitacion"]==110006 && $row["NDisponible"]<$disponibilidad["doble_ocean"] ){
+                            $disponibilidad["doble_ocean"]=$row["NDisponible"];
+                        }
+                        if($row["TCodigoHabitacion"]==110007 && $row["NDisponible"]<$disponibilidad["triple_ocean"] ){
+                            $disponibilidad["triple_ocean"]=$row["NDisponible"];
+                        }
                     }
                 }
-            }
-            if( $disponibilidad["simple_garden"] == 2000){
-                 $disponibilidad["simple_garden"] = 0;
-            }
-            if( $disponibilidad["doble_garden"] == 2000){
-                 $disponibilidad["doble_garden"] = 0;
-            }
-            if( $disponibilidad["triple_garden"] == 2000){
-                 $disponibilidad["triple_garden"] = 0;
-            }
-            if( $disponibilidad["simple_ocean"] == 2000){
-                 $disponibilidad["simple_ocean"] = 0;
-            }
-            if( $disponibilidad["doble_ocean"] == 2000){
-                 $disponibilidad["doble_ocean"] = 0;
-            }
-            if( $disponibilidad["triple_ocean"] == 2000){
-                 $disponibilidad["triple_ocean"] = 0;
-            }    
-            $garden_view = $disponibilidad["simple_garden"] + $disponibilidad["doble_garden"] + $disponibilidad["triple_garden"];
-            $ocean_view = $disponibilidad["simple_ocean"] + $disponibilidad["doble_ocean"] + $disponibilidad["triple_ocean"];
-            $total_hab = $ocean_view + $garden_view;
-            if($total_hab < $rooms_num){
-                $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
-            }
-            else{
-                $rooms_rest = $rooms_num - $disponibilidad["simple_garden"];
-                if($rooms_rest<=0){
-                    $it_simple_garden = $disponibilidad["simple_garden"];
-                    $it_doble_garden = 0;
-                    $it_triple_garden = 0;
+                if( $disponibilidad["simple_garden"] == 2000){
+                     $disponibilidad["simple_garden"] = 0;
+                }
+                if( $disponibilidad["doble_garden"] == 2000){
+                     $disponibilidad["doble_garden"] = 0;
+                }
+                if( $disponibilidad["triple_garden"] == 2000){
+                     $disponibilidad["triple_garden"] = 0;
+                }
+                if( $disponibilidad["simple_ocean"] == 2000){
+                     $disponibilidad["simple_ocean"] = 0;
+                }
+                if( $disponibilidad["doble_ocean"] == 2000){
+                     $disponibilidad["doble_ocean"] = 0;
+                }
+                if( $disponibilidad["triple_ocean"] == 2000){
+                     $disponibilidad["triple_ocean"] = 0;
+                }    
+                $garden_view = $disponibilidad["simple_garden"] + $disponibilidad["doble_garden"] + $disponibilidad["triple_garden"];
+                $ocean_view = $disponibilidad["simple_ocean"] + $disponibilidad["doble_ocean"] + $disponibilidad["triple_ocean"];
+                $total_hab = $ocean_view + $garden_view;
+                if($total_hab < $rooms_num){
+                    $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
                 }
                 else{
-                    $it_simple_garden = $disponibilidad["simple_garden"];
-                    $rooms_rest = $rooms_rest -  $disponibilidad["doble_garden"];
+                    $rooms_rest = $rooms_num - $disponibilidad["simple_garden"];
                     if($rooms_rest<=0){
-                        $it_doble_garden = $disponibilidad["doble_garden"];
+                        $it_simple_garden = $disponibilidad["simple_garden"];
+                        $it_doble_garden = 0;
                         $it_triple_garden = 0;
                     }
                     else{
-                        $it_doble_garden = $disponibilidad["doble_garden"];
-                        $rooms_rest = $rooms_rest -  $disponibilidad["triple_garden"];
+                        $it_simple_garden = $disponibilidad["simple_garden"];
+                        $rooms_rest = $rooms_rest -  $disponibilidad["doble_garden"];
                         if($rooms_rest<=0){
-                            $it_triple_garden = $rooms_rest;
+                            $it_doble_garden = $disponibilidad["doble_garden"];
+                            $it_triple_garden = 0;
+                        }
+                        else{
+                            $it_doble_garden = $disponibilidad["doble_garden"];
+                            $rooms_rest = $rooms_rest -  $disponibilidad["triple_garden"];
+                            if($rooms_rest<=0){
+                                $it_triple_garden = $rooms_rest;
+                            }
                         }
                     }
-                }
-                if($rooms_rest<=0){
-                    $it_simple_ocean = $disponibilidad["simple_ocean"];
-                    $it_doble_ocean = 0;
-                    $it_triple_ocean = 0;
-                }
-                else{
-                    $it_simple_ocean = $disponibilidad["simple_ocean"];
-                    $rooms_rest = $rooms_rest -  $disponibilidad["doble_ocean"];
                     if($rooms_rest<=0){
-                        $it_doble_ocean = $disponibilidad["doble_ocean"];
+                        $it_simple_ocean = $disponibilidad["simple_ocean"];
+                        $it_doble_ocean = 0;
                         $it_triple_ocean = 0;
                     }
                     else{
-                        $it_doble_ocean = $disponibilidad["doble_ocean"];
-                        $rooms_rest = $rooms_rest -  $disponibilidad["triple_ocean"];
+                        $it_simple_ocean = $disponibilidad["simple_ocean"];
+                        $rooms_rest = $rooms_rest -  $disponibilidad["doble_ocean"];
                         if($rooms_rest<=0){
-                            $it_triple_ocean = $rooms_rest;
-                        }
-                    }
-                }
-                $first_iteration_garden = $it_simple_garden;
-                $second_iteration_garden = $it_simple_garden + $it_doble_garden;
-                $first_iteration_ocean = $it_simple_ocean;
-                $second_iteration_ocean = $it_simple_ocean + $it_doble_ocean;
-                for ($i=0; $i<$rooms_num ; $i++) { 
-                    $response .= '<div class="row" id="rooms'.$i.'">';
-                    if ( $i<$garden_view) {
-                        if($i<$first_iteration_garden){ //Simple Garden
-                            $response .= '<div class="large-12 columns item-room">
-                              <div class="row">
-                                <div class="large-4 columns">
-                                  <figure>
-                                    <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
-                                  </figure>
-                                </div>
-                                <div class="large-5 columns room-description">
-                                  <h2 id="type_hab_simple_garden'.$i.'" >GARDEN VIEW</h2>
-                                  <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
-                                </div>
-                                <div class="large-3 columns">
-                                  <div class="row">
-                                    <div class="large-9 large-centered columns">
-                                      <input id="final_cost_simple_garden'.$i.'" type="hidden" name="final_cost_simple_garden'.$i.'" value="100"> 
-                                      <select name="persons_number" id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Single (1 person)</option>
-                                        <option value="2">Double (2 persons)</option>
-                                        <option value="3">Triple (3 persons)</option>
-                                      </select>
-                                      <h2 id="cost_simple_garden'.$i.'" class="text-center">USD 100/night</h2>
-                                      <button id="add_room_simple_garden'.$i.'" type="button" class="tiny send expand">Select</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>';
+                            $it_doble_ocean = $disponibilidad["doble_ocean"];
+                            $it_triple_ocean = 0;
                         }
                         else{
-                            if($i<$second_iteration_garden){ //Doble Garden
-                                 $response .= '<div class="large-12 columns item-room">
-                              <div class="row">
-                                <div class="large-4 columns">
-                                  <figure>
-                                    <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
-                                  </figure>
-                                </div>
-                                <div class="large-5 columns room-description">
-                                  <h2 id="type_hab_doble_garden'.$i.'" >GARDEN VIEW</h2>
-                                  <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
-                                </div>
-                                <div class="large-3 columns">
-                                  <div class="row">
-                                    <div class="large-9 large-centered columns">
-                                      <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="130"> 
-                                      <select name="persons_number" id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Single (1 person)</option>
-                                        <option value="2">Double (2 persons)</option>
-                                        <option value="3">Triple (3 persons)</option>
-                                      </select>
-                                      <h2 id="cost_doble_garden'.$i.'" class="text-center">USD 100/night</h2>
-                                      <button id="add_room_doble_garden'.$i.'" type="button" class="tiny send expand">Select</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>';
-                            }
-                            else{//Triple Garden
-                                  $response .= '<div class="large-12 columns item-room">
-                              <div class="row">
-                                <div class="large-4 columns">
-                                  <figure>
-                                    <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
-                                  </figure>
-                                </div>
-                                <div class="large-5 columns room-description">
-                                  <h2 id="type_hab_triple_garden'.$i.'" >GARDEN VIEW</h2>
-                                  <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
-                                </div>
-                                <div class="large-3 columns">
-                                  <div class="row">
-                                    <div class="large-9 large-centered columns">
-                                      <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="160"> 
-                                      <select name="persons_number" id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Single (1 person)</option>
-                                        <option value="2">Double (2 persons)</option>
-                                        <option value="3">Triple (3 persons)</option>
-                                      </select>
-                                      <h2 id="cost_triple_garden'.$i.'" class="text-center">USD 100/night</h2>
-                                      <button id="add_room_triple_garden'.$i.'" type="button" class="tiny send expand">Select</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>';
+                            $it_doble_ocean = $disponibilidad["doble_ocean"];
+                            $rooms_rest = $rooms_rest -  $disponibilidad["triple_ocean"];
+                            if($rooms_rest<=0){
+                                $it_triple_ocean = $rooms_rest;
                             }
                         }
                     }
-                    if ($i<$ocean_view) {
-                        if($i<$first_iteration_ocean){ //Simple Ocean
-                            $response .= ' 
-                            <div class="large-12 columns item-room">
-                              <div class="row">
-                                <div class="large-4 columns">
-                                  <figure>
-                                    <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
-                                  </figure>
-                                </div>
-                                <div class="large-5 columns room-description">
-                                  <h2 id="type_hab_simple_ocean'.$i.'" >OCEAN VIEW</h2>
-                                  <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
-                                </div>
-                                <div class="large-3 columns">
+                    $first_iteration_garden = $it_simple_garden;
+                    $second_iteration_garden = $it_simple_garden + $it_doble_garden;
+                    $first_iteration_ocean = $it_simple_ocean;
+                    $second_iteration_ocean = $it_simple_ocean + $it_doble_ocean;
+                    for ($i=0; $i<$rooms_num ; $i++) { 
+                        $response .= '<div class="row" id="rooms'.$i.'">';
+                        if ( $i<$garden_view) {
+                            if($i<$first_iteration_garden){ //Simple Garden
+                                $response .= '<div class="large-12 columns item-room">
                                   <div class="row">
-                                    <div class="large-9 large-centered columns">
-                                      <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="120"> 
-                                      <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Single (1 person)</option>
-                                        <option value="2">Double (2 persons)</option>
-                                        <option value="3">Triple (3 persons)</option>
-                                      </select>
-                                      <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 120/night</h2>
-                                      <button id="add_room_simple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
+                                    <div class="large-4 columns">
+                                      <figure>
+                                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
+                                      </figure>
+                                    </div>
+                                    <div class="large-5 columns room-description">
+                                      <h2 id="type_hab_simple_garden'.$i.'" >GARDEN VIEW</h2>
+                                      <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                      <div class="row">
+                                        <div class="large-9 large-centered columns">
+                                          <input id="final_cost_simple_garden'.$i.'" type="hidden" name="final_cost_simple_garden'.$i.'" value="100"> 
+                                          <select name="persons_number" id="guests_simple_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                            <option value="1" selected="selected">Single (1 person)</option>
+                                            <option value="2">Double (2 persons)</option>
+                                            <option value="3">Triple (3 persons)</option>
+                                          </select>
+                                          <h2 id="cost_simple_garden'.$i.'" class="text-center">USD 100/night</h2>
+                                          <button id="add_room_simple_garden'.$i.'" type="button" class="tiny send expand">Select</button>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
-                            </div>';
-                        }
-                        else{
-                            if($i<$second_iteration_ocean){ //Doble Ocean
-                                $response .= ' 
-                            <div class="large-12 columns item-room">
-                              <div class="row">
-                                <div class="large-4 columns">
-                                  <figure>
-                                    <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
-                                  </figure>
-                                </div>
-                                <div class="large-5 columns room-description">
-                                  <h2 id="type_hab_doble_ocean'.$i.'" >OCEAN VIEW</h2>
-                                  <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
-                                </div>
-                                <div class="large-3 columns">
-                                  <div class="row">
-                                    <div class="large-9 large-centered columns">
-                                      <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="140">
-                                      <select name="persons_number" id="guests_doble_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Single (1 person)</option>
-                                        <option value="2">Double (2 persons)</option>
-                                        <option value="3">Triple (3 persons)</option>
-                                      </select>
-                                      <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 120/night</h2>
-                                      <button id="add_room_doble_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>';
+                                </div>';
                             }
                             else{
-                                 $response .= ' 
-                            <div class="large-12 columns item-room">
-                              <div class="row">
-                                <div class="large-4 columns">
-                                  <figure>
-                                    <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
-                                    <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
-                                  </figure>
-                                </div>
-                                <div class="large-5 columns room-description" >
-                                  <h2 id="type_hab_triple_ocean'.$i.'" >OCEAN VIEW</h2>
-                                  <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
-                                </div>
-                                <div class="large-3 columns">
+                                if($i<$second_iteration_garden){ //Doble Garden
+                                     $response .= '<div class="large-12 columns item-room">
                                   <div class="row">
-                                    <div class="large-9 large-centered columns">
-                                    <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="180">
-                                      <select name="persons_number" id="guests_triple_ocean'.$i.'" required="" pattern="number" data-invalid="">
-                                        <option value="1" selected="selected">Single (1 person)</option>
-                                        <option value="2">Double (2 persons)</option>
-                                        <option value="3">Triple (3 persons)</option>
-                                      </select>
-                                      <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 120/night</h2>
-                                      <button id="add_room_triple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
+                                    <div class="large-4 columns">
+                                      <figure>
+                                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
+                                      </figure>
+                                    </div>
+                                    <div class="large-5 columns room-description">
+                                      <h2 id="type_hab_doble_garden'.$i.'" >GARDEN VIEW</h2>
+                                      <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                      <div class="row">
+                                        <div class="large-9 large-centered columns">
+                                          <input id="final_cost_doble_garden'.$i.'" type="hidden" name="final_cost_doble_garden'.$i.'" value="130"> 
+                                          <select name="persons_number" id="guests_doble_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                            <option value="1" selected="selected">Single (1 person)</option>
+                                            <option value="2">Double (2 persons)</option>
+                                            <option value="3">Triple (3 persons)</option>
+                                          </select>
+                                          <h2 id="cost_doble_garden'.$i.'" class="text-center">USD 100/night</h2>
+                                          <button id="add_room_doble_garden'.$i.'" type="button" class="tiny send expand">Select</button>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
-                            </div>';
+                                </div>';
+                                }
+                                else{//Triple Garden
+                                      $response .= '<div class="large-12 columns item-room">
+                                  <div class="row">
+                                    <div class="large-4 columns">
+                                      <figure>
+                                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
+                                      </figure>
+                                    </div>
+                                    <div class="large-5 columns room-description">
+                                      <h2 id="type_hab_triple_garden'.$i.'" >GARDEN VIEW</h2>
+                                      <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                      <div class="row">
+                                        <div class="large-9 large-centered columns">
+                                          <input id="final_cost_triple_garden'.$i.'" type="hidden" name="final_cost_triple_garden'.$i.'" value="160"> 
+                                          <select name="persons_number" id="guests_triple_garden'.$i.'" required="" pattern="number" data-invalid="">
+                                            <option value="1" selected="selected">Single (1 person)</option>
+                                            <option value="2">Double (2 persons)</option>
+                                            <option value="3">Triple (3 persons)</option>
+                                          </select>
+                                          <h2 id="cost_triple_garden'.$i.'" class="text-center">USD 100/night</h2>
+                                          <button id="add_room_triple_garden'.$i.'" type="button" class="tiny send expand">Select</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>';
+                                }
                             }
                         }
+                        if ($i<$ocean_view) {
+                            if($i<$first_iteration_ocean){ //Simple Ocean
+                                $response .= ' 
+                                <div class="large-12 columns item-room">
+                                  <div class="row">
+                                    <div class="large-4 columns">
+                                      <figure>
+                                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
+                                      </figure>
+                                    </div>
+                                    <div class="large-5 columns room-description">
+                                      <h2 id="type_hab_simple_ocean'.$i.'" >OCEAN VIEW</h2>
+                                      <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                      <div class="row">
+                                        <div class="large-9 large-centered columns">
+                                          <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="120"> 
+                                          <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                            <option value="1" selected="selected">Single (1 person)</option>
+                                            <option value="2">Double (2 persons)</option>
+                                            <option value="3">Triple (3 persons)</option>
+                                          </select>
+                                          <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <button id="add_room_simple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>';
+                            }
+                            else{
+                                if($i<$second_iteration_ocean){ //Doble Ocean
+                                    $response .= ' 
+                                <div class="large-12 columns item-room">
+                                  <div class="row">
+                                    <div class="large-4 columns">
+                                      <figure>
+                                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
+                                      </figure>
+                                    </div>
+                                    <div class="large-5 columns room-description">
+                                      <h2 id="type_hab_doble_ocean'.$i.'" >OCEAN VIEW</h2>
+                                      <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                      <div class="row">
+                                        <div class="large-9 large-centered columns">
+                                          <input id="final_cost_doble_ocean'.$i.'" type="hidden" name="final_cost_doble_ocean'.$i.'" value="140">
+                                          <select name="persons_number" id="guests_doble_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                            <option value="1" selected="selected">Single (1 person)</option>
+                                            <option value="2">Double (2 persons)</option>
+                                            <option value="3">Triple (3 persons)</option>
+                                          </select>
+                                          <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <button id="add_room_doble_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>';
+                                }
+                                else{
+                                     $response .= ' 
+                                <div class="large-12 columns item-room">
+                                  <div class="row">
+                                    <div class="large-4 columns">
+                                      <figure>
+                                        <img src="http://chicamasurf.com/images/imagenes_secciones/22/the_rooms__small.jpg" alt="">
+                                        <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
+                                      </figure>
+                                    </div>
+                                    <div class="large-5 columns room-description" >
+                                      <h2 id="type_hab_triple_ocean'.$i.'" >OCEAN VIEW</h2>
+                                      <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
+                                    </div>
+                                    <div class="large-3 columns">
+                                      <div class="row">
+                                        <div class="large-9 large-centered columns">
+                                        <input id="final_cost_triple_ocean'.$i.'" type="hidden" name="final_cost_triple_ocean'.$i.'" value="180">
+                                          <select name="persons_number" id="guests_triple_ocean'.$i.'" required="" pattern="number" data-invalid="">
+                                            <option value="1" selected="selected">Single (1 person)</option>
+                                            <option value="2">Double (2 persons)</option>
+                                            <option value="3">Triple (3 persons)</option>
+                                          </select>
+                                          <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <button id="add_room_triple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>';
+                                }
+                            }
+                        }
+                        $response .= '</div>';
                     }
-                    $response .= '</div>';
                 }
             }
-        }
-        else{
-            $response = 'Error de conexión intentelo nuevamente';
+            else{
+                $response = 'Error de conexión intentelo nuevamente';
+            }
         }
         return $response; 
     }
@@ -935,7 +940,9 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           
                           <hr>
 
-                          <p id="total_summary" class="ys-label">TOTAL <span>$ 600.00</span></p>
+                          <p id="total_summary" class="ys-label">TOTAL <span></span></p>
+                          <p id="total_summary_per_person" class="ys-label">TOTAL PER PERSON <span></span></p>
+                          <p id="total_summary_per_room" class="ys-label">TOTAL PER ROOM <span></span></p>
                         </div>
                       </div>
                     </div>

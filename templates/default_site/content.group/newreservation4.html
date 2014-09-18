@@ -56,6 +56,7 @@
                         {if:else}
                         <option value="4">4</option>
                         {/if}
+                        <option value="5">5+</option>
                       </select>
                     </div>
                      {/exp:get_post_vars}
@@ -113,14 +114,17 @@
                             <input type="text" name="firstname" placeholder="FIRST / GIVEN NAME *" required>
                             <input type="text" name="email" placeholder="E-MAIL *" required>
                             {exp:infhotel:pais}
-                            <p>* Indicates Required field.</p>
+                            <input type="text" name="document_id" placeholder="DOCUMENT NUMBER *" required>
+                            
                           </div>
                           <div class="large-6 columns">
                             <input type="text" name="last_name" placeholder="LAST / FAMILY NAME *" required>
                             <input type="text" name="phone" placeholder="PHONE NUMBER *" required>
                             <input type="text" name="city" placeholder="CITY *" required>
+                            {exp:infhotel:tipodedocumento}
                           </div>
                         </div>
+                        <p>* Indicates Required field.</p>
                           {exp:get_post_vars parse="inward"}
                             <input type="hidden" name="all_meals" placeholder="ALL MEALS *"  value="{post_lunch_and_dinner_serial}">
                             <input type="hidden" name="transport" placeholder="TRANSPORT *"  value="{post_transport_serial}">

@@ -54,6 +54,7 @@
                         {if:else}
                         <option value="4">4</option>
                         {/if}
+                        <option value="5">5+</option>
                       </select>
                     </div>
                      {/exp:get_post_vars}
@@ -335,6 +336,7 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
 		    	summary_room = orden+1;
@@ -383,6 +385,7 @@
 	        data["Habitaciones"][orden]=temp;
 	        sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
 		    	var send = JSON.stringify(data);
 		    	send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
@@ -406,6 +409,7 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -454,6 +458,7 @@
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
     	    	var send = JSON.stringify(data);
     	     send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
@@ -475,7 +480,8 @@
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+Math.round((parseInt(total_summary)*dias)/(rooms_num*100) * 100) / 100+"</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -524,6 +530,7 @@
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
 		    	var send = JSON.stringify(data);
 		    	 send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
@@ -546,6 +553,7 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -594,6 +602,7 @@
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
 		    	var send = JSON.stringify(data);
 		    	 send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
@@ -616,6 +625,7 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -664,6 +674,7 @@
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
 		    	var send = JSON.stringify(data);
 		    	 send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
@@ -688,6 +699,7 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    			  $("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -736,6 +748,7 @@
 	        data["Habitaciones"][orden]=temp;
 		    	sumary[orden]=temp;
 		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
 		    	var send = JSON.stringify(data);
           send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
