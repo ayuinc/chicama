@@ -940,7 +940,9 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           
                           <hr>
 
-                          <p id="total_summary" class="ys-label">TOTAL <span>$ 600.00</span></p>
+                          <p id="total_summary" class="ys-label">TOTAL <span></span></p>
+                          <p id="total_summary_per_person" class="ys-label">TOTAL PER PERSON <span></span></p>
+                          <p id="total_summary_per_room" class="ys-label">TOTAL PER ROOM <span></span></p>
                         </div>
                       </div>
                     </div>

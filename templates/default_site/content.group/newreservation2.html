@@ -336,6 +336,8 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseInt(total_summary)*dias/rooms_num*100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseInt(total_summary)*dias/parseInt(data["NPasajero"])*100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
 		    	summary_room = orden+1;
@@ -407,6 +409,8 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseInt(total_summary)*dias/rooms_num*100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseInt(total_summary)*dias/parseInt(data["NPasajero"])*100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -476,7 +480,9 @@
 		    	triple_garden =triple_garden + 1;
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(amount)*dias/100+".00</span>");
+   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseInt(total_summary)*dias/rooms_num*100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseInt(total_summary)*dias/parseInt(data["NPasajero"])*100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -547,6 +553,8 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseInt(total_summary)*dias/rooms_num*100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseInt(total_summary)*dias/parseInt(data["NPasajero"])*100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -617,6 +625,8 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseInt(total_summary)*dias/rooms_num*100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseInt(total_summary)*dias/parseInt(data["NPasajero"])*100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    				$("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
@@ -689,6 +699,8 @@
 		    	amount = amount + parseInt($(final_cost).val())*100;
 		    	var total_summary = amount;
    				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseInt(total_summary)*dias/rooms_num*100+".00</span>");
+          $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseInt(total_summary)*dias/parseInt(data["NPasajero"])*100+".00</span>");
    				$("#summary_input").val($("#reserva_summary").html());
    			  $("#rooms_input").val(amount*dias);
     			summary_room = orden+1;
