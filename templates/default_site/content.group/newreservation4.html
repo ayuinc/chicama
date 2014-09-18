@@ -114,7 +114,7 @@
                             <input type="text" name="email" placeholder="E-MAIL *" required>
                             {exp:infhotel:pais}
                             <input type="text" name="document_id" placeholder="DOCUMENT NUMBER *" required>
-                            <p>* Indicates Required field.</p>
+                            
                           </div>
                           <div class="large-6 columns">
                             <input type="text" name="last_name" placeholder="LAST / FAMILY NAME *" required>
@@ -123,6 +123,7 @@
                             {exp:infhotel:tipodedocumento}
                           </div>
                         </div>
+                        <p>* Indicates Required field.</p>
                           {exp:get_post_vars parse="inward"}
                             <input type="hidden" name="all_meals" placeholder="ALL MEALS *"  value="{post_lunch_and_dinner_serial}">
                             <input type="hidden" name="transport" placeholder="TRANSPORT *"  value="{post_transport_serial}">
