@@ -45,15 +45,14 @@ class Mandrillapp {
 	$to= "gms122@gmail.com";
 	$name= "Gianfranco";
 	$subject= "Solicitud de documento.";
-	$from= "admin@gym.com";
-	//$text = $TMPL->tagdata;
-	$text = 'Estimado(a) Cliente,<p>
+	$from= "reservas@chicama.com";
+
+	$text = 'Dear Cliente,<p>
 	En este correo se enviara la informacion de la reserva.
 
 	<br>
 	Fin del email';
 	
-	/*'html' => '<p>FELICIDADES!!!</p><p>Ganaste el tema'.$topic.' ve a nuestro menú de temas y sigue participando</p>',*/
 	$message = array(
 	    'subject' => $subject,
 	    'from_email' => $from,
