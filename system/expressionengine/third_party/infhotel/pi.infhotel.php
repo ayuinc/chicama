@@ -391,13 +391,13 @@ class Infhotel
                                     <div class="large-3 columns">
                                       <div class="row">
                                         <div class="large-9 large-centered columns">
-                                          <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="120"> 
+                                          <input id="final_cost_simple_ocean'.$i.'" type="hidden" name="final_cost_simple_ocean'.$i.'" value="110"> 
                                           <select name="persons_number" id="guests_simple_ocean'.$i.'" required="" pattern="number" data-invalid="">
                                             <option value="1" selected="selected">Single (1 person)</option>
                                             <option value="2">Double (2 persons)</option>
                                             <option value="3">Triple (3 persons)</option>
                                           </select>
-                                          <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 110/night</h2>
                                           <button id="add_room_simple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
                                         </div>
                                       </div>
@@ -429,7 +429,7 @@ class Infhotel
                                             <option value="2">Double (2 persons)</option>
                                             <option value="3">Triple (3 persons)</option>
                                           </select>
-                                          <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 140/night</h2>
                                           <button id="add_room_doble_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
                                         </div>
                                       </div>
@@ -460,7 +460,7 @@ class Infhotel
                                             <option value="2">Double (2 persons)</option>
                                             <option value="3">Triple (3 persons)</option>
                                           </select>
-                                          <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 180/night</h2>
                                           <button id="add_room_triple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
                                         </div>
                                       </div>
@@ -775,6 +775,15 @@ class Infhotel
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
                                   </select>
                                 </p>
                               </div>
@@ -818,6 +827,15 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
                                   </select>
                                 </p>
                               </div>
@@ -860,6 +878,15 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
                                   </select>
                                 </p>
                               </div>
