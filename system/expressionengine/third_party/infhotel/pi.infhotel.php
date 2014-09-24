@@ -397,7 +397,7 @@ class Infhotel
                                             <option value="2">Double (2 persons)</option>
                                             <option value="3">Triple (3 persons)</option>
                                           </select>
-                                          <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <h2 id="cost_simple_ocean'.$i.'" class="text-center">USD 110/night</h2>
                                           <button id="add_room_simple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
                                         </div>
                                       </div>
@@ -429,7 +429,7 @@ class Infhotel
                                             <option value="2">Double (2 persons)</option>
                                             <option value="3">Triple (3 persons)</option>
                                           </select>
-                                          <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <h2 id="cost_doble_ocean'.$i.'" class="text-center">USD 110/night</h2>
                                           <button id="add_room_doble_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
                                         </div>
                                       </div>
@@ -460,7 +460,7 @@ class Infhotel
                                             <option value="2">Double (2 persons)</option>
                                             <option value="3">Triple (3 persons)</option>
                                           </select>
-                                          <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 120/night</h2>
+                                          <h2 id="cost_triple_ocean'.$i.'" class="text-center">USD 110/night</h2>
                                           <button id="add_room_triple_ocean'.$i.'" type="button" class="tiny send expand">Select</button>
                                         </div>
                                       </div>
