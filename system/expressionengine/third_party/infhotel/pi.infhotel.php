@@ -573,13 +573,10 @@ class Infhotel
                 )
             );
             return '{exp:mandrillapp:send_email_reserva_chicama  
-                      id_operación= "200"
-                      operation_result= "220"
-                    }
+                      id_reserva= "'.$id .'"                    }
                     {/exp:mandrillapp:send_email_reserva_chicama}
                     {exp:mandrillapp:send_email_reserva_chicama
-                        id_operación= "100"
-                        operation_result= "120"
+                      id_reserva= "'.$id .'" 
                     }
                     {/exp:mandrillapp:send_email_reserva_chicama} 
                     <div class="large-12 columns">
