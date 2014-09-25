@@ -842,17 +842,17 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
-    $(input).val("10000");
     $(select_box).change(function(){
         switch($(select_box).val()){ 
           case "1":
             if($(check_box).is(":checked")){
-              $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-              $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
-            }
-            $(encabezado).html("$100.00");
-            $(input).val("10000");
-            if($(check_box).is(":checked")){
+              $(input).val("10000");
+              if($(check_box).is(":checked")){
+                $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+                $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+              }
+              $(encabezado).html("$100.00");
+              $(input).val("10000");
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
               var total_summary = $("#rooms_input").val();
@@ -884,6 +884,13 @@
             }  
             break;
           case "2":
+            $(input).val("10000");
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+              $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+            }
+            $(encabezado).html("$100.00");
+            $(input).val("10000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
@@ -921,6 +928,13 @@
             }
             break;
           case "3":
+            $(input).val("10000");
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+              $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+            }
+            $(encabezado).html("$100.00");
+            $(input).val("10000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
