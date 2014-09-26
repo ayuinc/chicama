@@ -842,22 +842,27 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
-    switch(sumary){
-      case "lunch_and_dinner_summary":
-        console.log('lunch_and_dinner_summary');
-      break;
-      case "transport_summary":
-        console.log('transport_summary');
-      break;
-      case "tow_back_service_summary":
-        console.log('tow_back_service_summary');
-      break;
-    }
     $(input).val("10000");
     $(select_box).change(function(){
-        if($(check_box).is(":checked")){
-          $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-          $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+        switch(sumary){
+          case "lunch_and_dinner_summary":
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+              $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+            }
+          break;
+          case "transport_summary":
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+              $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+            }
+          break;
+          case "tow_back_service_summary":
+            if($(check_box).is(":checked")){
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+              $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+            }
+          break;
         }
         switch($(select_box).val()){ 
           case "1":
