@@ -863,34 +863,10 @@
               add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(1 person)<span>$60.00</span>","#lunch_and_dinner_serial","adld01");
             break;
             case "transport_summary":
-              $(encabezado).html("$48.00");
-              $(input).val("4800");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Transport <br>(1 person)<span>$48.00</span>");
-                $("#transport_serial").val("adtp01");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$48.00", input,"4800", check_box, purchase_amount, sumary,"Transport <br>(1 person)<span>$48.00</span>","#transport_serial","adtp01");
             break;
             case "tow_back_service_summary":
-              $(encabezado).html("$30.00");
-              $(input).val("3000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Tow back service <br>(1 person)<span>$30.00</span>");
-                $("#tow_back_service_serial").val("adzc01");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$30.00", input,"3000", check_box, purchase_amount, sumary,"Tow back service <br>(1 person)<span>$30.00</span>","#tow_back_service_serial","adzc01");
             break;
           }
           break;
@@ -900,34 +876,10 @@
               add_ons_dropdown(encabezado,"$120.00", input,"12000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(2 persons)<span>$120.00</span>","#lunch_and_dinner_serial","adld02");
             break;
             case "transport_summary":
-              $(encabezado).html("$60.00");
-              $(input).val("6000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Transport <br>(2 persons)<span>$60.00</span>");
-                $("#transport_serial").val("adtp02");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Transport <br>(2 persons)<span>$60.00</span>","#transport_serial","adtp02");
             break;
             case "tow_back_service_summary":
-              $(encabezado).html("$60.00");
-              $(input).val("6000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Tow back service <br>(2 persons)<span>$60.00</span>");
-                $("#tow_back_service_serial").val("adzc02");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Tow back service <br>(2 persons)<span>$60.00</span>","#tow_back_service_serial","adzc02");
             break;
           }
           break;
@@ -937,34 +889,11 @@
               add_ons_dropdown(encabezado,"$180.00", input,"18000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(3 persons)<span>$180.00</span>","#lunch_and_dinner_serial","adld03");
             break;
             case "transport_summary":
-              $(encabezado).html("$75.00");
-              $(input).val("7500");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Transport <br>(3 persons)<span>$75.00</span>");
-                $("#transport_serial").val("adtp03");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
+              add_ons_dropdown(encabezado,"$75.00", input,"7500", check_box, purchase_amount, sumary,"Transport <br>(3 persons)<span>$75.00</span>","#transport_serial","adtp03");
               }
             break;
             case "tow_back_service_summary":
-              $(encabezado).html("$90.00");
-              $(input).val("9000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Tow back service <br>(3 persons)<span>$90.00</span>");
-                $("#tow_back_service_serial").val("adzc03");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$90.00", input,"9000", check_box, purchase_amount, sumary,"Tow back service <br>(3 persons)<span>$90.00</span>","#tow_back_service_serial","adzc03");
             break;
           }
           break;
