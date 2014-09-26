@@ -367,6 +367,7 @@
           data["Habitaciones"][orden]=temp;
           sumary[orden]=temp;
           data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#numero_de_personas").val(data["NPasajero"]);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
           var send = JSON.stringify(data);
           send = send.replace(/{/gi, "$");
@@ -422,6 +423,7 @@
           data["Habitaciones"][orden]=temp;
           sumary[orden]=temp;
           data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#numero_de_personas").val(data["NPasajero"]);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
             var send = JSON.stringify(data);
            send = send.replace(/{/gi, "$");
@@ -476,6 +478,7 @@
           data["Habitaciones"][orden]=temp;
           sumary[orden]=temp;
           data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#numero_de_personas").val(data["NPasajero"]);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
           var send = JSON.stringify(data);
            send = send.replace(/{/gi, "$");
@@ -530,6 +533,7 @@
           data["Habitaciones"][orden]=temp;
           sumary[orden]=temp;
           data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#numero_de_personas").val(data["NPasajero"]);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
           var send = JSON.stringify(data);
            send = send.replace(/{/gi, "$");
@@ -584,6 +588,7 @@
           data["Habitaciones"][orden]=temp;
           sumary[orden]=temp;
           data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#numero_de_personas").val(data["NPasajero"]);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
           var send = JSON.stringify(data);
            send = send.replace(/{/gi, "$");
@@ -640,6 +645,7 @@
           data["Habitaciones"][orden]=temp;
           sumary[orden]=temp;
           data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#numero_de_personas").val(data["NPasajero"]);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
           var send = JSON.stringify(data);
           send = send.replace(/{/gi, "$");
@@ -670,11 +676,12 @@
     var total_summary = $("#rooms_input").val();
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
+    var guests = $("#numero_de_personas").val();
     $("#"+sumary).html(text);
     $(input_serial).val(serial);
     $("#summary_input").val($("#reserva_summary").html());
     $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(roomnum)*100)).toFixed(2)+"</span>");
-    /*$("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");*/
+    $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(guests)*100)).toFixed(2)+"</span>");
     console.log("esta funcionando add_ons_click --- rooms_num: "+roomnum);
   }
 
@@ -691,6 +698,7 @@
     
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
+    var guests = $("#numero_de_personas").val();
     $(encabezado).html(encabezado_html);
     $(input).val(input_val);
     if($(check_box).is(":checked")){
@@ -703,7 +711,7 @@
       $(input_serial).val(serial);
       $("#summary_input").val($("#reserva_summary").html());
       $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(roomnum)*100)).toFixed(2)+"</span>");
-      /*$("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");*/
+      $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(guests)*100)).toFixed(2)+"</span>");
       console.log("esta funcionando add_ons_click --- rooms_num: "+roomnum);
     }
   }

@@ -915,6 +915,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                         <input type="hidden" name="lunch_and_dinner_serial" maxlength="1000" id="lunch_and_dinner_serial">
                         <input type="hidden" name="transport_serial" maxlength="1000" id="transport_serial">
                         <input type="hidden" name="tow_back_service_serial" maxlength="1000" id="tow_back_service_serial">
+                        <input type="hidden" name="numero_de_personas" maxlength="1000" id="numero_de_personas">
                         
                         <input type="hidden" name="rooms_input" maxlength="1000"  id="rooms_input">
                         <input type="hidden" name="request" maxlength="1000"  id="full_request">
