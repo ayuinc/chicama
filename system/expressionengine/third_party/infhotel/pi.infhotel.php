@@ -788,7 +788,7 @@ class Infhotel
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
                               </div>
                             </div>
                             <div class="row">
@@ -840,7 +840,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_tow_back_service" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_tow_back_service" class="addon-cost right">$30.00</p>
                               </div>
                             </div>
                             <div class="row">
