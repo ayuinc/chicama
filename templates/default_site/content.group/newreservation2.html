@@ -842,22 +842,24 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
-    $(input).val("10000");
     $(select_box).change(function(){
         switch(sumary){
           case "lunch_and_dinner_summary":
+            $(input).val("6000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
             }
           break;
           case "transport_summary":
+            $(input).val("3000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
             }
           break;
           case "tow_back_service_summary":
+            $(input).val("10000");
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
