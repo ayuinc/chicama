@@ -891,7 +891,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_transport" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_transport" class="addon-cost right">$48.00</p>
                               </div>
                             </div>
                             <div class="row">

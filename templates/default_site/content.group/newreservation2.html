@@ -793,7 +793,7 @@
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
               break;
-              case "60.00":
+              case "$60.00":
               $("#"+sumary).html("Transport <br>(2 persons) <span>$60.00</span>");
               $("#transport_serial").val("adtp02");
               $("#summary_input").val($("#reserva_summary").html());
@@ -848,12 +848,12 @@
         $(input).val("6000");
       break;
       case "transport_summary":
-        $(encabezado).html("$30.00");
-        $(input).val("3000");
+        $(encabezado).html("$48.00");
+        $(input).val("4800");
       break;
       case "tow_back_service_summary":
-        $(encabezado).html("$100.00");
-        $(input).val("10000");
+        $(encabezado).html("$30.00");
+        $(input).val("3000");
       break;
     }
     $(select_box).change(function(){
