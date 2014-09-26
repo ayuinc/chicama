@@ -844,72 +844,74 @@
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
     switch(sumary){
       case "lunch_and_dinner_summary":
+        $(encabezado).html("$60.00");
         $(input).val("6000");
       break;
       case "transport_summary":
+        $(encabezado).html("$30.00");
         $(input).val("3000");
       break;
       case "tow_back_service_summary":
+        $(encabezado).html("$100.00");
         $(input).val("10000");
       break;
     }
     $(select_box).change(function(){
-      switch(sumary){
-        case "lunch_and_dinner_summary":
-          if($(check_box).is(":checked")){
-            $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-            $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
-          }
-        break;
-        case "transport_summary":
-          if($(check_box).is(":checked")){
-            $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-            $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
-          }
-        break;
-        case "tow_back_service_summary":
-          if($(check_box).is(":checked")){
-            $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-            $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
-          }
-        break;
+      if($(check_box).is(":checked")){
+        $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
+        $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
       }
       switch($(select_box).val()){ 
         case "1":
-          $(encabezado).html("$100.00");
-          $(input).val("10000");
-          if($(check_box).is(":checked")){
-            $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-            $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-            var total_summary = $("#rooms_input").val();
-            //var total_summary = $("#purchase_amount").val();
-            $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-            $("#summary_input").val($("#reserva_summary").html());
-            if(sumary=="lunch_and_dinner_summary"){
-              $("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>$100.00</span>");
-              $("#lunch_and_dinner_serial").val("adld01");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
-            }
-            else{
-              if(sumary=="transport_summary"){
-                $("#"+sumary).html("Transport <br>(1 person)<span>$100.00</span>");
+          switch(sumary){
+            case "lunch_and_dinner_summary":
+              $(encabezado).html("$60.00");
+              $(input).val("6000");
+              if($(check_box).is(":checked")){
+                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
+                var total_summary = $("#rooms_input").val();
+                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+                $("#summary_input").val($("#reserva_summary").html());
+                $("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>$100.00</span>");
+                $("#lunch_and_dinner_serial").val("adld01");
+                $("#summary_input").val($("#reserva_summary").html());
+                console.log($(encabezado).text());
+              }
+            break;
+            case "transport_summary":
+              $(encabezado).html("$48.00");
+              $(input).val("4800");
+              if($(check_box).is(":checked")){
+                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
+                var total_summary = $("#rooms_input").val();
+                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+                $("#summary_input").val($("#reserva_summary").html());
+                $("#"+sumary).html("Transport <br>(1 person)<span>$48.00</span>");
                 $("#transport_serial").val("adtp01");
                 $("#summary_input").val($("#reserva_summary").html());
                 console.log($(encabezado).text());
               }
-              else{
-                if(sumary=="tow_back_service_summary"){
-                  $("#"+sumary).html("Tow back service <br>(1 person)<span>$100.00</span>");
-                  $("#tow_back_service_serial").val("adzc01");
-                  $("#summary_input").val($("#reserva_summary").html());
-                  console.log($(encabezado).text());
-                }
+            break;
+            case "tow_back_service_summary":
+              $(encabezado).html("$30.00");
+              $(input).val("3000");
+              if($(check_box).is(":checked")){
+                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
+                var total_summary = $("#rooms_input").val();
+                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+                $("#summary_input").val($("#reserva_summary").html());
+                $("#"+sumary).html("Tow back service <br>(1 person)<span>$30.00</span>");
+                $("#tow_back_service_serial").val("adzc01");
+                $("#summary_input").val($("#reserva_summary").html());
+                console.log($(encabezado).text());
               }
-            } 
-          }  
+            break;
+          }
           break;
-        case "2":
+        case "2"key: "value", 
           $(encabezado).html("$200.00");
           $(input).val("20000");
           if($(check_box).is(":checked")){
