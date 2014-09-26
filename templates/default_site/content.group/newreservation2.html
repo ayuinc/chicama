@@ -842,12 +842,13 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
-    //$(input).val("10000");
-    $(select_box).change(function(){
-        if($(check_box).is(":checked")){
+    $(input).val("10000");
+    if($(check_box).is(":checked")){
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
           $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         }
+    $(select_box).change(function(){
+        
         switch($(select_box).val()){ 
           case "1":
             $(encabezado).html("$100.00");
