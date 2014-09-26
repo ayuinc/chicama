@@ -658,6 +658,17 @@
 });
 
   function add_ons_click(sumary, input_serial, serial, text){
+    var checkin = ""+"{post_check_in_date}";
+    var checkout = ""+"{post_check_out_date}" ;
+    var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+    d1 = d1.split("-");
+    var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+    var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+    d2 = d2.split("-");
+    var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+    
+    var fin = dat2.getTime() - dat1.getTime();
+    var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
     $("#"+sumary).html(text);
     $(input_serial).val(serial);
     $("#summary_input").val($("#reserva_summary").html());
@@ -667,6 +678,17 @@
   }
 
   function add_ons_dropdown(encabezado, encabezado_html, input, input_val, check_box, purchase_amount, sumary, text, input_serial, serial){
+    var checkin = ""+"{post_check_in_date}";
+    var checkout = ""+"{post_check_out_date}" ;
+    var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+    d1 = d1.split("-");
+    var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+    var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+    d2 = d2.split("-");
+    var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+    
+    var fin = dat2.getTime() - dat1.getTime();
+    var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
     $(encabezado).html(encabezado_html);
     $(input).val(input_val);
     if($(check_box).is(":checked")){
