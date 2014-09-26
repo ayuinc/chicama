@@ -788,7 +788,7 @@ class Infhotel
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_lunch_and_dinner" class="addon-cost right">$60.00</p>
                               </div>
                             </div>
                             <div class="row">
@@ -840,7 +840,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_tow_back_service" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_tow_back_service" class="addon-cost right">$30.00</p>
                               </div>
                             </div>
                             <div class="row">
@@ -891,7 +891,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                                 </p>
                               </div>
                               <div class="large-4 columns">
-                                <p id="encabezado_transport" class="addon-cost right">$100.00</p>
+                                <p id="encabezado_transport" class="addon-cost right">$48.00</p>
                               </div>
                             </div>
                             <div class="row">
@@ -908,9 +908,9 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           </div>
                           <!-- end add-on description -->
                         </div>
-                        <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                        <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
-                        <input type="hidden" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
+                        <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                        <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                        <input type="text" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
 
                         <input type="hidden" name="lunch_and_dinner_serial" maxlength="1000" id="lunch_and_dinner_serial">
                         <input type="hidden" name="transport_serial" maxlength="1000" id="transport_serial">
