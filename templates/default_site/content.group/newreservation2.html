@@ -728,7 +728,7 @@
             $("#summary_input").val($("#reserva_summary").html());
             console.log($(encabezado).text());
             break;
-            case "$240.00":
+            /*case "$240.00":
             $("#"+sumary).html("Lunch And Dinner <br>(4 person) <span>$240.00</span>");
             $("#lunch_and_dinner_serial").val("adld04");
             $("#summary_input").val($("#reserva_summary").html());
@@ -781,7 +781,7 @@
             $("#lunch_and_dinner_serial").val("adld12");
             $("#summary_input").val($("#reserva_summary").html());
             console.log($(encabezado).text());
-            break;
+            break;*/
           }
         }
         else{
@@ -842,6 +842,17 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
+    switch(sumary){
+      case "lunch_and_dinner_summary":
+        console.log('lunch_and_dinner_summary');
+      break;
+      case "transport_summary":
+        console.log('transport_summary');
+      break;
+      case "tow_back_service_summary":
+        console.log('tow_back_service_summary');
+      break;
+    }
     $(input).val("10000");
     $(select_box).change(function(){
         if($(check_box).is(":checked")){
