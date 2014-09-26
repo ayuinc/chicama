@@ -672,6 +672,7 @@
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
     $("#"+sumary).html(text);
     $(input_serial).val(serial);
+    var total_summary = $("#rooms_input").val();
     $("#summary_input").val($("#reserva_summary").html());
     var auxiliar1 = parseInt(roomnum)*100;
     var auxiliar2 = parseInt(total_summary)*dias;
