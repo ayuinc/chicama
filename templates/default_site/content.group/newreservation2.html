@@ -657,6 +657,11 @@
   }
 });
 
+  function add_ons_click(sumary, input_serial, serial, text){
+    $("#"+sumary).html(text);
+    $(input_serial).val(serial);
+    $("#summary_input").val($("#reserva_summary").html());
+  }
 
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
 
@@ -711,22 +716,13 @@
         if(sumary == "lunch_and_dinner_summary"){
           switch($("#encabezado_lunch_and_dinner").html()){
             case "$60.00":
-            $("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>$60.00</span>");
-            $("#lunch_and_dinner_serial").val("adld01");
-            $("#summary_input").val($("#reserva_summary").html());
-            console.log($(encabezado).text());
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld01","Lunch And Dinner <br>(1 person) <span>$60.00</span>");
             break;
             case "$120.00":
-            $("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>$120.00</span>");
-            $("#lunch_and_dinner_serial").val("adld02");
-            $("#summary_input").val($("#reserva_summary").html());
-            console.log($(encabezado).text());
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld02","Lunch And Dinner <br>(2 persons) <span>$120.00</span>");
             break;
             case "$180.00":
-            $("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>$180.00</span>");
-            $("#lunch_and_dinner_serial").val("adld03");
-            $("#summary_input").val($("#reserva_summary").html());
-            console.log($(encabezado).text());
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld03","Lunch And Dinner <br>(3 persons) <span>$180.00</span>");
             break;
             /*case "$240.00":
             $("#"+sumary).html("Lunch And Dinner <br>(4 person) <span>$240.00</span>");
