@@ -658,7 +658,7 @@
 });
 
   function add_ons_click(sumary, input_serial, serial, text){
-    var roomnum = {post_room_number};
+    var roomnum = ""+"{post_room_number}";
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
@@ -675,11 +675,11 @@
     $("#summary_input").val($("#reserva_summary").html());
     $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(roomnum)*100)).toFixed(2)+"</span>");
     /*$("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");*/
-    console.log("esta funcionando add_ons_click --- rooms_num"+roomnum);
+    console.log("esta funcionando add_ons_click --- rooms_num: "+roomnum);
   }
 
   function add_ons_dropdown(encabezado, encabezado_html, input, input_val, check_box, purchase_amount, sumary, text, input_serial, serial){
-    var roomnum = {post_room_number};
+    var roomnum = ""+"{post_room_number}";
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
@@ -704,7 +704,7 @@
       $("#summary_input").val($("#reserva_summary").html());
       $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(roomnum)*100)).toFixed(2)+"</span>");
       /*$("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");*/
-      console.log("esta funcionando add_ons_click --- rooms_num"+roomnum);
+      console.log("esta funcionando add_ons_click --- rooms_num: "+roomnum);
     }
   }
 
@@ -773,7 +773,7 @@
             add_ons_click(sumary,"#lunch_and_dinner_serial", "adld04","Lunch And Dinner <br>(4 persons) <span>$240.00</span>");
             break;
             case "$300.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld05","Lunch And Dinner <br>(5 person2) <span>$300.00</span>");
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld05","Lunch And Dinner <br>(5 persons) <span>$300.00</span>");
             break;
             case "$360.00":
             add_ons_click(sumary,"#lunch_and_dinner_serial", "adld06","Lunch And Dinner <br>(6 persons) <span>$360.00</span>");
