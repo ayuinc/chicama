@@ -20,7 +20,7 @@
             <div class="row">
               <div class="large-9 large-centered columns">
                 <form class="book_a_room search_again" action="/?/content/newreservation2" method="POST">
-                	<input type="hidden" name="XID" value="{XID_HASH}" /> 
+                  <input type="hidden" name="XID" value="{XID_HASH}" /> 
                   <div class="row">
                     {exp:get_post_vars parse="inward"}
                     <div class="large-3 columns">
@@ -81,53 +81,53 @@
             </div>
           </div>
         </div>
-				<div class="row">
-					<div class="large-12 columns">
-					{exp:get_post_vars parse="inward"}
-						<!-- <h4 id="step_in_reservation">Room 1 of {post_room_number}</h4> -->
-						<h4 id="step_in_reservation">select your first room</h4>
-					{/exp:get_post_vars}
-						<!-- <h4 id="step_in_reservation2">select your first room</h4> -->
+        <div class="row">
+          <div class="large-12 columns">
+          {exp:get_post_vars parse="inward"}
+            <!-- <h4 id="step_in_reservation">Room 1 of {post_room_number}</h4> -->
+            <h4 id="step_in_reservation">select your first room</h4>
+          {/exp:get_post_vars}
+            <!-- <h4 id="step_in_reservation2">select your first room</h4> -->
           <div class="row" id="steps_list_rooms">
             <div class="large-5 columns">
               <div class="row">
-              	{exp:get_post_vars parse="inward"}
-              		{if {post_room_number} == "1"}
+                {exp:get_post_vars parse="inward"}
+                  {if {post_room_number} == "1"}
                   <div class="large-2 columns end"><span id="first_circle" class="circle active last">1</span><p>ROOM</p></div>
-	                
+                  
                   {/if}
                   {if {post_room_number} == "2"}
                   <div class="large-2 columns"><span id="first_circle" class="circle active">1</span><p>ROOM</p></div>
-	                <div class="large-2 columns end"><span id="second_circle" class="circle last">2</span><p>ROOM</p></div>
+                  <div class="large-2 columns end"><span id="second_circle" class="circle last">2</span><p>ROOM</p></div>
                   {/if}
                   {if {post_room_number} == "3"}
                   <div class="large-2 columns"><span id="first_circle" class="circle active">1</span><p>ROOM</p></div>
-	                <div class="large-2 columns"><span id="second_circle" class="circle">2</span><p>ROOM</p></div>
-	                <div class="large-2 columns end"><span id="third_circle" class="circle last">3</span><p>ROOM</p></div>
+                  <div class="large-2 columns"><span id="second_circle" class="circle">2</span><p>ROOM</p></div>
+                  <div class="large-2 columns end"><span id="third_circle" class="circle last">3</span><p>ROOM</p></div>
                   {/if}
                   {if {post_room_number} == "4"}
                   <div class="large-2 columns"><span id="first_circle" class="circle active">1</span><p>ROOM</p></div>
-	                <div class="large-2 columns"><span id="second_circle" class="circle">2</span><p>ROOM</p></div>
-	                <div class="large-2 columns"><span id="third_circle" class="circle">3</span><p>ROOM</p></div>
-	                <div class="large-2 columns end"><span id="fourth_circle" class="circle last">4</span><p>ROOM</p></div>
+                  <div class="large-2 columns"><span id="second_circle" class="circle">2</span><p>ROOM</p></div>
+                  <div class="large-2 columns"><span id="third_circle" class="circle">3</span><p>ROOM</p></div>
+                  <div class="large-2 columns end"><span id="fourth_circle" class="circle last">4</span><p>ROOM</p></div>
                   {/if}
                 {/exp:get_post_vars}
               </div>
             </div>
           </div>
-					</div>
-				  <form class="book_a_room main_form" action="/?/content/reserva" method="POST">
-						<input type="hidden" name="XID" value="{XID_HASH}" />
-					    {exp:get_post_vars parse="inward"}
-							{exp:infhotel:disponibilidadinicialhabitaciones_final
-								fecha_checkin = "{post_check_in_date}"
-								fecha_checkout = "{post_check_out_date}"
-								rooms_num =  "{post_room_number}" 
-							}
-							{/exp:infhotel:disponibilidadinicialhabitaciones_final}
-						{/exp:get_post_vars}
-					</form>
-				</div>
+          </div>
+          <form class="book_a_room main_form" action="/?/content/reserva" method="POST">
+            <input type="hidden" name="XID" value="{XID_HASH}" />
+              {exp:get_post_vars parse="inward"}
+              {exp:infhotel:disponibilidadinicialhabitaciones_final
+                fecha_checkin = "{post_check_in_date}"
+                fecha_checkout = "{post_check_out_date}"
+                rooms_num =  "{post_room_number}" 
+              }
+              {/exp:infhotel:disponibilidadinicialhabitaciones_final}
+            {/exp:get_post_vars}
+          </form>
+        </div>
       </div>
     </div>  
   </div>  
@@ -170,57 +170,57 @@
       var el = document.getElementById(elem);
       el.scrollIntoView(true);
   }
-	$(function() {
-		num_hab = {post_room_number};
-		$("#room1").hide();
-		$("#room2").hide();
-		$("#room3").hide();
-		$("#room4").hide();
-		$("#price_room1").hide();
-		$("#price_room2").hide();
-		$("#price_room3").hide();
-		$("#price_room4").hide();
-		$("#form_box_3_container").hide();
-		hide_divs(num_hab,0);
+  $(function() {
+    num_hab = {post_room_number};
+    $("#room1").hide();
+    $("#room2").hide();
+    $("#room3").hide();
+    $("#room4").hide();
+    $("#price_room1").hide();
+    $("#price_room2").hide();
+    $("#price_room3").hide();
+    $("#price_room4").hide();
+    $("#form_box_3_container").hide();
+    hide_divs(num_hab,0);
       });
-	$(function() {
-		var amount = 0;
-		var num_hab = {post_room_number};
-		var checkin_date ="";
-		var checkout_date ="";
-		var checkin = ""+"{post_check_in_date}";
-		var checkout = ""+"{post_check_out_date}" ;
-		var simple_garden = 0;
-		var doble_garden = 0;
-		var triple_garden = 0;
-		var simple_ocean = 0;
-		var doble_ocean = 0;
-		var triple_ocean = 0;
-		var sumary = { };
+  $(function() {
+    var amount = 0;
+    var num_hab = {post_room_number};
+    var checkin_date ="";
+    var checkout_date ="";
+    var checkin = ""+"{post_check_in_date}";
+    var checkout = ""+"{post_check_out_date}" ;
+    var simple_garden = 0;
+    var doble_garden = 0;
+    var triple_garden = 0;
+    var simple_ocean = 0;
+    var doble_ocean = 0;
+    var triple_ocean = 0;
+    var sumary = { };
 
-		var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
-		d1 = d1.split("-");
-		var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
-		var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
-		d2 = d2.split("-");
-		var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
-		
-		var fin = dat2.getTime() - dat1.getTime();
-		var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
+    var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+    d1 = d1.split("-");
+    var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+    var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+    d2 = d2.split("-");
+    var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+    
+    var fin = dat2.getTime() - dat1.getTime();
+    var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
 
-		checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
-		checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
-		var data = {
-			 	"FLlegada": checkin_date,
-			    "FSalida": checkout_date,
-			    "HLlegada": checkin_date,
-			    "HSalida": checkout_date,
-			    "Habitaciones": {},
-			    "MObservacion": "",				
+    checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
+    checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+    var data = {
+        "FLlegada": checkin_date,
+          "FSalida": checkout_date,
+          "HLlegada": checkin_date,
+          "HSalida": checkout_date,
+          "Habitaciones": {},
+          "MObservacion": "",       
                 "NPasajero": "0" ,
                 "Pasajeros" : {}
-		};
-		cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
+    };
+    cambio_costos('#guests_simple_garden0','#num_guest_simple_garden0','#cost_simple_garden0', "#type_hab_simple_garden0","#final_cost_simple_garden0");
     cambio_costos('#guests_simple_garden1','#num_guest_simple_garden1','#cost_simple_garden1',"#type_hab_simple_garden1","#final_cost_simple_garden1");
     cambio_costos('#guests_simple_garden2','#num_guest_simple_garden2','#cost_simple_garden2',"#type_hab_simple_garden2","#final_cost_simple_garden2");
     cambio_costos('#guests_simple_garden3','#num_guest_simple_garden3','#cost_simple_garden3',"#type_hab_simple_garden3","#final_cost_simple_garden3");
@@ -244,104 +244,104 @@
     cambio_costos('#guests_triple_ocean1','#num_guest_triple_ocean1','#cost_triple_ocean1',"#type_hab_triple_ocean1","#final_cost_triple_ocean1");
     cambio_costos('#guests_triple_ocean2','#num_guest_triple_ocean2','#cost_triple_ocean2',"#type_hab_triple_ocean2","#final_cost_triple_ocean2");
     cambio_costos('#guests_triple_ocean3','#num_guest_triple_ocean3','#cost_triple_ocean3',"#type_hab_triple_ocean3","#final_cost_triple_ocean3");
-   	reservar_hab(num_hab, '#add_room_simple_garden0', 1, 1,"#final_cost_simple_garden0","#full_request","#guests_simple_garden0","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_garden0', 1, 2,"#final_cost_doble_garden0","#full_request","#guests_doble_garden0","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_garden0', 1, 3,"#final_cost_triple_garden0","#full_request","#guests_triple_garden0","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_garden1', 2, 1,"#final_cost_simple_garden1","#full_request","#guests_simple_garden1","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_garden1', 2, 2,"#final_cost_doble_garden1","#full_request","#guests_doble_garden1","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_garden1', 2, 3,"#final_cost_triple_garden1","#full_request","#guests_triple_garden1","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_garden2', 3, 1,"#final_cost_simple_garden2","#full_request","#guests_simple_garden2","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_garden2', 3, 2,"#final_cost_doble_garden2","#full_request","#guests_doble_garden2","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_garden2', 3, 3,"#final_cost_triple_garden2","#full_request","#guests_triple_garden2","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_garden3', 4, 1,"#final_cost_simple_garden3","#full_request","#guests_simple_garden3","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_garden3', 4, 2,"#final_cost_doble_garden3","#full_request","#guests_doble_garden3","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_garden3', 4, 3,"#final_cost_triple_garden3","#full_request","#guests_triple_garden3","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_ocean0', 1, 4,"#final_cost_simple_ocean0","#full_request","#guests_simple_ocean0","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_ocean0', 1, 5,"#final_cost_doble_ocean0","#full_request","#guests_doble_ocean0","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_ocean0', 1, 6,"#final_cost_triple_ocean0","#full_request","#guests_triple_ocean0","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_ocean1', 2, 4,"#final_cost_simple_ocean1","#full_request","#guests_simple_ocean1","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_ocean1', 2, 5,"#final_cost_doble_ocean1","#full_request","#guests_doble_ocean1","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_ocean1', 2, 6,"#final_cost_triple_ocean1","#full_request","#guests_triple_ocean1","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_ocean2', 3, 4,"#final_cost_simple_ocean2","#full_request","#guests_simple_ocean2","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_ocean2', 3, 5,"#final_cost_doble_ocean2","#full_request","#guests_doble_ocean2","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_ocean2', 3, 6,"#final_cost_triple_ocean2","#full_request","#guests_triple_ocean2","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3","#purchase_amount");
-   	reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_garden0', 1, 1,"#final_cost_simple_garden0","#full_request","#guests_simple_garden0","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_garden0', 1, 2,"#final_cost_doble_garden0","#full_request","#guests_doble_garden0","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_garden0', 1, 3,"#final_cost_triple_garden0","#full_request","#guests_triple_garden0","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_garden1', 2, 1,"#final_cost_simple_garden1","#full_request","#guests_simple_garden1","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_garden1', 2, 2,"#final_cost_doble_garden1","#full_request","#guests_doble_garden1","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_garden1', 2, 3,"#final_cost_triple_garden1","#full_request","#guests_triple_garden1","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_garden2', 3, 1,"#final_cost_simple_garden2","#full_request","#guests_simple_garden2","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_garden2', 3, 2,"#final_cost_doble_garden2","#full_request","#guests_doble_garden2","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_garden2', 3, 3,"#final_cost_triple_garden2","#full_request","#guests_triple_garden2","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_garden3', 4, 1,"#final_cost_simple_garden3","#full_request","#guests_simple_garden3","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_garden3', 4, 2,"#final_cost_doble_garden3","#full_request","#guests_doble_garden3","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_garden3', 4, 3,"#final_cost_triple_garden3","#full_request","#guests_triple_garden3","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_ocean0', 1, 4,"#final_cost_simple_ocean0","#full_request","#guests_simple_ocean0","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_ocean0', 1, 5,"#final_cost_doble_ocean0","#full_request","#guests_doble_ocean0","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_ocean0', 1, 6,"#final_cost_triple_ocean0","#full_request","#guests_triple_ocean0","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_ocean1', 2, 4,"#final_cost_simple_ocean1","#full_request","#guests_simple_ocean1","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_ocean1', 2, 5,"#final_cost_doble_ocean1","#full_request","#guests_doble_ocean1","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_ocean1', 2, 6,"#final_cost_triple_ocean1","#full_request","#guests_triple_ocean1","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_ocean2', 3, 4,"#final_cost_simple_ocean2","#full_request","#guests_simple_ocean2","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_ocean2', 3, 5,"#final_cost_doble_ocean2","#full_request","#guests_doble_ocean2","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_ocean2', 3, 6,"#final_cost_triple_ocean2","#full_request","#guests_triple_ocean2","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_simple_ocean3', 4, 4,"#final_cost_simple_ocean3","#full_request","#guests_simple_ocean3","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_doble_ocean3', 4, 5,"#final_cost_doble_ocean3","#full_request","#guests_doble_ocean3","#purchase_amount");
+    reservar_hab(num_hab, '#add_room_triple_ocean3', 4, 6,"#final_cost_triple_ocean3","#full_request","#guests_triple_ocean3","#purchase_amount");
     
 
 
     function cambio_costos(select_box , encabezado , precio, hab, final_cost){
-			var  tipo_de_hab = $(hab).text();
-			$(select_box).change(function(){	
-				if(tipo_de_hab=="GARDEN VIEW"){
-					switch($( select_box ).val()){ 
-						case "1":
-							$(encabezado).html("One Guest");
-							$(precio).html("USD 100/night");
-							$(final_cost).val("100");
-							break;
-						case "2":
-							$(encabezado).html("Two Guests");
-							$(precio).html("USD 130/night");
-							$(final_cost).val("130");
-							break;
-						case "3":
-							$(encabezado).html("Three Guests");
-							$(precio).html("USD 160/night");
-							$(final_cost).val("160");
-							break;
-						case "4":
-							break;
-					}
-				}
-				if(tipo_de_hab=="OCEAN VIEW"){
-					switch($(select_box).val()){
-						case "1":
-							$(encabezado).html("One Guest");
-							$(precio).html("USD 110/night");
-							$(final_cost).val("110");
-							break;
-						case "2":
-							$(encabezado).html("Two Guests");
-							$(precio).html("USD 140/night");
-							$(final_cost).val("140");
-							break;
-						case "3":
-							$(encabezado).html("Three Guests");
-							$(precio).html("USD 180/night");
-							$(final_cost).val("180");
-							break;
-						case "4":
-							break;
-					}
-				}
-			});
-		}
+      var  tipo_de_hab = $(hab).text();
+      $(select_box).change(function(){  
+        if(tipo_de_hab=="GARDEN VIEW"){
+          switch($( select_box ).val()){ 
+            case "1":
+              $(encabezado).html("One Guest");
+              $(precio).html("USD 100/night");
+              $(final_cost).val("100");
+              break;
+            case "2":
+              $(encabezado).html("Two Guests");
+              $(precio).html("USD 130/night");
+              $(final_cost).val("130");
+              break;
+            case "3":
+              $(encabezado).html("Three Guests");
+              $(precio).html("USD 160/night");
+              $(final_cost).val("160");
+              break;
+            case "4":
+              break;
+          }
+        }
+        if(tipo_de_hab=="OCEAN VIEW"){
+          switch($(select_box).val()){
+            case "1":
+              $(encabezado).html("One Guest");
+              $(precio).html("USD 110/night");
+              $(final_cost).val("110");
+              break;
+            case "2":
+              $(encabezado).html("Two Guests");
+              $(precio).html("USD 140/night");
+              $(final_cost).val("140");
+              break;
+            case "3":
+              $(encabezado).html("Three Guests");
+              $(precio).html("USD 180/night");
+              $(final_cost).val("180");
+              break;
+            case "4":
+              break;
+          }
+        }
+      });
+    }
 
-	function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box, purchase_amount ){
-	var orden = next_div - 1 ;
-	var summary_cost_final = "";
-	var summary_room = "";
-	var summary_cost = "";
+  function reservar_hab (rooms_num, buttom, next_div, type_hab, final_cost, request, select_box, purchase_amount ){
+  var orden = next_div - 1 ;
+  var summary_cost_final = "";
+  var summary_room = "";
+  var summary_cost = "";
 
-	switch(type_hab){
-	    case 1:
-	        $(buttom).click(function(){
+  switch(type_hab){
+      case 1:
+          $(buttom).click(function(){
           showIt('step_in_reservation');  
-	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
-		    	var valor = $(select_box).val();
-		    	simple_garden = simple_garden + 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
-		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("body").addClass("overlay_active"); 
+          setTimeout(function(){$("body").removeClass("overlay_active")},450);
+          var valor = $(select_box).val();
+          simple_garden = simple_garden + 1;
+          amount = amount + parseInt($(final_cost).val())*100;
+          var total_summary = amount;
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
           $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
-		    	summary_room = orden+1;
-		    	summary_cost = $(final_cost).val();
-		    	switch(summary_cost){
+          $("#summary_input").val($("#reserva_summary").html());
+          $("#rooms_input").val(amount*dias);
+          summary_room = orden+1;
+          summary_cost = $(final_cost).val();
+          switch(summary_cost){
             case "100":
               var temp = {
                 "TCodigoHabitacion" : "rmsg01"
@@ -361,42 +361,42 @@
               summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
             break;
           }
-		    	$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
-		    	$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-	        hide_divs(rooms_num, next_div);
-	        data["Habitaciones"][orden]=temp;
-	        sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+          $("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+          hide_divs(rooms_num, next_div);
+          data["Habitaciones"][orden]=temp;
+          sumary[orden]=temp;
+          data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
-		    	var send = JSON.stringify(data);
-		    	send = send.replace(/{/gi, "$");
+          var send = JSON.stringify(data);
+          send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
+          $(request).val(send);
+          $(purchase_amount).val(amount);
           $("#rooms_input").val(amount*dias);
-	        });
-					
-	        break;
-	    case 2:
-	        $(buttom).click(function(){
+          });
+          
+          break;
+      case 2:
+          $(buttom).click(function(){
           showIt('step_in_reservation');
-	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
-		    	var valor = $(select_box).val();
-		    	doble_garden = doble_garden + 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
-		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("body").addClass("overlay_active"); 
+          setTimeout(function(){$("body").removeClass("overlay_active")},450);
+          var valor = $(select_box).val();
+          doble_garden = doble_garden + 1;
+          amount = amount + parseInt($(final_cost).val())*100;
+          var total_summary = amount;
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
           $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
-    			summary_room = orden+1;
-					summary_cost = $(final_cost).val();
-					switch(summary_cost){
+          $("#summary_input").val($("#reserva_summary").html());
+          $("#rooms_input").val(amount*dias);
+          summary_room = orden+1;
+          summary_cost = $(final_cost).val();
+          switch(summary_cost){
             case "100":
               var temp = {
                 "TCodigoHabitacion" : "rmsg02"
@@ -416,42 +416,42 @@
               summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
             break;
           }
-					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
-					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-					hide_divs(rooms_num, next_div);
-	        data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+          $("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+          hide_divs(rooms_num, next_div);
+          data["Habitaciones"][orden]=temp;
+          sumary[orden]=temp;
+          data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
-    	    	var send = JSON.stringify(data);
-    	     send = send.replace(/{/gi, "$");
+            var send = JSON.stringify(data);
+           send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
           $(request).val(send);
-		    	$(purchase_amount).val(amount);
+          $(purchase_amount).val(amount);
           $("#rooms_input").val(amount*dias);
-	        });
-	        break;
-	    case 3:
-	        $(buttom).click(function(){
+          });
+          break;
+      case 3:
+          $(buttom).click(function(){
           showIt('step_in_reservation');  
-	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
-		    	var valor = $(select_box).val();
-		    	triple_garden =triple_garden + 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
-		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("body").addClass("overlay_active"); 
+          setTimeout(function(){$("body").removeClass("overlay_active")},450);
+          var valor = $(select_box).val();
+          triple_garden =triple_garden + 1;
+          amount = amount + parseInt($(final_cost).val())*100;
+          var total_summary = amount;
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
           $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+Math.round((parseInt(total_summary)*dias)/(rooms_num*100) * 100) / 100+"</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
-    			summary_room = orden+1;
-					summary_cost = $(final_cost).val();
-					switch(summary_cost){
-		    		case "100":
+          $("#summary_input").val($("#reserva_summary").html());
+          $("#rooms_input").val(amount*dias);
+          summary_room = orden+1;
+          summary_cost = $(final_cost).val();
+          switch(summary_cost){
+            case "100":
               var temp = {
                 "TCodigoHabitacion" : "rmsg03"
               };
@@ -469,42 +469,42 @@
               };
               summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
             break;
-		    	}
-					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
-					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-					hide_divs(rooms_num, next_div);
-	        data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          }
+          $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+          $("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+          hide_divs(rooms_num, next_div);
+          data["Habitaciones"][orden]=temp;
+          sumary[orden]=temp;
+          data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
-		    	var send = JSON.stringify(data);
-		    	 send = send.replace(/{/gi, "$");
+          var send = JSON.stringify(data);
+           send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
+          $(request).val(send);
+          $(purchase_amount).val(amount);
           $("#rooms_input").val(amount*dias);
-	        });
-	        break;
-	    case 4:
-	        $(buttom).click(function(){
+          });
+          break;
+      case 4:
+          $(buttom).click(function(){
           showIt('step_in_reservation');  
-	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
-	        var valor = $(select_box).val();
-		    	simple_ocean =simple_ocean + 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
-		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("body").addClass("overlay_active"); 
+          setTimeout(function(){$("body").removeClass("overlay_active")},450);
+          var valor = $(select_box).val();
+          simple_ocean =simple_ocean + 1;
+          amount = amount + parseInt($(final_cost).val())*100;
+          var total_summary = amount;
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
           $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
-    			summary_room = orden+1;
-					summary_cost = $(final_cost).val();
-					switch(summary_cost){
+          $("#summary_input").val($("#reserva_summary").html());
+          $("#rooms_input").val(amount*dias);
+          summary_room = orden+1;
+          summary_cost = $(final_cost).val();
+          switch(summary_cost){
             case "110":
               var temp = {
                 "TCodigoHabitacion" : "rmso05"
@@ -524,96 +524,96 @@
               summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
             break;
           }
-					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
-					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-					hide_divs(rooms_num, next_div);
-	        data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+          $("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+          hide_divs(rooms_num, next_div);
+          data["Habitaciones"][orden]=temp;
+          sumary[orden]=temp;
+          data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
-		    	var send = JSON.stringify(data);
-		    	 send = send.replace(/{/gi, "$");
+          var send = JSON.stringify(data);
+           send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
+          $(request).val(send);
+          $(purchase_amount).val(amount);
           $("#rooms_input").val(amount*dias);
-	        });
-	        break;
-	    case 5:
-	        $(buttom).click(function(){
+          });
+          break;
+      case 5:
+          $(buttom).click(function(){
           showIt('step_in_reservation');  
-	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
-	        var valor = $(select_box).val();
-		    	doble_ocean =doble_ocean+ 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
-		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("body").addClass("overlay_active"); 
+          setTimeout(function(){$("body").removeClass("overlay_active")},450);
+          var valor = $(select_box).val();
+          doble_ocean =doble_ocean+ 1;
+          amount = amount + parseInt($(final_cost).val())*100;
+          var total_summary = amount;
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
           $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   				$("#rooms_input").val(amount*dias);
-    			summary_room = orden+1;
-					summary_cost = $(final_cost).val();
-					switch(summary_cost){
-		    		case "110":
+          $("#summary_input").val($("#reserva_summary").html());
+          $("#rooms_input").val(amount*dias);
+          summary_room = orden+1;
+          summary_cost = $(final_cost).val();
+          switch(summary_cost){
+            case "110":
               var temp = {
                 "TCodigoHabitacion" : "rmso06"
               };
               summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+".00</span>";
             break;
-		    		case "140":
+            case "140":
               var temp = {
                 "TCodigoHabitacion" : "rmdo06"
               };
-		    			summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-		    		break;
-		    		case "180":
+              summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
+            break;
+            case "180":
               var temp = {
                 "TCodigoHabitacion" : "rmto06"
               };
-		    			summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-		    		break;
-		    	}
-					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
-					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-					hide_divs(rooms_num, next_div);
-	        data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+              summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
+            break;
+          }
+          $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+          $("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+          hide_divs(rooms_num, next_div);
+          data["Habitaciones"][orden]=temp;
+          sumary[orden]=temp;
+          data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
-		    	var send = JSON.stringify(data);
-		    	 send = send.replace(/{/gi, "$");
+          var send = JSON.stringify(data);
+           send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
+          $(request).val(send);
+          $(purchase_amount).val(amount);
           $("#rooms_input").val(amount*dias);
-		    	
-			});
-	        break;
-	    case 6:
-	        $(buttom).click(function(){
+          
+      });
+          break;
+      case 6:
+          $(buttom).click(function(){
           showIt('step_in_reservation');
           // showIt('steps_list');
-	        $("body").addClass("overlay_active");	
-	        setTimeout(function(){$("body").removeClass("overlay_active")},450);
-	        var valor = $(select_box).val();
-		    	triple_ocean =triple_ocean + 1;
-		    	amount = amount + parseInt($(final_cost).val())*100;
-		    	var total_summary = amount;
-   				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("body").addClass("overlay_active"); 
+          setTimeout(function(){$("body").removeClass("overlay_active")},450);
+          var valor = $(select_box).val();
+          triple_ocean =triple_ocean + 1;
+          amount = amount + parseInt($(final_cost).val())*100;
+          var total_summary = amount;
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
           $("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
-   				$("#summary_input").val($("#reserva_summary").html());
-   			  $("#rooms_input").val(amount*dias);
-    			summary_room = orden+1;
-					summary_cost = $(final_cost).val();
+          $("#summary_input").val($("#reserva_summary").html());
+          $("#rooms_input").val(amount*dias);
+          summary_room = orden+1;
+          summary_cost = $(final_cost).val();
           switch(summary_cost){
             case "110":
               var temp = {
@@ -634,100 +634,100 @@
               summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
             break;
           }
-					$("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
-					$("#cost_room"+summary_room+"_summary").html(summary_cost_final);
-					hide_divs(rooms_num, next_div);
-	        data["Habitaciones"][orden]=temp;
-		    	sumary[orden]=temp;
-		    	data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
+          $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
+          $("#cost_room"+summary_room+"_summary").html(summary_cost_final);
+          hide_divs(rooms_num, next_div);
+          data["Habitaciones"][orden]=temp;
+          sumary[orden]=temp;
+          data["NPasajero"] = parseInt(data["NPasajero"]) + parseInt(valor);
           $("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(data["NPasajero"])*100)).toFixed(2)+"</span>");
-		    	var send = JSON.stringify(data);
+          var send = JSON.stringify(data);
           send = send.replace(/{/gi, "$");
           send = send.replace(/}/gi, "&");  
           send = send.replace(/"/gi, "(");
           send = send.replace(/:/gi, ")");
           send = send.replace(/ /gi, "?");
           send = send.replace(/,/gi, "¿");
-		    	$(request).val(send);
-		    	$(purchase_amount).val(amount);
-	        $("#rooms_input").val(amount*dias);
-	        });
-	        break;
-	    } 
-	}
+          $(request).val(send);
+          $(purchase_amount).val(amount);
+          $("#rooms_input").val(amount*dias);
+          });
+          break;
+      } 
+  }
 });
 
 
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
 
-  	var checkin = ""+"{post_check_in_date}";
-  	var checkout = ""+"{post_check_out_date}" ;
-  	var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
-  	d1 = d1.split("-");
-  	var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
-  	var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
-  	d2 = d2.split("-");
-  	var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
-  	
-  	var fin = dat2.getTime() - dat1.getTime();
-  	var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
+    var checkin = ""+"{post_check_in_date}";
+    var checkout = ""+"{post_check_out_date}" ;
+    var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+    d1 = d1.split("-");
+    var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+    var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+    d2 = d2.split("-");
+    var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+    
+    var fin = dat2.getTime() - dat1.getTime();
+    var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
 
     var cost_summary = "";
     $("#"+sumary).html("");
     $(check_box).prop("checked", false);
-		$(buttom).removeClass("active");
+    $(buttom).removeClass("active");
     $(buttom).click(function( e ){
-    	e.preventDefault();
-    	if($(check_box).is(":checked")) {
-    		if(sumary=="lunch_and_dinner_summary"){
-    			$("#"+sumary).html("");
+      e.preventDefault();
+      if($(check_box).is(":checked")) {
+        if(sumary=="lunch_and_dinner_summary"){
+          $("#"+sumary).html("");
           $("#lunch_and_dinner_serial").val("");
-    		}
-    		else{
-    			if(sumary=="transport_summary"){
-    				$("#"+sumary).html("");
+        }
+        else{
+          if(sumary=="transport_summary"){
+            $("#"+sumary).html("");
             $("#transport_serial").val("");
-    			}
-    			else{
-    				if(sumary=="tow_back_service_summary"){
-    				$("#"+sumary).html("");
+          }
+          else{
+            if(sumary=="tow_back_service_summary"){
+            $("#"+sumary).html("");
             $("#tow_back_service_serial").val("");
-    				}
-    			}
-    		}
+            }
+          }
+        }
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
         var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());      
-    	}
-    	else{
+      }
+      else{
         $(check_box).prop("checked", true);
         $(buttom).html("added");
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         if(sumary == "lunch_and_dinner_summary"){
-    			switch($("#encabezado_lunch_and_dinner").html()){
-    				case "$60.00":
-    				$("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>$60.00</span>");
+          switch($("#encabezado_lunch_and_dinner").html()){
+            case "$60.00":
+            $("#"+sumary).html("Lunch And Dinner <br>(1 person) <span>$60.00</span>");
             $("#lunch_and_dinner_serial").val("adld01");
             $("#summary_input").val($("#reserva_summary").html());
             console.log($(encabezado).text());
-    				break;
-    				case "$120.00":
-    				$("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>$120.00</span>");
+            break;
+            case "$120.00":
+            $("#"+sumary).html("Lunch And Dinner <br>(2 persons) <span>$120.00</span>");
             $("#lunch_and_dinner_serial").val("adld02");
             $("#summary_input").val($("#reserva_summary").html());
             console.log($(encabezado).text());
-    				break;
-    				case "$180.00":
-    				$("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>$180.00</span>");
+            break;
+            case "$180.00":
+            $("#"+sumary).html("Lunch And Dinner <br>(3 persons) <span>$180.00</span>");
             $("#lunch_and_dinner_serial").val("adld03");
             $("#summary_input").val($("#reserva_summary").html());
             console.log($(encabezado).text());
-    				break;
+            break;
             case "$240.00":
             $("#"+sumary).html("Lunch And Dinner <br>(4 person) <span>$240.00</span>");
             $("#lunch_and_dinner_serial").val("adld04");
@@ -782,73 +782,72 @@
             $("#summary_input").val($("#reserva_summary").html());
             console.log($(encabezado).text());
             break;
-    			}
-    		}
-    		else{
-    			if(sumary == "transport_summary"){
-    				switch($("#encabezado_transport").html()){
-    					case "$100.00":
-    					$("#"+sumary).html("Transport <br>(1 person) <span>$100.00</span>");
+          }
+        }
+        else{
+          if(sumary == "transport_summary"){
+            switch($("#encabezado_transport").html()){
+              case "$100.00":
+              $("#"+sumary).html("Transport <br>(1 person) <span>$100.00</span>");
               $("#transport_serial").val("adtp01");
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
-    					break;
-    					case "$200.00":
-    					$("#"+sumary).html("Transport <br>(2 persons) <span>$200.00</span>");
+              break;
+              case "$200.00":
+              $("#"+sumary).html("Transport <br>(2 persons) <span>$200.00</span>");
               $("#transport_serial").val("adtp02");
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
-    					break;
-    					case "$300.00":
-    					$("#"+sumary).html("Transport <br>(3 persons) <span>$300.00</span>");
+              break;
+              case "$300.00":
+              $("#"+sumary).html("Transport <br>(3 persons) <span>$300.00</span>");
               $("#transport_serial").val("adtp03");
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
-    					break;
-    				}
-    			}
-    			else{
-    				if(sumary == "tow_back_service_summary"){
-    					switch($("#encabezado_tow_back_service").html()){
-    					case "$100.00":
-    					$("#"+sumary).html("Tow back service <br>(1 person) <span>$100.00</span>");
+              break;
+            }
+          }
+          else{
+            if(sumary == "tow_back_service_summary"){
+              switch($("#encabezado_tow_back_service").html()){
+              case "$100.00":
+              $("#"+sumary).html("Tow back service <br>(1 person) <span>$100.00</span>");
               $("#tow_back_service_serial").val("adzc01");
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
-    					break;
-    					case "$200.00":
-    					$("#"+sumary).html("Tow back service <br>(2 persons) <span>$200.00</span>");
+              break;
+              case "$200.00":
+              $("#"+sumary).html("Tow back service <br>(2 persons) <span>$200.00</span>");
               $("#tow_back_service_serial").val("adzc02");
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
-    					break;
-    					case "$300.00":
-    					$("#"+sumary).html("Tow back service <br>(3 persons) <span>$300.00</span>");
+              break;
+              case "$300.00":
+              $("#"+sumary).html("Tow back service <br>(3 persons) <span>$300.00</span>");
               $("#tow_back_service_serial").val("adzc03");
               $("#summary_input").val($("#reserva_summary").html());
               console.log($(encabezado).text());
-    					break;
-    					}
-    				}
-    			}
-    		}
-    		var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
-    		$("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
+              break;
+              }
+            }
+          }
+        }
+        var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
+        $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
- 				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
         $("#summary_input").val($("#reserva_summary").html());
-    	}
+      }
     });
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
     $(input).val("10000");
-    if($(check_box).is(":checked")){
+    $(select_box).change(function(){
+        if($(check_box).is(":checked")){
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
           $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         }
-    $(select_box).change(function(){
-        
         switch($(select_box).val()){ 
           case "1":
             $(encabezado).html("$100.00");
@@ -858,30 +857,30 @@
               $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
               var total_summary = $("#rooms_input").val();
               //var total_summary = $("#purchase_amount").val();
-   						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+              $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>$100.00</span>");
+                $("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>$100.00</span>");
                 $("#lunch_and_dinner_serial").val("adld01");
                 $("#summary_input").val($("#reserva_summary").html());
                 console.log($(encabezado).text());
               }
               else{
-              	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <br>(1 person)<span>$100.00</span>");
+                if(sumary=="transport_summary"){
+                  $("#"+sumary).html("Transport <br>(1 person)<span>$100.00</span>");
                   $("#transport_serial").val("adtp01");
                   $("#summary_input").val($("#reserva_summary").html());
                   console.log($(encabezado).text());
-              	}
-              	else{
-              		if(sumary=="tow_back_service_summary"){
-              			$("#"+sumary).html("Tow back service <br>(1 person)<span>$100.00</span>");
+                }
+                else{
+                  if(sumary=="tow_back_service_summary"){
+                    $("#"+sumary).html("Tow back service <br>(1 person)<span>$100.00</span>");
                     $("#tow_back_service_serial").val("adzc01");
                     $("#summary_input").val($("#reserva_summary").html());
                     console.log($(encabezado).text());
-              		}
-              	}
-              }	
+                  }
+                }
+              } 
             }  
             break;
           case "2":
@@ -890,30 +889,30 @@
             if($(check_box).is(":checked")){
               $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
               $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-    		    	var total_summary = $("#rooms_input").val();
+              var total_summary = $("#rooms_input").val();
               //var total_summary = $("#purchase_amount").val();
-       				$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+              $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>$200.00</span>");
+                $("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>$200.00</span>");
                 $("#lunch_and_dinner_serial").val("adld02");
                 $("#summary_input").val($("#reserva_summary").html());
                 console.log($(encabezado).text());
               }
               else{
-              	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <br>(2 persons)<span>$200.00</span>");
+                if(sumary=="transport_summary"){
+                  $("#"+sumary).html("Transport <br>(2 persons)<span>$200.00</span>");
                   $("#transport_serial").val("adtp02");
                   $("#summary_input").val($("#reserva_summary").html());
                   console.log($(encabezado).text());
-              	}
-              	else{
-              		if(sumary=="tow_back_service_summary"){
-              			$("#"+sumary).html("Tow back service <br>(2 persons)<span>$200.00</span>");
+                }
+                else{
+                  if(sumary=="tow_back_service_summary"){
+                    $("#"+sumary).html("Tow back service <br>(2 persons)<span>$200.00</span>");
                     $("#tow_back_service_serial").val("adzc02");
                     $("#summary_input").val($("#reserva_summary").html());
                     console.log($(encabezado).text());
-              		}
-              	}
+                  }
+                }
               }
             }
             break;
@@ -925,29 +924,29 @@
               $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
               var total_summary = $("#rooms_input").val();
               //var total_summary = $("#purchase_amount").val();
-   						$("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+              $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
               $("#summary_input").val($("#reserva_summary").html());
               if(sumary=="lunch_and_dinner_summary"){
-              	$("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>$300.00</span>");
+                $("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>$300.00</span>");
                 $("#lunch_and_dinner_serial").val("adld03");
                 $("#summary_input").val($("#reserva_summary").html());
                 console.log($(encabezado).text());
               }
               else{
-              	if(sumary=="transport_summary"){
-              		$("#"+sumary).html("Transport <br>(3 persons)<span>$300.00</span>");
+                if(sumary=="transport_summary"){
+                  $("#"+sumary).html("Transport <br>(3 persons)<span>$300.00</span>");
                   $("#transport_serial").val("adtp03");
                   $("#summary_input").val($("#reserva_summary").html());
                   console.log($(encabezado).text());
-              	}
-              	else{
-              		if(sumary=="tow_back_service_summary"){
-              			$("#"+sumary).html("Tow back service <br>(3 persons)<span>$300.00</span>");
+                }
+                else{
+                  if(sumary=="tow_back_service_summary"){
+                    $("#"+sumary).html("Tow back service <br>(3 persons)<span>$300.00</span>");
                     $("#tow_back_service_serial").val("adzc03");
                     $("#summary_input").val($("#reserva_summary").html());
                     console.log($(encabezado).text());
-              		}
-              	}
+                  }
+                }
               }
             }
             break;
@@ -955,154 +954,28 @@
     });
   }
 
-	function hide_divs (rooms_num, div_visible){
-		var rooms_input_summary = $("#rooms_input").val();
+  function hide_divs (rooms_num, div_visible){
+    var rooms_input_summary = $("#rooms_input").val();
     for(i=0;i<rooms_num;i++){
-			if(i==div_visible) {
-				$("#rooms"+i).show();
-			}
-			else{
-				$("#rooms"+i).hide();
-			}
-		}
-		switch(div_visible){
-			case 0:
-				if(0<rooms_num){
-			    	//$("#step_in_reservation").html("Room 1 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR FIRST ROOM");
-			    	$("#first_circle").addClass("active");
-			    }
-			    else{
-			    	$("#cont").html($("#contenedor").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3_container").show();
+      if(i==div_visible) {
+        $("#rooms"+i).show();
+      }
+      else{
+        $("#rooms"+i).hide();
+      }
+    }
+    switch(div_visible){
+      case 0:
+        if(0<rooms_num){
+            //$("#step_in_reservation").html("Room 1 of "+num_hab);
+            $("#step_in_reservation").html("SELECT YOUR FIRST ROOM");
+            $("#first_circle").addClass("active");
+          }
+          else{
+            $("#cont").html($("#contenedor").html());
+            $("#add_on").html("");
+            $("#form_box_3_container").show();
             showIt('steps_list');
-			    	$("#rooms_input").val(rooms_input_summary);
-            cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
-            cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
-            cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
-            $("#summary_input").val($("#reserva_summary").html());
-            $( "#check_in_date" ).datepicker({
-              minDate: new Date(),
-              dateFormat: 'dd/mm/yy',
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 1,
-              onClose: function( selectedDate ) {
-                $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
-              }
-            });
-            $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
-              dateFormat: 'dd/mm/yy',
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 1,
-              onClose: function( selectedDate ) {
-                $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
-              }
-            });
-			    }
-			    break;
-			case 1:
-				if(1<rooms_num){
-			    	//$("#step_in_reservation").html("Room 2 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR SECOND  ROOM");
-			    	$("#first_circle").removeClass("active");
-			    	$("#second_circle").addClass("active");
-			    }
-			    else{
-			    	$("#cont").html($("#contenedor").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3_container").show();
-            showIt('steps_list');
-            $("#rooms_input").val(rooms_input_summary);
-			      cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
-            cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
-            cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
-            $("#summary_input").val($("#reserva_summary").html());
-            $( "#check_in_date" ).datepicker({
-              minDate: new Date(),
-              dateFormat: 'dd/mm/yy',
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 1,
-              onClose: function( selectedDate ) {
-                $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
-              }
-            });
-            $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
-              dateFormat: 'dd/mm/yy',
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 1,
-              onClose: function( selectedDate ) {
-                $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
-              }
-            });
-			    }
-			    break;
-			case 2:
-			    if(2<rooms_num){
-			    	//$("#step_in_reservation").html("Room 3 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR THIRD ROOM");
-			    	$("#second_circle").removeClass("active");
-			    	$("#third_circle").addClass("active");
-			    }
-			    else{
-			    	$("#cont").html($("#contenedor").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3_container").show();
-			    	showIt('steps_list');
-            $("#rooms_input").val(rooms_input_summary);
-           	cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
-            cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
-            cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
-            $("#summary_input").val($("#reserva_summary").html());
-            $( "#check_in_date" ).datepicker({
-              minDate: new Date(),
-              dateFormat: 'dd/mm/yy',
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 1,
-              onClose: function( selectedDate ) {
-                $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
-              }
-            });
-            $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
-              dateFormat: 'dd/mm/yy',
-              defaultDate: "+1w",
-              changeMonth: true,
-              numberOfMonths: 1,
-              onClose: function( selectedDate ) {
-                $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
-              }
-            });
-			    }
-			    break;
-			case 3:
-			    if(3<rooms_num){
-			    	//$("#step_in_reservation").html("Room 4 of "+num_hab);
-			    	$("#step_in_reservation").html("SELECT YOUR FOURT ROOM");
-			    	$("#third_circle").removeClass("active");
-			    	$("#fourth_circle").addClass("active");
-			    }
-			    else{
-			    	$("#cont").html($("#contenedor").html());
-			    	$("#add_on").html("");
-			    	$("#form_box_3_container").show();
-			    	showIt('steps_list');
             $("#rooms_input").val(rooms_input_summary);
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
@@ -1131,15 +1004,141 @@
                 $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
               }
             });
-			    }
-			    break;
-			case 4:
-					$("#cont").html($("#contenedor").html());
-					$("#add_on").html("");
-					$("#form_box_3_container").show();
-					showIt('steps_list');
+          }
+          break;
+      case 1:
+        if(1<rooms_num){
+            //$("#step_in_reservation").html("Room 2 of "+num_hab);
+            $("#step_in_reservation").html("SELECT YOUR SECOND  ROOM");
+            $("#first_circle").removeClass("active");
+            $("#second_circle").addClass("active");
+          }
+          else{
+            $("#cont").html($("#contenedor").html());
+            $("#add_on").html("");
+            $("#form_box_3_container").show();
+            showIt('steps_list');
+            $("#rooms_input").val(rooms_input_summary);
+            cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
+            cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
+            cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#reserva_summary").html());
+            $( "#check_in_date" ).datepicker({
+              minDate: new Date(),
+              dateFormat: 'dd/mm/yy',
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1,
+              onClose: function( selectedDate ) {
+                $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
+              }
+            });
+            $( "#check_out_date" ).datepicker({
+              //minDate: new Date(),
+              dateFormat: 'dd/mm/yy',
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1,
+              onClose: function( selectedDate ) {
+                $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
+              }
+            });
+          }
+          break;
+      case 2:
+          if(2<rooms_num){
+            //$("#step_in_reservation").html("Room 3 of "+num_hab);
+            $("#step_in_reservation").html("SELECT YOUR THIRD ROOM");
+            $("#second_circle").removeClass("active");
+            $("#third_circle").addClass("active");
+          }
+          else{
+            $("#cont").html($("#contenedor").html());
+            $("#add_on").html("");
+            $("#form_box_3_container").show();
+            showIt('steps_list');
+            $("#rooms_input").val(rooms_input_summary);
+            cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
+            cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
+            cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#reserva_summary").html());
+            $( "#check_in_date" ).datepicker({
+              minDate: new Date(),
+              dateFormat: 'dd/mm/yy',
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1,
+              onClose: function( selectedDate ) {
+                $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
+              }
+            });
+            $( "#check_out_date" ).datepicker({
+              //minDate: new Date(),
+              dateFormat: 'dd/mm/yy',
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1,
+              onClose: function( selectedDate ) {
+                $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
+              }
+            });
+          }
+          break;
+      case 3:
+          if(3<rooms_num){
+            //$("#step_in_reservation").html("Room 4 of "+num_hab);
+            $("#step_in_reservation").html("SELECT YOUR FOURT ROOM");
+            $("#third_circle").removeClass("active");
+            $("#fourth_circle").addClass("active");
+          }
+          else{
+            $("#cont").html($("#contenedor").html());
+            $("#add_on").html("");
+            $("#form_box_3_container").show();
+            showIt('steps_list');
+            $("#rooms_input").val(rooms_input_summary);
+            cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
+            cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
+            cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            $("#summary_input").val($("#reserva_summary").html());
+            $( "#check_in_date" ).datepicker({
+              minDate: new Date(),
+              dateFormat: 'dd/mm/yy',
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1,
+              onClose: function( selectedDate ) {
+                $( "#check_out_date" ).datepicker( "option", "minDate", selectedDate );
+              }
+            });
+            $( "#check_out_date" ).datepicker({
+              //minDate: new Date(),
+              dateFormat: 'dd/mm/yy',
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 1,
+              onClose: function( selectedDate ) {
+                $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
+              }
+            });
+          }
+          break;
+      case 4:
+          $("#cont").html($("#contenedor").html());
+          $("#add_on").html("");
+          $("#form_box_3_container").show();
+          showIt('steps_list');
           $("#rooms_input").val(rooms_input_summary);
-         	cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
+          cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
             agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
@@ -1166,8 +1165,8 @@
               $( "#check_in_date" ).datepicker( "option", "maxDate", selectedDate );
             }
           });
-			    break; 
-		}
-	}
+          break; 
+    }
+  }
 </script>
 {/exp:get_post_vars}
