@@ -801,22 +801,13 @@
           if(sumary == "transport_summary"){
             switch($("#encabezado_transport").html()){
               case "$48.00":
-              $("#"+sumary).html("Transport <br>(1 person) <span>$48.00</span>");
-              $("#transport_serial").val("adtp01");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
+              add_ons_click(sumary,"#transport_serial","adtp01","Transport <br>(1 person) <span>$48.00</span>");
               break;
               case "$60.00":
-              $("#"+sumary).html("Transport <br>(2 persons) <span>$60.00</span>");
-              $("#transport_serial").val("adtp02");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
+              add_ons_click(sumary,"#transport_serial","adtp02","Transport <br>(2 persons) <span>$60.00</span>");
               break;
               case "$75.00":
-              $("#"+sumary).html("Transport <br>(3 persons) <span>$75.00</span>");
-              $("#transport_serial").val("adtp03");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
+              add_ons_click(sumary,"#transport_serial","adtp03","Transport <br>(3 persons) <span>$75.00</span>");
               break;
             }
           }
@@ -824,22 +815,13 @@
             if(sumary == "tow_back_service_summary"){
               switch($("#encabezado_tow_back_service").html()){
               case "$30.00":
-              $("#"+sumary).html("Tow back service <br>(1 person) <span>$30.00</span>");
-              $("#tow_back_service_serial").val("adzc01");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
+              add_ons_click(sumary,"#tow_back_service_serial","adzc01","Tow back service <br>(1 person) <span>$30.00</span>");
               break;
               case "$60.00":
-              $("#"+sumary).html("Tow back service <br>(2 persons) <span>$60.00</span>");
-              $("#tow_back_service_serial").val("adzc02");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
+              add_ons_click(sumary,"#tow_back_service_serial","adzc02","Tow back service <br>(2 persons) <span>$60.00</span>");
               break;
               case "$120.00":
-              $("#"+sumary).html("Tow back service <br>(3 persons) <span>$120.00</span>");
-              $("#tow_back_service_serial").val("adzc03");
-              $("#summary_input").val($("#reserva_summary").html());
-              console.log($(encabezado).text());
+              add_ons_click(sumary,"#tow_back_service_serial","adzc03","Tow back service <br>(3 persons) <span>$90.00</span>");
               break;
               }
             }
