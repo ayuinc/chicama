@@ -658,6 +658,7 @@
 });
 
   function add_ons_click(sumary, input_serial, serial, text){
+    var rooms_num = {post_room_number};
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
@@ -678,6 +679,7 @@
   }
 
   function add_ons_dropdown(encabezado, encabezado_html, input, input_val, check_box, purchase_amount, sumary, text, input_serial, serial){
+    var rooms_num = {post_room_number};
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
