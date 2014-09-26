@@ -664,6 +664,22 @@
     console.log("esta funcionando add_ons_click");
   }
 
+  function add_ons_dropdown(encabezado, encabezado_html, input, input_val, check_box, purchase_amount, sumary, text, input_serial, serial){
+    $(encabezado).html(encabezado_html);
+    $(input).val(input_val);
+    if($(check_box).is(":checked")){
+      $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
+      $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
+      var total_summary = $("#rooms_input").val();
+      $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+      $("#summary_input").val($("#reserva_summary").html());
+      $("#"+sumary).html(text);
+      $(input_serial).val(serial);
+      $("#summary_input").val($("#reserva_summary").html());
+      console.log($(encabezado).text());
+    }
+  }
+
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
 
     var checkin = ""+"{post_check_in_date}";
@@ -862,19 +878,7 @@
         case "1":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              $(encabezado).html("$60.00");
-              $(input).val("6000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Lunch And Dinner <br>(1 person)<span>$60.00</span>");
-                $("#lunch_and_dinner_serial").val("adld01");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(1 person)<span>$60.00</span>","#lunch_and_dinner_serial","adld01");
             break;
             case "transport_summary":
               $(encabezado).html("$48.00");
@@ -911,19 +915,7 @@
         case "2":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              $(encabezado).html("$120.00");
-              $(input).val("12000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Lunch And Dinner <br>(2 persons)<span>$120.00</span>");
-                $("#lunch_and_dinner_serial").val("adld02");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$120.00", input,"12000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(2 persons)<span>$120.00</span>","#lunch_and_dinner_serial","adld02");
             break;
             case "transport_summary":
               $(encabezado).html("$60.00");
@@ -960,19 +952,7 @@
         case "3":
            switch(sumary){
             case "lunch_and_dinner_summary":
-              $(encabezado).html("$180.00");
-              $(input).val("18000");
-              if($(check_box).is(":checked")){
-                $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-                $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
-                var total_summary = $("#rooms_input").val();
-                $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
-                $("#summary_input").val($("#reserva_summary").html());
-                $("#"+sumary).html("Lunch And Dinner <br>(3 persons)<span>$180.00</span>");
-                $("#lunch_and_dinner_serial").val("adld03");
-                $("#summary_input").val($("#reserva_summary").html());
-                console.log($(encabezado).text());
-              }
+              add_ons_dropdown(encabezado,"$180.00", input,"18000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(3 persons)<span>$180.00</span>","#lunch_and_dinner_serial","adld03");
             break;
             case "transport_summary":
               $(encabezado).html("$75.00");
