@@ -42,7 +42,7 @@ class Mandrillapp {
 	$id_reserva= $TMPL->fetch_param('id_reserva');
 
 	ee()->db->select('*');
-	ee()->db->where('id',$id);
+	ee()->db->where('cod_reservation',$id_reserva);
 	$query = ee()->db->get('exp_hotel_reservations');
 
 	foreach($query->result() as $row){
