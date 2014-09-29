@@ -350,6 +350,13 @@ class Vpost
         // return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
+          $data = array(
+                         'validate' => 'yes'
+                      );
+
+          $this->db->where('id', $id);
+          $this->db->update('exp_hotel_reservations', $data); 
+
           ee()->db->select('*');
           ee()->db->where('id',$id);
           $query = ee()->db->get('exp_hotel_reservations');
