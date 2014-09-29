@@ -47,11 +47,163 @@ class Mandrillapp {
 	$subject= "Solicitud de documento.";
 	$from= "reservas@chicama.com";
 
-	$text = 'Dear Cliente,<p>
-	En este correo se enviara la informacion de la reserva.
-
-	<br>
-	Fin del email';
+	$text = '<div class="container" style="margin: 0 auto;width: 786px;padding: 25px;border: 3px solid #ffc000;text-align: justify;">
+	<div class="header" style="padding-left: 77px;">
+		<table>
+			<thead style="text-align: center;">
+				<tr>
+					<td class="logo">
+						<img src="http://www.cuponium.com/img/fotos/empresa/1322589534_ChicamaLogo.jpg" style="box-shadow: 4px 5px 22px 0px gray;margin: 47px;border-radius: 8px;">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Gracias por su preferencia por el Chicama Boutique Hotel & Spa</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="header-images">
+						<img src="http://s15.postimg.org/gna5l60ez/captura.png" style="padding: 4px;border-top: 2px solid #ffc000;border-bottom: 2px solid #ffc000;text-align: center;">
+					</td>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<tbody>
+		<tr>
+			<td>
+				<p>Estimado Sr. Sebastian Montero,</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Por medio del presente, le confirmamos la(s) reserva(s) solicitada (s):<br>
+				<b>HORA CHECK IN : 14:00</b> <b>HRS HORA CHECK OUT : 12:00 HRS.</b></p>			
+			</td>
+		</tr>
+		<table>
+		  <tr>
+		    <td>Código de reserva</td>
+		    <td>: 6275</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>Estadía</td>
+		    <td>: Check in: 29 Mayo Check out: 02 Junio del 2014</td>
+		    <td> </td>
+		  </tr>
+		  <tr>
+		    <td>Pasajeros</td>
+		    <td>: Sebastian Montero, Vicente Domínguez y Jose Saavedra</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>Tipo de habitación</td>
+		    <td>: 01 habitación triple con vista al mar (twin beds)</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>Tarifa</td>
+		    <td>: Bed & Breakfast Paxs Directos Ocean View con 20% dscto (US$ 144.00 por habitación x noche)</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>Servicios adicionales</td>
+		    <td>: Traslados aeropuerto de Trujillo / hotel / aeropuerto de Trujillo</td>
+		    <td></td>
+		  </tr>
+		</table>
+		<tr>
+			<td>
+				<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
+				Transfer out : 02/06 Lan 2209 13:05 hrs</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Detalles a continuación los siguientes detalles:</p>
+			</td>
+		</tr>	
+		<table>
+		  <tr>
+		    <td>Habitación triple</td>
+		    <td>: US$ 144.00 x 04 noches</td>
+		    <td>: US$ 576.00</td>
+		  </tr>
+		  <tr>
+		    <td>Traslados  </td>
+		    <td>: US$ 25.00 x 03 personas x 02 idas</td>
+		    <td>: US$ 150.00</td>
+		  </tr>
+		  <tr>
+		    <td>Total de la reserva</td>
+		    <td> : US$ 726.00</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td>Pre pago realizado</td>
+		    <td> : US$ 144.00</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td><b>Saldo a pagar en el hotel </b></td>
+		    <td><b>: US$ 582.00</b></td>
+		    <td></td>
+		  </tr>
+		</table>
+		<table>
+			<tr>
+				<td>
+					<p><b>La tarifa mencionada incluye:</b> Desayuno Buffet; Wireless Service en las habitaciones; Uso de las instalaciones del 
+					hotel: Saunas, Jacuzzis, Gimnasio, Piscina, Sala de Tv, Sala de Juegos y Estacionamiento Privado. <br>
+					<b>La tarifa mencionada no incluye:</b> Almuerzos ni Cenas a la Carta; Bebidas (alcohólicas y no alcohólicas); Towing 
+					Service – Zodiac; Otros traslados; Masajes; Tours; Propinas; Early check in y late check out; Consumos no 
+					mencionados.</p>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p><b>Nuestra política de anulación y/o postergación es de 48 horas antes de la fecha de arribo del pasajero(s). En caso 
+					contrario, la reserva sea anulada y/o postergada fuera del plazo indicado y/o el (los) pasajero (s) no se presente en 
+					el hotel, en la fecha indicada (NO SHOW). Se cobrara la penalidad por el valor de la primera noche de 
+					alojamiento más gastos administrativos.</b></p>
+					<p><b>En caso de haber solicitado el servicio de traslado, la cancelación y/o modificación del mismo es de 24 horas antes 
+					de la fecha de arribo del pasajero. En caso contrario, el servicio de traslado sea cancelado y/o modificado fuera del 
+					plazo indicado y/o el (los) pasajero (s) no se presente en la fecha indicada (NO SHOW). Se cobrara la penalidad por 
+					el valor del transfer in.</b></p>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Somos un hotel NO fumador (habitaciones y áreas públicas).Tipo de cambio Hotelero S/.2.80 (Precio referencial puede variar sin previo aviso).</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Le recomendamos imprimir este documento y presentarlo al momento de su llegada al hotel. Si tuviera alguna consulta adicional previa a su llegada, no dude en contactarse con nosotros. Teléfonos de emergencia de oficina Lima: 994668590, del hotel: 986645895 y de reservas 940482207.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Saludos!
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<li>Marie Paredes Herrera</li>
+						<li>Sales & Reservations</li>
+						<li>Av. Javier Prado Oeste 1650</li>
+						<li>Lima 27, Perú.</li>
+						<li>Telf : (511) 440-6040</li>
+						<li>RPC : 940482207</li>
+						<li>reservas@chicamasurf.com</li>
+						<li><a href="http://www.chicamasurf.com/">www.chicamasurf.com</a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>	
+	</tbody>
+</div>';
 	
 	$message = array(
 	    'subject' => $subject,
