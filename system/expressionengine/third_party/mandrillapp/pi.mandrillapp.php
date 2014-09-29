@@ -39,12 +39,37 @@ class Mandrillapp {
 
 	require_once 'mailchimp-mandrill-api-php/src/Mandrill.php'; 
 	$mandrill = new Mandrill('u1hYP2cmJFlaSQ9-wxcd5g');
-	$id_operación= $TMPL->fetch_param('id_operación');
-	$operación_result= $TMPL->fetch_param('operation_result');
-	$resquest= $TMPL->fetch_param('full_resquest');
-	$to= "gms122@gmail.com";
-	$name= "Gianfranco";
-	$subject= "Solicitud de documento.";
+	$id_reserva= $TMPL->fetch_param('id_reserva');
+
+	ee()->db->select('*');
+	ee()->db->where('id',$id);
+	$query = ee()->db->get('exp_hotel_reservations');
+
+	foreach($query->result() as $row){
+	$full_request = $row->full_request;
+	$cod_reservation = $row->cod_reservation;
+	$request = $row->full_request;
+	$first_name = $row->first_name;
+	$last_name = $row->last_name;
+	$country = $row->country;
+	$document_id = $row->document_id;
+	$document_type = $row->document_type;
+	$card_id = $row->card_id;
+	$card_type = $row->card_type;
+	$email = $row->email;
+	}
+	
+	$full_request = str_replace("$", "{", $full_request);
+	$full_request = str_replace("&", "}", $full_request);
+	$full_request = str_replace('(', '"', $full_request);
+	$full_request = str_replace(")", ":", $full_request);
+	$full_request = str_replace("?", " ", $full_request);
+	$full_request = str_replace("¿", ",", $full_request);
+	$data = json_decode($full_request, true);
+
+	$to = $email;
+	$name= $first_name." ".$last_name;
+	$subject= "Reserva de habitaciones - Chicama Boutique Hotel.";
 	$from= "reservas@chicama.com";
 
 	$text = '<div class="container" style="margin: 0 auto;width: 786px;padding: 25px;border: 3px solid #ffc000;text-align: justify;">
@@ -72,7 +97,7 @@ class Mandrillapp {
 	<tbody>
 		<tr>
 			<td>
-				<p>Estimado Sr. Sebastian Montero,</p>
+				<p>Estimado Sr(a).'.$name.',</p>
 			</td>
 		</tr>
 		<tr>
@@ -84,17 +109,17 @@ class Mandrillapp {
 		<table>
 		  <tr>
 		    <td>Código de reserva</td>
-		    <td>: 6275</td>
+		    <td>:'.$cod_reservation.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Estadía</td>
-		    <td>: Check in: 29 Mayo Check out: 02 Junio del 2014</td>
+		    <td>: Check in:'.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
 		    <td> </td>
 		  </tr>
 		  <tr>
 		    <td>Pasajeros</td>
-		    <td>: Sebastian Montero, Vicente Domínguez y Jose Saavedra</td>
+		    <td>: '.$name.' (Responsable)</td>
 		    <td></td>
 		  </tr>
 		  <tr>
