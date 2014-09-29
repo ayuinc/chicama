@@ -1109,10 +1109,8 @@ table thead {
     .weather span {
       font-size: 0.9rem !important; }
 
-  #footer {
-    text-align: center; }
-    #footer p {
-      display: none; }
+  #footer p {
+    display: none; }
 
   #promo {
     text-align: center; }
