@@ -109,7 +109,7 @@ class Mandrillapp {
 		<table>
 		  <tr>
 		    <td>Código de reserva</td>
-		    <td>:'.$cod_reservation.'</td>
+		    <td>: '.$cod_reservation.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
