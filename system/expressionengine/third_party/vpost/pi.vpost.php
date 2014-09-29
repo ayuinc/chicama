@@ -261,7 +261,7 @@ class Vpost
               return $div; */
               // fin del codigo nuevo
             if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
-                return 'last_id_insert=> '.$id.' 
+                return ' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
                    <table border="0">
                   <tr>
