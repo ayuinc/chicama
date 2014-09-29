@@ -1,593 +1,620 @@
-{exp:channel:entries channel="secciones" limit="1"}
-{imagen_de_fondo limit="1"}
-{embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
-{/imagen_de_fondo}
-{/exp:channel:entries}
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar show-for-small-only">
+              <section class="left-small">
+                <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+              </section>
 
-{if last_segment == "ways-to-get-here"}
-<div class="row" id="map-container">
-    <div class="large-12"><div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div></div>
-</div>
-{if:else}
+              <section class="middle tab-bar-section">
+                <h1 class="">Chicama Surf</h1>
+              </section>
+            </nav>
 
-    <div class="{if last_segment == "book-a-room"}book_container{/if} cover_container">
-        {exp:channel:entries channel="secciones" limit="1"}
-        <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
-        </section>
-        <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
-        {/exp:channel:entries}
-        {if last_segment != "book-a-room"}
+            <aside class="left-off-canvas-menu show-for-small-only">
+              <ul class="off-canvas-list">
+                <li><a href="http://chicamasurf.com/es/secciones/book-a-room"><label>Book a room</label></a></li>
+                <li><a href="/es">Home</a></li>
+                <li><a href="http://chicamasurf.com/es/secciones/the-wave">The Wave</a></li>
+                <li><a href="http://chicamasurf.com/es/secciones/the-hotel">The Hotel</a></li>
+                <li><a href="http://chicamasurf.com/es/secciones/the-crew">The Crew</a></li>
+                <li><a href="http://chicamasurf.com/es/secciones/beyond-surfing">Beyond Surfing</a></li>
+                <li><a href="http://chicamasurf.com/es/secciones/the-stories">The Stories</a></li>
+                <li><a href="http://chicamasurf.com/es/secciones/surfing-around">Surfing Around</a></li>
+              </ul>
+            </aside>
 
-        <div id="book" class="row">
-            <div class="large-6 columns">
-                <a href="{site_url}/es/secciones/book-a-room" id="book_button" class="button small radius"><span>RESERVA HOY</span></a>
-            </div>
-            <div class="large-6 columns">
-                <ul class="inline-list">
-                    <li>
-                        <a href="{site_url}/es">Inicio</a>
-                    </li>
-	                <li>
-	                	<a href="{site_url}/es/{if segment_2=='sections'}secciones/{/if}{if segment_2=='secciones'}secciones/{/if}{last_segment}">Español</a>
-	                </li>
-	                <li>
-	                   <a href="{site_url}/en/{if segment_2=='secciones'}sections/{/if}{if segment_2=='sections'}sections/{/if}{last_segment}">Ingles</a>
-	                </li>
-                </ul>
-            </div>
-        </div>
+            <section class="main-section">
+                {exp:channel:entries channel="secciones" limit="1"}
+                {imagen_de_fondo limit="1"}
+                {embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
+                {/imagen_de_fondo}
+                {/exp:channel:entries}
 
-        {/if}
-
-        {if last_segment == "book-a-room"}
-        <div class="row">
-            {exp:freeform:form
-                form_id="3"
-                return="es/reservacion-confirmada" 
-                form:id="book_a_room"
-                form:data-abide=""
-            }
-
-            <div class="large-12 columns">
-
-            <div id="form_box">
-                <div class="row">
-                    <div class="large-4 columns">
-                        <h3>RESERVA HOY</h3>
-                        <p>Para realizar su reserva, por favor llene el formulario que aparece a continuación y presione el botón Enviar. Todas las reservas están sujetas a verificación.</p>
-                        <p>Nota: Este formato es sólo una solicitud de reserva y el envío no garantiza la disponibilidad. Nuestro departamento de ventas se comunicará con usted en un plazo no mayor a 24 horas para confirmar la reserva.</p>
-                        <p>Si lo desea también puede comunicarse con nosotros a cualquiera de los siguientes números telefónicos: 511-440-6040 (oficinas) y 5144-576-206 (hotel).</p>
-                        <p>Gracias.</p>
-                    </div>
-                    <div class="large-7 large-offset-1 columns">
-                    <div class="close-booking" onclick="history.go(-1);">X</div>
-                        <div class="row">
-                            <div class="row">
-                                <div class="large-4 columns">                    
-                                    {freeform:field:first_name
-                                        attr:placeholder="INGRESE SU NOMBRE"
-                                        attr:required=""
-                                        attr:pattern="[a-zA-Z]+"
-                                    }
-                                    <small class="error">Su nombre es obligatorio.</small>
-                                </div>
-                                <div class="large-4 columns">
-                                    {freeform:field:last_name
-                                        attr:placeholder="INGRESE SUS APELLIDOS"
-                                        attr:required=""
-                                        attr:pattern="[a-zA-Z]+"
-                                    }
-                                    <small class="error">Sus apellidos son obligatorios.</small>
-                                </div>
-                                <div class="large-4 columns">
-                                    {freeform:field:phone
-                                        attr:placeholder="NÚMERO DE TELÉFONO"
-                                        attr:required=""
-                                        attr:pattern="telef"
-                                    }
-                                    <small class="error">Su teléfono es obligatorio.</small>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-8 columns">
-                                    {freeform:field:address
-                                        attr:placeholder="INGRESE SU DIRECCIÓN"
-                                        attr:required=""
-                                    }
-                                    <small class="error">Su dirección es obligatoria.</small>
-                                </div>
-                                <div class="large-4 columns">    
-                                    {freeform:field:country
-                                        attr:placeholder="SELECCIONE SU PAÍS"
-                                        attr:required=""
-                                    }
-                                    <small class="error">Su país es obligatorio.</small>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-4 columns">
-                                    {freeform:field:email
-                                        attr:placeholder="INGRESE SU E-MAIL"
-                                        attr:required=""
-                                    }
-                                    <small class="error">Su e-mail es obligatorio.</small>
-                                </div>
-                                <div class="large-4 columns">
-                                    {freeform:field:persons_number 
-                                        attr:required=""
-                                        attr:pattern="number"
-                                    }
-                                    <small class="error">Seleccione el número de personas.</small>
-                                </div>
-                                <div class="large-4 columns">
-                                    {freeform:field:room_type
-                                        attr:required=""
-                                        attr:pattern="number"
-                                    }
-                                    <small class="error">Seleccione el tipo de habitación.</small>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="large-4 columns">
-                                    {freeform:field:reservation_type
-                                        attr:required=""
-                                        attr:pattern="number"
-                                    }
-                                    <small class="error">Seleccione el tipo de reservación.</small>
-                                </div>
-                                <div class="large-4 columns">
-                                    <!-- {freeform:label:check_in_date} -->
-                                    <div class="row collapse">
-                                        <div class="small-12 columns">
-                                            {freeform:field:check_in_date attr:id="check_in_date" attr:placeholder="FECHA DE INGRESO" attr:required=""}
-                                            <small class="error">Seleccione la fecha de llegada.</small>
-                                        </div>
-                                        <!--
-            <div class="small-3 columns">
-                                            <span class="postfix" id="check_in_datex">Date</span>
-                                        </div>
-            -->
-                                    </div>
-                                </div>
-                                <div class="large-4 columns">
-                                    <!-- {freeform:label:check_out_date} -->
-                                    <div class="row collapse">
-                                        <div class="small-12 columns">
-                                            {freeform:field:check_out_date attr:id="check_out_date" attr:placeholder="FECHA DE SALIDA" attr:required=""}
-                                            <small class="error">Seleccione la fecha de salida.</small>
-                                        </div>
-                                        <!--
-            <div class="small-3 columns">
-                                            <span class="postfix" id="check_out_datex">Date</span>
-                                        </div>
-            -->
-                                    </div>
-                                </div>
-                            </div>    
-
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    
-                                {freeform:field:user_message
-                                    attr:placeholder="Escriba algún comentario" attr:class="expanding" attr:required=""
-                                }
-                                <small class="error">Campo requerido.</small>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-12 columns">
-                                {freeform:submit
-                                    attr:class="send button"
-                                    attr:required=""
-                                } 
-                                </div>
-                            </div>
-
-                                            
-                        </div>
-                        
-                    </div>
+                {if last_segment == "ways-to-get-here"}
+                <div class="row" id="map-container">
+                    <div class="large-12"><div id="map" style="position:absolute; top:0; bottom:0; width:100%;"></div></div>
                 </div>
-
-
-
-            </div>
-
-            </div>
-
-            {/exp:freeform:form}
-        </div>
-        {/if}
-        {if last_segment != "book-a-room"}
-        <div class="title">        
-            <div class="row">
-                <div class="large-12 columns">
-                    {exp:channel:entries channel="secciones" limit="1"}
-                        {seccion_titulo_espanol}
-                    {/exp:channel:entries}
-                </div>
-            </div>
-        </div>
-        {/if}  
-    </div>
-
-    {if last_segment != "book-a-room"}
-    <section id="content">
-        <div class="gray_curve"></div>
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="row">
-                <div class="medium-7 large-7 columns">
-                    <div class="row">
-                        <div class="small-12 columns">
+                {if:else}
+                    <div class="{if last_segment == "book-a-room"}book_container{/if} cover_container">
                         {exp:channel:entries channel="secciones" limit="1"}
-                            <p>{seccion_contenido_espanol}</p>
+                        <section class="cover" style="background: url('{imagen_de_fondo}{image:url:large}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%;">
+                        </section>
+                        <section id="blur" class="cover" style="background: url('{imagen_de_fondo}{image:url:large_blur}{/imagen_de_fondo}') no-repeat; background-size: cover;background-position: center center; min-height: 100%; z-index: 0;"></section>
                         {/exp:channel:entries}
-                        </div>
-                    </div>
+                        {if last_segment != "book-a-room"}
 
-                    {if last_segment == "the-crew"}
+                        <div id="book" class="row">
+                            <div class="large-6 columns">
+                                <a href="{site_url}/es/secciones/book-a-room" id="book_button" class="button small radius"><span>RESERVA HOY</span></a>
+                            </div>
+                            <div class="large-6 columns">
+                                <ul class="inline-list">
+                                    <li>
+                                        <a href="{site_url}/es">Inicio</a>
+                                    </li>
+                	                <li>
+                	                	<a href="{site_url}/es/{if segment_2=='sections'}secciones/{/if}{if segment_2=='secciones'}secciones/{/if}{last_segment}">Español</a>
+                	                </li>
+                	                <li>
+                	                   <a href="{site_url}/en/{if segment_2=='secciones'}sections/{/if}{if segment_2=='sections'}sections/{/if}{last_segment}">Ingles</a>
+                	                </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/if}
+
+                        {if last_segment == "book-a-room"}
                         <div class="row">
-                                {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
-                            <div class="large-12 columns">     
-                                <div class="the_crew_item row">
-                                    <div class="large-5 columns">
-                                        {crew_image}
-                                            <img src="{image:url:small}" alt="">
-                                        {/crew_image}
+                            {exp:freeform:form
+                                form_id="3"
+                                return="es/reservacion-confirmada" 
+                                form:id="book_a_room"
+                                form:data-abide=""
+                            }
+
+                            <div class="large-12 columns">
+
+                            <div id="form_box">
+                                <div class="row">
+                                    <div class="large-4 columns">
+                                        <h3>RESERVA HOY</h3>
+                                        <p>Para realizar su reserva, por favor llene el formulario que aparece a continuación y presione el botón Enviar. Todas las reservas están sujetas a verificación.</p>
+                                        <p>Nota: Este formato es sólo una solicitud de reserva y el envío no garantiza la disponibilidad. Nuestro departamento de ventas se comunicará con usted en un plazo no mayor a 24 horas para confirmar la reserva.</p>
+                                        <p>Si lo desea también puede comunicarse con nosotros a cualquiera de los siguientes números telefónicos: 511-440-6040 (oficinas) y 5144-576-206 (hotel).</p>
+                                        <p>Gracias.</p>
                                     </div>
-                                    <div class="large-7 columns">
-                                        <h4>{title}</h4>
-                                        {crew_descripcion}
+                                    <div class="large-7 large-offset-1 columns">
+                                    <div class="close-booking" onclick="history.go(-1);">X</div>
+                                        <div class="row">
+                                            <div class="row">
+                                                <div class="large-4 columns">                    
+                                                    {freeform:field:first_name
+                                                        attr:placeholder="INGRESE SU NOMBRE"
+                                                        attr:required=""
+                                                        attr:pattern="[a-zA-Z]+"
+                                                    }
+                                                    <small class="error">Su nombre es obligatorio.</small>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    {freeform:field:last_name
+                                                        attr:placeholder="INGRESE SUS APELLIDOS"
+                                                        attr:required=""
+                                                        attr:pattern="[a-zA-Z]+"
+                                                    }
+                                                    <small class="error">Sus apellidos son obligatorios.</small>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    {freeform:field:phone
+                                                        attr:placeholder="NÚMERO DE TELÉFONO"
+                                                        attr:required=""
+                                                        attr:pattern="telef"
+                                                    }
+                                                    <small class="error">Su teléfono es obligatorio.</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-8 columns">
+                                                    {freeform:field:address
+                                                        attr:placeholder="INGRESE SU DIRECCIÓN"
+                                                        attr:required=""
+                                                    }
+                                                    <small class="error">Su dirección es obligatoria.</small>
+                                                </div>
+                                                <div class="large-4 columns">    
+                                                    {freeform:field:country
+                                                        attr:placeholder="SELECCIONE SU PAÍS"
+                                                        attr:required=""
+                                                    }
+                                                    <small class="error">Su país es obligatorio.</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-4 columns">
+                                                    {freeform:field:email
+                                                        attr:placeholder="INGRESE SU E-MAIL"
+                                                        attr:required=""
+                                                    }
+                                                    <small class="error">Su e-mail es obligatorio.</small>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    {freeform:field:persons_number 
+                                                        attr:required=""
+                                                        attr:pattern="number"
+                                                    }
+                                                    <small class="error">Seleccione el número de personas.</small>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    {freeform:field:room_type
+                                                        attr:required=""
+                                                        attr:pattern="number"
+                                                    }
+                                                    <small class="error">Seleccione el tipo de habitación.</small>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-4 columns">
+                                                    {freeform:field:reservation_type
+                                                        attr:required=""
+                                                        attr:pattern="number"
+                                                    }
+                                                    <small class="error">Seleccione el tipo de reservación.</small>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    <!-- {freeform:label:check_in_date} -->
+                                                    <div class="row collapse">
+                                                        <div class="small-12 columns">
+                                                            {freeform:field:check_in_date attr:id="check_in_date" attr:placeholder="FECHA DE INGRESO" attr:required=""}
+                                                            <small class="error">Seleccione la fecha de llegada.</small>
+                                                        </div>
+                                                        <!--
+                            <div class="small-3 columns">
+                                                            <span class="postfix" id="check_in_datex">Date</span>
+                                                        </div>
+                            -->
+                                                    </div>
+                                                </div>
+                                                <div class="large-4 columns">
+                                                    <!-- {freeform:label:check_out_date} -->
+                                                    <div class="row collapse">
+                                                        <div class="small-12 columns">
+                                                            {freeform:field:check_out_date attr:id="check_out_date" attr:placeholder="FECHA DE SALIDA" attr:required=""}
+                                                            <small class="error">Seleccione la fecha de salida.</small>
+                                                        </div>
+                                                        <!--
+                            <div class="small-3 columns">
+                                                            <span class="postfix" id="check_out_datex">Date</span>
+                                                        </div>
+                            -->
+                                                    </div>
+                                                </div>
+                                            </div>    
+
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    
+                                                {freeform:field:user_message
+                                                    attr:placeholder="Escriba algún comentario" attr:class="expanding" attr:required=""
+                                                }
+                                                <small class="error">Campo requerido.</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                {freeform:submit
+                                                    attr:class="send button"
+                                                    attr:required=""
+                                                } 
+                                                </div>
+                                            </div>
+
+                                                            
+                                        </div>
+                                        
                                     </div>
                                 </div>
+
+
+
                             </div>
-                                {/exp:channel:entries}
+
+                            </div>
+
+                            {/exp:freeform:form}
                         </div>
-                    {/if}
-                    
-                    {if last_segment == "beyond-surfing"}
-                        <div class="row">
-                            <div class="large-12 columns">  
-                            {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="des"  limit="1" category="6"}
-                            <div class="beyond_surfing_item row">
-                                <div class="large-6 columns">
-                                    {item_image}
-                                        <img src="{image:url:small}" alt="">
-                                    {/item_image}
+                        {/if}
+                        {if last_segment != "book-a-room"}
+                        <div class="title">        
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    {exp:channel:entries channel="secciones" limit="1"}
+                                        {seccion_titulo_espanol}
+                                    {/exp:channel:entries}
                                 </div>
-                                <div class="large-6 columns">
-                                    <h4>{title}</h4>
-                                    <p>{item_descripcion}</p>
-                                </div>
-                            </div>
-                            {/exp:channel:entries}
-                            </div>
-                        </div>                    
-                    	<!--<div class="row">
-                    		<div class="large-12 columns">
-                    			<p>Conoce más de la maravillosa cultura pre inca visitando tres joyas arqueológicas cercanas a Chicama:</p>
-                    		</div>
-                    	</div> -->
-                        <div class="row">
-                            <div class="large-12 columns">  
-                            {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"  limit="4" category="6"}
-                            <div class="beyond_surfing_item row">
-                                <div class="large-6 columns">
-                                    {item_image}
-                                        <img src="{image:url:small}" alt="">
-                                    {/item_image}
-                                </div>
-                                <div class="large-6 columns">
-                                    <h4>{title}</h4>
-                                    <p>{item_descripcion}</p>
-                                </div>
-                            </div>
-                            {/exp:channel:entries}
                             </div>
                         </div>
-                    {/if}
-                    
-                    {if last_segment == "surfing-around"}
-                        <div class="row">
-                            <div class="large-12 columns">  
-                            {exp:channel:entries channel="items" category="3" dynamic="no" orderby="date" sort="asc"}
-                            <div class="beyond_surfing_item row">
-                                <div class="large-6 columns">
-                                    {item_image}
-                                        <img src="{image:url:small}" alt="">
-                                    {/item_image}
-                                </div>
-                                <div class="large-6 columns">
-                                    <h4>{title}</h4>
-                                    <p>{item_descripcion}</p>
-                                </div>
-                            </div>
-                            {/exp:channel:entries}
-                            </div>
-                        </div>
-                    {/if}
-                    
-                    {if last_segment == "the-hotel"}
+                        {/if}  
+                    </div>
+                    {if last_segment != "book-a-room"}
+                    <section id="content">
+                        <div class="gray_curve"></div>
                         <div class="row">
                             <div class="large-12 columns">
-                                {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc" }
-                                <div class="beyond_surfing_item row">
-                                    <div class="large-6 columns">
-                                        <a class="text-center gallery-icon" href="#" data-reveal-id="gallery-{count}"><span>+</span></a>
-                                        {item_image limit="1"}
-                                        <img src="{image:url:small}" alt="">
-                                        {/item_image}
-                                        <div id="gallery-{count}" class="reveal-modal medium" data-reveal>
-                                            <ul class="gallery" data-orbit data-options="animation:slide; pause_on_hover:true; timer:false; bullets:false;">
-                                                {item_image offset="1"}
-                                                <li>
-                                                  <img src="{image:url}" alt="">
-                                                </li>
-                                                {/item_image}
-                                            </ul>
-                                            <a class="close-reveal-modal">&#215;</a>
+                                <div class="row">
+                                <div class="medium-7 large-7 columns">
+                                    <div class="row">
+                                        <div class="small-12 columns">
+                                        {exp:channel:entries channel="secciones" limit="1"}
+                                            <p>{seccion_contenido_espanol}</p>
+                                        {/exp:channel:entries}
                                         </div>
                                     </div>
-                                    <div class="large-6 columns">
-                                        <h4>{title}</h4>
-                                        <p>{item_descripcion}</p>
-                                    </div>
-                                </div>
-                                {/exp:channel:entries}
-                            </div>
-                        </div>
-                    {/if}
-                    
-                    {if last_segment == "the-stories"}
-                    {exp:channel:entries channel="stories" dynamic="no"}
-                    <div class="the_stories_item row">
-                        <div class="small-3 medium-3 large-3 columns">
-                            <div class="the_stories_user">
-                                <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
-                            </div>
-                        </div>
-                        <div class="small-9 medium-9 large-9 columns">
-                            <a href="{stories_url}" target="_blank">
-                                <h4>{title}</h4>
-                                <span>{stories_country}</span>
-                                <div class="tripadvisor_description">
-                                    <p>{stories_descripcion}</p>
-                                </div>
-    <!--                             <a href="{stories_url}">ver más &raquo;</a> -->
-                                <div class="text-right">                
-                                    <img src="{site_url}/img/tripadvisor_brown_{stories_assessment}.png" alt="TripAdvisor">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    {/exp:channel:entries}
-                    <!-- <div class="the_stories_item row">
-                        <div class="large-3 columns">
-                            <div class="the_stories_user">
-                                <img src="{site_url}/img/the_stories_user1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="large-9 columns">
-                            <h4>Jan Michelle Pascal</h4>
-                            <span>Montreal, Canada</span>
-                            <p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
-                            <div class="text-right">                
-                                <img src="{site_url}/img/tripadvisor_brown_5.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="the_stories_item row">
-                        <div class="large-3 columns">
-                            <div class="the_stories_user">
-                                <img src="{site_url}/img/the_stories_user2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="large-9 columns">
-                            <h4>Ian Parker</h4>
-                            <span>Sidney, Australia</span>
-                            <p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
-                            <div class="text-right">
-                                <img src="{site_url}/img/tripadvisor_brown_4.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="the_stories_item row">
-                        <div class="large-3 columns">
-                            <div class="the_stories_user">
-                                <img src="{site_url}/img/the_stories_user3.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="large-9 columns">
-                            <h4>Luisa Baez Peña</h4>
-                            <span>Sao Paulo, Brazil</span>
-                            <p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
-                            <div class="text-right">
-                                <img src="{site_url}/img/tripadvisor_brown_5.png" alt="">
-                            </div>
-                        </div>
-                    </div> -->
-                    {/if}
-                </div>
-                <div id="caja_lateral"  class="medium-offset-1 medium-4 large-offset-1 large-4 columns">
-                    {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
-                    <div id="testimonio" class="show-for-large-up">
-                        <div class="row">
-                            <div class="large-5 columns">
-                                <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
-                            </div>
-                            <div class="testimonio_text large-7 columns">
-                                <h6>{title}</h6>
-                                <span>{stories_country}</span>
-								<p>"{stories_comentario}"</p>
-                                <a href="{stories_url}" target="_blank">ver más &raquo;</a>
-                                <div class="text-right">                
-                                </div>
-                            </div>
-                        </div>
-                        <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
-                    </div>
-                    {/exp:channel:entries}
 
-                    <ul class="other_categories">
-                        {if segment_3!='the-hotel'}
-                        <li>
-                            <a href="the-hotel">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>EL <span class="bold">HOTEL</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/the_stories_icon_nav.png" alt="">
+                                    {if last_segment == "the-crew"}
+                                        <div class="row">
+                                                {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
+                                            <div class="large-12 columns">     
+                                                <div class="the_crew_item row">
+                                                    <div class="large-5 columns">
+                                                        {crew_image}
+                                                            <img src="{image:url:small}" alt="">
+                                                        {/crew_image}
+                                                    </div>
+                                                    <div class="large-7 columns">
+                                                        <h4>{title}</h4>
+                                                        {crew_descripcion}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                {/exp:channel:entries}
+                                        </div>
+                                    {/if}
+                                    
+                                    {if last_segment == "beyond-surfing"}
+                                        <div class="row">
+                                            <div class="large-12 columns">  
+                                            {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="des"  limit="1" category="6"}
+                                            <div class="beyond_surfing_item row">
+                                                <div class="large-6 columns">
+                                                    {item_image}
+                                                        <img src="{image:url:small}" alt="">
+                                                    {/item_image}
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <h4>{title}</h4>
+                                                    <p>{item_descripcion}</p>
+                                                </div>
+                                            </div>
+                                            {/exp:channel:entries}
+                                            </div>
+                                        </div>                    
+                                    	<!--<div class="row">
+                                    		<div class="large-12 columns">
+                                    			<p>Conoce más de la maravillosa cultura pre inca visitando tres joyas arqueológicas cercanas a Chicama:</p>
+                                    		</div>
+                                    	</div> -->
+                                        <div class="row">
+                                            <div class="large-12 columns">  
+                                            {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"  limit="4" category="6"}
+                                            <div class="beyond_surfing_item row">
+                                                <div class="large-6 columns">
+                                                    {item_image}
+                                                        <img src="{image:url:small}" alt="">
+                                                    {/item_image}
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <h4>{title}</h4>
+                                                    <p>{item_descripcion}</p>
+                                                </div>
+                                            </div>
+                                            {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    {/if}
+                                    
+                                    {if last_segment == "surfing-around"}
+                                        <div class="row">
+                                            <div class="large-12 columns">  
+                                            {exp:channel:entries channel="items" category="3" dynamic="no" orderby="date" sort="asc"}
+                                            <div class="beyond_surfing_item row">
+                                                <div class="large-6 columns">
+                                                    {item_image}
+                                                        <img src="{image:url:small}" alt="">
+                                                    {/item_image}
+                                                </div>
+                                                <div class="large-6 columns">
+                                                    <h4>{title}</h4>
+                                                    <p>{item_descripcion}</p>
+                                                </div>
+                                            </div>
+                                            {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    {/if}
+                                    
+                                    {if last_segment == "the-hotel"}
+                                        <div class="row">
+                                            <div class="large-12 columns">
+                                                {exp:channel:entries channel="items" category="2" dynamic="no" orderby="date" sort="asc" }
+                                                <div class="beyond_surfing_item row">
+                                                    <div class="large-6 columns">
+                                                        <a class="text-center gallery-icon" href="#" data-reveal-id="gallery-{count}"><span>+</span></a>
+                                                        {item_image limit="1"}
+                                                        <img src="{image:url:small}" alt="">
+                                                        {/item_image}
+                                                        <div id="gallery-{count}" class="reveal-modal medium" data-reveal>
+                                                            <ul class="gallery" data-orbit data-options="animation:slide; pause_on_hover:true; timer:false; bullets:false;">
+                                                                {item_image offset="1"}
+                                                                <li>
+                                                                  <img src="{image:url}" alt="">
+                                                                </li>
+                                                                {/item_image}
+                                                            </ul>
+                                                            <a class="close-reveal-modal">&#215;</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="large-6 columns">
+                                                        <h4>{title}</h4>
+                                                        <p>{item_descripcion}</p>
+                                                    </div>
+                                                </div>
+                                                {/exp:channel:entries}
+                                            </div>
+                                        </div>
+                                    {/if}
+                                    
+                                    {if last_segment == "the-stories"}
+                                    {exp:channel:entries channel="stories" dynamic="no"}
+                                    <div class="the_stories_item row">
+                                        <div class="small-3 medium-3 large-3 columns">
+                                            <div class="the_stories_user">
+                                                <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="small-9 medium-9 large-9 columns">
+                                            <a href="{stories_url}" target="_blank">
+                                                <h4>{title}</h4>
+                                                <span>{stories_country}</span>
+                                                <div class="tripadvisor_description">
+                                                    <p>{stories_descripcion}</p>
+                                                </div>
+                    <!--                             <a href="{stories_url}">ver más &raquo;</a> -->
+                                                <div class="text-right">                
+                                                    <img src="{site_url}/img/tripadvisor_brown_{stories_assessment}.png" alt="TripAdvisor">
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                        {/if}
-                        {if segment_3!='por-que-chicama'}
-                        <li>
-                            <a href="por-que-chicama">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>SOBRE <span class="bold">CHICAMA</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/the_crew_icon_nav.png" alt="">
+                                    {/exp:channel:entries}
+                                    <!-- <div class="the_stories_item row">
+                                        <div class="large-3 columns">
+                                            <div class="the_stories_user">
+                                                <img src="{site_url}/img/the_stories_user1.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="large-9 columns">
+                                            <h4>Jan Michelle Pascal</h4>
+                                            <span>Montreal, Canada</span>
+                                            <p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
+                                            <div class="text-right">                
+                                                <img src="{site_url}/img/tripadvisor_brown_5.png" alt="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                        {/if}
-                        <!--
-                        {if segment_3!='the-crew'}
-                        <li>
-                            <a href="the-crew">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>EL <span class="bold">EQUIPO</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/the_crew_icon_nav.png" alt="">
+                                    <div class="the_stories_item row">
+                                        <div class="large-3 columns">
+                                            <div class="the_stories_user">
+                                                <img src="{site_url}/img/the_stories_user2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="large-9 columns">
+                                            <h4>Ian Parker</h4>
+                                            <span>Sidney, Australia</span>
+                                            <p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
+                                            <div class="text-right">
+                                                <img src="{site_url}/img/tripadvisor_brown_4.png" alt="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                        {/if}
-                    -->
-                        {if segment_3!='the-stories'}
-                        <li>
-                            <a href="the-stories">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>LAS <span class="bold">HISTORIAS</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/the_stories_icon_nav.png" alt="">
+                                    <div class="the_stories_item row">
+                                        <div class="large-3 columns">
+                                            <div class="the_stories_user">
+                                                <img src="{site_url}/img/the_stories_user3.jpg" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        {/if}
-                        {if segment_3!='beyond-surfing'}
-                        <li>
-                            <a href="beyond-surfing">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5><span class="bold">ACTIVIDADES</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/beyond_surfing_icon_nav.png" alt="">
+                                        <div class="large-9 columns">
+                                            <h4>Luisa Baez Peña</h4>
+                                            <span>Sao Paulo, Brazil</span>
+                                            <p>“Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur”</p>
+                                            <div class="text-right">
+                                                <img src="{site_url}/img/tripadvisor_brown_5.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    {/if}
                                 </div>
-                            </a>
-                        </li>
-                        {/if}
-                        {if segment_3!='the-crew'}
-                        <li>
-                            <a href="the-crew">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>EL <span class="bold">EQUIPO</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/the_wave_icon_nav.png" alt="">
+                                <div id="caja_lateral"  class="medium-offset-1 medium-4 large-offset-1 large-4 columns">
+                                    {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
+                                    <div id="testimonio" class="show-for-large-up">
+                                        <div class="row">
+                                            <div class="large-5 columns">
+                                                <img src="{stories_img}{image:url:small}{/stories_img}" alt="">
+                                            </div>
+                                            <div class="testimonio_text large-7 columns">
+                                                <h6>{title}</h6>
+                                                <span>{stories_country}</span>
+                								<p>"{stories_comentario}"</p>
+                                                <a href="{stories_url}" target="_blank">ver más &raquo;</a>
+                                                <div class="text-right">                
+                                                </div>
+                                            </div>
                                         </div>
+                                        <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
                                     </div>
-                                </div>
-                            </a>
-                        </li>
-                        {/if}
+                                    {/exp:channel:entries}
 
-                        {if segment_3!='surfing-around'}
-                        <li>
-                            <a href="surfing-around">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>ALREDEDOR DE <span class="bold">CHICAMA</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                        <div class="text-right">
-                                            <img src="{site_url}/img/beyond_surfing_icon_nav.png" alt="">
-                                        </div>
-                                    </div>
+                                    <ul class="other_categories">
+                                        {if segment_3!='the-hotel'}
+                                        <li>
+                                            <a href="the-hotel">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>EL <span class="bold">HOTEL</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/the_stories_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+                                        {if segment_3!='por-que-chicama'}
+                                        <li>
+                                            <a href="por-que-chicama">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>SOBRE <span class="bold">CHICAMA</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/the_crew_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+                                        <!--
+                                        {if segment_3!='the-crew'}
+                                        <li>
+                                            <a href="the-crew">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>EL <span class="bold">EQUIPO</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/the_crew_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+                                    -->
+                                        {if segment_3!='the-stories'}
+                                        <li>
+                                            <a href="the-stories">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>LAS <span class="bold">HISTORIAS</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/the_stories_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+                                        {if segment_3!='beyond-surfing'}
+                                        <li>
+                                            <a href="beyond-surfing">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5><span class="bold">ACTIVIDADES</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/beyond_surfing_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+                                        {if segment_3!='the-crew'}
+                                        <li>
+                                            <a href="the-crew">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>EL <span class="bold">EQUIPO</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/the_wave_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+
+                                        {if segment_3!='surfing-around'}
+                                        <li>
+                                            <a href="surfing-around">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>ALREDEDOR DE <span class="bold">CHICAMA</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                        <div class="text-right">
+                                                            <img src="{site_url}/img/beyond_surfing_icon_nav.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        {/if}
+                                        <li>
+                                            <a href="{site_url}/es">
+                                                <div class="row">
+                                                    <div class="small-8 medium-8 large-8 columns">
+                                                        <h5>REGRESAR AL <span class="bold">INICIO</span></h5>
+                                                    </div>
+                                                    <div class="small-4 medium-4 large-4 columns">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="row">
+                                    	<div class="small-12 medium-12 large-12 large-centered columns">
+                                    		<div class="row redes-sociales">
+                		                        <div class="small-12 medium-12 large-12 columns">
+                		                        	<h5>COMPARTE <span class="bold">CON AMIGOS</span></h5>
+                		                        </div>                    
+                		                    	<div class="small-12 medium-12 large-12 columns">
+                		                    		<!-- AddThis Button BEGIN -->
+                									<div class="addthis_toolbox addthis_default_style ">
+                									<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                									<a class="addthis_counter addthis_pill_style"></a>
+                									</div>
+                									<!-- AddThis Button END -->
+                									<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                									<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=hermanmarin"></script>
+                		                    	</div>
+                                    		</div>
+                                    	</div>
+                                    </div>                    
+                                    
                                 </div>
-                            </a>
-                        </li>
-                        {/if}
-                        <li>
-                            <a href="{site_url}/es">
-                                <div class="row">
-                                    <div class="small-8 medium-8 large-8 columns">
-                                        <h5>REGRESAR AL <span class="bold">INICIO</span></h5>
-                                    </div>
-                                    <div class="small-4 medium-4 large-4 columns">
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    
-                    <div class="row">
-                    	<div class="small-12 medium-12 large-12 large-centered columns">
-                    		<div class="row redes-sociales">
-		                        <div class="small-12 medium-12 large-12 columns">
-		                        	<h5>COMPARTE <span class="bold">CON AMIGOS</span></h5>
-		                        </div>                    
-		                    	<div class="small-12 medium-12 large-12 columns">
-		                    		<!-- AddThis Button BEGIN -->
-									<div class="addthis_toolbox addthis_default_style ">
-									<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-									<a class="addthis_counter addthis_pill_style"></a>
-									</div>
-									<!-- AddThis Button END -->
-									<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-									<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=hermanmarin"></script>
-		                    	</div>
-                    		</div>
-                    	</div>
-                    </div>                    
-                    
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-    {/if}
-{/if}
-{embed="includes/promo_es"}
-{embed="includes/footer"}
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+                {/if}
+                {embed="includes/promo_es"}
+                {embed="includes/footer"}
+            {/if}
+            </section>    
+        </div>    
+    </div>    
 <script>
     $(".testimonio_text>p").text($(".testimonio_text>p").text().substring(0,140) + "...");
 </script>
