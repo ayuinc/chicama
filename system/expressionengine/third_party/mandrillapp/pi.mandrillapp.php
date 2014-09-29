@@ -39,24 +39,24 @@ class Mandrillapp {
 
 	require_once 'mailchimp-mandrill-api-php/src/Mandrill.php'; 
 	$mandrill = new Mandrill('u1hYP2cmJFlaSQ9-wxcd5g');
-	$id_reserva= $TMPL->fetch_param('id_reserva');
+	$id = $TMPL->fetch_param('id');
 
 	ee()->db->select('*');
 	ee()->db->where('id',$id);
 	$query = ee()->db->get('exp_hotel_reservations');
 
 	foreach($query->result() as $row){
-	$full_request = $row->full_request;
-	$cod_reservation = $row->cod_reservation;
-	$request = $row->full_request;
-	$first_name = $row->first_name;
-	$last_name = $row->last_name;
-	$country = $row->country;
-	$document_id = $row->document_id;
-	$document_type = $row->document_type;
-	$card_id = $row->card_id;
-	$card_type = $row->card_type;
-	$email = $row->email;
+		$full_request = $row->full_request;
+		$cod_reservation = $row->cod_reservation;
+		$request = $row->full_request;
+		$first_name = $row->first_name;
+		$last_name = $row->last_name;
+		$country = $row->country;
+		$document_id = $row->document_id;
+		$document_type = $row->document_type;
+		$card_id = $row->card_id;
+		$card_type = $row->card_type;
+		$email = $row->email;
 	}
 	
 	$full_request = str_replace("$", "{", $full_request);
@@ -109,7 +109,7 @@ class Mandrillapp {
 		<table>
 		  <tr>
 		    <td>Código de reserva</td>
-		    <td>:'.$cod_reservation.'</td>
+		    <td>: '.$cod_reservation.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
