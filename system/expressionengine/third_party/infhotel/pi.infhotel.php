@@ -291,7 +291,7 @@ class Infhotel
                                     </div>
                                     <div class="large-5 columns room-description">
                                       <h2 id="type_hab_simple_garden'.$i.'" >GARDEN VIEW</h2>
-                                      <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
+                                      <p>10 of our rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
                                     </div>
                                     <div class="large-3 columns">
                                       <div class="row">
@@ -322,7 +322,7 @@ class Infhotel
                                     </div>
                                     <div class="large-5 columns room-description">
                                       <h2 id="type_hab_doble_garden'.$i.'" >GARDEN VIEW</h2>
-                                      <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
+                                      <p>10 of our rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
                                     </div>
                                     <div class="large-3 columns">
                                       <div class="row">
@@ -352,7 +352,7 @@ class Infhotel
                                     </div>
                                     <div class="large-5 columns room-description">
                                       <h2 id="type_hab_triple_garden'.$i.'" >GARDEN VIEW</h2>
-                                      <p>The other 10 rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
+                                      <p>10 of our rooms in the first floor have a private terrace with view to our interior gardens full of local flowers and palm trees, perfect place to read a book after surf. Rooms number 1 & 2 are rooms that connect and can easily accommodate a family with small kids.</p>
                                     </div>
                                     <div class="large-3 columns">
                                       <div class="row">
@@ -386,7 +386,7 @@ class Infhotel
                                     </div>
                                     <div class="large-5 columns room-description">
                                       <h2 id="type_hab_simple_ocean'.$i.'" >OCEAN VIEW</h2>
-                                      <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
+                                      <p>The other 10 rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
                                     </div>
                                     <div class="large-3 columns">
                                       <div class="row">
@@ -418,7 +418,7 @@ class Infhotel
                                     </div>
                                     <div class="large-5 columns room-description">
                                       <h2 id="type_hab_doble_ocean'.$i.'" >OCEAN VIEW</h2>
-                                      <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
+                                      <p>The other 10 rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
                                     </div>
                                     <div class="large-3 columns">
                                       <div class="row">
@@ -449,7 +449,7 @@ class Infhotel
                                     </div>
                                     <div class="large-5 columns room-description" >
                                       <h2 id="type_hab_triple_ocean'.$i.'" >OCEAN VIEW</h2>
-                                      <p>10 of our rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
+                                      <p>The other 10 rooms are in the second floor. They have an extraordinary view of the bay, which you can appreciate from its private balcony. These rooms are highly requested by guests.</p>
                                     </div>
                                     <div class="large-3 columns">
                                       <div class="row">
