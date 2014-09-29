@@ -1093,19 +1093,10 @@ table thead {
     width: 100%;
     position: static; }
 
-  #cover .inline-list {
-    width: 210px;
-    margin: 0 auto;
-    float: none; }
-
-  #book .inline-list {
-    width: 210px;
-    margin: 0 auto;
-    float: none; }
-    #book .inline-list a {
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      margin-top: 0.7rem; }
+  #book .inline-list a {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 0.7rem; }
 
   .weather {
     position: relative;
@@ -1118,10 +1109,8 @@ table thead {
     .weather span {
       font-size: 0.9rem !important; }
 
-  #footer {
-    text-align: center; }
-    #footer p {
-      display: none; }
+  #footer p {
+    display: none; }
 
   #promo {
     text-align: center; }
