@@ -354,8 +354,8 @@ class Vpost
                          'validate' => 'yes'
                       );
 
-          $this->db->where('id', $id);
-          $this->db->update('exp_hotel_reservations', $data); 
+          ee()->db->where('id', $id);
+          ee()->db->update('exp_hotel_reservations', $data); 
 
           ee()->db->select('*');
           ee()->db->where('id',$id);
