@@ -75,11 +75,11 @@ class Mandrillapp {
 			ee()->db->where('serial',$serial);
 			$query = ee()->db->get('exp_hotel_products');
 			foreach($query->result() as $row){
-			  $room_cod = $row->room_cod;
+			  $serial= $row->serial;
 			  $cost = $row->cost;
 			}
 			var_dump($row);
-			switch ($room_cod) {
+			switch ($serial) {
 				case 'rmsg01':
 				case 'rmsg02':
 				case 'rmsg03':
