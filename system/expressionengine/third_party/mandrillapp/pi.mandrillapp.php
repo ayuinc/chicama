@@ -58,9 +58,17 @@ class Mandrillapp {
 		$card_type = $row->card_type;
 		$email = $row->email;
 
-		$habitaciones_array = $data['Habitaciones'];
-		$habitaciones_detalle = "";
-		$habitaciones_precio = "";
+	$full_request = str_replace("$", "{", $full_request);
+	$full_request = str_replace("&", "}", $full_request);
+	$full_request = str_replace('(', '"', $full_request);
+	$full_request = str_replace(")", ":", $full_request);
+	$full_request = str_replace("?", " ", $full_request);
+	$full_request = str_replace("¿", ",", $full_request);
+	$data = json_decode($full_request, true);
+	
+	$habitaciones_array = $data['Habitaciones'];
+	$habitaciones_detalle = "";
+	$habitaciones_precio = "";
 		foreach ($habitaciones_array as $hab) {
 			$serial = $hab['TCodigoHabitacion'];
 			ee()->db->select('*');
@@ -112,13 +120,6 @@ class Mandrillapp {
 		}
 	}
 	
-	$full_request = str_replace("$", "{", $full_request);
-	$full_request = str_replace("&", "}", $full_request);
-	$full_request = str_replace('(', '"', $full_request);
-	$full_request = str_replace(")", ":", $full_request);
-	$full_request = str_replace("?", " ", $full_request);
-	$full_request = str_replace("¿", ",", $full_request);
-	$data = json_decode($full_request, true);
 
 	$to = $email;
 	$name= $first_name." ".$last_name;
