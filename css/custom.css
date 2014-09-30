@@ -1092,6 +1092,8 @@ table thead {
 @media only screen and (max-width: 40em) {
   #cover_container_index {
     height: 680px; }
+    #cover_container_index #book {
+      padding-top: 0; }
 
   #book_button {
     position: inherit;
