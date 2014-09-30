@@ -75,7 +75,7 @@ class Mandrillapp {
 		$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
 	}
 	if($add_on_2 != ''){
-		$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
+		$add_on_2 = '<tr><td></td><td>'.$add_on_2.'aeropuerto de Trujillo / hotel / aeropuerto de Trujillo </td><td></td></tr>';
 	}
 	if($add_on_3 != ''){
 		$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
@@ -135,6 +135,7 @@ class Mandrillapp {
 		}
 	}
 	
+	$cost_reser = intval($cost_reser)/100; 
 
 	$to = $email;
 	$name= $first_name." ".$last_name;
@@ -249,7 +250,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Pre pago realizado</td>
-		    <td> :'.$cost_reser.'</td>
+		    <td> : US$ '.$cost_reser.'.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>
