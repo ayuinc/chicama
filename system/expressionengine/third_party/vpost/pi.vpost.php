@@ -82,6 +82,7 @@ class Vpost
      $all_meals = ee()->TMPL->fetch_param('all_meals');
      $tow_back_service = ee()->TMPL->fetch_param('tow_back_service');
 
+     $num_dias = ee()->TMPL->fetch_param('num_dias');
      $phone = ee()->TMPL->fetch_param('phone');
      $street = ee()->TMPL->fetch_param('street');
      $city = ee()->TMPL->fetch_param('city');
@@ -173,7 +174,8 @@ class Vpost
           'document_type'=>$document_type,
           'card_id'=>$card_id,
           'card_type'=>$card_type,
-          'purchase_amount'=>$purchaseAmount,
+          'amount_reservation'=>$purchaseAmount,
+          'num_days'=> $num_dias,
           'zodiacs'=>$tow_back_service,
           'transport'=>$transport,
           'lunch_and_dinner'=>$all_meals,

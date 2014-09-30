@@ -698,6 +698,7 @@
     
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
+    $("#num_dias").val(dias);
     var guests = $("#numero_de_personas").val();
     $(encabezado).html(encabezado_html);
     $(input).val(input_val);
@@ -729,6 +730,8 @@
     
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
+
+    $("#num_dias").val(dias);
 
     var cost_summary = "";
     $("#"+sumary).html("");
