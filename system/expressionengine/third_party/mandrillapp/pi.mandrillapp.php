@@ -57,6 +57,10 @@ class Mandrillapp {
 		$card_id = $row->card_id;
 		$card_type = $row->card_type;
 		$email = $row->email;
+		$add_on_1 = $row->zodiacs;
+		$add_on_2 = $row->transport;
+		$add_on_3 = $row->lunch_and_dinner;
+
 
 	$full_request = str_replace("$", "{", $full_request);
 	$full_request = str_replace("&", "}", $full_request);
@@ -65,6 +69,16 @@ class Mandrillapp {
 	$full_request = str_replace("?", " ", $full_request);
 	$full_request = str_replace("¿", ",", $full_request);
 	$data = json_decode($full_request, true);
+
+	if($add_on_1 != ''){
+		$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
+	}
+	if($add_on_2 != ''){
+		$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
+	}
+	if($add_on_3 != ''){
+		$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
+	}
 
 	$habitaciones_array = $data['Habitaciones'];
 	$habitaciones_detalle = "";
@@ -184,21 +198,32 @@ class Mandrillapp {
 		  </tr>
 		  '.$habitaciones_detalle.'
 		  <tr>
+		    <td></td>
+		    <td>:</td>
+		    <td></td>
+		  </tr>
+		  <tr>
 		    <td>Tarifa</td>
 		    <td>:</td>
 		    <td></td>
 		  </tr>
 		  '.$habitaciones_precio.'
 		  <tr>
-		    <td>Servicios adicionales</td>
-		    <td>: Traslados aeropuerto de Trujillo / hotel / aeropuerto de Trujillo</td>
+		    <td></td>
+		    <td>:</td>
 		    <td></td>
 		  </tr>
+		  <tr>
+		    <td>Servicios adicionales</td>
+		    <td>:</td>
+		    <td></td>
+		  </tr>
+		  '.$add_on_1.$add_on_2.$add_on_3.'
 		</table>
 		<tr>
 			<td>
-				<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
-				Transfer out : 02/06 Lan 2209 13:05 hrs</p>
+				<!--<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
+				Transfer out : 02/06 Lan 2209 13:05 hrs</p>-->
 			</td>
 		</tr>
 		<tr>
@@ -224,7 +249,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Pre pago realizado</td>
-		    <td> : US$ 144.00</td>
+		    <td> :'.$data['purchase_amount'].'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
