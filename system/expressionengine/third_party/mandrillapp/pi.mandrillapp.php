@@ -78,6 +78,7 @@ class Mandrillapp {
 			  $room_cod = $row->room_cod;
 			  $cost = $row->cost;
 			}
+			var_dump($row);
 			switch ($room_cod) {
 				case 'rmsg01':
 				case 'rmsg02':
@@ -178,7 +179,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Tipo de habitación</td>
-		    <td></td>
+		    <td>:</td>
 		    <td></td>
 		  </tr>
 		  '.$habitaciones_detalle.'
