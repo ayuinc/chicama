@@ -146,7 +146,16 @@ h1,h2,h3,h4,h5{
 	height: 100%;
 }
 
+#left-mobile-nav,
+.off-canvas-wrap,
+.inner-wrap,
+.main-section{
+	height: 100%;
+}
 
+.off-canvas-wrap {
+	overflow: visible;
+}
 
 #cover{
 	min-height: 100%;
@@ -1392,6 +1401,9 @@ table {
 
 	#cover_container_index {	
 		height:680px;
+		#book {
+			padding-top: 0;
+		}
 	}
 	
 	#book_button {

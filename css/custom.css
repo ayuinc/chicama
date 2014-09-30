@@ -107,6 +107,15 @@ h1, h2, h3, h4, h5 {
   background: #F3F3ED;
   height: 100%; }
 
+#left-mobile-nav,
+.off-canvas-wrap,
+.inner-wrap,
+.main-section {
+  height: 100%; }
+
+.off-canvas-wrap {
+  overflow: visible; }
+
 #cover {
   min-height: 100%;
   /*height: auto !important;*/
@@ -1083,6 +1092,8 @@ table thead {
 @media only screen and (max-width: 40em) {
   #cover_container_index {
     height: 680px; }
+    #cover_container_index #book {
+      padding-top: 0; }
 
   #book_button {
     position: inherit;
