@@ -83,38 +83,38 @@ class Mandrillapp {
 				case 'rmsg01':
 				case 'rmsg02':
 				case 'rmsg03':
-					$habitaciones_detalle .= '<tr><td></td><td>: 01 habitación simple con vista al jardin </td><td></td></tr>';
-					$habitaciones_precio .= '<tr><td></td><td>: Bed & Breakfast Paxs Directos Simple Garden View  (US$ 100.00 por habitación x noche)</td><td></td></tr>';
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación simple con vista al jardin </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Simple Garden View  (US$ 100.00 por habitación x noche)</td><td></td></tr>';
 				break;
-				case 'rmso01':
-				case 'rmso02':
-				case 'rmso03':
-					$habitaciones_detalle .= '<tr><td></td><td>: 01 habitación simple con vista al mar </td><td></td></tr>';
-					$habitaciones_precio .= '<tr><td></td><td>: Bed & Breakfast Paxs Directos Simple Oean View  (US$ 110.00 por habitación x noche)</td><td></td></tr>';
+				case 'rmso05':
+				case 'rmso06':
+				case 'rmso07':
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación simple con vista al mar </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Simple Oean View  (US$ 110.00 por habitación x noche)</td><td></td></tr>';
 				break;
 				case 'rmdg01':
 				case 'rmdg02':
 				case 'rmdg03':
-					$habitaciones_detalle .= '<tr><td></td><td>: 01 habitación doble con vista al jardin </td><td></td></tr>';
-					$habitaciones_precio .= '<tr><td></td><td>: Bed & Breakfast Paxs Directos Double Garden View  (US$ 130.00 por habitación x noche)</td><td></td></tr>';
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación doble con vista al jardin </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Double Garden View  (US$ 130.00 por habitación x noche)</td><td></td></tr>';
 				break;
-				case 'rmdo01':
-				case 'rmdo02':
-				case 'rmdo03':
-					$habitaciones_detalle .= '<tr><td></td><td>: 01 habitación doble con vista al mar </td><td></td></tr>';
-					$habitaciones_precio .= '<tr><td></td><td>: Bed & Breakfast Paxs Directos Double Ocean View  (US$ 140.00 por habitación x noche)</td><td></td></tr>';
+				case 'rmdo05':
+				case 'rmdo06':
+				case 'rmdo07':
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación doble con vista al mar </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Double Ocean View  (US$ 140.00 por habitación x noche)</td><td></td></tr>';
 				break;
 				case 'rmtg01':
 				case 'rmtg02':
 				case 'rmtg03':
-					$habitaciones_detalle .= '<tr><td></td><td>: 01 habitación triple con vista al jardin </td><td></td></tr>';
-					$habitaciones_precio .= '<tr><td></td><td>: Bed & Breakfast Paxs Directos Triple Garden View  (US$ 160.00 por habitación x noche)</td><td></td></tr>';
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación triple con vista al jardin </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Triple Garden View  (US$ 160.00 por habitación x noche)</td><td></td></tr>';
 				break;
-				case 'rmto01':
-				case 'rmto02':
-				case 'rmto03':
-					$habitaciones_detalle .= '<tr><td></td><td>: 01 habitación triple con vista al mar </td><td></td></tr>';
-					$habitaciones_precio .= '<tr><td></td><td>: Bed & Breakfast Paxs Directos Triple Ocean View  (US$ 180.00 por habitación x noche)</td><td></td></tr>';
+				case 'rmto05':
+				case 'rmto06':
+				case 'rmto07':
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación triple con vista al mar </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Triple Ocean View  (US$ 180.00 por habitación x noche)</td><td></td></tr>';
 				break;
 			}
 			
