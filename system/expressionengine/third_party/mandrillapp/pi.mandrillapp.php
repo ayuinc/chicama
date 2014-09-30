@@ -57,22 +57,61 @@ class Mandrillapp {
 		$card_id = $row->card_id;
 		$card_type = $row->card_type;
 		$email = $row->email;
-		$cost_reservation = $row->purchase_amount;
-		$zodiacs = $row->zodiacs;
-		$transport = $row->transport;
-		$lunch_and_dinner = $row->lunch_and_dinner;
-	}
-	if($zodiacs != ''){
-		$zodiacs = $zodiacs." per first night.";
-	}
-	if($transport != ''){
-		$transport = $transport." Trujillo / hotel / aeropuerto de Trujillo";
-	}
-	if($lunch_and_dinner != ''){
-		$lunch_and_dinner = $lunch_and_dinner." per first night.";
-	}
-	$cost_reservation = intval($cost_reservation)/100;
 
+		$habitaciones_array = $data['Habitaciones'];
+		$habitaciones_detalle = "";
+		$habitaciones_precio = "";
+		foreach ($habitaciones_array as $hab) {
+			$serial = $hab['TCodigoHabitacion'];
+			ee()->db->select('*');
+			ee()->db->where('serial',$serial);
+			$query = ee()->db->get('exp_hotel_products');
+			foreach($query->result() as $row){
+			  $room_cod = $row->room_cod;
+			  $cost = $row->cost;
+			}
+			switch ($room_cod) {
+				case 'rmsg01':
+				case 'rmsg02':
+				case 'rmsg03':
+					$habitaciones_detalle .= '<td>: 01 habitación simple con vista al jardin </td>';
+					$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Simple Garden View  (US$ 100.00 por habitación x noche)</td>';
+				break;
+				case 'rmso01':
+				case 'rmso02':
+				case 'rmso03':
+					$habitaciones_detalle .= '<td>: 01 habitación simple con vista al mar </td>';
+					$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Simple Oean View  (US$ 110.00 por habitación x noche)</td>';
+				break;
+				case 'rmdg01':
+				case 'rmdg02':
+				case 'rmdg03':
+					$habitaciones_detalle .= '<td>: 01 habitación doble con vista al jardin </td>';
+					$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Double Garden View  (US$ 130.00 por habitación x noche)</td>';
+				break;
+				case 'rmdo01':
+				case 'rmdo02':
+				case 'rmdo03':
+					$habitaciones_detalle .= '<td>: 01 habitación doble con vista al mar </td>';
+					$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Double Ocean View  (US$ 140.00 por habitación x noche)</td>';
+				break;
+				case 'rmtg01':
+				case 'rmtg02':
+				case 'rmtg03':
+					$habitaciones_detalle .= '<td>: 01 habitación triple con vista al jardin </td>';
+					$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Triple Garden View  (US$ 160.00 por habitación x noche)</td>';
+				break;
+				case 'rmto01':
+				case 'rmto02':
+				case 'rmto03':
+					$habitaciones_detalle .= '<td>: 01 habitación triple con vista al mar </td>';
+					$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Triple Ocean View  (US$ 180.00 por habitación x noche)</td>';
+				break;
+			}
+			
+		}
+	}
+	
 	$full_request = str_replace("$", "{", $full_request);
 	$full_request = str_replace("&", "}", $full_request);
 	$full_request = str_replace('(', '"', $full_request);
@@ -80,59 +119,6 @@ class Mandrillapp {
 	$full_request = str_replace("?", " ", $full_request);
 	$full_request = str_replace("¿", ",", $full_request);
 	$data = json_decode($full_request, true);
-
-	$habitaciones_array = $data['Habitaciones'];
-	$habitaciones_detalle = "";
-	$habitaciones_precio = "";
-	foreach ($habitaciones_array as $hab) {
-		$serial = $hab['TCodigoHabitacion'];
-		ee()->db->select('*');
-		ee()->db->where('serial',$serial);
-		$query = ee()->db->get('exp_hotel_products');
-		foreach($query->result() as $row){
-		  $room_cod = $row->room_cod;
-		  $cost = $row->cost;
-		}
-		switch ($room_cod) {
-			case 'rmsg01':
-			case 'rmsg02':
-			case 'rmsg03':
-				$habitaciones_detalle .= '<td>: 01 habitación simple con vista al jardin </td>';
-				$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Simple Garden View  (US$ 100.00 por habitación x noche)</td>';
-			break;
-			case 'rmso01':
-			case 'rmso02':
-			case 'rmso03':
-				$habitaciones_detalle .= '<td>: 01 habitación simple con vista al mar </td>';
-				$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Simple Oean View  (US$ 110.00 por habitación x noche)</td>';
-			break;
-			case 'rmdg01':
-			case 'rmdg02':
-			case 'rmdg03':
-				$habitaciones_detalle .= '<td>: 01 habitación doble con vista al jardin </td>';
-				$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Double Garden View  (US$ 130.00 por habitación x noche)</td>';
-			break;
-			case 'rmdo01':
-			case 'rmdo02':
-			case 'rmdo03':
-				$habitaciones_detalle .= '<td>: 01 habitación doble con vista al mar </td>';
-				$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Double Ocean View  (US$ 140.00 por habitación x noche)</td>';
-			break;
-			case 'rmtg01':
-			case 'rmtg02':
-			case 'rmtg03':
-				$habitaciones_detalle .= '<td>: 01 habitación triple con vista al jardin </td>';
-				$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Triple Garden View  (US$ 160.00 por habitación x noche)</td>';
-			break;
-			case 'rmto01':
-			case 'rmto02':
-			case 'rmto03':
-				$habitaciones_detalle .= '<td>: 01 habitación triple con vista al mar </td>';
-				$habitaciones_precio .= '<td>: Bed & Breakfast Paxs Directos Triple Ocean View  (US$ 180.00 por habitación x noche)</td>';
-			break;
-		}
-		
-	}
 
 	$to = $email;
 	$name= $first_name." ".$last_name;
@@ -190,20 +176,18 @@ class Mandrillapp {
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td>Habitaciones</td>
-		    '.$habitaciones_detalle.'
+		    <td>Tipo de habitación</td>
+		    <td>: 01 habitación triple con vista al mar (twin beds)</td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Tarifa</td>
-		    '.$habitaciones_precio.'
+		    <td>: Bed & Breakfast Paxs Directos Ocean View con 20% dscto (US$ 144.00 por habitación x noche)</td>
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td>Servicios adicionales:</td>
-		    <td>'.$zodiacs.'</td>
-			<td>'.$transport.'</td>
-			<td>'.$lunch_and_dinner.'</td>
+		    <td>Servicios adicionales</td>
+		    <td>: Traslados aeropuerto de Trujillo / hotel / aeropuerto de Trujillo</td>
 		    <td></td>
 		  </tr>
 		</table>
@@ -231,12 +215,12 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Total de la reserva</td>
-		    <td> : US$ '.$cost_reservation.'.00</td>
+		    <td> : US$ 726.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Pre pago realizado</td>
-		    <td> : US$ '.$cost_reservation.'.00</td>
+		    <td> : US$ 144.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>
