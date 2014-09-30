@@ -60,6 +60,7 @@ class Mandrillapp {
 		$add_on_1 = $row->zodiacs;
 		$add_on_2 = $row->transport;
 		$add_on_3 = $row->lunch_and_dinner;
+		$cost_reser = $row->purchase_amount;
 
 
 	$full_request = str_replace("$", "{", $full_request);
@@ -92,7 +93,6 @@ class Mandrillapp {
 			  $serial= $row->serial;
 			  $cost = $row->cost;
 			}
-			var_dump($row);
 			switch ($serial) {
 				case 'rmsg01':
 				case 'rmsg02':
@@ -199,7 +199,7 @@ class Mandrillapp {
 		  '.$habitaciones_detalle.'
 		  <tr>
 		    <td></td>
-		    <td>:</td>
+		    <td></td>
 		    <td></td>
 		  </tr>
 		  <tr>
@@ -210,7 +210,7 @@ class Mandrillapp {
 		  '.$habitaciones_precio.'
 		  <tr>
 		    <td></td>
-		    <td>:</td>
+		    <td></td>
 		    <td></td>
 		  </tr>
 		  <tr>
@@ -249,7 +249,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Pre pago realizado</td>
-		    <td> :'.$data['purchase_amount'].'</td>
+		    <td> :'.$cost_reser.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
