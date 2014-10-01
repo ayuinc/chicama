@@ -1422,6 +1422,13 @@ table {
 	.off-canvas-wrap {
 		position: fixed;
 	}
+	nav.tab-bar {
+		background: #F3F3ED;
+	}
+	a.menu-icon span {
+		-webkit-box-shadow: 0 10px 0 1px #2C2625, 0 16px 0 1px #2C2625, 0 22px 0 1px #2C2625;
+		box-shadow: 0 10px 0 1px #2C2625, 0 16px 0 1px #2C2625, 0 22px 0 1px #2C2625;
+	}
 	.main-section {
 		overflow: scroll;
 		padding-bottom: 2rem;
