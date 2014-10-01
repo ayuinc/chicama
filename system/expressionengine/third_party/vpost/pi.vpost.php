@@ -334,9 +334,10 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        // return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+        return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         //if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
+          /*
           $data = array(
                          'validate' => 'yes'
                       );
@@ -373,7 +374,7 @@ class Vpost
             }
             return $div;
             //return $request;
-          /*}
+          }
           else {
             return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         }*/
