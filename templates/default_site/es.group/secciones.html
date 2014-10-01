@@ -251,11 +251,6 @@
                                     {/exp:channel:entries}
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class=" large-6 columns show-for-small-only">
-                                        <a href="{site_url}/es/secciones/book-a-room" id="book_button" class="button small radius"><span>RESERVA HOY</span></a>
-                                    </div>
-                                </div>
                                 {if last_segment == "the-crew"}
                                 <div class="row">
                                     {exp:channel:entries channel="the_crew" dynamic="no" orderby="date" sort="asc"}
@@ -438,6 +433,11 @@
                                     </div>
                                 </div> -->
                                 {/if}
+                                <div class="row">
+                                    <div class=" large-6 columns show-for-small-only">
+                                        <a href="{site_url}/es/secciones/book-a-room" id="book_button" class="button small radius"><span>RESERVA HOY</span></a>
+                                    </div>
+                                </div>
                             </div>
                             <div id="caja_lateral"  class="medium-offset-1 medium-4 large-offset-1 large-4 columns">
                                 {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
