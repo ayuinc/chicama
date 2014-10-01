@@ -5,3 +5,8 @@ $(document).ready(function(){
 	// 	$('#form_box').slideToggle("slow");
 	// });
 });
+$(document).foundation();
+
+$('.reveal-modal').on('opened', function(){
+  $(window).trigger('resize');
+});
