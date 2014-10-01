@@ -1417,6 +1417,23 @@ table {
   height: 100%;
 }
 
+.inner-wrap {
+  @include transition (left 200ms ease);
+}
+.move-left .inner-wrap {
+  left: -250px;
+  @include transform(none);
+}
+.right-off-canvas-menu {
+  position: fixed;
+  right: -250px;
+  @include transform(none);
+  @include transition (right 200ms ease);
+}
+.move-left .right-off-canvas-menu {
+  right: 0px;
+}
+
 @media only screen and (max-width: 40em) {
 
 	#cover_container_index {	
