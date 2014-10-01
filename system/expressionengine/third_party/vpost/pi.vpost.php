@@ -215,14 +215,14 @@ class Vpost
             "TEjv0SFkTM04qHyHFU90Da8Ep1F0gI2SFpCkLmQtsXKOrLrQTF0100dL/gDQlLt0\n".
             "Ut8kM/PRLEM5thMPqtPq6G1GTjqmcsPzUUL18+tYwN3xFi4XBog4Hdv0ml1SRkVO\n".
             "DRr1jPeilfsiFwiO8wIDAQAB\n".
-            "-----END PUBLIC KEY-----";*/
+            "-----END PUBLIC KEY-----"; TEST*/
 
            $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
             "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0t0Cnbne8gQoeGK4nG6O3zfwh\n".
             "q8u9Wp5zHjyVYbvx2zudSOlBnJ5qU74BcTGypbn6W7jjvSNE7AmncOAVh4RxuRXO\n".
             "+bINFIyQ7/ErH/v1YpDFk8knC/NuvFpfHqhJ/5j2I8y+WmyF0MZmGtm074nUGv4d\n".
             "qlbUMT9aYUQ+RzMO7QIDAQAB\n".
-            "-----END PUBLIC KEY------";
+            "-----END PUBLIC KEY-----";
 
              $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
             "MIICWwIBAAKBgQCw9S8vnGIW04tG4N98f0HXoMJlB6K9v2iJZlsFYNtP6Xv6Ax5d\n".
@@ -239,36 +239,7 @@ class Vpost
             "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
             "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
             "-----END RSA PRIVATE KEY-----";
-            // inicio del codigo nuevo
-            /*ee()->db->select('*');
-            ee()->db->where('id',$id);
-            $query = ee()->db->get('exp_hotel_reservations');
-
-            foreach($query->result() as $row){
-              $full_request = $row->full_request;
-              $first_name = $row->first_name;
-              $last_name = $row->last_name;
-              $country = $row->country;
-              $document_id = $row->document_id;
-              $document_type = $row->document_type;
-              $card_id = $row->card_id;
-              $card_type = $row->card_type;
-              $div ='{exp:infhotel:insertarreservar
-                          id="'.$id.'"
-                          request="'.$request.'"
-                          first_name="'.$first_name.'"
-                          last_name="'.$last_name.'"
-                          country="'.$country.'"
-                          document_id="'.$document_id.'"
-                          document_type="'.$document_type.'"
-                          card_id="'.$card_id.'"
-                          card_type="'.$card_type.'"
-                          }
-                      {/exp:infhotel:insertarreservar}';
-                
-              }
-              return $div; */
-              // fin del codigo nuevo
+          
             if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
                 return ' 
                 <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" >
@@ -339,7 +310,7 @@ class Vpost
     "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
     "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
     "pIs4aIDXarTYJGWlyQIDAQAB\n".
-    "-----END PUBLIC KEY-----";*/
+    "-----END PUBLIC KEY-----"; --- TEST*/
 
     $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtvXnikeSS+H/Qs/51iL3ZYPfz\n".
