@@ -566,7 +566,7 @@ class Infhotel
             ee()->db->where('serial', $row->zodiacs);
             $query_zodiacs = ee()->db->get('exp_hotel_products');
             if($query_zodiacs != null){
-              foreach($query->result() as $row_zodiacs){
+              foreach($query_zodiacs->result() as $row_zodiacs){
                 var_dump($row_zodiacs);
                 $zodiacs = $row_zodiacs->name;
               }
