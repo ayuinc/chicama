@@ -155,6 +155,7 @@ h1,h2,h3,h4,h5{
 
 .off-canvas-wrap {
 	overflow: visible;
+	position: fixed;
 }
 
 #cover{
@@ -1417,25 +1418,12 @@ table {
   height: 100%;
 }
 
-// .inner-wrap {
-//   @include transition (left 200ms ease);
-// }
-// .move-left .inner-wrap {
-//   left: -250px;
-//   @include transform(none);
-// }
-// .right-off-canvas-menu {
-//   position: fixed;
-//   right: -250px;
-//   @include transform(none);
-//   @include transition (right 200ms ease);
-// }
-// .move-left .right-off-canvas-menu {
-//   right: 0px;
-// }
-
 @media only screen and (max-width: 40em) {
 
+	.main-section {
+		overflow: scroll;
+	}
+	
 	#cover_container_index {	
 		height:680px;
 	}

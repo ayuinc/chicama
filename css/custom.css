@@ -114,7 +114,8 @@ h1, h2, h3, h4, h5 {
   height: 100%; }
 
 .off-canvas-wrap {
-  overflow: visible; }
+  overflow: visible;
+  position: fixed; }
 
 #cover {
   min-height: 100%;
@@ -1105,6 +1106,9 @@ table thead {
   height: 100%; }
 
 @media only screen and (max-width: 40em) {
+  .main-section {
+    overflow: scroll; }
+
   #cover_container_index {
     height: 680px; }
 
