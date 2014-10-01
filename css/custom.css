@@ -1135,6 +1135,8 @@ table thead {
     width: 100%;
     position: static; }
 
+  .cover_container h1 {
+    font-size: 3rem; }
   .cover_container #book {
     padding-top: 0; }
 
