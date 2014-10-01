@@ -57,8 +57,13 @@ class Mandrillapp {
 		$card_id = $row->card_id;
 		$card_type = $row->card_type;
 		$email = $row->email;
-	}
-	
+		$add_on_1 = $row->zodiacs;
+		$add_on_2 = $row->transport;
+		$add_on_3 = $row->lunch_and_dinner;
+		$cost_reser = $row->amount_reservation;
+		$days = $row->num_days;
+
+
 	$full_request = str_replace("$", "{", $full_request);
 	$full_request = str_replace("&", "}", $full_request);
 	$full_request = str_replace('(', '"', $full_request);
@@ -66,6 +71,86 @@ class Mandrillapp {
 	$full_request = str_replace("?", " ", $full_request);
 	$full_request = str_replace("¿", ",", $full_request);
 	$data = json_decode($full_request, true);
+
+	if($add_on_1 != ''){
+		$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
+	}
+	if($add_on_2 != ''){
+		$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
+	}
+	if($add_on_3 != ''){
+		$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
+	}
+
+	$habitaciones_array = $data['Habitaciones'];
+	$habitaciones_detalle = "";
+	$habitaciones_precio = "";
+	$resumen_reserva= "";
+		foreach ($habitaciones_array as $hab) {
+			$cost_aux = 0;
+			$serial = $hab['TCodigoHabitacion'];
+			ee()->db->select('*');
+			ee()->db->where('serial',$serial);
+			$query = ee()->db->get('exp_hotel_products');
+			foreach($query->result() as $row){
+			  $serial= $row->serial;
+			  $cost = $row->cost;
+			}
+			switch ($serial) {
+				case 'rmsg01':
+				case 'rmsg02':
+				case 'rmsg03':
+					$cost_aux = $days * 100;
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación simple con vista al jardin </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Simple Garden View  (US$ 100.00 por habitación x noche)</td><td></td></tr>';
+					$resumen_reserva .= '<tr><td>Habitación simple garden</td><td>: US$ 100.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				break;
+				case 'rmso05':
+				case 'rmso06':
+				case 'rmso07':
+					$cost_aux = $days * 110;
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación simple con vista al mar </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Simple Oean View  (US$ 110.00 por habitación x noche)</td><td></td></tr>';
+					$resumen_reserva .= '<tr><td>Habitación simple ocean</td><td>: US$ 110.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				break;
+				case 'rmdg01':
+				case 'rmdg02':
+				case 'rmdg03':
+					$cost_aux = $days * 130;
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación doble con vista al jardin </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Double Garden View  (US$ 130.00 por habitación x noche)</td><td></td></tr>';
+					$resumen_reserva .= '<tr><td>Habitación double garden</td><td>: US$ 130.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				break;
+				case 'rmdo05':
+				case 'rmdo06':
+				case 'rmdo07':
+					$cost_aux = $days * 140;
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación doble con vista al mar </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Double Ocean View  (US$ 140.00 por habitación x noche)</td><td></td></tr>';
+					$resumen_reserva .= '<tr><td>Habitación double ocean</td><td>: US$ 140.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				break;
+				case 'rmtg01':
+				case 'rmtg02':
+				case 'rmtg03':
+					$cost_aux = $days * 160;
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación triple con vista al jardin </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Triple Garden View  (US$ 160.00 por habitación x noche)</td><td></td></tr>';
+					$resumen_reserva .= '<tr><td>Habitación triple garden</td><td>: US$ 160.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				break;
+				case 'rmto05':
+				case 'rmto06':
+				case 'rmto07':
+					$cost_aux = $days * 180;
+					$habitaciones_detalle .= '<tr><td></td><td> 01 habitación triple con vista al mar </td><td></td></tr>';
+					$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Triple Ocean View  (US$ 180.00 por habitación x noche)</td><td></td></tr>';
+					$resumen_reserva .= '<tr><td>Habitación triple ocean</td><td>: US$ 180.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				break;
+			}
+			
+		}
+	}
+	
+	$cost_reser = intval($cost_reser)/100; 
 
 	$to = $email;
 	$name= $first_name." ".$last_name;
@@ -114,7 +199,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Estadía</td>
-		    <td>: Check in:'.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
+		    <td>: Check in: '.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
 		    <td> </td>
 		  </tr>
 		  <tr>
@@ -124,24 +209,37 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Tipo de habitación</td>
-		    <td>: 01 habitación triple con vista al mar (twin beds)</td>
+		    <td>:</td>
+		    <td></td>
+		  </tr>
+		  '.$habitaciones_detalle.'
+		  <tr>
+		    <td></td>
+		    <td></td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Tarifa</td>
-		    <td>: Bed & Breakfast Paxs Directos Ocean View con 20% dscto (US$ 144.00 por habitación x noche)</td>
+		    <td>:</td>
+		    <td></td>
+		  </tr>
+		  '.$habitaciones_precio.'
+		  <tr>
+		    <td></td>
+		    <td></td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Servicios adicionales</td>
-		    <td>: Traslados aeropuerto de Trujillo / hotel / aeropuerto de Trujillo</td>
+		    <td>:</td>
 		    <td></td>
 		  </tr>
+		  '.$add_on_1.$add_on_2.$add_on_3.'
 		</table>
 		<tr>
 			<td>
-				<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
-				Transfer out : 02/06 Lan 2209 13:05 hrs</p>
+				<!--<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
+				Transfer out : 02/06 Lan 2209 13:05 hrs</p>-->
 			</td>
 		</tr>
 		<tr>
@@ -150,11 +248,7 @@ class Mandrillapp {
 			</td>
 		</tr>	
 		<table>
-		  <tr>
-		    <td>Habitación triple</td>
-		    <td>: US$ 144.00 x 04 noches</td>
-		    <td>: US$ 576.00</td>
-		  </tr>
+		  '.$resumen_reserva.'
 		  <tr>
 		    <td>Traslados  </td>
 		    <td>: US$ 25.00 x 03 personas x 02 idas</td>
@@ -167,7 +261,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Pre pago realizado</td>
-		    <td> : US$ 144.00</td>
+		    <td> : US$ '.$cost_reser.'.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>

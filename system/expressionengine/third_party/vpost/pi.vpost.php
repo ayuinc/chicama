@@ -68,8 +68,8 @@ class Vpost
     public function envio(){
      require_once 'vpos/vpos_plugin_NOTAX.php'; 
      $codigo1 ='840';
-     $codigoAdquirente = 144;
-     $codigoComercio = 6573;
+     $codigoAdquirente = 29;
+     $codigoComercio = 5278;
      $idorden = "".((int)(microtime()*100000));
      $purchaseAmount = 0;
      
@@ -82,6 +82,7 @@ class Vpost
      $all_meals = ee()->TMPL->fetch_param('all_meals');
      $tow_back_service = ee()->TMPL->fetch_param('tow_back_service');
 
+     $num_dias = ee()->TMPL->fetch_param('num_dias');
      $phone = ee()->TMPL->fetch_param('phone');
      $street = ee()->TMPL->fetch_param('street');
      $city = ee()->TMPL->fetch_param('city');
@@ -173,7 +174,8 @@ class Vpost
           'document_type'=>$document_type,
           'card_id'=>$card_id,
           'card_type'=>$card_type,
-          'purchase_amount'=>$purchaseAmount,
+          'amount_reservation'=>$purchaseAmount,
+          'num_days'=> $num_dias,
           'zodiacs'=>$tow_back_service,
           'transport'=>$transport,
           'lunch_and_dinner'=>$all_meals,
@@ -202,17 +204,24 @@ class Vpost
            $array_send['language']="SP";
            $array_send['reserved1']="840"; // codigo de moneda nacional
            $array_send['reserved2']=$purchaseAmount; //mismo  monto quee purchaseAmount en nuestro caso
-           $array_send['reserved3']="6573"; // id de comercio adicional
+           $array_send['reserved3']="5278"; // id de comercio adicional
            $arrayOut['XMLREQ']="";
            $arrayOut['DIGITALSIGN']="";
            $arrayOut['SESSIONKEY']="";
            # Vector
            $VI = "F20CA985A4B34DEC";
-           $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
+           /*$llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
             "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
             "TEjv0SFkTM04qHyHFU90Da8Ep1F0gI2SFpCkLmQtsXKOrLrQTF0100dL/gDQlLt0\n".
             "Ut8kM/PRLEM5thMPqtPq6G1GTjqmcsPzUUL18+tYwN3xFi4XBog4Hdv0ml1SRkVO\n".
             "DRr1jPeilfsiFwiO8wIDAQAB\n".
+            "-----END PUBLIC KEY-----"; TEST*/
+
+           $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
+            "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0t0Cnbne8gQoeGK4nG6O3zfwh\n".
+            "q8u9Wp5zHjyVYbvx2zudSOlBnJ5qU74BcTGypbn6W7jjvSNE7AmncOAVh4RxuRXO\n".
+            "+bINFIyQ7/ErH/v1YpDFk8knC/NuvFpfHqhJ/5j2I8y+WmyF0MZmGtm074nUGv4d\n".
+            "qlbUMT9aYUQ+RzMO7QIDAQAB\n".
             "-----END PUBLIC KEY-----";
 
              $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
@@ -230,47 +239,18 @@ class Vpost
             "hrUw/WbcpM+KbqOd8wJAeOJbi6H9y9VonyQYJM7yXwhNeAvlKTYEyYPeW2O7oitg\n".
             "1Nxmog30epbOchoAmCAr2TPzbpentnvCO1hKbO3Jkw==\n".
             "-----END RSA PRIVATE KEY-----";
-            // inicio del codigo nuevo
-            /*ee()->db->select('*');
-            ee()->db->where('id',$id);
-            $query = ee()->db->get('exp_hotel_reservations');
-
-            foreach($query->result() as $row){
-              $full_request = $row->full_request;
-              $first_name = $row->first_name;
-              $last_name = $row->last_name;
-              $country = $row->country;
-              $document_id = $row->document_id;
-              $document_type = $row->document_type;
-              $card_id = $row->card_id;
-              $card_type = $row->card_type;
-              $div ='{exp:infhotel:insertarreservar
-                          id="'.$id.'"
-                          request="'.$request.'"
-                          first_name="'.$first_name.'"
-                          last_name="'.$last_name.'"
-                          country="'.$country.'"
-                          document_id="'.$document_id.'"
-                          document_type="'.$document_type.'"
-                          card_id="'.$card_id.'"
-                          card_type="'.$card_type.'"
-                          }
-                      {/exp:infhotel:insertarreservar}';
-                
-              }
-              return $div; */
-              // fin del codigo nuevo
+          
             if (VPOSSend($array_send,$arrayOut,$llaveVPOSCryptoPub,$llavePrivadaFirmaComercio,$VI)) {
                 return ' 
-                <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://test2.alignetsac.com/VPOS/MM/transactionStart20.do" >
+                <form style="display:none;" id="form_envio" name="params_form" method="post" action="https://vpayment.verifika.com/VPOS/MM/transactionStart20.do" >
                    <table border="0">
                   <tr>
                     <td>IDACQUIRER:</td>
-                    <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
+                    <td><input name="IDACQUIRER" id="IDACQUIRER" value="29"></td>
                   </tr>
                   <tr>
                     <td>COMMERCE:</td>
-                    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="6573"></td>
+                    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="5278"></td>
                   </tr>
                   <tr>
                     <td>XML:</td>
@@ -325,11 +305,18 @@ class Vpost
     "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
     "-----END RSA PRIVATE KEY-----";
 
-     $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
+    /*$llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
     "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
     "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
     "pIs4aIDXarTYJGWlyQIDAQAB\n".
+    "-----END PUBLIC KEY-----"; --- TEST*/
+
+    $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
+    "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtvXnikeSS+H/Qs/51iL3ZYPfz\n".
+    "KW94WUAz7IdZIOIcuG1zLIR3kUNUc/vdSmW120dwkIleB6pl4cVT5nDewBFJCzTS\n".
+    "W6jGaWaryzl7xS3ZToKTHpVeQr3avN7H+Om9TfsccY7gBV3IOIauTg9xIpDjIg52\n".
+    "fUcfyPq+Bhw0cWkDUQIDAQAB\n".
     "-----END PUBLIC KEY-----";
 
      $arrayIn['IDACQUIRER'] =$IDACQUIRER;
@@ -347,9 +334,10 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        // return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+        return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         //if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
+          /*
           $data = array(
                          'validate' => 'yes'
                       );
@@ -386,7 +374,7 @@ class Vpost
             }
             return $div;
             //return $request;
-          /*}
+          }
           else {
             return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         }*/
