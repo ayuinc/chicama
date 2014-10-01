@@ -116,6 +116,7 @@ class Vpost
         }
       }
 
+     /* 
      ee()->db->select('*');
      ee()->db->where('serial',$transport);
      $query = ee()->db->get('exp_hotel_products');
@@ -161,6 +162,7 @@ class Vpost
      else{
          $tow_back_service = 'Servicio No Contratado';
      }
+     */
      $data = array(
           'first_name'=> $billingFirstName,
           'last_name'=> $billingLastName,
@@ -334,10 +336,10 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        //if($arrayOut['authorizationResult'] == "00"){
+        //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+        if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
-          /*
+          
           $data = array(
                          'validate' => 'yes'
                       );
@@ -377,7 +379,7 @@ class Vpost
           }
           else {
             return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        }*/
+        }
       } 
     }
 }
