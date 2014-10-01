@@ -68,8 +68,8 @@ class Vpost
     public function envio(){
      require_once 'vpos/vpos_plugin_NOTAX.php'; 
      $codigo1 ='840';
-     $codigoAdquirente = 144;
-     $codigoComercio = 6573;
+     $codigoAdquirente = 29;
+     $codigoComercio = 5278;
      $idorden = "".((int)(microtime()*100000));
      $purchaseAmount = 0;
      
