@@ -543,7 +543,7 @@ class Infhotel
           foreach($query->result() as $row){
 
             ee()->db->select('*');
-            ee()->db->where('serial'$row->transport);
+            ee()->db->where('serial', $row->transport);
             $query = ee()->db->get('exp_hotel_products');
             if($query != null){
               foreach($query->result() as $row){
