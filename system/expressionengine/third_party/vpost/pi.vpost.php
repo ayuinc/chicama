@@ -317,7 +317,7 @@ class Vpost
     "KW94WUAz7IdZIOIcuG1zLIR3kUNUc/vdSmW120dwkIleB6pl4cVT5nDewBFJCzTS\n".
     "W6jGaWaryzl7xS3ZToKTHpVeQr3avN7H+Om9TfsccY7gBV3IOIauTg9xIpDjIg52\n".
     "fUcfyPq+Bhw0cWkDUQIDAQAB\n".
-    "-----END PUBLIC KEY------";
+    "-----END PUBLIC KEY-----";
 
      $arrayIn['IDACQUIRER'] =$IDACQUIRER;
      $arrayIn['IDCOMMERCE'] = $IDCOMMERCE;
