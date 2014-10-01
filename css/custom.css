@@ -1076,18 +1076,16 @@ table thead {
 .underline {
   text-decoration: underline; }
 
-.orbit-container {
-  min-height: 463px; }
-  .orbit-container img {
-    margin: 0 auto; }
-  .orbit-container .orbit-slide-number {
-    left: 40px;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 0.4rem; }
-  .orbit-container .orbit-prev, .orbit-container .orbit-next {
-    width: 32px;
-    background-color: rgba(0, 0, 0, 0.3);
-    top: 47%; }
+.orbit-container img {
+  margin: 0 auto; }
+.orbit-container .orbit-slide-number {
+  left: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.4rem; }
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+  width: 32px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 47%; }
 
 .video-container {
   position: relative;
