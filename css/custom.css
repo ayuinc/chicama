@@ -1111,9 +1111,13 @@ table thead {
   nav.tab-bar {
     background: #F3F3ED; }
 
+  section.left-small {
+    border-right: none;
+    box-shadow: 1px 0 0 #b3b3b3; }
+
   a.menu-icon span {
-    -webkit-box-shadow: 0 10px 0 1px #2C2625, 0 16px 0 1px #2C2625, 0 22px 0 1px #2C2625;
-    box-shadow: 0 10px 0 1px #2C2625, 0 16px 0 1px #2C2625, 0 22px 0 1px #2C2625; }
+    -webkit-box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3;
+    box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3; }
 
   .main-section {
     overflow: scroll;
