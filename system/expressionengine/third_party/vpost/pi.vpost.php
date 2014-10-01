@@ -246,11 +246,11 @@ class Vpost
                    <table border="0">
                   <tr>
                     <td>IDACQUIRER:</td>
-                    <td><input name="IDACQUIRER" id="IDACQUIRER" value="144"></td>
+                    <td><input name="IDACQUIRER" id="IDACQUIRER" value="29"></td>
                   </tr>
                   <tr>
                     <td>COMMERCE:</td>
-                    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="6573"></td>
+                    <td><input name="IDCOMMERCE" id="IDCOMMERCE" value="5278"></td>
                   </tr>
                   <tr>
                     <td>XML:</td>
