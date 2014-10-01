@@ -1422,9 +1422,6 @@ table {
 	#cover_container_index {	
 		height:680px;
 	}
-	#book {
-		padding-top: 0;
-	}
 	
 	#book_button {
 		position:inherit;
@@ -1442,6 +1439,11 @@ table {
 			// margin:0 auto;
 			// float: none;
 		}
+
+		#book {
+			padding-top: 0;
+		}
+		
 	}
 	
 	#book {

@@ -1108,9 +1108,6 @@ table thead {
   #cover_container_index {
     height: 680px; }
 
-  #book {
-    padding-top: 0; }
-
   #book_button {
     position: inherit;
     width: 100%;
@@ -1119,6 +1116,9 @@ table thead {
   #form_box {
     width: 100%;
     position: static; }
+
+  #cover #book {
+    padding-top: 0; }
 
   #book .inline-list a {
     text-transform: uppercase;
