@@ -116,51 +116,34 @@ class Vpost
         }
       }
 
+     
      ee()->db->select('*');
      ee()->db->where('serial',$transport);
      $query = ee()->db->get('exp_hotel_products');
      if($query != null){
        foreach($query->result() as $row){
          $purchaseAmount = $purchaseAmount + $row->cost;
-         $transport = $row->name;
-         if($transport==""){
-            $transport = 'Servicio No Contratado';
-         }
        }
      }
-     else{
-         $transport = 'Servicio No Contratado';
-     }
+
      ee()->db->select('*');
      ee()->db->where('serial',$all_meals);
      $query = ee()->db->get('exp_hotel_products');
      if($query != null){
        foreach($query->result() as $row){
          $purchaseAmount = $purchaseAmount + $row->cost;
-         $all_meals = $row->name;
-         if($all_meals==""){
-            $all_meals = 'Servicio No Contratado';
-         }
        }
-     }  
-     else{
-         $all_meals = 'Servicio No Contratado';
-     }
+     } 
+
      ee()->db->select('*');
      ee()->db->where('serial',$tow_back_service);
      $query = ee()->db->get('exp_hotel_products');
      if($query != null){
        foreach($query->result() as $row){
          $purchaseAmount = $purchaseAmount + $row->cost;
-         $tow_back_service = $row->name;
-         if($tow_back_service==""){
-            $tow_back_service = 'Servicio No Contratado';
-         }
        }
      }
-     else{
-         $tow_back_service = 'Servicio No Contratado';
-     }
+     
      $data = array(
           'first_name'=> $billingFirstName,
           'last_name'=> $billingLastName,
@@ -334,10 +317,10 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        //if($arrayOut['authorizationResult'] == "00"){
+        //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+        if($arrayOut['authorizationResult'] == "05"){
           // ingresar codigo nuevo aqui
-          /*
+          
           $data = array(
                          'validate' => 'yes'
                       );
@@ -376,8 +359,9 @@ class Vpost
             //return $request;
           }
           else {
-            return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        }*/
+            //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+            return "Han ocurrido problemas con la transacción ";
+        }
       } 
     }
 }
