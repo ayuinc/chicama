@@ -210,12 +210,19 @@ class Vpost
            $arrayOut['SESSIONKEY']="";
            # Vector
            $VI = "F20CA985A4B34DEC";
-           $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
+           /*$llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
             "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDTJt+hUZiShEKFfs7DShsXCkoq\n".
             "TEjv0SFkTM04qHyHFU90Da8Ep1F0gI2SFpCkLmQtsXKOrLrQTF0100dL/gDQlLt0\n".
             "Ut8kM/PRLEM5thMPqtPq6G1GTjqmcsPzUUL18+tYwN3xFi4XBog4Hdv0ml1SRkVO\n".
             "DRr1jPeilfsiFwiO8wIDAQAB\n".
-            "-----END PUBLIC KEY-----";
+            "-----END PUBLIC KEY-----";*/
+
+           $llaveVPOSCryptoPub = "-----BEGIN PUBLIC KEY-----\n".
+            "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0t0Cnbne8gQoeGK4nG6O3zfwh\n".
+            "q8u9Wp5zHjyVYbvx2zudSOlBnJ5qU74BcTGypbn6W7jjvSNE7AmncOAVh4RxuRXO\n".
+            "+bINFIyQ7/ErH/v1YpDFk8knC/NuvFpfHqhJ/5j2I8y+WmyF0MZmGtm074nUGv4d\n".
+            "qlbUMT9aYUQ+RzMO7QIDAQAB\n".
+            "-----END PUBLIC KEY------";
 
              $llavePrivadaFirmaComercio = "-----BEGIN RSA PRIVATE KEY-----\n".
             "MIICWwIBAAKBgQCw9S8vnGIW04tG4N98f0HXoMJlB6K9v2iJZlsFYNtP6Xv6Ax5d\n".
@@ -327,12 +334,19 @@ class Vpost
     "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
     "-----END RSA PRIVATE KEY-----";
 
-     $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
+    /*$llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
     "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
     "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
     "pIs4aIDXarTYJGWlyQIDAQAB\n".
-    "-----END PUBLIC KEY-----";
+    "-----END PUBLIC KEY-----";*/
+
+    $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
+    "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtvXnikeSS+H/Qs/51iL3ZYPfz\n".
+    "KW94WUAz7IdZIOIcuG1zLIR3kUNUc/vdSmW120dwkIleB6pl4cVT5nDewBFJCzTS\n".
+    "W6jGaWaryzl7xS3ZToKTHpVeQr3avN7H+Om9TfsccY7gBV3IOIauTg9xIpDjIg52\n".
+    "fUcfyPq+Bhw0cWkDUQIDAQAB\n".
+    "-----END PUBLIC KEY------";
 
      $arrayIn['IDACQUIRER'] =$IDACQUIRER;
      $arrayIn['IDCOMMERCE'] = $IDCOMMERCE;
