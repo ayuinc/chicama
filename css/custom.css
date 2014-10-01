@@ -1077,7 +1077,7 @@ table thead {
   text-decoration: underline; }
 
 .orbit-container {
-  min-height: 32rem; }
+  min-height: 15em; }
   .orbit-container img {
     margin: 0 auto; }
   .orbit-container .orbit-slide-number {
