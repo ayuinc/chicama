@@ -552,7 +552,7 @@ class Infhotel
             }
 
             ee()->db->select('*');
-            ee()->db->where('serial', $row->lunch_and_dinne);
+            ee()->db->where('serial', $row->lunch_and_dinner);
             $query = ee()->db->get('exp_hotel_products');
             if($query != null){
               foreach($query->result() as $row){
@@ -561,7 +561,7 @@ class Infhotel
             } 
 
             ee()->db->select('*');
-            ee()->db->where('serial',$row->zodiacs);
+            ee()->db->where('serial', $row->zodiacs);
             $query = ee()->db->get('exp_hotel_products');
             if($query != null){
               foreach($query->result() as $row){
