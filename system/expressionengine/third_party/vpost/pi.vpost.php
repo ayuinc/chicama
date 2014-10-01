@@ -204,7 +204,7 @@ class Vpost
            $array_send['language']="SP";
            $array_send['reserved1']="840"; // codigo de moneda nacional
            $array_send['reserved2']=$purchaseAmount; //mismo  monto quee purchaseAmount en nuestro caso
-           $array_send['reserved3']="6573"; // id de comercio adicional
+           $array_send['reserved3']="5278"; // id de comercio adicional
            $arrayOut['XMLREQ']="";
            $arrayOut['DIGITALSIGN']="";
            $arrayOut['SESSIONKEY']="";
@@ -334,7 +334,7 @@ class Vpost
      $VI = "F20CA985A4B34DEC";
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        return $id."Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+        return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
         //if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
           /*
