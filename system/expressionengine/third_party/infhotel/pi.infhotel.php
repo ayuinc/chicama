@@ -543,9 +543,9 @@ class Infhotel
           foreach($query->result() as $row){
             ee()->db->select('*');
             ee()->db->where('serial', $row->transport);
-            $query = ee()->db->get('exp_hotel_products');
-            if($query != null){
-              foreach($query->result() as $row_transport){
+            $query_transport = ee()->db->get('exp_hotel_products');
+            if($query_transport != null){
+              foreach($query_transport->result() as $row_transport){
                 var_dump($row_transport);
                 $transport = $row_transport->name;
               }
@@ -553,21 +553,21 @@ class Infhotel
 
             ee()->db->select('*');
             ee()->db->where('serial', $row->lunch_and_dinner);
-            $query = ee()->db->get('exp_hotel_products');
+            $query_lunch_and_dinner = ee()->db->get('exp_hotel_products');
             if($query != null){
-              foreach($query->result() as $row_lunch_and_dinner){
+              foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
                 var_dump($row_lunch_and_dinner);
-                $lunch_and_dinner = $row->name;
+                $lunch_and_dinner = $row_lunch_and_dinner->name;
               }
             } 
 
             ee()->db->select('*');
             ee()->db->where('serial', $row->zodiacs);
-            $query = ee()->db->get('exp_hotel_products');
-            if($query != null){
+            $query_zodiacs = ee()->db->get('exp_hotel_products');
+            if($query_zodiacs != null){
               foreach($query->result() as $row_zodiacs){
                 var_dump($row_zodiacs);
-                $zodiacs = $row->name;
+                $zodiacs = $row_zodiacs->name;
               }
             }
           }
