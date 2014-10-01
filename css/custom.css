@@ -1141,7 +1141,7 @@ table thead {
     padding-top: 0; }
 
   #cover #book {
-    padding-top: 0; }
+    padding-top: 1rem; }
 
   #book .inline-list a {
     text-transform: uppercase;
