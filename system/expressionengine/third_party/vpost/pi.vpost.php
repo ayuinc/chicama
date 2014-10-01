@@ -318,7 +318,7 @@ class Vpost
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
         //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-        if($arrayOut['authorizationResult'] == "00"){
+        if($arrayOut['authorizationResult'] == "05"){
           // ingresar codigo nuevo aqui
           
           $data = array(
@@ -359,7 +359,8 @@ class Vpost
             //return $request;
           }
           else {
-            return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+            //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+            return "Han ocurrido problemas con la transacción ";
         }
       } 
     }
