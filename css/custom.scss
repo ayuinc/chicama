@@ -1433,6 +1433,13 @@ table {
 		position: static;
 	}
 	
+	.cover_container {
+
+		#book {
+			padding-top: 0;
+		}
+		
+	}	
 	#cover {
 		.inline-list {
 			// width:210px;
@@ -1440,10 +1447,6 @@ table {
 			// float: none;
 		}
 
-		#book {
-			padding-top: 0;
-		}
-		
 	}
 	
 	#book {

@@ -1117,7 +1117,7 @@ table thead {
     width: 100%;
     position: static; }
 
-  #cover #book {
+  .cover_container #book {
     padding-top: 0; }
 
   #book .inline-list a {
