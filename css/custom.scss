@@ -1419,12 +1419,12 @@ table {
 
 @media only screen and (max-width: 40em) {
 
-	// .off-canvas-wrap {
-	// 	position: fixed;
-	// }
-	// .main-section {
-	// 	overflow: scroll;
-	// }
+	.off-canvas-wrap {
+		position: fixed;
+	}
+	.main-section {
+		overflow: scroll;
+	}
 
 	#cover_container_index {	
 		height:680px;
