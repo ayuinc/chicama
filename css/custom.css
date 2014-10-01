@@ -1109,7 +1109,8 @@ table thead {
     position: fixed; }
 
   .main-section {
-    overflow: scroll; }
+    overflow: scroll;
+    padding-bottom: 2rem; }
 
   #cover_container_index {
     height: 680px; }
