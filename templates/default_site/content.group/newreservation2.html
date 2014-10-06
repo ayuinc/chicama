@@ -208,8 +208,8 @@
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
 
-    checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
-    checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
+    checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:000";
+    checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:000";
     var data = {
         "FLlegada": checkin_date,
           "FSalida": checkout_date,
@@ -335,7 +335,7 @@
           simple_garden = simple_garden + 1;
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
-          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100)).toFixed(2)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -347,22 +347,22 @@
               var temp = {
                 "TCodigoHabitacion" : "rmsg01"
               };
-              //summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-              summary_cost_final="Garden View Single <br>(1 person) <span>$ "+(100)+".00 /night</span>";
+              //summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+"</span>";
+              summary_cost_final="Garden View Single <br>(1 person) <span>$ "+(100)+" /night</span>";
             break;
             case "130":
               var temp = {
                 "TCodigoHabitacion" : "rmdg01"
               };
-              //summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-              summary_cost_final="Garden View Double <br>(2 persons) <span>$ "+(130)+".00 /night</span>";
+              //summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+"</span>";
+              summary_cost_final="Garden View Double <br>(2 persons) <span>$ "+(130)+" /night</span>";
             break;
             case "160":
               var temp = {
                 "TCodigoHabitacion" : "rmtg01"
               };
-              //summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-              summary_cost_final="Garden View Triple <br>(3 persons) <span>$ "+(160)+".00 /night</span>";
+              //summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+"</span>";
+              summary_cost_final="Garden View Triple <br>(3 persons) <span>$ "+(160)+" /night</span>";
             break;
           }
           $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -395,7 +395,7 @@
           doble_garden = doble_garden + 1;
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
-          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100)).toFixed(2)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -407,22 +407,22 @@
               var temp = {
                 "TCodigoHabitacion" : "rmsg02"
               };
-              //summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-              summary_cost_final="Garden View Single <br>(1 person) <span>$ "+(100)+".00 /night</span>";
+              //summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+"</span>";
+              summary_cost_final="Garden View Single <br>(1 person) <span>$ "+(100)+" /night</span>";
             break;
             case "130":
               var temp = {
                 "TCodigoHabitacion" : "rmdg02"
               };
-              //summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-              summary_cost_final="Garden View Double <br>(2 persons) <span>$ "+(130)+".00 /night</span>";
+              //summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+"</span>";
+              summary_cost_final="Garden View Double <br>(2 persons) <span>$ "+(130)+" /night</span>";
             break;
             case "160":
               var temp = {
                 "TCodigoHabitacion" : "rmtg02"
               };
-              //summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-              summary_cost_final="Garden View Triple <br>(3 persons) <span>$ "+(160)+".00 /night</span>";
+              //summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+"</span>";
+              summary_cost_final="Garden View Triple <br>(3 persons) <span>$ "+(160)+" /night</span>";
             break;
           }
           $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -454,7 +454,7 @@
           triple_garden =triple_garden + 1;
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
-          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100)).toFixed(2)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+Math.round((parseInt(total_summary)*dias)/(rooms_num*100) * 100) / 100+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -466,22 +466,22 @@
               var temp = {
                 "TCodigoHabitacion" : "rmsg03"
               };
-              //summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+".00</span>";
-              summary_cost_final="Garden View Single <br>(1 person) <span>$ "+(100)+".00 /night</span>";
+              //summary_cost_final="Garden View Single <br>(1 person) for "+dias+" nights <span>$ "+(100*dias)+"</span>";
+              summary_cost_final="Garden View Single <br>(1 person) <span>$ "+(100)+" /night</span>";
             break;
             case "130":
               var temp = {
                 "TCodigoHabitacion" : "rmdg03"
               };
-              //summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+".00</span>";
-              summary_cost_final="Garden View Double <br>(2 persons) <span>$ "+(130)+".00 /night</span>";
+              //summary_cost_final="Garden View Double <br>(2 persons) for "+dias+" nights <span>$ "+(130*dias)+"</span>";
+              summary_cost_final="Garden View Double <br>(2 persons) <span>$ "+(130)+" /night</span>";
             break;
             case "160":
               var temp = {
                 "TCodigoHabitacion" : "rmtg03"
               };
-              //summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+".00</span>";
-              summary_cost_final="Garden View Triple <br>(3 persons) <span>$ "+(160)+".00 /night</span>";
+              //summary_cost_final="Garden View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(160*dias)+"</span>";
+              summary_cost_final="Garden View Triple <br>(3 persons) <span>$ "+(160)+" /night</span>";
             break;
           }
           $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -513,7 +513,7 @@
           simple_ocean =simple_ocean + 1;
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
-          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100)).toFixed(2)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -525,22 +525,22 @@
               var temp = {
                 "TCodigoHabitacion" : "rmso05"
               };
-              //summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+".00</span>";
-              summary_cost_final="Ocean View Single <br>(1 person) <span>$ "+(110)+".00 /night</span>";
+              //summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+"</span>";
+              summary_cost_final="Ocean View Single <br>(1 person) <span>$ "+(110)+" /night</span>";
             break;
             case "140":
               var temp = {
                 "TCodigoHabitacion" : "rmdo05"
               };
-              //summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-              summary_cost_final="Ocean View Double <br>(2 persons) <span>$ "+(140)+".00 /night</span>";
+              //summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+"</span>";
+              summary_cost_final="Ocean View Double <br>(2 persons) <span>$ "+(140)+" /night</span>";
             break;
             case "180":
               var temp = {
                 "TCodigoHabitacion" : "rmto05"
               };
-              //summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-              summary_cost_final="Ocean View Triple <br>(3 persons) <span>$ "+(180)+".00 /night</span>";
+              //summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+"</span>";
+              summary_cost_final="Ocean View Triple <br>(3 persons) <span>$ "+(180)+" /night</span>";
             break;
           }
           $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -572,7 +572,7 @@
           doble_ocean =doble_ocean+ 1;
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
-          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100)).toFixed(2)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -584,22 +584,22 @@
               var temp = {
                 "TCodigoHabitacion" : "rmso06"
               };
-              //summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+".00</span>";
-              summary_cost_final="Ocean View Single <br>(1 person) <span>$ "+(110)+".00 /night</span>";
+              //summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+"</span>";
+              summary_cost_final="Ocean View Single <br>(1 person) <span>$ "+(110)+" /night</span>";
             break;
             case "140":
               var temp = {
                 "TCodigoHabitacion" : "rmdo06"
               };
-              //summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-              summary_cost_final="Ocean View Double <br>(2 persons) <span>$ "+(140)+".00 /night</span>";
+              //summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+"</span>";
+              summary_cost_final="Ocean View Double <br>(2 persons) <span>$ "+(140)+" /night</span>";
             break;
             case "180":
               var temp = {
                 "TCodigoHabitacion" : "rmto06"
               };
-              //summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-              summary_cost_final="Ocean View Triple <br>(3 persons) <span>$ "+(180)+".00 /night</span>";
+              //summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+"</span>";
+              summary_cost_final="Ocean View Triple <br>(3 persons) <span>$ "+(180)+" /night</span>";
             break;
           }
           $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -633,7 +633,7 @@
           triple_ocean =triple_ocean + 1;
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
-          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+".00</span>");
+          $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100)).toFixed(2)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100)).toFixed(2)+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -645,22 +645,22 @@
               var temp = {
                 "TCodigoHabitacion" : "rmso07"
               };
-              //summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+".00</span>";
-              summary_cost_final="Ocean View Single <br>(1 person) <span>$ "+(110)+".00 /night</span>";
+              //summary_cost_final="Ocean View Single <br>(1 person) for "+dias+" nights <span>$ "+(110*dias)+"</span>";
+              summary_cost_final="Ocean View Single <br>(1 person) <span>$ "+(110)+" /night</span>";
             break;
             case "140":
               var temp = {
                 "TCodigoHabitacion" : "rmdo07"
               };
-              //summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+".00</span>";
-              summary_cost_final="Ocean View Double <br>(2 persons) <span>$ "+(140)+".00 /night</span>";
+              //summary_cost_final="Ocean View Double <br>(2 persons) for "+dias+" nights <span>$ "+(140*dias)+"</span>";
+              summary_cost_final="Ocean View Double <br>(2 persons) <span>$ "+(140)+" /night</span>";
             break;
             case "180":
               var temp = {
                 "TCodigoHabitacion" : "rmto07"
               };
-              //summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+".00</span>";
-              summary_cost_final="Ocean View Triple <br>(3 persons) <span>$ "+(180)+".00 /night</span>";
+              //summary_cost_final="Ocean View Triple <br>(3 persons) for "+dias+" nights <span>$ "+(180*dias)+"</span>";
+              summary_cost_final="Ocean View Triple <br>(3 persons) <span>$ "+(180)+" /night</span>";
             break;
           }
           $("#title_room"+summary_room+"_summary").html("ROOM "+summary_room+":");
@@ -730,7 +730,7 @@
       $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
       $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
       var total_summary = $("#rooms_input").val();
-      $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+      $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
       $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100*dias)).toFixed(2)+"</span>");
       $("#summary_input").val($("#reserva_summary").html());
       $("#"+sumary).html(text);
@@ -787,7 +787,7 @@
         var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100*dias)).toFixed(2)+"</span>");
         $("#summary_input").val($("#reserva_summary").html());      
       }
@@ -797,123 +797,123 @@
         $(buttom).addClass("active"); //deselect all checkboxes with class "checkbox1"  
         if(sumary == "lunch_and_dinner_summary"){
           switch($("#encabezado_lunch_and_dinner").html()){
-            case "$60.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld01","Lunch And Dinner <br>(1 person) <span>$60.00</span>");
+            case "$60":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld01","Lunch And Dinner <br>(1 person) <span>$60</span>");
             break;
-            case "$120.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld02","Lunch And Dinner <br>(2 persons) <span>$120.00</span>");
+            case "$120":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld02","Lunch And Dinner <br>(2 persons) <span>$120</span>");
             break;
-            case "$180.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld03","Lunch And Dinner <br>(3 persons) <span>$180.00</span>");
+            case "$180":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld03","Lunch And Dinner <br>(3 persons) <span>$180</span>");
             break;
-            case "$240.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld04","Lunch And Dinner <br>(4 persons) <span>$240.00</span>");
+            case "$240":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld04","Lunch And Dinner <br>(4 persons) <span>$240</span>");
             break;
-            case "$300.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld05","Lunch And Dinner <br>(5 persons) <span>$300.00</span>");
+            case "$300":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld05","Lunch And Dinner <br>(5 persons) <span>$300</span>");
             break;
-            case "$360.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld06","Lunch And Dinner <br>(6 persons) <span>$360.00</span>");
+            case "$360":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld06","Lunch And Dinner <br>(6 persons) <span>$360</span>");
             break;
-            case "$420.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld07","Lunch And Dinner <br>(7 persons) <span>$420.00</span>");
+            case "$420":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld07","Lunch And Dinner <br>(7 persons) <span>$420</span>");
             break;
-            case "$480.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld08","Lunch And Dinner <br>(8 persons) <span>$480.00</span>");
+            case "$480":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld08","Lunch And Dinner <br>(8 persons) <span>$480</span>");
             break;
-            case "$540.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld09","Lunch And Dinner <br>(9 persons) <span>$540.00</span>");
+            case "$540":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld09","Lunch And Dinner <br>(9 persons) <span>$540</span>");
             break;
-            case "$600.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld10","Lunch And Dinner <br>(10 person) <span>$600.00</span>");
+            case "$600":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld10","Lunch And Dinner <br>(10 person) <span>$600</span>");
             break;
-            case "$660.00":
-            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld11","Lunch And Dinner <br>(11 person) <span>$660.00</span>");
+            case "$660":
+            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld11","Lunch And Dinner <br>(11 person) <span>$660</span>");
             break;
-            case "$720.00":
-           add_ons_click(sumary,"#lunch_and_dinner_serial", "adld12","Lunch And Dinner <br>(12 person) <span>$720.00</span>");
+            case "$720":
+           add_ons_click(sumary,"#lunch_and_dinner_serial", "adld12","Lunch And Dinner <br>(12 person) <span>$720</span>");
             break;
           }
         }
         else{
           if(sumary == "transport_summary"){
             switch($("#encabezado_transport").html()){
-              case "$48.00":
-              add_ons_click(sumary,"#transport_serial","adtp01","Transport <br>(1 person) <span>$48.00</span>");
+              case "$48":
+              add_ons_click(sumary,"#transport_serial","adtp01","Transport <br>(1 person) <span>$48</span>");
               break;
-              case "$60.00":
-              add_ons_click(sumary,"#transport_serial","adtp02","Transport <br>(2 persons) <span>$60.00</span>");
+              case "$60":
+              add_ons_click(sumary,"#transport_serial","adtp02","Transport <br>(2 persons) <span>$60</span>");
               break;
-              case "$75.00":
-              add_ons_click(sumary,"#transport_serial","adtp03","Transport <br>(3 persons) <span>$75.00</span>");
+              case "$75":
+              add_ons_click(sumary,"#transport_serial","adtp03","Transport <br>(3 persons) <span>$75</span>");
               break;
-              case "$100.00":
-              add_ons_click(sumary,"#transport_serial","adtp04","Transport <br>(4 persons) <span>$100.00</span>");
+              case "$100":
+              add_ons_click(sumary,"#transport_serial","adtp04","Transport <br>(4 persons) <span>$100</span>");
               break;
-              case "$100.00":
-              add_ons_click(sumary,"#transport_serial","adtp05","Transport <br>(5 persons) <span>$100.00</span>");
+              case "$100":
+              add_ons_click(sumary,"#transport_serial","adtp05","Transport <br>(5 persons) <span>$100</span>");
               break;
-              case "$102.00":
-              add_ons_click(sumary,"#transport_serial","adtp06","Transport <br>(6 persons) <span>$102.00</span>");
+              case "$102":
+              add_ons_click(sumary,"#transport_serial","adtp06","Transport <br>(6 persons) <span>$102</span>");
               break;
-              case "$150.00":
-              add_ons_click(sumary,"#transport_serial","adtp07","Transport <br>(7 persons) <span>$150.00</span>");
+              case "$150":
+              add_ons_click(sumary,"#transport_serial","adtp07","Transport <br>(7 persons) <span>$150</span>");
               break;
-              case "$162.00":
-              add_ons_click(sumary,"#transport_serial","adtp08","Transport <br>(8 persons) <span>$162.00</span>");
+              case "$162":
+              add_ons_click(sumary,"#transport_serial","adtp08","Transport <br>(8 persons) <span>$162</span>");
               break;
-              case "$177.00":
-              add_ons_click(sumary,"#transport_serial","adtp09","Transport <br>(9 persons) <span>$177.00</span>");
+              case "$177":
+              add_ons_click(sumary,"#transport_serial","adtp09","Transport <br>(9 persons) <span>$177</span>");
               break;
-              case "$202.00":
-              add_ons_click(sumary,"#transport_serial","adtp10","Transport <br>(10 persons) <span>$202.00</span>");
+              case "$202":
+              add_ons_click(sumary,"#transport_serial","adtp10","Transport <br>(10 persons) <span>$202</span>");
               break;
-              case "$202.00":
-              add_ons_click(sumary,"#transport_serial","adtp11","Transport <br>(11 persons) <span>$202.00</span>");
+              case "$202":
+              add_ons_click(sumary,"#transport_serial","adtp11","Transport <br>(11 persons) <span>$202</span>");
               break;
-              case "$204.00":
-              add_ons_click(sumary,"#transport_serial","adtp12","Transport <br>(12 persons) <span>$204.00</span>");
+              case "$204":
+              add_ons_click(sumary,"#transport_serial","adtp12","Transport <br>(12 persons) <span>$204</span>");
               break;
             }
           }
           else{
             if(sumary == "tow_back_service_summary"){
               switch($("#encabezado_tow_back_service").html()){
-              case "$30.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc01","Tow back service <br>(1 person) <span>$30.00</span>");
+              case "$30":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc01","Tow back service <br>(1 person) <span>$30</span>");
               break;
-              case "$60.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc02","Tow back service <br>(2 persons) <span>$60.00</span>");
+              case "$60":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc02","Tow back service <br>(2 persons) <span>$60</span>");
               break;
-              case "$90.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc03","Tow back service <br>(3 persons) <span>$90.00</span>");
+              case "$90":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc03","Tow back service <br>(3 persons) <span>$90</span>");
               break;
-              case "$120.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc04","Tow back service <br>(4 persons) <span>$120.00</span>");
+              case "$120":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc04","Tow back service <br>(4 persons) <span>$120</span>");
               break;
-              case "$150.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc05","Tow back service <br>(5 persons) <span>$150.00</span>");
+              case "$150":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc05","Tow back service <br>(5 persons) <span>$150</span>");
               break;
-              case "$180.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc06","Tow back service <br>(6 persons) <span>$180.00</span>");
+              case "$180":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc06","Tow back service <br>(6 persons) <span>$180</span>");
               break;
-              case "$210.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc07","Tow back service <br>(7 persons) <span>$210.00</span>");
+              case "$210":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc07","Tow back service <br>(7 persons) <span>$210</span>");
               break;
-              case "$240.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc08","Tow back service <br>(8 persons) <span>$240.00</span>");
+              case "$240":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc08","Tow back service <br>(8 persons) <span>$240</span>");
               break;
-              case "$270.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc09","Tow back service <br>(9 persons) <span>$270.00</span>");
+              case "$270":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc09","Tow back service <br>(9 persons) <span>$270</span>");
               break;
-              case "$300.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc10","Tow back service <br>(10 persons) <span>$300.00</span>");
+              case "$300":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc10","Tow back service <br>(10 persons) <span>$300</span>");
               break;
-              case "$330.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc11","Tow back service <br>(11 persons) <span>$330.00</span>");
+              case "$330":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc11","Tow back service <br>(11 persons) <span>$330</span>");
               break;
-              case "$360.00":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc12","Tow back service <br>(12 persons) <span>$360.00</span>");
+              case "$360":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc12","Tow back service <br>(12 persons) <span>$360</span>");
               break;
               }
             }
@@ -922,7 +922,7 @@
         var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
         $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+".00</span>");
+        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseFloat((parseInt(total_summary))/(100*dias)).toFixed(2)+"</span>");
         $("#summary_input").val($("#reserva_summary").html());
       }
@@ -932,15 +932,15 @@
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
     switch(sumary){
       case "lunch_and_dinner_summary":
-        $(encabezado).html("$60.00");
+        $(encabezado).html("$60");
         $(input).val("6000");
       break;
       case "transport_summary":
-        $(encabezado).html("$48.00");
+        $(encabezado).html("$48");
         $(input).val("4800");
       break;
       case "tow_back_service_summary":
-        $(encabezado).html("$30.00");
+        $(encabezado).html("$30");
         $(input).val("3000");
       break;
     }
@@ -953,156 +953,156 @@
         case "1":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(1 person)<span>$60.00</span>","#lunch_and_dinner_serial","adld01");
+              add_ons_dropdown(encabezado,"$60", input,"6000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(1 person)<span>$60</span>","#lunch_and_dinner_serial","adld01");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$48.00", input,"4800", check_box, purchase_amount, sumary,"Transport <br>(1 person)<span>$48.00</span>","#transport_serial","adtp01");
+              add_ons_dropdown(encabezado,"$48", input,"4800", check_box, purchase_amount, sumary,"Transport <br>(1 person)<span>$48</span>","#transport_serial","adtp01");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$30.00", input,"3000", check_box, purchase_amount, sumary,"Tow back service <br>(1 person)<span>$30.00</span>","#tow_back_service_serial","adzc01");
+              add_ons_dropdown(encabezado,"$30", input,"3000", check_box, purchase_amount, sumary,"Tow back service <br>(1 person)<span>$30</span>","#tow_back_service_serial","adzc01");
             break;
           }
           break;
         case "2":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$120.00", input,"12000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(2 persons)<span>$120.00</span>","#lunch_and_dinner_serial","adld02");
+              add_ons_dropdown(encabezado,"$120", input,"12000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(2 persons)<span>$120</span>","#lunch_and_dinner_serial","adld02");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Transport <br>(2 persons)<span>$60.00</span>","#transport_serial","adtp02");
+              add_ons_dropdown(encabezado,"$60", input,"6000", check_box, purchase_amount, sumary,"Transport <br>(2 persons)<span>$60</span>","#transport_serial","adtp02");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$60.00", input,"6000", check_box, purchase_amount, sumary,"Tow back service <br>(2 persons)<span>$60.00</span>","#tow_back_service_serial","adzc02");
+              add_ons_dropdown(encabezado,"$60", input,"6000", check_box, purchase_amount, sumary,"Tow back service <br>(2 persons)<span>$60</span>","#tow_back_service_serial","adzc02");
             break;
           }
           break;
         case "3":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$180.00", input,"18000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(3 persons)<span>$180.00</span>","#lunch_and_dinner_serial","adld03");
+              add_ons_dropdown(encabezado,"$180", input,"18000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(3 persons)<span>$180</span>","#lunch_and_dinner_serial","adld03");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$75.00", input,"7500", check_box, purchase_amount, sumary,"Transport <br>(3 persons)<span>$75.00</span>","#transport_serial","adtp03");
+              add_ons_dropdown(encabezado,"$75", input,"7500", check_box, purchase_amount, sumary,"Transport <br>(3 persons)<span>$75</span>","#transport_serial","adtp03");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$90.00", input,"9000", check_box, purchase_amount, sumary,"Tow back service <br>(3 persons)<span>$90.00</span>","#tow_back_service_serial","adzc03");
+              add_ons_dropdown(encabezado,"$90", input,"9000", check_box, purchase_amount, sumary,"Tow back service <br>(3 persons)<span>$90</span>","#tow_back_service_serial","adzc03");
             break;
           }
         break;
         case "4":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$240.00", input,"24000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(4 persons)<span>$240.00</span>","#lunch_and_dinner_serial","adld04");
+              add_ons_dropdown(encabezado,"$240", input,"24000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(4 persons)<span>$240</span>","#lunch_and_dinner_serial","adld04");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$100.00", input,"10000", check_box, purchase_amount, sumary,"Transport <br>(4 persons)<span>$100.00</span>","#transport_serial","adtp04");
+              add_ons_dropdown(encabezado,"$100", input,"10000", check_box, purchase_amount, sumary,"Transport <br>(4 persons)<span>$100</span>","#transport_serial","adtp04");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$120.00", input,"12000", check_box, purchase_amount, sumary,"Tow back service <br>(4 persons)<span>$120.00</span>","#tow_back_service_serial","adzc04");
+              add_ons_dropdown(encabezado,"$120", input,"12000", check_box, purchase_amount, sumary,"Tow back service <br>(4 persons)<span>$120</span>","#tow_back_service_serial","adzc04");
             break;
           }
         break;
         case "5":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$300.00", input,"30000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(5 persons)<span>$300.00</span>","#lunch_and_dinner_serial","adld05");
+              add_ons_dropdown(encabezado,"$300", input,"30000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(5 persons)<span>$300</span>","#lunch_and_dinner_serial","adld05");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$100.00", input,"10000", check_box, purchase_amount, sumary,"Transport <br>(5 persons)<span>$100.00</span>","#transport_serial","adtp05");
+              add_ons_dropdown(encabezado,"$100", input,"10000", check_box, purchase_amount, sumary,"Transport <br>(5 persons)<span>$100</span>","#transport_serial","adtp05");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$150.00", input,"15000", check_box, purchase_amount, sumary,"Tow back service <br>(5 persons)<span>$150.00</span>","#tow_back_service_serial","adzc05");
+              add_ons_dropdown(encabezado,"$150", input,"15000", check_box, purchase_amount, sumary,"Tow back service <br>(5 persons)<span>$150</span>","#tow_back_service_serial","adzc05");
             break;
           }
         break;
         case "6":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$360.00", input,"36000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(6 persons)<span>$360.00</span>","#lunch_and_dinner_serial","adld06");
+              add_ons_dropdown(encabezado,"$360", input,"36000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(6 persons)<span>$360</span>","#lunch_and_dinner_serial","adld06");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$102.00", input,"10200", check_box, purchase_amount, sumary,"Transport <br>(6 persons)<span>$102.00</span>","#transport_serial","adtp06");
+              add_ons_dropdown(encabezado,"$102", input,"10200", check_box, purchase_amount, sumary,"Transport <br>(6 persons)<span>$102</span>","#transport_serial","adtp06");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$180.00", input,"18000", check_box, purchase_amount, sumary,"Tow back service <br>(6 persons)<span>$180.00</span>","#tow_back_service_serial","adzc06");
+              add_ons_dropdown(encabezado,"$180", input,"18000", check_box, purchase_amount, sumary,"Tow back service <br>(6 persons)<span>$180</span>","#tow_back_service_serial","adzc06");
             break;
           }
         break;
         case "7":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$420.00", input,"42000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(7 persons)<span>$420.00</span>","#lunch_and_dinner_serial","adld07");
+              add_ons_dropdown(encabezado,"$420", input,"42000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(7 persons)<span>$420</span>","#lunch_and_dinner_serial","adld07");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$150.00", input,"15000", check_box, purchase_amount, sumary,"Transport <br>(7 persons)<span>$150.00</span>","#transport_serial","adtp07");
+              add_ons_dropdown(encabezado,"$150", input,"15000", check_box, purchase_amount, sumary,"Transport <br>(7 persons)<span>$150</span>","#transport_serial","adtp07");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$210.00", input,"21000", check_box, purchase_amount, sumary,"Tow back service <br>(7 persons)<span>$210.00</span>","#tow_back_service_serial","adzc07");
+              add_ons_dropdown(encabezado,"$210", input,"21000", check_box, purchase_amount, sumary,"Tow back service <br>(7 persons)<span>$210</span>","#tow_back_service_serial","adzc07");
             break;
           }
         break;
         case "8":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$480.00", input,"48000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(8 persons)<span>$480.00</span>","#lunch_and_dinner_serial","adld08");
+              add_ons_dropdown(encabezado,"$480", input,"48000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(8 persons)<span>$480</span>","#lunch_and_dinner_serial","adld08");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$162.00", input,"16200", check_box, purchase_amount, sumary,"Transport <br>(8 persons)<span>$162.00</span>","#transport_serial","adtp08");
+              add_ons_dropdown(encabezado,"$162", input,"16200", check_box, purchase_amount, sumary,"Transport <br>(8 persons)<span>$162</span>","#transport_serial","adtp08");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$240.00", input,"24000", check_box, purchase_amount, sumary,"Tow back service <br>(8 persons)<span>$240.00</span>","#tow_back_service_serial","adzc08");
+              add_ons_dropdown(encabezado,"$240", input,"24000", check_box, purchase_amount, sumary,"Tow back service <br>(8 persons)<span>$240</span>","#tow_back_service_serial","adzc08");
             break;
           }
         break;
         case "9":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$540.00", input,"54000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(9 persons)<span>$540.00</span>","#lunch_and_dinner_serial","adld09");
+              add_ons_dropdown(encabezado,"$540", input,"54000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(9 persons)<span>$540</span>","#lunch_and_dinner_serial","adld09");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$177.00", input,"17700", check_box, purchase_amount, sumary,"Transport <br>(9 persons)<span>$177.00</span>","#transport_serial","adtp09");
+              add_ons_dropdown(encabezado,"$177", input,"17700", check_box, purchase_amount, sumary,"Transport <br>(9 persons)<span>$177</span>","#transport_serial","adtp09");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$270.00", input,"27000", check_box, purchase_amount, sumary,"Tow back service <br>(9 persons)<span>$270.00</span>","#tow_back_service_serial","adzc09");
+              add_ons_dropdown(encabezado,"$270", input,"27000", check_box, purchase_amount, sumary,"Tow back service <br>(9 persons)<span>$270</span>","#tow_back_service_serial","adzc09");
             break;
           }
         break;
         case "10":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"600.00", input,"60000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(10 persons)<span>$600.00</span>","#lunch_and_dinner_serial","adld10");
+              add_ons_dropdown(encabezado,"600", input,"60000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(10 persons)<span>$600</span>","#lunch_and_dinner_serial","adld10");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$202.00", input,"20200", check_box, purchase_amount, sumary,"Transport <br>(10 persons)<span>$202.00</span>","#transport_serial","adtp10");
+              add_ons_dropdown(encabezado,"$202", input,"20200", check_box, purchase_amount, sumary,"Transport <br>(10 persons)<span>$202</span>","#transport_serial","adtp10");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$300.00", input,"30000", check_box, purchase_amount, sumary,"Tow back service <br>(10 persons)<span>$300.00</span>","#tow_back_service_serial","adzc10");
+              add_ons_dropdown(encabezado,"$300", input,"30000", check_box, purchase_amount, sumary,"Tow back service <br>(10 persons)<span>$300</span>","#tow_back_service_serial","adzc10");
             break;
           }
         break;
         case "11":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$660.00", input,"66000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(11 persons)<span>$660.00</span>","#lunch_and_dinner_serial","adld11");
+              add_ons_dropdown(encabezado,"$660", input,"66000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(11 persons)<span>$660</span>","#lunch_and_dinner_serial","adld11");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$202.00", input,"20200", check_box, purchase_amount, sumary,"Transport <br>(11 persons)<span>$202.00</span>","#transport_serial","adtp11");
+              add_ons_dropdown(encabezado,"$202", input,"20200", check_box, purchase_amount, sumary,"Transport <br>(11 persons)<span>$202</span>","#transport_serial","adtp11");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$330.00", input,"33000", check_box, purchase_amount, sumary,"Tow back service <br>(11 persons)<span>$330.00</span>","#tow_back_service_serial","adzc11");
+              add_ons_dropdown(encabezado,"$330", input,"33000", check_box, purchase_amount, sumary,"Tow back service <br>(11 persons)<span>$330</span>","#tow_back_service_serial","adzc11");
             break;
           }
         break;
         case "12":
           switch(sumary){
             case "lunch_and_dinner_summary":
-              add_ons_dropdown(encabezado,"$720.00", input,"72000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(12 persons)<span>$720.00</span>","#lunch_and_dinner_serial","adld12");
+              add_ons_dropdown(encabezado,"$720", input,"72000", check_box, purchase_amount, sumary,"Lunch And Dinner <br>(12 persons)<span>$720</span>","#lunch_and_dinner_serial","adld12");
             break;
             case "transport_summary":
-              add_ons_dropdown(encabezado,"$204.00", input,"20400", check_box, purchase_amount, sumary,"Transport <br>(12 persons)<span>$204.00</span>","#transport_serial","adtp12");
+              add_ons_dropdown(encabezado,"$204", input,"20400", check_box, purchase_amount, sumary,"Transport <br>(12 persons)<span>$204</span>","#transport_serial","adtp12");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$360.00", input,"36000", check_box, purchase_amount, sumary,"Tow back service <br>(12 persons)<span>$360.00</span>","#tow_back_service_serial","adzc12");
+              add_ons_dropdown(encabezado,"$360", input,"36000", check_box, purchase_amount, sumary,"Tow back service <br>(12 persons)<span>$360</span>","#tow_back_service_serial","adzc12");
             break;
           }
         break;
