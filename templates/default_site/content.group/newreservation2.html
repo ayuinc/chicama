@@ -336,7 +336,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
           $("#rooms_input").val(amount*dias);
@@ -396,7 +396,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
           $("#rooms_input").val(amount*dias);
@@ -455,7 +455,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+Math.round((parseInt(total_summary)*dias)/(rooms_num*100) * 100) / 100+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
           $("#rooms_input").val(amount*dias);
@@ -514,7 +514,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
           $("#rooms_input").val(amount*dias);
@@ -573,7 +573,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
           $("#rooms_input").val(amount*dias);
@@ -634,7 +634,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
           $("#rooms_input").val(amount*dias);
@@ -731,7 +731,7 @@
       $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
       var total_summary = $("#rooms_input").val();
       $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
-      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
       $("#summary_input").val($("#reserva_summary").html());
       $("#"+sumary).html(text);
       $(input_serial).val(serial);
@@ -789,7 +789,7 @@
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
         $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
-        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
         $("#summary_input").val($("#reserva_summary").html());      
       }
       else{
@@ -924,7 +924,7 @@
         $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
         $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
-        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
+        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100*dias)+"</span>");
         $("#summary_input").val($("#reserva_summary").html());
       }
     });
