@@ -757,7 +757,7 @@
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
 
     $("#num_dias").val(dias);
-    $("#dias_num").val(dias);
+    $("#dias_num").html("# NIGHTS <span>"+dias+"</span>");
 
     var cost_summary = "";
     $("#"+sumary).html("");

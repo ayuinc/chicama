@@ -990,6 +990,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           <hr>
 
                           <p id="total_summary_per_night" class="ys-label"></p>
+                          <p id="dias_num" class="ys-label"></p>
                           <p id="total_summary" class="ys-label"></p>
                           <p id="total_summary_per_person" class="ys-label"></p>
                           <p id="total_summary_per_room" class="ys-label"></p>
