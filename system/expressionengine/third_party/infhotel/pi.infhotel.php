@@ -541,13 +541,11 @@ class Infhotel
         $query = ee()->db->get('exp_hotel_reservations');
         if($query != null){
           foreach($query->result() as $row){
-            var_dump($row);
             ee()->db->select('*');
             ee()->db->where('serial', $row->transport);
             $query_transport = ee()->db->get('exp_hotel_products');
             if($query_transport != null){
               foreach($query_transport->result() as $row_transport){
-                var_dump($row_transport);
                 $transport = $row_transport->name;
               }
             }
@@ -557,7 +555,6 @@ class Infhotel
             $query_lunch_and_dinner = ee()->db->get('exp_hotel_products');
             if($query != null){
               foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
-                var_dump($row_lunch_and_dinner);
                 $lunch_and_dinner = $row_lunch_and_dinner->name;
               }
             } 
@@ -567,7 +564,6 @@ class Infhotel
             $query_zodiacs = ee()->db->get('exp_hotel_products');
             if($query_zodiacs != null){
               foreach($query_zodiacs->result() as $row_zodiacs){
-                var_dump($row_zodiacs);
                 $zodiacs = $row_zodiacs->name;
               }
             }
@@ -994,6 +990,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           <hr>
 
                           <p id="total_summary" class="ys-label">TOTAL <span></span></p>
+                          <p id="total_summary_per_night" class="ys-label">TOTAL <span></span></p>
                           <p id="total_summary_per_person" class="ys-label">TOTAL PER PERSON <span></span></p>
                           <p id="total_summary_per_room" class="ys-label">TOTAL PER ROOM <span></span></p>
                         </div>

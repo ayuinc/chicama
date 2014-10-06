@@ -73,13 +73,37 @@ class Mandrillapp {
 	$data = json_decode($full_request, true);
 
 	if($add_on_1 != ''){
-		$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
+		ee()->db->select('*');
+		ee()->db->where('serial', $add_on_1);
+		$query_lunch_and_dinner = ee()->db->get('exp_hotel_products');
+		if($query != null){
+		  foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
+		    $add_on_1 = $row_lunch_and_dinner->description;
+		  }
+		} 
+		//$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
 	}
 	if($add_on_2 != ''){
-		$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
+		ee()->db->select('*');
+		ee()->db->where('serial', $add_on_2);
+		$query_transport = ee()->db->get('exp_hotel_products');
+		if($query != null){
+		  foreach($query_transport->result() as $row_transport){
+		    $add_on_2 = $row_transport->description;
+		  }
+		} 
+		//$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
 	}
 	if($add_on_3 != ''){
-		$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
+		ee()->db->select('*');
+		ee()->db->where('serial', $add_on_3);
+		$query_zodiacs = ee()->db->get('exp_hotel_products');
+		if($query != null){
+		  foreach($query_zodiacs->result() as $row_zodiacs){
+		    $add_on_3 = $row_zodiacs->description;
+		  }
+		} 
+		//$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
 	}
 
 	$habitaciones_array = $data['Habitaciones'];
