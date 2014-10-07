@@ -276,44 +276,22 @@
                                 {if last_segment == "beyond-surfing"}
                                     <div class="row">
                                         <div class="large-12 columns">  
-                                        {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="des"  limit="1" category="6"}
-                                        <div class="beyond_surfing_item row">
-                                            <div class="large-6 columns">
-                                                {item_image}
-                                                    <img src="{image:url:small}" alt="">
-                                                {/item_image}
-                                            </div>
-                                            <div class="large-6 columns">
-                                                <h4>{title}</h4>
-                                                <p>{item_descripcion}</p>
-                                            </div>
-                                        </div>
-                                        {/exp:channel:entries}
-                                        </div>
-                                    </div>                    
-                                	<!--<div class="row">
-                                		<div class="large-12 columns">
-                                			<p>Conoce más de la maravillosa cultura pre inca visitando tres joyas arqueológicas cercanas a Chicama:</p>
-                                		</div>
-                                	</div> -->
-                                    <div class="row">
-                                        <div class="large-12 columns">  
-                                        {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"  limit="4" category="6"}
+                                        {exp:channel:entries channel="items" category="6" dynamic="no" orderby="date" sort="asc"}
                                         <div class="beyond_surfing_item row">
                                           <div class="large-6 columns">
                                             {item_image}
                                             	<a href="#" data-reveal-id="videobs-{count}"><img src="{image:url:small}" alt=""></a>
-                                            {/item_image}
-                                            <!--MODAL-->
-                                            <div id="videobs-{count}" class="reveal-modal medium" data-reveal>
-																							<iframe width="100%" height="315" src="//www.youtube.com/embed/{video_id_youtube}" frameborder="0" allowfullscreen></iframe>
-                                              <a class="close-reveal-modal">&#215;</a>
-                                            </div>    
-                                            <!--END MODAL-->  
+                                              <!--MODAL-->
+                                              <div id="videobs-{count}" class="reveal-modal medium" data-reveal>
+																								<iframe width="100%" height="350" src="//www.youtube.com/embed/{video_id_youtube}" frameborder="0" allowfullscreen></iframe>
+                                                <a class="close-reveal-modal">&#215;</a>
+                                              </div>    
+                                              <!--END MODAL--> 
+                                            {/item_image} 
                                           </div>
                                           <div class="large-6 columns">
-                                              <h4>{title}</h4>
-                                              <p>{item_descripcion}</p>
+                                            <h4>{title}</h4>
+                                            <p>{item_descripcion}</p>
                                           </div>
                                         </div>
                                         {/exp:channel:entries}
@@ -632,7 +610,7 @@
 <script>
     $(".testimonio_text>p").text($(".testimonio_text>p").text().substring(0,140) + "...");
 </script>
-<script>
+<!--<script>
     var map = L.mapbox.map('map', 'rdiazy.hb2ddndk', {zoomControl: false})
     .setView([-7.70, -79.44], 5);
 
@@ -643,4 +621,4 @@
     map.scrollWheelZoom.disable();
     // disable tap handler, if present.
     if (map.tap) map.tap.disable();
-</script>
+</script>-->
