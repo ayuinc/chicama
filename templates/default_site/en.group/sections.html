@@ -319,7 +319,14 @@
                                                 <div class="beyond_surfing_item row">
                                                     <div class="large-6 columns">
                                                         {item_image}
-                                                            <img src="{image:url:small}" alt="">
+                                                        
+                                                        <a href="#" data-reveal-id="videosa-{count}"><img src="{image:url:small}" alt=""></a>
+                                                        <!--MODAL-->
+                                                        <div id="videosa-{count}" class="reveal-modal medium" data-reveal>
+                                                        <iframe width="100%" height="350" src="//www.youtube.com/embed/{video_id_youtube}" frameborder="0" allowfullscreen></iframe>
+                                                        <a class="close-reveal-modal">&#215;</a>
+                                                        </div>    
+                                                        <!--END MODAL-->
                                                         {/item_image}
                                                     </div>
                                                     <div class="large-6 columns">
