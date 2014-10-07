@@ -2,86 +2,77 @@
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
     <head>
-        <meta charset="utf-8" />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-        <title>Chicama</title>
-        <link rel="shortcut icon" href="{site_url}/img/favicon.ico" />
-        <link rel="stylesheet" href="{site_url}/css/foundation.css" />
-        <link rel="stylesheet" href="{site_url}/css/jquery-ui-1.10.4.custom.min.css" />
-        <link rel="stylesheet" href="{site_url}/css/custom.css">
-        <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
-<!--[if lt IE 9]>
-  <script src="{site_url}/js/ie9/html5shiv.js"></script>
-  <script src="{site_url}/js/ie9/nwmatcher-1.2.5-min.js"></script>
-  <script src="{site_url}/js/ie9/respond.min.js"></script>
-  <script src="{site_url}/js/ie9/selectivizr-min.js"></script>
-<![endif]-->
-        <script src="{site_url}/js/modernizr.js"></script>
-        <script type="text/javascript" src="//use.typekit.net/lsr8drn.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-        <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
-        <meta name="google-site-verification" content="fcO8WzX_bebtme1OLBzli8SUmPkL4Nw9qHgDVeHmG1o" />
+    <meta charset="utf-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <title>Chicama</title>
+    <link rel="shortcut icon" href="{site_url}/img/favicon.ico" />
+    <link rel="stylesheet" href="{site_url}/css/foundation.css" />
+    <link rel="stylesheet" href="{site_url}/css/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" href="{site_url}/css/custom.css">
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
+		<!--[if lt IE 9]>
+		  <script src="{site_url}/js/ie9/html5shiv.js"></script>
+		  <script src="{site_url}/js/ie9/nwmatcher-1.2.5-min.js"></script>
+		  <script src="{site_url}/js/ie9/respond.min.js"></script>
+		  <script src="{site_url}/js/ie9/selectivizr-min.js"></script>
+		<![endif]-->
+
+    <script src="{site_url}/js/modernizr.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/lsr8drn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+    <meta name="google-site-verification" content="fcO8WzX_bebtme1OLBzli8SUmPkL4Nw9qHgDVeHmG1o" />
         
-        {if segment_1=='en'}
-	    <meta name="description" content="Where history blends with the ocean." />
-	    {if:else}
-	    <meta name="description" content="Donde la historia se mezcla con el mar." />
-	    {/if}
+    {if segment_1=='en'}
+    	<meta name="description" content="Where history blends with the ocean." />
+    {if:else}
+    	<meta name="description" content="Donde la historia se mezcla con el mar." />
+    {/if}
+    
+    <meta name="keywords" content="turismo, chicama, ola, wave, longest wave, turist, turims, peru" />
+    <meta name="author" content="Chicama Boutique Hotel & Spa" />
+    <meta name="copyright" content="Chicama Boutique Hotel & Spa" />
+    <meta name="application-name" content="Chicama Boutique Hotel & Spa" />
+    <!-- for Facebook -->
 	    
-	    <meta name="keywords" content="turismo, chicama, ola, wave, longest wave, turist, turims, peru" />
-	    <meta name="author" content="Chicama Boutique Hotel & Spa" />
-	    <meta name="copyright" content="Chicama Boutique Hotel & Spa" />
-	    <meta name="application-name" content="Chicama Boutique Hotel & Spa" />
-	    <!-- for Facebook -->
-	    
-	    {if embed:titulo}
+	  {if embed:titulo}
 	    <meta property="og:title" content="{embed:titulo}" />
 		{if:else}
-		<meta property="og:title" content="Chicama Boutique Hotel & Spa" />
+			<meta property="og:title" content="Chicama Boutique Hotel & Spa" />
 		{/if}
 		
 		<meta property="og:type" content="other" />
 		{if embed:imagen}
-		<meta property="og:image" content="{embed:imagen}" />
+			<meta property="og:image" content="{embed:imagen}" />
 		{if:else}
-		<meta property="og:image" content="http://www.chicamasurf.com/img/full_bg.jpg" />
+			<meta property="og:image" content="http://www.chicamasurf.com/img/full_bg.jpg" />
 		{/if}
 		<meta property="og:url" content="{current_url}" />
-        {if segment_1=='en'}
-	    <meta property="og:description" content="Where history blends with the ocean" />
-	    {if:else}
-	    <meta property="og:description" content="Donde la historia se mezcla con el mar." />
-	    {/if}		
-	    
-	    {if segment_2=='reservation-confirmed' OR segment_2=='reservacion-confirmada'}
-			<!-- Facebook Conversion Code for Book a Room Form -->
-			
-			<script type="text/javascript">
-
-			var fb_param = {};
-	
-			fb_param.pixel_id = '6017024993180';
-			
-			fb_param.value = '0.01';
-			
-			fb_param.currency = 'PEN';
-			
-			(function(){
-			
-			var fpw = document.createElement('script');
-			
-			fpw.async = true;
-			
-			fpw.src = '//connect.facebook.net/en_US/fp.js';
-			
-			var ref = document.getElementsByTagName('script')[0];
-			
-			ref.parentNode.insertBefore(fpw, ref);
-			
-			})();
-			
-			</script>
-	    {/if}
+    {if segment_1=='en'}
+    	<meta property="og:description" content="Where history blends with the ocean" />
+    {if:else}
+    	<meta property="og:description" content="Donde la historia se mezcla con el mar." />
+    {/if}		
+    
+    {if segment_2=='reservation-confirmed' OR segment_2=='reservacion-confirmada'}
+		<!-- Facebook Conversion Code for Book a Room Form -->
+		
+		<script type="text/javascript">
+		var fb_param = {};	
+		fb_param.pixel_id = '6017024993180';			
+		fb_param.value = '0.01';			
+		fb_param.currency = 'PEN';
+		
+		(function(){			
+		var fpw = document.createElement('script');			
+		fpw.async = true;			
+		fpw.src = '//connect.facebook.net/en_US/fp.js';			
+		var ref = document.getElementsByTagName('script')[0];			
+		ref.parentNode.insertBefore(fpw, ref);
+		})();
+		</script>
+    {/if}
 		
 		<!--Kiss Metrix-->
 		<script type="text/javascript">var _kmq = _kmq || [];

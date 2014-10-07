@@ -3,6 +3,7 @@
 {embed="includes/header" imagen="{image:url:large}" titulo="{title}"}
 {/imagen_de_fondo}
 {/exp:channel:entries}
+
 <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
         <nav class="tab-bar show-for-small-only">
@@ -268,15 +269,15 @@
                                             <div class="large-12 columns">  
                                             {exp:channel:entries channel="items" category="1" entry_id="15|16|17|18" fixed_order="15|16|17|18" limit="4" sort="asc"}
                                             <div class="beyond_surfing_item row">
-                                                <div class="large-6 columns">
-                                                    {item_image}
-                                                        <img src="{image:url:small}" alt="">
-                                                    {/item_image}
-                                                </div>
-                                                <div class="large-6 columns">
-                                                    <h4>{title}</h4>
-                                                    <p>{item_descripcion_ingles}</p>
-                                                </div>
+                                              <div class="large-6 columns">
+                                                  {item_image}
+                                                     <img src="{image:url:small}" alt="">
+                                                  {/item_image}
+                                              </div>
+                                              <div class="large-6 columns">
+                                                  <h4>{title}</h4>
+                                                  <p>{item_descripcion_ingles}</p>
+                                              </div>
                                             </div>
                                             {/exp:channel:entries}
                                             </div>
@@ -291,9 +292,15 @@
                                             {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"  limit="4" category="6"}
                                             <div class="beyond_surfing_item row">
                                                 <div class="large-6 columns">
-                                                    {item_image}
-                                                        <img src="{image:url:small}" alt="">
-                                                    {/item_image}
+                                                  {item_image}
+                                                  	<a href="#" data-reveal-id="videobs-{count}"><img src="{image:url:small}" alt=""></a>
+	                                                  <!--MODAL-->
+	                                                  <div id="videobs-{count}" class="reveal-modal medium" data-reveal>
+																											<iframe width="100%" height="350" src="//www.youtube.com/embed/{video_id_youtube}" frameborder="0" allowfullscreen></iframe>
+	                                                    <a class="close-reveal-modal">&#215;</a>
+	                                                  </div>    
+	                                                  <!--END MODAL--> 
+                                                  {/item_image}                                               
                                                 </div>
                                                 <div class="large-6 columns">
                                                     <h4>{title}</h4>
@@ -335,6 +342,7 @@
                                                         {item_image limit="1"}
                                                         <img src="{image:url:small}" alt="">
                                                         {/item_image}
+                                                        <!--MODAL-->
                                                         <div id="gallery-{count}" class="reveal-modal medium" data-reveal>
                                                             <ul class="gallery" data-orbit data-options="animation:slide; pause_on_hover:true; timer:false; bullets:false;">
                                                                 {item_image offset="1"}
