@@ -264,24 +264,7 @@
                                         </div>
                                     {/if}
                                     
-                                    {if last_segment == "beyond-surfing"}
-                                        <div class="row">
-                                            <div class="large-12 columns">  
-                                            {exp:channel:entries channel="items" category="1" entry_id="15|16|17|18" fixed_order="15|16|17|18" limit="4" sort="asc"}
-                                            <div class="beyond_surfing_item row">
-                                              <div class="large-6 columns">
-                                                  {item_image}
-                                                     <img src="{image:url:small}" alt="">
-                                                  {/item_image}
-                                              </div>
-                                              <div class="large-6 columns">
-                                                  <h4>{title}</h4>
-                                                  <p>{item_descripcion_ingles}</p>
-                                              </div>
-                                            </div>
-                                            {/exp:channel:entries}
-                                            </div>
-                                        </div>                    
+                                    {if last_segment == "beyond-surfing"}                
                                         <div class="row">
                                             <div class="large-12 columns">
                                                 <p>Also, learn more about the wonderful Pre-Inca places around Chicama:</p>
@@ -289,7 +272,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="large-12 columns">  
-                                            {exp:channel:entries channel="items" category="1" dynamic="no" orderby="date" sort="asc"  limit="4" category="6"}
+                                            {exp:channel:entries channel="items" category="6" dynamic="no" orderby="date" sort="asc"}
                                             <div class="beyond_surfing_item row">
                                                 <div class="large-6 columns">
                                                   {item_image}
@@ -631,7 +614,7 @@
 <script>
     $(".testimonio_text>p").text($(".testimonio_text>p").text().substring(0,140) + "...");
 </script>
-<script>
+<!--<script>
     var map = L.mapbox.map('map', 'rdiazy.hb2ddndk', {zoomControl: false})
     .setView([-7.70, -79.44], 5);
 
@@ -643,4 +626,4 @@
     // disable tap handler, if present.
     if (map.tap) map.tap.disable();
 
-</script>
+</script>-->
