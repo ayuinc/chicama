@@ -730,6 +730,8 @@
     $(encabezado).html(encabezado_html);
     $(input).val(input_val);
     if($(check_box).is(":checked")){
+      total_summary_per_night = parseInt($(purchase_amount).val()) + parseInt($(input).val());
+      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
       $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
       $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
       var total_summary = $("#rooms_input").val();
@@ -791,9 +793,7 @@
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
-        console.log("antes total_summary_per_night="+parseInt($("#rooms_input").val())/dias+"   input_cost="+input_cost);
         total_summary_per_night = total_summary_per_night - input_cost;
-        console.log("despues total_summary_per_night="+total_summary_per_night+"   input_cost="+input_cost);
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
         var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
@@ -936,9 +936,7 @@
           }
         }
         var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
-        console.log("antes total_summary_per_night="+parseInt($("#rooms_input").val())/dias+"   input_cost="+input_cost);
         total_summary_per_night = parseInt($("#rooms_input").val())/dias + (input_cost);
-        console.log("luego total_summary_per_night="+total_summary_per_night+"   input_cost="+input_cost);
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
         $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
@@ -949,24 +947,30 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
+    var input_cost = 0;
+    var total_summary_per_night = 0;
     switch(sumary){
       case "lunch_and_dinner_summary":
         $(encabezado).html("$60 /night");
         $(input).val("6000");
+        input_cost = parseInt($(input).val());
       break;
       case "transport_summary":
         $(encabezado).html("$48 one-time");
         $(input).val("4800");
+        input_cost = parseInt($(input).val())/dias;
       break;
       case "tow_back_service_summary":
         $(encabezado).html("$30 one-time");
         $(input).val("3000");
+        input_cost = parseInt($(input).val())/dias;
       break;
     }
     $(select_box).change(function(){
       if($(check_box).is(":checked")){
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+        total_summary_per_night = parseInt($("#rooms_input").val()) - parseInt($(input).val());
       }
       switch($(select_box).val()){ 
         case "1":
