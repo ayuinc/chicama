@@ -751,9 +751,6 @@
 
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
     var total_summary_per_night = 0;
-    var lunch_and_dinner_cost = 0;
-    var transport_cost = 0;
-    var zodias_cost = 0;
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
@@ -851,6 +848,7 @@
             break;
           }
           input_cost = parseInt($(input).val())*dias;
+          console.log("lunch_and_dinner_cost"+input_cost);  
         }
         else{
           if(sumary == "transport_summary"){
@@ -893,6 +891,7 @@
               break;
             }
             input_cost = parseInt($(input).val())/dias;
+            console.log("transport_cost"+input_cost);
           }
           else{
             if(sumary == "tow_back_service_summary"){
@@ -936,6 +935,7 @@
               }
             }
             input_cost = parseInt($(input).val())/dias;
+            console.log("zodias_cost"+input_cost);
           }
         }
         var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
