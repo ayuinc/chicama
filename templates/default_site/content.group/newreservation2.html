@@ -776,7 +776,7 @@
         if(sumary=="lunch_and_dinner_summary"){
           $("#"+sumary).html("");
           $("#lunch_and_dinner_serial").val("");
-          input_cost = parseInt($(input).val())*dias;
+          input_cost = parseInt($(input).val());
         }
         else{
           if(sumary=="transport_summary"){
@@ -847,7 +847,7 @@
            add_ons_click(sumary,"#lunch_and_dinner_serial", "adld12","Lunch And Dinner <br>(12 person) <span>$720 /night</span>");
             break;
           }
-          input_cost = parseInt($(input).val())*dias;
+          input_cost = parseInt($(input).val());
           console.log("lunch_and_dinner_cost"+input_cost);  
         }
         else{
