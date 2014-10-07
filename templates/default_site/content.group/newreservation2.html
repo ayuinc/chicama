@@ -336,7 +336,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          console.log(total_summary);
+          //console.log(total_summary);
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -397,7 +397,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          console.log(total_summary);
+          //console.log(total_summary);
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -457,7 +457,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          console.log(total_summary);
+          //console.log(total_summary);
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+Math.round((parseInt(total_summary)*dias)/(rooms_num*100) * 100) / 100+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -517,7 +517,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          console.log(total_summary);
+          //console.log(total_summary);
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -577,7 +577,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          console.log(total_summary);
+          //console.log(total_summary);
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -639,7 +639,7 @@
           amount = amount + parseInt($(final_cost).val())*100;
           var total_summary = amount;
           $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)*dias/100+"</span>");
-          console.log(total_summary);
+          //console.log(total_summary);
           $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
           //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(rooms_num*100))+"</span>");
           $("#summary_input").val($("#reserva_summary").html());
@@ -710,9 +710,6 @@
     $("#"+sumary).html(text);
     $(input_serial).val(serial);
     $("#summary_input").val($("#reserva_summary").html());
-    //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(roomnum)*100))+"</span>");
-    //$("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(guests)*100))+"</span>");
-    console.log("esta funcionando add_ons_click --- guests: "+guests);
   }
 
   function add_ons_dropdown(encabezado, encabezado_html, input, input_val, check_box, purchase_amount, sumary, text, input_serial, serial){
@@ -733,24 +730,22 @@
     $(encabezado).html(encabezado_html);
     $(input).val(input_val);
     if($(check_box).is(":checked")){
+      total_summary_per_night = parseInt($(purchase_amount).val()) + parseInt($(input).val());
+      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
       $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
       $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
       var total_summary = $("#rooms_input").val();
       $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
-      console.log(total_summary);
-      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary)/(100)+"</span>");
       $("#summary_input").val($("#reserva_summary").html());
       $("#"+sumary).html(text);
       $(input_serial).val(serial);
       $("#summary_input").val($("#reserva_summary").html());
-      //$("#total_summary_per_room").html("TOTAL PER ROOM <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(roomnum)*100))+"</span>");
-      //$("#total_summary_per_person").html("TOTAL PER PERSON <span>$ "+parseFloat((parseInt(total_summary)*dias)/(parseInt(guests)*100))+"</span>");
-      console.log("esta funcionando add_ons_click --- guests: "+guests);
     }
   }
 
   function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
     var total_summary_per_night = 0;
+    var input_cost = 0;
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
@@ -777,31 +772,33 @@
           $("#"+sumary).html("");
           $("#lunch_and_dinner_serial").val("");
           input_cost = parseInt($(input).val());
+          console.log("lunch_and_dinner_serial"+input_cost);
         }
         else{
           if(sumary=="transport_summary"){
             $("#"+sumary).html("");
             $("#transport_serial").val("");
             input_cost = parseInt($(input).val())/dias;
+            //console.log(input_cost);
           }
           else{
             if(sumary=="tow_back_service_summary"){
             $("#"+sumary).html("");
             $("#tow_back_service_serial").val("");
             input_cost = parseInt($(input).val())/dias;
+            //console.log(input_cost);
             }
           }
         }
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
-        var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
-        total_summary_per_night = parseInt($("#rooms_input").val())/dias - input_cost;
+        total_summary_per_night = total_summary_per_night - input_cost;
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
+        var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
         $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
-        console.log(total_summary_per_night);
         $("#summary_input").val($("#reserva_summary").html());      
       }
       else{
@@ -848,7 +845,7 @@
             break;
           }
           input_cost = parseInt($(input).val());
-          console.log("lunch_and_dinner_cost"+input_cost);  
+          //console.log("lunch_and_dinner_cost"+input_cost);  
         }
         else{
           if(sumary == "transport_summary"){
@@ -891,7 +888,7 @@
               break;
             }
             input_cost = parseInt($(input).val())/dias;
-            console.log("transport_cost"+input_cost);
+            //console.log("transport_cost"+input_cost);
           }
           else{
             if(sumary == "tow_back_service_summary"){
@@ -935,12 +932,11 @@
               }
             }
             input_cost = parseInt($(input).val())/dias;
-            console.log("zodias_cost"+input_cost);
+            //onsole.log("zodias_cost"+input_cost);
           }
         }
         var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
         total_summary_per_night = parseInt($("#rooms_input").val())/dias + (input_cost);
-        console.log(total_summary_per_night);
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
         $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
@@ -951,24 +947,41 @@
   }
 
   function cambio_costos_addons(select_box, check_box, encabezado, input, purchase_amount, sumary){
+    var input_cost = 0;
+    var total_summary_per_night = 0;
+    var checkin = ""+"{post_check_in_date}";
+    var checkout = ""+"{post_check_out_date}" ;
+    var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
+    d1 = d1.split("-");
+    var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
+    var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
+    d2 = d2.split("-");
+    var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
+    
+    var fin = dat2.getTime() - dat1.getTime();
+    var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
     switch(sumary){
       case "lunch_and_dinner_summary":
         $(encabezado).html("$60 /night");
         $(input).val("6000");
+        input_cost = parseInt($(input).val());
       break;
       case "transport_summary":
         $(encabezado).html("$48 one-time");
         $(input).val("4800");
+        input_cost = parseInt($(input).val())/dias;
       break;
       case "tow_back_service_summary":
         $(encabezado).html("$30 one-time");
         $(input).val("3000");
+        input_cost = parseInt($(input).val())/dias;
       break;
     }
     $(select_box).change(function(){
       if($(check_box).is(":checked")){
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+        total_summary_per_night = parseInt($("#rooms_input").val()) - parseInt($(input).val());
       }
       switch($(select_box).val()){ 
         case "1":
