@@ -791,11 +791,11 @@
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
         $(buttom).html("add"); //select all checkboxes with class "checkbox1" 
-        var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
         console.log("antes total_summary_per_night="+parseInt($("#rooms_input").val())/dias+"   input_cost="+input_cost);
         total_summary_per_night = parseInt($("#rooms_input").val())/dias - input_cost;
         console.log("despues total_summary_per_night="+total_summary_per_night+"   input_cost="+input_cost);
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+parseInt(total_summary_per_night)/(100)+"</span>"); 
+        var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
         $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
         $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
         $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
