@@ -931,7 +931,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           </div>
                           <!-- end add-on description -->
                         </div>
-                        <input type="text" name="num_dias" maxlength="1000"  id="num_dias">
+                        <input type="hidden" name="num_dias" maxlength="1000"  id="num_dias">
                         <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
                         <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
                         <input type="hidden" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
