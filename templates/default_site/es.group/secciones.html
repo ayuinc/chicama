@@ -449,7 +449,7 @@
                                   <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
                                 </div>
                                 {/exp:channel:entries} -->
-
+                                {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}    
                                 <div id="testimonio" class="show-for-large-up">
                                 	<div class="row">
 	                                  <div class="large-3 columns text-center">
@@ -465,7 +465,7 @@
                                 	</div>
                                   <!-- <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png"> -->
                                 </div>
-
+                                {/exp:channel:entries}
                                 <ul class="other_categories">
                                     {if segment_3!='the-hotel'}
                                     <li>
