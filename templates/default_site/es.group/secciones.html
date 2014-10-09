@@ -432,7 +432,7 @@
                                 </div>
                             </div>
                             <div id="caja_lateral"  class="medium-offset-1 medium-4 large-offset-1 large-4 columns hide-for-small">
-                                {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
+                                <!-- {exp:channel:entries channel="stories" dynamic="no" orderby="random" limit="1"}
                                 <div id="testimonio" class="show-for-large-up">
                                     <div class="row">
                                         <div class="large-5 columns">
@@ -449,7 +449,23 @@
                                     </div>
                                     <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
                                 </div>
-                                {/exp:channel:entries}
+                                {/exp:channel:entries} -->
+
+                                <div id="testimonio" class="show-for-large-up">
+                                    <div class="row">
+                                        <div class="large-5 columns">
+                                            <img src="http://chicamasurf.com/img/medal.png" alt="">
+                                        </div>
+                                        <div class="testimonio_text large-7 columns">
+                                            <h6>Certificacíon de excelencia 2014</h6>
+                                            <span>92%</span>
+                                            <span><img src="http://chicamasurf.com/img/like.png" alt=""></span>
+                                            <span><img src="http://chicamasurf.com/img/trip-icon.png" alt=""></span>
+                                            <a href="{stories_url}" target="_blank">ver más &raquo;</a>
+                                        </div>
+                                    </div>
+                                    <img id="tripadvisor_white" src="{site_url}/img/tripadvisor_white_{stories_assessment}.png">
+                                </div>
 
                                 <ul class="other_categories">
                                     {if segment_3!='the-hotel'}
