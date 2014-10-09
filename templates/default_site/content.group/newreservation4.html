@@ -187,7 +187,7 @@
     var lunch_and_dinner_input = {post_lunch_and_dinner_input};
     var dias = {post_num_dias};
     if(lunch_and_dinner_checkbox == "on"){
-      pay_now =  parseInt(pay_now)/100 - parseInt(lunch_and_dinner_input)*parseInt(dias)/100;
+      pay_now =  parseInt(pay_now)/100 - parseInt(lunch_and_dinner_input)*parseInt(dias-1)/100;
     }
     else{
       pay_now =  parseInt(pay_now)/100;
