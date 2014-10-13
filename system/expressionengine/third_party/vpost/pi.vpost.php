@@ -341,6 +341,7 @@ class Vpost
             $document_type = $row->document_type;
             $card_id = $row->card_id;
             $card_type = $row->card_type;
+            }
             $div ='{exp:infhotel:insertarreservar
                         id="'.$id.'"
                         request="'.$request.'"
@@ -353,8 +354,6 @@ class Vpost
                         card_type="'.$card_type.'"
                         }
                     {/exp:infhotel:insertarreservar}';
-              
-            }
             return $div;
             //return $request;
           }
