@@ -62,7 +62,6 @@ class Mandrillapp {
 		$add_on_3 = $row->lunch_and_dinner;
 		$cost_reser = $row->amount_reservation;
 		$days = $row->num_days;
-
 	}
 
 	$full_request = str_replace("$", "{", $full_request);
@@ -171,11 +170,9 @@ class Mandrillapp {
 				$resumen_reserva .= '<tr><td>Habitación triple ocean</td><td>: US$ 180.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 		}
-		
 	}
-	
-	$cost_reser = $cost_reser/100; 
 
+	$cost_reser = $cost_reser/100; 
 	$to = $email;
 	$name= $first_name." ".$last_name;
 	$subject= "Reserva de habitaciones - Chicama Boutique Hotel.";

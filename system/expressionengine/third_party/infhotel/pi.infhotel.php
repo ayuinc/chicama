@@ -584,7 +584,7 @@ class Infhotel
         curl_close($ch);
 
         $cod_reservation = str_replace('"', '', $result);
-
+        var_dump($cod_reservation);
         if( strlen($cod_reservation) == 6 ) {
             ee()->db->update(
                 'exp_hotel_reservations',
