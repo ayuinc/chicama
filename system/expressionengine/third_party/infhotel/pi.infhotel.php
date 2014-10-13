@@ -573,10 +573,9 @@ class Infhotel
         $data_string = json_encode($data, true);
         $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST"); 
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);                                                                     
-        //curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_string)); 
-        var_dump(json_encode($data_string));
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_string)); 
+        var_dump($data_string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPHEADER,array(
