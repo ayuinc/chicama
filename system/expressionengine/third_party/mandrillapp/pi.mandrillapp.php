@@ -174,7 +174,7 @@ class Mandrillapp {
 		}
 	}
 	
-	$cost_reser = intval($cost_reser)/100; 
+	$cost_reser = $cost_reser/100; 
 
 	$to = $email;
 	$name= $first_name." ".$last_name;
