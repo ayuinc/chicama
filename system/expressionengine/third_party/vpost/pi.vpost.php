@@ -359,7 +359,7 @@ class Vpost
           }
           else {
             //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-            return "Han ocurrido problemas con la transacción ";
+            return "Han ocurrido problemas con la transacción ".$arrayOut['authorizationResult'];
         }
       } 
     }
