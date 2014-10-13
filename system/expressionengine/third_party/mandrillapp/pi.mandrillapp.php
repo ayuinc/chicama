@@ -63,7 +63,7 @@ class Mandrillapp {
 		$cost_reser = $row->amount_reservation;
 		$days = $row->num_days;
 
-
+	}
 	$full_request = str_replace("$", "{", $full_request);
 	$full_request = str_replace("&", "}", $full_request);
 	$full_request = str_replace('(', '"', $full_request);
