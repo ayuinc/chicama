@@ -575,7 +575,7 @@ class Infhotel
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_string)); 
-        var_dump($data_string);
+        var_dump(json_encode($data_string));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);     
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_HTTPHEADER,array(
