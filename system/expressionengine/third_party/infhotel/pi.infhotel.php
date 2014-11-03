@@ -64,7 +64,7 @@ class Infhotel
 
     public function tipodetarjeta(){
         $form = '<select name="card_type" id="tipo_de_tarjeta" > <option value="" selected>SELECT YOUR TYPE CARD</option>';
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoTarjeta';
+        $url = 'http://190.41.141.198/Infhotel/ServiceReservaWeb.svc/GetTipoTarjeta';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -84,7 +84,7 @@ class Infhotel
     
     public function tipodedocumento(){
         $form = '<select name="document_type" id="document_type" > <option value="00" selected>SELECT YOUR TYPE DOCUMENT</option>';
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetTipoDocumento';
+        $url = 'http://190.41.141.198/Infhotel/ServiceReservaWeb.svc/GetTipoDocumento';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -104,7 +104,7 @@ class Infhotel
 
     public function pais(){
         $form = '<select name="country" placeholder="ENTER YOUR COUNTRY" required="">';
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetPais';
+        $url = 'http://190.41.141.198/Infhotel/ServiceReservaWeb.svc/GetPais';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -127,7 +127,7 @@ class Infhotel
 
     public function tipodehabitacion(){
         $form = '<select name="tipo_de_habitacion" id="tipo_de_habitacion" > <option value="TIPO DE HABITACIÓN" selected>TIPO DE HABITACIÓN</option>';
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionTarifa';
+        $url = 'http://190.41.141.198/Infhotel/ServiceReservaWeb.svc/GetHabitacionTarifa';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -164,7 +164,7 @@ class Infhotel
         else{
             $fecha_checkin = str_replace("/", "",$fecha_checkin);
             $fecha_checkout = str_replace("/", "",$fecha_checkout);
-            $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
+            $url = 'http://190.41.141.198/Infhotel/ServiceReservaWeb.svc/GetHabitacionesDisponiblesDetallado/'.$fecha_checkin.'/'.$fecha_checkout;
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -571,7 +571,7 @@ class Infhotel
         }
 
         $data_string = json_encode($data, true);
-        $url = 'http://190.41.151.102/Infhotel/ServiceReservaWeb.svc/InsertReserva';
+        $url = 'http://190.41.141.198/Infhotel/ServiceReservaWeb.svc/InsertReserva';
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_string)); 
