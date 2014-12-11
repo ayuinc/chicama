@@ -892,7 +892,7 @@ Note: If you don’t choose to Include meals, then you have the option to choose
                           <!-- end add-on img -->
                           <!-- add-on description -->
                           <div class="large-7 columns addon-description">
-                            <h2>TRUJILLO´S AIRPORT OR BUS STATION</h2>
+                            <h2>AIRPORT TO HOTEL TRANSPORTATION</h2>
                             <div class="row selector">
                               <div class="large-7 columns">
                                 <p>Number of persons
@@ -969,7 +969,7 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           <p class="ys-field">{post_check_in_date}</p>
                           <p class="ys-label">DEPARTURE:</p>
                           <p class="ys-field">{post_check_out_date}</p>
-                                          
+                          <p id="dias_num" class="ys-label"></p>                
                           {/exp:get_post_vars}
                           <hr>
 
