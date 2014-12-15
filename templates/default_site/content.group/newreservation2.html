@@ -768,7 +768,7 @@
     }
   }
 
-  function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado){
+  function agregar_costos_addons(buttom, check_box, input, purchase_amount, sumary, encabezado, select_box){
 
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
@@ -889,11 +889,16 @@
               add_ons_click(sumary,"#transport_serial","adtp03","Transport <br>(3 persons) <span>$75 one-time</span>");
               break;
               case "$100 one-time":
-              add_ons_click(sumary,"#transport_serial","adtp04","Transport <br>(4 persons) <span>$100 one-time</span>");
+                if($(select_box).val() == "4"){
+                  add_ons_click(sumary,"#transport_serial","adtp04","Transport <br>(4 persons) <span>$100 one-time</span>");
+                }
+                else{
+                  add_ons_click(sumary,"#transport_serial","adtp04","Transport <br>(4 persons) <span>$100 one-time</span>");
+                }
               break;
-              case "$100 one-time":
+              /*case "$100 one-time":
               add_ons_click(sumary,"#transport_serial","adtp05","Transport <br>(5 persons) <span>$100 one-time</span>");
-              break;
+              break;*/
               case "$102 one-time":
               add_ons_click(sumary,"#transport_serial","adtp06","Transport <br>(6 persons) <span>$102 one-time</span>");
               break;
@@ -1207,9 +1212,9 @@
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport","#transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service","#tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner","#lunch_and_dinner");
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
@@ -1247,9 +1252,9 @@
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport","#transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service","#tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner","#lunch_and_dinner");
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
@@ -1287,9 +1292,9 @@
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport","#transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service","#tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner","#lunch_and_dinner");
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
@@ -1327,9 +1332,9 @@
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport","#transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service","#tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner","#lunch_and_dinner");
             $("#summary_input").val($("#reserva_summary").html());
             $( "#check_in_date" ).datepicker({
               minDate: new Date(),
@@ -1361,9 +1366,9 @@
           cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
-            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport");
-            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service");
-            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner");
+            agregar_costos_addons("#add_transport_buttom","#transport_checkbox","#transport_input","#purchase_amount","transport_summary", "#encabezado_transport","#transport");
+            agregar_costos_addons("#add_tow_back_service_buttom","#tow_back_service_checkbox","#tow_back_service_input","#purchase_amount", "tow_back_service_summary","#encabezado_tow_back_service","#tow_back_service");
+            agregar_costos_addons("#add_lunch_and_dinner_buttom","#lunch_and_dinner_checkbox","#lunch_and_dinner_input","#purchase_amount", "lunch_and_dinner_summary","#encabezado_lunch_and_dinner","#lunch_and_dinner");
           $("#summary_input").val($("#reserva_summary").html());
           $( "#check_in_date" ).datepicker({
             minDate: new Date(),
