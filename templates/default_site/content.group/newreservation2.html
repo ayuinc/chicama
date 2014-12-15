@@ -207,11 +207,11 @@
     
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
-    
+
     var momentCheckin = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2);
     var momentCheckout = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2);
     var da1 = moment(momentCheckin);
-    console.log(da1.moment("DD-MMMM-YYYY"));
+    console.log(da1);
 
     checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
     checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
