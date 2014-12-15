@@ -966,9 +966,9 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           <hr>
                           {exp:get_post_vars parse="inward"}
                           <p class="ys-label">ARRIVAL:</p>
-                          <p class="ys-field">{post_check_in_date}</p>
+                          <p id="arrival_date" class="ys-field">{post_check_in_date}</p>
                           <p class="ys-label">DEPARTURE:</p>
-                          <p class="ys-field">{post_check_out_date}</p>
+                          <p id="departure_date" class="ys-field">{post_check_out_date}</p>
                           <p id="dias_num_encabezado" class="ys-label"></p>                
                           {/exp:get_post_vars}
                           <hr>
