@@ -211,7 +211,7 @@
     var momentCheckin = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2);
     var momentCheckout = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2);
     var da1 = moment(momentCheckin);
-    console.log(da1);
+    console.log(da1.format("dddd, MMMM Do YYYY"));
 
     checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
     checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
