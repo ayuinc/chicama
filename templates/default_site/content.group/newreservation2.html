@@ -207,6 +207,11 @@
     
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24))  
+    
+    var momentCheckin = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2);
+    var momentCheckout = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2);
+    var da1 = moment(momentCheckin);
+    console.log(da1.moment("DD-MMMM-YYYY"));
 
     checkin_date = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2)+" 12:00:00.000";
     checkout_date = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2)+" 12:00:00.000";
@@ -764,19 +769,15 @@
     var checkin = ""+"{post_check_in_date}";
     var checkout = ""+"{post_check_out_date}" ;
     var d1 = checkin.substr(0, 2)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(6, 4);
-    var momentCheckin = checkin.substr(6, 4)+"-"+checkin.substr(3, 2)+"-"+checkin.substr(0, 2);
+    
     d1 = d1.split("-");
     var dat1 = new Date(d1[2], parseFloat(d1[1])-1, parseFloat(d1[0]));
     var d2 = checkout.substr(0, 2)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(6, 4);
-    var momentCheckout = checkout.substr(6, 4)+"-"+checkout.substr(3, 2)+"-"+checkout.substr(0, 2);
+    
     d2 = d2.split("-");
     var dat2 = new Date(d2[2], parseFloat(d2[1])-1, parseFloat(d2[0]));
-    
     var fin = dat2.getTime() - dat1.getTime();
     var dias = Math.floor(fin / (1000 * 60 * 60 * 24));
-    var da1 = moment(momentCheckin);
-    
-    console.log(da1.moment("DD-MMMM-YYYY"));
     
     $("#arrival_date").html();
     $("#departure_date").html();
@@ -1014,8 +1015,6 @@
             $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
           break;
         }
-        /*$(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-        $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );*/
       }
       switch($(select_box).val()){ 
         case "1":
@@ -1191,7 +1190,6 @@
     switch(div_visible){
       case 0:
         if(0<rooms_num){
-            //$("#step_in_reservation").html("Room 1 of "+num_hab);
             $("#step_in_reservation").html("SELECT YOUR FIRST ROOM");
             $("#first_circle").addClass("active");
           }
@@ -1201,6 +1199,7 @@
             $("#form_box_3_container").show();
             showIt('steps_list');
             $("#rooms_input").val(rooms_input_summary);
+
             cambio_costos_addons("#transport","#transport_checkbox","#encabezado_transport","#transport_input","#purchase_amount", "transport_summary");
             cambio_costos_addons("#tow_back_service","#tow_back_service_checkbox","#encabezado_tow_back_service","#tow_back_service_input","#purchase_amount", "tow_back_service_summary");
             cambio_costos_addons("#lunch_and_dinner","#lunch_and_dinner_checkbox","#encabezado_lunch_and_dinner","#lunch_and_dinner_input" ,"#purchase_amount", "lunch_and_dinner_summary");
@@ -1219,7 +1218,6 @@
               }
             });
             $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
               dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
@@ -1232,7 +1230,6 @@
           break;
       case 1:
         if(1<rooms_num){
-            //$("#step_in_reservation").html("Room 2 of "+num_hab);
             $("#step_in_reservation").html("SELECT YOUR SECOND  ROOM");
             $("#first_circle").removeClass("active");
             $("#second_circle").addClass("active");
@@ -1261,7 +1258,6 @@
               }
             });
             $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
               dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
@@ -1274,7 +1270,6 @@
           break;
       case 2:
           if(2<rooms_num){
-            //$("#step_in_reservation").html("Room 3 of "+num_hab);
             $("#step_in_reservation").html("SELECT YOUR THIRD ROOM");
             $("#second_circle").removeClass("active");
             $("#third_circle").addClass("active");
@@ -1303,7 +1298,6 @@
               }
             });
             $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
               dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
@@ -1316,7 +1310,6 @@
           break;
       case 3:
           if(3<rooms_num){
-            //$("#step_in_reservation").html("Room 4 of "+num_hab);
             $("#step_in_reservation").html("SELECT YOUR FOURT ROOM");
             $("#third_circle").removeClass("active");
             $("#fourth_circle").addClass("active");
@@ -1345,7 +1338,6 @@
               }
             });
             $( "#check_out_date" ).datepicker({
-              //minDate: new Date(),
               dateFormat: 'dd/mm/yy',
               defaultDate: "+1w",
               changeMonth: true,
@@ -1380,7 +1372,6 @@
             }
           });
           $( "#check_out_date" ).datepicker({
-            //minDate: new Date(),
             dateFormat: 'dd/mm/yy',
             defaultDate: "+1w",
             changeMonth: true,
