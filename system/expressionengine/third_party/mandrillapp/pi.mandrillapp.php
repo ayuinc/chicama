@@ -231,9 +231,10 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Kind of room</td>
-		    <td>: '.$habitaciones_detalle.'</td>
+		    <td>:</td>
 		    <td></td>
 		  </tr>
+		    '.$habitaciones_detalle.'
 		  <tr>
 		    <td></td>
 		    <td></td>
