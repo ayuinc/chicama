@@ -253,7 +253,7 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Others services</td>
-		    <td>:'.$add_on_1.$add_on_2.$add_on_3.'</td>
+		    <td>:'.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'</td>
 		    <td></td>
 		  </tr>
 		</table>
