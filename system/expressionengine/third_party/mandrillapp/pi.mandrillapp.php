@@ -44,7 +44,7 @@ class Mandrillapp {
 	ee()->db->select('*');
 	ee()->db->where('id',$id);
 	$query = ee()->db->get('exp_hotel_reservations');
-
+	var_dump($query);
 	foreach($query->result() as $row){
 		$full_request = $row->full_request;
 		$cod_reservation = $row->cod_reservation;
