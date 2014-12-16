@@ -127,7 +127,7 @@ class Mandrillapp {
 				$cost_aux = $days * 100;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 single room with garden view</td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room Garden View (US$ 100.00 per night per room)</td><td></td></tr>';
-				$resumen_reserva .= '<tr><td>Habitación simple garden</td><td>: US$ 100.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				$resumen_reserva .= '<tr><td>Simple room garden view</td><td>: US$ 100.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmso05':
 			case 'rmso06':
@@ -135,7 +135,7 @@ class Mandrillapp {
 				$cost_aux = $days * 110;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 single room with ocean view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room  Ocean View  (US$ 110.00 per night per room)</td><td></td></tr>';
-				$resumen_reserva .= '<tr><td>Habitación simple ocean</td><td>: US$ 110.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				$resumen_reserva .= '<tr><td>Simple room ocean view</td><td>: US$ 110.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmdg01':
 			case 'rmdg02':
@@ -143,7 +143,7 @@ class Mandrillapp {
 				$cost_aux = $days * 130;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 double room with garden view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td>Bed & Breakfast Double Room Garden View (US$ 130.00 per night per room)</td><td></td></tr>';
-				$resumen_reserva .= '<tr><td>Habitación double garden</td><td>: US$ 130.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				$resumen_reserva .= '<tr><td>Double room garden view</td><td>: US$ 130.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmdo05':
 			case 'rmdo06':
@@ -151,7 +151,7 @@ class Mandrillapp {
 				$cost_aux = $days * 140;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 double room with ocean view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Double Room Ocean View  (US$ 140.00 per night per room)</td><td></td></tr>';
-				$resumen_reserva .= '<tr><td>Habitación double ocean</td><td>: US$ 140.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				$resumen_reserva .= '<tr><td>Double room ocean view</td><td>: US$ 140.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmtg01':
 			case 'rmtg02':
@@ -159,7 +159,7 @@ class Mandrillapp {
 				$cost_aux = $days * 160;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 triple room with garden view  </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td>Bed & Breakfast Triple Room Garden View (US$ 160.00 per night per room)</td><td></td></tr>';
-				$resumen_reserva .= '<tr><td>Habitación triple garden</td><td>: US$ 160.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				$resumen_reserva .= '<tr><td>Triple room garden view</td><td>: US$ 160.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmto05':
 			case 'rmto06':
@@ -167,7 +167,7 @@ class Mandrillapp {
 				$cost_aux = $days * 180;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 triple room with ocean view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Triple Room Ocean View  (US$ 180.00 per night per room)</td><td></td></tr>';
-				$resumen_reserva .= '<tr><td>Habitación triple ocean</td><td>: US$ 180.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+				$resumen_reserva .= '<tr><td>Triple room ocean view</td><td>: US$ 180.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 		}
 	}
@@ -210,7 +210,8 @@ class Mandrillapp {
 		<tr>
 			<td>
 				<p>We confirm the following reservation (s):<br>
-				<b>HORA CHECK IN : 14:00 HRS</b> <b>HORA CHECK OUT : 12:00 HRS.</b></p>			
+				<break>
+				<b>CHECK IN TIME: 14:00 HRS</b> <b>CHECK OUT TIME: 12:00 HRS.</b></p>			
 			</td>
 		</tr>
 		<table>
