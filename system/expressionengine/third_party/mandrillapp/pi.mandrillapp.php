@@ -126,7 +126,7 @@ class Mandrillapp {
 			case 'rmsg03':
 				$cost_aux = $days * 100;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 single room with garden view</td><td></td></tr>';
-				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Simple Garden View  (US$ 100.00 por habitación x noche)</td><td></td></tr>';
+				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room Garden View (US$ 100.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Habitación simple garden</td><td>: US$ 100.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmso05':
@@ -134,7 +134,7 @@ class Mandrillapp {
 			case 'rmso07':
 				$cost_aux = $days * 110;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 single room with ocean view </td><td></td></tr>';
-				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Simple Oean View  (US$ 110.00 por habitación x noche)</td><td></td></tr>';
+				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room  Ocean View  (US$ 110.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Habitación simple ocean</td><td>: US$ 110.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmdg01':
@@ -142,7 +142,7 @@ class Mandrillapp {
 			case 'rmdg03':
 				$cost_aux = $days * 130;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 double room with garden view </td><td></td></tr>';
-				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Double Garden View  (US$ 130.00 por habitación x noche)</td><td></td></tr>';
+				$habitaciones_precio .= '<tr><td></td><td>Bed & Breakfast Double Room Garden View (US$ 130.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Habitación double garden</td><td>: US$ 130.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmdo05':
@@ -150,7 +150,7 @@ class Mandrillapp {
 			case 'rmdo07':
 				$cost_aux = $days * 140;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 double room with ocean view </td><td></td></tr>';
-				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Double Ocean View  (US$ 140.00 por habitación x noche)</td><td></td></tr>';
+				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Double Room Ocean View  (US$ 140.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Habitación double ocean</td><td>: US$ 140.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmtg01':
@@ -158,7 +158,7 @@ class Mandrillapp {
 			case 'rmtg03':
 				$cost_aux = $days * 160;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 triple room with garden view  </td><td></td></tr>';
-				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Triple Garden View  (US$ 160.00 por habitación x noche)</td><td></td></tr>';
+				$habitaciones_precio .= '<tr><td></td><td>Bed & Breakfast Triple Room Garden View (US$ 160.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Habitación triple garden</td><td>: US$ 160.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 			case 'rmto05':
@@ -166,7 +166,7 @@ class Mandrillapp {
 			case 'rmto07':
 				$cost_aux = $days * 180;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 triple room with ocean view </td><td></td></tr>';
-				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Paxs Directos Triple Ocean View  (US$ 180.00 por habitación x noche)</td><td></td></tr>';
+				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Triple Room Ocean View  (US$ 180.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Habitación triple ocean</td><td>: US$ 180.00 x '.$days.' noches</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 		}
