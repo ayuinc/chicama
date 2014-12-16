@@ -276,13 +276,13 @@ class Mandrillapp {
 		<table>
 		  '.$resumen_reserva.'
 		  <tr>
-		    <td>Transfer in  </td>
-		    <td>: US$ 25.00 x 03 persons x 02 way</td>
-		    <td>: US$ 150.00</td>
+		    <td>Add ons  </td>
+		    <td>'.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'</td>
+		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Reservation total</td>
-		    <td> : US$ 726.00</td>
+		    <td> : '.$cost_reser.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
