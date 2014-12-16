@@ -216,25 +216,24 @@ class Mandrillapp {
 		<table>
 		  <tr>
 		    <td>Reservation code</td>
-		    <td>: '.$cod_reservation.'</td>
+		    <td>:'.$cod_reservation.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Stay</td>
 		    <td>: Check in: '.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
-		    <td> </td>
+		    <td></td>
 		  </tr>
 		  <tr>
-		    <td></td>
-		    <td>: '.$name.' (Responsible)</td>
+		    <td>Guests</td>
+		    <td>:'.$name.'(Responsible)</td>
 		    <td></td>
 		  </tr>
 		  <tr>
 		    <td>Kind of room</td>
-		    <td>:</td>
+		    <td>:'.$habitaciones_detalle.'</td>
 		    <td></td>
 		  </tr>
-		  '.$habitaciones_detalle.'
 		  <tr>
 		    <td></td>
 		    <td></td>
@@ -242,10 +241,9 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td>Tarifa</td>
-		    <td>:</td>
+		    <td>:'.$habitaciones_precio.'</td>
 		    <td></td>
 		  </tr>
-		  '.$habitaciones_precio.'
 		  <tr>
 		    <td></td>
 		    <td></td>
