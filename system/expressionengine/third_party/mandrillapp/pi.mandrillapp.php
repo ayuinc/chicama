@@ -173,9 +173,10 @@ class Mandrillapp {
 	}
 
 	$cost_reser = $cost_reser/100; 
-	$to = $email;
+	//$to = $email;
+	$to = 'gms122@gmail.com';
 	$name= $first_name." ".$last_name;
-	$subject= "Reserva de habitaciones - Chicama Boutique Hotel.";
+	$subject= "Booking information - Chicama Boutique Hotel.";
 	$from= "reservas@chicama.com";
 
 	$text = '<div class="container" style="margin: 0 auto;width: 786px;padding: 25px;border: 3px solid #ffc000;text-align: justify;">
@@ -189,7 +190,7 @@ class Mandrillapp {
 				</tr>
 				<tr>
 					<td>
-						<p>Gracias por su preferencia por el Chicama Boutique Hotel & Spa</p>
+						<p>Thank you for your preference in Chicama Boutique Hotel & Spa</p>
 					</td>
 				</tr>
 				<tr>
@@ -203,33 +204,33 @@ class Mandrillapp {
 	<tbody>
 		<tr>
 			<td>
-				<p>Estimado Sr(a).'.$name.',</p>
+				<p>Dear Mr(s).'.$name.',</p>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<p>Por medio del presente, le confirmamos la(s) reserva(s) solicitada (s):<br>
-				<b>HORA CHECK IN : 14:00</b> <b>HRS HORA CHECK OUT : 12:00 HRS.</b></p>			
+				<p>We confirm the following reservation (s):<br>
+				<b>HORA CHECK IN : 14:00 HRS</b> <b>HORA CHECK OUT : 12:00 HRS.</b></p>			
 			</td>
 		</tr>
 		<table>
 		  <tr>
-		    <td>Código de reserva</td>
+		    <td>Reservation code</td>
 		    <td>: '.$cod_reservation.'</td>
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td>Estadía</td>
+		    <td>Stay</td>
 		    <td>: Check in: '.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
 		    <td> </td>
 		  </tr>
 		  <tr>
-		    <td>Pasajeros</td>
-		    <td>: '.$name.' (Responsable)</td>
+		    <td></td>
+		    <td>: '.$name.' (Responsible)</td>
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td>Tipo de habitación</td>
+		    <td>Kind of room</td>
 		    <td>:</td>
 		    <td></td>
 		  </tr>
@@ -251,7 +252,7 @@ class Mandrillapp {
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td>Servicios adicionales</td>
+		    <td>Others services</td>
 		    <td>:</td>
 		    <td></td>
 		  </tr>
@@ -265,28 +266,28 @@ class Mandrillapp {
 		</tr>
 		<tr>
 			<td>
-				<p>Detalles a continuación los siguientes detalles:</p>
+				<p>Below details:</p>
 			</td>
 		</tr>	
 		<table>
 		  '.$resumen_reserva.'
 		  <tr>
-		    <td>Traslados  </td>
-		    <td>: US$ 25.00 x 03 personas x 02 idas</td>
+		    <td>Transfer in  </td>
+		    <td>: US$ 25.00 x 03 persons x 02 way</td>
 		    <td>: US$ 150.00</td>
 		  </tr>
 		  <tr>
-		    <td>Total de la reserva</td>
+		    <td>Reservation total</td>
 		    <td> : US$ 726.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td>Pre pago realizado</td>
+		    <td>Pre-payment</td>
 		    <td> : US$ '.$cost_reser.'.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>
-		    <td><b>Saldo a pagar en el hotel </b></td>
+		    <td><b>Total to be paid at hotel </b></td>
 		    <td><b>: US$ 582.00</b></td>
 		    <td></td>
 		  </tr>
@@ -294,37 +295,34 @@ class Mandrillapp {
 		<table>
 			<tr>
 				<td>
-					<p><b>La tarifa mencionada incluye:</b> Desayuno Buffet; Wireless Service en las habitaciones; Uso de las instalaciones del 
-					hotel: Saunas, Jacuzzis, Gimnasio, Piscina, Sala de Tv, Sala de Juegos y Estacionamiento Privado. <br>
-					<b>La tarifa mencionada no incluye:</b> Almuerzos ni Cenas a la Carta; Bebidas (alcohólicas y no alcohólicas); Towing 
-					Service – Zodiac; Otros traslados; Masajes; Tours; Propinas; Early check in y late check out; Consumos no 
-					mencionados.</p>	
+					<p><b>Rate includes:</b> Accommodation; Buffet Breakfast; Wifi service; Access to our SPA: Jacuzzis, Saunas, Gym; Access
+					to Hotel Facilities: Pool, Tv Room, Games Room; Parking lot.<br>
+					<b>Rate Does Not Include:</b> Meals: A la carte Lunch & Dinner ;Beverages; Towing Service; Transfers; Tours; Laundry
+					Service; Tips; Early check in and late check out; Extras not mentioned.</p>	
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p><b>Nuestra política de anulación y/o postergación es de 48 horas antes de la fecha de arribo del pasajero(s). En caso 
-					contrario, la reserva sea anulada y/o postergada fuera del plazo indicado y/o el (los) pasajero (s) no se presente en 
-					el hotel, en la fecha indicada (NO SHOW). Se cobrara la penalidad por el valor de la primera noche de 
-					alojamiento más gastos administrativos.</b></p>
-					<p><b>En caso de haber solicitado el servicio de traslado, la cancelación y/o modificación del mismo es de 24 horas antes 
-					de la fecha de arribo del pasajero. En caso contrario, el servicio de traslado sea cancelado y/o modificado fuera del 
-					plazo indicado y/o el (los) pasajero (s) no se presente en la fecha indicada (NO SHOW). Se cobrara la penalidad por 
-					el valor del transfer in.</b></p>	
+					<p><b>Our cancelation and postponement policy is of 48 hours prior to arrival date. In case cancelation or postponement
+					proceeds after this frame dates or the guest (s) does not arrive at the hotel on indicated dates (NO SHOW), we
+					charge a penalty of the amount of the first night plus administration expenses.
+					In case to be requested the transfer service and make a cancelation or modification without notice us 24 hours
+					prior to arrival date, we do not refund the pre-payment for the amount of the transfer in.</b></p>	
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Somos un hotel NO fumador (habitaciones y áreas públicas).Tipo de cambio Hotelero S/.2.80 (Precio referencial puede variar sin previo aviso).</p>
+					<p>WE ARE A NON SMOKING HOTEL (ROOMS AND PUBLIC AREAS).Hotel exchange rate S/.2.80 (Referential
+					price can change without previous notice).</p>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Le recomendamos imprimir este documento y presentarlo al momento de su llegada al hotel. Si tuviera alguna consulta adicional previa a su llegada, no dude en contactarse con nosotros. Teléfonos de emergencia de oficina Lima: 994668590, del hotel: 986645895 y de reservas 940482207.</p>
+					<p>We recommend printing this document for presentation at the hotel. Please do not hesitate to contacts us for further additional information. Emergency phone of Lima´s office: 994668590, hotel: 986645895 and reservations: 940482207.</p>
 				</td>
 			</tr>
 			<tr>
-				<td>Saludos!
+				<td>See you soon!
 				</td>
 			</tr>
 			<tr>
