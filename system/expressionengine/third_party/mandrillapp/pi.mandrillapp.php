@@ -255,7 +255,11 @@ class Mandrillapp {
 		    <td>: </td>
 		    <td></td>
 		  </tr>
-		  '.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'
+		  <tr>
+		    <td></td>
+		    <td>'.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'</td>
+		    <td></td>
+		  </tr>
 		</table>
 		<tr>
 			<td>
