@@ -79,6 +79,7 @@ class Mandrillapp {
 		if($query != null){
 		  foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
 		    $add_on_1 = $row_lunch_and_dinner->description;
+		    $add_on_1_detail = '<tr><td> US$ '.substr($row_lunch_and_dinner->cost, 0, 2).'.00 per night</td><td></td><td> </td></tr>';
 		  }
 		} 
 		//$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
@@ -90,6 +91,7 @@ class Mandrillapp {
 		if($query != null){
 		  foreach($query_transport->result() as $row_transport){
 		    $add_on_2 = $row_transport->description;
+		    $add_on_2_detail = '<tr><td>'.$row_transport->detail.'</td><td> US$ '.substr($row_transport->cost, 0, 2).'.00</td><td> </td></tr>';
 		  }
 		} 
 		//$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
@@ -101,6 +103,7 @@ class Mandrillapp {
 		if($query != null){
 		  foreach($query_zodiacs->result() as $row_zodiacs){
 		    $add_on_3 = $row_zodiacs->description;
+		    $add_on_3_detail = '<tr><td>'.$row_zodiacs->detail.'</td><td> US$ '.substr($row_zodiacs->cost, 0, 2).'.00 one time only</td><td> </td></tr>';
 		  }
 		} 
 		//$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
@@ -246,21 +249,7 @@ class Mandrillapp {
 		    <td>: '.$habitaciones_precio.'</td>
 		    <td></td>
 		  </tr>
-		  <tr>
-		    <td></td>
-		    <td></td>
-		    <td></td>
-		  </tr>
-		  <tr>
-		    <td>Others services</td>
-		    <td>: </td>
-		    <td></td>
-		  </tr>
-		  <tr>
-		    <td></td>
-		    <td>'.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'</td>
-		    <td></td>
-		  </tr>
+		  '.$add_on_1_detail.$add_on_2_detail.$add_on_3_detail.'
 		</table>
 		<tr>
 			<td>
@@ -277,12 +266,13 @@ class Mandrillapp {
 		  '.$resumen_reserva.'
 		  <tr>
 		    <td>Add ons  </td>
-		    <td>'.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'</td>
+		    <td>:</td>
 		    <td></td>
 		  </tr>
+		  '.$add_on_1_detail.$add_on_2_detail.$add_on_3_detail.'
 		  <tr>
 		    <td>Reservation total</td>
-		    <td> : '.$cost_reser.'</td>
+		    <td> : 	US$ '.$cost_reser.'.00</td>
 		    <td></td>
 		  </tr>
 		  <tr>
