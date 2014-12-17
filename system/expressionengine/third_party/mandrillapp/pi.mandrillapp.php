@@ -277,6 +277,8 @@ class Mandrillapp {
 		  </tr>
 		  <br>
 		  '.$add_on_1_detail.$add_on_2_detail.$add_on_3_detail.'
+		  <br>
+		  <br>
 		  <tr>
 		    <td>Reservation total</td>
 		    <td> : 	US$ '.$cost_reser.'.00</td>
