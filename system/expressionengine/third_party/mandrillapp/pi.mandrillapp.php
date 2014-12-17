@@ -304,7 +304,7 @@ class Mandrillapp {
 		  <tr>
 		    <td><b>Total to be paid at hotel </b></td>
 		    <td>:</td>
-		    <td><b> US$  '.$cost_total-$cost_reser.'.00</b></td>
+		    <td><b> US$  '.$cost_total.'.00</b></td>
 		  </tr>
 		</table>
 		<table>
