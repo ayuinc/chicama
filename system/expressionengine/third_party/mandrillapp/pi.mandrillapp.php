@@ -104,7 +104,7 @@ class Mandrillapp {
 		$query_zodiacs = ee()->db->get('exp_hotel_products');
 		if($query != null){
 		  foreach($query_zodiacs->result() as $row_zodiacs){
-		    $cost_total = $cost_aux_total + $row_zodiacs->cost/100;
+		    $cost_total = $cost_total + $row_zodiacs->cost/100;
 		    $add_on_3 = $row_zodiacs->description;
 		    $add_on_3_detail = '<tr><td>'.$row_zodiacs->detail.'</td><td>: US$ '.substr($row_zodiacs->cost, 0, -2).'.00 x '.$days.' nights</td><td>: US$ '.substr($row_zodiacs->cost*$days, 0, -2).'.00</td></tr>';
 		  }
