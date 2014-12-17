@@ -107,6 +107,8 @@ class Mandrillapp {
 		    //$cost_total = $cost_total + $row_zodiacs->cost/100;
 		    $add_on_3 = $row_zodiacs->description;
 		    $add_on_3_detail = '<tr><td>'.$row_zodiacs->detail.'</td><td>: US$ '.substr($row_zodiacs->cost, 0, -2).'.00 x '.$days.' nights</td><td>: US$ '.substr($row_zodiacs->cost*$days, 0, -2).'.00</td></tr>';
+		  	$add_on_3_extra_amount = intval($row_zodiacs->cost)/100;
+		  	$add_on_3_extra_amount = $add_on_3_extra_amount*($days-1);
 		  }
 		} 
 		//$add_on_3 = '<tr><td></td><td>'.$add_on_3.'</td><td></td></tr>';
@@ -131,7 +133,7 @@ class Mandrillapp {
 			case 'rmsg02':
 			case 'rmsg03':
 				$cost_aux = $days * 100;
-				$cost_total = $cost_total + $cost_aux;
+				//$cost_total = $cost_total + $cost_aux;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 single room with garden view</td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room Garden View (US$ 100.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Simple room garden view</td><td>: US$ 100.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
@@ -140,7 +142,7 @@ class Mandrillapp {
 			case 'rmso06':
 			case 'rmso07':
 				$cost_aux = $days * 110;
-				$cost_total = $cost_total + $cost_aux;
+				//$cost_total = $cost_total + $cost_aux;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 single room with ocean view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room  Ocean View  (US$ 110.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Simple room ocean view</td><td>: US$ 110.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
@@ -149,7 +151,7 @@ class Mandrillapp {
 			case 'rmdg02':
 			case 'rmdg03':
 				$cost_aux = $days * 130;
-				$cost_total = $cost_total + $cost_aux;
+				//$cost_total = $cost_total + $cost_aux;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 double room with garden view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td>Bed & Breakfast Double Room Garden View (US$ 130.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Double room garden view</td><td>: US$ 130.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
@@ -158,7 +160,7 @@ class Mandrillapp {
 			case 'rmdo06':
 			case 'rmdo07':
 				$cost_aux = $days * 140;
-				$cost_total = $cost_total + $cost_aux;
+				//$cost_total = $cost_total + $cost_aux;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 double room with ocean view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Double Room Ocean View  (US$ 140.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Double room ocean view</td><td>: US$ 140.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
@@ -167,7 +169,7 @@ class Mandrillapp {
 			case 'rmtg02':
 			case 'rmtg03':
 				$cost_aux = $days * 160;
-				$cost_total = $cost_total + $cost_aux;
+				//$cost_total = $cost_total + $cost_aux;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 triple room with garden view  </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td>Bed & Breakfast Triple Room Garden View (US$ 160.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Triple room garden view</td><td>: US$ 160.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
@@ -176,15 +178,16 @@ class Mandrillapp {
 			case 'rmto06':
 			case 'rmto07':
 				$cost_aux = $days * 180;
-				$cost_total = $cost_total + $cost_aux;
+				//$cost_total = $cost_total + $cost_aux;
 				$habitaciones_detalle .= '<tr><td></td><td> 01 triple room with ocean view </td><td></td></tr>';
 				$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Triple Room Ocean View  (US$ 180.00 per night per room)</td><td></td></tr>';
 				$resumen_reserva .= '<tr><td>Triple room ocean view</td><td>: US$ 180.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 			break;
 		}
 	}
-
 	$cost_reser = $cost_reser/100; 
+	$cost_total = $cost_reser + $add_on_3_extra_amount;
+	
 	//$to = $email;
 	$to = 'gms122@gmail.com';
 	$name= $first_name." ".$last_name;
@@ -291,17 +294,17 @@ class Mandrillapp {
 		  <tr>
 		    <td>Reservation total</td>
 		    <td> :</td>
-		    <td>US$ '.$cost_reser.'.00</td>
+		    <td>US$ '.$cost_total.'.00</td>
 		  </tr>
 		  <tr>
 		    <td>Pre-payment</td>
-		    <td> : US$ '.$cost_reser.'.00</td>
-		    <td></td>
+		    <td> :</td>
+		    <td> US$ '.$cost_reser.'.00</td>
 		  </tr>
 		  <tr>
 		    <td><b>Total to be paid at hotel </b></td>
 		    <td>:</td>
-		    <td><b> US$  '.$cost_reser.'.00</b></td>
+		    <td><b> US$  '.$cost_total-$cost_reser.'.00</b></td>
 		  </tr>
 		</table>
 		<table>
