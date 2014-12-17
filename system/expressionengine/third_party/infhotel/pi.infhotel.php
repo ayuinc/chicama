@@ -597,10 +597,7 @@ class Infhotel
             return '{exp:mandrillapp:send_email_reserva_chicama  
                       id = "'.$id .'"                    }
                     {/exp:mandrillapp:send_email_reserva_chicama}
-                    {exp:mandrillapp:send_email_reserva_chicama
-                      id = "'.$id .'" 
-                    }
-                    {/exp:mandrillapp:send_email_reserva_chicama} 
+                    
                     <div class="large-12 columns">
                     <div class="row">
                     <h4 class="text-center sub-title first">thank you. your reservation is complete</h4>
