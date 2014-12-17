@@ -78,7 +78,7 @@ class Mandrillapp {
 		$query_lunch_and_dinner = ee()->db->get('exp_hotel_products');
 		if($query != null){
 		  foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
-		    $cost_total = $cost_total + $row_lunch_and_dinner->cost*$days/100;
+		    //$cost_total = $cost_total + $row_lunch_and_dinner->cost*$days/100;
 		    $add_on_1 = $row_lunch_and_dinner->description;
 		    $add_on_1_detail = '<tr><td>'.$row_lunch_and_dinner->detail.'</td><td> </td><td>: US$ '.substr($row_lunch_and_dinner->cost, 0, -2).'.00</td></tr>';
 		  }
@@ -91,7 +91,7 @@ class Mandrillapp {
 		$query_transport = ee()->db->get('exp_hotel_products');
 		if($query != null){
 		  foreach($query_transport->result() as $row_transport){
-		    $cost_total = $cost_total + $row_transport->cost/100;
+		    //$cost_total = $cost_total + $row_transport->cost/100;
 		    $add_on_2 = $row_transport->description;
 		    $add_on_2_detail = '<tr><td>'.$row_transport->detail.'</td><td></td><td> : US$ '.substr($row_transport->cost, 0, -2).'.00</td></tr>';
 		  }
@@ -104,7 +104,7 @@ class Mandrillapp {
 		$query_zodiacs = ee()->db->get('exp_hotel_products');
 		if($query != null){
 		  foreach($query_zodiacs->result() as $row_zodiacs){
-		    $cost_total = $cost_total + $row_zodiacs->cost/100;
+		    //$cost_total = $cost_total + $row_zodiacs->cost/100;
 		    $add_on_3 = $row_zodiacs->description;
 		    $add_on_3_detail = '<tr><td>'.$row_zodiacs->detail.'</td><td>: US$ '.substr($row_zodiacs->cost, 0, -2).'.00 x '.$days.' nights</td><td>: US$ '.substr($row_zodiacs->cost*$days, 0, -2).'.00</td></tr>';
 		  }
@@ -301,7 +301,7 @@ class Mandrillapp {
 		  <tr>
 		    <td><b>Total to be paid at hotel </b></td>
 		    <td>:</td>
-		    <td><b> US$ '.$cost_total - $cost_reser.'.00</b></td>
+		    <td><b> US$ '.$cost_total-$cost_reser.'.00</b></td>
 		  </tr>
 		</table>
 		<table>
