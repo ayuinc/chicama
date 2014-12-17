@@ -187,6 +187,7 @@ class Mandrillapp {
 	}
 	$cost_reser = $cost_reser/100; 
 	$cost_total = $cost_reser + $add_on_3_extra_amount;
+	$cost_paid_in_hotel = $cost_total - $cost_reser; 
 	
 	//$to = $email;
 	$to = 'gms122@gmail.com';
@@ -263,7 +264,17 @@ class Mandrillapp {
 		  </tr>
 		  <tr>
 		    <td></td>
-		    <td>'.$add_on_1.'<br>'.$add_on_2.'<br>'.$add_on_3.'</td>
+		    <td>'.$add_on_1.'</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>'.$add_on_2.'</td>
+		    <td></td>
+		  </tr>
+		  <tr>
+		    <td></td>
+		    <td>'.$add_on_3.'</td>
 		    <td></td>
 		  </tr>
 		</table>
@@ -304,7 +315,7 @@ class Mandrillapp {
 		  <tr>
 		    <td><b>Total to be paid at hotel </b></td>
 		    <td>:</td>
-		    <td><b> US$  '.$cost_total.'.00</b></td>
+		    <td><b> US$  '.$cost_paid_in_hotel.'.00</b></td>
 		  </tr>
 		</table>
 		<table>
