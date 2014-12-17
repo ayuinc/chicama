@@ -79,7 +79,7 @@ class Mandrillapp {
 		if($query != null){
 		  foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
 		    $add_on_1 = $row_lunch_and_dinner->description;
-		    $add_on_1_detail = '<tr><td> US$ '.substr($row_lunch_and_dinner->cost, 0, 2).'.00 per night</td><td></td><td> </td></tr>';
+		    $add_on_1_detail = '<tr><td>'.$row_lunch_and_dinner->detail.'</td><td> US$ '.substr($row_lunch_and_dinner->cost, 0, 2).'.00</td><td> </td></tr>';
 		  }
 		} 
 		//$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
@@ -249,7 +249,7 @@ class Mandrillapp {
 		    <td>: '.$habitaciones_precio.'</td>
 		    <td></td>
 		  </tr>
-		  '.$add_on_1_detail.$add_on_2_detail.$add_on_3_detail.'
+		  '.$add_on_1.$add_on_2.$add_on_3.'
 		</table>
 		<tr>
 			<td>
