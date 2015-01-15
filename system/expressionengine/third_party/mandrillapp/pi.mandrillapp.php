@@ -45,6 +45,7 @@ class Mandrillapp {
 	$add_on_1_detail = "";
 	$add_on_2_detail = "";
 	$add_on_3_detail = "";
+	$add_on_3_extra_amount = 0;
 	ee()->db->select('*');
 	ee()->db->where('id',$id);
 	$query = ee()->db->get('exp_hotel_reservations');
