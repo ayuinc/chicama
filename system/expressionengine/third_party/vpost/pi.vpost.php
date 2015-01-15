@@ -318,7 +318,7 @@ class Vpost
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
         //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-         //if($arrayOut['authorizationResult'] == "05"){
+         if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
           
           $data = array(
@@ -356,8 +356,8 @@ class Vpost
                     {/exp:infhotel:insertarreservar}';
             return $div;
             //return $request;
-          //}
-          //else {
+          }
+          else {
             //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
             return "Han ocurrido problemas con la transacción ".$arrayOut['authorizationResult'];
         //}
