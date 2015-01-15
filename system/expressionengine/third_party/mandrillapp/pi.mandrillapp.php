@@ -42,6 +42,9 @@ class Mandrillapp {
 	$id = $TMPL->fetch_param('id');
 	$cost_total = 0;
 	$cost_total_hab = 0;
+	$add_on_1_detail = "";
+	$add_on_2_detail = "";
+	$add_on_3_detail = "";
 	ee()->db->select('*');
 	ee()->db->where('id',$id);
 	$query = ee()->db->get('exp_hotel_reservations');
