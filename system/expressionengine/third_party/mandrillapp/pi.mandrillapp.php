@@ -199,180 +199,180 @@ class Mandrillapp {
 		$subject= "Booking information - Chicama Boutique Hotel.";
 		$from= "reservas@chicama.com";
 
-		$text = '<div class="container" style="margin: 0 auto;width: 786px;padding: 25px;border: 3px solid #ffc000;text-align: justify;">
-		<div class="header" style="padding-left: 77px;">
-			<table>
-				<thead style="text-align: center;">
+		$text = '
+		<div class="container" style="margin: 0 auto;width: 786px;padding: 25px;border: 3px solid #ffc000;text-align: justify;">
+			<div class="header" style="padding-left: 77px;">
+				<table>
+					<thead style="text-align: center;">
+						<tr>
+							<td class="logo">
+								<img src="http://www.cuponium.com/img/fotos/empresa/1322589534_ChicamaLogo.jpg" style="box-shadow: 4px 5px 22px 0px gray;margin: 47px;border-radius: 8px;">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Thank you for your preference in Chicama Boutique Hotel & Spa</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="header-images">
+								<img src="http://s15.postimg.org/gna5l60ez/captura.png" style="padding: 4px;border-top: 2px solid #ffc000;border-bottom: 2px solid #ffc000;text-align: center;">
+							</td>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<tbody>
+				<tr>
+					<td>
+						<p>Dear Mr(s).'.$name.',</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>We confirm the following reservation (s):<br>
+						<break>
+						<b>CHECK IN TIME: 14:00 HRS</b> <b>CHECK OUT TIME: 12:00 HRS.</b></p>			
+					</td>
+				</tr>
+				<table>
+				  <tr>
+				    <td>Reservation code</td>
+				    <td>: '.$cod_reservation.'</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td>Stay</td>
+				    <td>: Check in: '.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td>Guests</td>
+				    <td>: '.$name.' (Responsible)</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td>Kind of room</td>
+				    <td>:</td>
+				    <td></td>
+				  </tr>
+				    '.$habitaciones_detalle.'
+				  <tr>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td>Kind of rate</td>
+				    <td>: '.$habitaciones_precio.'</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td>'.$add_on_1.'</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td>'.$add_on_2.'</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td></td>
+				    <td>'.$add_on_3.'</td>
+				    <td></td>
+				  </tr>
+				</table>
+				<tr>
+					<td>
+						<!--<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
+						Transfer out : 02/06 Lan 2209 13:05 hrs</p>-->
+					</td>
+				</tr>
+				<br>
+				<tr>
+					<td>
+						<p><b>Below details:</b></p>
+					</td>
+				</tr>	
+				<table>
+				  '.$resumen_reserva.'
+				  <br>
+				  <tr>
+				    <td><b>Add ons:  </b></td>
+				    <td></td>
+				    <td></td>
+				  </tr>
+				  <br>
+				  '.$add_on_1_detail.$add_on_2_detail.$add_on_3_detail.'
+				  <br>
+				  <br>
+				  <tr>
+				    <td>Reservation total</td>
+				    <td> :</td>
+				    <td>US$ '.$cost_total.'.00</td>
+				  </tr>
+				  <tr>
+				    <td>Pre-payment</td>
+				    <td> :</td>
+				    <td> US$ '.$cost_reser.'.00</td>
+				  </tr>
+				  <tr>
+				    <td><b>Total to be paid at hotel </b></td>
+				    <td>:</td>
+				    <td><b> US$  '.$cost_paid_in_hotel.'.00</b></td>
+				  </tr>
+				</table>
+				<table>
 					<tr>
-						<td class="logo">
-							<img src="http://www.cuponium.com/img/fotos/empresa/1322589534_ChicamaLogo.jpg" style="box-shadow: 4px 5px 22px 0px gray;margin: 47px;border-radius: 8px;">
+						<td>
+							<p><b>Rate includes:</b> Accommodation; Buffet Breakfast; Wifi service; Access to our SPA: Jacuzzis, Saunas, Gym; Access
+							to Hotel Facilities: Pool, Tv Room, Games Room; Parking lot.<br>
+							<b>Rate Does Not Include:</b> Meals: A la carte Lunch & Dinner ;Beverages; Towing Service; Transfers; Tours; Laundry
+							Service; Tips; Early check in and late check out; Extras not mentioned.</p>	
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<p>Thank you for your preference in Chicama Boutique Hotel & Spa</p>
+							<p><b>Our cancelation and postponement policy is of 48 hours prior to arrival date. In case cancelation or postponement
+							proceeds after this frame dates or the guest (s) does not arrive at the hotel on indicated dates (NO SHOW), we
+							charge a penalty of the amount of the first night plus administration expenses.
+							In case to be requested the transfer service and make a cancelation or modification without notice us 24 hours
+							prior to arrival date, we do not refund the pre-payment for the amount of the transfer in.</b></p>	
 						</td>
 					</tr>
 					<tr>
-						<td class="header-images">
-							<img src="http://s15.postimg.org/gna5l60ez/captura.png" style="padding: 4px;border-top: 2px solid #ffc000;border-bottom: 2px solid #ffc000;text-align: center;">
+						<td>
+							<p>WE ARE A NON SMOKING HOTEL (ROOMS AND PUBLIC AREAS).Hotel exchange rate S/.2.80 (Referential
+							price can change without previous notice).</p>
 						</td>
 					</tr>
-				</thead>
-			</table>
-		</div>
-		<tbody>
-			<tr>
-				<td>
-					<p>Dear Mr(s).'.$name.',</p>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>We confirm the following reservation (s):<br>
-					<break>
-					<b>CHECK IN TIME: 14:00 HRS</b> <b>CHECK OUT TIME: 12:00 HRS.</b></p>			
-				</td>
-			</tr>
-			<table>
-			  <tr>
-			    <td>Reservation code</td>
-			    <td>: '.$cod_reservation.'</td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td>Stay</td>
-			    <td>: Check in: '.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td>Guests</td>
-			    <td>: '.$name.' (Responsible)</td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td>Kind of room</td>
-			    <td>:</td>
-			    <td></td>
-			  </tr>
-			    '.$habitaciones_detalle.'
-			  <tr>
-			    <td></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td>Kind of rate</td>
-			    <td>: '.$habitaciones_precio.'</td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td>'.$add_on_1.'</td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td>'.$add_on_2.'</td>
-			    <td></td>
-			  </tr>
-			  <tr>
-			    <td></td>
-			    <td>'.$add_on_3.'</td>
-			    <td></td>
-			  </tr>
-			</table>
-			<tr>
-				<td>
-					<!--<p>Transfer in : 29/05 Lan 2204 20:25 – 21:40 hrs<br>
-					Transfer out : 02/06 Lan 2209 13:05 hrs</p>-->
-				</td>
-			</tr>
-			<br>
-			<tr>
-				<td>
-					<p><b>Below details:</b></p>
-				</td>
-			</tr>	
-			<table>
-			  '.$resumen_reserva.'
-			  <br>
-			  <tr>
-			    <td><b>Add ons:  </b></td>
-			    <td></td>
-			    <td></td>
-			  </tr>
-			  <br>
-			  '.$add_on_1_detail.$add_on_2_detail.$add_on_3_detail.'
-			  <br>
-			  <br>
-			  <tr>
-			    <td>Reservation total</td>
-			    <td> :</td>
-			    <td>US$ '.$cost_total.'.00</td>
-			  </tr>
-			  <tr>
-			    <td>Pre-payment</td>
-			    <td> :</td>
-			    <td> US$ '.$cost_reser.'.00</td>
-			  </tr>
-			  <tr>
-			    <td><b>Total to be paid at hotel </b></td>
-			    <td>:</td>
-			    <td><b> US$  '.$cost_paid_in_hotel.'.00</b></td>
-			  </tr>
-			</table>
-			<table>
-				<tr>
-					<td>
-						<p><b>Rate includes:</b> Accommodation; Buffet Breakfast; Wifi service; Access to our SPA: Jacuzzis, Saunas, Gym; Access
-						to Hotel Facilities: Pool, Tv Room, Games Room; Parking lot.<br>
-						<b>Rate Does Not Include:</b> Meals: A la carte Lunch & Dinner ;Beverages; Towing Service; Transfers; Tours; Laundry
-						Service; Tips; Early check in and late check out; Extras not mentioned.</p>	
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p><b>Our cancelation and postponement policy is of 48 hours prior to arrival date. In case cancelation or postponement
-						proceeds after this frame dates or the guest (s) does not arrive at the hotel on indicated dates (NO SHOW), we
-						charge a penalty of the amount of the first night plus administration expenses.
-						In case to be requested the transfer service and make a cancelation or modification without notice us 24 hours
-						prior to arrival date, we do not refund the pre-payment for the amount of the transfer in.</b></p>	
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>WE ARE A NON SMOKING HOTEL (ROOMS AND PUBLIC AREAS).Hotel exchange rate S/.2.80 (Referential
-						price can change without previous notice).</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>We recommend printing this document for presentation at the hotel. Please do not hesitate to contacts us for further additional information. Emergency phone of Lima´s office: 994668590, hotel: 986645895 and reservations: 940482207.</p>
-					</td>
-				</tr>
-				<tr>
-					<td>See you soon!
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<ul>
-							<li>Marie Paredes Herrera</li>
-							<li>Sales & Reservations</li>
-							<li>Av. Javier Prado Oeste 1650</li>
-							<li>Lima 27, Perú.</li>
-							<li>Telf : (511) 440-6040</li>
-							<li>RPC : 940482207</li>
-							<li>reservas@chicamasurf.com</li>
-							<li><a href="http://www.chicamasurf.com/">www.chicamasurf.com</a></li>
-						</ul>
-					</td>
-				</tr>
-			</table>	
-		</tbody>
-	</div>';
-		
+					<tr>
+						<td>
+							<p>We recommend printing this document for presentation at the hotel. Please do not hesitate to contacts us for further additional information. Emergency phone of Lima´s office: 994668590, hotel: 986645895 and reservations: 940482207.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>See you soon!
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul>
+								<li>Marie Paredes Herrera</li>
+								<li>Sales & Reservations</li>
+								<li>Av. Javier Prado Oeste 1650</li>
+								<li>Lima 27, Perú.</li>
+								<li>Telf : (511) 440-6040</li>
+								<li>RPC : 940482207</li>
+								<li>reservas@chicamasurf.com</li>
+								<li><a href="http://www.chicamasurf.com/">www.chicamasurf.com</a></li>
+							</ul>
+						</td>
+					</tr>
+				</table>	
+			</tbody>
+		</div>';
 		$message = array(
 		    'subject' => $subject,
 		    'from_email' => $from,
@@ -403,7 +403,6 @@ class Mandrillapp {
 		);
 		$mandrill->messages->sendTemplate($template_name, $template_content, $message);
 		return '';
-		}
 	}
 	return '';
 }
