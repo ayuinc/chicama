@@ -288,13 +288,6 @@ class Vpost
     "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
     "-----END RSA PRIVATE KEY-----";
 
-    /*$llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
-    "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCvJS8zLPeePN+fbJeIvp/jjvLW\n".
-    "Aedyx8UcfS1eM/a+Vv2yHTxCLy79dEIygDVE6CTKbP1eqwsxRg2Z/dI+/e14WDRs\n".
-    "g0QzDdjVFIuXLKJ0zIgDw6kQd1ovbqpdTn4wnnvwUCNpBASitdjpTcNTKONfXMtH\n".
-    "pIs4aIDXarTYJGWlyQIDAQAB\n".
-    "-----END PUBLIC KEY-----"; --- TEST*/
-
     $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
     "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtvXnikeSS+H/Qs/51iL3ZYPfz\n".
     "KW94WUAz7IdZIOIcuG1zLIR3kUNUc/vdSmW120dwkIleB6pl4cVT5nDewBFJCzTS\n".
@@ -318,7 +311,7 @@ class Vpost
 
       if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
         //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-         if($arrayOut['authorizationResult'] == "00"){
+         //if($arrayOut['authorizationResult'] == "00"){
           // ingresar codigo nuevo aqui
           
           $data = array(
@@ -356,11 +349,11 @@ class Vpost
                     {/exp:infhotel:insertarreservar}';
             return $div;
             //return $request;
-          }
-          else {
+          //}
+          //else {
             //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-            return "Han ocurrido problemas con la transacción ".$arrayOut['authorizationResult'];
-          }
+            //return "Han ocurrido problemas con la transacción ".$arrayOut['authorizationResult'];
+          //}
       } 
     }
 }
