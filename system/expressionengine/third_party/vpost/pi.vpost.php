@@ -270,6 +270,7 @@ class Vpost
      $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
      session_start();
      $id=$_SESSION['id'];
+     var_dump($id);
      unset($_SESSION['id']);
      session_destroy();
      $llavePrivadaCifrado = "-----BEGIN RSA PRIVATE KEY-----\n".
