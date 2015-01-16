@@ -269,92 +269,97 @@ class Vpost
      $DIGITALSIGN= ee()->TMPL->fetch_param('DIGITALSIGN');
      $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
      session_start();
-     $id=$_SESSION['id'];
-     var_dump($id);
-     unset($_SESSION['id']);
-     session_destroy();
-     $llavePrivadaCifrado = "-----BEGIN RSA PRIVATE KEY-----\n".
-    "MIICXAIBAAKBgQDr3OXAFjoBokuPfCWs1QScfz0Ejyn4JuEuMpZCRYGhn/1pWCN1\n".
-    "kHVXrfk4fDephOBRVWEJq03fKkAJAxNMTMSbcjyMdSvhP4o/n8wpPGdHT1FZq1rD\n".
-    "OOkKKRUwyuZm/h5+hR97ud3WTccQ7RRQHBCl2rTi7ofG56NddecjI7iw8QIDAQAB\n".
-    "AoGARfH1JDizLQbfF4b+eTmWq35ELxTxokiNYLDZxH9uSOr0MIhVw6h6U+0gyjJ0\n".
-    "I05nY1dJdp+ZcUPLR6Dk2Syu5MSCFhlfEkni8kb+pK1OlkwqZ4aF3mMKW1PbXB38\n".
-    "M/vBKiZyANOTHAtdp7HuOjsAFdGT6m3Xi0bEmpAUxES+YlECQQD5tbsFBwN217FQ\n".
-    "OzZSarosXh8QVsTO4D9LMNQGw188OdgZZD29i9JGgtzxfG4VQqW7TaRjWJK/JqXU\n".
-    "p+Fgi4olAkEA8c3fqG0bT7whPxokCJGV9xCHHDB2y5qCu8RoPAnRvTcRudpqvKJR\n".
-    "ZSXkqnDgz86VGovZei32yQENm7//GtQD3QJAZ9jrERksmKT1Ca/GVJosGL1/37Sm\n".
-    "Hn7l86g31SQ1G//WXiDxCD340fgkWI1t3oucDvwoLGSuiq5Q8tJqiVMevQJAGoY/\n".
-    "04TsawmzB+4BJ+N4dNqeR4xVa64uSxSXboaROFVTH3UDImAX16WZeMzbDFCX8IqI\n".
-    "t6tVF+WCraQZAsNhDQJBALz43SvNjptXnbaHKJCKWC0tGjtC0fDjm1Tsf8jfka8o\n".
-    "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
-    "-----END RSA PRIVATE KEY-----";
+     if($_SESSION['id']==NULL){
+      return "Su sesión de reserva a expirado, intentelo nuevamente";
+     }
+     else{
+       $id=$_SESSION['id'];
+       unset($_SESSION['id']);
+       session_destroy();
+       $llavePrivadaCifrado = "-----BEGIN RSA PRIVATE KEY-----\n".
+      "MIICXAIBAAKBgQDr3OXAFjoBokuPfCWs1QScfz0Ejyn4JuEuMpZCRYGhn/1pWCN1\n".
+      "kHVXrfk4fDephOBRVWEJq03fKkAJAxNMTMSbcjyMdSvhP4o/n8wpPGdHT1FZq1rD\n".
+      "OOkKKRUwyuZm/h5+hR97ud3WTccQ7RRQHBCl2rTi7ofG56NddecjI7iw8QIDAQAB\n".
+      "AoGARfH1JDizLQbfF4b+eTmWq35ELxTxokiNYLDZxH9uSOr0MIhVw6h6U+0gyjJ0\n".
+      "I05nY1dJdp+ZcUPLR6Dk2Syu5MSCFhlfEkni8kb+pK1OlkwqZ4aF3mMKW1PbXB38\n".
+      "M/vBKiZyANOTHAtdp7HuOjsAFdGT6m3Xi0bEmpAUxES+YlECQQD5tbsFBwN217FQ\n".
+      "OzZSarosXh8QVsTO4D9LMNQGw188OdgZZD29i9JGgtzxfG4VQqW7TaRjWJK/JqXU\n".
+      "p+Fgi4olAkEA8c3fqG0bT7whPxokCJGV9xCHHDB2y5qCu8RoPAnRvTcRudpqvKJR\n".
+      "ZSXkqnDgz86VGovZei32yQENm7//GtQD3QJAZ9jrERksmKT1Ca/GVJosGL1/37Sm\n".
+      "Hn7l86g31SQ1G//WXiDxCD340fgkWI1t3oucDvwoLGSuiq5Q8tJqiVMevQJAGoY/\n".
+      "04TsawmzB+4BJ+N4dNqeR4xVa64uSxSXboaROFVTH3UDImAX16WZeMzbDFCX8IqI\n".
+      "t6tVF+WCraQZAsNhDQJBALz43SvNjptXnbaHKJCKWC0tGjtC0fDjm1Tsf8jfka8o\n".
+      "hUzYmghZ2EUMA+zT18bWVBMCJ5fSD/vjBTxoF0MMmuk=\n".
+      "-----END RSA PRIVATE KEY-----";
 
-    $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
-    "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtvXnikeSS+H/Qs/51iL3ZYPfz\n".
-    "KW94WUAz7IdZIOIcuG1zLIR3kUNUc/vdSmW120dwkIleB6pl4cVT5nDewBFJCzTS\n".
-    "W6jGaWaryzl7xS3ZToKTHpVeQr3avN7H+Om9TfsccY7gBV3IOIauTg9xIpDjIg52\n".
-    "fUcfyPq+Bhw0cWkDUQIDAQAB\n".
-    "-----END PUBLIC KEY-----";
+      $llavePublicaFirma = "-----BEGIN PUBLIC KEY-----\n".
+      "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtvXnikeSS+H/Qs/51iL3ZYPfz\n".
+      "KW94WUAz7IdZIOIcuG1zLIR3kUNUc/vdSmW120dwkIleB6pl4cVT5nDewBFJCzTS\n".
+      "W6jGaWaryzl7xS3ZToKTHpVeQr3avN7H+Om9TfsccY7gBV3IOIauTg9xIpDjIg52\n".
+      "fUcfyPq+Bhw0cWkDUQIDAQAB\n".
+      "-----END PUBLIC KEY-----";
 
-     $arrayIn['IDACQUIRER'] =$IDACQUIRER;
-     $arrayIn['IDCOMMERCE'] = $IDCOMMERCE;
-     $arrayIn['XMLRES'] = $XMLRES;
-     $arrayIn['DIGITALSIGN'] = $DIGITALSIGN;
-     $arrayIn['SESSIONKEY'] = $SESSIONKEY;
+       $arrayIn['IDACQUIRER'] =$IDACQUIRER;
+       $arrayIn['IDCOMMERCE'] = $IDCOMMERCE;
+       $arrayIn['XMLRES'] = $XMLRES;
+       $arrayIn['DIGITALSIGN'] = $DIGITALSIGN;
+       $arrayIn['SESSIONKEY'] = $SESSIONKEY;
 
-     $arrayOut['authorizationResult'] = '';
-     $arrayOut['authorizationCode'] = '';
-     $arrayOut['errorCode'] = '';
-     $arrayOut['errorMessage'] = '';
+       $arrayOut['authorizationResult'] = '';
+       $arrayOut['authorizationCode'] = '';
+       $arrayOut['errorCode'] = '';
+       $arrayOut['errorMessage'] = '';
 
-    //valor del vector de inicializacion
-     $VI = "F20CA985A4B34DEC";
+      //valor del vector de inicializacion
+       $VI = "F20CA985A4B34DEC";
 
-      if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
-        //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-         //if($arrayOut['authorizationResult'] == "00"){
-          // ingresar codigo nuevo aqui
-          
-          $data = array(
-                         'validate' => 'yes'
-                      );
+        if (VPOSResponse($arrayIn, $arrayOut, $llavePublicaFirma, $llavePrivadaCifrado, $VI)) {
+          //return "Payment success. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+           //if($arrayOut['authorizationResult'] == "00"){
+            // ingresar codigo nuevo aqui
+            
+            $data = array(
+                           'validate' => 'yes'
+                        );
 
-          ee()->db->where('id', $id);
-          ee()->db->update('exp_hotel_reservations', $data); 
+            ee()->db->where('id', $id);
+            ee()->db->update('exp_hotel_reservations', $data); 
 
-          ee()->db->select('*');
-          ee()->db->where('id',$id);
-          $query = ee()->db->get('exp_hotel_reservations');
+            ee()->db->select('*');
+            ee()->db->where('id',$id);
+            $query = ee()->db->get('exp_hotel_reservations');
 
-          foreach($query->result() as $row){
-            $request = $row->full_request;
-            $first_name = $row->first_name;
-            $last_name = $row->last_name;
-            $country = $row->country;
-            $document_id = $row->document_id;
-            $document_type = $row->document_type;
-            $card_id = $row->card_id;
-            $card_type = $row->card_type;
-            }
-            $div ='{exp:infhotel:insertarreservar
-                        id="'.$id.'"
-                        request="'.$request.'"
-                        first_name="'.$first_name.'"
-                        last_name="'.$last_name.'"
-                        country="'.$country.'"
-                        document_id="'.$document_id.'"
-                        document_type="'.$document_type.'"
-                        card_id="'.$card_id.'"
-                        card_type="'.$card_type.'"
-                        }
-                    {/exp:infhotel:insertarreservar}';
-            return $div;
-            //return $request;
-          //}
-          //else {
-            //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-            //return "Han ocurrido problemas con la transacción ".$arrayOut['authorizationResult'];
-          //}
+            foreach($query->result() as $row){
+              $request = $row->full_request;
+              $first_name = $row->first_name;
+              $last_name = $row->last_name;
+              $country = $row->country;
+              $document_id = $row->document_id;
+              $document_type = $row->document_type;
+              $card_id = $row->card_id;
+              $card_type = $row->card_type;
+              }
+              $div ='{exp:infhotel:insertarreservar
+                          id="'.$id.'"
+                          request="'.$request.'"
+                          first_name="'.$first_name.'"
+                          last_name="'.$last_name.'"
+                          country="'.$country.'"
+                          document_id="'.$document_id.'"
+                          document_type="'.$document_type.'"
+                          card_id="'.$card_id.'"
+                          card_type="'.$card_type.'"
+                          }
+                      {/exp:infhotel:insertarreservar}';
+              return $div;
+              //return $request;
+            //}
+            //else {
+              //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
+              //return "Han ocurrido problemas con la transacción ".$arrayOut['authorizationResult'];
+            //}
+        }
+        return '';
       } 
     }
 }
