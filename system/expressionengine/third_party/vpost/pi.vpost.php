@@ -270,7 +270,7 @@ class Vpost
      $SESSIONKEY = ee()->TMPL->fetch_param('SESSIONKEY');
      session_start();
      if($_SESSION['id']==NULL){
-      return "Su sesión de reserva a expirado, intentelo nuevamente";
+      return 'Su sesión de reserva a expirado, intentelo nuevamente <a href="{site_url}content/newreservation1">Volver</a>';
      }
      else{
        $id=$_SESSION['id'];
