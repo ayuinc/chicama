@@ -285,7 +285,7 @@ class Infhotel
                                   <div class="row">
                                     <div class="large-4 columns">
                                       <figure>
-                                        <img src="http://chicamasurf.com/img/carrusel_garden/img1.jpg" alt="">
+                                        <img src="http://chicamasurf.com/img/carrusel_garden/img1_description.jpg" alt="">
                                         <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                       </figure>
                                     </div>
@@ -316,7 +316,7 @@ class Infhotel
                                   <div class="row">
                                     <div class="large-4 columns">
                                       <figure>
-                                        <img src="http://chicamasurf.com/img/carrusel_garden/img1.jpg" alt="">
+                                        <img src="http://chicamasurf.com/img/carrusel_garden/img1_description.jpg" alt="">
                                         <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                       </figure>
                                     </div>
@@ -346,7 +346,7 @@ class Infhotel
                                   <div class="row">
                                     <div class="large-4 columns">
                                       <figure>
-                                        <img src="http://chicamasurf.com/img/carrusel_garden/img1.jpg" alt="">
+                                        <img src="http://chicamasurf.com/img/carrusel_garden/img1_description.jpg" alt="">
                                         <a class="text-center" href="#" data-reveal-id="gardenView"><span>+</span></a>
                                       </figure>
                                     </div>
@@ -380,7 +380,7 @@ class Infhotel
                                   <div class="row">
                                     <div class="large-4 columns">
                                       <figure>
-                                        <img src="http://chicamasurf.com/img/carrusel_ocean/img1.jpg" alt="">
+                                        <img src="http://chicamasurf.com/img/carrusel_ocean/img1_description.jpg" alt="">
                                         <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
                                       </figure>
                                     </div>
@@ -412,7 +412,7 @@ class Infhotel
                                   <div class="row">
                                     <div class="large-4 columns">
                                       <figure>
-                                        <img src="http://chicamasurf.com/img/carrusel_ocean/img1.jpg" alt="">
+                                        <img src="http://chicamasurf.com/img/carrusel_ocean/img1_description.jpg" alt="">
                                         <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
                                       </figure>
                                     </div>
@@ -443,7 +443,7 @@ class Infhotel
                                   <div class="row">
                                     <div class="large-4 columns">
                                       <figure>
-                                        <img src="http://chicamasurf.com/img/carrusel_ocean/img1.jpg" alt="">
+                                        <img src="http://chicamasurf.com/img/carrusel_ocean/img1_description.jpg" alt="">
                                         <a class="text-center" href="#" data-reveal-id="oceanView"><span>+</span></a>
                                       </figure>
                                     </div>
