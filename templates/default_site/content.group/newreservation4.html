@@ -189,12 +189,13 @@
     var tow_back_service_input = {post_tow_back_service_input};
 
     var dias = {post_num_dias};
+    var pay_now =  parseInt(pay_now)/100;
     if(lunch_and_dinner_checkbox == "on" || tow_back_service_checkbox=="on"){
       if(lunch_and_dinner_checkbox == "on"){
-        pay_now =  parseInt(pay_now)/100 - parseInt(lunch_and_dinner_input)*parseInt(dias-1)/100;
+        pay_now = pay_now - parseInt(lunch_and_dinner_input)*parseInt(dias-1)/100;
       }
-      if(tow_back_service_checkbox=="on"){
-        pay_now =  parseInt(pay_now)/100 - parseInt(tow_back_service_input)*parseInt(dias-1)/100;
+      if(tow_back_service_checkbox == "on"){
+        pay_now = pay_now - parseInt(tow_back_service_input)*parseInt(dias-1)/100;
       }
     }
     else{
