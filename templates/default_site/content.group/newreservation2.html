@@ -796,27 +796,25 @@
     $(buttom).click(function( e ){
       e.preventDefault();
       if($(check_box).is(":checked")) {
-        if(sumary=="lunch_and_dinner_summary"){
-          $("#"+sumary).html("");
-          $("#lunch_and_dinner_serial").val("");
+        if(sumary=="lunch_and_dinner_summary" || sumary=="tow_back_service"){
           var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val())*dias;
           $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val())*dias );
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val())*dias );
+          if(sumary=="lunch_and_dinner_summary"){  
+            $("#"+sumary).html("");
+            $("#lunch_and_dinner_serial").val("");
+          }
+          else if(sumary=="tow_back_service"){
+            $("#"+sumary).html("");
+            $("#tow_back_service_serial").val("");
+          }
         }
         else{
           var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
           $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-          if(sumary=="transport_summary"){
-            $("#"+sumary).html("");
-            $("#transport_serial").val("");
-          }
-          else{
-            if(sumary=="tow_back_service_summary"){
-            $("#"+sumary).html("");
-            $("#tow_back_service_serial").val("");
-            }
-          }
+          $("#"+sumary).html("");
+          $("#transport_serial").val("");
         }
         $(check_box).prop("checked", false);
         $(buttom).removeClass("active");
