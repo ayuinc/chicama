@@ -185,9 +185,17 @@
     var pay_now = {post_purchase_amount};
     var lunch_and_dinner_checkbox = "{post_lunch_and_dinner_checkbox}";
     var lunch_and_dinner_input = {post_lunch_and_dinner_input};
+    var tow_back_service_checkbox = "{post_tow_back_service_checkbox}";
+    var tow_back_service_input = {post_tow_back_service_input};
+
     var dias = {post_num_dias};
-    if(lunch_and_dinner_checkbox == "on"){
-      pay_now =  parseInt(pay_now)/100 - parseInt(lunch_and_dinner_input)*parseInt(dias-1)/100;
+    if(lunch_and_dinner_checkbox == "on" || tow_back_service_checkbox=="on"){
+      if(lunch_and_dinner_checkbox == "on"){
+        pay_now =  parseInt(pay_now)/100 - parseInt(lunch_and_dinner_input)*parseInt(dias-1)/100;
+      }
+      if(tow_back_service_checkbox=="on"){
+        pay_now =  parseInt(pay_now)/100 - parseInt(tow_back_service_input)*parseInt(dias-1)/100;
+      }
     }
     else{
       pay_now =  parseInt(pay_now)/100;
