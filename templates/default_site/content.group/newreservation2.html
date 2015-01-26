@@ -750,8 +750,8 @@
           $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
         break;
         case "tow_back_service_summary":
-          $(purchase_amount).val(parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
-          $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );
+          $(purchase_amount).val(parseInt($(purchase_amount).val()) + parseInt($(input).val())*dias );
+          $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val())*dias );
         break;
       }
       /*$(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
@@ -796,7 +796,7 @@
     $(buttom).click(function( e ){
       e.preventDefault();
       if($(check_box).is(":checked")) {
-        if(sumary=="lunch_and_dinner_summary" || sumary=="tow_back_service"){
+        if(sumary=="lunch_and_dinner_summary" || sumary=="tow_back_service_summary"){
           var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val())*dias;
           $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val())*dias );
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val())*dias );
@@ -804,12 +804,12 @@
             $("#"+sumary).html("");
             $("#lunch_and_dinner_serial").val("");
           }
-          else if(sumary=="tow_back_service"){
+          else if(sumary=="tow_back_service_summary"){
             $("#"+sumary).html("");
             $("#tow_back_service_serial").val("");
           }
         }
-        else{
+        else if(sumary=="transport_summary"){
           var total_summary = parseInt($("#rooms_input").val()) - parseInt($(input).val());
           $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
           $(purchase_amount).val( parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
