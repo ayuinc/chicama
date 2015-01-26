@@ -977,7 +977,9 @@
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );*/
         $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
         console.log(total_summary);
-        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+        if( sumary == 'lunch_and_dinner_summary' || sumary =='tow_back_service_summary'){
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+        }
         $("#summary_input").val($("#reserva_summary").html());
       }
     });
