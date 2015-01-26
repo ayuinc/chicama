@@ -828,6 +828,7 @@
         console.log(total_summary);
         $("#summary_input").val($("#reserva_summary").html());      
         $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+        $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
       }
       else{
         $(check_box).prop("checked", true);
