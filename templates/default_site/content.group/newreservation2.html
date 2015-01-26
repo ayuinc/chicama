@@ -928,46 +928,46 @@
           else{
             if(sumary == "tow_back_service_summary"){
               switch($("#encabezado_tow_back_service").html()){
-              case "$30 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc01","Tow back service <br>(1 person) <span>$30 one-time</span>");
+              case "$30 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc01","Tow back service <br>(1 person) <span>$30 /night</span>");
               break;
-              case "$60 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc02","Tow back service <br>(2 persons) <span>$60 one-time</span>");
+              case "$60 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc02","Tow back service <br>(2 persons) <span>$60 /night</span>");
               break;
-              case "$90 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc03","Tow back service <br>(3 persons) <span>$90 one-time</span>");
+              case "$90 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc03","Tow back service <br>(3 persons) <span>$90 /night</span>");
               break;
-              case "$120 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc04","Tow back service <br>(4 persons) <span>$120 one-time</span>");
+              case "$120 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc04","Tow back service <br>(4 persons) <span>$120 /night</span>");
               break;
-              case "$150 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc05","Tow back service <br>(5 persons) <span>$150 one-time</span>");
+              case "$150 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc05","Tow back service <br>(5 persons) <span>$150 /night</span>");
               break;
-              case "$180 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc06","Tow back service <br>(6 persons) <span>$180 one-time</span>");
+              case "$180 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc06","Tow back service <br>(6 persons) <span>$180 /night</span>");
               break;
-              case "$210 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc07","Tow back service <br>(7 persons) <span>$210 one-time</span>");
+              case "$210 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc07","Tow back service <br>(7 persons) <span>$210 /night</span>");
               break;
-              case "$240 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc08","Tow back service <br>(8 persons) <span>$240 one-time</span>");
+              case "$240 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc08","Tow back service <br>(8 persons) <span>$240 /night</span>");
               break;
-              case "$270 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc09","Tow back service <br>(9 persons) <span>$270 one-time</span>");
+              case "$270 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc09","Tow back service <br>(9 persons) <span>$270 /night</span>");
               break;
-              case "$300 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc10","Tow back service <br>(10 persons) <span>$300 one-time</span>");
+              case "$300 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc10","Tow back service <br>(10 persons) <span>$300 /night</span>");
               break;
-              case "$330 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc11","Tow back service <br>(11 persons) <span>$330 one-time</span>");
+              case "$330 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc11","Tow back service <br>(11 persons) <span>$330 /night</span>");
               break;
-              case "$360 one-time":
-              add_ons_click(sumary,"#tow_back_service_serial","adzc12","Tow back service <br>(12 persons) <span>$360 one-time</span>");
+              case "$360 /night":
+              add_ons_click(sumary,"#tow_back_service_serial","adzc12","Tow back service <br>(12 persons) <span>$360 /night</span>");
               break;
               }
-              var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val());
-              $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()));
-              $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()));
+              var total_summary = parseInt($("#rooms_input").val()) + parseInt($(input).val())*dias;
+              $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val())*dias);
+              $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val())*dias);
             }
           }
         }
@@ -1004,7 +1004,7 @@
         $(input).val("4800");
       break;
       case "tow_back_service_summary":
-        $(encabezado).html("$30 one-time");
+        $(encabezado).html("$30 /night");
         $(input).val("3000");
       break;
     }
@@ -1020,8 +1020,8 @@
             $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
           break;
           case "tow_back_service_summary":
-            $(purchase_amount).val(parseInt($(purchase_amount).val()) - parseInt($(input).val()) );
-            $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()) );
+            $(purchase_amount).val(parseInt($(purchase_amount).val()) - parseInt($(input).val()*dias ) );
+            $("#rooms_input").val( parseInt($("#rooms_input").val()) - parseInt($(input).val()*dias ) );
           break;
         }
       }
@@ -1035,7 +1035,7 @@
               add_ons_dropdown(encabezado,"$48 one-time", input,"4800", check_box, purchase_amount, sumary,"Transport <br>(1 person)<span>$48 one-time</span>","#transport_serial","adtp01");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$30 one-time", input,"3000", check_box, purchase_amount, sumary,"Tow back service <br>(1 person)<span>$30 one-time</span>","#tow_back_service_serial","adzc01");
+              add_ons_dropdown(encabezado,"$30 /night", input,"3000", check_box, purchase_amount, sumary,"Tow back service <br>(1 person)<span>$30 /night</span>","#tow_back_service_serial","adzc01");
             break;
           }
           break;
@@ -1048,7 +1048,7 @@
               add_ons_dropdown(encabezado,"$60 one-time", input,"6000", check_box, purchase_amount, sumary,"Transport <br>(2 persons)<span>$60 one-time</span>","#transport_serial","adtp02");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$60 one-time", input,"6000", check_box, purchase_amount, sumary,"Tow back service <br>(2 persons)<span>$60 one-time</span>","#tow_back_service_serial","adzc02");
+              add_ons_dropdown(encabezado,"$60 /night", input,"6000", check_box, purchase_amount, sumary,"Tow back service <br>(2 persons)<span>$60 /night</span>","#tow_back_service_serial","adzc02");
             break;
           }
           break;
@@ -1061,7 +1061,7 @@
               add_ons_dropdown(encabezado,"$75 one-time", input,"7500", check_box, purchase_amount, sumary,"Transport <br>(3 persons)<span>$75 one-time</span>","#transport_serial","adtp03");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$90 one-time", input,"9000", check_box, purchase_amount, sumary,"Tow back service <br>(3 persons)<span>$90 one-time</span>","#tow_back_service_serial","adzc03");
+              add_ons_dropdown(encabezado,"$90 /night", input,"9000", check_box, purchase_amount, sumary,"Tow back service <br>(3 persons)<span>$90 /night</span>","#tow_back_service_serial","adzc03");
             break;
           }
         break;
@@ -1074,7 +1074,7 @@
               add_ons_dropdown(encabezado,"$100 one-time", input,"10000", check_box, purchase_amount, sumary,"Transport <br>(4 persons)<span>$100 one-time</span>","#transport_serial","adtp04");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$120 one-time", input,"12000", check_box, purchase_amount, sumary,"Tow back service <br>(4 persons)<span>$120 one-time</span>","#tow_back_service_serial","adzc04");
+              add_ons_dropdown(encabezado,"$120 /night", input,"12000", check_box, purchase_amount, sumary,"Tow back service <br>(4 persons)<span>$120 /night</span>","#tow_back_service_serial","adzc04");
             break;
           }
         break;
@@ -1087,7 +1087,7 @@
               add_ons_dropdown(encabezado,"$100 one-time", input,"10000", check_box, purchase_amount, sumary,"Transport <br>(5 persons)<span>$100 one-time</span>","#transport_serial","adtp05");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$150 one-time", input,"15000", check_box, purchase_amount, sumary,"Tow back service <br>(5 persons)<span>$150 one-time</span>","#tow_back_service_serial","adzc05");
+              add_ons_dropdown(encabezado,"$150 /night", input,"15000", check_box, purchase_amount, sumary,"Tow back service <br>(5 persons)<span>$150 /night</span>","#tow_back_service_serial","adzc05");
             break;
           }
         break;
@@ -1100,7 +1100,7 @@
               add_ons_dropdown(encabezado,"$102 one-time", input,"10200", check_box, purchase_amount, sumary,"Transport <br>(6 persons)<span>$102 one-time</span>","#transport_serial","adtp06");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$180 one-time", input,"18000", check_box, purchase_amount, sumary,"Tow back service <br>(6 persons)<span>$180 one-time</span>","#tow_back_service_serial","adzc06");
+              add_ons_dropdown(encabezado,"$180 /night", input,"18000", check_box, purchase_amount, sumary,"Tow back service <br>(6 persons)<span>$180 /night</span>","#tow_back_service_serial","adzc06");
             break;
           }
         break;
@@ -1113,7 +1113,7 @@
               add_ons_dropdown(encabezado,"$150 one-time", input,"15000", check_box, purchase_amount, sumary,"Transport <br>(7 persons)<span>$150 one-time</span>","#transport_serial","adtp07");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$210 one-time", input,"21000", check_box, purchase_amount, sumary,"Tow back service <br>(7 persons)<span>$210 one-time</span>","#tow_back_service_serial","adzc07");
+              add_ons_dropdown(encabezado,"$210 /night", input,"21000", check_box, purchase_amount, sumary,"Tow back service <br>(7 persons)<span>$210 /night</span>","#tow_back_service_serial","adzc07");
             break;
           }
         break;
@@ -1126,7 +1126,7 @@
               add_ons_dropdown(encabezado,"$162 one-time", input,"16200", check_box, purchase_amount, sumary,"Transport <br>(8 persons)<span>$162 one-time</span>","#transport_serial","adtp08");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$240 one-time", input,"24000", check_box, purchase_amount, sumary,"Tow back service <br>(8 persons)<span>$240 one-time</span>","#tow_back_service_serial","adzc08");
+              add_ons_dropdown(encabezado,"$240 /night", input,"24000", check_box, purchase_amount, sumary,"Tow back service <br>(8 persons)<span>$240 /night</span>","#tow_back_service_serial","adzc08");
             break;
           }
         break;
@@ -1139,7 +1139,7 @@
               add_ons_dropdown(encabezado,"$177 one-time", input,"17700", check_box, purchase_amount, sumary,"Transport <br>(9 persons)<span>$177 one-time</span>","#transport_serial","adtp09");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$270 one-time", input,"27000", check_box, purchase_amount, sumary,"Tow back service <br>(9 persons)<span>$270 one-time</span>","#tow_back_service_serial","adzc09");
+              add_ons_dropdown(encabezado,"$270 /night", input,"27000", check_box, purchase_amount, sumary,"Tow back service <br>(9 persons)<span>$270 /night</span>","#tow_back_service_serial","adzc09");
             break;
           }
         break;
@@ -1152,7 +1152,7 @@
               add_ons_dropdown(encabezado,"$202 one-time", input,"20200", check_box, purchase_amount, sumary,"Transport <br>(10 persons)<span>$202 one-time</span>","#transport_serial","adtp10");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$300 one-time", input,"30000", check_box, purchase_amount, sumary,"Tow back service <br>(10 persons)<span>$300 one-time</span>","#tow_back_service_serial","adzc10");
+              add_ons_dropdown(encabezado,"$300 /night", input,"30000", check_box, purchase_amount, sumary,"Tow back service <br>(10 persons)<span>$300 /night</span>","#tow_back_service_serial","adzc10");
             break;
           }
         break;
@@ -1165,7 +1165,7 @@
               add_ons_dropdown(encabezado,"$202 one-time", input,"20200", check_box, purchase_amount, sumary,"Transport <br>(11 persons)<span>$202 one-time</span>","#transport_serial","adtp11");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$330 one-time", input,"33000", check_box, purchase_amount, sumary,"Tow back service <br>(11 persons)<span>$330 one-time</span>","#tow_back_service_serial","adzc11");
+              add_ons_dropdown(encabezado,"$330 /night", input,"33000", check_box, purchase_amount, sumary,"Tow back service <br>(11 persons)<span>$330 /night</span>","#tow_back_service_serial","adzc11");
             break;
           }
         break;
@@ -1178,7 +1178,7 @@
               add_ons_dropdown(encabezado,"$204 one-time", input,"20400", check_box, purchase_amount, sumary,"Transport <br>(12 persons)<span>$204</span>","#transport_serial","adtp12");
             break;
             case "tow_back_service_summary":
-              add_ons_dropdown(encabezado,"$360 one-time", input,"36000", check_box, purchase_amount, sumary,"Tow back service <br>(12 persons)<span>$360</span>","#tow_back_service_serial","adzc12");
+              add_ons_dropdown(encabezado,"$360 /night", input,"36000", check_box, purchase_amount, sumary,"Tow back service <br>(12 persons)<span>$360 /night</span>","#tow_back_service_serial","adzc12");
             break;
           }
         break;
