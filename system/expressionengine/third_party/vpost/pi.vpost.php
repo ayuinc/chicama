@@ -356,7 +356,7 @@ class Vpost
             }
             else {
               //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-              return "Han ocurrido problemas con la transacción - Codigo de error:".$arrayOut['authorizationResult'].'intentelo nuevamente <a href="{site_url}/content/newreservation1">Volver</a>' ;
+              return "Problems have occurred with the transaction.".'Try again <a href="{site_url}/content/newreservation1">Return</a>' ;
             }
         }
         return '';

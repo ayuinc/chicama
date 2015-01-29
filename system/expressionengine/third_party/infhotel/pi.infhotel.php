@@ -475,7 +475,7 @@ class Infhotel
                 }
             }
             else{
-                $response = 'Error de conexión intentelo nuevamente';
+                $response = 'Connection error, try again in the next 30 minutes or contact the hotel by e-mail reservas@chicamasurf.com';
             }
         }
         return $response; 
@@ -928,8 +928,8 @@ take about 1 hour. Our professional drivers carry with them a sign that will hav
                           <!-- end add-on description -->
                         </div>
                         <input type="hidden" name="num_dias" maxlength="1000"  id="num_dias">
-                        <input type="text" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
-                        <input type="text" name="transport_input" maxlength="1000"  id="transport_input">
+                        <input type="hidden" name="lunch_and_dinner_input" maxlength="1000"  id="lunch_and_dinner_input">
+                        <input type="hidden" name="transport_input" maxlength="1000"  id="transport_input">
                         <input type="hidden" name="tow_back_service_input" maxlength="1000"  id="tow_back_service_input">
 
                         <input type="hidden" name="lunch_and_dinner_serial" maxlength="1000" id="lunch_and_dinner_serial">
