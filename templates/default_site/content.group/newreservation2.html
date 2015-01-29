@@ -756,10 +756,16 @@
       }
       /*$(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );
       $("#rooms_input").val( parseInt($("#rooms_input").val()) + parseInt($(input).val()) );*/
-      var total_summary = $("#rooms_input").val();
+      var transport_input = $("#transport_input").val();
       $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
       console.log(total_summary);
-      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+      var total_summary = $("#rooms_input").val();
+      if($('#transport_checkbox').is(":checked")){
+      $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+((parseInt(total_summary)-parseInt(transport_input))/(100*dias)).toFixed(2)+"</span>");
+      }
+      else{
+        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+      }
       $("#summary_input").val($("#reserva_summary").html());
       $("#"+sumary).html(text);
       $(input_serial).val(serial);
@@ -974,7 +980,13 @@
         $(purchase_amount).val( parseInt($(purchase_amount).val()) + parseInt($(input).val()) );*/
         $("#total_summary").html("TOTAL <span>$ "+parseInt(total_summary)/100+"</span>");
         console.log(total_summary);
-        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+        var total_summary = $("#rooms_input").val();
+        if($('#transport_checkbox').is(":checked")){
+        $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+((parseInt(total_summary)-parseInt(transport_input))/(100*dias)).toFixed(2)+"</span>");
+        }
+        else{
+          $("#total_summary_per_night").html("TOTAL PER NIGHT <span>$ "+(parseInt(total_summary)/(100*dias)).toFixed(2)+"</span>");
+        }
         $("#summary_input").val($("#reserva_summary").html());
       }
     });
