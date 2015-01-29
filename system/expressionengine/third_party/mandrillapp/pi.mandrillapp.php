@@ -373,6 +373,18 @@ class Mandrillapp {
 					</table>	
 				</tbody>
 			</div>';
+			$template_name = 'test';
+
+			$template_content = array(
+			    array(
+			        'name' => 'main',
+			        'content' => 'Hi *|FIRSTNAME|* *|LASTNAME|*, thanks for signing up.'),
+			    array(
+			        'name' => 'footer',
+			        'content' => 'Copyright 2012.')
+
+			);
+			
 			$message = array(
 			    'subject' => $subject,
 			    'from_email' => $from,
@@ -390,18 +402,7 @@ class Mandrillapp {
 				                'content' => 'Last name')
 				    ))));
 
-			$template_name = 'test';
-
-			$template_content = array(
-			    array(
-			        'name' => 'main',
-			        'content' => 'Hi *|FIRSTNAME|* *|LASTNAME|*, thanks for signing up.'),
-			    array(
-			        'name' => 'footer',
-			        'content' => 'Copyright 2012.')
-
-			);
-			$message_chicama = array(
+			$message_reservas_chicama = array(
 			    'subject' => $subject,
 			    'from_email' => $from,
 			    'html' => $text,
@@ -418,19 +419,27 @@ class Mandrillapp {
 				                'content' => 'Last name')
 				    ))));
 
-			$template_name = 'test';
+			$message_administracion_chicama = array(
+			    'subject' => $subject,
+			    'from_email' => $from,
+			    'html' => $text,
+			    'to' => array(array('email' => 'reservas@chicamasurf.com', 'name' => $name)),
+			    'merge_vars' => array(array(
+				        'rcpt' => 'recipient1@domain.com',
+				        'vars' =>
+				        array(
+				            array(
+				                'name' => 'FIRSTNAME',
+				                'content' => 'Recipient 1 first name'),
+				            array(
+				                'name' => 'LASTNAME',
+				                'content' => 'Last name')
+				    ))));
 
-			$template_content = array(
-			    array(
-			        'name' => 'main',
-			        'content' => 'Hi *|FIRSTNAME|* *|LASTNAME|*, thanks for signing up.'),
-			    array(
-			        'name' => 'footer',
-			        'content' => 'Copyright 2012.')
-
-			);
+			
 			$mandrill->messages->sendTemplate($template_name, $template_content, $message);
-			$mandrill->messages->sendTemplate($template_name, $template_content, $message_chicama);
+			$mandrill->messages->sendTemplate($template_name, $template_content, $message_reservas_chicama);
+			$mandrill->messages->sendTemplate($template_name, $template_content, $message_administracion_chicama);
 			return '';
 		}
 		else{
