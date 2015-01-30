@@ -423,7 +423,7 @@ class Mandrillapp {
 			    'subject' => $subject,
 			    'from_email' => $from,
 			    'html' => $text,
-			    'to' => array(array('email' => 'reservas@chicamasurf.com', 'name' => $name)),
+			    'to' => array(array('email' => 'administracion@chicamasurf.com', 'name' => $name)),
 			    'merge_vars' => array(array(
 				        'rcpt' => 'recipient1@domain.com',
 				        'vars' =>
