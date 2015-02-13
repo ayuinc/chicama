@@ -77,7 +77,7 @@ class Mandrillapp {
 			$full_request = str_replace("¿", ",", $full_request);
 			$data = json_decode($full_request, true);
 
-			if($add_on_1 != ''){
+			if($add_on_1 != ''){ //Zodiacs
 				ee()->db->select('*');
 				ee()->db->where('serial', $add_on_1);
 				$query_lunch_and_dinner = ee()->db->get('exp_hotel_products');
@@ -85,12 +85,14 @@ class Mandrillapp {
 				  foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
 				    //$cost_total = $cost_total + $row_lunch_and_dinner->cost*$days/100;
 				    $add_on_1 = $row_lunch_and_dinner->description;
-				    $add_on_1_detail = '<tr><td>'.$row_lunch_and_dinner->detail.'</td><td> </td><td>: US$ '.substr($row_lunch_and_dinner->cost, 0, -2).'.00</td></tr>';
+				    $add_on_1_detail = '<tr><td>'.$row_lunch_and_dinner->detail.'</td><td> </td><td>: US$ '.substr($row_lunch_and_dinner->cost, 0, -2).'.00 x '.$days.' nights</td><td>: US$ '.substr($row_lunch_and_dinner->cost*$days, 0, -2).'.00</td></tr>';
+				  	$add_on_1_extra_amount = intval($row_lunch_and_dinner->cost)/100;
+				  	$add_on_1_extra_amount = $add_on_1_extra_amount*($days-1);
 				  }
 				} 
 				//$add_on_1 = '<tr><td></td><td>'.$add_on_1.'</td><td></td></tr>';
 			}
-			if($add_on_2 != ''){
+			if($add_on_2 != ''){ //transport
 				ee()->db->select('*');
 				ee()->db->where('serial', $add_on_2);
 				$query_transport = ee()->db->get('exp_hotel_products');
@@ -103,7 +105,7 @@ class Mandrillapp {
 				} 
 				//$add_on_2 = '<tr><td></td><td>'.$add_on_2.'</td><td></td></tr>';
 			}
-			if($add_on_3 != ''){
+			if($add_on_3 != ''){ //lunch and dinner
 				ee()->db->select('*');
 				ee()->db->where('serial', $add_on_3);
 				$query_zodiacs = ee()->db->get('exp_hotel_products');
@@ -191,7 +193,7 @@ class Mandrillapp {
 				}
 			}
 			$cost_reser = $cost_reser/100; 
-			$cost_total = $cost_reser + $add_on_3_extra_amount + $cost_total_hab;
+			$cost_total = $cost_reser + $add_on_1_extra_amount + $add_on_3_extra_amount + $cost_total_hab;
 			$cost_paid_in_hotel = $cost_total - $cost_reser; 
 			
 			$to = $email;
