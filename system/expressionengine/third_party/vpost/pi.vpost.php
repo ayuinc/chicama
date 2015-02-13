@@ -354,10 +354,10 @@ class Vpost
               return $div;
               //return $request;
             //}
-            else {
+            //else {
               //return "Payment fail. authorizationResult: ".$arrayOut['authorizationResult']." authorizationCode: ".$arrayOut['authorizationCode']." errorCode: ".$arrayOut['errorCode']." errorMessage: ".$arrayOut['errorMessage'];
-              return "Problems have occurred with the transaction.".'Try again <a href="{site_url}/content/newreservation1">Return</a>' ;
-            }
+              //return "Problems have occurred with the transaction.".'Try again <a href="{site_url}/content/newreservation1">Return</a>' ;
+            //}
         }
         return '';
       } 
