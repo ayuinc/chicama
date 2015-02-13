@@ -141,7 +141,7 @@ class Mandrillapp {
 						$cost_total_hab = $cost_total_hab + $cost_aux -100;
 						$habitaciones_detalle .= '<tr><td></td><td> 01 single room with garden view</td><td></td></tr>';
 						$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room Garden View (US$ 100.00 per night per room)</td><td></td></tr>';
-						$resumen_reserva .= '<tr><td>Simple room garden view</td><td>: US$ 100.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+						$resumen_reserva .= '<tr><td>Single room garden view</td><td>: US$ 100.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 					break;
 					case 'rmso05':
 					case 'rmso06':
@@ -150,7 +150,7 @@ class Mandrillapp {
 						$cost_total_hab = $cost_total_hab + $cost_aux -110;
 						$habitaciones_detalle .= '<tr><td></td><td> 01 single room with ocean view </td><td></td></tr>';
 						$habitaciones_precio .= '<tr><td></td><td> Bed & Breakfast Single Room  Ocean View  (US$ 110.00 per night per room)</td><td></td></tr>';
-						$resumen_reserva .= '<tr><td>Simple room ocean view</td><td>: US$ 110.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
+						$resumen_reserva .= '<tr><td>Single room ocean view</td><td>: US$ 110.00 x '.$days.' nights</td><td>: US$ '.$cost_aux.'.00</td></tr>';
 					break;
 					case 'rmdg01':
 					case 'rmdg02':
@@ -243,7 +243,7 @@ class Mandrillapp {
 					  </tr>
 					  <tr>
 					    <td>Stay</td>
-					    <td>: Check in: '.$data['FLlegada'].' Check out: '.$data['FSalida'].'</td>
+					    <td>: Check in: '.substr($data['FLlegada'], 0, 10).' 14:00 HRS Check out: '.substr($data['FSalida'], 0, 10).' 12:00 HRS</td>
 					    <td></td>
 					  </tr>
 					  <tr>
@@ -336,15 +336,7 @@ class Mandrillapp {
 							<td>
 								<p><b>Our cancelation and postponement policy is of 48 hours prior to arrival date. In case cancelation or postponement
 								proceeds after this frame dates or the guest (s) does not arrive at the hotel on indicated dates (NO SHOW), we
-								charge a penalty of the amount of the first night plus administration expenses.
-								In case to be requested the transfer service and make a cancelation or modification without notice us 24 hours
-								prior to arrival date, we do not refund the pre-payment for the amount of the transfer in.</b></p>	
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<p>WE ARE A NON SMOKING HOTEL (ROOMS AND PUBLIC AREAS).Hotel exchange rate S/.2.80 (Referential
-								price can change without previous notice).</p>
+								charge a penalty of the amount of down payment.</b></p>	
 							</td>
 						</tr>
 						<tr>
