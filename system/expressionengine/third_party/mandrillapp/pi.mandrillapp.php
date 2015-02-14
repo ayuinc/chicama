@@ -46,6 +46,7 @@ class Mandrillapp {
 		$add_on_2_detail = "";
 		$add_on_3_detail = "";
 		$add_on_3_extra_amount = 0;
+		$add_on_1_extra_amount = 0;
 		ee()->db->select('*');
 		ee()->db->where('id',$id);
 		$query = ee()->db->get('exp_hotel_reservations');
@@ -432,8 +433,8 @@ class Mandrillapp {
 
 			
 			$mandrill->messages->sendTemplate($template_name, $template_content, $message);
-			//$mandrill->messages->sendTemplate($template_name, $template_content, $message_reservas_chicama);
-			//$mandrill->messages->sendTemplate($template_name, $template_content, $message_administracion_chicama);
+			$mandrill->messages->sendTemplate($template_name, $template_content, $message_reservas_chicama);
+			$mandrill->messages->sendTemplate($template_name, $template_content, $message_administracion_chicama);
 			return '';
 		}
 		else{
