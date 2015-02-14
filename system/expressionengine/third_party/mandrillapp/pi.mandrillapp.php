@@ -432,8 +432,8 @@ class Mandrillapp {
 
 			
 			$mandrill->messages->sendTemplate($template_name, $template_content, $message);
-			//$mandrill->messages->sendTemplate($template_name, $template_content, $message_reservas_chicama);
-			//$mandrill->messages->sendTemplate($template_name, $template_content, $message_administracion_chicama);
+			$mandrill->messages->sendTemplate($template_name, $template_content, $message_reservas_chicama);
+			$mandrill->messages->sendTemplate($template_name, $template_content, $message_administracion_chicama);
 			return '';
 		}
 		else{
