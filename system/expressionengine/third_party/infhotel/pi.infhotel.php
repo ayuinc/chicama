@@ -581,6 +581,7 @@ class Infhotel
             'Content-Type: application/json', 'charset=utf-8')
         ); 
         $result = curl_exec($ch);
+        var_dump($result);
         curl_close($ch);
 
         $cod_reservation = str_replace('"', '', $result);
