@@ -85,7 +85,7 @@ class Mandrillapp {
 				  foreach($query_lunch_and_dinner->result() as $row_lunch_and_dinner){
 				    //$cost_total = $cost_total + $row_lunch_and_dinner->cost*$days/100;
 				    $add_on_1 = $row_lunch_and_dinner->description;
-				    $add_on_1_detail = '<tr><td>'.$row_lunch_and_dinner->detail.'</td><td> </td><td>: US$ '.substr($row_lunch_and_dinner->cost, 0, -2).'.00 x '.$days.' nights</td><td>: US$ '.substr($row_lunch_and_dinner->cost*$days, 0, -2).'.00</td></tr>';
+				    $add_on_1_detail = '<tr><td>'.$row_lunch_and_dinner->detail.'</td><td></td><td>: US$ '.substr($row_lunch_and_dinner->cost, 0, -2).'.00 x '.$days.' nights</td><td>: US$ '.substr($row_lunch_and_dinner->cost*$days, 0, -2).'.00</td></tr>';
 				  	$add_on_1_extra_amount = intval($row_lunch_and_dinner->cost)/100;
 				  	$add_on_1_extra_amount = $add_on_1_extra_amount*($days-1);
 				  }
