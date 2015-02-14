@@ -226,13 +226,7 @@ class Infhotel
                      $disponibilidad["triple_ocean"] = 0;
                 }    
                 $garden_view = $disponibilidad["simple_garden"] + $disponibilidad["doble_garden"] + $disponibilidad["triple_garden"];
-                var_dump($disponibilidad["simple_garden"]);
-                var_dump($disponibilidad["doble_garden"]);
-                var_dump($disponibilidad["triple_garden"]);
                 $ocean_view = $disponibilidad["simple_ocean"] + $disponibilidad["doble_ocean"] + $disponibilidad["triple_ocean"];
-                var_dump($disponibilidad["simple_ocean"]);
-                var_dump($disponibilidad["doble_ocean"]);
-                var_dump($disponibilidad["triple_ocean"]);
                 $total_hab = $ocean_view + $garden_view;
                 if($total_hab < $rooms_num){
                     $response = '<p>Lo sentimos, no tenemos habitaciones disponibles.</p>';
