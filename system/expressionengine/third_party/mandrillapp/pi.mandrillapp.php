@@ -228,7 +228,7 @@ class Mandrillapp {
 				<tbody>
 					<tr>
 						<td>
-							<p>Dear Mr(s).'.$name.',</p>
+							<p>Dear Mr(s).'.$name.' ('.$email.'),</p>
 						</td>
 					</tr>
 					<tr>
@@ -331,8 +331,7 @@ class Mandrillapp {
 							<td>
 								<p><b>Rate includes:</b> Accommodation; Buffet Breakfast; Wifi service; Access to our SPA: Jacuzzis, Saunas, Gym; Access
 								to Hotel Facilities: Pool, Tv Room, Games Room; Parking lot.<br>
-								<b>Rate Does Not Include:</b> Meals: A la carte Lunch & Dinner ;Beverages; Towing Service; Transfers; Tours; Laundry
-								Service; Tips; Early check in and late check out; Extras not mentioned.</p>	
+								<b>Rate Does Not Include:</b> Extras not mentioned as included.</p>	
 							</td>
 						</tr>
 						<tr>
